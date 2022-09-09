@@ -392,7 +392,7 @@ export class SqlManagedInstanceFailoverGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sql_managed_instance_failover_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

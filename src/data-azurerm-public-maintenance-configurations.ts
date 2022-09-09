@@ -234,7 +234,7 @@ export class DataAzurermPublicMaintenanceConfigurations extends cdktf.TerraformD
       terraformResourceType: 'azurerm_public_maintenance_configurations',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

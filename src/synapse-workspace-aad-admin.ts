@@ -220,7 +220,7 @@ export class SynapseWorkspaceAadAdminA extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_synapse_workspace_aad_admin',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

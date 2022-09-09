@@ -23,12 +23,6 @@ export interface DataAzurermMonitorActionGroupConfig extends cdktf.TerraformMeta
   */
   readonly resourceGroupName: string;
   /**
-  * event_hub_receiver block
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#event_hub_receiver DataAzurermMonitorActionGroup#event_hub_receiver}
-  */
-  readonly eventHubReceiver?: DataAzurermMonitorActionGroupEventHubReceiver[] | cdktf.IResolvable;
-  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#timeouts DataAzurermMonitorActionGroup#timeouts}
@@ -428,6 +422,100 @@ export class DataAzurermMonitorActionGroupEmailReceiverList extends cdktf.Comple
   */
   public get(index: number): DataAzurermMonitorActionGroupEmailReceiverOutputReference {
     return new DataAzurermMonitorActionGroupEmailReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMonitorActionGroupEventHubReceiver {
+}
+
+export function dataAzurermMonitorActionGroupEventHubReceiverToTerraform(struct?: DataAzurermMonitorActionGroupEventHubReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMonitorActionGroupEventHubReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMonitorActionGroupEventHubReceiver | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMonitorActionGroupEventHubReceiver | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // event_hub_id - computed: true, optional: false, required: false
+  public get eventHubId() {
+    return this.getStringAttribute('event_hub_id');
+  }
+
+  // event_hub_name - computed: true, optional: false, required: false
+  public get eventHubName() {
+    return this.getStringAttribute('event_hub_name');
+  }
+
+  // event_hub_namespace - computed: true, optional: false, required: false
+  public get eventHubNamespace() {
+    return this.getStringAttribute('event_hub_namespace');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // subscription_id - computed: true, optional: false, required: false
+  public get subscriptionId() {
+    return this.getStringAttribute('subscription_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // use_common_alert_schema - computed: true, optional: false, required: false
+  public get useCommonAlertSchema() {
+    return this.getBooleanAttribute('use_common_alert_schema');
+  }
+}
+
+export class DataAzurermMonitorActionGroupEventHubReceiverList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMonitorActionGroupEventHubReceiverOutputReference {
+    return new DataAzurermMonitorActionGroupEventHubReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermMonitorActionGroupItsmReceiver {
@@ -895,178 +983,6 @@ export class DataAzurermMonitorActionGroupWebhookReceiverList extends cdktf.Comp
     return new DataAzurermMonitorActionGroupWebhookReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
-export interface DataAzurermMonitorActionGroupEventHubReceiver {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#event_hub_id DataAzurermMonitorActionGroup#event_hub_id}
-  */
-  readonly eventHubId: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#name DataAzurermMonitorActionGroup#name}
-  */
-  readonly name: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#tenant_id DataAzurermMonitorActionGroup#tenant_id}
-  */
-  readonly tenantId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#use_common_alert_schema DataAzurermMonitorActionGroup#use_common_alert_schema}
-  */
-  readonly useCommonAlertSchema?: boolean | cdktf.IResolvable;
-}
-
-export function dataAzurermMonitorActionGroupEventHubReceiverToTerraform(struct?: DataAzurermMonitorActionGroupEventHubReceiver | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    event_hub_id: cdktf.stringToTerraform(struct!.eventHubId),
-    name: cdktf.stringToTerraform(struct!.name),
-    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
-    use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
-  }
-}
-
-export class DataAzurermMonitorActionGroupEventHubReceiverOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataAzurermMonitorActionGroupEventHubReceiver | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._eventHubId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.eventHubId = this._eventHubId;
-    }
-    if (this._name !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.name = this._name;
-    }
-    if (this._tenantId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.tenantId = this._tenantId;
-    }
-    if (this._useCommonAlertSchema !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.useCommonAlertSchema = this._useCommonAlertSchema;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataAzurermMonitorActionGroupEventHubReceiver | cdktf.IResolvable | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._eventHubId = undefined;
-      this._name = undefined;
-      this._tenantId = undefined;
-      this._useCommonAlertSchema = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._eventHubId = value.eventHubId;
-      this._name = value.name;
-      this._tenantId = value.tenantId;
-      this._useCommonAlertSchema = value.useCommonAlertSchema;
-    }
-  }
-
-  // event_hub_id - computed: false, optional: false, required: true
-  private _eventHubId?: string; 
-  public get eventHubId() {
-    return this.getStringAttribute('event_hub_id');
-  }
-  public set eventHubId(value: string) {
-    this._eventHubId = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get eventHubIdInput() {
-    return this._eventHubId;
-  }
-
-  // name - computed: false, optional: false, required: true
-  private _name?: string; 
-  public get name() {
-    return this.getStringAttribute('name');
-  }
-  public set name(value: string) {
-    this._name = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get nameInput() {
-    return this._name;
-  }
-
-  // tenant_id - computed: true, optional: true, required: false
-  private _tenantId?: string; 
-  public get tenantId() {
-    return this.getStringAttribute('tenant_id');
-  }
-  public set tenantId(value: string) {
-    this._tenantId = value;
-  }
-  public resetTenantId() {
-    this._tenantId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tenantIdInput() {
-    return this._tenantId;
-  }
-
-  // use_common_alert_schema - computed: false, optional: true, required: false
-  private _useCommonAlertSchema?: boolean | cdktf.IResolvable; 
-  public get useCommonAlertSchema() {
-    return this.getBooleanAttribute('use_common_alert_schema');
-  }
-  public set useCommonAlertSchema(value: boolean | cdktf.IResolvable) {
-    this._useCommonAlertSchema = value;
-  }
-  public resetUseCommonAlertSchema() {
-    this._useCommonAlertSchema = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get useCommonAlertSchemaInput() {
-    return this._useCommonAlertSchema;
-  }
-}
-
-export class DataAzurermMonitorActionGroupEventHubReceiverList extends cdktf.ComplexList {
-  public internalValue? : DataAzurermMonitorActionGroupEventHubReceiver[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataAzurermMonitorActionGroupEventHubReceiverOutputReference {
-    return new DataAzurermMonitorActionGroupEventHubReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
 export interface DataAzurermMonitorActionGroupTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#read DataAzurermMonitorActionGroup#read}
@@ -1169,7 +1085,7 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_monitor_action_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1183,7 +1099,6 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
     this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._eventHubReceiver.internalValue = config.eventHubReceiver;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1224,6 +1139,12 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
     return this.getBooleanAttribute('enabled');
+  }
+
+  // event_hub_receiver - computed: true, optional: false, required: false
+  private _eventHubReceiver = new DataAzurermMonitorActionGroupEventHubReceiverList(this, "event_hub_receiver", false);
+  public get eventHubReceiver() {
+    return this._eventHubReceiver;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1303,22 +1224,6 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
     return this._webhookReceiver;
   }
 
-  // event_hub_receiver - computed: false, optional: true, required: false
-  private _eventHubReceiver = new DataAzurermMonitorActionGroupEventHubReceiverList(this, "event_hub_receiver", false);
-  public get eventHubReceiver() {
-    return this._eventHubReceiver;
-  }
-  public putEventHubReceiver(value: DataAzurermMonitorActionGroupEventHubReceiver[] | cdktf.IResolvable) {
-    this._eventHubReceiver.internalValue = value;
-  }
-  public resetEventHubReceiver() {
-    this._eventHubReceiver.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get eventHubReceiverInput() {
-    return this._eventHubReceiver.internalValue;
-  }
-
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new DataAzurermMonitorActionGroupTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -1344,7 +1249,6 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      event_hub_receiver: cdktf.listMapper(dataAzurermMonitorActionGroupEventHubReceiverToTerraform, true)(this._eventHubReceiver.internalValue),
       timeouts: dataAzurermMonitorActionGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

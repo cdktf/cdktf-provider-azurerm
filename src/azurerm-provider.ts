@@ -500,7 +500,7 @@ export class AzurermProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'azurerm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       terraformProviderSource: 'azurerm'

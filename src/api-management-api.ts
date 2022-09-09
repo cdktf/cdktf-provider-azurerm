@@ -12,6 +12,10 @@ export interface ApiManagementApiConfig extends cdktf.TerraformMetaArguments {
   */
   readonly apiManagementName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api#api_type ApiManagementApi#api_type}
+  */
+  readonly apiType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api#description ApiManagementApi#description}
   */
   readonly description?: string;
@@ -757,7 +761,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_api',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -769,6 +773,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._apiManagementName = config.apiManagementName;
+    this._apiType = config.apiType;
     this._description = config.description;
     this._displayName = config.displayName;
     this._id = config.id;
@@ -807,6 +812,22 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get apiManagementNameInput() {
     return this._apiManagementName;
+  }
+
+  // api_type - computed: true, optional: true, required: false
+  private _apiType?: string; 
+  public get apiType() {
+    return this.getStringAttribute('api_type');
+  }
+  public set apiType(value: string) {
+    this._apiType = value;
+  }
+  public resetApiType() {
+    this._apiType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiTypeInput() {
+    return this._apiType;
   }
 
   // description - computed: false, optional: true, required: false
@@ -970,7 +991,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
     return this._serviceUrl;
   }
 
-  // soap_pass_through - computed: false, optional: true, required: false
+  // soap_pass_through - computed: true, optional: true, required: false
   private _soapPassThrough?: boolean | cdktf.IResolvable; 
   public get soapPassThrough() {
     return this.getBooleanAttribute('soap_pass_through');
@@ -1153,6 +1174,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      api_type: cdktf.stringToTerraform(this._apiType),
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       id: cdktf.stringToTerraform(this._id),
