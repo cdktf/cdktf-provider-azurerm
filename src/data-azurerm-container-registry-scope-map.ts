@@ -135,7 +135,7 @@ export class DataAzurermContainerRegistryScopeMap extends cdktf.TerraformDataSou
       terraformResourceType: 'azurerm_container_registry_scope_map',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.22.0',
+        providerVersion: '3.23.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

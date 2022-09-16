@@ -43,6 +43,10 @@ export interface ManagementGroupPolicyRemediationConfig extends cdktf.TerraformM
   */
   readonly policyDefinitionId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_remediation#policy_definition_reference_id ManagementGroupPolicyRemediation#policy_definition_reference_id}
+  */
+  readonly policyDefinitionReferenceId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_remediation#resource_count ManagementGroupPolicyRemediation#resource_count}
   */
   readonly resourceCount?: number;
@@ -240,7 +244,7 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_management_group_policy_remediation',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.22.0',
+        providerVersion: '3.23.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -259,6 +263,7 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
     this._parallelDeployments = config.parallelDeployments;
     this._policyAssignmentId = config.policyAssignmentId;
     this._policyDefinitionId = config.policyDefinitionId;
+    this._policyDefinitionReferenceId = config.policyDefinitionReferenceId;
     this._resourceCount = config.resourceCount;
     this._resourceDiscoveryMode = config.resourceDiscoveryMode;
     this._timeouts.internalValue = config.timeouts;
@@ -387,6 +392,22 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
     return this._policyDefinitionId;
   }
 
+  // policy_definition_reference_id - computed: false, optional: true, required: false
+  private _policyDefinitionReferenceId?: string; 
+  public get policyDefinitionReferenceId() {
+    return this.getStringAttribute('policy_definition_reference_id');
+  }
+  public set policyDefinitionReferenceId(value: string) {
+    this._policyDefinitionReferenceId = value;
+  }
+  public resetPolicyDefinitionReferenceId() {
+    this._policyDefinitionReferenceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyDefinitionReferenceIdInput() {
+    return this._policyDefinitionReferenceId;
+  }
+
   // resource_count - computed: false, optional: true, required: false
   private _resourceCount?: number; 
   public get resourceCount() {
@@ -449,6 +470,7 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
       parallel_deployments: cdktf.numberToTerraform(this._parallelDeployments),
       policy_assignment_id: cdktf.stringToTerraform(this._policyAssignmentId),
       policy_definition_id: cdktf.stringToTerraform(this._policyDefinitionId),
+      policy_definition_reference_id: cdktf.stringToTerraform(this._policyDefinitionReferenceId),
       resource_count: cdktf.numberToTerraform(this._resourceCount),
       resource_discovery_mode: cdktf.stringToTerraform(this._resourceDiscoveryMode),
       timeouts: managementGroupPolicyRemediationTimeoutsToTerraform(this._timeouts.internalValue),

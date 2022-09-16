@@ -216,7 +216,7 @@ export class NetworkInterfaceBackendAddressPoolAssociation extends cdktf.Terrafo
       terraformResourceType: 'azurerm_network_interface_backend_address_pool_association',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.22.0',
+        providerVersion: '3.23.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

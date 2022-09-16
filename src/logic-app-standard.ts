@@ -79,6 +79,10 @@ export interface LogicAppStandardConfig extends cdktf.TerraformMetaArguments {
   */
   readonly version?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#virtual_network_subnet_id LogicAppStandard#virtual_network_subnet_id}
+  */
+  readonly virtualNetworkSubnetId?: string;
+  /**
   * connection_string block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#connection_string LogicAppStandard#connection_string}
@@ -316,6 +320,10 @@ export class LogicAppStandardConnectionStringList extends cdktf.ComplexList {
 }
 export interface LogicAppStandardIdentity {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#identity_ids LogicAppStandard#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#type LogicAppStandard#type}
   */
   readonly type: string;
@@ -327,6 +335,7 @@ export function logicAppStandardIdentityToTerraform(struct?: LogicAppStandardIde
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -345,6 +354,10 @@ export class LogicAppStandardIdentityOutputReference extends cdktf.ComplexObject
   public get internalValue(): LogicAppStandardIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
@@ -355,12 +368,30 @@ export class LogicAppStandardIdentityOutputReference extends cdktf.ComplexObject
   public set internalValue(value: LogicAppStandardIdentity | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._identityIds = undefined;
       this._type = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
       this._type = value.type;
     }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
   }
 
   // principal_id - computed: true, optional: false, required: false
@@ -1567,7 +1598,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_logic_app_standard',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.22.0',
+        providerVersion: '3.23.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1595,6 +1626,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._useExtensionBundle = config.useExtensionBundle;
     this._version = config.version;
+    this._virtualNetworkSubnetId = config.virtualNetworkSubnetId;
     this._connectionString.internalValue = config.connectionString;
     this._identity.internalValue = config.identity;
     this._siteConfig.internalValue = config.siteConfig;
@@ -1890,6 +1922,22 @@ export class LogicAppStandard extends cdktf.TerraformResource {
     return this._version;
   }
 
+  // virtual_network_subnet_id - computed: false, optional: true, required: false
+  private _virtualNetworkSubnetId?: string; 
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+  public set virtualNetworkSubnetId(value: string) {
+    this._virtualNetworkSubnetId = value;
+  }
+  public resetVirtualNetworkSubnetId() {
+    this._virtualNetworkSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdInput() {
+    return this._virtualNetworkSubnetId;
+  }
+
   // connection_string - computed: false, optional: true, required: false
   private _connectionString = new LogicAppStandardConnectionStringList(this, "connection_string", true);
   public get connectionString() {
@@ -1977,6 +2025,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       use_extension_bundle: cdktf.booleanToTerraform(this._useExtensionBundle),
       version: cdktf.stringToTerraform(this._version),
+      virtual_network_subnet_id: cdktf.stringToTerraform(this._virtualNetworkSubnetId),
       connection_string: cdktf.listMapper(logicAppStandardConnectionStringToTerraform, true)(this._connectionString.internalValue),
       identity: logicAppStandardIdentityToTerraform(this._identity.internalValue),
       site_config: logicAppStandardSiteConfigToTerraform(this._siteConfig.internalValue),

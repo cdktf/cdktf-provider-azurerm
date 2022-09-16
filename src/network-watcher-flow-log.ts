@@ -499,7 +499,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_network_watcher_flow_log',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.22.0',
+        providerVersion: '3.23.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -558,7 +558,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
     return this._id;
   }
 
-  // location - computed: false, optional: true, required: false
+  // location - computed: true, optional: true, required: false
   private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');

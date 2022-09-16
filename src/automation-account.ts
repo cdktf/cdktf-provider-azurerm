@@ -560,7 +560,7 @@ export class AutomationAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_automation_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.22.0',
+        providerVersion: '3.23.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -601,6 +601,11 @@ export class AutomationAccount extends cdktf.TerraformResource {
   // dsc_server_endpoint - computed: true, optional: false, required: false
   public get dscServerEndpoint() {
     return this.getStringAttribute('dsc_server_endpoint');
+  }
+
+  // hybrid_service_url - computed: true, optional: false, required: false
+  public get hybridServiceUrl() {
+    return this.getStringAttribute('hybrid_service_url');
   }
 
   // id - computed: true, optional: true, required: false

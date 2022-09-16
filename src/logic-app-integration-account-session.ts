@@ -220,7 +220,7 @@ export class LogicAppIntegrationAccountSession extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_logic_app_integration_account_session',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.22.0',
+        providerVersion: '3.23.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

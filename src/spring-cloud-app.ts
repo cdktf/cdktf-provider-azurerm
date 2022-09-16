@@ -638,7 +638,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.22.0',
+        providerVersion: '3.23.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
