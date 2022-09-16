@@ -212,7 +212,7 @@ export class NetworkInterfaceApplicationSecurityGroupAssociation extends cdktf.T
       terraformResourceType: 'azurerm_network_interface_application_security_group_association',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.22.0',
+        providerVersion: '3.23.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

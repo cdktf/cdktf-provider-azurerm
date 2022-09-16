@@ -341,6 +341,10 @@ export interface EventhubNamespaceNetworkRulesets {
   */
   readonly ipRule?: EventhubNamespaceNetworkRulesetsIpRule[] | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#public_network_access_enabled EventhubNamespace#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#trusted_service_access_enabled EventhubNamespace#trusted_service_access_enabled}
   */
   readonly trustedServiceAccessEnabled?: boolean | cdktf.IResolvable;
@@ -358,6 +362,7 @@ export function eventhubNamespaceNetworkRulesetsToTerraform(struct?: EventhubNam
   return {
     default_action: struct!.defaultAction === undefined ? null : cdktf.stringToTerraform(struct!.defaultAction),
     ip_rule: struct!.ipRule === undefined ? null : cdktf.listMapper(eventhubNamespaceNetworkRulesetsIpRuleToTerraform, false)(struct!.ipRule),
+    public_network_access_enabled: cdktf.booleanToTerraform(struct!.publicNetworkAccessEnabled),
     trusted_service_access_enabled: struct!.trustedServiceAccessEnabled === undefined ? null : cdktf.booleanToTerraform(struct!.trustedServiceAccessEnabled),
     virtual_network_rule: struct!.virtualNetworkRule === undefined ? null : cdktf.listMapper(eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform, false)(struct!.virtualNetworkRule),
   }
@@ -391,6 +396,10 @@ export class EventhubNamespaceNetworkRulesetsOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.ipRule = this._ipRule?.internalValue;
     }
+    if (this._publicNetworkAccessEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publicNetworkAccessEnabled = this._publicNetworkAccessEnabled;
+    }
     if (this._trustedServiceAccessEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.trustedServiceAccessEnabled = this._trustedServiceAccessEnabled;
@@ -408,6 +417,7 @@ export class EventhubNamespaceNetworkRulesetsOutputReference extends cdktf.Compl
       this.resolvableValue = undefined;
       this._defaultAction = undefined;
       this._ipRule.internalValue = undefined;
+      this._publicNetworkAccessEnabled = undefined;
       this._trustedServiceAccessEnabled = undefined;
       this._virtualNetworkRule.internalValue = undefined;
     }
@@ -420,6 +430,7 @@ export class EventhubNamespaceNetworkRulesetsOutputReference extends cdktf.Compl
       this.resolvableValue = undefined;
       this._defaultAction = value.defaultAction;
       this._ipRule.internalValue = value.ipRule;
+      this._publicNetworkAccessEnabled = value.publicNetworkAccessEnabled;
       this._trustedServiceAccessEnabled = value.trustedServiceAccessEnabled;
       this._virtualNetworkRule.internalValue = value.virtualNetworkRule;
     }
@@ -455,6 +466,22 @@ export class EventhubNamespaceNetworkRulesetsOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get ipRuleInput() {
     return this._ipRule.internalValue;
+  }
+
+  // public_network_access_enabled - computed: true, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
   }
 
   // trusted_service_access_enabled - computed: true, optional: true, required: false
@@ -791,7 +818,7 @@ export class EventhubNamespace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_eventhub_namespace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.22.0',
+        providerVersion: '3.23.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

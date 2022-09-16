@@ -1356,7 +1356,7 @@ export class DataAzurermLogicAppStandard extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_logic_app_standard',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.22.0',
+        providerVersion: '3.23.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1544,6 +1544,11 @@ export class DataAzurermLogicAppStandard extends cdktf.TerraformDataSource {
   // version - computed: true, optional: false, required: false
   public get version() {
     return this.getStringAttribute('version');
+  }
+
+  // virtual_network_subnet_id - computed: true, optional: false, required: false
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
   }
 
   // site_config - computed: false, optional: true, required: false

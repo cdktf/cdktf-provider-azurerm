@@ -16,9 +16,17 @@ export interface ApiManagementApiSchemaConfig extends cdktf.TerraformMetaArgumen
   */
   readonly apiName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema#components ApiManagementApiSchema#components}
+  */
+  readonly components?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema#content_type ApiManagementApiSchema#content_type}
   */
   readonly contentType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema#definitions ApiManagementApiSchema#definitions}
+  */
+  readonly definitions?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema#id ApiManagementApiSchema#id}
   *
@@ -37,7 +45,7 @@ export interface ApiManagementApiSchemaConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema#value ApiManagementApiSchema#value}
   */
-  readonly value: string;
+  readonly value?: string;
   /**
   * timeouts block
   * 
@@ -228,7 +236,7 @@ export class ApiManagementApiSchema extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_api_schema',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.22.0',
+        providerVersion: '3.23.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -241,7 +249,9 @@ export class ApiManagementApiSchema extends cdktf.TerraformResource {
     });
     this._apiManagementName = config.apiManagementName;
     this._apiName = config.apiName;
+    this._components = config.components;
     this._contentType = config.contentType;
+    this._definitions = config.definitions;
     this._id = config.id;
     this._resourceGroupName = config.resourceGroupName;
     this._schemaId = config.schemaId;
@@ -279,6 +289,22 @@ export class ApiManagementApiSchema extends cdktf.TerraformResource {
     return this._apiName;
   }
 
+  // components - computed: false, optional: true, required: false
+  private _components?: string; 
+  public get components() {
+    return this.getStringAttribute('components');
+  }
+  public set components(value: string) {
+    this._components = value;
+  }
+  public resetComponents() {
+    this._components = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get componentsInput() {
+    return this._components;
+  }
+
   // content_type - computed: false, optional: false, required: true
   private _contentType?: string; 
   public get contentType() {
@@ -290,6 +316,22 @@ export class ApiManagementApiSchema extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get contentTypeInput() {
     return this._contentType;
+  }
+
+  // definitions - computed: false, optional: true, required: false
+  private _definitions?: string; 
+  public get definitions() {
+    return this.getStringAttribute('definitions');
+  }
+  public set definitions(value: string) {
+    this._definitions = value;
+  }
+  public resetDefinitions() {
+    this._definitions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get definitionsInput() {
+    return this._definitions;
   }
 
   // id - computed: true, optional: true, required: false
@@ -334,13 +376,16 @@ export class ApiManagementApiSchema extends cdktf.TerraformResource {
     return this._schemaId;
   }
 
-  // value - computed: false, optional: false, required: true
+  // value - computed: false, optional: true, required: false
   private _value?: string; 
   public get value() {
     return this.getStringAttribute('value');
   }
   public set value(value: string) {
     this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get valueInput() {
@@ -371,7 +416,9 @@ export class ApiManagementApiSchema extends cdktf.TerraformResource {
     return {
       api_management_name: cdktf.stringToTerraform(this._apiManagementName),
       api_name: cdktf.stringToTerraform(this._apiName),
+      components: cdktf.stringToTerraform(this._components),
       content_type: cdktf.stringToTerraform(this._contentType),
+      definitions: cdktf.stringToTerraform(this._definitions),
       id: cdktf.stringToTerraform(this._id),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       schema_id: cdktf.stringToTerraform(this._schemaId),

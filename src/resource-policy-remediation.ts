@@ -39,6 +39,10 @@ export interface ResourcePolicyRemediationConfig extends cdktf.TerraformMetaArgu
   */
   readonly policyDefinitionId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#policy_definition_reference_id ResourcePolicyRemediation#policy_definition_reference_id}
+  */
+  readonly policyDefinitionReferenceId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#resource_count ResourcePolicyRemediation#resource_count}
   */
   readonly resourceCount?: number;
@@ -240,7 +244,7 @@ export class ResourcePolicyRemediation extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_resource_policy_remediation',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.22.0',
+        providerVersion: '3.23.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -258,6 +262,7 @@ export class ResourcePolicyRemediation extends cdktf.TerraformResource {
     this._parallelDeployments = config.parallelDeployments;
     this._policyAssignmentId = config.policyAssignmentId;
     this._policyDefinitionId = config.policyDefinitionId;
+    this._policyDefinitionReferenceId = config.policyDefinitionReferenceId;
     this._resourceCount = config.resourceCount;
     this._resourceDiscoveryMode = config.resourceDiscoveryMode;
     this._resourceId = config.resourceId;
@@ -374,6 +379,22 @@ export class ResourcePolicyRemediation extends cdktf.TerraformResource {
     return this._policyDefinitionId;
   }
 
+  // policy_definition_reference_id - computed: false, optional: true, required: false
+  private _policyDefinitionReferenceId?: string; 
+  public get policyDefinitionReferenceId() {
+    return this.getStringAttribute('policy_definition_reference_id');
+  }
+  public set policyDefinitionReferenceId(value: string) {
+    this._policyDefinitionReferenceId = value;
+  }
+  public resetPolicyDefinitionReferenceId() {
+    this._policyDefinitionReferenceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyDefinitionReferenceIdInput() {
+    return this._policyDefinitionReferenceId;
+  }
+
   // resource_count - computed: false, optional: true, required: false
   private _resourceCount?: number; 
   public get resourceCount() {
@@ -448,6 +469,7 @@ export class ResourcePolicyRemediation extends cdktf.TerraformResource {
       parallel_deployments: cdktf.numberToTerraform(this._parallelDeployments),
       policy_assignment_id: cdktf.stringToTerraform(this._policyAssignmentId),
       policy_definition_id: cdktf.stringToTerraform(this._policyDefinitionId),
+      policy_definition_reference_id: cdktf.stringToTerraform(this._policyDefinitionReferenceId),
       resource_count: cdktf.numberToTerraform(this._resourceCount),
       resource_discovery_mode: cdktf.stringToTerraform(this._resourceDiscoveryMode),
       resource_id: cdktf.stringToTerraform(this._resourceId),

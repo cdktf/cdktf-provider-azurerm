@@ -23,6 +23,14 @@ export interface BatchPoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#inter_node_communication BatchPool#inter_node_communication}
+  */
+  readonly interNodeCommunication?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#license_type BatchPool#license_type}
+  */
+  readonly licenseType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#max_tasks_per_node BatchPool#max_tasks_per_node}
   */
   readonly maxTasksPerNode?: number;
@@ -38,6 +46,10 @@ export interface BatchPoolConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#node_agent_sku_id BatchPool#node_agent_sku_id}
   */
   readonly nodeAgentSkuId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#os_disk_placement BatchPool#os_disk_placement}
+  */
+  readonly osDiskPlacement?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#resource_group_name BatchPool#resource_group_name}
   */
@@ -69,6 +81,24 @@ export interface BatchPoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly containerConfiguration?: BatchPoolContainerConfiguration;
   /**
+  * data_disks block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#data_disks BatchPool#data_disks}
+  */
+  readonly dataDisks?: BatchPoolDataDisks[] | cdktf.IResolvable;
+  /**
+  * disk_encryption block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#disk_encryption BatchPool#disk_encryption}
+  */
+  readonly diskEncryption?: BatchPoolDiskEncryption[] | cdktf.IResolvable;
+  /**
+  * extensions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#extensions BatchPool#extensions}
+  */
+  readonly extensions?: BatchPoolExtensions[] | cdktf.IResolvable;
+  /**
   * fixed_scale block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#fixed_scale BatchPool#fixed_scale}
@@ -93,6 +123,12 @@ export interface BatchPoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly networkConfiguration?: BatchPoolNetworkConfiguration;
   /**
+  * node_placement block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#node_placement BatchPool#node_placement}
+  */
+  readonly nodePlacement?: BatchPoolNodePlacement[] | cdktf.IResolvable;
+  /**
   * start_task block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#start_task BatchPool#start_task}
@@ -105,11 +141,29 @@ export interface BatchPoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly storageImageReference: BatchPoolStorageImageReference;
   /**
+  * task_scheduling_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#task_scheduling_policy BatchPool#task_scheduling_policy}
+  */
+  readonly taskSchedulingPolicy?: BatchPoolTaskSchedulingPolicy[] | cdktf.IResolvable;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#timeouts BatchPool#timeouts}
   */
   readonly timeouts?: BatchPoolTimeouts;
+  /**
+  * user_accounts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#user_accounts BatchPool#user_accounts}
+  */
+  readonly userAccounts?: BatchPoolUserAccounts[] | cdktf.IResolvable;
+  /**
+  * windows block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#windows BatchPool#windows}
+  */
+  readonly windows?: BatchPoolWindows[] | cdktf.IResolvable;
 }
 export interface BatchPoolAutoScale {
   /**
@@ -670,6 +724,549 @@ export class BatchPoolContainerConfigurationOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type;
+  }
+}
+export interface BatchPoolDataDisks {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#caching BatchPool#caching}
+  */
+  readonly caching?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#disk_size_gb BatchPool#disk_size_gb}
+  */
+  readonly diskSizeGb: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#lun BatchPool#lun}
+  */
+  readonly lun: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#storage_account_type BatchPool#storage_account_type}
+  */
+  readonly storageAccountType?: string;
+}
+
+export function batchPoolDataDisksToTerraform(struct?: BatchPoolDataDisks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    caching: cdktf.stringToTerraform(struct!.caching),
+    disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
+    lun: cdktf.numberToTerraform(struct!.lun),
+    storage_account_type: cdktf.stringToTerraform(struct!.storageAccountType),
+  }
+}
+
+export class BatchPoolDataDisksOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BatchPoolDataDisks | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._caching !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.caching = this._caching;
+    }
+    if (this._diskSizeGb !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskSizeGb = this._diskSizeGb;
+    }
+    if (this._lun !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.lun = this._lun;
+    }
+    if (this._storageAccountType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountType = this._storageAccountType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchPoolDataDisks | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._caching = undefined;
+      this._diskSizeGb = undefined;
+      this._lun = undefined;
+      this._storageAccountType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._caching = value.caching;
+      this._diskSizeGb = value.diskSizeGb;
+      this._lun = value.lun;
+      this._storageAccountType = value.storageAccountType;
+    }
+  }
+
+  // caching - computed: false, optional: true, required: false
+  private _caching?: string; 
+  public get caching() {
+    return this.getStringAttribute('caching');
+  }
+  public set caching(value: string) {
+    this._caching = value;
+  }
+  public resetCaching() {
+    this._caching = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cachingInput() {
+    return this._caching;
+  }
+
+  // disk_size_gb - computed: false, optional: false, required: true
+  private _diskSizeGb?: number; 
+  public get diskSizeGb() {
+    return this.getNumberAttribute('disk_size_gb');
+  }
+  public set diskSizeGb(value: number) {
+    this._diskSizeGb = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskSizeGbInput() {
+    return this._diskSizeGb;
+  }
+
+  // lun - computed: false, optional: false, required: true
+  private _lun?: number; 
+  public get lun() {
+    return this.getNumberAttribute('lun');
+  }
+  public set lun(value: number) {
+    this._lun = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lunInput() {
+    return this._lun;
+  }
+
+  // storage_account_type - computed: false, optional: true, required: false
+  private _storageAccountType?: string; 
+  public get storageAccountType() {
+    return this.getStringAttribute('storage_account_type');
+  }
+  public set storageAccountType(value: string) {
+    this._storageAccountType = value;
+  }
+  public resetStorageAccountType() {
+    this._storageAccountType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountTypeInput() {
+    return this._storageAccountType;
+  }
+}
+
+export class BatchPoolDataDisksList extends cdktf.ComplexList {
+  public internalValue? : BatchPoolDataDisks[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BatchPoolDataDisksOutputReference {
+    return new BatchPoolDataDisksOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface BatchPoolDiskEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#disk_encryption_target BatchPool#disk_encryption_target}
+  */
+  readonly diskEncryptionTarget: string;
+}
+
+export function batchPoolDiskEncryptionToTerraform(struct?: BatchPoolDiskEncryption | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    disk_encryption_target: cdktf.stringToTerraform(struct!.diskEncryptionTarget),
+  }
+}
+
+export class BatchPoolDiskEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BatchPoolDiskEncryption | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._diskEncryptionTarget !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskEncryptionTarget = this._diskEncryptionTarget;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchPoolDiskEncryption | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._diskEncryptionTarget = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._diskEncryptionTarget = value.diskEncryptionTarget;
+    }
+  }
+
+  // disk_encryption_target - computed: false, optional: false, required: true
+  private _diskEncryptionTarget?: string; 
+  public get diskEncryptionTarget() {
+    return this.getStringAttribute('disk_encryption_target');
+  }
+  public set diskEncryptionTarget(value: string) {
+    this._diskEncryptionTarget = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskEncryptionTargetInput() {
+    return this._diskEncryptionTarget;
+  }
+}
+
+export class BatchPoolDiskEncryptionList extends cdktf.ComplexList {
+  public internalValue? : BatchPoolDiskEncryption[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BatchPoolDiskEncryptionOutputReference {
+    return new BatchPoolDiskEncryptionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface BatchPoolExtensions {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#auto_upgrade_minor_version BatchPool#auto_upgrade_minor_version}
+  */
+  readonly autoUpgradeMinorVersion?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#name BatchPool#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#protected_settings BatchPool#protected_settings}
+  */
+  readonly protectedSettings?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#provision_after_extensions BatchPool#provision_after_extensions}
+  */
+  readonly provisionAfterExtensions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#publisher BatchPool#publisher}
+  */
+  readonly publisher: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#settings_json BatchPool#settings_json}
+  */
+  readonly settingsJson?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#type BatchPool#type}
+  */
+  readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#type_handler_version BatchPool#type_handler_version}
+  */
+  readonly typeHandlerVersion?: string;
+}
+
+export function batchPoolExtensionsToTerraform(struct?: BatchPoolExtensions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    auto_upgrade_minor_version: cdktf.booleanToTerraform(struct!.autoUpgradeMinorVersion),
+    name: cdktf.stringToTerraform(struct!.name),
+    protected_settings: cdktf.stringToTerraform(struct!.protectedSettings),
+    provision_after_extensions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.provisionAfterExtensions),
+    publisher: cdktf.stringToTerraform(struct!.publisher),
+    settings_json: cdktf.stringToTerraform(struct!.settingsJson),
+    type: cdktf.stringToTerraform(struct!.type),
+    type_handler_version: cdktf.stringToTerraform(struct!.typeHandlerVersion),
+  }
+}
+
+export class BatchPoolExtensionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BatchPoolExtensions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._autoUpgradeMinorVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.autoUpgradeMinorVersion = this._autoUpgradeMinorVersion;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._protectedSettings !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protectedSettings = this._protectedSettings;
+    }
+    if (this._provisionAfterExtensions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.provisionAfterExtensions = this._provisionAfterExtensions;
+    }
+    if (this._publisher !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publisher = this._publisher;
+    }
+    if (this._settingsJson !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.settingsJson = this._settingsJson;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._typeHandlerVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.typeHandlerVersion = this._typeHandlerVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchPoolExtensions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._autoUpgradeMinorVersion = undefined;
+      this._name = undefined;
+      this._protectedSettings = undefined;
+      this._provisionAfterExtensions = undefined;
+      this._publisher = undefined;
+      this._settingsJson = undefined;
+      this._type = undefined;
+      this._typeHandlerVersion = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._autoUpgradeMinorVersion = value.autoUpgradeMinorVersion;
+      this._name = value.name;
+      this._protectedSettings = value.protectedSettings;
+      this._provisionAfterExtensions = value.provisionAfterExtensions;
+      this._publisher = value.publisher;
+      this._settingsJson = value.settingsJson;
+      this._type = value.type;
+      this._typeHandlerVersion = value.typeHandlerVersion;
+    }
+  }
+
+  // auto_upgrade_minor_version - computed: false, optional: true, required: false
+  private _autoUpgradeMinorVersion?: boolean | cdktf.IResolvable; 
+  public get autoUpgradeMinorVersion() {
+    return this.getBooleanAttribute('auto_upgrade_minor_version');
+  }
+  public set autoUpgradeMinorVersion(value: boolean | cdktf.IResolvable) {
+    this._autoUpgradeMinorVersion = value;
+  }
+  public resetAutoUpgradeMinorVersion() {
+    this._autoUpgradeMinorVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoUpgradeMinorVersionInput() {
+    return this._autoUpgradeMinorVersion;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // protected_settings - computed: false, optional: true, required: false
+  private _protectedSettings?: string; 
+  public get protectedSettings() {
+    return this.getStringAttribute('protected_settings');
+  }
+  public set protectedSettings(value: string) {
+    this._protectedSettings = value;
+  }
+  public resetProtectedSettings() {
+    this._protectedSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protectedSettingsInput() {
+    return this._protectedSettings;
+  }
+
+  // provision_after_extensions - computed: false, optional: true, required: false
+  private _provisionAfterExtensions?: string[]; 
+  public get provisionAfterExtensions() {
+    return cdktf.Fn.tolist(this.getListAttribute('provision_after_extensions'));
+  }
+  public set provisionAfterExtensions(value: string[]) {
+    this._provisionAfterExtensions = value;
+  }
+  public resetProvisionAfterExtensions() {
+    this._provisionAfterExtensions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get provisionAfterExtensionsInput() {
+    return this._provisionAfterExtensions;
+  }
+
+  // publisher - computed: false, optional: false, required: true
+  private _publisher?: string; 
+  public get publisher() {
+    return this.getStringAttribute('publisher');
+  }
+  public set publisher(value: string) {
+    this._publisher = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publisherInput() {
+    return this._publisher;
+  }
+
+  // settings_json - computed: false, optional: true, required: false
+  private _settingsJson?: string; 
+  public get settingsJson() {
+    return this.getStringAttribute('settings_json');
+  }
+  public set settingsJson(value: string) {
+    this._settingsJson = value;
+  }
+  public resetSettingsJson() {
+    this._settingsJson = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get settingsJsonInput() {
+    return this._settingsJson;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // type_handler_version - computed: false, optional: true, required: false
+  private _typeHandlerVersion?: string; 
+  public get typeHandlerVersion() {
+    return this.getStringAttribute('type_handler_version');
+  }
+  public set typeHandlerVersion(value: string) {
+    this._typeHandlerVersion = value;
+  }
+  public resetTypeHandlerVersion() {
+    this._typeHandlerVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeHandlerVersionInput() {
+    return this._typeHandlerVersion;
+  }
+}
+
+export class BatchPoolExtensionsList extends cdktf.ComplexList {
+  public internalValue? : BatchPoolExtensions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BatchPoolExtensionsOutputReference {
+    return new BatchPoolExtensionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface BatchPoolFixedScale {
@@ -2294,6 +2891,103 @@ export class BatchPoolNetworkConfigurationOutputReference extends cdktf.ComplexO
     return this._endpointConfiguration.internalValue;
   }
 }
+export interface BatchPoolNodePlacement {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#policy BatchPool#policy}
+  */
+  readonly policy?: string;
+}
+
+export function batchPoolNodePlacementToTerraform(struct?: BatchPoolNodePlacement | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    policy: cdktf.stringToTerraform(struct!.policy),
+  }
+}
+
+export class BatchPoolNodePlacementOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BatchPoolNodePlacement | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._policy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.policy = this._policy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchPoolNodePlacement | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._policy = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._policy = value.policy;
+    }
+  }
+
+  // policy - computed: false, optional: true, required: false
+  private _policy?: string; 
+  public get policy() {
+    return this.getStringAttribute('policy');
+  }
+  public set policy(value: string) {
+    this._policy = value;
+  }
+  public resetPolicy() {
+    this._policy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyInput() {
+    return this._policy;
+  }
+}
+
+export class BatchPoolNodePlacementList extends cdktf.ComplexList {
+  public internalValue? : BatchPoolNodePlacement[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BatchPoolNodePlacementOutputReference {
+    return new BatchPoolNodePlacementOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface BatchPoolStartTaskResourceFile {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#auto_storage_container_name BatchPool#auto_storage_container_name}
@@ -2319,6 +3013,10 @@ export interface BatchPoolStartTaskResourceFile {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#storage_container_url BatchPool#storage_container_url}
   */
   readonly storageContainerUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#user_assigned_identity_id BatchPool#user_assigned_identity_id}
+  */
+  readonly userAssignedIdentityId?: string;
 }
 
 export function batchPoolStartTaskResourceFileToTerraform(struct?: BatchPoolStartTaskResourceFile | cdktf.IResolvable): any {
@@ -2333,6 +3031,7 @@ export function batchPoolStartTaskResourceFileToTerraform(struct?: BatchPoolStar
     file_path: cdktf.stringToTerraform(struct!.filePath),
     http_url: cdktf.stringToTerraform(struct!.httpUrl),
     storage_container_url: cdktf.stringToTerraform(struct!.storageContainerUrl),
+    user_assigned_identity_id: cdktf.stringToTerraform(struct!.userAssignedIdentityId),
   }
 }
 
@@ -2380,6 +3079,10 @@ export class BatchPoolStartTaskResourceFileOutputReference extends cdktf.Complex
       hasAnyValues = true;
       internalValueResult.storageContainerUrl = this._storageContainerUrl;
     }
+    if (this._userAssignedIdentityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userAssignedIdentityId = this._userAssignedIdentityId;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -2393,6 +3096,7 @@ export class BatchPoolStartTaskResourceFileOutputReference extends cdktf.Complex
       this._filePath = undefined;
       this._httpUrl = undefined;
       this._storageContainerUrl = undefined;
+      this._userAssignedIdentityId = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -2407,6 +3111,7 @@ export class BatchPoolStartTaskResourceFileOutputReference extends cdktf.Complex
       this._filePath = value.filePath;
       this._httpUrl = value.httpUrl;
       this._storageContainerUrl = value.storageContainerUrl;
+      this._userAssignedIdentityId = value.userAssignedIdentityId;
     }
   }
 
@@ -2504,6 +3209,22 @@ export class BatchPoolStartTaskResourceFileOutputReference extends cdktf.Complex
   // Temporarily expose input value. Use with caution.
   public get storageContainerUrlInput() {
     return this._storageContainerUrl;
+  }
+
+  // user_assigned_identity_id - computed: false, optional: true, required: false
+  private _userAssignedIdentityId?: string; 
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+  public set userAssignedIdentityId(value: string) {
+    this._userAssignedIdentityId = value;
+  }
+  public resetUserAssignedIdentityId() {
+    this._userAssignedIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignedIdentityIdInput() {
+    return this._userAssignedIdentityId;
   }
 }
 
@@ -3086,6 +3807,103 @@ export class BatchPoolStorageImageReferenceOutputReference extends cdktf.Complex
     return this._version;
   }
 }
+export interface BatchPoolTaskSchedulingPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#node_fill_type BatchPool#node_fill_type}
+  */
+  readonly nodeFillType?: string;
+}
+
+export function batchPoolTaskSchedulingPolicyToTerraform(struct?: BatchPoolTaskSchedulingPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    node_fill_type: cdktf.stringToTerraform(struct!.nodeFillType),
+  }
+}
+
+export class BatchPoolTaskSchedulingPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BatchPoolTaskSchedulingPolicy | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._nodeFillType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodeFillType = this._nodeFillType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchPoolTaskSchedulingPolicy | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._nodeFillType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._nodeFillType = value.nodeFillType;
+    }
+  }
+
+  // node_fill_type - computed: true, optional: true, required: false
+  private _nodeFillType?: string; 
+  public get nodeFillType() {
+    return this.getStringAttribute('node_fill_type');
+  }
+  public set nodeFillType(value: string) {
+    this._nodeFillType = value;
+  }
+  public resetNodeFillType() {
+    this._nodeFillType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeFillTypeInput() {
+    return this._nodeFillType;
+  }
+}
+
+export class BatchPoolTaskSchedulingPolicyList extends cdktf.ComplexList {
+  public internalValue? : BatchPoolTaskSchedulingPolicy[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BatchPoolTaskSchedulingPolicyOutputReference {
+    return new BatchPoolTaskSchedulingPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface BatchPoolTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#create BatchPool#create}
@@ -3242,6 +4060,548 @@ export class BatchPoolTimeoutsOutputReference extends cdktf.ComplexObject {
     return this._update;
   }
 }
+export interface BatchPoolUserAccountsLinuxUserConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#gid BatchPool#gid}
+  */
+  readonly gid?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#ssh_private_key BatchPool#ssh_private_key}
+  */
+  readonly sshPrivateKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#uid BatchPool#uid}
+  */
+  readonly uid?: number;
+}
+
+export function batchPoolUserAccountsLinuxUserConfigurationToTerraform(struct?: BatchPoolUserAccountsLinuxUserConfiguration | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    gid: cdktf.numberToTerraform(struct!.gid),
+    ssh_private_key: cdktf.stringToTerraform(struct!.sshPrivateKey),
+    uid: cdktf.numberToTerraform(struct!.uid),
+  }
+}
+
+export class BatchPoolUserAccountsLinuxUserConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BatchPoolUserAccountsLinuxUserConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._gid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gid = this._gid;
+    }
+    if (this._sshPrivateKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sshPrivateKey = this._sshPrivateKey;
+    }
+    if (this._uid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uid = this._uid;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchPoolUserAccountsLinuxUserConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._gid = undefined;
+      this._sshPrivateKey = undefined;
+      this._uid = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._gid = value.gid;
+      this._sshPrivateKey = value.sshPrivateKey;
+      this._uid = value.uid;
+    }
+  }
+
+  // gid - computed: false, optional: true, required: false
+  private _gid?: number; 
+  public get gid() {
+    return this.getNumberAttribute('gid');
+  }
+  public set gid(value: number) {
+    this._gid = value;
+  }
+  public resetGid() {
+    this._gid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gidInput() {
+    return this._gid;
+  }
+
+  // ssh_private_key - computed: false, optional: true, required: false
+  private _sshPrivateKey?: string; 
+  public get sshPrivateKey() {
+    return this.getStringAttribute('ssh_private_key');
+  }
+  public set sshPrivateKey(value: string) {
+    this._sshPrivateKey = value;
+  }
+  public resetSshPrivateKey() {
+    this._sshPrivateKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sshPrivateKeyInput() {
+    return this._sshPrivateKey;
+  }
+
+  // uid - computed: false, optional: true, required: false
+  private _uid?: number; 
+  public get uid() {
+    return this.getNumberAttribute('uid');
+  }
+  public set uid(value: number) {
+    this._uid = value;
+  }
+  public resetUid() {
+    this._uid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uidInput() {
+    return this._uid;
+  }
+}
+
+export class BatchPoolUserAccountsLinuxUserConfigurationList extends cdktf.ComplexList {
+  public internalValue? : BatchPoolUserAccountsLinuxUserConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BatchPoolUserAccountsLinuxUserConfigurationOutputReference {
+    return new BatchPoolUserAccountsLinuxUserConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface BatchPoolUserAccountsWindowsUserConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#login_mode BatchPool#login_mode}
+  */
+  readonly loginMode: string;
+}
+
+export function batchPoolUserAccountsWindowsUserConfigurationToTerraform(struct?: BatchPoolUserAccountsWindowsUserConfiguration | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    login_mode: cdktf.stringToTerraform(struct!.loginMode),
+  }
+}
+
+export class BatchPoolUserAccountsWindowsUserConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BatchPoolUserAccountsWindowsUserConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._loginMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loginMode = this._loginMode;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchPoolUserAccountsWindowsUserConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._loginMode = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._loginMode = value.loginMode;
+    }
+  }
+
+  // login_mode - computed: false, optional: false, required: true
+  private _loginMode?: string; 
+  public get loginMode() {
+    return this.getStringAttribute('login_mode');
+  }
+  public set loginMode(value: string) {
+    this._loginMode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginModeInput() {
+    return this._loginMode;
+  }
+}
+
+export class BatchPoolUserAccountsWindowsUserConfigurationList extends cdktf.ComplexList {
+  public internalValue? : BatchPoolUserAccountsWindowsUserConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BatchPoolUserAccountsWindowsUserConfigurationOutputReference {
+    return new BatchPoolUserAccountsWindowsUserConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface BatchPoolUserAccounts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#elevation_level BatchPool#elevation_level}
+  */
+  readonly elevationLevel: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#name BatchPool#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#password BatchPool#password}
+  */
+  readonly password: string;
+  /**
+  * linux_user_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#linux_user_configuration BatchPool#linux_user_configuration}
+  */
+  readonly linuxUserConfiguration?: BatchPoolUserAccountsLinuxUserConfiguration[] | cdktf.IResolvable;
+  /**
+  * windows_user_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#windows_user_configuration BatchPool#windows_user_configuration}
+  */
+  readonly windowsUserConfiguration?: BatchPoolUserAccountsWindowsUserConfiguration[] | cdktf.IResolvable;
+}
+
+export function batchPoolUserAccountsToTerraform(struct?: BatchPoolUserAccounts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    elevation_level: cdktf.stringToTerraform(struct!.elevationLevel),
+    name: cdktf.stringToTerraform(struct!.name),
+    password: cdktf.stringToTerraform(struct!.password),
+    linux_user_configuration: cdktf.listMapper(batchPoolUserAccountsLinuxUserConfigurationToTerraform, true)(struct!.linuxUserConfiguration),
+    windows_user_configuration: cdktf.listMapper(batchPoolUserAccountsWindowsUserConfigurationToTerraform, true)(struct!.windowsUserConfiguration),
+  }
+}
+
+export class BatchPoolUserAccountsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BatchPoolUserAccounts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._elevationLevel !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.elevationLevel = this._elevationLevel;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._password !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._linuxUserConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.linuxUserConfiguration = this._linuxUserConfiguration?.internalValue;
+    }
+    if (this._windowsUserConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.windowsUserConfiguration = this._windowsUserConfiguration?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchPoolUserAccounts | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._elevationLevel = undefined;
+      this._name = undefined;
+      this._password = undefined;
+      this._linuxUserConfiguration.internalValue = undefined;
+      this._windowsUserConfiguration.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._elevationLevel = value.elevationLevel;
+      this._name = value.name;
+      this._password = value.password;
+      this._linuxUserConfiguration.internalValue = value.linuxUserConfiguration;
+      this._windowsUserConfiguration.internalValue = value.windowsUserConfiguration;
+    }
+  }
+
+  // elevation_level - computed: false, optional: false, required: true
+  private _elevationLevel?: string; 
+  public get elevationLevel() {
+    return this.getStringAttribute('elevation_level');
+  }
+  public set elevationLevel(value: string) {
+    this._elevationLevel = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get elevationLevelInput() {
+    return this._elevationLevel;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // password - computed: false, optional: false, required: true
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password;
+  }
+
+  // linux_user_configuration - computed: false, optional: true, required: false
+  private _linuxUserConfiguration = new BatchPoolUserAccountsLinuxUserConfigurationList(this, "linux_user_configuration", false);
+  public get linuxUserConfiguration() {
+    return this._linuxUserConfiguration;
+  }
+  public putLinuxUserConfiguration(value: BatchPoolUserAccountsLinuxUserConfiguration[] | cdktf.IResolvable) {
+    this._linuxUserConfiguration.internalValue = value;
+  }
+  public resetLinuxUserConfiguration() {
+    this._linuxUserConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linuxUserConfigurationInput() {
+    return this._linuxUserConfiguration.internalValue;
+  }
+
+  // windows_user_configuration - computed: false, optional: true, required: false
+  private _windowsUserConfiguration = new BatchPoolUserAccountsWindowsUserConfigurationList(this, "windows_user_configuration", false);
+  public get windowsUserConfiguration() {
+    return this._windowsUserConfiguration;
+  }
+  public putWindowsUserConfiguration(value: BatchPoolUserAccountsWindowsUserConfiguration[] | cdktf.IResolvable) {
+    this._windowsUserConfiguration.internalValue = value;
+  }
+  public resetWindowsUserConfiguration() {
+    this._windowsUserConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get windowsUserConfigurationInput() {
+    return this._windowsUserConfiguration.internalValue;
+  }
+}
+
+export class BatchPoolUserAccountsList extends cdktf.ComplexList {
+  public internalValue? : BatchPoolUserAccounts[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BatchPoolUserAccountsOutputReference {
+    return new BatchPoolUserAccountsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface BatchPoolWindows {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#enable_automatic_updates BatchPool#enable_automatic_updates}
+  */
+  readonly enableAutomaticUpdates?: boolean | cdktf.IResolvable;
+}
+
+export function batchPoolWindowsToTerraform(struct?: BatchPoolWindows | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enable_automatic_updates: cdktf.booleanToTerraform(struct!.enableAutomaticUpdates),
+  }
+}
+
+export class BatchPoolWindowsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BatchPoolWindows | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enableAutomaticUpdates !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableAutomaticUpdates = this._enableAutomaticUpdates;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchPoolWindows | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._enableAutomaticUpdates = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._enableAutomaticUpdates = value.enableAutomaticUpdates;
+    }
+  }
+
+  // enable_automatic_updates - computed: false, optional: true, required: false
+  private _enableAutomaticUpdates?: boolean | cdktf.IResolvable; 
+  public get enableAutomaticUpdates() {
+    return this.getBooleanAttribute('enable_automatic_updates');
+  }
+  public set enableAutomaticUpdates(value: boolean | cdktf.IResolvable) {
+    this._enableAutomaticUpdates = value;
+  }
+  public resetEnableAutomaticUpdates() {
+    this._enableAutomaticUpdates = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableAutomaticUpdatesInput() {
+    return this._enableAutomaticUpdates;
+  }
+}
+
+export class BatchPoolWindowsList extends cdktf.ComplexList {
+  public internalValue? : BatchPoolWindows[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BatchPoolWindowsOutputReference {
+    return new BatchPoolWindowsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool azurerm_batch_pool}
@@ -3269,7 +4629,7 @@ export class BatchPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_batch_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.22.0',
+        providerVersion: '3.23.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -3283,23 +4643,33 @@ export class BatchPool extends cdktf.TerraformResource {
     this._accountName = config.accountName;
     this._displayName = config.displayName;
     this._id = config.id;
+    this._interNodeCommunication = config.interNodeCommunication;
+    this._licenseType = config.licenseType;
     this._maxTasksPerNode = config.maxTasksPerNode;
     this._metadata = config.metadata;
     this._name = config.name;
     this._nodeAgentSkuId = config.nodeAgentSkuId;
+    this._osDiskPlacement = config.osDiskPlacement;
     this._resourceGroupName = config.resourceGroupName;
     this._stopPendingResizeOperation = config.stopPendingResizeOperation;
     this._vmSize = config.vmSize;
     this._autoScale.internalValue = config.autoScale;
     this._certificate.internalValue = config.certificate;
     this._containerConfiguration.internalValue = config.containerConfiguration;
+    this._dataDisks.internalValue = config.dataDisks;
+    this._diskEncryption.internalValue = config.diskEncryption;
+    this._extensions.internalValue = config.extensions;
     this._fixedScale.internalValue = config.fixedScale;
     this._identity.internalValue = config.identity;
     this._mount.internalValue = config.mount;
     this._networkConfiguration.internalValue = config.networkConfiguration;
+    this._nodePlacement.internalValue = config.nodePlacement;
     this._startTask.internalValue = config.startTask;
     this._storageImageReference.internalValue = config.storageImageReference;
+    this._taskSchedulingPolicy.internalValue = config.taskSchedulingPolicy;
     this._timeouts.internalValue = config.timeouts;
+    this._userAccounts.internalValue = config.userAccounts;
+    this._windows.internalValue = config.windows;
   }
 
   // ==========
@@ -3349,6 +4719,38 @@ export class BatchPool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // inter_node_communication - computed: false, optional: true, required: false
+  private _interNodeCommunication?: string; 
+  public get interNodeCommunication() {
+    return this.getStringAttribute('inter_node_communication');
+  }
+  public set interNodeCommunication(value: string) {
+    this._interNodeCommunication = value;
+  }
+  public resetInterNodeCommunication() {
+    this._interNodeCommunication = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get interNodeCommunicationInput() {
+    return this._interNodeCommunication;
+  }
+
+  // license_type - computed: false, optional: true, required: false
+  private _licenseType?: string; 
+  public get licenseType() {
+    return this.getStringAttribute('license_type');
+  }
+  public set licenseType(value: string) {
+    this._licenseType = value;
+  }
+  public resetLicenseType() {
+    this._licenseType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get licenseTypeInput() {
+    return this._licenseType;
   }
 
   // max_tasks_per_node - computed: false, optional: true, required: false
@@ -3407,6 +4809,22 @@ export class BatchPool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nodeAgentSkuIdInput() {
     return this._nodeAgentSkuId;
+  }
+
+  // os_disk_placement - computed: false, optional: true, required: false
+  private _osDiskPlacement?: string; 
+  public get osDiskPlacement() {
+    return this.getStringAttribute('os_disk_placement');
+  }
+  public set osDiskPlacement(value: string) {
+    this._osDiskPlacement = value;
+  }
+  public resetOsDiskPlacement() {
+    this._osDiskPlacement = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osDiskPlacementInput() {
+    return this._osDiskPlacement;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -3499,6 +4917,54 @@ export class BatchPool extends cdktf.TerraformResource {
     return this._containerConfiguration.internalValue;
   }
 
+  // data_disks - computed: false, optional: true, required: false
+  private _dataDisks = new BatchPoolDataDisksList(this, "data_disks", false);
+  public get dataDisks() {
+    return this._dataDisks;
+  }
+  public putDataDisks(value: BatchPoolDataDisks[] | cdktf.IResolvable) {
+    this._dataDisks.internalValue = value;
+  }
+  public resetDataDisks() {
+    this._dataDisks.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataDisksInput() {
+    return this._dataDisks.internalValue;
+  }
+
+  // disk_encryption - computed: false, optional: true, required: false
+  private _diskEncryption = new BatchPoolDiskEncryptionList(this, "disk_encryption", false);
+  public get diskEncryption() {
+    return this._diskEncryption;
+  }
+  public putDiskEncryption(value: BatchPoolDiskEncryption[] | cdktf.IResolvable) {
+    this._diskEncryption.internalValue = value;
+  }
+  public resetDiskEncryption() {
+    this._diskEncryption.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskEncryptionInput() {
+    return this._diskEncryption.internalValue;
+  }
+
+  // extensions - computed: false, optional: true, required: false
+  private _extensions = new BatchPoolExtensionsList(this, "extensions", false);
+  public get extensions() {
+    return this._extensions;
+  }
+  public putExtensions(value: BatchPoolExtensions[] | cdktf.IResolvable) {
+    this._extensions.internalValue = value;
+  }
+  public resetExtensions() {
+    this._extensions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionsInput() {
+    return this._extensions.internalValue;
+  }
+
   // fixed_scale - computed: false, optional: true, required: false
   private _fixedScale = new BatchPoolFixedScaleOutputReference(this, "fixed_scale");
   public get fixedScale() {
@@ -3563,6 +5029,22 @@ export class BatchPool extends cdktf.TerraformResource {
     return this._networkConfiguration.internalValue;
   }
 
+  // node_placement - computed: false, optional: true, required: false
+  private _nodePlacement = new BatchPoolNodePlacementList(this, "node_placement", false);
+  public get nodePlacement() {
+    return this._nodePlacement;
+  }
+  public putNodePlacement(value: BatchPoolNodePlacement[] | cdktf.IResolvable) {
+    this._nodePlacement.internalValue = value;
+  }
+  public resetNodePlacement() {
+    this._nodePlacement.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodePlacementInput() {
+    return this._nodePlacement.internalValue;
+  }
+
   // start_task - computed: false, optional: true, required: false
   private _startTask = new BatchPoolStartTaskOutputReference(this, "start_task");
   public get startTask() {
@@ -3592,6 +5074,22 @@ export class BatchPool extends cdktf.TerraformResource {
     return this._storageImageReference.internalValue;
   }
 
+  // task_scheduling_policy - computed: false, optional: true, required: false
+  private _taskSchedulingPolicy = new BatchPoolTaskSchedulingPolicyList(this, "task_scheduling_policy", false);
+  public get taskSchedulingPolicy() {
+    return this._taskSchedulingPolicy;
+  }
+  public putTaskSchedulingPolicy(value: BatchPoolTaskSchedulingPolicy[] | cdktf.IResolvable) {
+    this._taskSchedulingPolicy.internalValue = value;
+  }
+  public resetTaskSchedulingPolicy() {
+    this._taskSchedulingPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get taskSchedulingPolicyInput() {
+    return this._taskSchedulingPolicy.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new BatchPoolTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -3608,6 +5106,38 @@ export class BatchPool extends cdktf.TerraformResource {
     return this._timeouts.internalValue;
   }
 
+  // user_accounts - computed: false, optional: true, required: false
+  private _userAccounts = new BatchPoolUserAccountsList(this, "user_accounts", false);
+  public get userAccounts() {
+    return this._userAccounts;
+  }
+  public putUserAccounts(value: BatchPoolUserAccounts[] | cdktf.IResolvable) {
+    this._userAccounts.internalValue = value;
+  }
+  public resetUserAccounts() {
+    this._userAccounts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAccountsInput() {
+    return this._userAccounts.internalValue;
+  }
+
+  // windows - computed: false, optional: true, required: false
+  private _windows = new BatchPoolWindowsList(this, "windows", false);
+  public get windows() {
+    return this._windows;
+  }
+  public putWindows(value: BatchPoolWindows[] | cdktf.IResolvable) {
+    this._windows.internalValue = value;
+  }
+  public resetWindows() {
+    this._windows.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get windowsInput() {
+    return this._windows.internalValue;
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -3617,23 +5147,33 @@ export class BatchPool extends cdktf.TerraformResource {
       account_name: cdktf.stringToTerraform(this._accountName),
       display_name: cdktf.stringToTerraform(this._displayName),
       id: cdktf.stringToTerraform(this._id),
+      inter_node_communication: cdktf.stringToTerraform(this._interNodeCommunication),
+      license_type: cdktf.stringToTerraform(this._licenseType),
       max_tasks_per_node: cdktf.numberToTerraform(this._maxTasksPerNode),
       metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       node_agent_sku_id: cdktf.stringToTerraform(this._nodeAgentSkuId),
+      os_disk_placement: cdktf.stringToTerraform(this._osDiskPlacement),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       stop_pending_resize_operation: cdktf.booleanToTerraform(this._stopPendingResizeOperation),
       vm_size: cdktf.stringToTerraform(this._vmSize),
       auto_scale: batchPoolAutoScaleToTerraform(this._autoScale.internalValue),
       certificate: cdktf.listMapper(batchPoolCertificateToTerraform, true)(this._certificate.internalValue),
       container_configuration: batchPoolContainerConfigurationToTerraform(this._containerConfiguration.internalValue),
+      data_disks: cdktf.listMapper(batchPoolDataDisksToTerraform, true)(this._dataDisks.internalValue),
+      disk_encryption: cdktf.listMapper(batchPoolDiskEncryptionToTerraform, true)(this._diskEncryption.internalValue),
+      extensions: cdktf.listMapper(batchPoolExtensionsToTerraform, true)(this._extensions.internalValue),
       fixed_scale: batchPoolFixedScaleToTerraform(this._fixedScale.internalValue),
       identity: batchPoolIdentityToTerraform(this._identity.internalValue),
       mount: cdktf.listMapper(batchPoolMountToTerraform, true)(this._mount.internalValue),
       network_configuration: batchPoolNetworkConfigurationToTerraform(this._networkConfiguration.internalValue),
+      node_placement: cdktf.listMapper(batchPoolNodePlacementToTerraform, true)(this._nodePlacement.internalValue),
       start_task: batchPoolStartTaskToTerraform(this._startTask.internalValue),
       storage_image_reference: batchPoolStorageImageReferenceToTerraform(this._storageImageReference.internalValue),
+      task_scheduling_policy: cdktf.listMapper(batchPoolTaskSchedulingPolicyToTerraform, true)(this._taskSchedulingPolicy.internalValue),
       timeouts: batchPoolTimeoutsToTerraform(this._timeouts.internalValue),
+      user_accounts: cdktf.listMapper(batchPoolUserAccountsToTerraform, true)(this._userAccounts.internalValue),
+      windows: cdktf.listMapper(batchPoolWindowsToTerraform, true)(this._windows.internalValue),
     };
   }
 }
