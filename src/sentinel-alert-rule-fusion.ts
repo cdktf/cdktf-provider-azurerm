@@ -220,7 +220,7 @@ export class SentinelAlertRuleFusion extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sentinel_alert_rule_fusion',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.23.0',
+        providerVersion: '3.24.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

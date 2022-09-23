@@ -16,6 +16,10 @@ export interface VirtualMachineExtensionConfig extends cdktf.TerraformMetaArgume
   */
   readonly automaticUpgradeEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension#failure_suppression_enabled VirtualMachineExtension#failure_suppression_enabled}
+  */
+  readonly failureSuppressionEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension#id VirtualMachineExtension#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -244,7 +248,7 @@ export class VirtualMachineExtension extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_machine_extension',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.23.0',
+        providerVersion: '3.24.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -257,6 +261,7 @@ export class VirtualMachineExtension extends cdktf.TerraformResource {
     });
     this._autoUpgradeMinorVersion = config.autoUpgradeMinorVersion;
     this._automaticUpgradeEnabled = config.automaticUpgradeEnabled;
+    this._failureSuppressionEnabled = config.failureSuppressionEnabled;
     this._id = config.id;
     this._name = config.name;
     this._protectedSettings = config.protectedSettings;
@@ -303,6 +308,22 @@ export class VirtualMachineExtension extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get automaticUpgradeEnabledInput() {
     return this._automaticUpgradeEnabled;
+  }
+
+  // failure_suppression_enabled - computed: false, optional: true, required: false
+  private _failureSuppressionEnabled?: boolean | cdktf.IResolvable; 
+  public get failureSuppressionEnabled() {
+    return this.getBooleanAttribute('failure_suppression_enabled');
+  }
+  public set failureSuppressionEnabled(value: boolean | cdktf.IResolvable) {
+    this._failureSuppressionEnabled = value;
+  }
+  public resetFailureSuppressionEnabled() {
+    this._failureSuppressionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failureSuppressionEnabledInput() {
+    return this._failureSuppressionEnabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -458,6 +479,7 @@ export class VirtualMachineExtension extends cdktf.TerraformResource {
     return {
       auto_upgrade_minor_version: cdktf.booleanToTerraform(this._autoUpgradeMinorVersion),
       automatic_upgrade_enabled: cdktf.booleanToTerraform(this._automaticUpgradeEnabled),
+      failure_suppression_enabled: cdktf.booleanToTerraform(this._failureSuppressionEnabled),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       protected_settings: cdktf.stringToTerraform(this._protectedSettings),

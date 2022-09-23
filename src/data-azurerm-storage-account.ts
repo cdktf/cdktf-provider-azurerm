@@ -33,6 +33,165 @@ export interface DataAzurermStorageAccountConfig extends cdktf.TerraformMetaArgu
   */
   readonly timeouts?: DataAzurermStorageAccountTimeouts;
 }
+export interface DataAzurermStorageAccountAzureFilesAuthenticationActiveDirectory {
+}
+
+export function dataAzurermStorageAccountAzureFilesAuthenticationActiveDirectoryToTerraform(struct?: DataAzurermStorageAccountAzureFilesAuthenticationActiveDirectory): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermStorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermStorageAccountAzureFilesAuthenticationActiveDirectory | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermStorageAccountAzureFilesAuthenticationActiveDirectory | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // domain_guid - computed: true, optional: false, required: false
+  public get domainGuid() {
+    return this.getStringAttribute('domain_guid');
+  }
+
+  // domain_name - computed: true, optional: false, required: false
+  public get domainName() {
+    return this.getStringAttribute('domain_name');
+  }
+
+  // domain_sid - computed: true, optional: false, required: false
+  public get domainSid() {
+    return this.getStringAttribute('domain_sid');
+  }
+
+  // forest_name - computed: true, optional: false, required: false
+  public get forestName() {
+    return this.getStringAttribute('forest_name');
+  }
+
+  // netbios_domain_name - computed: true, optional: false, required: false
+  public get netbiosDomainName() {
+    return this.getStringAttribute('netbios_domain_name');
+  }
+
+  // storage_sid - computed: true, optional: false, required: false
+  public get storageSid() {
+    return this.getStringAttribute('storage_sid');
+  }
+}
+
+export class DataAzurermStorageAccountAzureFilesAuthenticationActiveDirectoryList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermStorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference {
+    return new DataAzurermStorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermStorageAccountAzureFilesAuthentication {
+}
+
+export function dataAzurermStorageAccountAzureFilesAuthenticationToTerraform(struct?: DataAzurermStorageAccountAzureFilesAuthentication): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermStorageAccountAzureFilesAuthenticationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermStorageAccountAzureFilesAuthentication | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermStorageAccountAzureFilesAuthentication | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // active_directory - computed: true, optional: false, required: false
+  private _activeDirectory = new DataAzurermStorageAccountAzureFilesAuthenticationActiveDirectoryList(this, "active_directory", false);
+  public get activeDirectory() {
+    return this._activeDirectory;
+  }
+
+  // directory_type - computed: true, optional: false, required: false
+  public get directoryType() {
+    return this.getStringAttribute('directory_type');
+  }
+}
+
+export class DataAzurermStorageAccountAzureFilesAuthenticationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermStorageAccountAzureFilesAuthenticationOutputReference {
+    return new DataAzurermStorageAccountAzureFilesAuthenticationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermStorageAccountCustomDomain {
 }
 
@@ -278,7 +437,7 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_storage_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.23.0',
+        providerVersion: '3.24.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -323,6 +482,12 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
   // allow_nested_items_to_be_public - computed: true, optional: false, required: false
   public get allowNestedItemsToBePublic() {
     return this.getBooleanAttribute('allow_nested_items_to_be_public');
+  }
+
+  // azure_files_authentication - computed: true, optional: false, required: false
+  private _azureFilesAuthentication = new DataAzurermStorageAccountAzureFilesAuthenticationList(this, "azure_files_authentication", false);
+  public get azureFilesAuthentication() {
+    return this._azureFilesAuthentication;
   }
 
   // custom_domain - computed: true, optional: false, required: false

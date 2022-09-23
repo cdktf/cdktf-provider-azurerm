@@ -16,6 +16,10 @@ export interface VirtualMachineScaleSetExtensionAConfig extends cdktf.TerraformM
   */
   readonly automaticUpgradeEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension#failure_suppression_enabled VirtualMachineScaleSetExtensionA#failure_suppression_enabled}
+  */
+  readonly failureSuppressionEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension#force_update_tag VirtualMachineScaleSetExtensionA#force_update_tag}
   */
   readonly forceUpdateTag?: string;
@@ -248,7 +252,7 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_machine_scale_set_extension',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.23.0',
+        providerVersion: '3.24.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -261,6 +265,7 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
     });
     this._autoUpgradeMinorVersion = config.autoUpgradeMinorVersion;
     this._automaticUpgradeEnabled = config.automaticUpgradeEnabled;
+    this._failureSuppressionEnabled = config.failureSuppressionEnabled;
     this._forceUpdateTag = config.forceUpdateTag;
     this._id = config.id;
     this._name = config.name;
@@ -308,6 +313,22 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get automaticUpgradeEnabledInput() {
     return this._automaticUpgradeEnabled;
+  }
+
+  // failure_suppression_enabled - computed: false, optional: true, required: false
+  private _failureSuppressionEnabled?: boolean | cdktf.IResolvable; 
+  public get failureSuppressionEnabled() {
+    return this.getBooleanAttribute('failure_suppression_enabled');
+  }
+  public set failureSuppressionEnabled(value: boolean | cdktf.IResolvable) {
+    this._failureSuppressionEnabled = value;
+  }
+  public resetFailureSuppressionEnabled() {
+    this._failureSuppressionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failureSuppressionEnabledInput() {
+    return this._failureSuppressionEnabled;
   }
 
   // force_update_tag - computed: false, optional: true, required: false
@@ -479,6 +500,7 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
     return {
       auto_upgrade_minor_version: cdktf.booleanToTerraform(this._autoUpgradeMinorVersion),
       automatic_upgrade_enabled: cdktf.booleanToTerraform(this._automaticUpgradeEnabled),
+      failure_suppression_enabled: cdktf.booleanToTerraform(this._failureSuppressionEnabled),
       force_update_tag: cdktf.stringToTerraform(this._forceUpdateTag),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),

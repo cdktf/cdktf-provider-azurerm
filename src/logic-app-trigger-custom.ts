@@ -216,7 +216,7 @@ export class LogicAppTriggerCustom extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_logic_app_trigger_custom',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.23.0',
+        providerVersion: '3.24.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

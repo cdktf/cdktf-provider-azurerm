@@ -212,7 +212,7 @@ export class EventhubNamespaceCustomerManagedKey extends cdktf.TerraformResource
       terraformResourceType: 'azurerm_eventhub_namespace_customer_managed_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.23.0',
+        providerVersion: '3.24.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
