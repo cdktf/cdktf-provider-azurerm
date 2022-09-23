@@ -131,7 +131,7 @@ export class DataAzurermMonitorDataCollectionEndpoint extends cdktf.TerraformDat
       terraformResourceType: 'azurerm_monitor_data_collection_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.23.0',
+        providerVersion: '3.24.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -1336,7 +1336,7 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_metric_alert',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.23.0',
+        providerVersion: '3.24.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1603,7 +1603,7 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // criteria - computed: false, optional: true, required: false
-  private _criteria = new MonitorMetricAlertCriteriaList(this, "criteria", true);
+  private _criteria = new MonitorMetricAlertCriteriaList(this, "criteria", false);
   public get criteria() {
     return this._criteria;
   }

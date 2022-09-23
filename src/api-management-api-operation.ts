@@ -71,6 +71,208 @@ export interface ApiManagementApiOperationConfig extends cdktf.TerraformMetaArgu
   */
   readonly timeouts?: ApiManagementApiOperationTimeouts;
 }
+export interface ApiManagementApiOperationRequestHeaderExample {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#description ApiManagementApiOperation#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
+  */
+  readonly externalValue?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#name ApiManagementApiOperation#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#summary ApiManagementApiOperation#summary}
+  */
+  readonly summary?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#value ApiManagementApiOperation#value}
+  */
+  readonly value?: string;
+}
+
+export function apiManagementApiOperationRequestHeaderExampleToTerraform(struct?: ApiManagementApiOperationRequestHeaderExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    external_value: cdktf.stringToTerraform(struct!.externalValue),
+    name: cdktf.stringToTerraform(struct!.name),
+    summary: cdktf.stringToTerraform(struct!.summary),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export class ApiManagementApiOperationRequestHeaderExampleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementApiOperationRequestHeaderExample | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._externalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.externalValue = this._externalValue;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._summary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.summary = this._summary;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiOperationRequestHeaderExample | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._externalValue = undefined;
+      this._name = undefined;
+      this._summary = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._externalValue = value.externalValue;
+      this._name = value.name;
+      this._summary = value.summary;
+      this._value = value.value;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // external_value - computed: false, optional: true, required: false
+  private _externalValue?: string; 
+  public get externalValue() {
+    return this.getStringAttribute('external_value');
+  }
+  public set externalValue(value: string) {
+    this._externalValue = value;
+  }
+  public resetExternalValue() {
+    this._externalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalValueInput() {
+    return this._externalValue;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // summary - computed: false, optional: true, required: false
+  private _summary?: string; 
+  public get summary() {
+    return this.getStringAttribute('summary');
+  }
+  public set summary(value: string) {
+    this._summary = value;
+  }
+  public resetSummary() {
+    this._summary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get summaryInput() {
+    return this._summary;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApiManagementApiOperationRequestHeaderExampleList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementApiOperationRequestHeaderExample[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementApiOperationRequestHeaderExampleOutputReference {
+    return new ApiManagementApiOperationRequestHeaderExampleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementApiOperationRequestHeader {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
@@ -89,13 +291,27 @@ export interface ApiManagementApiOperationRequestHeader {
   */
   readonly required: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
+  */
+  readonly schemaId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#type ApiManagementApiOperation#type}
   */
   readonly type: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
+  */
+  readonly typeName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#values ApiManagementApiOperation#values}
   */
   readonly values?: string[];
+  /**
+  * example block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#example ApiManagementApiOperation#example}
+  */
+  readonly example?: ApiManagementApiOperationRequestHeaderExample[] | cdktf.IResolvable;
 }
 
 export function apiManagementApiOperationRequestHeaderToTerraform(struct?: ApiManagementApiOperationRequestHeader | cdktf.IResolvable): any {
@@ -108,8 +324,11 @@ export function apiManagementApiOperationRequestHeaderToTerraform(struct?: ApiMa
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
     required: cdktf.booleanToTerraform(struct!.required),
+    schema_id: cdktf.stringToTerraform(struct!.schemaId),
     type: cdktf.stringToTerraform(struct!.type),
+    type_name: cdktf.stringToTerraform(struct!.typeName),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
+    example: cdktf.listMapper(apiManagementApiOperationRequestHeaderExampleToTerraform, true)(struct!.example),
   }
 }
 
@@ -149,13 +368,25 @@ export class ApiManagementApiOperationRequestHeaderOutputReference extends cdktf
       hasAnyValues = true;
       internalValueResult.required = this._required;
     }
+    if (this._schemaId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schemaId = this._schemaId;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
+    if (this._typeName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.typeName = this._typeName;
+    }
     if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
+    }
+    if (this._example?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.example = this._example?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -168,8 +399,11 @@ export class ApiManagementApiOperationRequestHeaderOutputReference extends cdktf
       this._description = undefined;
       this._name = undefined;
       this._required = undefined;
+      this._schemaId = undefined;
       this._type = undefined;
+      this._typeName = undefined;
       this._values = undefined;
+      this._example.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -182,8 +416,11 @@ export class ApiManagementApiOperationRequestHeaderOutputReference extends cdktf
       this._description = value.description;
       this._name = value.name;
       this._required = value.required;
+      this._schemaId = value.schemaId;
       this._type = value.type;
+      this._typeName = value.typeName;
       this._values = value.values;
+      this._example.internalValue = value.example;
     }
   }
 
@@ -245,6 +482,22 @@ export class ApiManagementApiOperationRequestHeaderOutputReference extends cdktf
     return this._required;
   }
 
+  // schema_id - computed: false, optional: true, required: false
+  private _schemaId?: string; 
+  public get schemaId() {
+    return this.getStringAttribute('schema_id');
+  }
+  public set schemaId(value: string) {
+    this._schemaId = value;
+  }
+  public resetSchemaId() {
+    this._schemaId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaIdInput() {
+    return this._schemaId;
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -256,6 +509,22 @@ export class ApiManagementApiOperationRequestHeaderOutputReference extends cdktf
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type;
+  }
+
+  // type_name - computed: false, optional: true, required: false
+  private _typeName?: string; 
+  public get typeName() {
+    return this.getStringAttribute('type_name');
+  }
+  public set typeName(value: string) {
+    this._typeName = value;
+  }
+  public resetTypeName() {
+    this._typeName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeNameInput() {
+    return this._typeName;
   }
 
   // values - computed: false, optional: true, required: false
@@ -272,6 +541,22 @@ export class ApiManagementApiOperationRequestHeaderOutputReference extends cdktf
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
     return this._values;
+  }
+
+  // example - computed: false, optional: true, required: false
+  private _example = new ApiManagementApiOperationRequestHeaderExampleList(this, "example", false);
+  public get example() {
+    return this._example;
+  }
+  public putExample(value: ApiManagementApiOperationRequestHeaderExample[] | cdktf.IResolvable) {
+    this._example.internalValue = value;
+  }
+  public resetExample() {
+    this._example.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exampleInput() {
+    return this._example.internalValue;
   }
 }
 
@@ -294,6 +579,208 @@ export class ApiManagementApiOperationRequestHeaderList extends cdktf.ComplexLis
     return new ApiManagementApiOperationRequestHeaderOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ApiManagementApiOperationRequestQueryParameterExample {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#description ApiManagementApiOperation#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
+  */
+  readonly externalValue?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#name ApiManagementApiOperation#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#summary ApiManagementApiOperation#summary}
+  */
+  readonly summary?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#value ApiManagementApiOperation#value}
+  */
+  readonly value?: string;
+}
+
+export function apiManagementApiOperationRequestQueryParameterExampleToTerraform(struct?: ApiManagementApiOperationRequestQueryParameterExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    external_value: cdktf.stringToTerraform(struct!.externalValue),
+    name: cdktf.stringToTerraform(struct!.name),
+    summary: cdktf.stringToTerraform(struct!.summary),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export class ApiManagementApiOperationRequestQueryParameterExampleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementApiOperationRequestQueryParameterExample | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._externalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.externalValue = this._externalValue;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._summary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.summary = this._summary;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiOperationRequestQueryParameterExample | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._externalValue = undefined;
+      this._name = undefined;
+      this._summary = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._externalValue = value.externalValue;
+      this._name = value.name;
+      this._summary = value.summary;
+      this._value = value.value;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // external_value - computed: false, optional: true, required: false
+  private _externalValue?: string; 
+  public get externalValue() {
+    return this.getStringAttribute('external_value');
+  }
+  public set externalValue(value: string) {
+    this._externalValue = value;
+  }
+  public resetExternalValue() {
+    this._externalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalValueInput() {
+    return this._externalValue;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // summary - computed: false, optional: true, required: false
+  private _summary?: string; 
+  public get summary() {
+    return this.getStringAttribute('summary');
+  }
+  public set summary(value: string) {
+    this._summary = value;
+  }
+  public resetSummary() {
+    this._summary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get summaryInput() {
+    return this._summary;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApiManagementApiOperationRequestQueryParameterExampleList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementApiOperationRequestQueryParameterExample[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementApiOperationRequestQueryParameterExampleOutputReference {
+    return new ApiManagementApiOperationRequestQueryParameterExampleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementApiOperationRequestQueryParameter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
@@ -312,13 +799,27 @@ export interface ApiManagementApiOperationRequestQueryParameter {
   */
   readonly required: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
+  */
+  readonly schemaId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#type ApiManagementApiOperation#type}
   */
   readonly type: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
+  */
+  readonly typeName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#values ApiManagementApiOperation#values}
   */
   readonly values?: string[];
+  /**
+  * example block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#example ApiManagementApiOperation#example}
+  */
+  readonly example?: ApiManagementApiOperationRequestQueryParameterExample[] | cdktf.IResolvable;
 }
 
 export function apiManagementApiOperationRequestQueryParameterToTerraform(struct?: ApiManagementApiOperationRequestQueryParameter | cdktf.IResolvable): any {
@@ -331,8 +832,11 @@ export function apiManagementApiOperationRequestQueryParameterToTerraform(struct
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
     required: cdktf.booleanToTerraform(struct!.required),
+    schema_id: cdktf.stringToTerraform(struct!.schemaId),
     type: cdktf.stringToTerraform(struct!.type),
+    type_name: cdktf.stringToTerraform(struct!.typeName),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
+    example: cdktf.listMapper(apiManagementApiOperationRequestQueryParameterExampleToTerraform, true)(struct!.example),
   }
 }
 
@@ -372,13 +876,25 @@ export class ApiManagementApiOperationRequestQueryParameterOutputReference exten
       hasAnyValues = true;
       internalValueResult.required = this._required;
     }
+    if (this._schemaId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schemaId = this._schemaId;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
+    if (this._typeName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.typeName = this._typeName;
+    }
     if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
+    }
+    if (this._example?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.example = this._example?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -391,8 +907,11 @@ export class ApiManagementApiOperationRequestQueryParameterOutputReference exten
       this._description = undefined;
       this._name = undefined;
       this._required = undefined;
+      this._schemaId = undefined;
       this._type = undefined;
+      this._typeName = undefined;
       this._values = undefined;
+      this._example.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -405,8 +924,11 @@ export class ApiManagementApiOperationRequestQueryParameterOutputReference exten
       this._description = value.description;
       this._name = value.name;
       this._required = value.required;
+      this._schemaId = value.schemaId;
       this._type = value.type;
+      this._typeName = value.typeName;
       this._values = value.values;
+      this._example.internalValue = value.example;
     }
   }
 
@@ -468,6 +990,22 @@ export class ApiManagementApiOperationRequestQueryParameterOutputReference exten
     return this._required;
   }
 
+  // schema_id - computed: false, optional: true, required: false
+  private _schemaId?: string; 
+  public get schemaId() {
+    return this.getStringAttribute('schema_id');
+  }
+  public set schemaId(value: string) {
+    this._schemaId = value;
+  }
+  public resetSchemaId() {
+    this._schemaId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaIdInput() {
+    return this._schemaId;
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -479,6 +1017,22 @@ export class ApiManagementApiOperationRequestQueryParameterOutputReference exten
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type;
+  }
+
+  // type_name - computed: false, optional: true, required: false
+  private _typeName?: string; 
+  public get typeName() {
+    return this.getStringAttribute('type_name');
+  }
+  public set typeName(value: string) {
+    this._typeName = value;
+  }
+  public resetTypeName() {
+    this._typeName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeNameInput() {
+    return this._typeName;
   }
 
   // values - computed: false, optional: true, required: false
@@ -495,6 +1049,22 @@ export class ApiManagementApiOperationRequestQueryParameterOutputReference exten
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
     return this._values;
+  }
+
+  // example - computed: false, optional: true, required: false
+  private _example = new ApiManagementApiOperationRequestQueryParameterExampleList(this, "example", false);
+  public get example() {
+    return this._example;
+  }
+  public putExample(value: ApiManagementApiOperationRequestQueryParameterExample[] | cdktf.IResolvable) {
+    this._example.internalValue = value;
+  }
+  public resetExample() {
+    this._example.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exampleInput() {
+    return this._example.internalValue;
   }
 }
 
@@ -719,6 +1289,208 @@ export class ApiManagementApiOperationRequestRepresentationExampleList extends c
     return new ApiManagementApiOperationRequestRepresentationExampleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ApiManagementApiOperationRequestRepresentationFormParameterExample {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#description ApiManagementApiOperation#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
+  */
+  readonly externalValue?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#name ApiManagementApiOperation#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#summary ApiManagementApiOperation#summary}
+  */
+  readonly summary?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#value ApiManagementApiOperation#value}
+  */
+  readonly value?: string;
+}
+
+export function apiManagementApiOperationRequestRepresentationFormParameterExampleToTerraform(struct?: ApiManagementApiOperationRequestRepresentationFormParameterExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    external_value: cdktf.stringToTerraform(struct!.externalValue),
+    name: cdktf.stringToTerraform(struct!.name),
+    summary: cdktf.stringToTerraform(struct!.summary),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export class ApiManagementApiOperationRequestRepresentationFormParameterExampleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementApiOperationRequestRepresentationFormParameterExample | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._externalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.externalValue = this._externalValue;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._summary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.summary = this._summary;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiOperationRequestRepresentationFormParameterExample | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._externalValue = undefined;
+      this._name = undefined;
+      this._summary = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._externalValue = value.externalValue;
+      this._name = value.name;
+      this._summary = value.summary;
+      this._value = value.value;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // external_value - computed: false, optional: true, required: false
+  private _externalValue?: string; 
+  public get externalValue() {
+    return this.getStringAttribute('external_value');
+  }
+  public set externalValue(value: string) {
+    this._externalValue = value;
+  }
+  public resetExternalValue() {
+    this._externalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalValueInput() {
+    return this._externalValue;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // summary - computed: false, optional: true, required: false
+  private _summary?: string; 
+  public get summary() {
+    return this.getStringAttribute('summary');
+  }
+  public set summary(value: string) {
+    this._summary = value;
+  }
+  public resetSummary() {
+    this._summary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get summaryInput() {
+    return this._summary;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApiManagementApiOperationRequestRepresentationFormParameterExampleList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementApiOperationRequestRepresentationFormParameterExample[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementApiOperationRequestRepresentationFormParameterExampleOutputReference {
+    return new ApiManagementApiOperationRequestRepresentationFormParameterExampleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementApiOperationRequestRepresentationFormParameter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
@@ -737,13 +1509,27 @@ export interface ApiManagementApiOperationRequestRepresentationFormParameter {
   */
   readonly required: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
+  */
+  readonly schemaId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#type ApiManagementApiOperation#type}
   */
   readonly type: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
+  */
+  readonly typeName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#values ApiManagementApiOperation#values}
   */
   readonly values?: string[];
+  /**
+  * example block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#example ApiManagementApiOperation#example}
+  */
+  readonly example?: ApiManagementApiOperationRequestRepresentationFormParameterExample[] | cdktf.IResolvable;
 }
 
 export function apiManagementApiOperationRequestRepresentationFormParameterToTerraform(struct?: ApiManagementApiOperationRequestRepresentationFormParameter | cdktf.IResolvable): any {
@@ -756,8 +1542,11 @@ export function apiManagementApiOperationRequestRepresentationFormParameterToTer
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
     required: cdktf.booleanToTerraform(struct!.required),
+    schema_id: cdktf.stringToTerraform(struct!.schemaId),
     type: cdktf.stringToTerraform(struct!.type),
+    type_name: cdktf.stringToTerraform(struct!.typeName),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
+    example: cdktf.listMapper(apiManagementApiOperationRequestRepresentationFormParameterExampleToTerraform, true)(struct!.example),
   }
 }
 
@@ -797,13 +1586,25 @@ export class ApiManagementApiOperationRequestRepresentationFormParameterOutputRe
       hasAnyValues = true;
       internalValueResult.required = this._required;
     }
+    if (this._schemaId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schemaId = this._schemaId;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
+    if (this._typeName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.typeName = this._typeName;
+    }
     if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
+    }
+    if (this._example?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.example = this._example?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -816,8 +1617,11 @@ export class ApiManagementApiOperationRequestRepresentationFormParameterOutputRe
       this._description = undefined;
       this._name = undefined;
       this._required = undefined;
+      this._schemaId = undefined;
       this._type = undefined;
+      this._typeName = undefined;
       this._values = undefined;
+      this._example.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -830,8 +1634,11 @@ export class ApiManagementApiOperationRequestRepresentationFormParameterOutputRe
       this._description = value.description;
       this._name = value.name;
       this._required = value.required;
+      this._schemaId = value.schemaId;
       this._type = value.type;
+      this._typeName = value.typeName;
       this._values = value.values;
+      this._example.internalValue = value.example;
     }
   }
 
@@ -893,6 +1700,22 @@ export class ApiManagementApiOperationRequestRepresentationFormParameterOutputRe
     return this._required;
   }
 
+  // schema_id - computed: false, optional: true, required: false
+  private _schemaId?: string; 
+  public get schemaId() {
+    return this.getStringAttribute('schema_id');
+  }
+  public set schemaId(value: string) {
+    this._schemaId = value;
+  }
+  public resetSchemaId() {
+    this._schemaId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaIdInput() {
+    return this._schemaId;
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -904,6 +1727,22 @@ export class ApiManagementApiOperationRequestRepresentationFormParameterOutputRe
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type;
+  }
+
+  // type_name - computed: false, optional: true, required: false
+  private _typeName?: string; 
+  public get typeName() {
+    return this.getStringAttribute('type_name');
+  }
+  public set typeName(value: string) {
+    this._typeName = value;
+  }
+  public resetTypeName() {
+    this._typeName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeNameInput() {
+    return this._typeName;
   }
 
   // values - computed: false, optional: true, required: false
@@ -920,6 +1759,22 @@ export class ApiManagementApiOperationRequestRepresentationFormParameterOutputRe
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
     return this._values;
+  }
+
+  // example - computed: false, optional: true, required: false
+  private _example = new ApiManagementApiOperationRequestRepresentationFormParameterExampleList(this, "example", false);
+  public get example() {
+    return this._example;
+  }
+  public putExample(value: ApiManagementApiOperationRequestRepresentationFormParameterExample[] | cdktf.IResolvable) {
+    this._example.internalValue = value;
+  }
+  public resetExample() {
+    this._example.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exampleInput() {
+    return this._example.internalValue;
   }
 }
 
@@ -1300,6 +2155,208 @@ export class ApiManagementApiOperationRequestOutputReference extends cdktf.Compl
     return this._representation.internalValue;
   }
 }
+export interface ApiManagementApiOperationResponseHeaderExample {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#description ApiManagementApiOperation#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
+  */
+  readonly externalValue?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#name ApiManagementApiOperation#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#summary ApiManagementApiOperation#summary}
+  */
+  readonly summary?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#value ApiManagementApiOperation#value}
+  */
+  readonly value?: string;
+}
+
+export function apiManagementApiOperationResponseHeaderExampleToTerraform(struct?: ApiManagementApiOperationResponseHeaderExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    external_value: cdktf.stringToTerraform(struct!.externalValue),
+    name: cdktf.stringToTerraform(struct!.name),
+    summary: cdktf.stringToTerraform(struct!.summary),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export class ApiManagementApiOperationResponseHeaderExampleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementApiOperationResponseHeaderExample | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._externalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.externalValue = this._externalValue;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._summary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.summary = this._summary;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiOperationResponseHeaderExample | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._externalValue = undefined;
+      this._name = undefined;
+      this._summary = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._externalValue = value.externalValue;
+      this._name = value.name;
+      this._summary = value.summary;
+      this._value = value.value;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // external_value - computed: false, optional: true, required: false
+  private _externalValue?: string; 
+  public get externalValue() {
+    return this.getStringAttribute('external_value');
+  }
+  public set externalValue(value: string) {
+    this._externalValue = value;
+  }
+  public resetExternalValue() {
+    this._externalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalValueInput() {
+    return this._externalValue;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // summary - computed: false, optional: true, required: false
+  private _summary?: string; 
+  public get summary() {
+    return this.getStringAttribute('summary');
+  }
+  public set summary(value: string) {
+    this._summary = value;
+  }
+  public resetSummary() {
+    this._summary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get summaryInput() {
+    return this._summary;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApiManagementApiOperationResponseHeaderExampleList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementApiOperationResponseHeaderExample[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementApiOperationResponseHeaderExampleOutputReference {
+    return new ApiManagementApiOperationResponseHeaderExampleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementApiOperationResponseHeader {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
@@ -1318,13 +2375,27 @@ export interface ApiManagementApiOperationResponseHeader {
   */
   readonly required: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
+  */
+  readonly schemaId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#type ApiManagementApiOperation#type}
   */
   readonly type: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
+  */
+  readonly typeName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#values ApiManagementApiOperation#values}
   */
   readonly values?: string[];
+  /**
+  * example block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#example ApiManagementApiOperation#example}
+  */
+  readonly example?: ApiManagementApiOperationResponseHeaderExample[] | cdktf.IResolvable;
 }
 
 export function apiManagementApiOperationResponseHeaderToTerraform(struct?: ApiManagementApiOperationResponseHeader | cdktf.IResolvable): any {
@@ -1337,8 +2408,11 @@ export function apiManagementApiOperationResponseHeaderToTerraform(struct?: ApiM
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
     required: cdktf.booleanToTerraform(struct!.required),
+    schema_id: cdktf.stringToTerraform(struct!.schemaId),
     type: cdktf.stringToTerraform(struct!.type),
+    type_name: cdktf.stringToTerraform(struct!.typeName),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
+    example: cdktf.listMapper(apiManagementApiOperationResponseHeaderExampleToTerraform, true)(struct!.example),
   }
 }
 
@@ -1378,13 +2452,25 @@ export class ApiManagementApiOperationResponseHeaderOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.required = this._required;
     }
+    if (this._schemaId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schemaId = this._schemaId;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
+    if (this._typeName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.typeName = this._typeName;
+    }
     if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
+    }
+    if (this._example?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.example = this._example?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1397,8 +2483,11 @@ export class ApiManagementApiOperationResponseHeaderOutputReference extends cdkt
       this._description = undefined;
       this._name = undefined;
       this._required = undefined;
+      this._schemaId = undefined;
       this._type = undefined;
+      this._typeName = undefined;
       this._values = undefined;
+      this._example.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -1411,8 +2500,11 @@ export class ApiManagementApiOperationResponseHeaderOutputReference extends cdkt
       this._description = value.description;
       this._name = value.name;
       this._required = value.required;
+      this._schemaId = value.schemaId;
       this._type = value.type;
+      this._typeName = value.typeName;
       this._values = value.values;
+      this._example.internalValue = value.example;
     }
   }
 
@@ -1474,6 +2566,22 @@ export class ApiManagementApiOperationResponseHeaderOutputReference extends cdkt
     return this._required;
   }
 
+  // schema_id - computed: false, optional: true, required: false
+  private _schemaId?: string; 
+  public get schemaId() {
+    return this.getStringAttribute('schema_id');
+  }
+  public set schemaId(value: string) {
+    this._schemaId = value;
+  }
+  public resetSchemaId() {
+    this._schemaId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaIdInput() {
+    return this._schemaId;
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -1485,6 +2593,22 @@ export class ApiManagementApiOperationResponseHeaderOutputReference extends cdkt
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type;
+  }
+
+  // type_name - computed: false, optional: true, required: false
+  private _typeName?: string; 
+  public get typeName() {
+    return this.getStringAttribute('type_name');
+  }
+  public set typeName(value: string) {
+    this._typeName = value;
+  }
+  public resetTypeName() {
+    this._typeName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeNameInput() {
+    return this._typeName;
   }
 
   // values - computed: false, optional: true, required: false
@@ -1501,6 +2625,22 @@ export class ApiManagementApiOperationResponseHeaderOutputReference extends cdkt
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
     return this._values;
+  }
+
+  // example - computed: false, optional: true, required: false
+  private _example = new ApiManagementApiOperationResponseHeaderExampleList(this, "example", false);
+  public get example() {
+    return this._example;
+  }
+  public putExample(value: ApiManagementApiOperationResponseHeaderExample[] | cdktf.IResolvable) {
+    this._example.internalValue = value;
+  }
+  public resetExample() {
+    this._example.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exampleInput() {
+    return this._example.internalValue;
   }
 }
 
@@ -1725,6 +2865,208 @@ export class ApiManagementApiOperationResponseRepresentationExampleList extends 
     return new ApiManagementApiOperationResponseRepresentationExampleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ApiManagementApiOperationResponseRepresentationFormParameterExample {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#description ApiManagementApiOperation#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
+  */
+  readonly externalValue?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#name ApiManagementApiOperation#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#summary ApiManagementApiOperation#summary}
+  */
+  readonly summary?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#value ApiManagementApiOperation#value}
+  */
+  readonly value?: string;
+}
+
+export function apiManagementApiOperationResponseRepresentationFormParameterExampleToTerraform(struct?: ApiManagementApiOperationResponseRepresentationFormParameterExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    external_value: cdktf.stringToTerraform(struct!.externalValue),
+    name: cdktf.stringToTerraform(struct!.name),
+    summary: cdktf.stringToTerraform(struct!.summary),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export class ApiManagementApiOperationResponseRepresentationFormParameterExampleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementApiOperationResponseRepresentationFormParameterExample | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._externalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.externalValue = this._externalValue;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._summary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.summary = this._summary;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiOperationResponseRepresentationFormParameterExample | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._externalValue = undefined;
+      this._name = undefined;
+      this._summary = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._externalValue = value.externalValue;
+      this._name = value.name;
+      this._summary = value.summary;
+      this._value = value.value;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // external_value - computed: false, optional: true, required: false
+  private _externalValue?: string; 
+  public get externalValue() {
+    return this.getStringAttribute('external_value');
+  }
+  public set externalValue(value: string) {
+    this._externalValue = value;
+  }
+  public resetExternalValue() {
+    this._externalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalValueInput() {
+    return this._externalValue;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // summary - computed: false, optional: true, required: false
+  private _summary?: string; 
+  public get summary() {
+    return this.getStringAttribute('summary');
+  }
+  public set summary(value: string) {
+    this._summary = value;
+  }
+  public resetSummary() {
+    this._summary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get summaryInput() {
+    return this._summary;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApiManagementApiOperationResponseRepresentationFormParameterExampleList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementApiOperationResponseRepresentationFormParameterExample[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementApiOperationResponseRepresentationFormParameterExampleOutputReference {
+    return new ApiManagementApiOperationResponseRepresentationFormParameterExampleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementApiOperationResponseRepresentationFormParameter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
@@ -1743,13 +3085,27 @@ export interface ApiManagementApiOperationResponseRepresentationFormParameter {
   */
   readonly required: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
+  */
+  readonly schemaId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#type ApiManagementApiOperation#type}
   */
   readonly type: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
+  */
+  readonly typeName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#values ApiManagementApiOperation#values}
   */
   readonly values?: string[];
+  /**
+  * example block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#example ApiManagementApiOperation#example}
+  */
+  readonly example?: ApiManagementApiOperationResponseRepresentationFormParameterExample[] | cdktf.IResolvable;
 }
 
 export function apiManagementApiOperationResponseRepresentationFormParameterToTerraform(struct?: ApiManagementApiOperationResponseRepresentationFormParameter | cdktf.IResolvable): any {
@@ -1762,8 +3118,11 @@ export function apiManagementApiOperationResponseRepresentationFormParameterToTe
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
     required: cdktf.booleanToTerraform(struct!.required),
+    schema_id: cdktf.stringToTerraform(struct!.schemaId),
     type: cdktf.stringToTerraform(struct!.type),
+    type_name: cdktf.stringToTerraform(struct!.typeName),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
+    example: cdktf.listMapper(apiManagementApiOperationResponseRepresentationFormParameterExampleToTerraform, true)(struct!.example),
   }
 }
 
@@ -1803,13 +3162,25 @@ export class ApiManagementApiOperationResponseRepresentationFormParameterOutputR
       hasAnyValues = true;
       internalValueResult.required = this._required;
     }
+    if (this._schemaId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schemaId = this._schemaId;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
+    if (this._typeName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.typeName = this._typeName;
+    }
     if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
+    }
+    if (this._example?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.example = this._example?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1822,8 +3193,11 @@ export class ApiManagementApiOperationResponseRepresentationFormParameterOutputR
       this._description = undefined;
       this._name = undefined;
       this._required = undefined;
+      this._schemaId = undefined;
       this._type = undefined;
+      this._typeName = undefined;
       this._values = undefined;
+      this._example.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -1836,8 +3210,11 @@ export class ApiManagementApiOperationResponseRepresentationFormParameterOutputR
       this._description = value.description;
       this._name = value.name;
       this._required = value.required;
+      this._schemaId = value.schemaId;
       this._type = value.type;
+      this._typeName = value.typeName;
       this._values = value.values;
+      this._example.internalValue = value.example;
     }
   }
 
@@ -1899,6 +3276,22 @@ export class ApiManagementApiOperationResponseRepresentationFormParameterOutputR
     return this._required;
   }
 
+  // schema_id - computed: false, optional: true, required: false
+  private _schemaId?: string; 
+  public get schemaId() {
+    return this.getStringAttribute('schema_id');
+  }
+  public set schemaId(value: string) {
+    this._schemaId = value;
+  }
+  public resetSchemaId() {
+    this._schemaId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaIdInput() {
+    return this._schemaId;
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -1910,6 +3303,22 @@ export class ApiManagementApiOperationResponseRepresentationFormParameterOutputR
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type;
+  }
+
+  // type_name - computed: false, optional: true, required: false
+  private _typeName?: string; 
+  public get typeName() {
+    return this.getStringAttribute('type_name');
+  }
+  public set typeName(value: string) {
+    this._typeName = value;
+  }
+  public resetTypeName() {
+    this._typeName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeNameInput() {
+    return this._typeName;
   }
 
   // values - computed: false, optional: true, required: false
@@ -1926,6 +3335,22 @@ export class ApiManagementApiOperationResponseRepresentationFormParameterOutputR
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
     return this._values;
+  }
+
+  // example - computed: false, optional: true, required: false
+  private _example = new ApiManagementApiOperationResponseRepresentationFormParameterExampleList(this, "example", false);
+  public get example() {
+    return this._example;
+  }
+  public putExample(value: ApiManagementApiOperationResponseRepresentationFormParameterExample[] | cdktf.IResolvable) {
+    this._example.internalValue = value;
+  }
+  public resetExample() {
+    this._example.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exampleInput() {
+    return this._example.internalValue;
   }
 }
 
@@ -2333,6 +3758,208 @@ export class ApiManagementApiOperationResponseList extends cdktf.ComplexList {
     return new ApiManagementApiOperationResponseOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ApiManagementApiOperationTemplateParameterExample {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#description ApiManagementApiOperation#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
+  */
+  readonly externalValue?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#name ApiManagementApiOperation#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#summary ApiManagementApiOperation#summary}
+  */
+  readonly summary?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#value ApiManagementApiOperation#value}
+  */
+  readonly value?: string;
+}
+
+export function apiManagementApiOperationTemplateParameterExampleToTerraform(struct?: ApiManagementApiOperationTemplateParameterExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    external_value: cdktf.stringToTerraform(struct!.externalValue),
+    name: cdktf.stringToTerraform(struct!.name),
+    summary: cdktf.stringToTerraform(struct!.summary),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export class ApiManagementApiOperationTemplateParameterExampleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementApiOperationTemplateParameterExample | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._externalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.externalValue = this._externalValue;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._summary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.summary = this._summary;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiOperationTemplateParameterExample | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._externalValue = undefined;
+      this._name = undefined;
+      this._summary = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._externalValue = value.externalValue;
+      this._name = value.name;
+      this._summary = value.summary;
+      this._value = value.value;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // external_value - computed: false, optional: true, required: false
+  private _externalValue?: string; 
+  public get externalValue() {
+    return this.getStringAttribute('external_value');
+  }
+  public set externalValue(value: string) {
+    this._externalValue = value;
+  }
+  public resetExternalValue() {
+    this._externalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalValueInput() {
+    return this._externalValue;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // summary - computed: false, optional: true, required: false
+  private _summary?: string; 
+  public get summary() {
+    return this.getStringAttribute('summary');
+  }
+  public set summary(value: string) {
+    this._summary = value;
+  }
+  public resetSummary() {
+    this._summary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get summaryInput() {
+    return this._summary;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApiManagementApiOperationTemplateParameterExampleList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementApiOperationTemplateParameterExample[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementApiOperationTemplateParameterExampleOutputReference {
+    return new ApiManagementApiOperationTemplateParameterExampleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementApiOperationTemplateParameter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
@@ -2351,13 +3978,27 @@ export interface ApiManagementApiOperationTemplateParameter {
   */
   readonly required: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
+  */
+  readonly schemaId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#type ApiManagementApiOperation#type}
   */
   readonly type: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
+  */
+  readonly typeName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#values ApiManagementApiOperation#values}
   */
   readonly values?: string[];
+  /**
+  * example block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#example ApiManagementApiOperation#example}
+  */
+  readonly example?: ApiManagementApiOperationTemplateParameterExample[] | cdktf.IResolvable;
 }
 
 export function apiManagementApiOperationTemplateParameterToTerraform(struct?: ApiManagementApiOperationTemplateParameter | cdktf.IResolvable): any {
@@ -2370,8 +4011,11 @@ export function apiManagementApiOperationTemplateParameterToTerraform(struct?: A
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
     required: cdktf.booleanToTerraform(struct!.required),
+    schema_id: cdktf.stringToTerraform(struct!.schemaId),
     type: cdktf.stringToTerraform(struct!.type),
+    type_name: cdktf.stringToTerraform(struct!.typeName),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
+    example: cdktf.listMapper(apiManagementApiOperationTemplateParameterExampleToTerraform, true)(struct!.example),
   }
 }
 
@@ -2411,13 +4055,25 @@ export class ApiManagementApiOperationTemplateParameterOutputReference extends c
       hasAnyValues = true;
       internalValueResult.required = this._required;
     }
+    if (this._schemaId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schemaId = this._schemaId;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
+    if (this._typeName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.typeName = this._typeName;
+    }
     if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
+    }
+    if (this._example?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.example = this._example?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -2430,8 +4086,11 @@ export class ApiManagementApiOperationTemplateParameterOutputReference extends c
       this._description = undefined;
       this._name = undefined;
       this._required = undefined;
+      this._schemaId = undefined;
       this._type = undefined;
+      this._typeName = undefined;
       this._values = undefined;
+      this._example.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -2444,8 +4103,11 @@ export class ApiManagementApiOperationTemplateParameterOutputReference extends c
       this._description = value.description;
       this._name = value.name;
       this._required = value.required;
+      this._schemaId = value.schemaId;
       this._type = value.type;
+      this._typeName = value.typeName;
       this._values = value.values;
+      this._example.internalValue = value.example;
     }
   }
 
@@ -2507,6 +4169,22 @@ export class ApiManagementApiOperationTemplateParameterOutputReference extends c
     return this._required;
   }
 
+  // schema_id - computed: false, optional: true, required: false
+  private _schemaId?: string; 
+  public get schemaId() {
+    return this.getStringAttribute('schema_id');
+  }
+  public set schemaId(value: string) {
+    this._schemaId = value;
+  }
+  public resetSchemaId() {
+    this._schemaId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaIdInput() {
+    return this._schemaId;
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -2518,6 +4196,22 @@ export class ApiManagementApiOperationTemplateParameterOutputReference extends c
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type;
+  }
+
+  // type_name - computed: false, optional: true, required: false
+  private _typeName?: string; 
+  public get typeName() {
+    return this.getStringAttribute('type_name');
+  }
+  public set typeName(value: string) {
+    this._typeName = value;
+  }
+  public resetTypeName() {
+    this._typeName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeNameInput() {
+    return this._typeName;
   }
 
   // values - computed: false, optional: true, required: false
@@ -2534,6 +4228,22 @@ export class ApiManagementApiOperationTemplateParameterOutputReference extends c
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
     return this._values;
+  }
+
+  // example - computed: false, optional: true, required: false
+  private _example = new ApiManagementApiOperationTemplateParameterExampleList(this, "example", false);
+  public get example() {
+    return this._example;
+  }
+  public putExample(value: ApiManagementApiOperationTemplateParameterExample[] | cdktf.IResolvable) {
+    this._example.internalValue = value;
+  }
+  public resetExample() {
+    this._example.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exampleInput() {
+    return this._example.internalValue;
   }
 }
 
@@ -2739,7 +4449,7 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_api_operation',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.23.0',
+        providerVersion: '3.24.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

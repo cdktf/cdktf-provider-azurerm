@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface PrivateEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint#custom_network_interface_name PrivateEndpoint#custom_network_interface_name}
+  */
+  readonly customNetworkInterfaceName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint#id PrivateEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -944,7 +948,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_private_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.23.0',
+        providerVersion: '3.24.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -955,6 +959,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._customNetworkInterfaceName = config.customNetworkInterfaceName;
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
@@ -975,6 +980,22 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   private _customDnsConfigs = new PrivateEndpointCustomDnsConfigsList(this, "custom_dns_configs", false);
   public get customDnsConfigs() {
     return this._customDnsConfigs;
+  }
+
+  // custom_network_interface_name - computed: false, optional: true, required: false
+  private _customNetworkInterfaceName?: string; 
+  public get customNetworkInterfaceName() {
+    return this.getStringAttribute('custom_network_interface_name');
+  }
+  public set customNetworkInterfaceName(value: string) {
+    this._customNetworkInterfaceName = value;
+  }
+  public resetCustomNetworkInterfaceName() {
+    this._customNetworkInterfaceName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customNetworkInterfaceNameInput() {
+    return this._customNetworkInterfaceName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1140,6 +1161,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      custom_network_interface_name: cdktf.stringToTerraform(this._customNetworkInterfaceName),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

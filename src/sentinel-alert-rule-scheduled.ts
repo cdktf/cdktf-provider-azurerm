@@ -75,6 +75,10 @@ export interface SentinelAlertRuleScheduledConfig extends cdktf.TerraformMetaArg
   */
   readonly tactics?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled#techniques SentinelAlertRuleScheduled#techniques}
+  */
+  readonly techniques?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled#trigger_operator SentinelAlertRuleScheduled#trigger_operator}
   */
   readonly triggerOperator?: string;
@@ -1089,7 +1093,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sentinel_alert_rule_scheduled',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.23.0',
+        providerVersion: '3.24.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1116,6 +1120,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
     this._suppressionDuration = config.suppressionDuration;
     this._suppressionEnabled = config.suppressionEnabled;
     this._tactics = config.tactics;
+    this._techniques = config.techniques;
     this._triggerOperator = config.triggerOperator;
     this._triggerThreshold = config.triggerThreshold;
     this._alertDetailsOverride.internalValue = config.alertDetailsOverride;
@@ -1370,6 +1375,22 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
     return this._tactics;
   }
 
+  // techniques - computed: false, optional: true, required: false
+  private _techniques?: string[]; 
+  public get techniques() {
+    return cdktf.Fn.tolist(this.getListAttribute('techniques'));
+  }
+  public set techniques(value: string[]) {
+    this._techniques = value;
+  }
+  public resetTechniques() {
+    this._techniques = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get techniquesInput() {
+    return this._techniques;
+  }
+
   // trigger_operator - computed: false, optional: true, required: false
   private _triggerOperator?: string; 
   public get triggerOperator() {
@@ -1504,6 +1525,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
       suppression_duration: cdktf.stringToTerraform(this._suppressionDuration),
       suppression_enabled: cdktf.booleanToTerraform(this._suppressionEnabled),
       tactics: cdktf.listMapper(cdktf.stringToTerraform, false)(this._tactics),
+      techniques: cdktf.listMapper(cdktf.stringToTerraform, false)(this._techniques),
       trigger_operator: cdktf.stringToTerraform(this._triggerOperator),
       trigger_threshold: cdktf.numberToTerraform(this._triggerThreshold),
       alert_details_override: cdktf.listMapper(sentinelAlertRuleScheduledAlertDetailsOverrideToTerraform, true)(this._alertDetailsOverride.internalValue),

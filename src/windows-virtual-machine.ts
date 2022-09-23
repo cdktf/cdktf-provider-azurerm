@@ -95,6 +95,10 @@ export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArgument
   */
   readonly networkInterfaceIds: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#patch_assessment_mode WindowsVirtualMachine#patch_assessment_mode}
+  */
+  readonly patchAssessmentMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#patch_mode WindowsVirtualMachine#patch_mode}
   */
   readonly patchMode?: string;
@@ -1809,7 +1813,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_virtual_machine',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.23.0',
+        providerVersion: '3.24.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1841,6 +1845,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
     this._maxBidPrice = config.maxBidPrice;
     this._name = config.name;
     this._networkInterfaceIds = config.networkInterfaceIds;
+    this._patchAssessmentMode = config.patchAssessmentMode;
     this._patchMode = config.patchMode;
     this._platformFaultDomain = config.platformFaultDomain;
     this._priority = config.priority;
@@ -2192,6 +2197,22 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get networkInterfaceIdsInput() {
     return this._networkInterfaceIds;
+  }
+
+  // patch_assessment_mode - computed: false, optional: true, required: false
+  private _patchAssessmentMode?: string; 
+  public get patchAssessmentMode() {
+    return this.getStringAttribute('patch_assessment_mode');
+  }
+  public set patchAssessmentMode(value: string) {
+    this._patchAssessmentMode = value;
+  }
+  public resetPatchAssessmentMode() {
+    this._patchAssessmentMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patchAssessmentModeInput() {
+    return this._patchAssessmentMode;
   }
 
   // patch_mode - computed: false, optional: true, required: false
@@ -2653,6 +2674,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       max_bid_price: cdktf.numberToTerraform(this._maxBidPrice),
       name: cdktf.stringToTerraform(this._name),
       network_interface_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._networkInterfaceIds),
+      patch_assessment_mode: cdktf.stringToTerraform(this._patchAssessmentMode),
       patch_mode: cdktf.stringToTerraform(this._patchMode),
       platform_fault_domain: cdktf.numberToTerraform(this._platformFaultDomain),
       priority: cdktf.stringToTerraform(this._priority),

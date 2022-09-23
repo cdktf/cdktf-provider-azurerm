@@ -3094,7 +3094,7 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hdinsight_interactive_query_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.23.0',
+        providerVersion: '3.24.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
