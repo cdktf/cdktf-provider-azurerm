@@ -203,6 +203,16 @@ export class ApiManagementCustomDomainDeveloperPortalOutputReference extends cdk
     return this._certificatePassword;
   }
 
+  // certificate_source - computed: true, optional: false, required: false
+  public get certificateSource() {
+    return this.getStringAttribute('certificate_source');
+  }
+
+  // certificate_status - computed: true, optional: false, required: false
+  public get certificateStatus() {
+    return this.getStringAttribute('certificate_status');
+  }
+
   // expiry - computed: true, optional: false, required: false
   public get expiry() {
     return this.getStringAttribute('expiry');
@@ -456,6 +466,16 @@ export class ApiManagementCustomDomainGatewayOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get certificatePasswordInput() {
     return this._certificatePassword;
+  }
+
+  // certificate_source - computed: true, optional: false, required: false
+  public get certificateSource() {
+    return this.getStringAttribute('certificate_source');
+  }
+
+  // certificate_status - computed: true, optional: false, required: false
+  public get certificateStatus() {
+    return this.getStringAttribute('certificate_status');
   }
 
   // default_ssl_binding - computed: true, optional: true, required: false
@@ -718,6 +738,16 @@ export class ApiManagementCustomDomainManagementOutputReference extends cdktf.Co
     return this._certificatePassword;
   }
 
+  // certificate_source - computed: true, optional: false, required: false
+  public get certificateSource() {
+    return this.getStringAttribute('certificate_source');
+  }
+
+  // certificate_status - computed: true, optional: false, required: false
+  public get certificateStatus() {
+    return this.getStringAttribute('certificate_status');
+  }
+
   // expiry - computed: true, optional: false, required: false
   public get expiry() {
     return this.getStringAttribute('expiry');
@@ -962,6 +992,16 @@ export class ApiManagementCustomDomainPortalOutputReference extends cdktf.Comple
     return this._certificatePassword;
   }
 
+  // certificate_source - computed: true, optional: false, required: false
+  public get certificateSource() {
+    return this.getStringAttribute('certificate_source');
+  }
+
+  // certificate_status - computed: true, optional: false, required: false
+  public get certificateStatus() {
+    return this.getStringAttribute('certificate_status');
+  }
+
   // expiry - computed: true, optional: false, required: false
   public get expiry() {
     return this.getStringAttribute('expiry');
@@ -1204,6 +1244,16 @@ export class ApiManagementCustomDomainScmOutputReference extends cdktf.ComplexOb
   // Temporarily expose input value. Use with caution.
   public get certificatePasswordInput() {
     return this._certificatePassword;
+  }
+
+  // certificate_source - computed: true, optional: false, required: false
+  public get certificateSource() {
+    return this.getStringAttribute('certificate_source');
+  }
+
+  // certificate_status - computed: true, optional: false, required: false
+  public get certificateStatus() {
+    return this.getStringAttribute('certificate_status');
   }
 
   // expiry - computed: true, optional: false, required: false
@@ -1485,7 +1535,7 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_custom_domain',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

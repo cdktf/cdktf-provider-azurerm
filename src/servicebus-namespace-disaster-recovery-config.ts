@@ -216,7 +216,7 @@ export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformRe
       terraformResourceType: 'azurerm_servicebus_namespace_disaster_recovery_config',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

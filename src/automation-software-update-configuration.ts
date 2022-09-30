@@ -79,7 +79,7 @@ export interface AutomationSoftwareUpdateConfigurationConfig extends cdktf.Terra
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_software_update_configuration#windows AutomationSoftwareUpdateConfiguration#windows}
   */
-  readonly windows?: AutomationSoftwareUpdateConfigurationWindows[] | cdktf.IResolvable;
+  readonly windows?: AutomationSoftwareUpdateConfigurationWindows;
 }
 export interface AutomationSoftwareUpdateConfigurationLinux {
   /**
@@ -1765,6 +1765,10 @@ export interface AutomationSoftwareUpdateConfigurationWindows {
   */
   readonly classificationIncluded?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_software_update_configuration#classifications_included AutomationSoftwareUpdateConfiguration#classifications_included}
+  */
+  readonly classificationsIncluded?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_software_update_configuration#excluded_knowledge_base_numbers AutomationSoftwareUpdateConfiguration#excluded_knowledge_base_numbers}
   */
   readonly excludedKnowledgeBaseNumbers?: string[];
@@ -1778,13 +1782,14 @@ export interface AutomationSoftwareUpdateConfigurationWindows {
   readonly reboot?: string;
 }
 
-export function automationSoftwareUpdateConfigurationWindowsToTerraform(struct?: AutomationSoftwareUpdateConfigurationWindows | cdktf.IResolvable): any {
+export function automationSoftwareUpdateConfigurationWindowsToTerraform(struct?: AutomationSoftwareUpdateConfigurationWindowsOutputReference | AutomationSoftwareUpdateConfigurationWindows): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     classification_included: cdktf.stringToTerraform(struct!.classificationIncluded),
+    classifications_included: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.classificationsIncluded),
     excluded_knowledge_base_numbers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludedKnowledgeBaseNumbers),
     included_knowledge_base_numbers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.includedKnowledgeBaseNumbers),
     reboot: cdktf.stringToTerraform(struct!.reboot),
@@ -1793,27 +1798,25 @@ export function automationSoftwareUpdateConfigurationWindowsToTerraform(struct?:
 
 export class AutomationSoftwareUpdateConfigurationWindowsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AutomationSoftwareUpdateConfigurationWindows | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
+  public get internalValue(): AutomationSoftwareUpdateConfigurationWindows | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._classificationIncluded !== undefined) {
       hasAnyValues = true;
       internalValueResult.classificationIncluded = this._classificationIncluded;
+    }
+    if (this._classificationsIncluded !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.classificationsIncluded = this._classificationsIncluded;
     }
     if (this._excludedKnowledgeBaseNumbers !== undefined) {
       hasAnyValues = true;
@@ -1830,30 +1833,26 @@ export class AutomationSoftwareUpdateConfigurationWindowsOutputReference extends
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AutomationSoftwareUpdateConfigurationWindows | cdktf.IResolvable | undefined) {
+  public set internalValue(value: AutomationSoftwareUpdateConfigurationWindows | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this.resolvableValue = undefined;
       this._classificationIncluded = undefined;
+      this._classificationsIncluded = undefined;
       this._excludedKnowledgeBaseNumbers = undefined;
       this._includedKnowledgeBaseNumbers = undefined;
       this._reboot = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
       this._classificationIncluded = value.classificationIncluded;
+      this._classificationsIncluded = value.classificationsIncluded;
       this._excludedKnowledgeBaseNumbers = value.excludedKnowledgeBaseNumbers;
       this._includedKnowledgeBaseNumbers = value.includedKnowledgeBaseNumbers;
       this._reboot = value.reboot;
     }
   }
 
-  // classification_included - computed: false, optional: true, required: false
+  // classification_included - computed: true, optional: true, required: false
   private _classificationIncluded?: string; 
   public get classificationIncluded() {
     return this.getStringAttribute('classification_included');
@@ -1867,6 +1866,22 @@ export class AutomationSoftwareUpdateConfigurationWindowsOutputReference extends
   // Temporarily expose input value. Use with caution.
   public get classificationIncludedInput() {
     return this._classificationIncluded;
+  }
+
+  // classifications_included - computed: true, optional: true, required: false
+  private _classificationsIncluded?: string[]; 
+  public get classificationsIncluded() {
+    return this.getListAttribute('classifications_included');
+  }
+  public set classificationsIncluded(value: string[]) {
+    this._classificationsIncluded = value;
+  }
+  public resetClassificationsIncluded() {
+    this._classificationsIncluded = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get classificationsIncludedInput() {
+    return this._classificationsIncluded;
   }
 
   // excluded_knowledge_base_numbers - computed: false, optional: true, required: false
@@ -1918,26 +1933,6 @@ export class AutomationSoftwareUpdateConfigurationWindowsOutputReference extends
   }
 }
 
-export class AutomationSoftwareUpdateConfigurationWindowsList extends cdktf.ComplexList {
-  public internalValue? : AutomationSoftwareUpdateConfigurationWindows[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): AutomationSoftwareUpdateConfigurationWindowsOutputReference {
-    return new AutomationSoftwareUpdateConfigurationWindowsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_software_update_configuration azurerm_automation_software_update_configuration}
 */
@@ -1964,7 +1959,7 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
       terraformResourceType: 'azurerm_automation_software_update_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -2205,11 +2200,11 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
   }
 
   // windows - computed: false, optional: true, required: false
-  private _windows = new AutomationSoftwareUpdateConfigurationWindowsList(this, "windows", false);
+  private _windows = new AutomationSoftwareUpdateConfigurationWindowsOutputReference(this, "windows");
   public get windows() {
     return this._windows;
   }
-  public putWindows(value: AutomationSoftwareUpdateConfigurationWindows[] | cdktf.IResolvable) {
+  public putWindows(value: AutomationSoftwareUpdateConfigurationWindows) {
     this._windows.internalValue = value;
   }
   public resetWindows() {
@@ -2239,7 +2234,7 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
       schedule: cdktf.listMapper(automationSoftwareUpdateConfigurationScheduleToTerraform, true)(this._schedule.internalValue),
       target: automationSoftwareUpdateConfigurationTargetToTerraform(this._target.internalValue),
       timeouts: automationSoftwareUpdateConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
-      windows: cdktf.listMapper(automationSoftwareUpdateConfigurationWindowsToTerraform, true)(this._windows.internalValue),
+      windows: automationSoftwareUpdateConfigurationWindowsToTerraform(this._windows.internalValue),
     };
   }
 }

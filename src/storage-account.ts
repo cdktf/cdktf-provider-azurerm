@@ -2762,6 +2762,10 @@ export interface StorageAccountSharePropertiesSmb {
   */
   readonly kerberosTicketEncryptionType?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#multichannel_enabled StorageAccount#multichannel_enabled}
+  */
+  readonly multichannelEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#versions StorageAccount#versions}
   */
   readonly versions?: string[];
@@ -2776,6 +2780,7 @@ export function storageAccountSharePropertiesSmbToTerraform(struct?: StorageAcco
     authentication_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.authenticationTypes),
     channel_encryption_type: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.channelEncryptionType),
     kerberos_ticket_encryption_type: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.kerberosTicketEncryptionType),
+    multichannel_enabled: cdktf.booleanToTerraform(struct!.multichannelEnabled),
     versions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.versions),
   }
 }
@@ -2806,6 +2811,10 @@ export class StorageAccountSharePropertiesSmbOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.kerberosTicketEncryptionType = this._kerberosTicketEncryptionType;
     }
+    if (this._multichannelEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.multichannelEnabled = this._multichannelEnabled;
+    }
     if (this._versions !== undefined) {
       hasAnyValues = true;
       internalValueResult.versions = this._versions;
@@ -2819,6 +2828,7 @@ export class StorageAccountSharePropertiesSmbOutputReference extends cdktf.Compl
       this._authenticationTypes = undefined;
       this._channelEncryptionType = undefined;
       this._kerberosTicketEncryptionType = undefined;
+      this._multichannelEnabled = undefined;
       this._versions = undefined;
     }
     else {
@@ -2826,6 +2836,7 @@ export class StorageAccountSharePropertiesSmbOutputReference extends cdktf.Compl
       this._authenticationTypes = value.authenticationTypes;
       this._channelEncryptionType = value.channelEncryptionType;
       this._kerberosTicketEncryptionType = value.kerberosTicketEncryptionType;
+      this._multichannelEnabled = value.multichannelEnabled;
       this._versions = value.versions;
     }
   }
@@ -2876,6 +2887,22 @@ export class StorageAccountSharePropertiesSmbOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get kerberosTicketEncryptionTypeInput() {
     return this._kerberosTicketEncryptionType;
+  }
+
+  // multichannel_enabled - computed: false, optional: true, required: false
+  private _multichannelEnabled?: boolean | cdktf.IResolvable; 
+  public get multichannelEnabled() {
+    return this.getBooleanAttribute('multichannel_enabled');
+  }
+  public set multichannelEnabled(value: boolean | cdktf.IResolvable) {
+    this._multichannelEnabled = value;
+  }
+  public resetMultichannelEnabled() {
+    this._multichannelEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get multichannelEnabledInput() {
+    return this._multichannelEnabled;
   }
 
   // versions - computed: false, optional: true, required: false
@@ -3294,7 +3321,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

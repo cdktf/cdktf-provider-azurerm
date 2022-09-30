@@ -454,7 +454,7 @@ export class AppServiceConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_service_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

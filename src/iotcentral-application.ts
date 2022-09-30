@@ -27,6 +27,10 @@ export interface IotcentralApplicationConfig extends cdktf.TerraformMetaArgument
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application#public_network_access_enabled IotcentralApplication#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application#resource_group_name IotcentralApplication#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -47,11 +51,89 @@ export interface IotcentralApplicationConfig extends cdktf.TerraformMetaArgument
   */
   readonly template?: string;
   /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application#identity IotcentralApplication#identity}
+  */
+  readonly identity?: IotcentralApplicationIdentity;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application#timeouts IotcentralApplication#timeouts}
   */
   readonly timeouts?: IotcentralApplicationTimeouts;
+}
+export interface IotcentralApplicationIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application#type IotcentralApplication#type}
+  */
+  readonly type: string;
+}
+
+export function iotcentralApplicationIdentityToTerraform(struct?: IotcentralApplicationIdentityOutputReference | IotcentralApplicationIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class IotcentralApplicationIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): IotcentralApplicationIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IotcentralApplicationIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._type = value.type;
+    }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
 }
 export interface IotcentralApplicationTimeouts {
   /**
@@ -236,7 +318,7 @@ export class IotcentralApplication extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_iotcentral_application',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -251,11 +333,13 @@ export class IotcentralApplication extends cdktf.TerraformResource {
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._subDomain = config.subDomain;
     this._tags = config.tags;
     this._template = config.template;
+    this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -319,6 +403,22 @@ export class IotcentralApplication extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -395,6 +495,22 @@ export class IotcentralApplication extends cdktf.TerraformResource {
     return this._template;
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity = new IotcentralApplicationIdentityOutputReference(this, "identity");
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: IotcentralApplicationIdentity) {
+    this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new IotcentralApplicationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -421,11 +537,13 @@ export class IotcentralApplication extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       sub_domain: cdktf.stringToTerraform(this._subDomain),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       template: cdktf.stringToTerraform(this._template),
+      identity: iotcentralApplicationIdentityToTerraform(this._identity.internalValue),
       timeouts: iotcentralApplicationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -16,6 +16,10 @@ export interface CdnFrontdoorOriginConfig extends cdktf.TerraformMetaArguments {
   */
   readonly certificateNameCheckEnabled: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_frontdoor_origin#enabled CdnFrontdoorOrigin#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_frontdoor_origin#health_probes_enabled CdnFrontdoorOrigin#health_probes_enabled}
   */
   readonly healthProbesEnabled?: boolean | cdktf.IResolvable;
@@ -390,7 +394,7 @@ export class CdnFrontdoorOrigin extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cdn_frontdoor_origin',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -403,6 +407,7 @@ export class CdnFrontdoorOrigin extends cdktf.TerraformResource {
     });
     this._cdnFrontdoorOriginGroupId = config.cdnFrontdoorOriginGroupId;
     this._certificateNameCheckEnabled = config.certificateNameCheckEnabled;
+    this._enabled = config.enabled;
     this._healthProbesEnabled = config.healthProbesEnabled;
     this._hostName = config.hostName;
     this._httpPort = config.httpPort;
@@ -446,7 +451,23 @@ export class CdnFrontdoorOrigin extends cdktf.TerraformResource {
     return this._certificateNameCheckEnabled;
   }
 
-  // health_probes_enabled - computed: false, optional: true, required: false
+  // enabled - computed: true, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // health_probes_enabled - computed: true, optional: true, required: false
   private _healthProbesEnabled?: boolean | cdktf.IResolvable; 
   public get healthProbesEnabled() {
     return this.getBooleanAttribute('health_probes_enabled');
@@ -624,6 +645,7 @@ export class CdnFrontdoorOrigin extends cdktf.TerraformResource {
     return {
       cdn_frontdoor_origin_group_id: cdktf.stringToTerraform(this._cdnFrontdoorOriginGroupId),
       certificate_name_check_enabled: cdktf.booleanToTerraform(this._certificateNameCheckEnabled),
+      enabled: cdktf.booleanToTerraform(this._enabled),
       health_probes_enabled: cdktf.booleanToTerraform(this._healthProbesEnabled),
       host_name: cdktf.stringToTerraform(this._hostName),
       http_port: cdktf.numberToTerraform(this._httpPort),

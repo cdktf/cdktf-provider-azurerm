@@ -212,7 +212,7 @@ export class SpringCloudActiveDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_active_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

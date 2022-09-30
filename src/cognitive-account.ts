@@ -87,6 +87,12 @@ export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string };
   /**
+  * customer_managed_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#customer_managed_key CognitiveAccount#customer_managed_key}
+  */
+  readonly customerManagedKey?: CognitiveAccountCustomerManagedKey;
+  /**
   * identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#identity CognitiveAccount#identity}
@@ -110,6 +116,95 @@ export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#timeouts CognitiveAccount#timeouts}
   */
   readonly timeouts?: CognitiveAccountTimeouts;
+}
+export interface CognitiveAccountCustomerManagedKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#identity_client_id CognitiveAccount#identity_client_id}
+  */
+  readonly identityClientId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#key_vault_key_id CognitiveAccount#key_vault_key_id}
+  */
+  readonly keyVaultKeyId: string;
+}
+
+export function cognitiveAccountCustomerManagedKeyToTerraform(struct?: CognitiveAccountCustomerManagedKeyOutputReference | CognitiveAccountCustomerManagedKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_client_id: cdktf.stringToTerraform(struct!.identityClientId),
+    key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
+  }
+}
+
+export class CognitiveAccountCustomerManagedKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CognitiveAccountCustomerManagedKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityClientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityClientId = this._identityClientId;
+    }
+    if (this._keyVaultKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultKeyId = this._keyVaultKeyId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CognitiveAccountCustomerManagedKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityClientId = undefined;
+      this._keyVaultKeyId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityClientId = value.identityClientId;
+      this._keyVaultKeyId = value.keyVaultKeyId;
+    }
+  }
+
+  // identity_client_id - computed: false, optional: true, required: false
+  private _identityClientId?: string; 
+  public get identityClientId() {
+    return this.getStringAttribute('identity_client_id');
+  }
+  public set identityClientId(value: string) {
+    this._identityClientId = value;
+  }
+  public resetIdentityClientId() {
+    this._identityClientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityClientIdInput() {
+    return this._identityClientId;
+  }
+
+  // key_vault_key_id - computed: false, optional: false, required: true
+  private _keyVaultKeyId?: string; 
+  public get keyVaultKeyId() {
+    return this.getStringAttribute('key_vault_key_id');
+  }
+  public set keyVaultKeyId(value: string) {
+    this._keyVaultKeyId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyIdInput() {
+    return this._keyVaultKeyId;
+  }
 }
 export interface CognitiveAccountIdentity {
   /**
@@ -753,7 +848,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cognitive_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -783,6 +878,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
     this._tags = config.tags;
+    this._customerManagedKey.internalValue = config.customerManagedKey;
     this._identity.internalValue = config.identity;
     this._networkAcls.internalValue = config.networkAcls;
     this._storage.internalValue = config.storage;
@@ -1097,6 +1193,22 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // customer_managed_key - computed: false, optional: true, required: false
+  private _customerManagedKey = new CognitiveAccountCustomerManagedKeyOutputReference(this, "customer_managed_key");
+  public get customerManagedKey() {
+    return this._customerManagedKey;
+  }
+  public putCustomerManagedKey(value: CognitiveAccountCustomerManagedKey) {
+    this._customerManagedKey.internalValue = value;
+  }
+  public resetCustomerManagedKey() {
+    this._customerManagedKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedKeyInput() {
+    return this._customerManagedKey.internalValue;
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity = new CognitiveAccountIdentityOutputReference(this, "identity");
   public get identity() {
@@ -1186,6 +1298,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      customer_managed_key: cognitiveAccountCustomerManagedKeyToTerraform(this._customerManagedKey.internalValue),
       identity: cognitiveAccountIdentityToTerraform(this._identity.internalValue),
       network_acls: cognitiveAccountNetworkAclsToTerraform(this._networkAcls.internalValue),
       storage: cdktf.listMapper(cognitiveAccountStorageToTerraform, true)(this._storage.internalValue),
