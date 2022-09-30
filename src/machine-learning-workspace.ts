@@ -79,6 +79,10 @@ export interface MachineLearningWorkspaceConfig extends cdktf.TerraformMetaArgum
   */
   readonly tags?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace#v1_legacy_mode_enabled MachineLearningWorkspace#v1_legacy_mode_enabled}
+  */
+  readonly v1LegacyModeEnabled?: boolean | cdktf.IResolvable;
+  /**
   * encryption block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace#encryption MachineLearningWorkspace#encryption}
@@ -492,7 +496,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_machine_learning_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -520,6 +524,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
     this._skuName = config.skuName;
     this._storageAccountId = config.storageAccountId;
     this._tags = config.tags;
+    this._v1LegacyModeEnabled = config.v1LegacyModeEnabled;
     this._encryption.internalValue = config.encryption;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
@@ -698,7 +703,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
     return this._primaryUserAssignedIdentity;
   }
 
-  // public_access_behind_virtual_network_enabled - computed: true, optional: true, required: false
+  // public_access_behind_virtual_network_enabled - computed: false, optional: true, required: false
   private _publicAccessBehindVirtualNetworkEnabled?: boolean | cdktf.IResolvable; 
   public get publicAccessBehindVirtualNetworkEnabled() {
     return this.getBooleanAttribute('public_access_behind_virtual_network_enabled');
@@ -788,6 +793,22 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // v1_legacy_mode_enabled - computed: false, optional: true, required: false
+  private _v1LegacyModeEnabled?: boolean | cdktf.IResolvable; 
+  public get v1LegacyModeEnabled() {
+    return this.getBooleanAttribute('v1_legacy_mode_enabled');
+  }
+  public set v1LegacyModeEnabled(value: boolean | cdktf.IResolvable) {
+    this._v1LegacyModeEnabled = value;
+  }
+  public resetV1LegacyModeEnabled() {
+    this._v1LegacyModeEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get v1LegacyModeEnabledInput() {
+    return this._v1LegacyModeEnabled;
+  }
+
   // encryption - computed: false, optional: true, required: false
   private _encryption = new MachineLearningWorkspaceEncryptionOutputReference(this, "encryption");
   public get encryption() {
@@ -856,6 +877,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
       sku_name: cdktf.stringToTerraform(this._skuName),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      v1_legacy_mode_enabled: cdktf.booleanToTerraform(this._v1LegacyModeEnabled),
       encryption: machineLearningWorkspaceEncryptionToTerraform(this._encryption.internalValue),
       identity: machineLearningWorkspaceIdentityToTerraform(this._identity.internalValue),
       timeouts: machineLearningWorkspaceTimeoutsToTerraform(this._timeouts.internalValue),

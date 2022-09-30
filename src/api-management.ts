@@ -337,6 +337,10 @@ export interface ApiManagementAdditionalLocation {
   */
   readonly capacity?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#gateway_disabled ApiManagement#gateway_disabled}
+  */
+  readonly gatewayDisabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#location ApiManagement#location}
   */
   readonly location: string;
@@ -363,6 +367,7 @@ export function apiManagementAdditionalLocationToTerraform(struct?: ApiManagemen
   }
   return {
     capacity: cdktf.numberToTerraform(struct!.capacity),
+    gateway_disabled: cdktf.booleanToTerraform(struct!.gatewayDisabled),
     location: cdktf.stringToTerraform(struct!.location),
     public_ip_address_id: cdktf.stringToTerraform(struct!.publicIpAddressId),
     zones: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.zones),
@@ -394,6 +399,10 @@ export class ApiManagementAdditionalLocationOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.capacity = this._capacity;
     }
+    if (this._gatewayDisabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gatewayDisabled = this._gatewayDisabled;
+    }
     if (this._location !== undefined) {
       hasAnyValues = true;
       internalValueResult.location = this._location;
@@ -418,6 +427,7 @@ export class ApiManagementAdditionalLocationOutputReference extends cdktf.Comple
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._capacity = undefined;
+      this._gatewayDisabled = undefined;
       this._location = undefined;
       this._publicIpAddressId = undefined;
       this._zones = undefined;
@@ -431,6 +441,7 @@ export class ApiManagementAdditionalLocationOutputReference extends cdktf.Comple
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._capacity = value.capacity;
+      this._gatewayDisabled = value.gatewayDisabled;
       this._location = value.location;
       this._publicIpAddressId = value.publicIpAddressId;
       this._zones = value.zones;
@@ -452,6 +463,22 @@ export class ApiManagementAdditionalLocationOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get capacityInput() {
     return this._capacity;
+  }
+
+  // gateway_disabled - computed: false, optional: true, required: false
+  private _gatewayDisabled?: boolean | cdktf.IResolvable; 
+  public get gatewayDisabled() {
+    return this.getBooleanAttribute('gateway_disabled');
+  }
+  public set gatewayDisabled(value: boolean | cdktf.IResolvable) {
+    this._gatewayDisabled = value;
+  }
+  public resetGatewayDisabled() {
+    this._gatewayDisabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayDisabledInput() {
+    return this._gatewayDisabled;
   }
 
   // gateway_regional_url - computed: true, optional: false, required: false
@@ -858,6 +885,16 @@ export class ApiManagementHostnameConfigurationDeveloperPortalOutputReference ex
     return this._certificatePassword;
   }
 
+  // certificate_source - computed: true, optional: false, required: false
+  public get certificateSource() {
+    return this.getStringAttribute('certificate_source');
+  }
+
+  // certificate_status - computed: true, optional: false, required: false
+  public get certificateStatus() {
+    return this.getStringAttribute('certificate_status');
+  }
+
   // expiry - computed: true, optional: false, required: false
   public get expiry() {
     return this.getStringAttribute('expiry');
@@ -1102,6 +1139,16 @@ export class ApiManagementHostnameConfigurationManagementOutputReference extends
     return this._certificatePassword;
   }
 
+  // certificate_source - computed: true, optional: false, required: false
+  public get certificateSource() {
+    return this.getStringAttribute('certificate_source');
+  }
+
+  // certificate_status - computed: true, optional: false, required: false
+  public get certificateStatus() {
+    return this.getStringAttribute('certificate_status');
+  }
+
   // expiry - computed: true, optional: false, required: false
   public get expiry() {
     return this.getStringAttribute('expiry');
@@ -1344,6 +1391,16 @@ export class ApiManagementHostnameConfigurationPortalOutputReference extends cdk
   // Temporarily expose input value. Use with caution.
   public get certificatePasswordInput() {
     return this._certificatePassword;
+  }
+
+  // certificate_source - computed: true, optional: false, required: false
+  public get certificateSource() {
+    return this.getStringAttribute('certificate_source');
+  }
+
+  // certificate_status - computed: true, optional: false, required: false
+  public get certificateStatus() {
+    return this.getStringAttribute('certificate_status');
   }
 
   // expiry - computed: true, optional: false, required: false
@@ -1599,6 +1656,16 @@ export class ApiManagementHostnameConfigurationProxyOutputReference extends cdkt
   // Temporarily expose input value. Use with caution.
   public get certificatePasswordInput() {
     return this._certificatePassword;
+  }
+
+  // certificate_source - computed: true, optional: false, required: false
+  public get certificateSource() {
+    return this.getStringAttribute('certificate_source');
+  }
+
+  // certificate_status - computed: true, optional: false, required: false
+  public get certificateStatus() {
+    return this.getStringAttribute('certificate_status');
   }
 
   // default_ssl_binding - computed: true, optional: true, required: false
@@ -1859,6 +1926,16 @@ export class ApiManagementHostnameConfigurationScmOutputReference extends cdktf.
   // Temporarily expose input value. Use with caution.
   public get certificatePasswordInput() {
     return this._certificatePassword;
+  }
+
+  // certificate_source - computed: true, optional: false, required: false
+  public get certificateSource() {
+    return this.getStringAttribute('certificate_source');
+  }
+
+  // certificate_status - computed: true, optional: false, required: false
+  public get certificateStatus() {
+    return this.getStringAttribute('certificate_status');
   }
 
   // expiry - computed: true, optional: false, required: false
@@ -3359,7 +3436,7 @@ export class ApiManagement extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

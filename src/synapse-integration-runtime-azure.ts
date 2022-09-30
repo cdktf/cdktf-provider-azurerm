@@ -232,7 +232,7 @@ export class SynapseIntegrationRuntimeAzure extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_synapse_integration_runtime_azure',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

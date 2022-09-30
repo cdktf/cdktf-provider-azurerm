@@ -31,6 +31,10 @@ export interface VirtualHubBgpConnectionConfig extends cdktf.TerraformMetaArgume
   */
   readonly virtualHubId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_bgp_connection#virtual_network_connection_id VirtualHubBgpConnection#virtual_network_connection_id}
+  */
+  readonly virtualNetworkConnectionId?: string;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_bgp_connection#timeouts VirtualHubBgpConnection#timeouts}
@@ -50,6 +54,10 @@ export interface VirtualHubBgpConnectionTimeouts {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_bgp_connection#read VirtualHubBgpConnection#read}
   */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_bgp_connection#update VirtualHubBgpConnection#update}
+  */
+  readonly update?: string;
 }
 
 export function virtualHubBgpConnectionTimeoutsToTerraform(struct?: VirtualHubBgpConnectionTimeoutsOutputReference | VirtualHubBgpConnectionTimeouts | cdktf.IResolvable): any {
@@ -61,6 +69,7 @@ export function virtualHubBgpConnectionTimeoutsToTerraform(struct?: VirtualHubBg
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
@@ -94,6 +103,10 @@ export class VirtualHubBgpConnectionTimeoutsOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -104,6 +117,7 @@ export class VirtualHubBgpConnectionTimeoutsOutputReference extends cdktf.Comple
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
+      this._update = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -115,6 +129,7 @@ export class VirtualHubBgpConnectionTimeoutsOutputReference extends cdktf.Comple
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
+      this._update = value.update;
     }
   }
 
@@ -165,6 +180,22 @@ export class VirtualHubBgpConnectionTimeoutsOutputReference extends cdktf.Comple
   public get readInput() {
     return this._read;
   }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
 }
 
 /**
@@ -193,7 +224,7 @@ export class VirtualHubBgpConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_hub_bgp_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -209,6 +240,7 @@ export class VirtualHubBgpConnection extends cdktf.TerraformResource {
     this._peerAsn = config.peerAsn;
     this._peerIp = config.peerIp;
     this._virtualHubId = config.virtualHubId;
+    this._virtualNetworkConnectionId = config.virtualNetworkConnectionId;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -284,6 +316,22 @@ export class VirtualHubBgpConnection extends cdktf.TerraformResource {
     return this._virtualHubId;
   }
 
+  // virtual_network_connection_id - computed: false, optional: true, required: false
+  private _virtualNetworkConnectionId?: string; 
+  public get virtualNetworkConnectionId() {
+    return this.getStringAttribute('virtual_network_connection_id');
+  }
+  public set virtualNetworkConnectionId(value: string) {
+    this._virtualNetworkConnectionId = value;
+  }
+  public resetVirtualNetworkConnectionId() {
+    this._virtualNetworkConnectionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkConnectionIdInput() {
+    return this._virtualNetworkConnectionId;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new VirtualHubBgpConnectionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -311,6 +359,7 @@ export class VirtualHubBgpConnection extends cdktf.TerraformResource {
       peer_asn: cdktf.numberToTerraform(this._peerAsn),
       peer_ip: cdktf.stringToTerraform(this._peerIp),
       virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),
+      virtual_network_connection_id: cdktf.stringToTerraform(this._virtualNetworkConnectionId),
       timeouts: virtualHubBgpConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

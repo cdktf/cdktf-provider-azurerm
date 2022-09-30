@@ -177,6 +177,12 @@ export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArgument
   */
   readonly bootDiagnostics?: WindowsVirtualMachineBootDiagnostics;
   /**
+  * gallery_application block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#gallery_application WindowsVirtualMachine#gallery_application}
+  */
+  readonly galleryApplication?: WindowsVirtualMachineGalleryApplication[] | cdktf.IResolvable;
+  /**
   * identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#identity WindowsVirtualMachine#identity}
@@ -471,6 +477,181 @@ export class WindowsVirtualMachineBootDiagnosticsOutputReference extends cdktf.C
   // Temporarily expose input value. Use with caution.
   public get storageAccountUriInput() {
     return this._storageAccountUri;
+  }
+}
+export interface WindowsVirtualMachineGalleryApplication {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#configuration_blob_uri WindowsVirtualMachine#configuration_blob_uri}
+  */
+  readonly configurationBlobUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#order WindowsVirtualMachine#order}
+  */
+  readonly order?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#tag WindowsVirtualMachine#tag}
+  */
+  readonly tag?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#version_id WindowsVirtualMachine#version_id}
+  */
+  readonly versionId: string;
+}
+
+export function windowsVirtualMachineGalleryApplicationToTerraform(struct?: WindowsVirtualMachineGalleryApplication | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    configuration_blob_uri: cdktf.stringToTerraform(struct!.configurationBlobUri),
+    order: cdktf.numberToTerraform(struct!.order),
+    tag: cdktf.stringToTerraform(struct!.tag),
+    version_id: cdktf.stringToTerraform(struct!.versionId),
+  }
+}
+
+export class WindowsVirtualMachineGalleryApplicationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): WindowsVirtualMachineGalleryApplication | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._configurationBlobUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.configurationBlobUri = this._configurationBlobUri;
+    }
+    if (this._order !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.order = this._order;
+    }
+    if (this._tag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag;
+    }
+    if (this._versionId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.versionId = this._versionId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsVirtualMachineGalleryApplication | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._configurationBlobUri = undefined;
+      this._order = undefined;
+      this._tag = undefined;
+      this._versionId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._configurationBlobUri = value.configurationBlobUri;
+      this._order = value.order;
+      this._tag = value.tag;
+      this._versionId = value.versionId;
+    }
+  }
+
+  // configuration_blob_uri - computed: false, optional: true, required: false
+  private _configurationBlobUri?: string; 
+  public get configurationBlobUri() {
+    return this.getStringAttribute('configuration_blob_uri');
+  }
+  public set configurationBlobUri(value: string) {
+    this._configurationBlobUri = value;
+  }
+  public resetConfigurationBlobUri() {
+    this._configurationBlobUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configurationBlobUriInput() {
+    return this._configurationBlobUri;
+  }
+
+  // order - computed: false, optional: true, required: false
+  private _order?: number; 
+  public get order() {
+    return this.getNumberAttribute('order');
+  }
+  public set order(value: number) {
+    this._order = value;
+  }
+  public resetOrder() {
+    this._order = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get orderInput() {
+    return this._order;
+  }
+
+  // tag - computed: false, optional: true, required: false
+  private _tag?: string; 
+  public get tag() {
+    return this.getStringAttribute('tag');
+  }
+  public set tag(value: string) {
+    this._tag = value;
+  }
+  public resetTag() {
+    this._tag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagInput() {
+    return this._tag;
+  }
+
+  // version_id - computed: false, optional: false, required: true
+  private _versionId?: string; 
+  public get versionId() {
+    return this.getStringAttribute('version_id');
+  }
+  public set versionId(value: string) {
+    this._versionId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionIdInput() {
+    return this._versionId;
+  }
+}
+
+export class WindowsVirtualMachineGalleryApplicationList extends cdktf.ComplexList {
+  public internalValue? : WindowsVirtualMachineGalleryApplication[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): WindowsVirtualMachineGalleryApplicationOutputReference {
+    return new WindowsVirtualMachineGalleryApplicationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface WindowsVirtualMachineIdentity {
@@ -1813,7 +1994,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_virtual_machine',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1864,6 +2045,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
     this._additionalCapabilities.internalValue = config.additionalCapabilities;
     this._additionalUnattendContent.internalValue = config.additionalUnattendContent;
     this._bootDiagnostics.internalValue = config.bootDiagnostics;
+    this._galleryApplication.internalValue = config.galleryApplication;
     this._identity.internalValue = config.identity;
     this._osDisk.internalValue = config.osDisk;
     this._plan.internalValue = config.plan;
@@ -2522,6 +2704,22 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
     return this._bootDiagnostics.internalValue;
   }
 
+  // gallery_application - computed: false, optional: true, required: false
+  private _galleryApplication = new WindowsVirtualMachineGalleryApplicationList(this, "gallery_application", false);
+  public get galleryApplication() {
+    return this._galleryApplication;
+  }
+  public putGalleryApplication(value: WindowsVirtualMachineGalleryApplication[] | cdktf.IResolvable) {
+    this._galleryApplication.internalValue = value;
+  }
+  public resetGalleryApplication() {
+    this._galleryApplication.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get galleryApplicationInput() {
+    return this._galleryApplication.internalValue;
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity = new WindowsVirtualMachineIdentityOutputReference(this, "identity");
   public get identity() {
@@ -2693,6 +2891,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       additional_capabilities: windowsVirtualMachineAdditionalCapabilitiesToTerraform(this._additionalCapabilities.internalValue),
       additional_unattend_content: cdktf.listMapper(windowsVirtualMachineAdditionalUnattendContentToTerraform, true)(this._additionalUnattendContent.internalValue),
       boot_diagnostics: windowsVirtualMachineBootDiagnosticsToTerraform(this._bootDiagnostics.internalValue),
+      gallery_application: cdktf.listMapper(windowsVirtualMachineGalleryApplicationToTerraform, true)(this._galleryApplication.internalValue),
       identity: windowsVirtualMachineIdentityToTerraform(this._identity.internalValue),
       os_disk: windowsVirtualMachineOsDiskToTerraform(this._osDisk.internalValue),
       plan: windowsVirtualMachinePlanToTerraform(this._plan.internalValue),

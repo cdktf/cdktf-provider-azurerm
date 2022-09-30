@@ -135,7 +135,7 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_databricks_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -171,6 +171,11 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // location - computed: true, optional: false, required: false
+  public get location() {
+    return this.getStringAttribute('location');
   }
 
   // name - computed: false, optional: false, required: true

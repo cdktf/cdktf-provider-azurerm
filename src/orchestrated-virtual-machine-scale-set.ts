@@ -87,6 +87,10 @@ export interface OrchestratedVirtualMachineScaleSetConfig extends cdktf.Terrafor
   */
   readonly tags?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#user_data_base64 OrchestratedVirtualMachineScaleSet#user_data_base64}
+  */
+  readonly userDataBase64?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#zone_balance OrchestratedVirtualMachineScaleSet#zone_balance}
   */
   readonly zoneBalance?: boolean | cdktf.IResolvable;
@@ -4253,7 +4257,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_orchestrated_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -4283,6 +4287,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
     this._skuName = config.skuName;
     this._sourceImageId = config.sourceImageId;
     this._tags = config.tags;
+    this._userDataBase64 = config.userDataBase64;
     this._zoneBalance = config.zoneBalance;
     this._zones = config.zones;
     this._additionalCapabilities.internalValue = config.additionalCapabilities;
@@ -4601,6 +4606,22 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
     return this.getStringAttribute('unique_id');
   }
 
+  // user_data_base64 - computed: false, optional: true, required: false
+  private _userDataBase64?: string; 
+  public get userDataBase64() {
+    return this.getStringAttribute('user_data_base64');
+  }
+  public set userDataBase64(value: string) {
+    this._userDataBase64 = value;
+  }
+  public resetUserDataBase64() {
+    this._userDataBase64 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userDataBase64Input() {
+    return this._userDataBase64;
+  }
+
   // zone_balance - computed: false, optional: true, required: false
   private _zoneBalance?: boolean | cdktf.IResolvable; 
   public get zoneBalance() {
@@ -4866,6 +4887,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
       sku_name: cdktf.stringToTerraform(this._skuName),
       source_image_id: cdktf.stringToTerraform(this._sourceImageId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      user_data_base64: cdktf.stringToTerraform(this._userDataBase64),
       zone_balance: cdktf.booleanToTerraform(this._zoneBalance),
       zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
       additional_capabilities: orchestratedVirtualMachineScaleSetAdditionalCapabilitiesToTerraform(this._additionalCapabilities.internalValue),

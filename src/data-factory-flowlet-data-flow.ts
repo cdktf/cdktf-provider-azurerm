@@ -361,6 +361,95 @@ export class DataFactoryFlowletDataFlowSinkLinkedServiceOutputReference extends 
     return this._parameters;
   }
 }
+export interface DataFactoryFlowletDataFlowSinkRejectedLinkedService {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_flowlet_data_flow#name DataFactoryFlowletDataFlow#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_flowlet_data_flow#parameters DataFactoryFlowletDataFlow#parameters}
+  */
+  readonly parameters?: { [key: string]: string };
+}
+
+export function dataFactoryFlowletDataFlowSinkRejectedLinkedServiceToTerraform(struct?: DataFactoryFlowletDataFlowSinkRejectedLinkedServiceOutputReference | DataFactoryFlowletDataFlowSinkRejectedLinkedService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
+  }
+}
+
+export class DataFactoryFlowletDataFlowSinkRejectedLinkedServiceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataFactoryFlowletDataFlowSinkRejectedLinkedService | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryFlowletDataFlowSinkRejectedLinkedService | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._name = undefined;
+      this._parameters = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._name = value.name;
+      this._parameters = value.parameters;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: { [key: string]: string }; 
+  public get parameters() {
+    return this.getStringMapAttribute('parameters');
+  }
+  public set parameters(value: { [key: string]: string }) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+}
 export interface DataFactoryFlowletDataFlowSinkSchemaLinkedService {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_flowlet_data_flow#name DataFactoryFlowletDataFlow#name}
@@ -478,6 +567,12 @@ export interface DataFactoryFlowletDataFlowSink {
   */
   readonly linkedService?: DataFactoryFlowletDataFlowSinkLinkedService;
   /**
+  * rejected_linked_service block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_flowlet_data_flow#rejected_linked_service DataFactoryFlowletDataFlow#rejected_linked_service}
+  */
+  readonly rejectedLinkedService?: DataFactoryFlowletDataFlowSinkRejectedLinkedService;
+  /**
   * schema_linked_service block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_flowlet_data_flow#schema_linked_service DataFactoryFlowletDataFlow#schema_linked_service}
@@ -496,6 +591,7 @@ export function dataFactoryFlowletDataFlowSinkToTerraform(struct?: DataFactoryFl
     dataset: dataFactoryFlowletDataFlowSinkDatasetToTerraform(struct!.dataset),
     flowlet: dataFactoryFlowletDataFlowSinkFlowletToTerraform(struct!.flowlet),
     linked_service: dataFactoryFlowletDataFlowSinkLinkedServiceToTerraform(struct!.linkedService),
+    rejected_linked_service: dataFactoryFlowletDataFlowSinkRejectedLinkedServiceToTerraform(struct!.rejectedLinkedService),
     schema_linked_service: dataFactoryFlowletDataFlowSinkSchemaLinkedServiceToTerraform(struct!.schemaLinkedService),
   }
 }
@@ -540,6 +636,10 @@ export class DataFactoryFlowletDataFlowSinkOutputReference extends cdktf.Complex
       hasAnyValues = true;
       internalValueResult.linkedService = this._linkedService?.internalValue;
     }
+    if (this._rejectedLinkedService?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rejectedLinkedService = this._rejectedLinkedService?.internalValue;
+    }
     if (this._schemaLinkedService?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.schemaLinkedService = this._schemaLinkedService?.internalValue;
@@ -556,6 +656,7 @@ export class DataFactoryFlowletDataFlowSinkOutputReference extends cdktf.Complex
       this._dataset.internalValue = undefined;
       this._flowlet.internalValue = undefined;
       this._linkedService.internalValue = undefined;
+      this._rejectedLinkedService.internalValue = undefined;
       this._schemaLinkedService.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -570,6 +671,7 @@ export class DataFactoryFlowletDataFlowSinkOutputReference extends cdktf.Complex
       this._dataset.internalValue = value.dataset;
       this._flowlet.internalValue = value.flowlet;
       this._linkedService.internalValue = value.linkedService;
+      this._rejectedLinkedService.internalValue = value.rejectedLinkedService;
       this._schemaLinkedService.internalValue = value.schemaLinkedService;
     }
   }
@@ -649,6 +751,22 @@ export class DataFactoryFlowletDataFlowSinkOutputReference extends cdktf.Complex
   // Temporarily expose input value. Use with caution.
   public get linkedServiceInput() {
     return this._linkedService.internalValue;
+  }
+
+  // rejected_linked_service - computed: false, optional: true, required: false
+  private _rejectedLinkedService = new DataFactoryFlowletDataFlowSinkRejectedLinkedServiceOutputReference(this, "rejected_linked_service");
+  public get rejectedLinkedService() {
+    return this._rejectedLinkedService;
+  }
+  public putRejectedLinkedService(value: DataFactoryFlowletDataFlowSinkRejectedLinkedService) {
+    this._rejectedLinkedService.internalValue = value;
+  }
+  public resetRejectedLinkedService() {
+    this._rejectedLinkedService.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rejectedLinkedServiceInput() {
+    return this._rejectedLinkedService.internalValue;
   }
 
   // schema_linked_service - computed: false, optional: true, required: false
@@ -981,6 +1099,95 @@ export class DataFactoryFlowletDataFlowSourceLinkedServiceOutputReference extend
     return this._parameters;
   }
 }
+export interface DataFactoryFlowletDataFlowSourceRejectedLinkedService {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_flowlet_data_flow#name DataFactoryFlowletDataFlow#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_flowlet_data_flow#parameters DataFactoryFlowletDataFlow#parameters}
+  */
+  readonly parameters?: { [key: string]: string };
+}
+
+export function dataFactoryFlowletDataFlowSourceRejectedLinkedServiceToTerraform(struct?: DataFactoryFlowletDataFlowSourceRejectedLinkedServiceOutputReference | DataFactoryFlowletDataFlowSourceRejectedLinkedService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
+  }
+}
+
+export class DataFactoryFlowletDataFlowSourceRejectedLinkedServiceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataFactoryFlowletDataFlowSourceRejectedLinkedService | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryFlowletDataFlowSourceRejectedLinkedService | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._name = undefined;
+      this._parameters = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._name = value.name;
+      this._parameters = value.parameters;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: { [key: string]: string }; 
+  public get parameters() {
+    return this.getStringMapAttribute('parameters');
+  }
+  public set parameters(value: { [key: string]: string }) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+}
 export interface DataFactoryFlowletDataFlowSourceSchemaLinkedService {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_flowlet_data_flow#name DataFactoryFlowletDataFlow#name}
@@ -1098,6 +1305,12 @@ export interface DataFactoryFlowletDataFlowSource {
   */
   readonly linkedService?: DataFactoryFlowletDataFlowSourceLinkedService;
   /**
+  * rejected_linked_service block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_flowlet_data_flow#rejected_linked_service DataFactoryFlowletDataFlow#rejected_linked_service}
+  */
+  readonly rejectedLinkedService?: DataFactoryFlowletDataFlowSourceRejectedLinkedService;
+  /**
   * schema_linked_service block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_flowlet_data_flow#schema_linked_service DataFactoryFlowletDataFlow#schema_linked_service}
@@ -1116,6 +1329,7 @@ export function dataFactoryFlowletDataFlowSourceToTerraform(struct?: DataFactory
     dataset: dataFactoryFlowletDataFlowSourceDatasetToTerraform(struct!.dataset),
     flowlet: dataFactoryFlowletDataFlowSourceFlowletToTerraform(struct!.flowlet),
     linked_service: dataFactoryFlowletDataFlowSourceLinkedServiceToTerraform(struct!.linkedService),
+    rejected_linked_service: dataFactoryFlowletDataFlowSourceRejectedLinkedServiceToTerraform(struct!.rejectedLinkedService),
     schema_linked_service: dataFactoryFlowletDataFlowSourceSchemaLinkedServiceToTerraform(struct!.schemaLinkedService),
   }
 }
@@ -1160,6 +1374,10 @@ export class DataFactoryFlowletDataFlowSourceOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.linkedService = this._linkedService?.internalValue;
     }
+    if (this._rejectedLinkedService?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rejectedLinkedService = this._rejectedLinkedService?.internalValue;
+    }
     if (this._schemaLinkedService?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.schemaLinkedService = this._schemaLinkedService?.internalValue;
@@ -1176,6 +1394,7 @@ export class DataFactoryFlowletDataFlowSourceOutputReference extends cdktf.Compl
       this._dataset.internalValue = undefined;
       this._flowlet.internalValue = undefined;
       this._linkedService.internalValue = undefined;
+      this._rejectedLinkedService.internalValue = undefined;
       this._schemaLinkedService.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -1190,6 +1409,7 @@ export class DataFactoryFlowletDataFlowSourceOutputReference extends cdktf.Compl
       this._dataset.internalValue = value.dataset;
       this._flowlet.internalValue = value.flowlet;
       this._linkedService.internalValue = value.linkedService;
+      this._rejectedLinkedService.internalValue = value.rejectedLinkedService;
       this._schemaLinkedService.internalValue = value.schemaLinkedService;
     }
   }
@@ -1269,6 +1489,22 @@ export class DataFactoryFlowletDataFlowSourceOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get linkedServiceInput() {
     return this._linkedService.internalValue;
+  }
+
+  // rejected_linked_service - computed: false, optional: true, required: false
+  private _rejectedLinkedService = new DataFactoryFlowletDataFlowSourceRejectedLinkedServiceOutputReference(this, "rejected_linked_service");
+  public get rejectedLinkedService() {
+    return this._rejectedLinkedService;
+  }
+  public putRejectedLinkedService(value: DataFactoryFlowletDataFlowSourceRejectedLinkedService) {
+    this._rejectedLinkedService.internalValue = value;
+  }
+  public resetRejectedLinkedService() {
+    this._rejectedLinkedService.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rejectedLinkedServiceInput() {
+    return this._rejectedLinkedService.internalValue;
   }
 
   // schema_linked_service - computed: false, optional: true, required: false
@@ -1992,7 +2228,7 @@ export class DataFactoryFlowletDataFlow extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_flowlet_data_flow',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

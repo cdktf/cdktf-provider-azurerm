@@ -236,7 +236,7 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_live_event_output',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.24.0',
+        providerVersion: '3.25.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
