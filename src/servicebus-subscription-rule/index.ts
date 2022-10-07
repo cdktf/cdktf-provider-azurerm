@@ -511,7 +511,7 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_servicebus_subscription_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.25.0',
+        providerVersion: '3.26.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

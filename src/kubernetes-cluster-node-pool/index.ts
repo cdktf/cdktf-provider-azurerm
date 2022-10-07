@@ -59,6 +59,10 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   */
   readonly maxPods?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#message_of_the_day KubernetesClusterNodePool#message_of_the_day}
+  */
+  readonly messageOfTheDay?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#min_count KubernetesClusterNodePool#min_count}
   */
   readonly minCount?: number;
@@ -1697,7 +1701,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.25.0',
+        providerVersion: '3.26.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1720,6 +1724,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     this._kubernetesClusterId = config.kubernetesClusterId;
     this._maxCount = config.maxCount;
     this._maxPods = config.maxPods;
+    this._messageOfTheDay = config.messageOfTheDay;
     this._minCount = config.minCount;
     this._mode = config.mode;
     this._name = config.name;
@@ -1940,6 +1945,22 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get maxPodsInput() {
     return this._maxPods;
+  }
+
+  // message_of_the_day - computed: false, optional: true, required: false
+  private _messageOfTheDay?: string; 
+  public get messageOfTheDay() {
+    return this.getStringAttribute('message_of_the_day');
+  }
+  public set messageOfTheDay(value: string) {
+    this._messageOfTheDay = value;
+  }
+  public resetMessageOfTheDay() {
+    this._messageOfTheDay = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get messageOfTheDayInput() {
+    return this._messageOfTheDay;
   }
 
   // min_count - computed: false, optional: true, required: false
@@ -2386,6 +2407,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       kubernetes_cluster_id: cdktf.stringToTerraform(this._kubernetesClusterId),
       max_count: cdktf.numberToTerraform(this._maxCount),
       max_pods: cdktf.numberToTerraform(this._maxPods),
+      message_of_the_day: cdktf.stringToTerraform(this._messageOfTheDay),
       min_count: cdktf.numberToTerraform(this._minCount),
       mode: cdktf.stringToTerraform(this._mode),
       name: cdktf.stringToTerraform(this._name),

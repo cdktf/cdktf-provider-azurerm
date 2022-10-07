@@ -228,7 +228,7 @@ export class DatabaseMigrationService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_database_migration_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.25.0',
+        providerVersion: '3.26.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

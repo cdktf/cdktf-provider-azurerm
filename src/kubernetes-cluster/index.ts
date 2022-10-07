@@ -2558,6 +2558,10 @@ export interface KubernetesClusterDefaultNodePool {
   */
   readonly maxPods?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#message_of_the_day KubernetesCluster#message_of_the_day}
+  */
+  readonly messageOfTheDay?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#min_count KubernetesCluster#min_count}
   */
   readonly minCount?: number;
@@ -2610,6 +2614,10 @@ export interface KubernetesClusterDefaultNodePool {
   */
   readonly proximityPlacementGroupId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#scale_down_mode KubernetesCluster#scale_down_mode}
+  */
+  readonly scaleDownMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#tags KubernetesCluster#tags}
   */
   readonly tags?: { [key: string]: string };
@@ -2629,6 +2637,10 @@ export interface KubernetesClusterDefaultNodePool {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#vnet_subnet_id KubernetesCluster#vnet_subnet_id}
   */
   readonly vnetSubnetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#workload_runtime KubernetesCluster#workload_runtime}
+  */
+  readonly workloadRuntime?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#zones KubernetesCluster#zones}
   */
@@ -2668,6 +2680,7 @@ export function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesC
     kubelet_disk_type: cdktf.stringToTerraform(struct!.kubeletDiskType),
     max_count: cdktf.numberToTerraform(struct!.maxCount),
     max_pods: cdktf.numberToTerraform(struct!.maxPods),
+    message_of_the_day: cdktf.stringToTerraform(struct!.messageOfTheDay),
     min_count: cdktf.numberToTerraform(struct!.minCount),
     name: cdktf.stringToTerraform(struct!.name),
     node_count: cdktf.numberToTerraform(struct!.nodeCount),
@@ -2681,11 +2694,13 @@ export function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesC
     os_sku: cdktf.stringToTerraform(struct!.osSku),
     pod_subnet_id: cdktf.stringToTerraform(struct!.podSubnetId),
     proximity_placement_group_id: cdktf.stringToTerraform(struct!.proximityPlacementGroupId),
+    scale_down_mode: cdktf.stringToTerraform(struct!.scaleDownMode),
     tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.tags),
     type: cdktf.stringToTerraform(struct!.type),
     ultra_ssd_enabled: cdktf.booleanToTerraform(struct!.ultraSsdEnabled),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
     vnet_subnet_id: cdktf.stringToTerraform(struct!.vnetSubnetId),
+    workload_runtime: cdktf.stringToTerraform(struct!.workloadRuntime),
     zones: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.zones),
     kubelet_config: kubernetesClusterDefaultNodePoolKubeletConfigToTerraform(struct!.kubeletConfig),
     linux_os_config: kubernetesClusterDefaultNodePoolLinuxOsConfigToTerraform(struct!.linuxOsConfig),
@@ -2743,6 +2758,10 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.maxPods = this._maxPods;
     }
+    if (this._messageOfTheDay !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.messageOfTheDay = this._messageOfTheDay;
+    }
     if (this._minCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.minCount = this._minCount;
@@ -2795,6 +2814,10 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.proximityPlacementGroupId = this._proximityPlacementGroupId;
     }
+    if (this._scaleDownMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scaleDownMode = this._scaleDownMode;
+    }
     if (this._tags !== undefined) {
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
@@ -2814,6 +2837,10 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
     if (this._vnetSubnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.vnetSubnetId = this._vnetSubnetId;
+    }
+    if (this._workloadRuntime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.workloadRuntime = this._workloadRuntime;
     }
     if (this._zones !== undefined) {
       hasAnyValues = true;
@@ -2846,6 +2873,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       this._kubeletDiskType = undefined;
       this._maxCount = undefined;
       this._maxPods = undefined;
+      this._messageOfTheDay = undefined;
       this._minCount = undefined;
       this._name = undefined;
       this._nodeCount = undefined;
@@ -2859,11 +2887,13 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       this._osSku = undefined;
       this._podSubnetId = undefined;
       this._proximityPlacementGroupId = undefined;
+      this._scaleDownMode = undefined;
       this._tags = undefined;
       this._type = undefined;
       this._ultraSsdEnabled = undefined;
       this._vmSize = undefined;
       this._vnetSubnetId = undefined;
+      this._workloadRuntime = undefined;
       this._zones = undefined;
       this._kubeletConfig.internalValue = undefined;
       this._linuxOsConfig.internalValue = undefined;
@@ -2880,6 +2910,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       this._kubeletDiskType = value.kubeletDiskType;
       this._maxCount = value.maxCount;
       this._maxPods = value.maxPods;
+      this._messageOfTheDay = value.messageOfTheDay;
       this._minCount = value.minCount;
       this._name = value.name;
       this._nodeCount = value.nodeCount;
@@ -2893,11 +2924,13 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       this._osSku = value.osSku;
       this._podSubnetId = value.podSubnetId;
       this._proximityPlacementGroupId = value.proximityPlacementGroupId;
+      this._scaleDownMode = value.scaleDownMode;
       this._tags = value.tags;
       this._type = value.type;
       this._ultraSsdEnabled = value.ultraSsdEnabled;
       this._vmSize = value.vmSize;
       this._vnetSubnetId = value.vnetSubnetId;
+      this._workloadRuntime = value.workloadRuntime;
       this._zones = value.zones;
       this._kubeletConfig.internalValue = value.kubeletConfig;
       this._linuxOsConfig.internalValue = value.linuxOsConfig;
@@ -3047,6 +3080,22 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get maxPodsInput() {
     return this._maxPods;
+  }
+
+  // message_of_the_day - computed: false, optional: true, required: false
+  private _messageOfTheDay?: string; 
+  public get messageOfTheDay() {
+    return this.getStringAttribute('message_of_the_day');
+  }
+  public set messageOfTheDay(value: string) {
+    this._messageOfTheDay = value;
+  }
+  public resetMessageOfTheDay() {
+    this._messageOfTheDay = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get messageOfTheDayInput() {
+    return this._messageOfTheDay;
   }
 
   // min_count - computed: false, optional: true, required: false
@@ -3254,6 +3303,22 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
     return this._proximityPlacementGroupId;
   }
 
+  // scale_down_mode - computed: false, optional: true, required: false
+  private _scaleDownMode?: string; 
+  public get scaleDownMode() {
+    return this.getStringAttribute('scale_down_mode');
+  }
+  public set scaleDownMode(value: string) {
+    this._scaleDownMode = value;
+  }
+  public resetScaleDownMode() {
+    this._scaleDownMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scaleDownModeInput() {
+    return this._scaleDownMode;
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string }; 
   public get tags() {
@@ -3329,6 +3394,22 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get vnetSubnetIdInput() {
     return this._vnetSubnetId;
+  }
+
+  // workload_runtime - computed: true, optional: true, required: false
+  private _workloadRuntime?: string; 
+  public get workloadRuntime() {
+    return this.getStringAttribute('workload_runtime');
+  }
+  public set workloadRuntime(value: string) {
+    this._workloadRuntime = value;
+  }
+  public resetWorkloadRuntime() {
+    this._workloadRuntime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workloadRuntimeInput() {
+    return this._workloadRuntime;
   }
 
   // zones - computed: false, optional: true, required: false
@@ -4716,6 +4797,10 @@ export interface KubernetesClusterNetworkProfileLoadBalancerProfile {
   */
   readonly managedOutboundIpCount?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#managed_outbound_ipv6_count KubernetesCluster#managed_outbound_ipv6_count}
+  */
+  readonly managedOutboundIpv6Count?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#outbound_ip_address_ids KubernetesCluster#outbound_ip_address_ids}
   */
   readonly outboundIpAddressIds?: string[];
@@ -4737,6 +4822,7 @@ export function kubernetesClusterNetworkProfileLoadBalancerProfileToTerraform(st
   return {
     idle_timeout_in_minutes: cdktf.numberToTerraform(struct!.idleTimeoutInMinutes),
     managed_outbound_ip_count: cdktf.numberToTerraform(struct!.managedOutboundIpCount),
+    managed_outbound_ipv6_count: cdktf.numberToTerraform(struct!.managedOutboundIpv6Count),
     outbound_ip_address_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.outboundIpAddressIds),
     outbound_ip_prefix_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.outboundIpPrefixIds),
     outbound_ports_allocated: cdktf.numberToTerraform(struct!.outboundPortsAllocated),
@@ -4765,6 +4851,10 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
       hasAnyValues = true;
       internalValueResult.managedOutboundIpCount = this._managedOutboundIpCount;
     }
+    if (this._managedOutboundIpv6Count !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.managedOutboundIpv6Count = this._managedOutboundIpv6Count;
+    }
     if (this._outboundIpAddressIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.outboundIpAddressIds = this._outboundIpAddressIds;
@@ -4785,6 +4875,7 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
       this.isEmptyObject = false;
       this._idleTimeoutInMinutes = undefined;
       this._managedOutboundIpCount = undefined;
+      this._managedOutboundIpv6Count = undefined;
       this._outboundIpAddressIds = undefined;
       this._outboundIpPrefixIds = undefined;
       this._outboundPortsAllocated = undefined;
@@ -4793,6 +4884,7 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
       this.isEmptyObject = Object.keys(value).length === 0;
       this._idleTimeoutInMinutes = value.idleTimeoutInMinutes;
       this._managedOutboundIpCount = value.managedOutboundIpCount;
+      this._managedOutboundIpv6Count = value.managedOutboundIpv6Count;
       this._outboundIpAddressIds = value.outboundIpAddressIds;
       this._outboundIpPrefixIds = value.outboundIpPrefixIds;
       this._outboundPortsAllocated = value.outboundPortsAllocated;
@@ -4834,6 +4926,22 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
   // Temporarily expose input value. Use with caution.
   public get managedOutboundIpCountInput() {
     return this._managedOutboundIpCount;
+  }
+
+  // managed_outbound_ipv6_count - computed: true, optional: true, required: false
+  private _managedOutboundIpv6Count?: number; 
+  public get managedOutboundIpv6Count() {
+    return this.getNumberAttribute('managed_outbound_ipv6_count');
+  }
+  public set managedOutboundIpv6Count(value: number) {
+    this._managedOutboundIpv6Count = value;
+  }
+  public resetManagedOutboundIpv6Count() {
+    this._managedOutboundIpv6Count = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedOutboundIpv6CountInput() {
+    return this._managedOutboundIpv6Count;
   }
 
   // outbound_ip_address_ids - computed: true, optional: true, required: false
@@ -5019,9 +5127,17 @@ export interface KubernetesClusterNetworkProfile {
   */
   readonly podCidr?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#pod_cidrs KubernetesCluster#pod_cidrs}
+  */
+  readonly podCidrs?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#service_cidr KubernetesCluster#service_cidr}
   */
   readonly serviceCidr?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#service_cidrs KubernetesCluster#service_cidrs}
+  */
+  readonly serviceCidrs?: string[];
   /**
   * load_balancer_profile block
   * 
@@ -5051,7 +5167,9 @@ export function kubernetesClusterNetworkProfileToTerraform(struct?: KubernetesCl
     network_policy: cdktf.stringToTerraform(struct!.networkPolicy),
     outbound_type: cdktf.stringToTerraform(struct!.outboundType),
     pod_cidr: cdktf.stringToTerraform(struct!.podCidr),
+    pod_cidrs: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.podCidrs),
     service_cidr: cdktf.stringToTerraform(struct!.serviceCidr),
+    service_cidrs: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.serviceCidrs),
     load_balancer_profile: kubernetesClusterNetworkProfileLoadBalancerProfileToTerraform(struct!.loadBalancerProfile),
     nat_gateway_profile: kubernetesClusterNetworkProfileNatGatewayProfileToTerraform(struct!.natGatewayProfile),
   }
@@ -5107,9 +5225,17 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.podCidr = this._podCidr;
     }
+    if (this._podCidrs !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.podCidrs = this._podCidrs;
+    }
     if (this._serviceCidr !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceCidr = this._serviceCidr;
+    }
+    if (this._serviceCidrs !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceCidrs = this._serviceCidrs;
     }
     if (this._loadBalancerProfile?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -5134,7 +5260,9 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
       this._networkPolicy = undefined;
       this._outboundType = undefined;
       this._podCidr = undefined;
+      this._podCidrs = undefined;
       this._serviceCidr = undefined;
+      this._serviceCidrs = undefined;
       this._loadBalancerProfile.internalValue = undefined;
       this._natGatewayProfile.internalValue = undefined;
     }
@@ -5149,7 +5277,9 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
       this._networkPolicy = value.networkPolicy;
       this._outboundType = value.outboundType;
       this._podCidr = value.podCidr;
+      this._podCidrs = value.podCidrs;
       this._serviceCidr = value.serviceCidr;
+      this._serviceCidrs = value.serviceCidrs;
       this._loadBalancerProfile.internalValue = value.loadBalancerProfile;
       this._natGatewayProfile.internalValue = value.natGatewayProfile;
     }
@@ -5296,6 +5426,22 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
     return this._podCidr;
   }
 
+  // pod_cidrs - computed: true, optional: true, required: false
+  private _podCidrs?: string[]; 
+  public get podCidrs() {
+    return this.getListAttribute('pod_cidrs');
+  }
+  public set podCidrs(value: string[]) {
+    this._podCidrs = value;
+  }
+  public resetPodCidrs() {
+    this._podCidrs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get podCidrsInput() {
+    return this._podCidrs;
+  }
+
   // service_cidr - computed: true, optional: true, required: false
   private _serviceCidr?: string; 
   public get serviceCidr() {
@@ -5310,6 +5456,22 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get serviceCidrInput() {
     return this._serviceCidr;
+  }
+
+  // service_cidrs - computed: true, optional: true, required: false
+  private _serviceCidrs?: string[]; 
+  public get serviceCidrs() {
+    return this.getListAttribute('service_cidrs');
+  }
+  public set serviceCidrs(value: string[]) {
+    this._serviceCidrs = value;
+  }
+  public resetServiceCidrs() {
+    this._serviceCidrs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceCidrsInput() {
+    return this._serviceCidrs;
   }
 
   // load_balancer_profile - computed: false, optional: true, required: false
@@ -5986,7 +6148,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.25.0',
+        providerVersion: '3.26.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

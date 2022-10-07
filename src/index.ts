@@ -360,6 +360,7 @@ export * as iotTimeSeriesInsightsGen2Environment from './iot-time-series-insight
 export * as iotTimeSeriesInsightsReferenceDataSet from './iot-time-series-insights-reference-data-set';
 export * as iotTimeSeriesInsightsStandardEnvironment from './iot-time-series-insights-standard-environment';
 export * as iotcentralApplication from './iotcentral-application';
+export * as iotcentralApplicationNetworkRuleSet from './iotcentral-application-network-rule-set';
 export * as iothub from './iothub';
 export * as iothubCertificate from './iothub-certificate';
 export * as iothubConsumerGroup from './iothub-consumer-group';

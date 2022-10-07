@@ -469,7 +469,7 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_aad_diagnostic_setting',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.25.0',
+        providerVersion: '3.26.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
