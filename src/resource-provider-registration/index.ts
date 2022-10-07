@@ -332,7 +332,7 @@ export class ResourceProviderRegistration extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_resource_provider_registration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.25.0',
+        providerVersion: '3.26.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

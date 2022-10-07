@@ -239,7 +239,7 @@ export interface SnapshotEncryptionSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#enabled Snapshot#enabled}
   */
-  readonly enabled: boolean | cdktf.IResolvable;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * disk_encryption_key block
   * 
@@ -310,13 +310,16 @@ export class SnapshotEncryptionSettingsOutputReference extends cdktf.ComplexObje
     }
   }
 
-  // enabled - computed: false, optional: false, required: true
+  // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
@@ -538,7 +541,7 @@ export class Snapshot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_snapshot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.25.0',
+        providerVersion: '3.26.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
