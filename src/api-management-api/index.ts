@@ -71,6 +71,10 @@ export interface ApiManagementApiConfig extends cdktf.TerraformMetaArguments {
   */
   readonly subscriptionRequired?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api#terms_of_service_url ApiManagementApi#terms_of_service_url}
+  */
+  readonly termsOfServiceUrl?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api#version ApiManagementApi#version}
   */
   readonly version?: string;
@@ -83,11 +87,23 @@ export interface ApiManagementApiConfig extends cdktf.TerraformMetaArguments {
   */
   readonly versionSetId?: string;
   /**
+  * contact block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api#contact ApiManagementApi#contact}
+  */
+  readonly contact?: ApiManagementApiContact;
+  /**
   * import block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api#import ApiManagementApi#import}
   */
   readonly import?: ApiManagementApiImport;
+  /**
+  * license block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api#license ApiManagementApi#license}
+  */
+  readonly license?: ApiManagementApiLicense;
   /**
   * oauth2_authorization block
   * 
@@ -112,6 +128,125 @@ export interface ApiManagementApiConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api#timeouts ApiManagementApi#timeouts}
   */
   readonly timeouts?: ApiManagementApiTimeouts;
+}
+export interface ApiManagementApiContact {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api#email ApiManagementApi#email}
+  */
+  readonly email?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api#name ApiManagementApi#name}
+  */
+  readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api#url ApiManagementApi#url}
+  */
+  readonly url?: string;
+}
+
+export function apiManagementApiContactToTerraform(struct?: ApiManagementApiContactOutputReference | ApiManagementApiContact): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    email: cdktf.stringToTerraform(struct!.email),
+    name: cdktf.stringToTerraform(struct!.name),
+    url: cdktf.stringToTerraform(struct!.url),
+  }
+}
+
+export class ApiManagementApiContactOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ApiManagementApiContact | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._email !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.email = this._email;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._url !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.url = this._url;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiContact | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._email = undefined;
+      this._name = undefined;
+      this._url = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._email = value.email;
+      this._name = value.name;
+      this._url = value.url;
+    }
+  }
+
+  // email - computed: false, optional: true, required: false
+  private _email?: string; 
+  public get email() {
+    return this.getStringAttribute('email');
+  }
+  public set email(value: string) {
+    this._email = value;
+  }
+  public resetEmail() {
+    this._email = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailInput() {
+    return this._email;
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // url - computed: false, optional: true, required: false
+  private _url?: string; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string) {
+    this._url = value;
+  }
+  public resetUrl() {
+    this._url = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url;
+  }
 }
 export interface ApiManagementApiImportWsdlSelector {
   /**
@@ -312,6 +447,98 @@ export class ApiManagementApiImportOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get wsdlSelectorInput() {
     return this._wsdlSelector.internalValue;
+  }
+}
+export interface ApiManagementApiLicense {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api#name ApiManagementApi#name}
+  */
+  readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api#url ApiManagementApi#url}
+  */
+  readonly url?: string;
+}
+
+export function apiManagementApiLicenseToTerraform(struct?: ApiManagementApiLicenseOutputReference | ApiManagementApiLicense): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    url: cdktf.stringToTerraform(struct!.url),
+  }
+}
+
+export class ApiManagementApiLicenseOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ApiManagementApiLicense | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._url !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.url = this._url;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiLicense | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._name = undefined;
+      this._url = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._name = value.name;
+      this._url = value.url;
+    }
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // url - computed: false, optional: true, required: false
+  private _url?: string; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string) {
+    this._url = value;
+  }
+  public resetUrl() {
+    this._url = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url;
   }
 }
 export interface ApiManagementApiOauth2Authorization {
@@ -761,7 +988,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_api',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -787,10 +1014,13 @@ export class ApiManagementApi extends cdktf.TerraformResource {
     this._soapPassThrough = config.soapPassThrough;
     this._sourceApiId = config.sourceApiId;
     this._subscriptionRequired = config.subscriptionRequired;
+    this._termsOfServiceUrl = config.termsOfServiceUrl;
     this._version = config.version;
     this._versionDescription = config.versionDescription;
     this._versionSetId = config.versionSetId;
+    this._contact.internalValue = config.contact;
     this._import.internalValue = config.import;
+    this._license.internalValue = config.license;
     this._oauth2Authorization.internalValue = config.oauth2Authorization;
     this._openidAuthentication.internalValue = config.openidAuthentication;
     this._subscriptionKeyParameterNames.internalValue = config.subscriptionKeyParameterNames;
@@ -1039,6 +1269,22 @@ export class ApiManagementApi extends cdktf.TerraformResource {
     return this._subscriptionRequired;
   }
 
+  // terms_of_service_url - computed: false, optional: true, required: false
+  private _termsOfServiceUrl?: string; 
+  public get termsOfServiceUrl() {
+    return this.getStringAttribute('terms_of_service_url');
+  }
+  public set termsOfServiceUrl(value: string) {
+    this._termsOfServiceUrl = value;
+  }
+  public resetTermsOfServiceUrl() {
+    this._termsOfServiceUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get termsOfServiceUrlInput() {
+    return this._termsOfServiceUrl;
+  }
+
   // version - computed: true, optional: true, required: false
   private _version?: string; 
   public get version() {
@@ -1087,6 +1333,22 @@ export class ApiManagementApi extends cdktf.TerraformResource {
     return this._versionSetId;
   }
 
+  // contact - computed: false, optional: true, required: false
+  private _contact = new ApiManagementApiContactOutputReference(this, "contact");
+  public get contact() {
+    return this._contact;
+  }
+  public putContact(value: ApiManagementApiContact) {
+    this._contact.internalValue = value;
+  }
+  public resetContact() {
+    this._contact.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contactInput() {
+    return this._contact.internalValue;
+  }
+
   // import - computed: false, optional: true, required: false
   private _import = new ApiManagementApiImportOutputReference(this, "import");
   public get import() {
@@ -1101,6 +1363,22 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get importInput() {
     return this._import.internalValue;
+  }
+
+  // license - computed: false, optional: true, required: false
+  private _license = new ApiManagementApiLicenseOutputReference(this, "license");
+  public get license() {
+    return this._license;
+  }
+  public putLicense(value: ApiManagementApiLicense) {
+    this._license.internalValue = value;
+  }
+  public resetLicense() {
+    this._license.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get licenseInput() {
+    return this._license.internalValue;
   }
 
   // oauth2_authorization - computed: false, optional: true, required: false
@@ -1188,10 +1466,13 @@ export class ApiManagementApi extends cdktf.TerraformResource {
       soap_pass_through: cdktf.booleanToTerraform(this._soapPassThrough),
       source_api_id: cdktf.stringToTerraform(this._sourceApiId),
       subscription_required: cdktf.booleanToTerraform(this._subscriptionRequired),
+      terms_of_service_url: cdktf.stringToTerraform(this._termsOfServiceUrl),
       version: cdktf.stringToTerraform(this._version),
       version_description: cdktf.stringToTerraform(this._versionDescription),
       version_set_id: cdktf.stringToTerraform(this._versionSetId),
+      contact: apiManagementApiContactToTerraform(this._contact.internalValue),
       import: apiManagementApiImportToTerraform(this._import.internalValue),
+      license: apiManagementApiLicenseToTerraform(this._license.internalValue),
       oauth2_authorization: apiManagementApiOauth2AuthorizationToTerraform(this._oauth2Authorization.internalValue),
       openid_authentication: apiManagementApiOpenidAuthenticationToTerraform(this._openidAuthentication.internalValue),
       subscription_key_parameter_names: apiManagementApiSubscriptionKeyParameterNamesToTerraform(this._subscriptionKeyParameterNames.internalValue),

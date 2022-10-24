@@ -2928,7 +2928,7 @@ export class DataAzurermLinuxWebApp extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_linux_web_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -2981,6 +2981,11 @@ export class DataAzurermLinuxWebApp extends cdktf.TerraformDataSource {
   // client_certificate_enabled - computed: true, optional: false, required: false
   public get clientCertificateEnabled() {
     return this.getBooleanAttribute('client_certificate_enabled');
+  }
+
+  // client_certificate_exclusion_paths - computed: true, optional: false, required: false
+  public get clientCertificateExclusionPaths() {
+    return this.getStringAttribute('client_certificate_exclusion_paths');
   }
 
   // client_certificate_mode - computed: true, optional: false, required: false

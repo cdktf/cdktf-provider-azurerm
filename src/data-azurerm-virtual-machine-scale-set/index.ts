@@ -351,6 +351,11 @@ export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPub
   public get publicIpPrefixId() {
     return this.getStringAttribute('public_ip_prefix_id');
   }
+
+  // version - computed: true, optional: false, required: false
+  public get version() {
+    return this.getStringAttribute('version');
+  }
 }
 
 export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressList extends cdktf.ComplexList {
@@ -673,7 +678,7 @@ export class DataAzurermVirtualMachineScaleSet extends cdktf.TerraformDataSource
       terraformResourceType: 'azurerm_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

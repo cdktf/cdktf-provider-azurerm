@@ -15,6 +15,10 @@ export interface AppConfigurationConfig extends cdktf.TerraformMetaArguments {
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration#local_auth_enabled AppConfiguration#local_auth_enabled}
+  */
+  readonly localAuthEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration#location AppConfiguration#location}
   */
   readonly location: string;
@@ -27,6 +31,10 @@ export interface AppConfigurationConfig extends cdktf.TerraformMetaArguments {
   */
   readonly publicNetworkAccess?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration#purge_protection_enabled AppConfiguration#purge_protection_enabled}
+  */
+  readonly purgeProtectionEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration#resource_group_name AppConfiguration#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -35,9 +43,19 @@ export interface AppConfigurationConfig extends cdktf.TerraformMetaArguments {
   */
   readonly sku?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration#soft_delete_retention_days AppConfiguration#soft_delete_retention_days}
+  */
+  readonly softDeleteRetentionDays?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration#tags AppConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
+  /**
+  * encryption block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration#encryption AppConfiguration#encryption}
+  */
+  readonly encryption?: AppConfigurationEncryption;
   /**
   * identity block
   * 
@@ -347,6 +365,98 @@ export class AppConfigurationSecondaryWriteKeyList extends cdktf.ComplexList {
     return new AppConfigurationSecondaryWriteKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface AppConfigurationEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration#identity_client_id AppConfiguration#identity_client_id}
+  */
+  readonly identityClientId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration#key_vault_key_identifier AppConfiguration#key_vault_key_identifier}
+  */
+  readonly keyVaultKeyIdentifier?: string;
+}
+
+export function appConfigurationEncryptionToTerraform(struct?: AppConfigurationEncryptionOutputReference | AppConfigurationEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_client_id: cdktf.stringToTerraform(struct!.identityClientId),
+    key_vault_key_identifier: cdktf.stringToTerraform(struct!.keyVaultKeyIdentifier),
+  }
+}
+
+export class AppConfigurationEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AppConfigurationEncryption | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityClientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityClientId = this._identityClientId;
+    }
+    if (this._keyVaultKeyIdentifier !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultKeyIdentifier = this._keyVaultKeyIdentifier;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppConfigurationEncryption | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityClientId = undefined;
+      this._keyVaultKeyIdentifier = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityClientId = value.identityClientId;
+      this._keyVaultKeyIdentifier = value.keyVaultKeyIdentifier;
+    }
+  }
+
+  // identity_client_id - computed: false, optional: true, required: false
+  private _identityClientId?: string; 
+  public get identityClientId() {
+    return this.getStringAttribute('identity_client_id');
+  }
+  public set identityClientId(value: string) {
+    this._identityClientId = value;
+  }
+  public resetIdentityClientId() {
+    this._identityClientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityClientIdInput() {
+    return this._identityClientId;
+  }
+
+  // key_vault_key_identifier - computed: false, optional: true, required: false
+  private _keyVaultKeyIdentifier?: string; 
+  public get keyVaultKeyIdentifier() {
+    return this.getStringAttribute('key_vault_key_identifier');
+  }
+  public set keyVaultKeyIdentifier(value: string) {
+    this._keyVaultKeyIdentifier = value;
+  }
+  public resetKeyVaultKeyIdentifier() {
+    this._keyVaultKeyIdentifier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyIdentifierInput() {
+    return this._keyVaultKeyIdentifier;
+  }
+}
 export interface AppConfigurationIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration#identity_ids AppConfiguration#identity_ids}
@@ -629,7 +739,7 @@ export class AppConfiguration extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -641,12 +751,16 @@ export class AppConfiguration extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._id = config.id;
+    this._localAuthEnabled = config.localAuthEnabled;
     this._location = config.location;
     this._name = config.name;
     this._publicNetworkAccess = config.publicNetworkAccess;
+    this._purgeProtectionEnabled = config.purgeProtectionEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
+    this._softDeleteRetentionDays = config.softDeleteRetentionDays;
     this._tags = config.tags;
+    this._encryption.internalValue = config.encryption;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -674,6 +788,22 @@ export class AppConfiguration extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // local_auth_enabled - computed: false, optional: true, required: false
+  private _localAuthEnabled?: boolean | cdktf.IResolvable; 
+  public get localAuthEnabled() {
+    return this.getBooleanAttribute('local_auth_enabled');
+  }
+  public set localAuthEnabled(value: boolean | cdktf.IResolvable) {
+    this._localAuthEnabled = value;
+  }
+  public resetLocalAuthEnabled() {
+    this._localAuthEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAuthEnabledInput() {
+    return this._localAuthEnabled;
   }
 
   // location - computed: false, optional: false, required: true
@@ -730,6 +860,22 @@ export class AppConfiguration extends cdktf.TerraformResource {
     return this._publicNetworkAccess;
   }
 
+  // purge_protection_enabled - computed: false, optional: true, required: false
+  private _purgeProtectionEnabled?: boolean | cdktf.IResolvable; 
+  public get purgeProtectionEnabled() {
+    return this.getBooleanAttribute('purge_protection_enabled');
+  }
+  public set purgeProtectionEnabled(value: boolean | cdktf.IResolvable) {
+    this._purgeProtectionEnabled = value;
+  }
+  public resetPurgeProtectionEnabled() {
+    this._purgeProtectionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get purgeProtectionEnabledInput() {
+    return this._purgeProtectionEnabled;
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
@@ -771,6 +917,22 @@ export class AppConfiguration extends cdktf.TerraformResource {
     return this._sku;
   }
 
+  // soft_delete_retention_days - computed: false, optional: true, required: false
+  private _softDeleteRetentionDays?: number; 
+  public get softDeleteRetentionDays() {
+    return this.getNumberAttribute('soft_delete_retention_days');
+  }
+  public set softDeleteRetentionDays(value: number) {
+    this._softDeleteRetentionDays = value;
+  }
+  public resetSoftDeleteRetentionDays() {
+    this._softDeleteRetentionDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get softDeleteRetentionDaysInput() {
+    return this._softDeleteRetentionDays;
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string }; 
   public get tags() {
@@ -785,6 +947,22 @@ export class AppConfiguration extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
     return this._tags;
+  }
+
+  // encryption - computed: false, optional: true, required: false
+  private _encryption = new AppConfigurationEncryptionOutputReference(this, "encryption");
+  public get encryption() {
+    return this._encryption;
+  }
+  public putEncryption(value: AppConfigurationEncryption) {
+    this._encryption.internalValue = value;
+  }
+  public resetEncryption() {
+    this._encryption.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionInput() {
+    return this._encryption.internalValue;
   }
 
   // identity - computed: false, optional: true, required: false
@@ -826,12 +1004,16 @@ export class AppConfiguration extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
+      local_auth_enabled: cdktf.booleanToTerraform(this._localAuthEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       public_network_access: cdktf.stringToTerraform(this._publicNetworkAccess),
+      purge_protection_enabled: cdktf.booleanToTerraform(this._purgeProtectionEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
+      soft_delete_retention_days: cdktf.numberToTerraform(this._softDeleteRetentionDays),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      encryption: appConfigurationEncryptionToTerraform(this._encryption.internalValue),
       identity: appConfigurationIdentityToTerraform(this._identity.internalValue),
       timeouts: appConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
     };

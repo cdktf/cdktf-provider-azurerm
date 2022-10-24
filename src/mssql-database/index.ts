@@ -111,6 +111,12 @@ export interface MssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   */
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
+  * import block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#import MssqlDatabase#import}
+  */
+  readonly import?: MssqlDatabaseImport;
+  /**
   * long_term_retention_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#long_term_retention_policy MssqlDatabase#long_term_retention_policy}
@@ -134,6 +140,215 @@ export interface MssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#timeouts MssqlDatabase#timeouts}
   */
   readonly timeouts?: MssqlDatabaseTimeouts;
+}
+export interface MssqlDatabaseImport {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#administrator_login MssqlDatabase#administrator_login}
+  */
+  readonly administratorLogin: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#administrator_login_password MssqlDatabase#administrator_login_password}
+  */
+  readonly administratorLoginPassword: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#authentication_type MssqlDatabase#authentication_type}
+  */
+  readonly authenticationType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#storage_account_id MssqlDatabase#storage_account_id}
+  */
+  readonly storageAccountId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#storage_key MssqlDatabase#storage_key}
+  */
+  readonly storageKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#storage_key_type MssqlDatabase#storage_key_type}
+  */
+  readonly storageKeyType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#storage_uri MssqlDatabase#storage_uri}
+  */
+  readonly storageUri: string;
+}
+
+export function mssqlDatabaseImportToTerraform(struct?: MssqlDatabaseImportOutputReference | MssqlDatabaseImport): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    administrator_login: cdktf.stringToTerraform(struct!.administratorLogin),
+    administrator_login_password: cdktf.stringToTerraform(struct!.administratorLoginPassword),
+    authentication_type: cdktf.stringToTerraform(struct!.authenticationType),
+    storage_account_id: cdktf.stringToTerraform(struct!.storageAccountId),
+    storage_key: cdktf.stringToTerraform(struct!.storageKey),
+    storage_key_type: cdktf.stringToTerraform(struct!.storageKeyType),
+    storage_uri: cdktf.stringToTerraform(struct!.storageUri),
+  }
+}
+
+export class MssqlDatabaseImportOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MssqlDatabaseImport | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._administratorLogin !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.administratorLogin = this._administratorLogin;
+    }
+    if (this._administratorLoginPassword !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.administratorLoginPassword = this._administratorLoginPassword;
+    }
+    if (this._authenticationType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authenticationType = this._authenticationType;
+    }
+    if (this._storageAccountId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountId = this._storageAccountId;
+    }
+    if (this._storageKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageKey = this._storageKey;
+    }
+    if (this._storageKeyType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageKeyType = this._storageKeyType;
+    }
+    if (this._storageUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageUri = this._storageUri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlDatabaseImport | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._administratorLogin = undefined;
+      this._administratorLoginPassword = undefined;
+      this._authenticationType = undefined;
+      this._storageAccountId = undefined;
+      this._storageKey = undefined;
+      this._storageKeyType = undefined;
+      this._storageUri = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._administratorLogin = value.administratorLogin;
+      this._administratorLoginPassword = value.administratorLoginPassword;
+      this._authenticationType = value.authenticationType;
+      this._storageAccountId = value.storageAccountId;
+      this._storageKey = value.storageKey;
+      this._storageKeyType = value.storageKeyType;
+      this._storageUri = value.storageUri;
+    }
+  }
+
+  // administrator_login - computed: false, optional: false, required: true
+  private _administratorLogin?: string; 
+  public get administratorLogin() {
+    return this.getStringAttribute('administrator_login');
+  }
+  public set administratorLogin(value: string) {
+    this._administratorLogin = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get administratorLoginInput() {
+    return this._administratorLogin;
+  }
+
+  // administrator_login_password - computed: false, optional: false, required: true
+  private _administratorLoginPassword?: string; 
+  public get administratorLoginPassword() {
+    return this.getStringAttribute('administrator_login_password');
+  }
+  public set administratorLoginPassword(value: string) {
+    this._administratorLoginPassword = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get administratorLoginPasswordInput() {
+    return this._administratorLoginPassword;
+  }
+
+  // authentication_type - computed: false, optional: false, required: true
+  private _authenticationType?: string; 
+  public get authenticationType() {
+    return this.getStringAttribute('authentication_type');
+  }
+  public set authenticationType(value: string) {
+    this._authenticationType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationTypeInput() {
+    return this._authenticationType;
+  }
+
+  // storage_account_id - computed: false, optional: true, required: false
+  private _storageAccountId?: string; 
+  public get storageAccountId() {
+    return this.getStringAttribute('storage_account_id');
+  }
+  public set storageAccountId(value: string) {
+    this._storageAccountId = value;
+  }
+  public resetStorageAccountId() {
+    this._storageAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountIdInput() {
+    return this._storageAccountId;
+  }
+
+  // storage_key - computed: false, optional: false, required: true
+  private _storageKey?: string; 
+  public get storageKey() {
+    return this.getStringAttribute('storage_key');
+  }
+  public set storageKey(value: string) {
+    this._storageKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageKeyInput() {
+    return this._storageKey;
+  }
+
+  // storage_key_type - computed: false, optional: false, required: true
+  private _storageKeyType?: string; 
+  public get storageKeyType() {
+    return this.getStringAttribute('storage_key_type');
+  }
+  public set storageKeyType(value: string) {
+    this._storageKeyType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageKeyTypeInput() {
+    return this._storageKeyType;
+  }
+
+  // storage_uri - computed: false, optional: false, required: true
+  private _storageUri?: string; 
+  public get storageUri() {
+    return this.getStringAttribute('storage_uri');
+  }
+  public set storageUri(value: string) {
+    this._storageUri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageUriInput() {
+    return this._storageUri;
+  }
 }
 export interface MssqlDatabaseLongTermRetentionPolicy {
   /**
@@ -780,7 +995,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -816,6 +1031,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._transparentDataEncryptionEnabled = config.transparentDataEncryptionEnabled;
     this._zoneRedundant = config.zoneRedundant;
+    this._import.internalValue = config.import;
     this._longTermRetentionPolicy.internalValue = config.longTermRetentionPolicy;
     this._shortTermRetentionPolicy.internalValue = config.shortTermRetentionPolicy;
     this._threatDetectionPolicy.internalValue = config.threatDetectionPolicy;
@@ -1220,6 +1436,22 @@ export class MssqlDatabase extends cdktf.TerraformResource {
     return this._zoneRedundant;
   }
 
+  // import - computed: false, optional: true, required: false
+  private _import = new MssqlDatabaseImportOutputReference(this, "import");
+  public get import() {
+    return this._import;
+  }
+  public putImport(value: MssqlDatabaseImport) {
+    this._import.internalValue = value;
+  }
+  public resetImport() {
+    this._import.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get importInput() {
+    return this._import.internalValue;
+  }
+
   // long_term_retention_policy - computed: false, optional: true, required: false
   private _longTermRetentionPolicy = new MssqlDatabaseLongTermRetentionPolicyOutputReference(this, "long_term_retention_policy");
   public get longTermRetentionPolicy() {
@@ -1315,6 +1547,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       transparent_data_encryption_enabled: cdktf.booleanToTerraform(this._transparentDataEncryptionEnabled),
       zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
+      import: mssqlDatabaseImportToTerraform(this._import.internalValue),
       long_term_retention_policy: mssqlDatabaseLongTermRetentionPolicyToTerraform(this._longTermRetentionPolicy.internalValue),
       short_term_retention_policy: mssqlDatabaseShortTermRetentionPolicyToTerraform(this._shortTermRetentionPolicy.internalValue),
       threat_detection_policy: mssqlDatabaseThreatDetectionPolicyToTerraform(this._threatDetectionPolicy.internalValue),

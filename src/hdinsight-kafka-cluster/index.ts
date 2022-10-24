@@ -1328,6 +1328,151 @@ export class HdinsightKafkaClusterRestProxyOutputReference extends cdktf.Complex
     return this._securityGroupName;
   }
 }
+export interface HdinsightKafkaClusterRolesHeadNodeScriptActions {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#name HdinsightKafkaCluster#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#parameters HdinsightKafkaCluster#parameters}
+  */
+  readonly parameters?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#uri HdinsightKafkaCluster#uri}
+  */
+  readonly uri: string;
+}
+
+export function hdinsightKafkaClusterRolesHeadNodeScriptActionsToTerraform(struct?: HdinsightKafkaClusterRolesHeadNodeScriptActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    parameters: cdktf.stringToTerraform(struct!.parameters),
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
+export class HdinsightKafkaClusterRolesHeadNodeScriptActionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HdinsightKafkaClusterRolesHeadNodeScriptActions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightKafkaClusterRolesHeadNodeScriptActions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._parameters = undefined;
+      this._uri = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._parameters = value.parameters;
+      this._uri = value.uri;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: string; 
+  public get parameters() {
+    return this.getStringAttribute('parameters');
+  }
+  public set parameters(value: string) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+
+  // uri - computed: false, optional: false, required: true
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
+}
+
+export class HdinsightKafkaClusterRolesHeadNodeScriptActionsList extends cdktf.ComplexList {
+  public internalValue? : HdinsightKafkaClusterRolesHeadNodeScriptActions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HdinsightKafkaClusterRolesHeadNodeScriptActionsOutputReference {
+    return new HdinsightKafkaClusterRolesHeadNodeScriptActionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface HdinsightKafkaClusterRolesHeadNode {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#password HdinsightKafkaCluster#password}
@@ -1353,6 +1498,12 @@ export interface HdinsightKafkaClusterRolesHeadNode {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#vm_size HdinsightKafkaCluster#vm_size}
   */
   readonly vmSize: string;
+  /**
+  * script_actions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#script_actions HdinsightKafkaCluster#script_actions}
+  */
+  readonly scriptActions?: HdinsightKafkaClusterRolesHeadNodeScriptActions[] | cdktf.IResolvable;
 }
 
 export function hdinsightKafkaClusterRolesHeadNodeToTerraform(struct?: HdinsightKafkaClusterRolesHeadNodeOutputReference | HdinsightKafkaClusterRolesHeadNode): any {
@@ -1367,6 +1518,7 @@ export function hdinsightKafkaClusterRolesHeadNodeToTerraform(struct?: Hdinsight
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
+    script_actions: cdktf.listMapper(hdinsightKafkaClusterRolesHeadNodeScriptActionsToTerraform, true)(struct!.scriptActions),
   }
 }
 
@@ -1408,6 +1560,10 @@ export class HdinsightKafkaClusterRolesHeadNodeOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
+    if (this._scriptActions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scriptActions = this._scriptActions?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1420,6 +1576,7 @@ export class HdinsightKafkaClusterRolesHeadNodeOutputReference extends cdktf.Com
       this._username = undefined;
       this._virtualNetworkId = undefined;
       this._vmSize = undefined;
+      this._scriptActions.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -1429,6 +1586,7 @@ export class HdinsightKafkaClusterRolesHeadNodeOutputReference extends cdktf.Com
       this._username = value.username;
       this._virtualNetworkId = value.virtualNetworkId;
       this._vmSize = value.vmSize;
+      this._scriptActions.internalValue = value.scriptActions;
     }
   }
 
@@ -1521,6 +1679,167 @@ export class HdinsightKafkaClusterRolesHeadNodeOutputReference extends cdktf.Com
   public get vmSizeInput() {
     return this._vmSize;
   }
+
+  // script_actions - computed: false, optional: true, required: false
+  private _scriptActions = new HdinsightKafkaClusterRolesHeadNodeScriptActionsList(this, "script_actions", false);
+  public get scriptActions() {
+    return this._scriptActions;
+  }
+  public putScriptActions(value: HdinsightKafkaClusterRolesHeadNodeScriptActions[] | cdktf.IResolvable) {
+    this._scriptActions.internalValue = value;
+  }
+  public resetScriptActions() {
+    this._scriptActions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptActionsInput() {
+    return this._scriptActions.internalValue;
+  }
+}
+export interface HdinsightKafkaClusterRolesKafkaManagementNodeScriptActions {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#name HdinsightKafkaCluster#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#parameters HdinsightKafkaCluster#parameters}
+  */
+  readonly parameters?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#uri HdinsightKafkaCluster#uri}
+  */
+  readonly uri: string;
+}
+
+export function hdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsToTerraform(struct?: HdinsightKafkaClusterRolesKafkaManagementNodeScriptActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    parameters: cdktf.stringToTerraform(struct!.parameters),
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
+export class HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HdinsightKafkaClusterRolesKafkaManagementNodeScriptActions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightKafkaClusterRolesKafkaManagementNodeScriptActions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._parameters = undefined;
+      this._uri = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._parameters = value.parameters;
+      this._uri = value.uri;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: string; 
+  public get parameters() {
+    return this.getStringAttribute('parameters');
+  }
+  public set parameters(value: string) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+
+  // uri - computed: false, optional: false, required: true
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
+}
+
+export class HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsList extends cdktf.ComplexList {
+  public internalValue? : HdinsightKafkaClusterRolesKafkaManagementNodeScriptActions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsOutputReference {
+    return new HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface HdinsightKafkaClusterRolesKafkaManagementNode {
   /**
@@ -1547,6 +1866,12 @@ export interface HdinsightKafkaClusterRolesKafkaManagementNode {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#vm_size HdinsightKafkaCluster#vm_size}
   */
   readonly vmSize: string;
+  /**
+  * script_actions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#script_actions HdinsightKafkaCluster#script_actions}
+  */
+  readonly scriptActions?: HdinsightKafkaClusterRolesKafkaManagementNodeScriptActions[] | cdktf.IResolvable;
 }
 
 export function hdinsightKafkaClusterRolesKafkaManagementNodeToTerraform(struct?: HdinsightKafkaClusterRolesKafkaManagementNodeOutputReference | HdinsightKafkaClusterRolesKafkaManagementNode): any {
@@ -1561,6 +1886,7 @@ export function hdinsightKafkaClusterRolesKafkaManagementNodeToTerraform(struct?
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
+    script_actions: cdktf.listMapper(hdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsToTerraform, true)(struct!.scriptActions),
   }
 }
 
@@ -1602,6 +1928,10 @@ export class HdinsightKafkaClusterRolesKafkaManagementNodeOutputReference extend
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
+    if (this._scriptActions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scriptActions = this._scriptActions?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1614,6 +1944,7 @@ export class HdinsightKafkaClusterRolesKafkaManagementNodeOutputReference extend
       this._username = undefined;
       this._virtualNetworkId = undefined;
       this._vmSize = undefined;
+      this._scriptActions.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -1623,6 +1954,7 @@ export class HdinsightKafkaClusterRolesKafkaManagementNodeOutputReference extend
       this._username = value.username;
       this._virtualNetworkId = value.virtualNetworkId;
       this._vmSize = value.vmSize;
+      this._scriptActions.internalValue = value.scriptActions;
     }
   }
 
@@ -1715,6 +2047,167 @@ export class HdinsightKafkaClusterRolesKafkaManagementNodeOutputReference extend
   public get vmSizeInput() {
     return this._vmSize;
   }
+
+  // script_actions - computed: false, optional: true, required: false
+  private _scriptActions = new HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsList(this, "script_actions", false);
+  public get scriptActions() {
+    return this._scriptActions;
+  }
+  public putScriptActions(value: HdinsightKafkaClusterRolesKafkaManagementNodeScriptActions[] | cdktf.IResolvable) {
+    this._scriptActions.internalValue = value;
+  }
+  public resetScriptActions() {
+    this._scriptActions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptActionsInput() {
+    return this._scriptActions.internalValue;
+  }
+}
+export interface HdinsightKafkaClusterRolesWorkerNodeScriptActions {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#name HdinsightKafkaCluster#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#parameters HdinsightKafkaCluster#parameters}
+  */
+  readonly parameters?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#uri HdinsightKafkaCluster#uri}
+  */
+  readonly uri: string;
+}
+
+export function hdinsightKafkaClusterRolesWorkerNodeScriptActionsToTerraform(struct?: HdinsightKafkaClusterRolesWorkerNodeScriptActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    parameters: cdktf.stringToTerraform(struct!.parameters),
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
+export class HdinsightKafkaClusterRolesWorkerNodeScriptActionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HdinsightKafkaClusterRolesWorkerNodeScriptActions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightKafkaClusterRolesWorkerNodeScriptActions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._parameters = undefined;
+      this._uri = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._parameters = value.parameters;
+      this._uri = value.uri;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: string; 
+  public get parameters() {
+    return this.getStringAttribute('parameters');
+  }
+  public set parameters(value: string) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+
+  // uri - computed: false, optional: false, required: true
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
+}
+
+export class HdinsightKafkaClusterRolesWorkerNodeScriptActionsList extends cdktf.ComplexList {
+  public internalValue? : HdinsightKafkaClusterRolesWorkerNodeScriptActions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HdinsightKafkaClusterRolesWorkerNodeScriptActionsOutputReference {
+    return new HdinsightKafkaClusterRolesWorkerNodeScriptActionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface HdinsightKafkaClusterRolesWorkerNode {
   /**
@@ -1749,6 +2242,12 @@ export interface HdinsightKafkaClusterRolesWorkerNode {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#vm_size HdinsightKafkaCluster#vm_size}
   */
   readonly vmSize: string;
+  /**
+  * script_actions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#script_actions HdinsightKafkaCluster#script_actions}
+  */
+  readonly scriptActions?: HdinsightKafkaClusterRolesWorkerNodeScriptActions[] | cdktf.IResolvable;
 }
 
 export function hdinsightKafkaClusterRolesWorkerNodeToTerraform(struct?: HdinsightKafkaClusterRolesWorkerNodeOutputReference | HdinsightKafkaClusterRolesWorkerNode): any {
@@ -1765,6 +2264,7 @@ export function hdinsightKafkaClusterRolesWorkerNodeToTerraform(struct?: Hdinsig
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
+    script_actions: cdktf.listMapper(hdinsightKafkaClusterRolesWorkerNodeScriptActionsToTerraform, true)(struct!.scriptActions),
   }
 }
 
@@ -1814,6 +2314,10 @@ export class HdinsightKafkaClusterRolesWorkerNodeOutputReference extends cdktf.C
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
+    if (this._scriptActions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scriptActions = this._scriptActions?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1828,6 +2332,7 @@ export class HdinsightKafkaClusterRolesWorkerNodeOutputReference extends cdktf.C
       this._username = undefined;
       this._virtualNetworkId = undefined;
       this._vmSize = undefined;
+      this._scriptActions.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -1839,6 +2344,7 @@ export class HdinsightKafkaClusterRolesWorkerNodeOutputReference extends cdktf.C
       this._username = value.username;
       this._virtualNetworkId = value.virtualNetworkId;
       this._vmSize = value.vmSize;
+      this._scriptActions.internalValue = value.scriptActions;
     }
   }
 
@@ -1957,6 +2463,167 @@ export class HdinsightKafkaClusterRolesWorkerNodeOutputReference extends cdktf.C
   public get vmSizeInput() {
     return this._vmSize;
   }
+
+  // script_actions - computed: false, optional: true, required: false
+  private _scriptActions = new HdinsightKafkaClusterRolesWorkerNodeScriptActionsList(this, "script_actions", false);
+  public get scriptActions() {
+    return this._scriptActions;
+  }
+  public putScriptActions(value: HdinsightKafkaClusterRolesWorkerNodeScriptActions[] | cdktf.IResolvable) {
+    this._scriptActions.internalValue = value;
+  }
+  public resetScriptActions() {
+    this._scriptActions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptActionsInput() {
+    return this._scriptActions.internalValue;
+  }
+}
+export interface HdinsightKafkaClusterRolesZookeeperNodeScriptActions {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#name HdinsightKafkaCluster#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#parameters HdinsightKafkaCluster#parameters}
+  */
+  readonly parameters?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#uri HdinsightKafkaCluster#uri}
+  */
+  readonly uri: string;
+}
+
+export function hdinsightKafkaClusterRolesZookeeperNodeScriptActionsToTerraform(struct?: HdinsightKafkaClusterRolesZookeeperNodeScriptActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    parameters: cdktf.stringToTerraform(struct!.parameters),
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
+export class HdinsightKafkaClusterRolesZookeeperNodeScriptActionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HdinsightKafkaClusterRolesZookeeperNodeScriptActions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightKafkaClusterRolesZookeeperNodeScriptActions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._parameters = undefined;
+      this._uri = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._parameters = value.parameters;
+      this._uri = value.uri;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: string; 
+  public get parameters() {
+    return this.getStringAttribute('parameters');
+  }
+  public set parameters(value: string) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+
+  // uri - computed: false, optional: false, required: true
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
+}
+
+export class HdinsightKafkaClusterRolesZookeeperNodeScriptActionsList extends cdktf.ComplexList {
+  public internalValue? : HdinsightKafkaClusterRolesZookeeperNodeScriptActions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HdinsightKafkaClusterRolesZookeeperNodeScriptActionsOutputReference {
+    return new HdinsightKafkaClusterRolesZookeeperNodeScriptActionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface HdinsightKafkaClusterRolesZookeeperNode {
   /**
@@ -1983,6 +2650,12 @@ export interface HdinsightKafkaClusterRolesZookeeperNode {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#vm_size HdinsightKafkaCluster#vm_size}
   */
   readonly vmSize: string;
+  /**
+  * script_actions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#script_actions HdinsightKafkaCluster#script_actions}
+  */
+  readonly scriptActions?: HdinsightKafkaClusterRolesZookeeperNodeScriptActions[] | cdktf.IResolvable;
 }
 
 export function hdinsightKafkaClusterRolesZookeeperNodeToTerraform(struct?: HdinsightKafkaClusterRolesZookeeperNodeOutputReference | HdinsightKafkaClusterRolesZookeeperNode): any {
@@ -1997,6 +2670,7 @@ export function hdinsightKafkaClusterRolesZookeeperNodeToTerraform(struct?: Hdin
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
+    script_actions: cdktf.listMapper(hdinsightKafkaClusterRolesZookeeperNodeScriptActionsToTerraform, true)(struct!.scriptActions),
   }
 }
 
@@ -2038,6 +2712,10 @@ export class HdinsightKafkaClusterRolesZookeeperNodeOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
+    if (this._scriptActions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scriptActions = this._scriptActions?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -2050,6 +2728,7 @@ export class HdinsightKafkaClusterRolesZookeeperNodeOutputReference extends cdkt
       this._username = undefined;
       this._virtualNetworkId = undefined;
       this._vmSize = undefined;
+      this._scriptActions.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -2059,6 +2738,7 @@ export class HdinsightKafkaClusterRolesZookeeperNodeOutputReference extends cdkt
       this._username = value.username;
       this._virtualNetworkId = value.virtualNetworkId;
       this._vmSize = value.vmSize;
+      this._scriptActions.internalValue = value.scriptActions;
     }
   }
 
@@ -2150,6 +2830,22 @@ export class HdinsightKafkaClusterRolesZookeeperNodeOutputReference extends cdkt
   // Temporarily expose input value. Use with caution.
   public get vmSizeInput() {
     return this._vmSize;
+  }
+
+  // script_actions - computed: false, optional: true, required: false
+  private _scriptActions = new HdinsightKafkaClusterRolesZookeeperNodeScriptActionsList(this, "script_actions", false);
+  public get scriptActions() {
+    return this._scriptActions;
+  }
+  public putScriptActions(value: HdinsightKafkaClusterRolesZookeeperNodeScriptActions[] | cdktf.IResolvable) {
+    this._scriptActions.internalValue = value;
+  }
+  public resetScriptActions() {
+    this._scriptActions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptActionsInput() {
+    return this._scriptActions.internalValue;
   }
 }
 export interface HdinsightKafkaClusterRoles {
@@ -2992,7 +3688,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hdinsight_kafka_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -26,6 +26,12 @@ export interface LinuxFunctionAppConfig extends cdktf.TerraformMetaArguments {
   */
   readonly clientCertificateEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Paths to exclude when using client certificates, separated by ;
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#client_certificate_exclusion_paths LinuxFunctionApp#client_certificate_exclusion_paths}
+  */
+  readonly clientCertificateExclusionPaths?: string;
+  /**
   * The mode of the Function App's client certificates requirement for incoming requests. Possible values are `Required`, `Optional`, and `OptionalInteractiveUser` 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#client_certificate_mode LinuxFunctionApp#client_certificate_mode}
@@ -3822,7 +3828,7 @@ export interface LinuxFunctionAppSiteConfig {
   */
   readonly remoteDebuggingEnabled?: boolean | cdktf.IResolvable;
   /**
-  * The Remote Debugging Version. Possible values include `VS2017` and `VS2019`
+  * The Remote Debugging Version. Possible values include `VS2017`, `VS2019`, and `VS2022``
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#remote_debugging_version LinuxFunctionApp#remote_debugging_version}
   */
@@ -4977,7 +4983,7 @@ export class LinuxFunctionApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_function_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -4991,6 +4997,7 @@ export class LinuxFunctionApp extends cdktf.TerraformResource {
     this._appSettings = config.appSettings;
     this._builtinLoggingEnabled = config.builtinLoggingEnabled;
     this._clientCertificateEnabled = config.clientCertificateEnabled;
+    this._clientCertificateExclusionPaths = config.clientCertificateExclusionPaths;
     this._clientCertificateMode = config.clientCertificateMode;
     this._contentShareForceDisabled = config.contentShareForceDisabled;
     this._dailyMemoryTimeQuota = config.dailyMemoryTimeQuota;
@@ -5068,6 +5075,22 @@ export class LinuxFunctionApp extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get clientCertificateEnabledInput() {
     return this._clientCertificateEnabled;
+  }
+
+  // client_certificate_exclusion_paths - computed: false, optional: true, required: false
+  private _clientCertificateExclusionPaths?: string; 
+  public get clientCertificateExclusionPaths() {
+    return this.getStringAttribute('client_certificate_exclusion_paths');
+  }
+  public set clientCertificateExclusionPaths(value: string) {
+    this._clientCertificateExclusionPaths = value;
+  }
+  public resetClientCertificateExclusionPaths() {
+    this._clientCertificateExclusionPaths = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientCertificateExclusionPathsInput() {
+    return this._clientCertificateExclusionPaths;
   }
 
   // client_certificate_mode - computed: false, optional: true, required: false
@@ -5505,6 +5528,7 @@ export class LinuxFunctionApp extends cdktf.TerraformResource {
       app_settings: cdktf.hashMapper(cdktf.stringToTerraform)(this._appSettings),
       builtin_logging_enabled: cdktf.booleanToTerraform(this._builtinLoggingEnabled),
       client_certificate_enabled: cdktf.booleanToTerraform(this._clientCertificateEnabled),
+      client_certificate_exclusion_paths: cdktf.stringToTerraform(this._clientCertificateExclusionPaths),
       client_certificate_mode: cdktf.stringToTerraform(this._clientCertificateMode),
       content_share_force_disabled: cdktf.booleanToTerraform(this._contentShareForceDisabled),
       daily_memory_time_quota: cdktf.numberToTerraform(this._dailyMemoryTimeQuota),

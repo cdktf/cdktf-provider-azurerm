@@ -35,6 +35,10 @@ export interface AutomationRunbookConfig extends cdktf.TerraformMetaArguments {
   */
   readonly location: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#log_activity_trace_level AutomationRunbook#log_activity_trace_level}
+  */
+  readonly logActivityTraceLevel?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#log_progress AutomationRunbook#log_progress}
   */
   readonly logProgress: boolean | cdktf.IResolvable;
@@ -58,6 +62,12 @@ export interface AutomationRunbookConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#tags AutomationRunbook#tags}
   */
   readonly tags?: { [key: string]: string };
+  /**
+  * draft block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#draft AutomationRunbook#draft}
+  */
+  readonly draft?: AutomationRunbookDraft;
   /**
   * publish_content_link block
   * 
@@ -247,6 +257,569 @@ export class AutomationRunbookJobScheduleList extends cdktf.ComplexList {
   */
   public get(index: number): AutomationRunbookJobScheduleOutputReference {
     return new AutomationRunbookJobScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface AutomationRunbookDraftContentLinkHash {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#algorithm AutomationRunbook#algorithm}
+  */
+  readonly algorithm: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#value AutomationRunbook#value}
+  */
+  readonly value: string;
+}
+
+export function automationRunbookDraftContentLinkHashToTerraform(struct?: AutomationRunbookDraftContentLinkHashOutputReference | AutomationRunbookDraftContentLinkHash): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    algorithm: cdktf.stringToTerraform(struct!.algorithm),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export class AutomationRunbookDraftContentLinkHashOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AutomationRunbookDraftContentLinkHash | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._algorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.algorithm = this._algorithm;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomationRunbookDraftContentLinkHash | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._algorithm = undefined;
+      this._value = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._algorithm = value.algorithm;
+      this._value = value.value;
+    }
+  }
+
+  // algorithm - computed: false, optional: false, required: true
+  private _algorithm?: string; 
+  public get algorithm() {
+    return this.getStringAttribute('algorithm');
+  }
+  public set algorithm(value: string) {
+    this._algorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get algorithmInput() {
+    return this._algorithm;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+export interface AutomationRunbookDraftContentLink {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#uri AutomationRunbook#uri}
+  */
+  readonly uri: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#version AutomationRunbook#version}
+  */
+  readonly version?: string;
+  /**
+  * hash block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#hash AutomationRunbook#hash}
+  */
+  readonly hash?: AutomationRunbookDraftContentLinkHash;
+}
+
+export function automationRunbookDraftContentLinkToTerraform(struct?: AutomationRunbookDraftContentLinkOutputReference | AutomationRunbookDraftContentLink): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    uri: cdktf.stringToTerraform(struct!.uri),
+    version: cdktf.stringToTerraform(struct!.version),
+    hash: automationRunbookDraftContentLinkHashToTerraform(struct!.hash),
+  }
+}
+
+export class AutomationRunbookDraftContentLinkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AutomationRunbookDraftContentLink | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    if (this._hash?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hash = this._hash?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomationRunbookDraftContentLink | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._uri = undefined;
+      this._version = undefined;
+      this._hash.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._uri = value.uri;
+      this._version = value.version;
+      this._hash.internalValue = value.hash;
+    }
+  }
+
+  // uri - computed: false, optional: false, required: true
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+
+  // hash - computed: false, optional: true, required: false
+  private _hash = new AutomationRunbookDraftContentLinkHashOutputReference(this, "hash");
+  public get hash() {
+    return this._hash;
+  }
+  public putHash(value: AutomationRunbookDraftContentLinkHash) {
+    this._hash.internalValue = value;
+  }
+  public resetHash() {
+    this._hash.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hashInput() {
+    return this._hash.internalValue;
+  }
+}
+export interface AutomationRunbookDraftParameters {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#default_value AutomationRunbook#default_value}
+  */
+  readonly defaultValue?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#key AutomationRunbook#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#mandatory AutomationRunbook#mandatory}
+  */
+  readonly mandatory?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#position AutomationRunbook#position}
+  */
+  readonly position?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#type AutomationRunbook#type}
+  */
+  readonly type: string;
+}
+
+export function automationRunbookDraftParametersToTerraform(struct?: AutomationRunbookDraftParameters | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    default_value: cdktf.stringToTerraform(struct!.defaultValue),
+    key: cdktf.stringToTerraform(struct!.key),
+    mandatory: cdktf.booleanToTerraform(struct!.mandatory),
+    position: cdktf.numberToTerraform(struct!.position),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class AutomationRunbookDraftParametersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AutomationRunbookDraftParameters | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._defaultValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultValue = this._defaultValue;
+    }
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._mandatory !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mandatory = this._mandatory;
+    }
+    if (this._position !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.position = this._position;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomationRunbookDraftParameters | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._defaultValue = undefined;
+      this._key = undefined;
+      this._mandatory = undefined;
+      this._position = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._defaultValue = value.defaultValue;
+      this._key = value.key;
+      this._mandatory = value.mandatory;
+      this._position = value.position;
+      this._type = value.type;
+    }
+  }
+
+  // default_value - computed: false, optional: true, required: false
+  private _defaultValue?: string; 
+  public get defaultValue() {
+    return this.getStringAttribute('default_value');
+  }
+  public set defaultValue(value: string) {
+    this._defaultValue = value;
+  }
+  public resetDefaultValue() {
+    this._defaultValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultValueInput() {
+    return this._defaultValue;
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // mandatory - computed: false, optional: true, required: false
+  private _mandatory?: boolean | cdktf.IResolvable; 
+  public get mandatory() {
+    return this.getBooleanAttribute('mandatory');
+  }
+  public set mandatory(value: boolean | cdktf.IResolvable) {
+    this._mandatory = value;
+  }
+  public resetMandatory() {
+    this._mandatory = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mandatoryInput() {
+    return this._mandatory;
+  }
+
+  // position - computed: false, optional: true, required: false
+  private _position?: number; 
+  public get position() {
+    return this.getNumberAttribute('position');
+  }
+  public set position(value: number) {
+    this._position = value;
+  }
+  public resetPosition() {
+    this._position = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get positionInput() {
+    return this._position;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class AutomationRunbookDraftParametersList extends cdktf.ComplexList {
+  public internalValue? : AutomationRunbookDraftParameters[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AutomationRunbookDraftParametersOutputReference {
+    return new AutomationRunbookDraftParametersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface AutomationRunbookDraft {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#edit_mode_enabled AutomationRunbook#edit_mode_enabled}
+  */
+  readonly editModeEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#output_types AutomationRunbook#output_types}
+  */
+  readonly outputTypes?: string[];
+  /**
+  * content_link block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#content_link AutomationRunbook#content_link}
+  */
+  readonly contentLink?: AutomationRunbookDraftContentLink;
+  /**
+  * parameters block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#parameters AutomationRunbook#parameters}
+  */
+  readonly parameters?: AutomationRunbookDraftParameters[] | cdktf.IResolvable;
+}
+
+export function automationRunbookDraftToTerraform(struct?: AutomationRunbookDraftOutputReference | AutomationRunbookDraft): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    edit_mode_enabled: cdktf.booleanToTerraform(struct!.editModeEnabled),
+    output_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.outputTypes),
+    content_link: automationRunbookDraftContentLinkToTerraform(struct!.contentLink),
+    parameters: cdktf.listMapper(automationRunbookDraftParametersToTerraform, true)(struct!.parameters),
+  }
+}
+
+export class AutomationRunbookDraftOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AutomationRunbookDraft | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._editModeEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.editModeEnabled = this._editModeEnabled;
+    }
+    if (this._outputTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.outputTypes = this._outputTypes;
+    }
+    if (this._contentLink?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.contentLink = this._contentLink?.internalValue;
+    }
+    if (this._parameters?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomationRunbookDraft | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._editModeEnabled = undefined;
+      this._outputTypes = undefined;
+      this._contentLink.internalValue = undefined;
+      this._parameters.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._editModeEnabled = value.editModeEnabled;
+      this._outputTypes = value.outputTypes;
+      this._contentLink.internalValue = value.contentLink;
+      this._parameters.internalValue = value.parameters;
+    }
+  }
+
+  // creation_time - computed: true, optional: false, required: false
+  public get creationTime() {
+    return this.getStringAttribute('creation_time');
+  }
+
+  // edit_mode_enabled - computed: false, optional: true, required: false
+  private _editModeEnabled?: boolean | cdktf.IResolvable; 
+  public get editModeEnabled() {
+    return this.getBooleanAttribute('edit_mode_enabled');
+  }
+  public set editModeEnabled(value: boolean | cdktf.IResolvable) {
+    this._editModeEnabled = value;
+  }
+  public resetEditModeEnabled() {
+    this._editModeEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get editModeEnabledInput() {
+    return this._editModeEnabled;
+  }
+
+  // last_modified_time - computed: true, optional: false, required: false
+  public get lastModifiedTime() {
+    return this.getStringAttribute('last_modified_time');
+  }
+
+  // output_types - computed: false, optional: true, required: false
+  private _outputTypes?: string[]; 
+  public get outputTypes() {
+    return this.getListAttribute('output_types');
+  }
+  public set outputTypes(value: string[]) {
+    this._outputTypes = value;
+  }
+  public resetOutputTypes() {
+    this._outputTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outputTypesInput() {
+    return this._outputTypes;
+  }
+
+  // content_link - computed: false, optional: true, required: false
+  private _contentLink = new AutomationRunbookDraftContentLinkOutputReference(this, "content_link");
+  public get contentLink() {
+    return this._contentLink;
+  }
+  public putContentLink(value: AutomationRunbookDraftContentLink) {
+    this._contentLink.internalValue = value;
+  }
+  public resetContentLink() {
+    this._contentLink.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentLinkInput() {
+    return this._contentLink.internalValue;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters = new AutomationRunbookDraftParametersList(this, "parameters", false);
+  public get parameters() {
+    return this._parameters;
+  }
+  public putParameters(value: AutomationRunbookDraftParameters[] | cdktf.IResolvable) {
+    this._parameters.internalValue = value;
+  }
+  public resetParameters() {
+    this._parameters.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters.internalValue;
   }
 }
 export interface AutomationRunbookPublishContentLinkHash {
@@ -636,7 +1209,7 @@ export class AutomationRunbook extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_automation_runbook',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -653,12 +1226,14 @@ export class AutomationRunbook extends cdktf.TerraformResource {
     this._id = config.id;
     this._jobSchedule.internalValue = config.jobSchedule;
     this._location = config.location;
+    this._logActivityTraceLevel = config.logActivityTraceLevel;
     this._logProgress = config.logProgress;
     this._logVerbose = config.logVerbose;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._runbookType = config.runbookType;
     this._tags = config.tags;
+    this._draft.internalValue = config.draft;
     this._publishContentLink.internalValue = config.publishContentLink;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -757,6 +1332,22 @@ export class AutomationRunbook extends cdktf.TerraformResource {
     return this._location;
   }
 
+  // log_activity_trace_level - computed: false, optional: true, required: false
+  private _logActivityTraceLevel?: number; 
+  public get logActivityTraceLevel() {
+    return this.getNumberAttribute('log_activity_trace_level');
+  }
+  public set logActivityTraceLevel(value: number) {
+    this._logActivityTraceLevel = value;
+  }
+  public resetLogActivityTraceLevel() {
+    this._logActivityTraceLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logActivityTraceLevelInput() {
+    return this._logActivityTraceLevel;
+  }
+
   // log_progress - computed: false, optional: false, required: true
   private _logProgress?: boolean | cdktf.IResolvable; 
   public get logProgress() {
@@ -838,6 +1429,22 @@ export class AutomationRunbook extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // draft - computed: false, optional: true, required: false
+  private _draft = new AutomationRunbookDraftOutputReference(this, "draft");
+  public get draft() {
+    return this._draft;
+  }
+  public putDraft(value: AutomationRunbookDraft) {
+    this._draft.internalValue = value;
+  }
+  public resetDraft() {
+    this._draft.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get draftInput() {
+    return this._draft.internalValue;
+  }
+
   // publish_content_link - computed: false, optional: true, required: false
   private _publishContentLink = new AutomationRunbookPublishContentLinkOutputReference(this, "publish_content_link");
   public get publishContentLink() {
@@ -882,12 +1489,14 @@ export class AutomationRunbook extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       job_schedule: cdktf.listMapper(automationRunbookJobScheduleToTerraform, false)(this._jobSchedule.internalValue),
       location: cdktf.stringToTerraform(this._location),
+      log_activity_trace_level: cdktf.numberToTerraform(this._logActivityTraceLevel),
       log_progress: cdktf.booleanToTerraform(this._logProgress),
       log_verbose: cdktf.booleanToTerraform(this._logVerbose),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       runbook_type: cdktf.stringToTerraform(this._runbookType),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      draft: automationRunbookDraftToTerraform(this._draft.internalValue),
       publish_content_link: automationRunbookPublishContentLinkToTerraform(this._publishContentLink.internalValue),
       timeouts: automationRunbookTimeoutsToTerraform(this._timeouts.internalValue),
     };

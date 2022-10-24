@@ -113,6 +113,10 @@ export interface DataFactoryIntegrationRuntimeAzureSsisCatalogInfo {
   */
   readonly dualStandbyPairName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#elastic_pool_name DataFactoryIntegrationRuntimeAzureSsis#elastic_pool_name}
+  */
+  readonly elasticPoolName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#pricing_tier DataFactoryIntegrationRuntimeAzureSsis#pricing_tier}
   */
   readonly pricingTier?: string;
@@ -131,6 +135,7 @@ export function dataFactoryIntegrationRuntimeAzureSsisCatalogInfoToTerraform(str
     administrator_login: cdktf.stringToTerraform(struct!.administratorLogin),
     administrator_password: cdktf.stringToTerraform(struct!.administratorPassword),
     dual_standby_pair_name: cdktf.stringToTerraform(struct!.dualStandbyPairName),
+    elastic_pool_name: cdktf.stringToTerraform(struct!.elasticPoolName),
     pricing_tier: cdktf.stringToTerraform(struct!.pricingTier),
     server_endpoint: cdktf.stringToTerraform(struct!.serverEndpoint),
   }
@@ -162,6 +167,10 @@ export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference ex
       hasAnyValues = true;
       internalValueResult.dualStandbyPairName = this._dualStandbyPairName;
     }
+    if (this._elasticPoolName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.elasticPoolName = this._elasticPoolName;
+    }
     if (this._pricingTier !== undefined) {
       hasAnyValues = true;
       internalValueResult.pricingTier = this._pricingTier;
@@ -179,6 +188,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference ex
       this._administratorLogin = undefined;
       this._administratorPassword = undefined;
       this._dualStandbyPairName = undefined;
+      this._elasticPoolName = undefined;
       this._pricingTier = undefined;
       this._serverEndpoint = undefined;
     }
@@ -187,6 +197,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference ex
       this._administratorLogin = value.administratorLogin;
       this._administratorPassword = value.administratorPassword;
       this._dualStandbyPairName = value.dualStandbyPairName;
+      this._elasticPoolName = value.elasticPoolName;
       this._pricingTier = value.pricingTier;
       this._serverEndpoint = value.serverEndpoint;
     }
@@ -238,6 +249,22 @@ export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference ex
   // Temporarily expose input value. Use with caution.
   public get dualStandbyPairNameInput() {
     return this._dualStandbyPairName;
+  }
+
+  // elastic_pool_name - computed: false, optional: true, required: false
+  private _elasticPoolName?: string; 
+  public get elasticPoolName() {
+    return this.getStringAttribute('elastic_pool_name');
+  }
+  public set elasticPoolName(value: string) {
+    this._elasticPoolName = value;
+  }
+  public resetElasticPoolName() {
+    this._elasticPoolName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get elasticPoolNameInput() {
+    return this._elasticPoolName;
   }
 
   // pricing_tier - computed: false, optional: true, required: false
@@ -1731,7 +1758,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
       terraformResourceType: 'azurerm_data_factory_integration_runtime_azure_ssis',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
