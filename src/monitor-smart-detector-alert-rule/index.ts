@@ -366,7 +366,7 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_smart_detector_alert_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

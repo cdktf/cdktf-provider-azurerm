@@ -1897,6 +1897,151 @@ export class HdinsightHadoopClusterRolesEdgeNodeOutputReference extends cdktf.Co
     return this._uninstallScriptActions.internalValue;
   }
 }
+export interface HdinsightHadoopClusterRolesHeadNodeScriptActions {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#name HdinsightHadoopCluster#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#parameters HdinsightHadoopCluster#parameters}
+  */
+  readonly parameters?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#uri HdinsightHadoopCluster#uri}
+  */
+  readonly uri: string;
+}
+
+export function hdinsightHadoopClusterRolesHeadNodeScriptActionsToTerraform(struct?: HdinsightHadoopClusterRolesHeadNodeScriptActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    parameters: cdktf.stringToTerraform(struct!.parameters),
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
+export class HdinsightHadoopClusterRolesHeadNodeScriptActionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HdinsightHadoopClusterRolesHeadNodeScriptActions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightHadoopClusterRolesHeadNodeScriptActions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._parameters = undefined;
+      this._uri = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._parameters = value.parameters;
+      this._uri = value.uri;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: string; 
+  public get parameters() {
+    return this.getStringAttribute('parameters');
+  }
+  public set parameters(value: string) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+
+  // uri - computed: false, optional: false, required: true
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
+}
+
+export class HdinsightHadoopClusterRolesHeadNodeScriptActionsList extends cdktf.ComplexList {
+  public internalValue? : HdinsightHadoopClusterRolesHeadNodeScriptActions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HdinsightHadoopClusterRolesHeadNodeScriptActionsOutputReference {
+    return new HdinsightHadoopClusterRolesHeadNodeScriptActionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface HdinsightHadoopClusterRolesHeadNode {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#password HdinsightHadoopCluster#password}
@@ -1922,6 +2067,12 @@ export interface HdinsightHadoopClusterRolesHeadNode {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#vm_size HdinsightHadoopCluster#vm_size}
   */
   readonly vmSize: string;
+  /**
+  * script_actions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#script_actions HdinsightHadoopCluster#script_actions}
+  */
+  readonly scriptActions?: HdinsightHadoopClusterRolesHeadNodeScriptActions[] | cdktf.IResolvable;
 }
 
 export function hdinsightHadoopClusterRolesHeadNodeToTerraform(struct?: HdinsightHadoopClusterRolesHeadNodeOutputReference | HdinsightHadoopClusterRolesHeadNode): any {
@@ -1936,6 +2087,7 @@ export function hdinsightHadoopClusterRolesHeadNodeToTerraform(struct?: Hdinsigh
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
+    script_actions: cdktf.listMapper(hdinsightHadoopClusterRolesHeadNodeScriptActionsToTerraform, true)(struct!.scriptActions),
   }
 }
 
@@ -1977,6 +2129,10 @@ export class HdinsightHadoopClusterRolesHeadNodeOutputReference extends cdktf.Co
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
+    if (this._scriptActions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scriptActions = this._scriptActions?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1989,6 +2145,7 @@ export class HdinsightHadoopClusterRolesHeadNodeOutputReference extends cdktf.Co
       this._username = undefined;
       this._virtualNetworkId = undefined;
       this._vmSize = undefined;
+      this._scriptActions.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -1998,6 +2155,7 @@ export class HdinsightHadoopClusterRolesHeadNodeOutputReference extends cdktf.Co
       this._username = value.username;
       this._virtualNetworkId = value.virtualNetworkId;
       this._vmSize = value.vmSize;
+      this._scriptActions.internalValue = value.scriptActions;
     }
   }
 
@@ -2089,6 +2247,22 @@ export class HdinsightHadoopClusterRolesHeadNodeOutputReference extends cdktf.Co
   // Temporarily expose input value. Use with caution.
   public get vmSizeInput() {
     return this._vmSize;
+  }
+
+  // script_actions - computed: false, optional: true, required: false
+  private _scriptActions = new HdinsightHadoopClusterRolesHeadNodeScriptActionsList(this, "script_actions", false);
+  public get scriptActions() {
+    return this._scriptActions;
+  }
+  public putScriptActions(value: HdinsightHadoopClusterRolesHeadNodeScriptActions[] | cdktf.IResolvable) {
+    this._scriptActions.internalValue = value;
+  }
+  public resetScriptActions() {
+    this._scriptActions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptActionsInput() {
+    return this._scriptActions.internalValue;
   }
 }
 export interface HdinsightHadoopClusterRolesWorkerNodeAutoscaleCapacity {
@@ -2503,6 +2677,151 @@ export class HdinsightHadoopClusterRolesWorkerNodeAutoscaleOutputReference exten
     return this._recurrence.internalValue;
   }
 }
+export interface HdinsightHadoopClusterRolesWorkerNodeScriptActions {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#name HdinsightHadoopCluster#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#parameters HdinsightHadoopCluster#parameters}
+  */
+  readonly parameters?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#uri HdinsightHadoopCluster#uri}
+  */
+  readonly uri: string;
+}
+
+export function hdinsightHadoopClusterRolesWorkerNodeScriptActionsToTerraform(struct?: HdinsightHadoopClusterRolesWorkerNodeScriptActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    parameters: cdktf.stringToTerraform(struct!.parameters),
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
+export class HdinsightHadoopClusterRolesWorkerNodeScriptActionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HdinsightHadoopClusterRolesWorkerNodeScriptActions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightHadoopClusterRolesWorkerNodeScriptActions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._parameters = undefined;
+      this._uri = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._parameters = value.parameters;
+      this._uri = value.uri;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: string; 
+  public get parameters() {
+    return this.getStringAttribute('parameters');
+  }
+  public set parameters(value: string) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+
+  // uri - computed: false, optional: false, required: true
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
+}
+
+export class HdinsightHadoopClusterRolesWorkerNodeScriptActionsList extends cdktf.ComplexList {
+  public internalValue? : HdinsightHadoopClusterRolesWorkerNodeScriptActions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HdinsightHadoopClusterRolesWorkerNodeScriptActionsOutputReference {
+    return new HdinsightHadoopClusterRolesWorkerNodeScriptActionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface HdinsightHadoopClusterRolesWorkerNode {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#password HdinsightHadoopCluster#password}
@@ -2538,6 +2857,12 @@ export interface HdinsightHadoopClusterRolesWorkerNode {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#autoscale HdinsightHadoopCluster#autoscale}
   */
   readonly autoscale?: HdinsightHadoopClusterRolesWorkerNodeAutoscale;
+  /**
+  * script_actions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#script_actions HdinsightHadoopCluster#script_actions}
+  */
+  readonly scriptActions?: HdinsightHadoopClusterRolesWorkerNodeScriptActions[] | cdktf.IResolvable;
 }
 
 export function hdinsightHadoopClusterRolesWorkerNodeToTerraform(struct?: HdinsightHadoopClusterRolesWorkerNodeOutputReference | HdinsightHadoopClusterRolesWorkerNode): any {
@@ -2554,6 +2879,7 @@ export function hdinsightHadoopClusterRolesWorkerNodeToTerraform(struct?: Hdinsi
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
     autoscale: hdinsightHadoopClusterRolesWorkerNodeAutoscaleToTerraform(struct!.autoscale),
+    script_actions: cdktf.listMapper(hdinsightHadoopClusterRolesWorkerNodeScriptActionsToTerraform, true)(struct!.scriptActions),
   }
 }
 
@@ -2603,6 +2929,10 @@ export class HdinsightHadoopClusterRolesWorkerNodeOutputReference extends cdktf.
       hasAnyValues = true;
       internalValueResult.autoscale = this._autoscale?.internalValue;
     }
+    if (this._scriptActions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scriptActions = this._scriptActions?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -2617,6 +2947,7 @@ export class HdinsightHadoopClusterRolesWorkerNodeOutputReference extends cdktf.
       this._virtualNetworkId = undefined;
       this._vmSize = undefined;
       this._autoscale.internalValue = undefined;
+      this._scriptActions.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -2628,6 +2959,7 @@ export class HdinsightHadoopClusterRolesWorkerNodeOutputReference extends cdktf.
       this._virtualNetworkId = value.virtualNetworkId;
       this._vmSize = value.vmSize;
       this._autoscale.internalValue = value.autoscale;
+      this._scriptActions.internalValue = value.scriptActions;
     }
   }
 
@@ -2749,6 +3081,167 @@ export class HdinsightHadoopClusterRolesWorkerNodeOutputReference extends cdktf.
   public get autoscaleInput() {
     return this._autoscale.internalValue;
   }
+
+  // script_actions - computed: false, optional: true, required: false
+  private _scriptActions = new HdinsightHadoopClusterRolesWorkerNodeScriptActionsList(this, "script_actions", false);
+  public get scriptActions() {
+    return this._scriptActions;
+  }
+  public putScriptActions(value: HdinsightHadoopClusterRolesWorkerNodeScriptActions[] | cdktf.IResolvable) {
+    this._scriptActions.internalValue = value;
+  }
+  public resetScriptActions() {
+    this._scriptActions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptActionsInput() {
+    return this._scriptActions.internalValue;
+  }
+}
+export interface HdinsightHadoopClusterRolesZookeeperNodeScriptActions {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#name HdinsightHadoopCluster#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#parameters HdinsightHadoopCluster#parameters}
+  */
+  readonly parameters?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#uri HdinsightHadoopCluster#uri}
+  */
+  readonly uri: string;
+}
+
+export function hdinsightHadoopClusterRolesZookeeperNodeScriptActionsToTerraform(struct?: HdinsightHadoopClusterRolesZookeeperNodeScriptActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    parameters: cdktf.stringToTerraform(struct!.parameters),
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
+export class HdinsightHadoopClusterRolesZookeeperNodeScriptActionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HdinsightHadoopClusterRolesZookeeperNodeScriptActions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightHadoopClusterRolesZookeeperNodeScriptActions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._parameters = undefined;
+      this._uri = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._parameters = value.parameters;
+      this._uri = value.uri;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: string; 
+  public get parameters() {
+    return this.getStringAttribute('parameters');
+  }
+  public set parameters(value: string) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+
+  // uri - computed: false, optional: false, required: true
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
+}
+
+export class HdinsightHadoopClusterRolesZookeeperNodeScriptActionsList extends cdktf.ComplexList {
+  public internalValue? : HdinsightHadoopClusterRolesZookeeperNodeScriptActions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HdinsightHadoopClusterRolesZookeeperNodeScriptActionsOutputReference {
+    return new HdinsightHadoopClusterRolesZookeeperNodeScriptActionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface HdinsightHadoopClusterRolesZookeeperNode {
   /**
@@ -2775,6 +3268,12 @@ export interface HdinsightHadoopClusterRolesZookeeperNode {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#vm_size HdinsightHadoopCluster#vm_size}
   */
   readonly vmSize: string;
+  /**
+  * script_actions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#script_actions HdinsightHadoopCluster#script_actions}
+  */
+  readonly scriptActions?: HdinsightHadoopClusterRolesZookeeperNodeScriptActions[] | cdktf.IResolvable;
 }
 
 export function hdinsightHadoopClusterRolesZookeeperNodeToTerraform(struct?: HdinsightHadoopClusterRolesZookeeperNodeOutputReference | HdinsightHadoopClusterRolesZookeeperNode): any {
@@ -2789,6 +3288,7 @@ export function hdinsightHadoopClusterRolesZookeeperNodeToTerraform(struct?: Hdi
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
+    script_actions: cdktf.listMapper(hdinsightHadoopClusterRolesZookeeperNodeScriptActionsToTerraform, true)(struct!.scriptActions),
   }
 }
 
@@ -2830,6 +3330,10 @@ export class HdinsightHadoopClusterRolesZookeeperNodeOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
+    if (this._scriptActions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scriptActions = this._scriptActions?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -2842,6 +3346,7 @@ export class HdinsightHadoopClusterRolesZookeeperNodeOutputReference extends cdk
       this._username = undefined;
       this._virtualNetworkId = undefined;
       this._vmSize = undefined;
+      this._scriptActions.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -2851,6 +3356,7 @@ export class HdinsightHadoopClusterRolesZookeeperNodeOutputReference extends cdk
       this._username = value.username;
       this._virtualNetworkId = value.virtualNetworkId;
       this._vmSize = value.vmSize;
+      this._scriptActions.internalValue = value.scriptActions;
     }
   }
 
@@ -2942,6 +3448,22 @@ export class HdinsightHadoopClusterRolesZookeeperNodeOutputReference extends cdk
   // Temporarily expose input value. Use with caution.
   public get vmSizeInput() {
     return this._vmSize;
+  }
+
+  // script_actions - computed: false, optional: true, required: false
+  private _scriptActions = new HdinsightHadoopClusterRolesZookeeperNodeScriptActionsList(this, "script_actions", false);
+  public get scriptActions() {
+    return this._scriptActions;
+  }
+  public putScriptActions(value: HdinsightHadoopClusterRolesZookeeperNodeScriptActions[] | cdktf.IResolvable) {
+    this._scriptActions.internalValue = value;
+  }
+  public resetScriptActions() {
+    this._scriptActions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptActionsInput() {
+    return this._scriptActions.internalValue;
   }
 }
 export interface HdinsightHadoopClusterRoles {
@@ -3784,7 +4306,7 @@ export class HdinsightHadoopCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hdinsight_hadoop_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

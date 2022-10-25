@@ -220,7 +220,7 @@ export class ProximityPlacementGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_proximity_placement_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

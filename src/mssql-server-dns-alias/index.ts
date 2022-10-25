@@ -185,7 +185,7 @@ export class MssqlServerDnsAlias extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_server_dns_alias',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

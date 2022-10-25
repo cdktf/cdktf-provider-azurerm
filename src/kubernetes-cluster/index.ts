@@ -115,6 +115,10 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#workload_identity_enabled KubernetesCluster#workload_identity_enabled}
+  */
+  readonly workloadIdentityEnabled?: boolean | cdktf.IResolvable;
+  /**
   * aci_connector_linux block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#aci_connector_linux KubernetesCluster#aci_connector_linux}
@@ -6148,7 +6152,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -6185,6 +6189,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._runCommandEnabled = config.runCommandEnabled;
     this._skuTier = config.skuTier;
     this._tags = config.tags;
+    this._workloadIdentityEnabled = config.workloadIdentityEnabled;
     this._aciConnectorLinux.internalValue = config.aciConnectorLinux;
     this._autoScalerProfile.internalValue = config.autoScalerProfile;
     this._azureActiveDirectoryRoleBasedAccessControl.internalValue = config.azureActiveDirectoryRoleBasedAccessControl;
@@ -6662,6 +6667,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // workload_identity_enabled - computed: false, optional: true, required: false
+  private _workloadIdentityEnabled?: boolean | cdktf.IResolvable; 
+  public get workloadIdentityEnabled() {
+    return this.getBooleanAttribute('workload_identity_enabled');
+  }
+  public set workloadIdentityEnabled(value: boolean | cdktf.IResolvable) {
+    this._workloadIdentityEnabled = value;
+  }
+  public resetWorkloadIdentityEnabled() {
+    this._workloadIdentityEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workloadIdentityEnabledInput() {
+    return this._workloadIdentityEnabled;
+  }
+
   // aci_connector_linux - computed: false, optional: true, required: false
   private _aciConnectorLinux = new KubernetesClusterAciConnectorLinuxOutputReference(this, "aci_connector_linux");
   public get aciConnectorLinux() {
@@ -6963,6 +6984,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       run_command_enabled: cdktf.booleanToTerraform(this._runCommandEnabled),
       sku_tier: cdktf.stringToTerraform(this._skuTier),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      workload_identity_enabled: cdktf.booleanToTerraform(this._workloadIdentityEnabled),
       aci_connector_linux: kubernetesClusterAciConnectorLinuxToTerraform(this._aciConnectorLinux.internalValue),
       auto_scaler_profile: kubernetesClusterAutoScalerProfileToTerraform(this._autoScalerProfile.internalValue),
       azure_active_directory_role_based_access_control: kubernetesClusterAzureActiveDirectoryRoleBasedAccessControlToTerraform(this._azureActiveDirectoryRoleBasedAccessControl.internalValue),

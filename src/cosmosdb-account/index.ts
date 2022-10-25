@@ -1592,7 +1592,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cosmosdb_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1957,6 +1957,16 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     return this.getStringAttribute('primary_readonly_key');
   }
 
+  // primary_readonly_sql_connection_string - computed: true, optional: false, required: false
+  public get primaryReadonlySqlConnectionString() {
+    return this.getStringAttribute('primary_readonly_sql_connection_string');
+  }
+
+  // primary_sql_connection_string - computed: true, optional: false, required: false
+  public get primarySqlConnectionString() {
+    return this.getStringAttribute('primary_sql_connection_string');
+  }
+
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
@@ -1999,6 +2009,16 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   // secondary_readonly_key - computed: true, optional: false, required: false
   public get secondaryReadonlyKey() {
     return this.getStringAttribute('secondary_readonly_key');
+  }
+
+  // secondary_readonly_sql_connection_string - computed: true, optional: false, required: false
+  public get secondaryReadonlySqlConnectionString() {
+    return this.getStringAttribute('secondary_readonly_sql_connection_string');
+  }
+
+  // secondary_sql_connection_string - computed: true, optional: false, required: false
+  public get secondarySqlConnectionString() {
+    return this.getStringAttribute('secondary_sql_connection_string');
   }
 
   // tags - computed: false, optional: true, required: false

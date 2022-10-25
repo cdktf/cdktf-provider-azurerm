@@ -228,7 +228,7 @@ export class VirtualMachineDataDiskAttachment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_machine_data_disk_attachment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

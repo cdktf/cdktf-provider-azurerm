@@ -189,7 +189,7 @@ export class AppServiceCertificateBinding extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_service_certificate_binding',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
