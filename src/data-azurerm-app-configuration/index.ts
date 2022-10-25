@@ -29,6 +29,154 @@ export interface DataAzurermAppConfigurationConfig extends cdktf.TerraformMetaAr
   */
   readonly timeouts?: DataAzurermAppConfigurationTimeouts;
 }
+export interface DataAzurermAppConfigurationEncryption {
+}
+
+export function dataAzurermAppConfigurationEncryptionToTerraform(struct?: DataAzurermAppConfigurationEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermAppConfigurationEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermAppConfigurationEncryption | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermAppConfigurationEncryption | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // identity_client_id - computed: true, optional: false, required: false
+  public get identityClientId() {
+    return this.getStringAttribute('identity_client_id');
+  }
+
+  // key_vault_key_identifier - computed: true, optional: false, required: false
+  public get keyVaultKeyIdentifier() {
+    return this.getStringAttribute('key_vault_key_identifier');
+  }
+}
+
+export class DataAzurermAppConfigurationEncryptionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermAppConfigurationEncryptionOutputReference {
+    return new DataAzurermAppConfigurationEncryptionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermAppConfigurationIdentity {
+}
+
+export function dataAzurermAppConfigurationIdentityToTerraform(struct?: DataAzurermAppConfigurationIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermAppConfigurationIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermAppConfigurationIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermAppConfigurationIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // identity_ids - computed: true, optional: false, required: false
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
+
+export class DataAzurermAppConfigurationIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermAppConfigurationIdentityOutputReference {
+    return new DataAzurermAppConfigurationIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermAppConfigurationPrimaryReadKey {
 }
 
@@ -427,7 +575,7 @@ export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_app_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -448,6 +596,12 @@ export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
+  // encryption - computed: true, optional: false, required: false
+  private _encryption = new DataAzurermAppConfigurationEncryptionList(this, "encryption", false);
+  public get encryption() {
+    return this._encryption;
+  }
+
   // endpoint - computed: true, optional: false, required: false
   public get endpoint() {
     return this.getStringAttribute('endpoint');
@@ -467,6 +621,17 @@ export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // identity - computed: true, optional: false, required: false
+  private _identity = new DataAzurermAppConfigurationIdentityList(this, "identity", false);
+  public get identity() {
+    return this._identity;
+  }
+
+  // local_auth_enabled - computed: true, optional: false, required: false
+  public get localAuthEnabled() {
+    return this.getBooleanAttribute('local_auth_enabled');
   }
 
   // location - computed: true, optional: false, required: false
@@ -504,6 +669,16 @@ export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
     return this.getStringAttribute('public_network_access');
   }
 
+  // public_network_access_enabled - computed: true, optional: false, required: false
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+
+  // purge_protection_enabled - computed: true, optional: false, required: false
+  public get purgeProtectionEnabled() {
+    return this.getBooleanAttribute('purge_protection_enabled');
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
@@ -532,6 +707,11 @@ export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
   // sku - computed: true, optional: false, required: false
   public get sku() {
     return this.getStringAttribute('sku');
+  }
+
+  // soft_delete_retention_days - computed: true, optional: false, required: false
+  public get softDeleteRetentionDays() {
+    return this.getNumberAttribute('soft_delete_retention_days');
   }
 
   // tags - computed: true, optional: false, required: false

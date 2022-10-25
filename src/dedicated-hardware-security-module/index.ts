@@ -43,6 +43,12 @@ export interface DedicatedHardwareSecurityModuleConfig extends cdktf.TerraformMe
   */
   readonly zones?: string[];
   /**
+  * management_network_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module#management_network_profile DedicatedHardwareSecurityModule#management_network_profile}
+  */
+  readonly managementNetworkProfile?: DedicatedHardwareSecurityModuleManagementNetworkProfile;
+  /**
   * network_profile block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module#network_profile DedicatedHardwareSecurityModule#network_profile}
@@ -54,6 +60,92 @@ export interface DedicatedHardwareSecurityModuleConfig extends cdktf.TerraformMe
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module#timeouts DedicatedHardwareSecurityModule#timeouts}
   */
   readonly timeouts?: DedicatedHardwareSecurityModuleTimeouts;
+}
+export interface DedicatedHardwareSecurityModuleManagementNetworkProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module#network_interface_private_ip_addresses DedicatedHardwareSecurityModule#network_interface_private_ip_addresses}
+  */
+  readonly networkInterfacePrivateIpAddresses: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module#subnet_id DedicatedHardwareSecurityModule#subnet_id}
+  */
+  readonly subnetId: string;
+}
+
+export function dedicatedHardwareSecurityModuleManagementNetworkProfileToTerraform(struct?: DedicatedHardwareSecurityModuleManagementNetworkProfileOutputReference | DedicatedHardwareSecurityModuleManagementNetworkProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    network_interface_private_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.networkInterfacePrivateIpAddresses),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
+export class DedicatedHardwareSecurityModuleManagementNetworkProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DedicatedHardwareSecurityModuleManagementNetworkProfile | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._networkInterfacePrivateIpAddresses !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.networkInterfacePrivateIpAddresses = this._networkInterfacePrivateIpAddresses;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DedicatedHardwareSecurityModuleManagementNetworkProfile | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._networkInterfacePrivateIpAddresses = undefined;
+      this._subnetId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._networkInterfacePrivateIpAddresses = value.networkInterfacePrivateIpAddresses;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // network_interface_private_ip_addresses - computed: false, optional: false, required: true
+  private _networkInterfacePrivateIpAddresses?: string[]; 
+  public get networkInterfacePrivateIpAddresses() {
+    return cdktf.Fn.tolist(this.getListAttribute('network_interface_private_ip_addresses'));
+  }
+  public set networkInterfacePrivateIpAddresses(value: string[]) {
+    this._networkInterfacePrivateIpAddresses = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInterfacePrivateIpAddressesInput() {
+    return this._networkInterfacePrivateIpAddresses;
+  }
+
+  // subnet_id - computed: false, optional: false, required: true
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
 }
 export interface DedicatedHardwareSecurityModuleNetworkProfile {
   /**
@@ -324,7 +416,7 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_dedicated_hardware_security_module',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -343,6 +435,7 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
     this._stampId = config.stampId;
     this._tags = config.tags;
     this._zones = config.zones;
+    this._managementNetworkProfile.internalValue = config.managementNetworkProfile;
     this._networkProfile.internalValue = config.networkProfile;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -467,6 +560,22 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
     return this._zones;
   }
 
+  // management_network_profile - computed: false, optional: true, required: false
+  private _managementNetworkProfile = new DedicatedHardwareSecurityModuleManagementNetworkProfileOutputReference(this, "management_network_profile");
+  public get managementNetworkProfile() {
+    return this._managementNetworkProfile;
+  }
+  public putManagementNetworkProfile(value: DedicatedHardwareSecurityModuleManagementNetworkProfile) {
+    this._managementNetworkProfile.internalValue = value;
+  }
+  public resetManagementNetworkProfile() {
+    this._managementNetworkProfile.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managementNetworkProfileInput() {
+    return this._managementNetworkProfile.internalValue;
+  }
+
   // network_profile - computed: false, optional: false, required: true
   private _networkProfile = new DedicatedHardwareSecurityModuleNetworkProfileOutputReference(this, "network_profile");
   public get networkProfile() {
@@ -510,6 +619,7 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
       stamp_id: cdktf.stringToTerraform(this._stampId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
+      management_network_profile: dedicatedHardwareSecurityModuleManagementNetworkProfileToTerraform(this._managementNetworkProfile.internalValue),
       network_profile: dedicatedHardwareSecurityModuleNetworkProfileToTerraform(this._networkProfile.internalValue),
       timeouts: dedicatedHardwareSecurityModuleTimeoutsToTerraform(this._timeouts.internalValue),
     };

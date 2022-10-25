@@ -224,7 +224,7 @@ export class MysqlFlexibleServerFirewallRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mysql_flexible_server_firewall_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

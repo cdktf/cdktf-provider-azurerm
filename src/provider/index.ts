@@ -166,6 +166,28 @@ export function azurermProviderFeaturesApiManagementToTerraform(struct?: Azurerm
   }
 }
 
+export interface AzurermProviderFeaturesAppConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}
+  */
+  readonly purgeSoftDeleteOnDestroy?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#recover_soft_deleted AzurermProvider#recover_soft_deleted}
+  */
+  readonly recoverSoftDeleted?: boolean | cdktf.IResolvable;
+}
+
+export function azurermProviderFeaturesAppConfigurationToTerraform(struct?: AzurermProviderFeaturesAppConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    purge_soft_delete_on_destroy: cdktf.booleanToTerraform(struct!.purgeSoftDeleteOnDestroy),
+    recover_soft_deleted: cdktf.booleanToTerraform(struct!.recoverSoftDeleted),
+  }
+}
+
 export interface AzurermProviderFeaturesApplicationInsights {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#disable_generated_rule AzurermProvider#disable_generated_rule}
@@ -405,6 +427,12 @@ export interface AzurermProviderFeatures {
   */
   readonly apiManagement?: AzurermProviderFeaturesApiManagement;
   /**
+  * app_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#app_configuration AzurermProvider#app_configuration}
+  */
+  readonly appConfiguration?: AzurermProviderFeaturesAppConfiguration;
+  /**
   * application_insights block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#application_insights AzurermProvider#application_insights}
@@ -467,6 +495,7 @@ export function azurermProviderFeaturesToTerraform(struct?: AzurermProviderFeatu
   }
   return {
     api_management: azurermProviderFeaturesApiManagementToTerraform(struct!.apiManagement),
+    app_configuration: azurermProviderFeaturesAppConfigurationToTerraform(struct!.appConfiguration),
     application_insights: azurermProviderFeaturesApplicationInsightsToTerraform(struct!.applicationInsights),
     cognitive_account: azurermProviderFeaturesCognitiveAccountToTerraform(struct!.cognitiveAccount),
     key_vault: azurermProviderFeaturesKeyVaultToTerraform(struct!.keyVault),
@@ -506,7 +535,7 @@ export class AzurermProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'azurerm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       terraformProviderSource: 'azurerm'

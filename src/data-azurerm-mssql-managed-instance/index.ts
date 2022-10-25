@@ -205,7 +205,7 @@ export class DataAzurermMssqlManagedInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_mssql_managed_instance',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

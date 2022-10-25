@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface CdnFrontdoorRouteConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_frontdoor_route#cdn_frontdoor_custom_domain_ids CdnFrontdoorRoute#cdn_frontdoor_custom_domain_ids}
+  */
+  readonly cdnFrontdoorCustomDomainIds?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_frontdoor_route#cdn_frontdoor_endpoint_id CdnFrontdoorRoute#cdn_frontdoor_endpoint_id}
   */
   readonly cdnFrontdoorEndpointId: string;
@@ -46,6 +50,10 @@ export interface CdnFrontdoorRouteConfig extends cdktf.TerraformMetaArguments {
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_frontdoor_route#link_to_default_domain CdnFrontdoorRoute#link_to_default_domain}
+  */
+  readonly linkToDefaultDomain?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_frontdoor_route#name CdnFrontdoorRoute#name}
   */
@@ -400,7 +408,7 @@ export class CdnFrontdoorRoute extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cdn_frontdoor_route',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -411,6 +419,7 @@ export class CdnFrontdoorRoute extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._cdnFrontdoorCustomDomainIds = config.cdnFrontdoorCustomDomainIds;
     this._cdnFrontdoorEndpointId = config.cdnFrontdoorEndpointId;
     this._cdnFrontdoorOriginGroupId = config.cdnFrontdoorOriginGroupId;
     this._cdnFrontdoorOriginIds = config.cdnFrontdoorOriginIds;
@@ -420,6 +429,7 @@ export class CdnFrontdoorRoute extends cdktf.TerraformResource {
     this._forwardingProtocol = config.forwardingProtocol;
     this._httpsRedirectEnabled = config.httpsRedirectEnabled;
     this._id = config.id;
+    this._linkToDefaultDomain = config.linkToDefaultDomain;
     this._name = config.name;
     this._patternsToMatch = config.patternsToMatch;
     this._supportedProtocols = config.supportedProtocols;
@@ -430,6 +440,22 @@ export class CdnFrontdoorRoute extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // cdn_frontdoor_custom_domain_ids - computed: false, optional: true, required: false
+  private _cdnFrontdoorCustomDomainIds?: string[]; 
+  public get cdnFrontdoorCustomDomainIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('cdn_frontdoor_custom_domain_ids'));
+  }
+  public set cdnFrontdoorCustomDomainIds(value: string[]) {
+    this._cdnFrontdoorCustomDomainIds = value;
+  }
+  public resetCdnFrontdoorCustomDomainIds() {
+    this._cdnFrontdoorCustomDomainIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cdnFrontdoorCustomDomainIdsInput() {
+    return this._cdnFrontdoorCustomDomainIds;
+  }
 
   // cdn_frontdoor_endpoint_id - computed: false, optional: false, required: true
   private _cdnFrontdoorEndpointId?: string; 
@@ -489,7 +515,7 @@ export class CdnFrontdoorRoute extends cdktf.TerraformResource {
   // cdn_frontdoor_rule_set_ids - computed: false, optional: true, required: false
   private _cdnFrontdoorRuleSetIds?: string[]; 
   public get cdnFrontdoorRuleSetIds() {
-    return this.getListAttribute('cdn_frontdoor_rule_set_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('cdn_frontdoor_rule_set_ids'));
   }
   public set cdnFrontdoorRuleSetIds(value: string[]) {
     this._cdnFrontdoorRuleSetIds = value;
@@ -564,6 +590,22 @@ export class CdnFrontdoorRoute extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // link_to_default_domain - computed: false, optional: true, required: false
+  private _linkToDefaultDomain?: boolean | cdktf.IResolvable; 
+  public get linkToDefaultDomain() {
+    return this.getBooleanAttribute('link_to_default_domain');
+  }
+  public set linkToDefaultDomain(value: boolean | cdktf.IResolvable) {
+    this._linkToDefaultDomain = value;
+  }
+  public resetLinkToDefaultDomain() {
+    this._linkToDefaultDomain = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkToDefaultDomainInput() {
+    return this._linkToDefaultDomain;
   }
 
   // name - computed: false, optional: false, required: true
@@ -643,6 +685,7 @@ export class CdnFrontdoorRoute extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      cdn_frontdoor_custom_domain_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._cdnFrontdoorCustomDomainIds),
       cdn_frontdoor_endpoint_id: cdktf.stringToTerraform(this._cdnFrontdoorEndpointId),
       cdn_frontdoor_origin_group_id: cdktf.stringToTerraform(this._cdnFrontdoorOriginGroupId),
       cdn_frontdoor_origin_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._cdnFrontdoorOriginIds),
@@ -652,6 +695,7 @@ export class CdnFrontdoorRoute extends cdktf.TerraformResource {
       forwarding_protocol: cdktf.stringToTerraform(this._forwardingProtocol),
       https_redirect_enabled: cdktf.booleanToTerraform(this._httpsRedirectEnabled),
       id: cdktf.stringToTerraform(this._id),
+      link_to_default_domain: cdktf.booleanToTerraform(this._linkToDefaultDomain),
       name: cdktf.stringToTerraform(this._name),
       patterns_to_match: cdktf.listMapper(cdktf.stringToTerraform, false)(this._patternsToMatch),
       supported_protocols: cdktf.listMapper(cdktf.stringToTerraform, false)(this._supportedProtocols),

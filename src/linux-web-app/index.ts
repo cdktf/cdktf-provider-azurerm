@@ -20,6 +20,12 @@ export interface LinuxWebAppConfig extends cdktf.TerraformMetaArguments {
   */
   readonly clientCertificateEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Paths to exclude when using client certificates, separated by ;
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_certificate_exclusion_paths LinuxWebApp#client_certificate_exclusion_paths}
+  */
+  readonly clientCertificateExclusionPaths?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_certificate_mode LinuxWebApp#client_certificate_mode}
   */
   readonly clientCertificateMode?: string;
@@ -6108,7 +6114,7 @@ export class LinuxWebApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_web_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -6122,6 +6128,7 @@ export class LinuxWebApp extends cdktf.TerraformResource {
     this._appSettings = config.appSettings;
     this._clientAffinityEnabled = config.clientAffinityEnabled;
     this._clientCertificateEnabled = config.clientCertificateEnabled;
+    this._clientCertificateExclusionPaths = config.clientCertificateExclusionPaths;
     this._clientCertificateMode = config.clientCertificateMode;
     this._enabled = config.enabled;
     this._httpsOnly = config.httpsOnly;
@@ -6195,6 +6202,22 @@ export class LinuxWebApp extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get clientCertificateEnabledInput() {
     return this._clientCertificateEnabled;
+  }
+
+  // client_certificate_exclusion_paths - computed: false, optional: true, required: false
+  private _clientCertificateExclusionPaths?: string; 
+  public get clientCertificateExclusionPaths() {
+    return this.getStringAttribute('client_certificate_exclusion_paths');
+  }
+  public set clientCertificateExclusionPaths(value: string) {
+    this._clientCertificateExclusionPaths = value;
+  }
+  public resetClientCertificateExclusionPaths() {
+    this._clientCertificateExclusionPaths = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientCertificateExclusionPathsInput() {
+    return this._clientCertificateExclusionPaths;
   }
 
   // client_certificate_mode - computed: false, optional: true, required: false
@@ -6568,6 +6591,7 @@ export class LinuxWebApp extends cdktf.TerraformResource {
       app_settings: cdktf.hashMapper(cdktf.stringToTerraform)(this._appSettings),
       client_affinity_enabled: cdktf.booleanToTerraform(this._clientAffinityEnabled),
       client_certificate_enabled: cdktf.booleanToTerraform(this._clientCertificateEnabled),
+      client_certificate_exclusion_paths: cdktf.stringToTerraform(this._clientCertificateExclusionPaths),
       client_certificate_mode: cdktf.stringToTerraform(this._clientCertificateMode),
       enabled: cdktf.booleanToTerraform(this._enabled),
       https_only: cdktf.booleanToTerraform(this._httpsOnly),

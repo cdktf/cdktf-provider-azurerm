@@ -329,7 +329,7 @@ export class FluidRelayServer extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_fluid_relay_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -406,6 +406,11 @@ export class FluidRelayServer extends cdktf.TerraformResource {
     return this.getListAttribute('orderer_endpoints');
   }
 
+  // primary_key - computed: true, optional: false, required: false
+  public get primaryKey() {
+    return this.getStringAttribute('primary_key');
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
@@ -417,6 +422,16 @@ export class FluidRelayServer extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName;
+  }
+
+  // secondary_key - computed: true, optional: false, required: false
+  public get secondaryKey() {
+    return this.getStringAttribute('secondary_key');
+  }
+
+  // service_endpoints - computed: true, optional: false, required: false
+  public get serviceEndpoints() {
+    return this.getListAttribute('service_endpoints');
   }
 
   // storage_endpoints - computed: true, optional: false, required: false

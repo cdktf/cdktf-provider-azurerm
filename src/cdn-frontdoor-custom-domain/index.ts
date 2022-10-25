@@ -8,10 +8,6 @@ import * as cdktf from 'cdktf';
 
 export interface CdnFrontdoorCustomDomainConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_frontdoor_custom_domain#associate_with_cdn_frontdoor_route_id CdnFrontdoorCustomDomain#associate_with_cdn_frontdoor_route_id}
-  */
-  readonly associateWithCdnFrontdoorRouteId?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_frontdoor_custom_domain#cdn_frontdoor_profile_id CdnFrontdoorCustomDomain#cdn_frontdoor_profile_id}
   */
   readonly cdnFrontdoorProfileId: string;
@@ -349,7 +345,7 @@ export class CdnFrontdoorCustomDomain extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cdn_frontdoor_custom_domain',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -360,7 +356,6 @@ export class CdnFrontdoorCustomDomain extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
-    this._associateWithCdnFrontdoorRouteId = config.associateWithCdnFrontdoorRouteId;
     this._cdnFrontdoorProfileId = config.cdnFrontdoorProfileId;
     this._dnsZoneId = config.dnsZoneId;
     this._hostName = config.hostName;
@@ -373,22 +368,6 @@ export class CdnFrontdoorCustomDomain extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // associate_with_cdn_frontdoor_route_id - computed: false, optional: true, required: false
-  private _associateWithCdnFrontdoorRouteId?: string; 
-  public get associateWithCdnFrontdoorRouteId() {
-    return this.getStringAttribute('associate_with_cdn_frontdoor_route_id');
-  }
-  public set associateWithCdnFrontdoorRouteId(value: string) {
-    this._associateWithCdnFrontdoorRouteId = value;
-  }
-  public resetAssociateWithCdnFrontdoorRouteId() {
-    this._associateWithCdnFrontdoorRouteId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get associateWithCdnFrontdoorRouteIdInput() {
-    return this._associateWithCdnFrontdoorRouteId;
-  }
 
   // cdn_frontdoor_profile_id - computed: false, optional: false, required: true
   private _cdnFrontdoorProfileId?: string; 
@@ -506,7 +485,6 @@ export class CdnFrontdoorCustomDomain extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      associate_with_cdn_frontdoor_route_id: cdktf.stringToTerraform(this._associateWithCdnFrontdoorRouteId),
       cdn_frontdoor_profile_id: cdktf.stringToTerraform(this._cdnFrontdoorProfileId),
       dns_zone_id: cdktf.stringToTerraform(this._dnsZoneId),
       host_name: cdktf.stringToTerraform(this._hostName),

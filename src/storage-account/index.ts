@@ -133,6 +133,12 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly identity?: StorageAccountIdentity;
   /**
+  * immutability_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#immutability_policy StorageAccount#immutability_policy}
+  */
+  readonly immutabilityPolicy?: StorageAccountImmutabilityPolicy;
+  /**
   * network_rules block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#network_rules StorageAccount#network_rules}
@@ -1294,6 +1300,116 @@ export class StorageAccountIdentityOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type;
+  }
+}
+export interface StorageAccountImmutabilityPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#allow_protected_append_writes StorageAccount#allow_protected_append_writes}
+  */
+  readonly allowProtectedAppendWrites: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#period_since_creation_in_days StorageAccount#period_since_creation_in_days}
+  */
+  readonly periodSinceCreationInDays: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#state StorageAccount#state}
+  */
+  readonly state: string;
+}
+
+export function storageAccountImmutabilityPolicyToTerraform(struct?: StorageAccountImmutabilityPolicyOutputReference | StorageAccountImmutabilityPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    allow_protected_append_writes: cdktf.booleanToTerraform(struct!.allowProtectedAppendWrites),
+    period_since_creation_in_days: cdktf.numberToTerraform(struct!.periodSinceCreationInDays),
+    state: cdktf.stringToTerraform(struct!.state),
+  }
+}
+
+export class StorageAccountImmutabilityPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): StorageAccountImmutabilityPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowProtectedAppendWrites !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowProtectedAppendWrites = this._allowProtectedAppendWrites;
+    }
+    if (this._periodSinceCreationInDays !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.periodSinceCreationInDays = this._periodSinceCreationInDays;
+    }
+    if (this._state !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.state = this._state;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountImmutabilityPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._allowProtectedAppendWrites = undefined;
+      this._periodSinceCreationInDays = undefined;
+      this._state = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowProtectedAppendWrites = value.allowProtectedAppendWrites;
+      this._periodSinceCreationInDays = value.periodSinceCreationInDays;
+      this._state = value.state;
+    }
+  }
+
+  // allow_protected_append_writes - computed: false, optional: false, required: true
+  private _allowProtectedAppendWrites?: boolean | cdktf.IResolvable; 
+  public get allowProtectedAppendWrites() {
+    return this.getBooleanAttribute('allow_protected_append_writes');
+  }
+  public set allowProtectedAppendWrites(value: boolean | cdktf.IResolvable) {
+    this._allowProtectedAppendWrites = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowProtectedAppendWritesInput() {
+    return this._allowProtectedAppendWrites;
+  }
+
+  // period_since_creation_in_days - computed: false, optional: false, required: true
+  private _periodSinceCreationInDays?: number; 
+  public get periodSinceCreationInDays() {
+    return this.getNumberAttribute('period_since_creation_in_days');
+  }
+  public set periodSinceCreationInDays(value: number) {
+    this._periodSinceCreationInDays = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get periodSinceCreationInDaysInput() {
+    return this._periodSinceCreationInDays;
+  }
+
+  // state - computed: false, optional: false, required: true
+  private _state?: string; 
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+  public set state(value: string) {
+    this._state = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stateInput() {
+    return this._state;
   }
 }
 export interface StorageAccountNetworkRulesPrivateLinkAccess {
@@ -3321,7 +3437,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.26.0',
+        providerVersion: '3.28.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -3360,6 +3476,7 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._customDomain.internalValue = config.customDomain;
     this._customerManagedKey.internalValue = config.customerManagedKey;
     this._identity.internalValue = config.identity;
+    this._immutabilityPolicy.internalValue = config.immutabilityPolicy;
     this._networkRules.internalValue = config.networkRules;
     this._queueProperties.internalValue = config.queueProperties;
     this._routing.internalValue = config.routing;
@@ -3965,6 +4082,22 @@ export class StorageAccount extends cdktf.TerraformResource {
     return this._identity.internalValue;
   }
 
+  // immutability_policy - computed: false, optional: true, required: false
+  private _immutabilityPolicy = new StorageAccountImmutabilityPolicyOutputReference(this, "immutability_policy");
+  public get immutabilityPolicy() {
+    return this._immutabilityPolicy;
+  }
+  public putImmutabilityPolicy(value: StorageAccountImmutabilityPolicy) {
+    this._immutabilityPolicy.internalValue = value;
+  }
+  public resetImmutabilityPolicy() {
+    this._immutabilityPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get immutabilityPolicyInput() {
+    return this._immutabilityPolicy.internalValue;
+  }
+
   // network_rules - computed: false, optional: true, required: false
   private _networkRules = new StorageAccountNetworkRulesOutputReference(this, "network_rules");
   public get networkRules() {
@@ -4095,6 +4228,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       custom_domain: storageAccountCustomDomainToTerraform(this._customDomain.internalValue),
       customer_managed_key: storageAccountCustomerManagedKeyToTerraform(this._customerManagedKey.internalValue),
       identity: storageAccountIdentityToTerraform(this._identity.internalValue),
+      immutability_policy: storageAccountImmutabilityPolicyToTerraform(this._immutabilityPolicy.internalValue),
       network_rules: storageAccountNetworkRulesToTerraform(this._networkRules.internalValue),
       queue_properties: storageAccountQueuePropertiesToTerraform(this._queueProperties.internalValue),
       routing: storageAccountRoutingToTerraform(this._routing.internalValue),
