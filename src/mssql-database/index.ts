@@ -995,7 +995,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1186,7 +1186,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
     return this._licenseType;
   }
 
-  // maintenance_configuration_name - computed: false, optional: true, required: false
+  // maintenance_configuration_name - computed: true, optional: true, required: false
   private _maintenanceConfigurationName?: string; 
   public get maintenanceConfigurationName() {
     return this.getStringAttribute('maintenance_configuration_name');

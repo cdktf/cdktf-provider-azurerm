@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface MssqlServerTransparentDataEncryptionConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption#auto_rotation_enabled MssqlServerTransparentDataEncryption#auto_rotation_enabled}
+  */
+  readonly autoRotationEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption#id MssqlServerTransparentDataEncryption#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -212,7 +216,7 @@ export class MssqlServerTransparentDataEncryption extends cdktf.TerraformResourc
       terraformResourceType: 'azurerm_mssql_server_transparent_data_encryption',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -223,6 +227,7 @@ export class MssqlServerTransparentDataEncryption extends cdktf.TerraformResourc
       connection: config.connection,
       forEach: config.forEach
     });
+    this._autoRotationEnabled = config.autoRotationEnabled;
     this._id = config.id;
     this._keyVaultKeyId = config.keyVaultKeyId;
     this._serverId = config.serverId;
@@ -232,6 +237,22 @@ export class MssqlServerTransparentDataEncryption extends cdktf.TerraformResourc
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // auto_rotation_enabled - computed: false, optional: true, required: false
+  private _autoRotationEnabled?: boolean | cdktf.IResolvable; 
+  public get autoRotationEnabled() {
+    return this.getBooleanAttribute('auto_rotation_enabled');
+  }
+  public set autoRotationEnabled(value: boolean | cdktf.IResolvable) {
+    this._autoRotationEnabled = value;
+  }
+  public resetAutoRotationEnabled() {
+    this._autoRotationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoRotationEnabledInput() {
+    return this._autoRotationEnabled;
+  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -300,6 +321,7 @@ export class MssqlServerTransparentDataEncryption extends cdktf.TerraformResourc
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      auto_rotation_enabled: cdktf.booleanToTerraform(this._autoRotationEnabled),
       id: cdktf.stringToTerraform(this._id),
       key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
       server_id: cdktf.stringToTerraform(this._serverId),

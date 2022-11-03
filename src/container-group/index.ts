@@ -12,6 +12,10 @@ export interface ContainerGroupConfig extends cdktf.TerraformMetaArguments {
   */
   readonly dnsNameLabel?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#dns_name_label_reuse_policy ContainerGroup#dns_name_label_reuse_policy}
+  */
+  readonly dnsNameLabelReusePolicy?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#exposed_port ContainerGroup#exposed_port}
   */
   readonly exposedPort?: ContainerGroupExposedPort[] | cdktf.IResolvable;
@@ -55,9 +59,17 @@ export interface ContainerGroupConfig extends cdktf.TerraformMetaArguments {
   */
   readonly restartPolicy?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#subnet_ids ContainerGroup#subnet_ids}
+  */
+  readonly subnetIds?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#tags ContainerGroup#tags}
   */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#zones ContainerGroup#zones}
+  */
+  readonly zones?: string[];
   /**
   * container block
   * 
@@ -2670,15 +2682,21 @@ export interface ContainerGroupImageRegistryCredential {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#password ContainerGroup#password}
   */
-  readonly password: string;
+  readonly password?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#server ContainerGroup#server}
   */
   readonly server: string;
   /**
+  * The User Assigned Identity to use for Container Registry access.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#user_assigned_identity_id ContainerGroup#user_assigned_identity_id}
+  */
+  readonly userAssignedIdentityId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#username ContainerGroup#username}
   */
-  readonly username: string;
+  readonly username?: string;
 }
 
 export function containerGroupImageRegistryCredentialToTerraform(struct?: ContainerGroupImageRegistryCredential | cdktf.IResolvable): any {
@@ -2689,6 +2707,7 @@ export function containerGroupImageRegistryCredentialToTerraform(struct?: Contai
   return {
     password: cdktf.stringToTerraform(struct!.password),
     server: cdktf.stringToTerraform(struct!.server),
+    user_assigned_identity_id: cdktf.stringToTerraform(struct!.userAssignedIdentityId),
     username: cdktf.stringToTerraform(struct!.username),
   }
 }
@@ -2721,6 +2740,10 @@ export class ContainerGroupImageRegistryCredentialOutputReference extends cdktf.
       hasAnyValues = true;
       internalValueResult.server = this._server;
     }
+    if (this._userAssignedIdentityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userAssignedIdentityId = this._userAssignedIdentityId;
+    }
     if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
@@ -2734,6 +2757,7 @@ export class ContainerGroupImageRegistryCredentialOutputReference extends cdktf.
       this.resolvableValue = undefined;
       this._password = undefined;
       this._server = undefined;
+      this._userAssignedIdentityId = undefined;
       this._username = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -2745,17 +2769,21 @@ export class ContainerGroupImageRegistryCredentialOutputReference extends cdktf.
       this.resolvableValue = undefined;
       this._password = value.password;
       this._server = value.server;
+      this._userAssignedIdentityId = value.userAssignedIdentityId;
       this._username = value.username;
     }
   }
 
-  // password - computed: false, optional: false, required: true
+  // password - computed: false, optional: true, required: false
   private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
   public set password(value: string) {
     this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
@@ -2775,13 +2803,32 @@ export class ContainerGroupImageRegistryCredentialOutputReference extends cdktf.
     return this._server;
   }
 
-  // username - computed: false, optional: false, required: true
+  // user_assigned_identity_id - computed: false, optional: true, required: false
+  private _userAssignedIdentityId?: string; 
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+  public set userAssignedIdentityId(value: string) {
+    this._userAssignedIdentityId = value;
+  }
+  public resetUserAssignedIdentityId() {
+    this._userAssignedIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignedIdentityIdInput() {
+    return this._userAssignedIdentityId;
+  }
+
+  // username - computed: false, optional: true, required: false
   private _username?: string; 
   public get username() {
     return this.getStringAttribute('username');
   }
   public set username(value: string) {
     this._username = value;
+  }
+  public resetUsername() {
+    this._username = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
@@ -3644,7 +3691,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -3656,6 +3703,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._dnsNameLabel = config.dnsNameLabel;
+    this._dnsNameLabelReusePolicy = config.dnsNameLabelReusePolicy;
     this._exposedPort.internalValue = config.exposedPort;
     this._id = config.id;
     this._ipAddressType = config.ipAddressType;
@@ -3666,7 +3714,9 @@ export class ContainerGroup extends cdktf.TerraformResource {
     this._osType = config.osType;
     this._resourceGroupName = config.resourceGroupName;
     this._restartPolicy = config.restartPolicy;
+    this._subnetIds = config.subnetIds;
     this._tags = config.tags;
+    this._zones = config.zones;
     this._container.internalValue = config.container;
     this._diagnostics.internalValue = config.diagnostics;
     this._dnsConfig.internalValue = config.dnsConfig;
@@ -3694,6 +3744,22 @@ export class ContainerGroup extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get dnsNameLabelInput() {
     return this._dnsNameLabel;
+  }
+
+  // dns_name_label_reuse_policy - computed: false, optional: true, required: false
+  private _dnsNameLabelReusePolicy?: string; 
+  public get dnsNameLabelReusePolicy() {
+    return this.getStringAttribute('dns_name_label_reuse_policy');
+  }
+  public set dnsNameLabelReusePolicy(value: string) {
+    this._dnsNameLabelReusePolicy = value;
+  }
+  public resetDnsNameLabelReusePolicy() {
+    this._dnsNameLabelReusePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsNameLabelReusePolicyInput() {
+    return this._dnsNameLabelReusePolicy;
   }
 
   // exposed_port - computed: true, optional: true, required: false
@@ -3796,7 +3862,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // network_profile_id - computed: false, optional: true, required: false
+  // network_profile_id - computed: true, optional: true, required: false
   private _networkProfileId?: string; 
   public get networkProfileId() {
     return this.getStringAttribute('network_profile_id');
@@ -3854,6 +3920,22 @@ export class ContainerGroup extends cdktf.TerraformResource {
     return this._restartPolicy;
   }
 
+  // subnet_ids - computed: false, optional: true, required: false
+  private _subnetIds?: string[]; 
+  public get subnetIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('subnet_ids'));
+  }
+  public set subnetIds(value: string[]) {
+    this._subnetIds = value;
+  }
+  public resetSubnetIds() {
+    this._subnetIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdsInput() {
+    return this._subnetIds;
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string }; 
   public get tags() {
@@ -3868,6 +3950,22 @@ export class ContainerGroup extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
     return this._tags;
+  }
+
+  // zones - computed: false, optional: true, required: false
+  private _zones?: string[]; 
+  public get zones() {
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
+  }
+  public set zones(value: string[]) {
+    this._zones = value;
+  }
+  public resetZones() {
+    this._zones = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zonesInput() {
+    return this._zones;
   }
 
   // container - computed: false, optional: false, required: true
@@ -3986,6 +4084,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dns_name_label: cdktf.stringToTerraform(this._dnsNameLabel),
+      dns_name_label_reuse_policy: cdktf.stringToTerraform(this._dnsNameLabelReusePolicy),
       exposed_port: cdktf.listMapper(containerGroupExposedPortToTerraform, false)(this._exposedPort.internalValue),
       id: cdktf.stringToTerraform(this._id),
       ip_address_type: cdktf.stringToTerraform(this._ipAddressType),
@@ -3996,7 +4095,9 @@ export class ContainerGroup extends cdktf.TerraformResource {
       os_type: cdktf.stringToTerraform(this._osType),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       restart_policy: cdktf.stringToTerraform(this._restartPolicy),
+      subnet_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._subnetIds),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
       container: cdktf.listMapper(containerGroupContainerToTerraform, true)(this._container.internalValue),
       diagnostics: containerGroupDiagnosticsToTerraform(this._diagnostics.internalValue),
       dns_config: containerGroupDnsConfigToTerraform(this._dnsConfig.internalValue),

@@ -347,11 +347,11 @@ export interface CdnFrontdoorRuleActionsRouteConfigurationOverrideAction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_frontdoor_rule#cache_duration CdnFrontdoorRule#cache_duration}
   */
-  readonly cacheDuration: string;
+  readonly cacheDuration?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_frontdoor_rule#cdn_frontdoor_origin_group_id CdnFrontdoorRule#cdn_frontdoor_origin_group_id}
   */
-  readonly cdnFrontdoorOriginGroupId: string;
+  readonly cdnFrontdoorOriginGroupId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_frontdoor_rule#compression_enabled CdnFrontdoorRule#compression_enabled}
   */
@@ -470,7 +470,7 @@ export class CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputRefere
     return this._cacheBehavior;
   }
 
-  // cache_duration - computed: false, optional: false, required: true
+  // cache_duration - computed: false, optional: true, required: false
   private _cacheDuration?: string; 
   public get cacheDuration() {
     return this.getStringAttribute('cache_duration');
@@ -478,18 +478,24 @@ export class CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputRefere
   public set cacheDuration(value: string) {
     this._cacheDuration = value;
   }
+  public resetCacheDuration() {
+    this._cacheDuration = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get cacheDurationInput() {
     return this._cacheDuration;
   }
 
-  // cdn_frontdoor_origin_group_id - computed: false, optional: false, required: true
+  // cdn_frontdoor_origin_group_id - computed: false, optional: true, required: false
   private _cdnFrontdoorOriginGroupId?: string; 
   public get cdnFrontdoorOriginGroupId() {
     return this.getStringAttribute('cdn_frontdoor_origin_group_id');
   }
   public set cdnFrontdoorOriginGroupId(value: string) {
     this._cdnFrontdoorOriginGroupId = value;
+  }
+  public resetCdnFrontdoorOriginGroupId() {
+    this._cdnFrontdoorOriginGroupId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cdnFrontdoorOriginGroupIdInput() {
@@ -4976,7 +4982,7 @@ export class CdnFrontdoorRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cdn_frontdoor_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

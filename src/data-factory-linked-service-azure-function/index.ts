@@ -332,7 +332,7 @@ export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResour
       terraformResourceType: 'azurerm_data_factory_linked_service_azure_function',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

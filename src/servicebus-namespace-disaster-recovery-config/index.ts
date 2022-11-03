@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface ServicebusNamespaceDisasterRecoveryConfigConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_disaster_recovery_config#alias_authorization_rule_id ServicebusNamespaceDisasterRecoveryConfig#alias_authorization_rule_id}
+  */
+  readonly aliasAuthorizationRuleId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_disaster_recovery_config#id ServicebusNamespaceDisasterRecoveryConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -216,7 +220,7 @@ export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformRe
       terraformResourceType: 'azurerm_servicebus_namespace_disaster_recovery_config',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -227,6 +231,7 @@ export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformRe
       connection: config.connection,
       forEach: config.forEach
     });
+    this._aliasAuthorizationRuleId = config.aliasAuthorizationRuleId;
     this._id = config.id;
     this._name = config.name;
     this._partnerNamespaceId = config.partnerNamespaceId;
@@ -237,6 +242,22 @@ export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformRe
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // alias_authorization_rule_id - computed: false, optional: true, required: false
+  private _aliasAuthorizationRuleId?: string; 
+  public get aliasAuthorizationRuleId() {
+    return this.getStringAttribute('alias_authorization_rule_id');
+  }
+  public set aliasAuthorizationRuleId(value: string) {
+    this._aliasAuthorizationRuleId = value;
+  }
+  public resetAliasAuthorizationRuleId() {
+    this._aliasAuthorizationRuleId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aliasAuthorizationRuleIdInput() {
+    return this._aliasAuthorizationRuleId;
+  }
 
   // default_primary_key - computed: true, optional: false, required: false
   public get defaultPrimaryKey() {
@@ -335,6 +356,7 @@ export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformRe
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      alias_authorization_rule_id: cdktf.stringToTerraform(this._aliasAuthorizationRuleId),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       partner_namespace_id: cdktf.stringToTerraform(this._partnerNamespaceId),

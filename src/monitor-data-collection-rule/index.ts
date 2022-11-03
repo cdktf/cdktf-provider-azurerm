@@ -556,6 +556,10 @@ export interface MonitorDataCollectionRuleDataSourcesSyslog {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
+  */
+  readonly streams?: string[];
 }
 
 export function monitorDataCollectionRuleDataSourcesSyslogToTerraform(struct?: MonitorDataCollectionRuleDataSourcesSyslog | cdktf.IResolvable): any {
@@ -567,6 +571,7 @@ export function monitorDataCollectionRuleDataSourcesSyslogToTerraform(struct?: M
     facility_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.facilityNames),
     log_levels: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.logLevels),
     name: cdktf.stringToTerraform(struct!.name),
+    streams: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.streams),
   }
 }
 
@@ -602,6 +607,10 @@ export class MonitorDataCollectionRuleDataSourcesSyslogOutputReference extends c
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
+    if (this._streams !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.streams = this._streams;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -612,6 +621,7 @@ export class MonitorDataCollectionRuleDataSourcesSyslogOutputReference extends c
       this._facilityNames = undefined;
       this._logLevels = undefined;
       this._name = undefined;
+      this._streams = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -623,6 +633,7 @@ export class MonitorDataCollectionRuleDataSourcesSyslogOutputReference extends c
       this._facilityNames = value.facilityNames;
       this._logLevels = value.logLevels;
       this._name = value.name;
+      this._streams = value.streams;
     }
   }
 
@@ -663,6 +674,22 @@ export class MonitorDataCollectionRuleDataSourcesSyslogOutputReference extends c
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // streams - computed: true, optional: true, required: false
+  private _streams?: string[]; 
+  public get streams() {
+    return this.getListAttribute('streams');
+  }
+  public set streams(value: string[]) {
+    this._streams = value;
+  }
+  public resetStreams() {
+    this._streams = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamsInput() {
+    return this._streams;
   }
 }
 
@@ -1440,7 +1467,7 @@ export class MonitorDataCollectionRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_data_collection_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

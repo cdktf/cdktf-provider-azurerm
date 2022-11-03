@@ -23,11 +23,94 @@ export interface DataAzurermContainerGroupConfig extends cdktf.TerraformMetaArgu
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_group#zones DataAzurermContainerGroup#zones}
+  */
+  readonly zones?: string[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_group#timeouts DataAzurermContainerGroup#timeouts}
   */
   readonly timeouts?: DataAzurermContainerGroupTimeouts;
+}
+export interface DataAzurermContainerGroupIdentity {
+}
+
+export function dataAzurermContainerGroupIdentityToTerraform(struct?: DataAzurermContainerGroupIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermContainerGroupIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermContainerGroupIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermContainerGroupIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // identity_ids - computed: true, optional: false, required: false
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
+
+export class DataAzurermContainerGroupIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermContainerGroupIdentityOutputReference {
+    return new DataAzurermContainerGroupIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface DataAzurermContainerGroupTimeouts {
   /**
@@ -131,7 +214,7 @@ export class DataAzurermContainerGroup extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_container_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -145,6 +228,7 @@ export class DataAzurermContainerGroup extends cdktf.TerraformDataSource {
     this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._zones = config.zones;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -171,6 +255,12 @@ export class DataAzurermContainerGroup extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // identity - computed: true, optional: false, required: false
+  private _identity = new DataAzurermContainerGroupIdentityList(this, "identity", false);
+  public get identity() {
+    return this._identity;
   }
 
   // ip_address - computed: true, optional: false, required: false
@@ -209,10 +299,31 @@ export class DataAzurermContainerGroup extends cdktf.TerraformDataSource {
     return this._resourceGroupName;
   }
 
+  // subnet_ids - computed: true, optional: false, required: false
+  public get subnetIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('subnet_ids'));
+  }
+
   // tags - computed: true, optional: false, required: false
   private _tags = new cdktf.StringMap(this, "tags");
   public get tags() {
     return this._tags;
+  }
+
+  // zones - computed: false, optional: true, required: false
+  private _zones?: string[]; 
+  public get zones() {
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
+  }
+  public set zones(value: string[]) {
+    this._zones = value;
+  }
+  public resetZones() {
+    this._zones = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zonesInput() {
+    return this._zones;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -240,6 +351,7 @@ export class DataAzurermContainerGroup extends cdktf.TerraformDataSource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
       timeouts: dataAzurermContainerGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

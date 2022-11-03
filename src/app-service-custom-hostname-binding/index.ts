@@ -224,7 +224,7 @@ export class AppServiceCustomHostnameBinding extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_service_custom_hostname_binding',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

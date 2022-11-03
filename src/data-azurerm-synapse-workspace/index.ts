@@ -69,6 +69,11 @@ export class DataAzurermSynapseWorkspaceIdentityOutputReference extends cdktf.Co
     }
   }
 
+  // identity_ids - computed: true, optional: false, required: false
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
     return this.getStringAttribute('principal_id');
@@ -205,7 +210,7 @@ export class DataAzurermSynapseWorkspace extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_synapse_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

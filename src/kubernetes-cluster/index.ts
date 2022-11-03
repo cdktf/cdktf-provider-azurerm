@@ -220,6 +220,12 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#windows_profile KubernetesCluster#windows_profile}
   */
   readonly windowsProfile?: KubernetesClusterWindowsProfile;
+  /**
+  * workload_autoscaler_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#workload_autoscaler_profile KubernetesCluster#workload_autoscaler_profile}
+  */
+  readonly workloadAutoscalerProfile?: KubernetesClusterWorkloadAutoscalerProfile;
 }
 export interface KubernetesClusterKubeAdminConfig {
 }
@@ -6125,6 +6131,71 @@ export class KubernetesClusterWindowsProfileOutputReference extends cdktf.Comple
     return this._gmsa.internalValue;
   }
 }
+export interface KubernetesClusterWorkloadAutoscalerProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#keda_enabled KubernetesCluster#keda_enabled}
+  */
+  readonly kedaEnabled?: boolean | cdktf.IResolvable;
+}
+
+export function kubernetesClusterWorkloadAutoscalerProfileToTerraform(struct?: KubernetesClusterWorkloadAutoscalerProfileOutputReference | KubernetesClusterWorkloadAutoscalerProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    keda_enabled: cdktf.booleanToTerraform(struct!.kedaEnabled),
+  }
+}
+
+export class KubernetesClusterWorkloadAutoscalerProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KubernetesClusterWorkloadAutoscalerProfile | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kedaEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kedaEnabled = this._kedaEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterWorkloadAutoscalerProfile | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._kedaEnabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._kedaEnabled = value.kedaEnabled;
+    }
+  }
+
+  // keda_enabled - computed: false, optional: true, required: false
+  private _kedaEnabled?: boolean | cdktf.IResolvable; 
+  public get kedaEnabled() {
+    return this.getBooleanAttribute('keda_enabled');
+  }
+  public set kedaEnabled(value: boolean | cdktf.IResolvable) {
+    this._kedaEnabled = value;
+  }
+  public resetKedaEnabled() {
+    this._kedaEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kedaEnabledInput() {
+    return this._kedaEnabled;
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster azurerm_kubernetes_cluster}
@@ -6152,7 +6223,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -6207,6 +6278,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._servicePrincipal.internalValue = config.servicePrincipal;
     this._timeouts.internalValue = config.timeouts;
     this._windowsProfile.internalValue = config.windowsProfile;
+    this._workloadAutoscalerProfile.internalValue = config.workloadAutoscalerProfile;
   }
 
   // ==========
@@ -6952,6 +7024,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._windowsProfile.internalValue;
   }
 
+  // workload_autoscaler_profile - computed: false, optional: true, required: false
+  private _workloadAutoscalerProfile = new KubernetesClusterWorkloadAutoscalerProfileOutputReference(this, "workload_autoscaler_profile");
+  public get workloadAutoscalerProfile() {
+    return this._workloadAutoscalerProfile;
+  }
+  public putWorkloadAutoscalerProfile(value: KubernetesClusterWorkloadAutoscalerProfile) {
+    this._workloadAutoscalerProfile.internalValue = value;
+  }
+  public resetWorkloadAutoscalerProfile() {
+    this._workloadAutoscalerProfile.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workloadAutoscalerProfileInput() {
+    return this._workloadAutoscalerProfile.internalValue;
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -7002,6 +7090,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       service_principal: kubernetesClusterServicePrincipalToTerraform(this._servicePrincipal.internalValue),
       timeouts: kubernetesClusterTimeoutsToTerraform(this._timeouts.internalValue),
       windows_profile: kubernetesClusterWindowsProfileToTerraform(this._windowsProfile.internalValue),
+      workload_autoscaler_profile: kubernetesClusterWorkloadAutoscalerProfileToTerraform(this._workloadAutoscalerProfile.internalValue),
     };
   }
 }

@@ -315,6 +315,11 @@ export class DataAzurermMonitorDataCollectionRuleDataSourcesSyslogOutputReferenc
   public get name() {
     return this.getStringAttribute('name');
   }
+
+  // streams - computed: true, optional: false, required: false
+  public get streams() {
+    return this.getListAttribute('streams');
+  }
 }
 
 export class DataAzurermMonitorDataCollectionRuleDataSourcesSyslogList extends cdktf.ComplexList {
@@ -798,7 +803,7 @@ export class DataAzurermMonitorDataCollectionRule extends cdktf.TerraformDataSou
       terraformResourceType: 'azurerm_monitor_data_collection_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

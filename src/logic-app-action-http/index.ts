@@ -35,6 +35,10 @@ export interface LogicAppActionHttpConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#queries LogicAppActionHttp#queries}
+  */
+  readonly queries?: { [key: string]: string };
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#uri LogicAppActionHttp#uri}
   */
   readonly uri: string;
@@ -352,7 +356,7 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_logic_app_action_http',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -369,6 +373,7 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
     this._logicAppId = config.logicAppId;
     this._method = config.method;
     this._name = config.name;
+    this._queries = config.queries;
     this._uri = config.uri;
     this._runAfter.internalValue = config.runAfter;
     this._timeouts.internalValue = config.timeouts;
@@ -465,6 +470,22 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // queries - computed: false, optional: true, required: false
+  private _queries?: { [key: string]: string }; 
+  public get queries() {
+    return this.getStringMapAttribute('queries');
+  }
+  public set queries(value: { [key: string]: string }) {
+    this._queries = value;
+  }
+  public resetQueries() {
+    this._queries = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queriesInput() {
+    return this._queries;
+  }
+
   // uri - computed: false, optional: false, required: true
   private _uri?: string; 
   public get uri() {
@@ -522,6 +543,7 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
       logic_app_id: cdktf.stringToTerraform(this._logicAppId),
       method: cdktf.stringToTerraform(this._method),
       name: cdktf.stringToTerraform(this._name),
+      queries: cdktf.hashMapper(cdktf.stringToTerraform)(this._queries),
       uri: cdktf.stringToTerraform(this._uri),
       run_after: cdktf.listMapper(logicAppActionHttpRunAfterToTerraform, true)(this._runAfter.internalValue),
       timeouts: logicAppActionHttpTimeoutsToTerraform(this._timeouts.internalValue),

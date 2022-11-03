@@ -103,7 +103,7 @@ export interface DataFactoryDatasetParquetAzureBlobStorageLocation {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet#path DataFactoryDatasetParquet#path}
   */
-  readonly path: string;
+  readonly path?: string;
 }
 
 export function dataFactoryDatasetParquetAzureBlobStorageLocationToTerraform(struct?: DataFactoryDatasetParquetAzureBlobStorageLocationOutputReference | DataFactoryDatasetParquetAzureBlobStorageLocation): any {
@@ -260,13 +260,16 @@ export class DataFactoryDatasetParquetAzureBlobStorageLocationOutputReference ex
     return this._filename;
   }
 
-  // path - computed: false, optional: false, required: true
+  // path - computed: false, optional: true, required: false
   private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }
   public set path(value: string) {
     this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
@@ -289,7 +292,7 @@ export interface DataFactoryDatasetParquetHttpServerLocation {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet#path DataFactoryDatasetParquet#path}
   */
-  readonly path: string;
+  readonly path?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet#relative_url DataFactoryDatasetParquet#relative_url}
   */
@@ -411,13 +414,16 @@ export class DataFactoryDatasetParquetHttpServerLocationOutputReference extends 
     return this._filename;
   }
 
-  // path - computed: false, optional: false, required: true
+  // path - computed: false, optional: true, required: false
   private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }
   public set path(value: string) {
     this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
@@ -768,7 +774,7 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_dataset_parquet',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

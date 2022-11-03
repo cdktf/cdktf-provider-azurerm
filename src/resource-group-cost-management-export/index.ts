@@ -412,7 +412,7 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_resource_group_cost_management_export',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
