@@ -131,7 +131,7 @@ export class DataAzurermLogicAppIntegrationAccount extends cdktf.TerraformDataSo
       terraformResourceType: 'azurerm_logic_app_integration_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

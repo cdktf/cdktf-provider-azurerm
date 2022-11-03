@@ -491,7 +491,7 @@ export class CdnFrontdoorOriginGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cdn_frontdoor_origin_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

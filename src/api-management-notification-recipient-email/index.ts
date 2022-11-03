@@ -189,7 +189,7 @@ export class ApiManagementNotificationRecipientEmail extends cdktf.TerraformReso
       terraformResourceType: 'azurerm_api_management_notification_recipient_email',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

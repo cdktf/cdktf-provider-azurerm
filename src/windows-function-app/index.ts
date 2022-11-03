@@ -169,6 +169,12 @@ export interface WindowsFunctionAppConfig extends cdktf.TerraformMetaArguments {
   */
   readonly stickySettings?: WindowsFunctionAppStickySettings;
   /**
+  * storage_account block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#storage_account WindowsFunctionApp#storage_account}
+  */
+  readonly storageAccount?: WindowsFunctionAppStorageAccount[] | cdktf.IResolvable;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#timeouts WindowsFunctionApp#timeouts}
@@ -4480,6 +4486,223 @@ export class WindowsFunctionAppStickySettingsOutputReference extends cdktf.Compl
     return this._connectionStringNames;
   }
 }
+export interface WindowsFunctionAppStorageAccount {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#access_key WindowsFunctionApp#access_key}
+  */
+  readonly accessKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#account_name WindowsFunctionApp#account_name}
+  */
+  readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#mount_path WindowsFunctionApp#mount_path}
+  */
+  readonly mountPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#name WindowsFunctionApp#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#share_name WindowsFunctionApp#share_name}
+  */
+  readonly shareName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#type WindowsFunctionApp#type}
+  */
+  readonly type: string;
+}
+
+export function windowsFunctionAppStorageAccountToTerraform(struct?: WindowsFunctionAppStorageAccount | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    access_key: cdktf.stringToTerraform(struct!.accessKey),
+    account_name: cdktf.stringToTerraform(struct!.accountName),
+    mount_path: cdktf.stringToTerraform(struct!.mountPath),
+    name: cdktf.stringToTerraform(struct!.name),
+    share_name: cdktf.stringToTerraform(struct!.shareName),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class WindowsFunctionAppStorageAccountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): WindowsFunctionAppStorageAccount | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accessKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accessKey = this._accessKey;
+    }
+    if (this._accountName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accountName = this._accountName;
+    }
+    if (this._mountPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mountPath = this._mountPath;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._shareName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.shareName = this._shareName;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsFunctionAppStorageAccount | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._accessKey = undefined;
+      this._accountName = undefined;
+      this._mountPath = undefined;
+      this._name = undefined;
+      this._shareName = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._accessKey = value.accessKey;
+      this._accountName = value.accountName;
+      this._mountPath = value.mountPath;
+      this._name = value.name;
+      this._shareName = value.shareName;
+      this._type = value.type;
+    }
+  }
+
+  // access_key - computed: false, optional: false, required: true
+  private _accessKey?: string; 
+  public get accessKey() {
+    return this.getStringAttribute('access_key');
+  }
+  public set accessKey(value: string) {
+    this._accessKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessKeyInput() {
+    return this._accessKey;
+  }
+
+  // account_name - computed: false, optional: false, required: true
+  private _accountName?: string; 
+  public get accountName() {
+    return this.getStringAttribute('account_name');
+  }
+  public set accountName(value: string) {
+    this._accountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName;
+  }
+
+  // mount_path - computed: false, optional: true, required: false
+  private _mountPath?: string; 
+  public get mountPath() {
+    return this.getStringAttribute('mount_path');
+  }
+  public set mountPath(value: string) {
+    this._mountPath = value;
+  }
+  public resetMountPath() {
+    this._mountPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mountPathInput() {
+    return this._mountPath;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // share_name - computed: false, optional: false, required: true
+  private _shareName?: string; 
+  public get shareName() {
+    return this.getStringAttribute('share_name');
+  }
+  public set shareName(value: string) {
+    this._shareName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shareNameInput() {
+    return this._shareName;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class WindowsFunctionAppStorageAccountList extends cdktf.ComplexList {
+  public internalValue? : WindowsFunctionAppStorageAccount[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): WindowsFunctionAppStorageAccountOutputReference {
+    return new WindowsFunctionAppStorageAccountOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface WindowsFunctionAppTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#create WindowsFunctionApp#create}
@@ -4663,7 +4886,7 @@ export class WindowsFunctionApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_function_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -4702,6 +4925,7 @@ export class WindowsFunctionApp extends cdktf.TerraformResource {
     this._identity.internalValue = config.identity;
     this._siteConfig.internalValue = config.siteConfig;
     this._stickySettings.internalValue = config.stickySettings;
+    this._storageAccount.internalValue = config.storageAccount;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -5183,6 +5407,22 @@ export class WindowsFunctionApp extends cdktf.TerraformResource {
     return this._stickySettings.internalValue;
   }
 
+  // storage_account - computed: false, optional: true, required: false
+  private _storageAccount = new WindowsFunctionAppStorageAccountList(this, "storage_account", true);
+  public get storageAccount() {
+    return this._storageAccount;
+  }
+  public putStorageAccount(value: WindowsFunctionAppStorageAccount[] | cdktf.IResolvable) {
+    this._storageAccount.internalValue = value;
+  }
+  public resetStorageAccount() {
+    this._storageAccount.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountInput() {
+    return this._storageAccount.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new WindowsFunctionAppTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -5233,6 +5473,7 @@ export class WindowsFunctionApp extends cdktf.TerraformResource {
       identity: windowsFunctionAppIdentityToTerraform(this._identity.internalValue),
       site_config: windowsFunctionAppSiteConfigToTerraform(this._siteConfig.internalValue),
       sticky_settings: windowsFunctionAppStickySettingsToTerraform(this._stickySettings.internalValue),
+      storage_account: cdktf.listMapper(windowsFunctionAppStorageAccountToTerraform, true)(this._storageAccount.internalValue),
       timeouts: windowsFunctionAppTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

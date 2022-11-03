@@ -47,6 +47,12 @@ export interface MssqlVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   */
   readonly virtualMachineId: string;
   /**
+  * assessment block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#assessment MssqlVirtualMachine#assessment}
+  */
+  readonly assessment?: MssqlVirtualMachineAssessment;
+  /**
   * auto_backup block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#auto_backup MssqlVirtualMachine#auto_backup}
@@ -76,6 +82,267 @@ export interface MssqlVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#timeouts MssqlVirtualMachine#timeouts}
   */
   readonly timeouts?: MssqlVirtualMachineTimeouts;
+}
+export interface MssqlVirtualMachineAssessmentSchedule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#day_of_week MssqlVirtualMachine#day_of_week}
+  */
+  readonly dayOfWeek: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#monthly_occurrence MssqlVirtualMachine#monthly_occurrence}
+  */
+  readonly monthlyOccurrence?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#start_time MssqlVirtualMachine#start_time}
+  */
+  readonly startTime: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#weekly_interval MssqlVirtualMachine#weekly_interval}
+  */
+  readonly weeklyInterval?: number;
+}
+
+export function mssqlVirtualMachineAssessmentScheduleToTerraform(struct?: MssqlVirtualMachineAssessmentScheduleOutputReference | MssqlVirtualMachineAssessmentSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    day_of_week: cdktf.stringToTerraform(struct!.dayOfWeek),
+    monthly_occurrence: cdktf.numberToTerraform(struct!.monthlyOccurrence),
+    start_time: cdktf.stringToTerraform(struct!.startTime),
+    weekly_interval: cdktf.numberToTerraform(struct!.weeklyInterval),
+  }
+}
+
+export class MssqlVirtualMachineAssessmentScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MssqlVirtualMachineAssessmentSchedule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dayOfWeek !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dayOfWeek = this._dayOfWeek;
+    }
+    if (this._monthlyOccurrence !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.monthlyOccurrence = this._monthlyOccurrence;
+    }
+    if (this._startTime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.startTime = this._startTime;
+    }
+    if (this._weeklyInterval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weeklyInterval = this._weeklyInterval;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlVirtualMachineAssessmentSchedule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._dayOfWeek = undefined;
+      this._monthlyOccurrence = undefined;
+      this._startTime = undefined;
+      this._weeklyInterval = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._dayOfWeek = value.dayOfWeek;
+      this._monthlyOccurrence = value.monthlyOccurrence;
+      this._startTime = value.startTime;
+      this._weeklyInterval = value.weeklyInterval;
+    }
+  }
+
+  // day_of_week - computed: false, optional: false, required: true
+  private _dayOfWeek?: string; 
+  public get dayOfWeek() {
+    return this.getStringAttribute('day_of_week');
+  }
+  public set dayOfWeek(value: string) {
+    this._dayOfWeek = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dayOfWeekInput() {
+    return this._dayOfWeek;
+  }
+
+  // monthly_occurrence - computed: false, optional: true, required: false
+  private _monthlyOccurrence?: number; 
+  public get monthlyOccurrence() {
+    return this.getNumberAttribute('monthly_occurrence');
+  }
+  public set monthlyOccurrence(value: number) {
+    this._monthlyOccurrence = value;
+  }
+  public resetMonthlyOccurrence() {
+    this._monthlyOccurrence = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monthlyOccurrenceInput() {
+    return this._monthlyOccurrence;
+  }
+
+  // start_time - computed: false, optional: false, required: true
+  private _startTime?: string; 
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+  public set startTime(value: string) {
+    this._startTime = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTimeInput() {
+    return this._startTime;
+  }
+
+  // weekly_interval - computed: false, optional: true, required: false
+  private _weeklyInterval?: number; 
+  public get weeklyInterval() {
+    return this.getNumberAttribute('weekly_interval');
+  }
+  public set weeklyInterval(value: number) {
+    this._weeklyInterval = value;
+  }
+  public resetWeeklyInterval() {
+    this._weeklyInterval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weeklyIntervalInput() {
+    return this._weeklyInterval;
+  }
+}
+export interface MssqlVirtualMachineAssessment {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#enabled MssqlVirtualMachine#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#run_immediately MssqlVirtualMachine#run_immediately}
+  */
+  readonly runImmediately?: boolean | cdktf.IResolvable;
+  /**
+  * schedule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#schedule MssqlVirtualMachine#schedule}
+  */
+  readonly schedule?: MssqlVirtualMachineAssessmentSchedule;
+}
+
+export function mssqlVirtualMachineAssessmentToTerraform(struct?: MssqlVirtualMachineAssessmentOutputReference | MssqlVirtualMachineAssessment): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    run_immediately: cdktf.booleanToTerraform(struct!.runImmediately),
+    schedule: mssqlVirtualMachineAssessmentScheduleToTerraform(struct!.schedule),
+  }
+}
+
+export class MssqlVirtualMachineAssessmentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MssqlVirtualMachineAssessment | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._runImmediately !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.runImmediately = this._runImmediately;
+    }
+    if (this._schedule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schedule = this._schedule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlVirtualMachineAssessment | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._runImmediately = undefined;
+      this._schedule.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._runImmediately = value.runImmediately;
+      this._schedule.internalValue = value.schedule;
+    }
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // run_immediately - computed: false, optional: true, required: false
+  private _runImmediately?: boolean | cdktf.IResolvable; 
+  public get runImmediately() {
+    return this.getBooleanAttribute('run_immediately');
+  }
+  public set runImmediately(value: boolean | cdktf.IResolvable) {
+    this._runImmediately = value;
+  }
+  public resetRunImmediately() {
+    this._runImmediately = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runImmediatelyInput() {
+    return this._runImmediately;
+  }
+
+  // schedule - computed: false, optional: true, required: false
+  private _schedule = new MssqlVirtualMachineAssessmentScheduleOutputReference(this, "schedule");
+  public get schedule() {
+    return this._schedule;
+  }
+  public putSchedule(value: MssqlVirtualMachineAssessmentSchedule) {
+    this._schedule.internalValue = value;
+  }
+  public resetSchedule() {
+    this._schedule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleInput() {
+    return this._schedule.internalValue;
+  }
 }
 export interface MssqlVirtualMachineAutoBackupManualSchedule {
   /**
@@ -849,9 +1116,29 @@ export class MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference e
 }
 export interface MssqlVirtualMachineStorageConfigurationTempDbSettings {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#data_file_count MssqlVirtualMachine#data_file_count}
+  */
+  readonly dataFileCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#data_file_growth_in_mb MssqlVirtualMachine#data_file_growth_in_mb}
+  */
+  readonly dataFileGrowthInMb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#data_file_size_mb MssqlVirtualMachine#data_file_size_mb}
+  */
+  readonly dataFileSizeMb?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#default_file_path MssqlVirtualMachine#default_file_path}
   */
   readonly defaultFilePath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#log_file_growth_mb MssqlVirtualMachine#log_file_growth_mb}
+  */
+  readonly logFileGrowthMb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#log_file_size_mb MssqlVirtualMachine#log_file_size_mb}
+  */
+  readonly logFileSizeMb?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#luns MssqlVirtualMachine#luns}
   */
@@ -864,7 +1151,12 @@ export function mssqlVirtualMachineStorageConfigurationTempDbSettingsToTerraform
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    data_file_count: cdktf.numberToTerraform(struct!.dataFileCount),
+    data_file_growth_in_mb: cdktf.numberToTerraform(struct!.dataFileGrowthInMb),
+    data_file_size_mb: cdktf.numberToTerraform(struct!.dataFileSizeMb),
     default_file_path: cdktf.stringToTerraform(struct!.defaultFilePath),
+    log_file_growth_mb: cdktf.numberToTerraform(struct!.logFileGrowthMb),
+    log_file_size_mb: cdktf.numberToTerraform(struct!.logFileSizeMb),
     luns: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.luns),
   }
 }
@@ -883,9 +1175,29 @@ export class MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReferenc
   public get internalValue(): MssqlVirtualMachineStorageConfigurationTempDbSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._dataFileCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataFileCount = this._dataFileCount;
+    }
+    if (this._dataFileGrowthInMb !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataFileGrowthInMb = this._dataFileGrowthInMb;
+    }
+    if (this._dataFileSizeMb !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataFileSizeMb = this._dataFileSizeMb;
+    }
     if (this._defaultFilePath !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultFilePath = this._defaultFilePath;
+    }
+    if (this._logFileGrowthMb !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logFileGrowthMb = this._logFileGrowthMb;
+    }
+    if (this._logFileSizeMb !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logFileSizeMb = this._logFileSizeMb;
     }
     if (this._luns !== undefined) {
       hasAnyValues = true;
@@ -897,14 +1209,72 @@ export class MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReferenc
   public set internalValue(value: MssqlVirtualMachineStorageConfigurationTempDbSettings | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._dataFileCount = undefined;
+      this._dataFileGrowthInMb = undefined;
+      this._dataFileSizeMb = undefined;
       this._defaultFilePath = undefined;
+      this._logFileGrowthMb = undefined;
+      this._logFileSizeMb = undefined;
       this._luns = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._dataFileCount = value.dataFileCount;
+      this._dataFileGrowthInMb = value.dataFileGrowthInMb;
+      this._dataFileSizeMb = value.dataFileSizeMb;
       this._defaultFilePath = value.defaultFilePath;
+      this._logFileGrowthMb = value.logFileGrowthMb;
+      this._logFileSizeMb = value.logFileSizeMb;
       this._luns = value.luns;
     }
+  }
+
+  // data_file_count - computed: false, optional: true, required: false
+  private _dataFileCount?: number; 
+  public get dataFileCount() {
+    return this.getNumberAttribute('data_file_count');
+  }
+  public set dataFileCount(value: number) {
+    this._dataFileCount = value;
+  }
+  public resetDataFileCount() {
+    this._dataFileCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataFileCountInput() {
+    return this._dataFileCount;
+  }
+
+  // data_file_growth_in_mb - computed: false, optional: true, required: false
+  private _dataFileGrowthInMb?: number; 
+  public get dataFileGrowthInMb() {
+    return this.getNumberAttribute('data_file_growth_in_mb');
+  }
+  public set dataFileGrowthInMb(value: number) {
+    this._dataFileGrowthInMb = value;
+  }
+  public resetDataFileGrowthInMb() {
+    this._dataFileGrowthInMb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataFileGrowthInMbInput() {
+    return this._dataFileGrowthInMb;
+  }
+
+  // data_file_size_mb - computed: false, optional: true, required: false
+  private _dataFileSizeMb?: number; 
+  public get dataFileSizeMb() {
+    return this.getNumberAttribute('data_file_size_mb');
+  }
+  public set dataFileSizeMb(value: number) {
+    this._dataFileSizeMb = value;
+  }
+  public resetDataFileSizeMb() {
+    this._dataFileSizeMb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataFileSizeMbInput() {
+    return this._dataFileSizeMb;
   }
 
   // default_file_path - computed: false, optional: false, required: true
@@ -918,6 +1288,38 @@ export class MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReferenc
   // Temporarily expose input value. Use with caution.
   public get defaultFilePathInput() {
     return this._defaultFilePath;
+  }
+
+  // log_file_growth_mb - computed: false, optional: true, required: false
+  private _logFileGrowthMb?: number; 
+  public get logFileGrowthMb() {
+    return this.getNumberAttribute('log_file_growth_mb');
+  }
+  public set logFileGrowthMb(value: number) {
+    this._logFileGrowthMb = value;
+  }
+  public resetLogFileGrowthMb() {
+    this._logFileGrowthMb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logFileGrowthMbInput() {
+    return this._logFileGrowthMb;
+  }
+
+  // log_file_size_mb - computed: false, optional: true, required: false
+  private _logFileSizeMb?: number; 
+  public get logFileSizeMb() {
+    return this.getNumberAttribute('log_file_size_mb');
+  }
+  public set logFileSizeMb(value: number) {
+    this._logFileSizeMb = value;
+  }
+  public resetLogFileSizeMb() {
+    this._logFileSizeMb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logFileSizeMbInput() {
+    return this._logFileSizeMb;
   }
 
   // luns - computed: false, optional: false, required: true
@@ -1289,7 +1691,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_virtual_machine',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1309,6 +1711,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
     this._sqlLicenseType = config.sqlLicenseType;
     this._tags = config.tags;
     this._virtualMachineId = config.virtualMachineId;
+    this._assessment.internalValue = config.assessment;
     this._autoBackup.internalValue = config.autoBackup;
     this._autoPatching.internalValue = config.autoPatching;
     this._keyVaultCredential.internalValue = config.keyVaultCredential;
@@ -1458,6 +1861,22 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
     return this._virtualMachineId;
   }
 
+  // assessment - computed: false, optional: true, required: false
+  private _assessment = new MssqlVirtualMachineAssessmentOutputReference(this, "assessment");
+  public get assessment() {
+    return this._assessment;
+  }
+  public putAssessment(value: MssqlVirtualMachineAssessment) {
+    this._assessment.internalValue = value;
+  }
+  public resetAssessment() {
+    this._assessment.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get assessmentInput() {
+    return this._assessment.internalValue;
+  }
+
   // auto_backup - computed: false, optional: true, required: false
   private _autoBackup = new MssqlVirtualMachineAutoBackupOutputReference(this, "auto_backup");
   public get autoBackup() {
@@ -1553,6 +1972,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
       sql_license_type: cdktf.stringToTerraform(this._sqlLicenseType),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_machine_id: cdktf.stringToTerraform(this._virtualMachineId),
+      assessment: mssqlVirtualMachineAssessmentToTerraform(this._assessment.internalValue),
       auto_backup: mssqlVirtualMachineAutoBackupToTerraform(this._autoBackup.internalValue),
       auto_patching: mssqlVirtualMachineAutoPatchingToTerraform(this._autoPatching.internalValue),
       key_vault_credential: mssqlVirtualMachineKeyVaultCredentialToTerraform(this._keyVaultCredential.internalValue),

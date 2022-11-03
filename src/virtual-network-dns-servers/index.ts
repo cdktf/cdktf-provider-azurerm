@@ -212,7 +212,7 @@ export class VirtualNetworkDnsServers extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_network_dns_servers',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

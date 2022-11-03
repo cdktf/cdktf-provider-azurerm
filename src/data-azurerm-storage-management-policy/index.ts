@@ -80,6 +80,11 @@ export class DataAzurermStorageManagementPolicyRuleActionsBaseBlobOutputReferenc
     return this.getNumberAttribute('tier_to_archive_after_days_since_last_access_time_greater_than');
   }
 
+  // tier_to_archive_after_days_since_last_tier_change_greater_than - computed: true, optional: false, required: false
+  public get tierToArchiveAfterDaysSinceLastTierChangeGreaterThan() {
+    return this.getNumberAttribute('tier_to_archive_after_days_since_last_tier_change_greater_than');
+  }
+
   // tier_to_archive_after_days_since_modification_greater_than - computed: true, optional: false, required: false
   public get tierToArchiveAfterDaysSinceModificationGreaterThan() {
     return this.getNumberAttribute('tier_to_archive_after_days_since_modification_greater_than');
@@ -168,6 +173,11 @@ export class DataAzurermStorageManagementPolicyRuleActionsSnapshotOutputReferenc
   public get deleteAfterDaysSinceCreationGreaterThan() {
     return this.getNumberAttribute('delete_after_days_since_creation_greater_than');
   }
+
+  // tier_to_archive_after_days_since_last_tier_change_greater_than - computed: true, optional: false, required: false
+  public get tierToArchiveAfterDaysSinceLastTierChangeGreaterThan() {
+    return this.getNumberAttribute('tier_to_archive_after_days_since_last_tier_change_greater_than');
+  }
 }
 
 export class DataAzurermStorageManagementPolicyRuleActionsSnapshotList extends cdktf.ComplexList {
@@ -241,6 +251,11 @@ export class DataAzurermStorageManagementPolicyRuleActionsVersionOutputReference
   // delete_after_days_since_creation - computed: true, optional: false, required: false
   public get deleteAfterDaysSinceCreation() {
     return this.getNumberAttribute('delete_after_days_since_creation');
+  }
+
+  // tier_to_archive_after_days_since_last_tier_change_greater_than - computed: true, optional: false, required: false
+  public get tierToArchiveAfterDaysSinceLastTierChangeGreaterThan() {
+    return this.getNumberAttribute('tier_to_archive_after_days_since_last_tier_change_greater_than');
   }
 }
 
@@ -671,7 +686,7 @@ export class DataAzurermStorageManagementPolicy extends cdktf.TerraformDataSourc
       terraformResourceType: 'azurerm_storage_management_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -216,7 +216,7 @@ export class DataProtectionBackupPolicyBlobStorage extends cdktf.TerraformResour
       terraformResourceType: 'azurerm_data_protection_backup_policy_blob_storage',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -854,6 +854,443 @@ export class LogicAppStandardSiteConfigIpRestrictionList extends cdktf.ComplexLi
     return new LogicAppStandardSiteConfigIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface LogicAppStandardSiteConfigScmIpRestrictionHeaders {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#x_azure_fdid LogicAppStandard#x_azure_fdid}
+  */
+  readonly xAzureFdid?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#x_fd_health_probe LogicAppStandard#x_fd_health_probe}
+  */
+  readonly xFdHealthProbe?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#x_forwarded_for LogicAppStandard#x_forwarded_for}
+  */
+  readonly xForwardedFor?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#x_forwarded_host LogicAppStandard#x_forwarded_host}
+  */
+  readonly xForwardedHost?: string[];
+}
+
+export function logicAppStandardSiteConfigScmIpRestrictionHeadersToTerraform(struct?: LogicAppStandardSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
+  }
+}
+
+export class LogicAppStandardSiteConfigScmIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogicAppStandardSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._xAzureFdid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xAzureFdid = this._xAzureFdid;
+    }
+    if (this._xFdHealthProbe !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xFdHealthProbe = this._xFdHealthProbe;
+    }
+    if (this._xForwardedFor !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedFor = this._xForwardedFor;
+    }
+    if (this._xForwardedHost !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedHost = this._xForwardedHost;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppStandardSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = undefined;
+      this._xFdHealthProbe = undefined;
+      this._xForwardedFor = undefined;
+      this._xForwardedHost = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = value.xAzureFdid;
+      this._xFdHealthProbe = value.xFdHealthProbe;
+      this._xForwardedFor = value.xForwardedFor;
+      this._xForwardedHost = value.xForwardedHost;
+    }
+  }
+
+  // x_azure_fdid - computed: true, optional: true, required: false
+  private _xAzureFdid?: string[]; 
+  public get xAzureFdid() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_azure_fdid'));
+  }
+  public set xAzureFdid(value: string[]) {
+    this._xAzureFdid = value;
+  }
+  public resetXAzureFdid() {
+    this._xAzureFdid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xAzureFdidInput() {
+    return this._xAzureFdid;
+  }
+
+  // x_fd_health_probe - computed: true, optional: true, required: false
+  private _xFdHealthProbe?: string[]; 
+  public get xFdHealthProbe() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_fd_health_probe'));
+  }
+  public set xFdHealthProbe(value: string[]) {
+    this._xFdHealthProbe = value;
+  }
+  public resetXFdHealthProbe() {
+    this._xFdHealthProbe = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xFdHealthProbeInput() {
+    return this._xFdHealthProbe;
+  }
+
+  // x_forwarded_for - computed: true, optional: true, required: false
+  private _xForwardedFor?: string[]; 
+  public get xForwardedFor() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_for'));
+  }
+  public set xForwardedFor(value: string[]) {
+    this._xForwardedFor = value;
+  }
+  public resetXForwardedFor() {
+    this._xForwardedFor = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedForInput() {
+    return this._xForwardedFor;
+  }
+
+  // x_forwarded_host - computed: true, optional: true, required: false
+  private _xForwardedHost?: string[]; 
+  public get xForwardedHost() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_host'));
+  }
+  public set xForwardedHost(value: string[]) {
+    this._xForwardedHost = value;
+  }
+  public resetXForwardedHost() {
+    this._xForwardedHost = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedHostInput() {
+    return this._xForwardedHost;
+  }
+}
+
+export class LogicAppStandardSiteConfigScmIpRestrictionHeadersList extends cdktf.ComplexList {
+  public internalValue? : LogicAppStandardSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogicAppStandardSiteConfigScmIpRestrictionHeadersOutputReference {
+    return new LogicAppStandardSiteConfigScmIpRestrictionHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface LogicAppStandardSiteConfigScmIpRestriction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#action LogicAppStandard#action}
+  */
+  readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#headers LogicAppStandard#headers}
+  */
+  readonly headers?: LogicAppStandardSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#ip_address LogicAppStandard#ip_address}
+  */
+  readonly ipAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#name LogicAppStandard#name}
+  */
+  readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#priority LogicAppStandard#priority}
+  */
+  readonly priority?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#service_tag LogicAppStandard#service_tag}
+  */
+  readonly serviceTag?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#virtual_network_subnet_id LogicAppStandard#virtual_network_subnet_id}
+  */
+  readonly virtualNetworkSubnetId?: string;
+}
+
+export function logicAppStandardSiteConfigScmIpRestrictionToTerraform(struct?: LogicAppStandardSiteConfigScmIpRestriction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    headers: cdktf.listMapper(logicAppStandardSiteConfigScmIpRestrictionHeadersToTerraform, false)(struct!.headers),
+    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
+    name: cdktf.stringToTerraform(struct!.name),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    service_tag: cdktf.stringToTerraform(struct!.serviceTag),
+    virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
+  }
+}
+
+export class LogicAppStandardSiteConfigScmIpRestrictionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogicAppStandardSiteConfigScmIpRestriction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._headers?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headers = this._headers?.internalValue;
+    }
+    if (this._ipAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._serviceTag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceTag = this._serviceTag;
+    }
+    if (this._virtualNetworkSubnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkSubnetId = this._virtualNetworkSubnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppStandardSiteConfigScmIpRestriction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._headers.internalValue = undefined;
+      this._ipAddress = undefined;
+      this._name = undefined;
+      this._priority = undefined;
+      this._serviceTag = undefined;
+      this._virtualNetworkSubnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._headers.internalValue = value.headers;
+      this._ipAddress = value.ipAddress;
+      this._name = value.name;
+      this._priority = value.priority;
+      this._serviceTag = value.serviceTag;
+      this._virtualNetworkSubnetId = value.virtualNetworkSubnetId;
+    }
+  }
+
+  // action - computed: true, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // headers - computed: true, optional: true, required: false
+  private _headers = new LogicAppStandardSiteConfigScmIpRestrictionHeadersList(this, "headers", false);
+  public get headers() {
+    return this._headers;
+  }
+  public putHeaders(value: LogicAppStandardSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable) {
+    this._headers.internalValue = value;
+  }
+  public resetHeaders() {
+    this._headers.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headersInput() {
+    return this._headers.internalValue;
+  }
+
+  // ip_address - computed: true, optional: true, required: false
+  private _ipAddress?: string; 
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+  public set ipAddress(value: string) {
+    this._ipAddress = value;
+  }
+  public resetIpAddress() {
+    this._ipAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: true, optional: true, required: false
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // service_tag - computed: true, optional: true, required: false
+  private _serviceTag?: string; 
+  public get serviceTag() {
+    return this.getStringAttribute('service_tag');
+  }
+  public set serviceTag(value: string) {
+    this._serviceTag = value;
+  }
+  public resetServiceTag() {
+    this._serviceTag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceTagInput() {
+    return this._serviceTag;
+  }
+
+  // virtual_network_subnet_id - computed: true, optional: true, required: false
+  private _virtualNetworkSubnetId?: string; 
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+  public set virtualNetworkSubnetId(value: string) {
+    this._virtualNetworkSubnetId = value;
+  }
+  public resetVirtualNetworkSubnetId() {
+    this._virtualNetworkSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdInput() {
+    return this._virtualNetworkSubnetId;
+  }
+}
+
+export class LogicAppStandardSiteConfigScmIpRestrictionList extends cdktf.ComplexList {
+  public internalValue? : LogicAppStandardSiteConfigScmIpRestriction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogicAppStandardSiteConfigScmIpRestrictionOutputReference {
+    return new LogicAppStandardSiteConfigScmIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LogicAppStandardSiteConfigCors {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#allowed_origins LogicAppStandard#allowed_origins}
@@ -993,6 +1430,22 @@ export interface LogicAppStandardSiteConfig {
   */
   readonly runtimeScaleMonitoringEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#scm_ip_restriction LogicAppStandard#scm_ip_restriction}
+  */
+  readonly scmIpRestriction?: LogicAppStandardSiteConfigScmIpRestriction[] | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#scm_min_tls_version LogicAppStandard#scm_min_tls_version}
+  */
+  readonly scmMinTlsVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#scm_type LogicAppStandard#scm_type}
+  */
+  readonly scmType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#scm_use_main_ip_restriction LogicAppStandard#scm_use_main_ip_restriction}
+  */
+  readonly scmUseMainIpRestriction?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#use_32_bit_worker_process LogicAppStandard#use_32_bit_worker_process}
   */
   readonly use32BitWorkerProcess?: boolean | cdktf.IResolvable;
@@ -1030,6 +1483,10 @@ export function logicAppStandardSiteConfigToTerraform(struct?: LogicAppStandardS
     min_tls_version: cdktf.stringToTerraform(struct!.minTlsVersion),
     pre_warmed_instance_count: cdktf.numberToTerraform(struct!.preWarmedInstanceCount),
     runtime_scale_monitoring_enabled: cdktf.booleanToTerraform(struct!.runtimeScaleMonitoringEnabled),
+    scm_ip_restriction: cdktf.listMapper(logicAppStandardSiteConfigScmIpRestrictionToTerraform, false)(struct!.scmIpRestriction),
+    scm_min_tls_version: cdktf.stringToTerraform(struct!.scmMinTlsVersion),
+    scm_type: cdktf.stringToTerraform(struct!.scmType),
+    scm_use_main_ip_restriction: cdktf.booleanToTerraform(struct!.scmUseMainIpRestriction),
     use_32_bit_worker_process: cdktf.booleanToTerraform(struct!.use32BitWorkerProcess),
     vnet_route_all_enabled: cdktf.booleanToTerraform(struct!.vnetRouteAllEnabled),
     websockets_enabled: cdktf.booleanToTerraform(struct!.websocketsEnabled),
@@ -1099,6 +1556,22 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
       hasAnyValues = true;
       internalValueResult.runtimeScaleMonitoringEnabled = this._runtimeScaleMonitoringEnabled;
     }
+    if (this._scmIpRestriction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scmIpRestriction = this._scmIpRestriction?.internalValue;
+    }
+    if (this._scmMinTlsVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scmMinTlsVersion = this._scmMinTlsVersion;
+    }
+    if (this._scmType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scmType = this._scmType;
+    }
+    if (this._scmUseMainIpRestriction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scmUseMainIpRestriction = this._scmUseMainIpRestriction;
+    }
     if (this._use32BitWorkerProcess !== undefined) {
       hasAnyValues = true;
       internalValueResult.use32BitWorkerProcess = this._use32BitWorkerProcess;
@@ -1133,6 +1606,10 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
       this._minTlsVersion = undefined;
       this._preWarmedInstanceCount = undefined;
       this._runtimeScaleMonitoringEnabled = undefined;
+      this._scmIpRestriction.internalValue = undefined;
+      this._scmMinTlsVersion = undefined;
+      this._scmType = undefined;
+      this._scmUseMainIpRestriction = undefined;
       this._use32BitWorkerProcess = undefined;
       this._vnetRouteAllEnabled = undefined;
       this._websocketsEnabled = undefined;
@@ -1152,6 +1629,10 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
       this._minTlsVersion = value.minTlsVersion;
       this._preWarmedInstanceCount = value.preWarmedInstanceCount;
       this._runtimeScaleMonitoringEnabled = value.runtimeScaleMonitoringEnabled;
+      this._scmIpRestriction.internalValue = value.scmIpRestriction;
+      this._scmMinTlsVersion = value.scmMinTlsVersion;
+      this._scmType = value.scmType;
+      this._scmUseMainIpRestriction = value.scmUseMainIpRestriction;
       this._use32BitWorkerProcess = value.use32BitWorkerProcess;
       this._vnetRouteAllEnabled = value.vnetRouteAllEnabled;
       this._websocketsEnabled = value.websocketsEnabled;
@@ -1349,6 +1830,70 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   // Temporarily expose input value. Use with caution.
   public get runtimeScaleMonitoringEnabledInput() {
     return this._runtimeScaleMonitoringEnabled;
+  }
+
+  // scm_ip_restriction - computed: true, optional: true, required: false
+  private _scmIpRestriction = new LogicAppStandardSiteConfigScmIpRestrictionList(this, "scm_ip_restriction", false);
+  public get scmIpRestriction() {
+    return this._scmIpRestriction;
+  }
+  public putScmIpRestriction(value: LogicAppStandardSiteConfigScmIpRestriction[] | cdktf.IResolvable) {
+    this._scmIpRestriction.internalValue = value;
+  }
+  public resetScmIpRestriction() {
+    this._scmIpRestriction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scmIpRestrictionInput() {
+    return this._scmIpRestriction.internalValue;
+  }
+
+  // scm_min_tls_version - computed: true, optional: true, required: false
+  private _scmMinTlsVersion?: string; 
+  public get scmMinTlsVersion() {
+    return this.getStringAttribute('scm_min_tls_version');
+  }
+  public set scmMinTlsVersion(value: string) {
+    this._scmMinTlsVersion = value;
+  }
+  public resetScmMinTlsVersion() {
+    this._scmMinTlsVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scmMinTlsVersionInput() {
+    return this._scmMinTlsVersion;
+  }
+
+  // scm_type - computed: true, optional: true, required: false
+  private _scmType?: string; 
+  public get scmType() {
+    return this.getStringAttribute('scm_type');
+  }
+  public set scmType(value: string) {
+    this._scmType = value;
+  }
+  public resetScmType() {
+    this._scmType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scmTypeInput() {
+    return this._scmType;
+  }
+
+  // scm_use_main_ip_restriction - computed: false, optional: true, required: false
+  private _scmUseMainIpRestriction?: boolean | cdktf.IResolvable; 
+  public get scmUseMainIpRestriction() {
+    return this.getBooleanAttribute('scm_use_main_ip_restriction');
+  }
+  public set scmUseMainIpRestriction(value: boolean | cdktf.IResolvable) {
+    this._scmUseMainIpRestriction = value;
+  }
+  public resetScmUseMainIpRestriction() {
+    this._scmUseMainIpRestriction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scmUseMainIpRestrictionInput() {
+    return this._scmUseMainIpRestriction;
   }
 
   // use_32_bit_worker_process - computed: false, optional: true, required: false
@@ -1598,7 +2143,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_logic_app_standard',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

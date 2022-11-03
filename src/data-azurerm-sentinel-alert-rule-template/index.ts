@@ -382,7 +382,7 @@ export class DataAzurermSentinelAlertRuleTemplate extends cdktf.TerraformDataSou
       terraformResourceType: 'azurerm_sentinel_alert_rule_template',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

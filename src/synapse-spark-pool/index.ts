@@ -27,6 +27,14 @@ export interface SynapseSparkPoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool#max_executors SynapseSparkPool#max_executors}
+  */
+  readonly maxExecutors?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool#min_executors SynapseSparkPool#min_executors}
+  */
+  readonly minExecutors?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool#name SynapseSparkPool#name}
   */
   readonly name: string;
@@ -600,7 +608,7 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_synapse_spark_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -615,6 +623,8 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
     this._computeIsolationEnabled = config.computeIsolationEnabled;
     this._dynamicExecutorAllocationEnabled = config.dynamicExecutorAllocationEnabled;
     this._id = config.id;
+    this._maxExecutors = config.maxExecutors;
+    this._minExecutors = config.minExecutors;
     this._name = config.name;
     this._nodeCount = config.nodeCount;
     this._nodeSize = config.nodeSize;
@@ -698,6 +708,38 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // max_executors - computed: false, optional: true, required: false
+  private _maxExecutors?: number; 
+  public get maxExecutors() {
+    return this.getNumberAttribute('max_executors');
+  }
+  public set maxExecutors(value: number) {
+    this._maxExecutors = value;
+  }
+  public resetMaxExecutors() {
+    this._maxExecutors = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxExecutorsInput() {
+    return this._maxExecutors;
+  }
+
+  // min_executors - computed: false, optional: true, required: false
+  private _minExecutors?: number; 
+  public get minExecutors() {
+    return this.getNumberAttribute('min_executors');
+  }
+  public set minExecutors(value: number) {
+    this._minExecutors = value;
+  }
+  public resetMinExecutors() {
+    this._minExecutors = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minExecutorsInput() {
+    return this._minExecutors;
   }
 
   // name - computed: false, optional: false, required: true
@@ -938,6 +980,8 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
       compute_isolation_enabled: cdktf.booleanToTerraform(this._computeIsolationEnabled),
       dynamic_executor_allocation_enabled: cdktf.booleanToTerraform(this._dynamicExecutorAllocationEnabled),
       id: cdktf.stringToTerraform(this._id),
+      max_executors: cdktf.numberToTerraform(this._maxExecutors),
+      min_executors: cdktf.numberToTerraform(this._minExecutors),
       name: cdktf.stringToTerraform(this._name),
       node_count: cdktf.numberToTerraform(this._nodeCount),
       node_size: cdktf.stringToTerraform(this._nodeSize),

@@ -65,11 +65,11 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#sql_administrator_login SynapseWorkspace#sql_administrator_login}
   */
-  readonly sqlAdministratorLogin: string;
+  readonly sqlAdministratorLogin?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#sql_administrator_login_password SynapseWorkspace#sql_administrator_login_password}
   */
-  readonly sqlAdministratorLoginPassword: string;
+  readonly sqlAdministratorLoginPassword?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#sql_identity_control_enabled SynapseWorkspace#sql_identity_control_enabled}
   */
@@ -105,7 +105,7 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#identity SynapseWorkspace#identity}
   */
-  readonly identity: SynapseWorkspaceIdentity;
+  readonly identity?: SynapseWorkspaceIdentity;
   /**
   * timeouts block
   * 
@@ -906,6 +906,10 @@ export class SynapseWorkspaceGithubRepoOutputReference extends cdktf.ComplexObje
 }
 export interface SynapseWorkspaceIdentity {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#identity_ids SynapseWorkspace#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#type SynapseWorkspace#type}
   */
   readonly type: string;
@@ -917,6 +921,7 @@ export function synapseWorkspaceIdentityToTerraform(struct?: SynapseWorkspaceIde
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -935,6 +940,10 @@ export class SynapseWorkspaceIdentityOutputReference extends cdktf.ComplexObject
   public get internalValue(): SynapseWorkspaceIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
@@ -945,12 +954,30 @@ export class SynapseWorkspaceIdentityOutputReference extends cdktf.ComplexObject
   public set internalValue(value: SynapseWorkspaceIdentity | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._identityIds = undefined;
       this._type = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
       this._type = value.type;
     }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
   }
 
   // principal_id - computed: true, optional: false, required: false
@@ -1159,7 +1186,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_synapse_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1404,7 +1431,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     return this._sqlAadAdmin.internalValue;
   }
 
-  // sql_administrator_login - computed: false, optional: false, required: true
+  // sql_administrator_login - computed: false, optional: true, required: false
   private _sqlAdministratorLogin?: string; 
   public get sqlAdministratorLogin() {
     return this.getStringAttribute('sql_administrator_login');
@@ -1412,18 +1439,24 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   public set sqlAdministratorLogin(value: string) {
     this._sqlAdministratorLogin = value;
   }
+  public resetSqlAdministratorLogin() {
+    this._sqlAdministratorLogin = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get sqlAdministratorLoginInput() {
     return this._sqlAdministratorLogin;
   }
 
-  // sql_administrator_login_password - computed: false, optional: false, required: true
+  // sql_administrator_login_password - computed: false, optional: true, required: false
   private _sqlAdministratorLoginPassword?: string; 
   public get sqlAdministratorLoginPassword() {
     return this.getStringAttribute('sql_administrator_login_password');
   }
   public set sqlAdministratorLoginPassword(value: string) {
     this._sqlAdministratorLoginPassword = value;
+  }
+  public resetSqlAdministratorLoginPassword() {
+    this._sqlAdministratorLoginPassword = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sqlAdministratorLoginPasswordInput() {
@@ -1523,13 +1556,16 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     return this._githubRepo.internalValue;
   }
 
-  // identity - computed: false, optional: false, required: true
+  // identity - computed: false, optional: true, required: false
   private _identity = new SynapseWorkspaceIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
   public putIdentity(value: SynapseWorkspaceIdentity) {
     this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {

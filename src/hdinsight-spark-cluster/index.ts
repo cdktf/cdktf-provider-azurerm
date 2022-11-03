@@ -53,6 +53,12 @@ export interface HdinsightSparkClusterConfig extends cdktf.TerraformMetaArgument
   */
   readonly componentVersion: HdinsightSparkClusterComponentVersion;
   /**
+  * compute_isolation block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster#compute_isolation HdinsightSparkCluster#compute_isolation}
+  */
+  readonly computeIsolation?: HdinsightSparkClusterComputeIsolation;
+  /**
   * disk_encryption block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster#disk_encryption HdinsightSparkCluster#disk_encryption}
@@ -179,6 +185,98 @@ export class HdinsightSparkClusterComponentVersionOutputReference extends cdktf.
   // Temporarily expose input value. Use with caution.
   public get sparkInput() {
     return this._spark;
+  }
+}
+export interface HdinsightSparkClusterComputeIsolation {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster#compute_isolation_enabled HdinsightSparkCluster#compute_isolation_enabled}
+  */
+  readonly computeIsolationEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster#host_sku HdinsightSparkCluster#host_sku}
+  */
+  readonly hostSku?: string;
+}
+
+export function hdinsightSparkClusterComputeIsolationToTerraform(struct?: HdinsightSparkClusterComputeIsolationOutputReference | HdinsightSparkClusterComputeIsolation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    compute_isolation_enabled: cdktf.booleanToTerraform(struct!.computeIsolationEnabled),
+    host_sku: cdktf.stringToTerraform(struct!.hostSku),
+  }
+}
+
+export class HdinsightSparkClusterComputeIsolationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): HdinsightSparkClusterComputeIsolation | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._computeIsolationEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.computeIsolationEnabled = this._computeIsolationEnabled;
+    }
+    if (this._hostSku !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostSku = this._hostSku;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightSparkClusterComputeIsolation | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._computeIsolationEnabled = undefined;
+      this._hostSku = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._computeIsolationEnabled = value.computeIsolationEnabled;
+      this._hostSku = value.hostSku;
+    }
+  }
+
+  // compute_isolation_enabled - computed: false, optional: true, required: false
+  private _computeIsolationEnabled?: boolean | cdktf.IResolvable; 
+  public get computeIsolationEnabled() {
+    return this.getBooleanAttribute('compute_isolation_enabled');
+  }
+  public set computeIsolationEnabled(value: boolean | cdktf.IResolvable) {
+    this._computeIsolationEnabled = value;
+  }
+  public resetComputeIsolationEnabled() {
+    this._computeIsolationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get computeIsolationEnabledInput() {
+    return this._computeIsolationEnabled;
+  }
+
+  // host_sku - computed: false, optional: true, required: false
+  private _hostSku?: string; 
+  public get hostSku() {
+    return this.getStringAttribute('host_sku');
+  }
+  public set hostSku(value: string) {
+    this._hostSku = value;
+  }
+  public resetHostSku() {
+    this._hostSku = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostSkuInput() {
+    return this._hostSku;
   }
 }
 export interface HdinsightSparkClusterDiskEncryption {
@@ -3616,7 +3714,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hdinsight_spark_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -3637,6 +3735,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
     this._tier = config.tier;
     this._tlsMinVersion = config.tlsMinVersion;
     this._componentVersion.internalValue = config.componentVersion;
+    this._computeIsolation.internalValue = config.computeIsolation;
     this._diskEncryption.internalValue = config.diskEncryption;
     this._extension.internalValue = config.extension;
     this._gateway.internalValue = config.gateway;
@@ -3804,6 +3903,22 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get componentVersionInput() {
     return this._componentVersion.internalValue;
+  }
+
+  // compute_isolation - computed: false, optional: true, required: false
+  private _computeIsolation = new HdinsightSparkClusterComputeIsolationOutputReference(this, "compute_isolation");
+  public get computeIsolation() {
+    return this._computeIsolation;
+  }
+  public putComputeIsolation(value: HdinsightSparkClusterComputeIsolation) {
+    this._computeIsolation.internalValue = value;
+  }
+  public resetComputeIsolation() {
+    this._computeIsolation.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get computeIsolationInput() {
+    return this._computeIsolation.internalValue;
   }
 
   // disk_encryption - computed: false, optional: true, required: false
@@ -3992,6 +4107,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
       tier: cdktf.stringToTerraform(this._tier),
       tls_min_version: cdktf.stringToTerraform(this._tlsMinVersion),
       component_version: hdinsightSparkClusterComponentVersionToTerraform(this._componentVersion.internalValue),
+      compute_isolation: hdinsightSparkClusterComputeIsolationToTerraform(this._computeIsolation.internalValue),
       disk_encryption: cdktf.listMapper(hdinsightSparkClusterDiskEncryptionToTerraform, true)(this._diskEncryption.internalValue),
       extension: hdinsightSparkClusterExtensionToTerraform(this._extension.internalValue),
       gateway: hdinsightSparkClusterGatewayToTerraform(this._gateway.internalValue),

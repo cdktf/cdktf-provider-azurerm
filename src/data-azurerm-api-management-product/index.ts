@@ -135,7 +135,7 @@ export class DataAzurermApiManagementProduct extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_api_management_product',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.28.0',
+        providerVersion: '3.29.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
