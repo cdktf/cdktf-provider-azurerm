@@ -27,6 +27,10 @@ export interface SecurityCenterContactConfig extends cdktf.TerraformMetaArgument
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact#name SecurityCenterContact#name}
+  */
+  readonly name?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact#phone SecurityCenterContact#phone}
   */
   readonly phone?: string;
@@ -220,7 +224,7 @@ export class SecurityCenterContact extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_security_center_contact',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -235,6 +239,7 @@ export class SecurityCenterContact extends cdktf.TerraformResource {
     this._alertsToAdmins = config.alertsToAdmins;
     this._email = config.email;
     this._id = config.id;
+    this._name = config.name;
     this._phone = config.phone;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -298,6 +303,22 @@ export class SecurityCenterContact extends cdktf.TerraformResource {
     return this._id;
   }
 
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
   // phone - computed: false, optional: true, required: false
   private _phone?: string; 
   public get phone() {
@@ -340,6 +361,7 @@ export class SecurityCenterContact extends cdktf.TerraformResource {
       alerts_to_admins: cdktf.booleanToTerraform(this._alertsToAdmins),
       email: cdktf.stringToTerraform(this._email),
       id: cdktf.stringToTerraform(this._id),
+      name: cdktf.stringToTerraform(this._name),
       phone: cdktf.stringToTerraform(this._phone),
       timeouts: securityCenterContactTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -215,6 +215,12 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly timeouts?: KubernetesClusterTimeouts;
   /**
+  * web_app_routing block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#web_app_routing KubernetesCluster#web_app_routing}
+  */
+  readonly webAppRouting?: KubernetesClusterWebAppRouting;
+  /**
   * windows_profile block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#windows_profile KubernetesCluster#windows_profile}
@@ -724,7 +730,7 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
     return this._emptyBulkDeleteMax;
   }
 
-  // expander - computed: true, optional: true, required: false
+  // expander - computed: false, optional: true, required: false
   private _expander?: string; 
   public get expander() {
     return this.getStringAttribute('expander');
@@ -5900,6 +5906,68 @@ export class KubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObjec
     return this._update;
   }
 }
+export interface KubernetesClusterWebAppRouting {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#dns_zone_id KubernetesCluster#dns_zone_id}
+  */
+  readonly dnsZoneId: string;
+}
+
+export function kubernetesClusterWebAppRoutingToTerraform(struct?: KubernetesClusterWebAppRoutingOutputReference | KubernetesClusterWebAppRouting): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    dns_zone_id: cdktf.stringToTerraform(struct!.dnsZoneId),
+  }
+}
+
+export class KubernetesClusterWebAppRoutingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KubernetesClusterWebAppRouting | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dnsZoneId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dnsZoneId = this._dnsZoneId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterWebAppRouting | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._dnsZoneId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._dnsZoneId = value.dnsZoneId;
+    }
+  }
+
+  // dns_zone_id - computed: false, optional: false, required: true
+  private _dnsZoneId?: string; 
+  public get dnsZoneId() {
+    return this.getStringAttribute('dns_zone_id');
+  }
+  public set dnsZoneId(value: string) {
+    this._dnsZoneId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsZoneIdInput() {
+    return this._dnsZoneId;
+  }
+}
 export interface KubernetesClusterWindowsProfileGmsa {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#dns_server KubernetesCluster#dns_server}
@@ -6223,7 +6291,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -6277,6 +6345,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._omsAgent.internalValue = config.omsAgent;
     this._servicePrincipal.internalValue = config.servicePrincipal;
     this._timeouts.internalValue = config.timeouts;
+    this._webAppRouting.internalValue = config.webAppRouting;
     this._windowsProfile.internalValue = config.windowsProfile;
     this._workloadAutoscalerProfile.internalValue = config.workloadAutoscalerProfile;
   }
@@ -7008,6 +7077,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._timeouts.internalValue;
   }
 
+  // web_app_routing - computed: false, optional: true, required: false
+  private _webAppRouting = new KubernetesClusterWebAppRoutingOutputReference(this, "web_app_routing");
+  public get webAppRouting() {
+    return this._webAppRouting;
+  }
+  public putWebAppRouting(value: KubernetesClusterWebAppRouting) {
+    this._webAppRouting.internalValue = value;
+  }
+  public resetWebAppRouting() {
+    this._webAppRouting.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get webAppRoutingInput() {
+    return this._webAppRouting.internalValue;
+  }
+
   // windows_profile - computed: false, optional: true, required: false
   private _windowsProfile = new KubernetesClusterWindowsProfileOutputReference(this, "windows_profile");
   public get windowsProfile() {
@@ -7089,6 +7174,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       oms_agent: kubernetesClusterOmsAgentToTerraform(this._omsAgent.internalValue),
       service_principal: kubernetesClusterServicePrincipalToTerraform(this._servicePrincipal.internalValue),
       timeouts: kubernetesClusterTimeoutsToTerraform(this._timeouts.internalValue),
+      web_app_routing: kubernetesClusterWebAppRoutingToTerraform(this._webAppRouting.internalValue),
       windows_profile: kubernetesClusterWindowsProfileToTerraform(this._windowsProfile.internalValue),
       workload_autoscaler_profile: kubernetesClusterWorkloadAutoscalerProfileToTerraform(this._workloadAutoscalerProfile.internalValue),
     };

@@ -35,6 +35,10 @@ export interface MonitorDiagnosticSettingConfig extends cdktf.TerraformMetaArgum
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting#partner_solution_id MonitorDiagnosticSetting#partner_solution_id}
+  */
+  readonly partnerSolutionId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting#storage_account_id MonitorDiagnosticSetting#storage_account_id}
   */
   readonly storageAccountId?: string;
@@ -752,7 +756,7 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_diagnostic_setting',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -769,6 +773,7 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
     this._logAnalyticsDestinationType = config.logAnalyticsDestinationType;
     this._logAnalyticsWorkspaceId = config.logAnalyticsWorkspaceId;
     this._name = config.name;
+    this._partnerSolutionId = config.partnerSolutionId;
     this._storageAccountId = config.storageAccountId;
     this._targetResourceId = config.targetResourceId;
     this._log.internalValue = config.log;
@@ -873,6 +878,22 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // partner_solution_id - computed: false, optional: true, required: false
+  private _partnerSolutionId?: string; 
+  public get partnerSolutionId() {
+    return this.getStringAttribute('partner_solution_id');
+  }
+  public set partnerSolutionId(value: string) {
+    this._partnerSolutionId = value;
+  }
+  public resetPartnerSolutionId() {
+    this._partnerSolutionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partnerSolutionIdInput() {
+    return this._partnerSolutionId;
+  }
+
   // storage_account_id - computed: false, optional: true, required: false
   private _storageAccountId?: string; 
   public get storageAccountId() {
@@ -962,6 +983,7 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
       log_analytics_destination_type: cdktf.stringToTerraform(this._logAnalyticsDestinationType),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
+      partner_solution_id: cdktf.stringToTerraform(this._partnerSolutionId),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
       log: cdktf.listMapper(monitorDiagnosticSettingLogToTerraform, true)(this._log.internalValue),

@@ -228,7 +228,7 @@ export class DataProtectionBackupInstancePostgresql extends cdktf.TerraformResou
       terraformResourceType: 'azurerm_data_protection_backup_instance_postgresql',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

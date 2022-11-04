@@ -220,7 +220,7 @@ export class StorageContainer extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_container',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

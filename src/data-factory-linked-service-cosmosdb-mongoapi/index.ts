@@ -244,7 +244,7 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
       terraformResourceType: 'azurerm_data_factory_linked_service_cosmosdb_mongoapi',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

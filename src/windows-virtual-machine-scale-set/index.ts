@@ -1046,6 +1046,92 @@ export class WindowsVirtualMachineScaleSetDataDiskList extends cdktf.ComplexList
     return new WindowsVirtualMachineScaleSetDataDiskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface WindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set#secret_url WindowsVirtualMachineScaleSet#secret_url}
+  */
+  readonly secretUrl: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set#source_vault_id WindowsVirtualMachineScaleSet#source_vault_id}
+  */
+  readonly sourceVaultId: string;
+}
+
+export function windowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVaultToTerraform(struct?: WindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVaultOutputReference | WindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    secret_url: cdktf.stringToTerraform(struct!.secretUrl),
+    source_vault_id: cdktf.stringToTerraform(struct!.sourceVaultId),
+  }
+}
+
+export class WindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVaultOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._secretUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretUrl = this._secretUrl;
+    }
+    if (this._sourceVaultId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceVaultId = this._sourceVaultId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._secretUrl = undefined;
+      this._sourceVaultId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._secretUrl = value.secretUrl;
+      this._sourceVaultId = value.sourceVaultId;
+    }
+  }
+
+  // secret_url - computed: false, optional: false, required: true
+  private _secretUrl?: string; 
+  public get secretUrl() {
+    return this.getStringAttribute('secret_url');
+  }
+  public set secretUrl(value: string) {
+    this._secretUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretUrlInput() {
+    return this._secretUrl;
+  }
+
+  // source_vault_id - computed: false, optional: false, required: true
+  private _sourceVaultId?: string; 
+  public get sourceVaultId() {
+    return this.getStringAttribute('source_vault_id');
+  }
+  public set sourceVaultId(value: string) {
+    this._sourceVaultId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceVaultIdInput() {
+    return this._sourceVaultId;
+  }
+}
 export interface WindowsVirtualMachineScaleSetExtension {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set#auto_upgrade_minor_version WindowsVirtualMachineScaleSet#auto_upgrade_minor_version}
@@ -1087,6 +1173,12 @@ export interface WindowsVirtualMachineScaleSetExtension {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set#type_handler_version WindowsVirtualMachineScaleSet#type_handler_version}
   */
   readonly typeHandlerVersion: string;
+  /**
+  * protected_settings_from_key_vault block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set#protected_settings_from_key_vault WindowsVirtualMachineScaleSet#protected_settings_from_key_vault}
+  */
+  readonly protectedSettingsFromKeyVault?: WindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault;
 }
 
 export function windowsVirtualMachineScaleSetExtensionToTerraform(struct?: WindowsVirtualMachineScaleSetExtension | cdktf.IResolvable): any {
@@ -1105,6 +1197,7 @@ export function windowsVirtualMachineScaleSetExtensionToTerraform(struct?: Windo
     settings: cdktf.stringToTerraform(struct!.settings),
     type: cdktf.stringToTerraform(struct!.type),
     type_handler_version: cdktf.stringToTerraform(struct!.typeHandlerVersion),
+    protected_settings_from_key_vault: windowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVaultToTerraform(struct!.protectedSettingsFromKeyVault),
   }
 }
 
@@ -1168,6 +1261,10 @@ export class WindowsVirtualMachineScaleSetExtensionOutputReference extends cdktf
       hasAnyValues = true;
       internalValueResult.typeHandlerVersion = this._typeHandlerVersion;
     }
+    if (this._protectedSettingsFromKeyVault?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protectedSettingsFromKeyVault = this._protectedSettingsFromKeyVault?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1185,6 +1282,7 @@ export class WindowsVirtualMachineScaleSetExtensionOutputReference extends cdktf
       this._settings = undefined;
       this._type = undefined;
       this._typeHandlerVersion = undefined;
+      this._protectedSettingsFromKeyVault.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -1203,6 +1301,7 @@ export class WindowsVirtualMachineScaleSetExtensionOutputReference extends cdktf
       this._settings = value.settings;
       this._type = value.type;
       this._typeHandlerVersion = value.typeHandlerVersion;
+      this._protectedSettingsFromKeyVault.internalValue = value.protectedSettingsFromKeyVault;
     }
   }
 
@@ -1352,6 +1451,22 @@ export class WindowsVirtualMachineScaleSetExtensionOutputReference extends cdktf
   // Temporarily expose input value. Use with caution.
   public get typeHandlerVersionInput() {
     return this._typeHandlerVersion;
+  }
+
+  // protected_settings_from_key_vault - computed: false, optional: true, required: false
+  private _protectedSettingsFromKeyVault = new WindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVaultOutputReference(this, "protected_settings_from_key_vault");
+  public get protectedSettingsFromKeyVault() {
+    return this._protectedSettingsFromKeyVault;
+  }
+  public putProtectedSettingsFromKeyVault(value: WindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault) {
+    this._protectedSettingsFromKeyVault.internalValue = value;
+  }
+  public resetProtectedSettingsFromKeyVault() {
+    this._protectedSettingsFromKeyVault.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protectedSettingsFromKeyVaultInput() {
+    return this._protectedSettingsFromKeyVault.internalValue;
   }
 }
 
@@ -4414,7 +4529,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

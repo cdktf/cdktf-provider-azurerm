@@ -210,7 +210,7 @@ export class DataAzurermKeyVaultCertificateIssuer extends cdktf.TerraformDataSou
       terraformResourceType: 'azurerm_key_vault_certificate_issuer',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

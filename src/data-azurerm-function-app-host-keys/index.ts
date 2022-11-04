@@ -131,7 +131,7 @@ export class DataAzurermFunctionAppHostKeys extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_function_app_host_keys',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -217,6 +217,11 @@ export class DataAzurermFunctionAppHostKeys extends cdktf.TerraformDataSource {
   // signalr_extension_key - computed: true, optional: false, required: false
   public get signalrExtensionKey() {
     return this.getStringAttribute('signalr_extension_key');
+  }
+
+  // webpubsub_extension_key - computed: true, optional: false, required: false
+  public get webpubsubExtensionKey() {
+    return this.getStringAttribute('webpubsub_extension_key');
   }
 
   // timeouts - computed: false, optional: true, required: false
