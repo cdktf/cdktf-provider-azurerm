@@ -135,7 +135,7 @@ export class DataAzurermSshPublicKey extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_ssh_public_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

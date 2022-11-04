@@ -212,7 +212,7 @@ export class LogAnalyticsClusterCustomerManagedKey extends cdktf.TerraformResour
       terraformResourceType: 'azurerm_log_analytics_cluster_customer_managed_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

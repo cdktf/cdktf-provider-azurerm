@@ -1345,6 +1345,10 @@ export interface MssqlVirtualMachineStorageConfiguration {
   */
   readonly storageWorkloadType: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#system_db_on_data_disk_enabled MssqlVirtualMachine#system_db_on_data_disk_enabled}
+  */
+  readonly systemDbOnDataDiskEnabled?: boolean | cdktf.IResolvable;
+  /**
   * data_settings block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#data_settings MssqlVirtualMachine#data_settings}
@@ -1372,6 +1376,7 @@ export function mssqlVirtualMachineStorageConfigurationToTerraform(struct?: Mssq
   return {
     disk_type: cdktf.stringToTerraform(struct!.diskType),
     storage_workload_type: cdktf.stringToTerraform(struct!.storageWorkloadType),
+    system_db_on_data_disk_enabled: cdktf.booleanToTerraform(struct!.systemDbOnDataDiskEnabled),
     data_settings: mssqlVirtualMachineStorageConfigurationDataSettingsToTerraform(struct!.dataSettings),
     log_settings: mssqlVirtualMachineStorageConfigurationLogSettingsToTerraform(struct!.logSettings),
     temp_db_settings: mssqlVirtualMachineStorageConfigurationTempDbSettingsToTerraform(struct!.tempDbSettings),
@@ -1400,6 +1405,10 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.storageWorkloadType = this._storageWorkloadType;
     }
+    if (this._systemDbOnDataDiskEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.systemDbOnDataDiskEnabled = this._systemDbOnDataDiskEnabled;
+    }
     if (this._dataSettings?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.dataSettings = this._dataSettings?.internalValue;
@@ -1420,6 +1429,7 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
       this.isEmptyObject = false;
       this._diskType = undefined;
       this._storageWorkloadType = undefined;
+      this._systemDbOnDataDiskEnabled = undefined;
       this._dataSettings.internalValue = undefined;
       this._logSettings.internalValue = undefined;
       this._tempDbSettings.internalValue = undefined;
@@ -1428,6 +1438,7 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
       this.isEmptyObject = Object.keys(value).length === 0;
       this._diskType = value.diskType;
       this._storageWorkloadType = value.storageWorkloadType;
+      this._systemDbOnDataDiskEnabled = value.systemDbOnDataDiskEnabled;
       this._dataSettings.internalValue = value.dataSettings;
       this._logSettings.internalValue = value.logSettings;
       this._tempDbSettings.internalValue = value.tempDbSettings;
@@ -1458,6 +1469,22 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
   // Temporarily expose input value. Use with caution.
   public get storageWorkloadTypeInput() {
     return this._storageWorkloadType;
+  }
+
+  // system_db_on_data_disk_enabled - computed: false, optional: true, required: false
+  private _systemDbOnDataDiskEnabled?: boolean | cdktf.IResolvable; 
+  public get systemDbOnDataDiskEnabled() {
+    return this.getBooleanAttribute('system_db_on_data_disk_enabled');
+  }
+  public set systemDbOnDataDiskEnabled(value: boolean | cdktf.IResolvable) {
+    this._systemDbOnDataDiskEnabled = value;
+  }
+  public resetSystemDbOnDataDiskEnabled() {
+    this._systemDbOnDataDiskEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get systemDbOnDataDiskEnabledInput() {
+    return this._systemDbOnDataDiskEnabled;
   }
 
   // data_settings - computed: false, optional: true, required: false
@@ -1691,7 +1718,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_virtual_machine',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

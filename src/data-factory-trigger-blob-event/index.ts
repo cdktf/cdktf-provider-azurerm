@@ -375,7 +375,7 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_trigger_blob_event',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

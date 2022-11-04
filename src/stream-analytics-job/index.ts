@@ -12,6 +12,10 @@ export interface StreamAnalyticsJobConfig extends cdktf.TerraformMetaArguments {
   */
   readonly compatibilityLevel?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job#content_storage_policy StreamAnalyticsJob#content_storage_policy}
+  */
+  readonly contentStoragePolicy?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job#data_locale StreamAnalyticsJob#data_locale}
   */
   readonly dataLocale?: string;
@@ -76,6 +80,12 @@ export interface StreamAnalyticsJobConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job#identity StreamAnalyticsJob#identity}
   */
   readonly identity?: StreamAnalyticsJobIdentity;
+  /**
+  * job_storage_account block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job#job_storage_account StreamAnalyticsJob#job_storage_account}
+  */
+  readonly jobStorageAccount?: StreamAnalyticsJobJobStorageAccount[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -153,6 +163,148 @@ export class StreamAnalyticsJobIdentityOutputReference extends cdktf.ComplexObje
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type;
+  }
+}
+export interface StreamAnalyticsJobJobStorageAccount {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job#account_key StreamAnalyticsJob#account_key}
+  */
+  readonly accountKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job#account_name StreamAnalyticsJob#account_name}
+  */
+  readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job#authentication_mode StreamAnalyticsJob#authentication_mode}
+  */
+  readonly authenticationMode: string;
+}
+
+export function streamAnalyticsJobJobStorageAccountToTerraform(struct?: StreamAnalyticsJobJobStorageAccount | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    account_key: cdktf.stringToTerraform(struct!.accountKey),
+    account_name: cdktf.stringToTerraform(struct!.accountName),
+    authentication_mode: cdktf.stringToTerraform(struct!.authenticationMode),
+  }
+}
+
+export class StreamAnalyticsJobJobStorageAccountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StreamAnalyticsJobJobStorageAccount | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accountKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accountKey = this._accountKey;
+    }
+    if (this._accountName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accountName = this._accountName;
+    }
+    if (this._authenticationMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authenticationMode = this._authenticationMode;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StreamAnalyticsJobJobStorageAccount | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._accountKey = undefined;
+      this._accountName = undefined;
+      this._authenticationMode = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._accountKey = value.accountKey;
+      this._accountName = value.accountName;
+      this._authenticationMode = value.authenticationMode;
+    }
+  }
+
+  // account_key - computed: false, optional: false, required: true
+  private _accountKey?: string; 
+  public get accountKey() {
+    return this.getStringAttribute('account_key');
+  }
+  public set accountKey(value: string) {
+    this._accountKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountKeyInput() {
+    return this._accountKey;
+  }
+
+  // account_name - computed: false, optional: false, required: true
+  private _accountName?: string; 
+  public get accountName() {
+    return this.getStringAttribute('account_name');
+  }
+  public set accountName(value: string) {
+    this._accountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName;
+  }
+
+  // authentication_mode - computed: false, optional: false, required: true
+  private _authenticationMode?: string; 
+  public get authenticationMode() {
+    return this.getStringAttribute('authentication_mode');
+  }
+  public set authenticationMode(value: string) {
+    this._authenticationMode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationModeInput() {
+    return this._authenticationMode;
+  }
+}
+
+export class StreamAnalyticsJobJobStorageAccountList extends cdktf.ComplexList {
+  public internalValue? : StreamAnalyticsJobJobStorageAccount[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StreamAnalyticsJobJobStorageAccountOutputReference {
+    return new StreamAnalyticsJobJobStorageAccountOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface StreamAnalyticsJobTimeouts {
@@ -338,7 +490,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stream_analytics_job',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -350,6 +502,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._compatibilityLevel = config.compatibilityLevel;
+    this._contentStoragePolicy = config.contentStoragePolicy;
     this._dataLocale = config.dataLocale;
     this._eventsLateArrivalMaxDelayInSeconds = config.eventsLateArrivalMaxDelayInSeconds;
     this._eventsOutOfOrderMaxDelayInSeconds = config.eventsOutOfOrderMaxDelayInSeconds;
@@ -365,6 +518,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
     this._transformationQuery = config.transformationQuery;
     this._type = config.type;
     this._identity.internalValue = config.identity;
+    this._jobStorageAccount.internalValue = config.jobStorageAccount;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -386,6 +540,22 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get compatibilityLevelInput() {
     return this._compatibilityLevel;
+  }
+
+  // content_storage_policy - computed: false, optional: true, required: false
+  private _contentStoragePolicy?: string; 
+  public get contentStoragePolicy() {
+    return this.getStringAttribute('content_storage_policy');
+  }
+  public set contentStoragePolicy(value: string) {
+    this._contentStoragePolicy = value;
+  }
+  public resetContentStoragePolicy() {
+    this._contentStoragePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentStoragePolicyInput() {
+    return this._contentStoragePolicy;
   }
 
   // data_locale - computed: true, optional: true, required: false
@@ -621,6 +791,22 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
     return this._identity.internalValue;
   }
 
+  // job_storage_account - computed: false, optional: true, required: false
+  private _jobStorageAccount = new StreamAnalyticsJobJobStorageAccountList(this, "job_storage_account", false);
+  public get jobStorageAccount() {
+    return this._jobStorageAccount;
+  }
+  public putJobStorageAccount(value: StreamAnalyticsJobJobStorageAccount[] | cdktf.IResolvable) {
+    this._jobStorageAccount.internalValue = value;
+  }
+  public resetJobStorageAccount() {
+    this._jobStorageAccount.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jobStorageAccountInput() {
+    return this._jobStorageAccount.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new StreamAnalyticsJobTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -644,6 +830,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       compatibility_level: cdktf.stringToTerraform(this._compatibilityLevel),
+      content_storage_policy: cdktf.stringToTerraform(this._contentStoragePolicy),
       data_locale: cdktf.stringToTerraform(this._dataLocale),
       events_late_arrival_max_delay_in_seconds: cdktf.numberToTerraform(this._eventsLateArrivalMaxDelayInSeconds),
       events_out_of_order_max_delay_in_seconds: cdktf.numberToTerraform(this._eventsOutOfOrderMaxDelayInSeconds),
@@ -659,6 +846,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
       transformation_query: cdktf.stringToTerraform(this._transformationQuery),
       type: cdktf.stringToTerraform(this._type),
       identity: streamAnalyticsJobIdentityToTerraform(this._identity.internalValue),
+      job_storage_account: cdktf.listMapper(streamAnalyticsJobJobStorageAccountToTerraform, true)(this._jobStorageAccount.internalValue),
       timeouts: streamAnalyticsJobTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

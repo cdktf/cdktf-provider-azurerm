@@ -224,7 +224,7 @@ export class BackupProtectedFileShare extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_backup_protected_file_share',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

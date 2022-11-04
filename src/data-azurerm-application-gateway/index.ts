@@ -29,6 +29,85 @@ export interface DataAzurermApplicationGatewayConfig extends cdktf.TerraformMeta
   */
   readonly timeouts?: DataAzurermApplicationGatewayTimeouts;
 }
+export interface DataAzurermApplicationGatewayBackendAddressPool {
+}
+
+export function dataAzurermApplicationGatewayBackendAddressPoolToTerraform(struct?: DataAzurermApplicationGatewayBackendAddressPool): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermApplicationGatewayBackendAddressPoolOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermApplicationGatewayBackendAddressPool | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermApplicationGatewayBackendAddressPool | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // fqdns - computed: true, optional: false, required: false
+  public get fqdns() {
+    return cdktf.Fn.tolist(this.getListAttribute('fqdns'));
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // ip_addresses - computed: true, optional: false, required: false
+  public get ipAddresses() {
+    return cdktf.Fn.tolist(this.getListAttribute('ip_addresses'));
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+}
+
+export class DataAzurermApplicationGatewayBackendAddressPoolList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermApplicationGatewayBackendAddressPoolOutputReference {
+    return new DataAzurermApplicationGatewayBackendAddressPoolOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermApplicationGatewayIdentity {
 }
 
@@ -200,7 +279,7 @@ export class DataAzurermApplicationGateway extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_application_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.29.1',
+        providerVersion: '3.30.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -220,6 +299,12 @@ export class DataAzurermApplicationGateway extends cdktf.TerraformDataSource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // backend_address_pool - computed: true, optional: false, required: false
+  private _backendAddressPool = new DataAzurermApplicationGatewayBackendAddressPoolList(this, "backend_address_pool", false);
+  public get backendAddressPool() {
+    return this._backendAddressPool;
+  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
