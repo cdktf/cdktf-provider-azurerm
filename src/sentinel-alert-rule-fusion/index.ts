@@ -31,11 +31,312 @@ export interface SentinelAlertRuleFusionConfig extends cdktf.TerraformMetaArgume
   */
   readonly name: string;
   /**
+  * source block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#source SentinelAlertRuleFusion#source}
+  */
+  readonly source?: SentinelAlertRuleFusionSource[] | cdktf.IResolvable;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#timeouts SentinelAlertRuleFusion#timeouts}
   */
   readonly timeouts?: SentinelAlertRuleFusionTimeouts;
+}
+export interface SentinelAlertRuleFusionSourceSubType {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#enabled SentinelAlertRuleFusion#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#name SentinelAlertRuleFusion#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#severities_allowed SentinelAlertRuleFusion#severities_allowed}
+  */
+  readonly severitiesAllowed: string[];
+}
+
+export function sentinelAlertRuleFusionSourceSubTypeToTerraform(struct?: SentinelAlertRuleFusionSourceSubType | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    name: cdktf.stringToTerraform(struct!.name),
+    severities_allowed: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.severitiesAllowed),
+  }
+}
+
+export class SentinelAlertRuleFusionSourceSubTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SentinelAlertRuleFusionSourceSubType | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._severitiesAllowed !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.severitiesAllowed = this._severitiesAllowed;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SentinelAlertRuleFusionSourceSubType | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._enabled = undefined;
+      this._name = undefined;
+      this._severitiesAllowed = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._enabled = value.enabled;
+      this._name = value.name;
+      this._severitiesAllowed = value.severitiesAllowed;
+    }
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // severities_allowed - computed: false, optional: false, required: true
+  private _severitiesAllowed?: string[]; 
+  public get severitiesAllowed() {
+    return cdktf.Fn.tolist(this.getListAttribute('severities_allowed'));
+  }
+  public set severitiesAllowed(value: string[]) {
+    this._severitiesAllowed = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get severitiesAllowedInput() {
+    return this._severitiesAllowed;
+  }
+}
+
+export class SentinelAlertRuleFusionSourceSubTypeList extends cdktf.ComplexList {
+  public internalValue? : SentinelAlertRuleFusionSourceSubType[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SentinelAlertRuleFusionSourceSubTypeOutputReference {
+    return new SentinelAlertRuleFusionSourceSubTypeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SentinelAlertRuleFusionSource {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#enabled SentinelAlertRuleFusion#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#name SentinelAlertRuleFusion#name}
+  */
+  readonly name: string;
+  /**
+  * sub_type block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#sub_type SentinelAlertRuleFusion#sub_type}
+  */
+  readonly subType?: SentinelAlertRuleFusionSourceSubType[] | cdktf.IResolvable;
+}
+
+export function sentinelAlertRuleFusionSourceToTerraform(struct?: SentinelAlertRuleFusionSource | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    name: cdktf.stringToTerraform(struct!.name),
+    sub_type: cdktf.listMapper(sentinelAlertRuleFusionSourceSubTypeToTerraform, true)(struct!.subType),
+  }
+}
+
+export class SentinelAlertRuleFusionSourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SentinelAlertRuleFusionSource | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._subType?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subType = this._subType?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SentinelAlertRuleFusionSource | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._enabled = undefined;
+      this._name = undefined;
+      this._subType.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._enabled = value.enabled;
+      this._name = value.name;
+      this._subType.internalValue = value.subType;
+    }
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // sub_type - computed: false, optional: true, required: false
+  private _subType = new SentinelAlertRuleFusionSourceSubTypeList(this, "sub_type", false);
+  public get subType() {
+    return this._subType;
+  }
+  public putSubType(value: SentinelAlertRuleFusionSourceSubType[] | cdktf.IResolvable) {
+    this._subType.internalValue = value;
+  }
+  public resetSubType() {
+    this._subType.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subTypeInput() {
+    return this._subType.internalValue;
+  }
+}
+
+export class SentinelAlertRuleFusionSourceList extends cdktf.ComplexList {
+  public internalValue? : SentinelAlertRuleFusionSource[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SentinelAlertRuleFusionSourceOutputReference {
+    return new SentinelAlertRuleFusionSourceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface SentinelAlertRuleFusionTimeouts {
   /**
@@ -220,7 +521,7 @@ export class SentinelAlertRuleFusion extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sentinel_alert_rule_fusion',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.30.0',
+        providerVersion: '3.31.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -236,6 +537,7 @@ export class SentinelAlertRuleFusion extends cdktf.TerraformResource {
     this._id = config.id;
     this._logAnalyticsWorkspaceId = config.logAnalyticsWorkspaceId;
     this._name = config.name;
+    this._source.internalValue = config.source;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -314,6 +616,22 @@ export class SentinelAlertRuleFusion extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // source - computed: false, optional: true, required: false
+  private _source = new SentinelAlertRuleFusionSourceList(this, "source", false);
+  public get source() {
+    return this._source;
+  }
+  public putSource(value: SentinelAlertRuleFusionSource[] | cdktf.IResolvable) {
+    this._source.internalValue = value;
+  }
+  public resetSource() {
+    this._source.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceInput() {
+    return this._source.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new SentinelAlertRuleFusionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -341,6 +659,7 @@ export class SentinelAlertRuleFusion extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
+      source: cdktf.listMapper(sentinelAlertRuleFusionSourceToTerraform, true)(this._source.internalValue),
       timeouts: sentinelAlertRuleFusionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

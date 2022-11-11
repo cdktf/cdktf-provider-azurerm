@@ -3143,7 +3143,7 @@ export class WindowsFunctionAppSiteConfigAppServiceLogsOutputReference extends c
 }
 export interface WindowsFunctionAppSiteConfigApplicationStack {
   /**
-  * The version of .Net. Possible values are `3.1` and `6`
+  * The version of .Net. Possible values are `3.1` `6` and `7`
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#dotnet_version WindowsFunctionApp#dotnet_version}
   */
@@ -4886,7 +4886,7 @@ export class WindowsFunctionApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_function_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.30.0',
+        providerVersion: '3.31.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

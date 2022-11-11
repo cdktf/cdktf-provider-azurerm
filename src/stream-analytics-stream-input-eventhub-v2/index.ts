@@ -1,0 +1,591 @@
+// https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2
+// generated from terraform resource schema
+
+import { Construct } from 'constructs';
+import * as cdktf from 'cdktf';
+
+// Configuration
+
+export interface StreamAnalyticsStreamInputEventhubV2Config extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#authentication_mode StreamAnalyticsStreamInputEventhubV2#authentication_mode}
+  */
+  readonly authenticationMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#eventhub_consumer_group_name StreamAnalyticsStreamInputEventhubV2#eventhub_consumer_group_name}
+  */
+  readonly eventhubConsumerGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#eventhub_name StreamAnalyticsStreamInputEventhubV2#eventhub_name}
+  */
+  readonly eventhubName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#id StreamAnalyticsStreamInputEventhubV2#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#name StreamAnalyticsStreamInputEventhubV2#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#partition_key StreamAnalyticsStreamInputEventhubV2#partition_key}
+  */
+  readonly partitionKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#servicebus_namespace StreamAnalyticsStreamInputEventhubV2#servicebus_namespace}
+  */
+  readonly servicebusNamespace: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#shared_access_policy_key StreamAnalyticsStreamInputEventhubV2#shared_access_policy_key}
+  */
+  readonly sharedAccessPolicyKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#shared_access_policy_name StreamAnalyticsStreamInputEventhubV2#shared_access_policy_name}
+  */
+  readonly sharedAccessPolicyName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#stream_analytics_job_id StreamAnalyticsStreamInputEventhubV2#stream_analytics_job_id}
+  */
+  readonly streamAnalyticsJobId: string;
+  /**
+  * serialization block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#serialization StreamAnalyticsStreamInputEventhubV2#serialization}
+  */
+  readonly serialization: StreamAnalyticsStreamInputEventhubV2Serialization;
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#timeouts StreamAnalyticsStreamInputEventhubV2#timeouts}
+  */
+  readonly timeouts?: StreamAnalyticsStreamInputEventhubV2Timeouts;
+}
+export interface StreamAnalyticsStreamInputEventhubV2Serialization {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#encoding StreamAnalyticsStreamInputEventhubV2#encoding}
+  */
+  readonly encoding?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#field_delimiter StreamAnalyticsStreamInputEventhubV2#field_delimiter}
+  */
+  readonly fieldDelimiter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#type StreamAnalyticsStreamInputEventhubV2#type}
+  */
+  readonly type: string;
+}
+
+export function streamAnalyticsStreamInputEventhubV2SerializationToTerraform(struct?: StreamAnalyticsStreamInputEventhubV2SerializationOutputReference | StreamAnalyticsStreamInputEventhubV2Serialization): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    encoding: cdktf.stringToTerraform(struct!.encoding),
+    field_delimiter: cdktf.stringToTerraform(struct!.fieldDelimiter),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class StreamAnalyticsStreamInputEventhubV2SerializationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): StreamAnalyticsStreamInputEventhubV2Serialization | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._encoding !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.encoding = this._encoding;
+    }
+    if (this._fieldDelimiter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fieldDelimiter = this._fieldDelimiter;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StreamAnalyticsStreamInputEventhubV2Serialization | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._encoding = undefined;
+      this._fieldDelimiter = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._encoding = value.encoding;
+      this._fieldDelimiter = value.fieldDelimiter;
+      this._type = value.type;
+    }
+  }
+
+  // encoding - computed: false, optional: true, required: false
+  private _encoding?: string; 
+  public get encoding() {
+    return this.getStringAttribute('encoding');
+  }
+  public set encoding(value: string) {
+    this._encoding = value;
+  }
+  public resetEncoding() {
+    this._encoding = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encodingInput() {
+    return this._encoding;
+  }
+
+  // field_delimiter - computed: false, optional: true, required: false
+  private _fieldDelimiter?: string; 
+  public get fieldDelimiter() {
+    return this.getStringAttribute('field_delimiter');
+  }
+  public set fieldDelimiter(value: string) {
+    this._fieldDelimiter = value;
+  }
+  public resetFieldDelimiter() {
+    this._fieldDelimiter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fieldDelimiterInput() {
+    return this._fieldDelimiter;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+export interface StreamAnalyticsStreamInputEventhubV2Timeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#create StreamAnalyticsStreamInputEventhubV2#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#delete StreamAnalyticsStreamInputEventhubV2#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#read StreamAnalyticsStreamInputEventhubV2#read}
+  */
+  readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2#update StreamAnalyticsStreamInputEventhubV2#update}
+  */
+  readonly update?: string;
+}
+
+export function streamAnalyticsStreamInputEventhubV2TimeoutsToTerraform(struct?: StreamAnalyticsStreamInputEventhubV2TimeoutsOutputReference | StreamAnalyticsStreamInputEventhubV2Timeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+export class StreamAnalyticsStreamInputEventhubV2TimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): StreamAnalyticsStreamInputEventhubV2Timeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StreamAnalyticsStreamInputEventhubV2Timeouts | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2 azurerm_stream_analytics_stream_input_eventhub_v2}
+*/
+export class StreamAnalyticsStreamInputEventhubV2 extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "azurerm_stream_analytics_stream_input_eventhub_v2";
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub_v2 azurerm_stream_analytics_stream_input_eventhub_v2} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StreamAnalyticsStreamInputEventhubV2Config
+  */
+  public constructor(scope: Construct, id: string, config: StreamAnalyticsStreamInputEventhubV2Config) {
+    super(scope, id, {
+      terraformResourceType: 'azurerm_stream_analytics_stream_input_eventhub_v2',
+      terraformGeneratorMetadata: {
+        providerName: 'azurerm',
+        providerVersion: '3.31.0',
+        providerVersionConstraint: '~> 3.10'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._authenticationMode = config.authenticationMode;
+    this._eventhubConsumerGroupName = config.eventhubConsumerGroupName;
+    this._eventhubName = config.eventhubName;
+    this._id = config.id;
+    this._name = config.name;
+    this._partitionKey = config.partitionKey;
+    this._servicebusNamespace = config.servicebusNamespace;
+    this._sharedAccessPolicyKey = config.sharedAccessPolicyKey;
+    this._sharedAccessPolicyName = config.sharedAccessPolicyName;
+    this._streamAnalyticsJobId = config.streamAnalyticsJobId;
+    this._serialization.internalValue = config.serialization;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // authentication_mode - computed: false, optional: true, required: false
+  private _authenticationMode?: string; 
+  public get authenticationMode() {
+    return this.getStringAttribute('authentication_mode');
+  }
+  public set authenticationMode(value: string) {
+    this._authenticationMode = value;
+  }
+  public resetAuthenticationMode() {
+    this._authenticationMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationModeInput() {
+    return this._authenticationMode;
+  }
+
+  // eventhub_consumer_group_name - computed: false, optional: true, required: false
+  private _eventhubConsumerGroupName?: string; 
+  public get eventhubConsumerGroupName() {
+    return this.getStringAttribute('eventhub_consumer_group_name');
+  }
+  public set eventhubConsumerGroupName(value: string) {
+    this._eventhubConsumerGroupName = value;
+  }
+  public resetEventhubConsumerGroupName() {
+    this._eventhubConsumerGroupName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventhubConsumerGroupNameInput() {
+    return this._eventhubConsumerGroupName;
+  }
+
+  // eventhub_name - computed: false, optional: false, required: true
+  private _eventhubName?: string; 
+  public get eventhubName() {
+    return this.getStringAttribute('eventhub_name');
+  }
+  public set eventhubName(value: string) {
+    this._eventhubName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventhubNameInput() {
+    return this._eventhubName;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // partition_key - computed: false, optional: true, required: false
+  private _partitionKey?: string; 
+  public get partitionKey() {
+    return this.getStringAttribute('partition_key');
+  }
+  public set partitionKey(value: string) {
+    this._partitionKey = value;
+  }
+  public resetPartitionKey() {
+    this._partitionKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partitionKeyInput() {
+    return this._partitionKey;
+  }
+
+  // servicebus_namespace - computed: false, optional: false, required: true
+  private _servicebusNamespace?: string; 
+  public get servicebusNamespace() {
+    return this.getStringAttribute('servicebus_namespace');
+  }
+  public set servicebusNamespace(value: string) {
+    this._servicebusNamespace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get servicebusNamespaceInput() {
+    return this._servicebusNamespace;
+  }
+
+  // shared_access_policy_key - computed: false, optional: true, required: false
+  private _sharedAccessPolicyKey?: string; 
+  public get sharedAccessPolicyKey() {
+    return this.getStringAttribute('shared_access_policy_key');
+  }
+  public set sharedAccessPolicyKey(value: string) {
+    this._sharedAccessPolicyKey = value;
+  }
+  public resetSharedAccessPolicyKey() {
+    this._sharedAccessPolicyKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sharedAccessPolicyKeyInput() {
+    return this._sharedAccessPolicyKey;
+  }
+
+  // shared_access_policy_name - computed: false, optional: true, required: false
+  private _sharedAccessPolicyName?: string; 
+  public get sharedAccessPolicyName() {
+    return this.getStringAttribute('shared_access_policy_name');
+  }
+  public set sharedAccessPolicyName(value: string) {
+    this._sharedAccessPolicyName = value;
+  }
+  public resetSharedAccessPolicyName() {
+    this._sharedAccessPolicyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sharedAccessPolicyNameInput() {
+    return this._sharedAccessPolicyName;
+  }
+
+  // stream_analytics_job_id - computed: false, optional: false, required: true
+  private _streamAnalyticsJobId?: string; 
+  public get streamAnalyticsJobId() {
+    return this.getStringAttribute('stream_analytics_job_id');
+  }
+  public set streamAnalyticsJobId(value: string) {
+    this._streamAnalyticsJobId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamAnalyticsJobIdInput() {
+    return this._streamAnalyticsJobId;
+  }
+
+  // serialization - computed: false, optional: false, required: true
+  private _serialization = new StreamAnalyticsStreamInputEventhubV2SerializationOutputReference(this, "serialization");
+  public get serialization() {
+    return this._serialization;
+  }
+  public putSerialization(value: StreamAnalyticsStreamInputEventhubV2Serialization) {
+    this._serialization.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serializationInput() {
+    return this._serialization.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new StreamAnalyticsStreamInputEventhubV2TimeoutsOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: StreamAnalyticsStreamInputEventhubV2Timeouts) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      authentication_mode: cdktf.stringToTerraform(this._authenticationMode),
+      eventhub_consumer_group_name: cdktf.stringToTerraform(this._eventhubConsumerGroupName),
+      eventhub_name: cdktf.stringToTerraform(this._eventhubName),
+      id: cdktf.stringToTerraform(this._id),
+      name: cdktf.stringToTerraform(this._name),
+      partition_key: cdktf.stringToTerraform(this._partitionKey),
+      servicebus_namespace: cdktf.stringToTerraform(this._servicebusNamespace),
+      shared_access_policy_key: cdktf.stringToTerraform(this._sharedAccessPolicyKey),
+      shared_access_policy_name: cdktf.stringToTerraform(this._sharedAccessPolicyName),
+      stream_analytics_job_id: cdktf.stringToTerraform(this._streamAnalyticsJobId),
+      serialization: streamAnalyticsStreamInputEventhubV2SerializationToTerraform(this._serialization.internalValue),
+      timeouts: streamAnalyticsStreamInputEventhubV2TimeoutsToTerraform(this._timeouts.internalValue),
+    };
+  }
+}

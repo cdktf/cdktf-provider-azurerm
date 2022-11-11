@@ -224,7 +224,7 @@ export class IothubEnrichmentA extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_iothub_enrichment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.30.0',
+        providerVersion: '3.31.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

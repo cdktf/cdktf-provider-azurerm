@@ -314,6 +314,23 @@ export function azurermProviderFeaturesLogAnalyticsWorkspaceToTerraform(struct?:
   }
 }
 
+export interface AzurermProviderFeaturesManagedDisk {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#expand_without_downtime AzurermProvider#expand_without_downtime}
+  */
+  readonly expandWithoutDowntime?: boolean | cdktf.IResolvable;
+}
+
+export function azurermProviderFeaturesManagedDiskToTerraform(struct?: AzurermProviderFeaturesManagedDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    expand_without_downtime: cdktf.booleanToTerraform(struct!.expandWithoutDowntime),
+  }
+}
+
 export interface AzurermProviderFeaturesNetwork {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#relaxed_locking AzurermProvider#relaxed_locking}
@@ -457,6 +474,12 @@ export interface AzurermProviderFeatures {
   */
   readonly logAnalyticsWorkspace?: AzurermProviderFeaturesLogAnalyticsWorkspace;
   /**
+  * managed_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#managed_disk AzurermProvider#managed_disk}
+  */
+  readonly managedDisk?: AzurermProviderFeaturesManagedDisk;
+  /**
   * network block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#network AzurermProvider#network}
@@ -500,6 +523,7 @@ export function azurermProviderFeaturesToTerraform(struct?: AzurermProviderFeatu
     cognitive_account: azurermProviderFeaturesCognitiveAccountToTerraform(struct!.cognitiveAccount),
     key_vault: azurermProviderFeaturesKeyVaultToTerraform(struct!.keyVault),
     log_analytics_workspace: azurermProviderFeaturesLogAnalyticsWorkspaceToTerraform(struct!.logAnalyticsWorkspace),
+    managed_disk: azurermProviderFeaturesManagedDiskToTerraform(struct!.managedDisk),
     network: azurermProviderFeaturesNetworkToTerraform(struct!.network),
     resource_group: azurermProviderFeaturesResourceGroupToTerraform(struct!.resourceGroup),
     template_deployment: azurermProviderFeaturesTemplateDeploymentToTerraform(struct!.templateDeployment),
@@ -535,7 +559,7 @@ export class AzurermProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'azurerm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.30.0',
+        providerVersion: '3.31.0',
         providerVersionConstraint: '~> 3.10'
       },
       terraformProviderSource: 'azurerm'
