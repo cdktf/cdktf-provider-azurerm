@@ -131,7 +131,7 @@ export class DataAzurermPublicIp extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_public_ip',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.30.0',
+        providerVersion: '3.31.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -155,6 +155,16 @@ export class DataAzurermPublicIp extends cdktf.TerraformDataSource {
   // allocation_method - computed: true, optional: false, required: false
   public get allocationMethod() {
     return this.getStringAttribute('allocation_method');
+  }
+
+  // ddos_protection_mode - computed: true, optional: false, required: false
+  public get ddosProtectionMode() {
+    return this.getStringAttribute('ddos_protection_mode');
+  }
+
+  // ddos_protection_plan_id - computed: true, optional: false, required: false
+  public get ddosProtectionPlanId() {
+    return this.getStringAttribute('ddos_protection_plan_id');
   }
 
   // domain_name_label - computed: true, optional: false, required: false

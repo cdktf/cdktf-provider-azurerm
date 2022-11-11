@@ -12,6 +12,14 @@ export interface PublicIpConfig extends cdktf.TerraformMetaArguments {
   */
   readonly allocationMethod: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip#ddos_protection_mode PublicIp#ddos_protection_mode}
+  */
+  readonly ddosProtectionMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip#ddos_protection_plan_id PublicIp#ddos_protection_plan_id}
+  */
+  readonly ddosProtectionPlanId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip#domain_name_label PublicIp#domain_name_label}
   */
   readonly domainNameLabel?: string;
@@ -264,7 +272,7 @@ export class PublicIp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_public_ip',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.30.0',
+        providerVersion: '3.31.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -276,6 +284,8 @@ export class PublicIp extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._allocationMethod = config.allocationMethod;
+    this._ddosProtectionMode = config.ddosProtectionMode;
+    this._ddosProtectionPlanId = config.ddosProtectionPlanId;
     this._domainNameLabel = config.domainNameLabel;
     this._edgeZone = config.edgeZone;
     this._id = config.id;
@@ -309,6 +319,38 @@ export class PublicIp extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get allocationMethodInput() {
     return this._allocationMethod;
+  }
+
+  // ddos_protection_mode - computed: false, optional: true, required: false
+  private _ddosProtectionMode?: string; 
+  public get ddosProtectionMode() {
+    return this.getStringAttribute('ddos_protection_mode');
+  }
+  public set ddosProtectionMode(value: string) {
+    this._ddosProtectionMode = value;
+  }
+  public resetDdosProtectionMode() {
+    this._ddosProtectionMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ddosProtectionModeInput() {
+    return this._ddosProtectionMode;
+  }
+
+  // ddos_protection_plan_id - computed: false, optional: true, required: false
+  private _ddosProtectionPlanId?: string; 
+  public get ddosProtectionPlanId() {
+    return this.getStringAttribute('ddos_protection_plan_id');
+  }
+  public set ddosProtectionPlanId(value: string) {
+    this._ddosProtectionPlanId = value;
+  }
+  public resetDdosProtectionPlanId() {
+    this._ddosProtectionPlanId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ddosProtectionPlanIdInput() {
+    return this._ddosProtectionPlanId;
   }
 
   // domain_name_label - computed: false, optional: true, required: false
@@ -575,6 +617,8 @@ export class PublicIp extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allocation_method: cdktf.stringToTerraform(this._allocationMethod),
+      ddos_protection_mode: cdktf.stringToTerraform(this._ddosProtectionMode),
+      ddos_protection_plan_id: cdktf.stringToTerraform(this._ddosProtectionPlanId),
       domain_name_label: cdktf.stringToTerraform(this._domainNameLabel),
       edge_zone: cdktf.stringToTerraform(this._edgeZone),
       id: cdktf.stringToTerraform(this._id),

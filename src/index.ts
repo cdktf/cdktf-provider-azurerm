@@ -318,6 +318,7 @@ export * as expressRouteCircuitPeering from './express-route-circuit-peering';
 export * as expressRouteConnection from './express-route-connection';
 export * as expressRouteGateway from './express-route-gateway';
 export * as expressRoutePort from './express-route-port';
+export * as federatedIdentityCredential from './federated-identity-credential';
 export * as firewall from './firewall';
 export * as firewallApplicationRuleCollection from './firewall-application-rule-collection';
 export * as firewallNatRuleCollection from './firewall-nat-rule-collection';
@@ -786,6 +787,7 @@ export * as streamAnalyticsReferenceInputBlob from './stream-analytics-reference
 export * as streamAnalyticsReferenceInputMssql from './stream-analytics-reference-input-mssql';
 export * as streamAnalyticsStreamInputBlob from './stream-analytics-stream-input-blob';
 export * as streamAnalyticsStreamInputEventhub from './stream-analytics-stream-input-eventhub';
+export * as streamAnalyticsStreamInputEventhubV2 from './stream-analytics-stream-input-eventhub-v2';
 export * as streamAnalyticsStreamInputIothub from './stream-analytics-stream-input-iothub';
 export * as subnet from './subnet';
 export * as subnetNatGatewayAssociation from './subnet-nat-gateway-association';

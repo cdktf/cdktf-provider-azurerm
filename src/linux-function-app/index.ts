@@ -3349,7 +3349,7 @@ export class LinuxFunctionAppSiteConfigApplicationStackDockerList extends cdktf.
 }
 export interface LinuxFunctionAppSiteConfigApplicationStack {
   /**
-  * The version of .Net. Possible values are `3.1` and `6.0`
+  * The version of .Net. Possible values are `3.1`, `6.0` and `7.0`
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#dotnet_version LinuxFunctionApp#dotnet_version}
   */
@@ -5206,7 +5206,7 @@ export class LinuxFunctionApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_function_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.30.0',
+        providerVersion: '3.31.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

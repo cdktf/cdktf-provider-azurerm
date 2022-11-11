@@ -67,6 +67,10 @@ export interface SentinelAlertRuleNrtConfig extends cdktf.TerraformMetaArguments
   */
   readonly tactics?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_nrt#techniques SentinelAlertRuleNrt#techniques}
+  */
+  readonly techniques?: string[];
+  /**
   * alert_details_override block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_nrt#alert_details_override SentinelAlertRuleNrt#alert_details_override}
@@ -1005,7 +1009,7 @@ export class SentinelAlertRuleNrt extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sentinel_alert_rule_nrt',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.30.0',
+        providerVersion: '3.31.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1030,6 +1034,7 @@ export class SentinelAlertRuleNrt extends cdktf.TerraformResource {
     this._suppressionDuration = config.suppressionDuration;
     this._suppressionEnabled = config.suppressionEnabled;
     this._tactics = config.tactics;
+    this._techniques = config.techniques;
     this._alertDetailsOverride.internalValue = config.alertDetailsOverride;
     this._entityMapping.internalValue = config.entityMapping;
     this._incident.internalValue = config.incident;
@@ -1249,6 +1254,22 @@ export class SentinelAlertRuleNrt extends cdktf.TerraformResource {
     return this._tactics;
   }
 
+  // techniques - computed: false, optional: true, required: false
+  private _techniques?: string[]; 
+  public get techniques() {
+    return cdktf.Fn.tolist(this.getListAttribute('techniques'));
+  }
+  public set techniques(value: string[]) {
+    this._techniques = value;
+  }
+  public resetTechniques() {
+    this._techniques = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get techniquesInput() {
+    return this._techniques;
+  }
+
   // alert_details_override - computed: false, optional: true, required: false
   private _alertDetailsOverride = new SentinelAlertRuleNrtAlertDetailsOverrideList(this, "alert_details_override", false);
   public get alertDetailsOverride() {
@@ -1333,6 +1354,7 @@ export class SentinelAlertRuleNrt extends cdktf.TerraformResource {
       suppression_duration: cdktf.stringToTerraform(this._suppressionDuration),
       suppression_enabled: cdktf.booleanToTerraform(this._suppressionEnabled),
       tactics: cdktf.listMapper(cdktf.stringToTerraform, false)(this._tactics),
+      techniques: cdktf.listMapper(cdktf.stringToTerraform, false)(this._techniques),
       alert_details_override: cdktf.listMapper(sentinelAlertRuleNrtAlertDetailsOverrideToTerraform, true)(this._alertDetailsOverride.internalValue),
       entity_mapping: cdktf.listMapper(sentinelAlertRuleNrtEntityMappingToTerraform, true)(this._entityMapping.internalValue),
       incident: sentinelAlertRuleNrtIncidentToTerraform(this._incident.internalValue),

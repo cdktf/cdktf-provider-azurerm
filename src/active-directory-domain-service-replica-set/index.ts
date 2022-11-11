@@ -216,7 +216,7 @@ export class ActiveDirectoryDomainServiceReplicaSet extends cdktf.TerraformResou
       terraformResourceType: 'azurerm_active_directory_domain_service_replica_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.30.0',
+        providerVersion: '3.31.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

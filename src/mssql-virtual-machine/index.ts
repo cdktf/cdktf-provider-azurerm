@@ -71,6 +71,12 @@ export interface MssqlVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   */
   readonly keyVaultCredential?: MssqlVirtualMachineKeyVaultCredential;
   /**
+  * sql_instance block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#sql_instance MssqlVirtualMachine#sql_instance}
+  */
+  readonly sqlInstance?: MssqlVirtualMachineSqlInstance;
+  /**
   * storage_configuration block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#storage_configuration MssqlVirtualMachine#storage_configuration}
@@ -942,6 +948,233 @@ export class MssqlVirtualMachineKeyVaultCredentialOutputReference extends cdktf.
     return this._servicePrincipalSecret;
   }
 }
+export interface MssqlVirtualMachineSqlInstance {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#adhoc_workloads_optimization_enabled MssqlVirtualMachine#adhoc_workloads_optimization_enabled}
+  */
+  readonly adhocWorkloadsOptimizationEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#collation MssqlVirtualMachine#collation}
+  */
+  readonly collation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#instant_file_initialization_enabled MssqlVirtualMachine#instant_file_initialization_enabled}
+  */
+  readonly instantFileInitializationEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#lock_pages_in_memory_enabled MssqlVirtualMachine#lock_pages_in_memory_enabled}
+  */
+  readonly lockPagesInMemoryEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#max_dop MssqlVirtualMachine#max_dop}
+  */
+  readonly maxDop?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#max_server_memory_mb MssqlVirtualMachine#max_server_memory_mb}
+  */
+  readonly maxServerMemoryMb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#min_server_memory_mb MssqlVirtualMachine#min_server_memory_mb}
+  */
+  readonly minServerMemoryMb?: number;
+}
+
+export function mssqlVirtualMachineSqlInstanceToTerraform(struct?: MssqlVirtualMachineSqlInstanceOutputReference | MssqlVirtualMachineSqlInstance): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    adhoc_workloads_optimization_enabled: cdktf.booleanToTerraform(struct!.adhocWorkloadsOptimizationEnabled),
+    collation: cdktf.stringToTerraform(struct!.collation),
+    instant_file_initialization_enabled: cdktf.booleanToTerraform(struct!.instantFileInitializationEnabled),
+    lock_pages_in_memory_enabled: cdktf.booleanToTerraform(struct!.lockPagesInMemoryEnabled),
+    max_dop: cdktf.numberToTerraform(struct!.maxDop),
+    max_server_memory_mb: cdktf.numberToTerraform(struct!.maxServerMemoryMb),
+    min_server_memory_mb: cdktf.numberToTerraform(struct!.minServerMemoryMb),
+  }
+}
+
+export class MssqlVirtualMachineSqlInstanceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MssqlVirtualMachineSqlInstance | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._adhocWorkloadsOptimizationEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.adhocWorkloadsOptimizationEnabled = this._adhocWorkloadsOptimizationEnabled;
+    }
+    if (this._collation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.collation = this._collation;
+    }
+    if (this._instantFileInitializationEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.instantFileInitializationEnabled = this._instantFileInitializationEnabled;
+    }
+    if (this._lockPagesInMemoryEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.lockPagesInMemoryEnabled = this._lockPagesInMemoryEnabled;
+    }
+    if (this._maxDop !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxDop = this._maxDop;
+    }
+    if (this._maxServerMemoryMb !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxServerMemoryMb = this._maxServerMemoryMb;
+    }
+    if (this._minServerMemoryMb !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minServerMemoryMb = this._minServerMemoryMb;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlVirtualMachineSqlInstance | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._adhocWorkloadsOptimizationEnabled = undefined;
+      this._collation = undefined;
+      this._instantFileInitializationEnabled = undefined;
+      this._lockPagesInMemoryEnabled = undefined;
+      this._maxDop = undefined;
+      this._maxServerMemoryMb = undefined;
+      this._minServerMemoryMb = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._adhocWorkloadsOptimizationEnabled = value.adhocWorkloadsOptimizationEnabled;
+      this._collation = value.collation;
+      this._instantFileInitializationEnabled = value.instantFileInitializationEnabled;
+      this._lockPagesInMemoryEnabled = value.lockPagesInMemoryEnabled;
+      this._maxDop = value.maxDop;
+      this._maxServerMemoryMb = value.maxServerMemoryMb;
+      this._minServerMemoryMb = value.minServerMemoryMb;
+    }
+  }
+
+  // adhoc_workloads_optimization_enabled - computed: false, optional: true, required: false
+  private _adhocWorkloadsOptimizationEnabled?: boolean | cdktf.IResolvable; 
+  public get adhocWorkloadsOptimizationEnabled() {
+    return this.getBooleanAttribute('adhoc_workloads_optimization_enabled');
+  }
+  public set adhocWorkloadsOptimizationEnabled(value: boolean | cdktf.IResolvable) {
+    this._adhocWorkloadsOptimizationEnabled = value;
+  }
+  public resetAdhocWorkloadsOptimizationEnabled() {
+    this._adhocWorkloadsOptimizationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get adhocWorkloadsOptimizationEnabledInput() {
+    return this._adhocWorkloadsOptimizationEnabled;
+  }
+
+  // collation - computed: false, optional: true, required: false
+  private _collation?: string; 
+  public get collation() {
+    return this.getStringAttribute('collation');
+  }
+  public set collation(value: string) {
+    this._collation = value;
+  }
+  public resetCollation() {
+    this._collation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get collationInput() {
+    return this._collation;
+  }
+
+  // instant_file_initialization_enabled - computed: false, optional: true, required: false
+  private _instantFileInitializationEnabled?: boolean | cdktf.IResolvable; 
+  public get instantFileInitializationEnabled() {
+    return this.getBooleanAttribute('instant_file_initialization_enabled');
+  }
+  public set instantFileInitializationEnabled(value: boolean | cdktf.IResolvable) {
+    this._instantFileInitializationEnabled = value;
+  }
+  public resetInstantFileInitializationEnabled() {
+    this._instantFileInitializationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instantFileInitializationEnabledInput() {
+    return this._instantFileInitializationEnabled;
+  }
+
+  // lock_pages_in_memory_enabled - computed: false, optional: true, required: false
+  private _lockPagesInMemoryEnabled?: boolean | cdktf.IResolvable; 
+  public get lockPagesInMemoryEnabled() {
+    return this.getBooleanAttribute('lock_pages_in_memory_enabled');
+  }
+  public set lockPagesInMemoryEnabled(value: boolean | cdktf.IResolvable) {
+    this._lockPagesInMemoryEnabled = value;
+  }
+  public resetLockPagesInMemoryEnabled() {
+    this._lockPagesInMemoryEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lockPagesInMemoryEnabledInput() {
+    return this._lockPagesInMemoryEnabled;
+  }
+
+  // max_dop - computed: false, optional: true, required: false
+  private _maxDop?: number; 
+  public get maxDop() {
+    return this.getNumberAttribute('max_dop');
+  }
+  public set maxDop(value: number) {
+    this._maxDop = value;
+  }
+  public resetMaxDop() {
+    this._maxDop = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxDopInput() {
+    return this._maxDop;
+  }
+
+  // max_server_memory_mb - computed: false, optional: true, required: false
+  private _maxServerMemoryMb?: number; 
+  public get maxServerMemoryMb() {
+    return this.getNumberAttribute('max_server_memory_mb');
+  }
+  public set maxServerMemoryMb(value: number) {
+    this._maxServerMemoryMb = value;
+  }
+  public resetMaxServerMemoryMb() {
+    this._maxServerMemoryMb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxServerMemoryMbInput() {
+    return this._maxServerMemoryMb;
+  }
+
+  // min_server_memory_mb - computed: false, optional: true, required: false
+  private _minServerMemoryMb?: number; 
+  public get minServerMemoryMb() {
+    return this.getNumberAttribute('min_server_memory_mb');
+  }
+  public set minServerMemoryMb(value: number) {
+    this._minServerMemoryMb = value;
+  }
+  public resetMinServerMemoryMb() {
+    this._minServerMemoryMb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minServerMemoryMbInput() {
+    return this._minServerMemoryMb;
+  }
+}
 export interface MssqlVirtualMachineStorageConfigurationDataSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#default_file_path MssqlVirtualMachine#default_file_path}
@@ -1718,7 +1951,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_virtual_machine',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.30.0',
+        providerVersion: '3.31.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1742,6 +1975,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
     this._autoBackup.internalValue = config.autoBackup;
     this._autoPatching.internalValue = config.autoPatching;
     this._keyVaultCredential.internalValue = config.keyVaultCredential;
+    this._sqlInstance.internalValue = config.sqlInstance;
     this._storageConfiguration.internalValue = config.storageConfiguration;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -1952,6 +2186,22 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
     return this._keyVaultCredential.internalValue;
   }
 
+  // sql_instance - computed: false, optional: true, required: false
+  private _sqlInstance = new MssqlVirtualMachineSqlInstanceOutputReference(this, "sql_instance");
+  public get sqlInstance() {
+    return this._sqlInstance;
+  }
+  public putSqlInstance(value: MssqlVirtualMachineSqlInstance) {
+    this._sqlInstance.internalValue = value;
+  }
+  public resetSqlInstance() {
+    this._sqlInstance.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sqlInstanceInput() {
+    return this._sqlInstance.internalValue;
+  }
+
   // storage_configuration - computed: false, optional: true, required: false
   private _storageConfiguration = new MssqlVirtualMachineStorageConfigurationOutputReference(this, "storage_configuration");
   public get storageConfiguration() {
@@ -2003,6 +2253,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
       auto_backup: mssqlVirtualMachineAutoBackupToTerraform(this._autoBackup.internalValue),
       auto_patching: mssqlVirtualMachineAutoPatchingToTerraform(this._autoPatching.internalValue),
       key_vault_credential: mssqlVirtualMachineKeyVaultCredentialToTerraform(this._keyVaultCredential.internalValue),
+      sql_instance: mssqlVirtualMachineSqlInstanceToTerraform(this._sqlInstance.internalValue),
       storage_configuration: mssqlVirtualMachineStorageConfigurationToTerraform(this._storageConfiguration.internalValue),
       timeouts: mssqlVirtualMachineTimeoutsToTerraform(this._timeouts.internalValue),
     };

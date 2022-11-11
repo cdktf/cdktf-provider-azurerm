@@ -16,6 +16,10 @@ export interface DiskEncryptionSetConfig extends cdktf.TerraformMetaArguments {
   */
   readonly encryptionType?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set#federated_client_id DiskEncryptionSet#federated_client_id}
+  */
+  readonly federatedClientId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set#id DiskEncryptionSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -337,7 +341,7 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_disk_encryption_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.30.0',
+        providerVersion: '3.31.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -350,6 +354,7 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
     });
     this._autoKeyRotationEnabled = config.autoKeyRotationEnabled;
     this._encryptionType = config.encryptionType;
+    this._federatedClientId = config.federatedClientId;
     this._id = config.id;
     this._keyVaultKeyId = config.keyVaultKeyId;
     this._location = config.location;
@@ -394,6 +399,22 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get encryptionTypeInput() {
     return this._encryptionType;
+  }
+
+  // federated_client_id - computed: false, optional: true, required: false
+  private _federatedClientId?: string; 
+  public get federatedClientId() {
+    return this.getStringAttribute('federated_client_id');
+  }
+  public set federatedClientId(value: string) {
+    this._federatedClientId = value;
+  }
+  public resetFederatedClientId() {
+    this._federatedClientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get federatedClientIdInput() {
+    return this._federatedClientId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -517,6 +538,7 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
     return {
       auto_key_rotation_enabled: cdktf.booleanToTerraform(this._autoKeyRotationEnabled),
       encryption_type: cdktf.stringToTerraform(this._encryptionType),
+      federated_client_id: cdktf.stringToTerraform(this._federatedClientId),
       id: cdktf.stringToTerraform(this._id),
       key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
       location: cdktf.stringToTerraform(this._location),
