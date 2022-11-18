@@ -4167,7 +4167,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
       terraformResourceType: 'azurerm_eventgrid_system_topic_event_subscription',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.31.0',
+        providerVersion: '3.32.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

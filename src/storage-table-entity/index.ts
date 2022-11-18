@@ -224,7 +224,7 @@ export class StorageTableEntity extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_table_entity',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.31.0',
+        providerVersion: '3.32.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
