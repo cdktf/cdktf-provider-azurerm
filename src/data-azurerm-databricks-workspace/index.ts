@@ -33,6 +33,80 @@ export interface DataAzurermDatabricksWorkspaceConfig extends cdktf.TerraformMet
   */
   readonly timeouts?: DataAzurermDatabricksWorkspaceTimeouts;
 }
+export interface DataAzurermDatabricksWorkspaceStorageAccountIdentity {
+}
+
+export function dataAzurermDatabricksWorkspaceStorageAccountIdentityToTerraform(struct?: DataAzurermDatabricksWorkspaceStorageAccountIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermDatabricksWorkspaceStorageAccountIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermDatabricksWorkspaceStorageAccountIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermDatabricksWorkspaceStorageAccountIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
+
+export class DataAzurermDatabricksWorkspaceStorageAccountIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermDatabricksWorkspaceStorageAccountIdentityOutputReference {
+    return new DataAzurermDatabricksWorkspaceStorageAccountIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermDatabricksWorkspaceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace#read DataAzurermDatabricksWorkspace#read}
@@ -135,7 +209,7 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_databricks_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.31.0',
+        providerVersion: '3.33.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -207,6 +281,12 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
   // sku - computed: true, optional: false, required: false
   public get sku() {
     return this.getStringAttribute('sku');
+  }
+
+  // storage_account_identity - computed: true, optional: false, required: false
+  private _storageAccountIdentity = new DataAzurermDatabricksWorkspaceStorageAccountIdentityList(this, "storage_account_identity", false);
+  public get storageAccountIdentity() {
+    return this._storageAccountIdentity;
   }
 
   // tags - computed: false, optional: true, required: false

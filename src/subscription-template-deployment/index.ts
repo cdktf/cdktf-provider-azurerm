@@ -232,7 +232,7 @@ export class SubscriptionTemplateDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_subscription_template_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.31.0',
+        providerVersion: '3.33.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
