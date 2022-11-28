@@ -20,6 +20,10 @@ export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly customSubdomainName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#dynamic_throttling_enabled CognitiveAccount#dynamic_throttling_enabled}
+  */
+  readonly dynamicThrottlingEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#fqdns CognitiveAccount#fqdns}
   */
   readonly fqdns?: string[];
@@ -848,7 +852,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cognitive_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.31.0',
+        providerVersion: '3.33.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -862,6 +866,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     this._customQuestionAnsweringSearchServiceId = config.customQuestionAnsweringSearchServiceId;
     this._customQuestionAnsweringSearchServiceKey = config.customQuestionAnsweringSearchServiceKey;
     this._customSubdomainName = config.customSubdomainName;
+    this._dynamicThrottlingEnabled = config.dynamicThrottlingEnabled;
     this._fqdns = config.fqdns;
     this._id = config.id;
     this._kind = config.kind;
@@ -935,6 +940,22 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get customSubdomainNameInput() {
     return this._customSubdomainName;
+  }
+
+  // dynamic_throttling_enabled - computed: false, optional: true, required: false
+  private _dynamicThrottlingEnabled?: boolean | cdktf.IResolvable; 
+  public get dynamicThrottlingEnabled() {
+    return this.getBooleanAttribute('dynamic_throttling_enabled');
+  }
+  public set dynamicThrottlingEnabled(value: boolean | cdktf.IResolvable) {
+    this._dynamicThrottlingEnabled = value;
+  }
+  public resetDynamicThrottlingEnabled() {
+    this._dynamicThrottlingEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dynamicThrottlingEnabledInput() {
+    return this._dynamicThrottlingEnabled;
   }
 
   // endpoint - computed: true, optional: false, required: false
@@ -1282,6 +1303,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       custom_question_answering_search_service_id: cdktf.stringToTerraform(this._customQuestionAnsweringSearchServiceId),
       custom_question_answering_search_service_key: cdktf.stringToTerraform(this._customQuestionAnsweringSearchServiceKey),
       custom_subdomain_name: cdktf.stringToTerraform(this._customSubdomainName),
+      dynamic_throttling_enabled: cdktf.booleanToTerraform(this._dynamicThrottlingEnabled),
       fqdns: cdktf.listMapper(cdktf.stringToTerraform, false)(this._fqdns),
       id: cdktf.stringToTerraform(this._id),
       kind: cdktf.stringToTerraform(this._kind),

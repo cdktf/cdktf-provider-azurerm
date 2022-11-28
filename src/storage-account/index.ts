@@ -157,6 +157,12 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly routing?: StorageAccountRouting;
   /**
+  * sas_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#sas_policy StorageAccount#sas_policy}
+  */
+  readonly sasPolicy?: StorageAccountSasPolicy;
+  /**
   * share_properties block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#share_properties StorageAccount#share_properties}
@@ -2609,6 +2615,95 @@ export class StorageAccountRoutingOutputReference extends cdktf.ComplexObject {
     return this._publishMicrosoftEndpoints;
   }
 }
+export interface StorageAccountSasPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#expiration_action StorageAccount#expiration_action}
+  */
+  readonly expirationAction?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#expiration_period StorageAccount#expiration_period}
+  */
+  readonly expirationPeriod: string;
+}
+
+export function storageAccountSasPolicyToTerraform(struct?: StorageAccountSasPolicyOutputReference | StorageAccountSasPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    expiration_action: cdktf.stringToTerraform(struct!.expirationAction),
+    expiration_period: cdktf.stringToTerraform(struct!.expirationPeriod),
+  }
+}
+
+export class StorageAccountSasPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): StorageAccountSasPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._expirationAction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.expirationAction = this._expirationAction;
+    }
+    if (this._expirationPeriod !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.expirationPeriod = this._expirationPeriod;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountSasPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._expirationAction = undefined;
+      this._expirationPeriod = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._expirationAction = value.expirationAction;
+      this._expirationPeriod = value.expirationPeriod;
+    }
+  }
+
+  // expiration_action - computed: false, optional: true, required: false
+  private _expirationAction?: string; 
+  public get expirationAction() {
+    return this.getStringAttribute('expiration_action');
+  }
+  public set expirationAction(value: string) {
+    this._expirationAction = value;
+  }
+  public resetExpirationAction() {
+    this._expirationAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationActionInput() {
+    return this._expirationAction;
+  }
+
+  // expiration_period - computed: false, optional: false, required: true
+  private _expirationPeriod?: string; 
+  public get expirationPeriod() {
+    return this.getStringAttribute('expiration_period');
+  }
+  public set expirationPeriod(value: string) {
+    this._expirationPeriod = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationPeriodInput() {
+    return this._expirationPeriod;
+  }
+}
 export interface StorageAccountSharePropertiesCorsRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#allowed_headers StorageAccount#allowed_headers}
@@ -3437,7 +3532,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.31.0',
+        providerVersion: '3.33.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -3480,6 +3575,7 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._networkRules.internalValue = config.networkRules;
     this._queueProperties.internalValue = config.queueProperties;
     this._routing.internalValue = config.routing;
+    this._sasPolicy.internalValue = config.sasPolicy;
     this._shareProperties.internalValue = config.shareProperties;
     this._staticWebsite.internalValue = config.staticWebsite;
     this._timeouts.internalValue = config.timeouts;
@@ -4146,6 +4242,22 @@ export class StorageAccount extends cdktf.TerraformResource {
     return this._routing.internalValue;
   }
 
+  // sas_policy - computed: false, optional: true, required: false
+  private _sasPolicy = new StorageAccountSasPolicyOutputReference(this, "sas_policy");
+  public get sasPolicy() {
+    return this._sasPolicy;
+  }
+  public putSasPolicy(value: StorageAccountSasPolicy) {
+    this._sasPolicy.internalValue = value;
+  }
+  public resetSasPolicy() {
+    this._sasPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sasPolicyInput() {
+    return this._sasPolicy.internalValue;
+  }
+
   // share_properties - computed: false, optional: true, required: false
   private _shareProperties = new StorageAccountSharePropertiesOutputReference(this, "share_properties");
   public get shareProperties() {
@@ -4232,6 +4344,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       network_rules: storageAccountNetworkRulesToTerraform(this._networkRules.internalValue),
       queue_properties: storageAccountQueuePropertiesToTerraform(this._queueProperties.internalValue),
       routing: storageAccountRoutingToTerraform(this._routing.internalValue),
+      sas_policy: storageAccountSasPolicyToTerraform(this._sasPolicy.internalValue),
       share_properties: storageAccountSharePropertiesToTerraform(this._shareProperties.internalValue),
       static_website: storageAccountStaticWebsiteToTerraform(this._staticWebsite.internalValue),
       timeouts: storageAccountTimeoutsToTerraform(this._timeouts.internalValue),

@@ -69,6 +69,11 @@ export class DataAzurermMssqlManagedInstanceIdentityOutputReference extends cdkt
     }
   }
 
+  // identity_ids - computed: true, optional: false, required: false
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
     return this.getStringAttribute('principal_id');
@@ -205,7 +210,7 @@ export class DataAzurermMssqlManagedInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_mssql_managed_instance',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.31.0',
+        providerVersion: '3.33.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -234,6 +239,11 @@ export class DataAzurermMssqlManagedInstance extends cdktf.TerraformDataSource {
   // collation - computed: true, optional: false, required: false
   public get collation() {
     return this.getStringAttribute('collation');
+  }
+
+  // customer_managed_key_id - computed: true, optional: false, required: false
+  public get customerManagedKeyId() {
+    return this.getStringAttribute('customer_managed_key_id');
   }
 
   // dns_zone_partner_id - computed: true, optional: false, required: false

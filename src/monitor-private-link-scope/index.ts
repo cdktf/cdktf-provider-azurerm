@@ -216,7 +216,7 @@ export class MonitorPrivateLinkScope extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_private_link_scope',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.31.0',
+        providerVersion: '3.33.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
