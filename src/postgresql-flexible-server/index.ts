@@ -83,6 +83,12 @@ export interface PostgresqlFlexibleServerConfig extends cdktf.TerraformMetaArgum
   */
   readonly zone?: string;
   /**
+  * authentication block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#authentication PostgresqlFlexibleServer#authentication}
+  */
+  readonly authentication?: PostgresqlFlexibleServerAuthentication;
+  /**
   * high_availability block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#high_availability PostgresqlFlexibleServer#high_availability}
@@ -100,6 +106,125 @@ export interface PostgresqlFlexibleServerConfig extends cdktf.TerraformMetaArgum
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#timeouts PostgresqlFlexibleServer#timeouts}
   */
   readonly timeouts?: PostgresqlFlexibleServerTimeouts;
+}
+export interface PostgresqlFlexibleServerAuthentication {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#active_directory_auth_enabled PostgresqlFlexibleServer#active_directory_auth_enabled}
+  */
+  readonly activeDirectoryAuthEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#password_auth_enabled PostgresqlFlexibleServer#password_auth_enabled}
+  */
+  readonly passwordAuthEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#tenant_id PostgresqlFlexibleServer#tenant_id}
+  */
+  readonly tenantId?: string;
+}
+
+export function postgresqlFlexibleServerAuthenticationToTerraform(struct?: PostgresqlFlexibleServerAuthenticationOutputReference | PostgresqlFlexibleServerAuthentication): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    active_directory_auth_enabled: cdktf.booleanToTerraform(struct!.activeDirectoryAuthEnabled),
+    password_auth_enabled: cdktf.booleanToTerraform(struct!.passwordAuthEnabled),
+    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+  }
+}
+
+export class PostgresqlFlexibleServerAuthenticationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PostgresqlFlexibleServerAuthentication | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._activeDirectoryAuthEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.activeDirectoryAuthEnabled = this._activeDirectoryAuthEnabled;
+    }
+    if (this._passwordAuthEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.passwordAuthEnabled = this._passwordAuthEnabled;
+    }
+    if (this._tenantId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tenantId = this._tenantId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PostgresqlFlexibleServerAuthentication | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._activeDirectoryAuthEnabled = undefined;
+      this._passwordAuthEnabled = undefined;
+      this._tenantId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._activeDirectoryAuthEnabled = value.activeDirectoryAuthEnabled;
+      this._passwordAuthEnabled = value.passwordAuthEnabled;
+      this._tenantId = value.tenantId;
+    }
+  }
+
+  // active_directory_auth_enabled - computed: false, optional: true, required: false
+  private _activeDirectoryAuthEnabled?: boolean | cdktf.IResolvable; 
+  public get activeDirectoryAuthEnabled() {
+    return this.getBooleanAttribute('active_directory_auth_enabled');
+  }
+  public set activeDirectoryAuthEnabled(value: boolean | cdktf.IResolvable) {
+    this._activeDirectoryAuthEnabled = value;
+  }
+  public resetActiveDirectoryAuthEnabled() {
+    this._activeDirectoryAuthEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get activeDirectoryAuthEnabledInput() {
+    return this._activeDirectoryAuthEnabled;
+  }
+
+  // password_auth_enabled - computed: false, optional: true, required: false
+  private _passwordAuthEnabled?: boolean | cdktf.IResolvable; 
+  public get passwordAuthEnabled() {
+    return this.getBooleanAttribute('password_auth_enabled');
+  }
+  public set passwordAuthEnabled(value: boolean | cdktf.IResolvable) {
+    this._passwordAuthEnabled = value;
+  }
+  public resetPasswordAuthEnabled() {
+    this._passwordAuthEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordAuthEnabledInput() {
+    return this._passwordAuthEnabled;
+  }
+
+  // tenant_id - computed: false, optional: true, required: false
+  private _tenantId?: string; 
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+  public set tenantId(value: string) {
+    this._tenantId = value;
+  }
+  public resetTenantId() {
+    this._tenantId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantIdInput() {
+    return this._tenantId;
+  }
 }
 export interface PostgresqlFlexibleServerHighAvailability {
   /**
@@ -492,7 +617,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_postgresql_flexible_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.31.0',
+        providerVersion: '3.33.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -521,6 +646,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._version = config.version;
     this._zone = config.zone;
+    this._authentication.internalValue = config.authentication;
     this._highAvailability.internalValue = config.highAvailability;
     this._maintenanceWindow.internalValue = config.maintenanceWindow;
     this._timeouts.internalValue = config.timeouts;
@@ -819,6 +945,22 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
     return this._zone;
   }
 
+  // authentication - computed: false, optional: true, required: false
+  private _authentication = new PostgresqlFlexibleServerAuthenticationOutputReference(this, "authentication");
+  public get authentication() {
+    return this._authentication;
+  }
+  public putAuthentication(value: PostgresqlFlexibleServerAuthentication) {
+    this._authentication.internalValue = value;
+  }
+  public resetAuthentication() {
+    this._authentication.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationInput() {
+    return this._authentication.internalValue;
+  }
+
   // high_availability - computed: false, optional: true, required: false
   private _highAvailability = new PostgresqlFlexibleServerHighAvailabilityOutputReference(this, "high_availability");
   public get highAvailability() {
@@ -891,6 +1033,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       zone: cdktf.stringToTerraform(this._zone),
+      authentication: postgresqlFlexibleServerAuthenticationToTerraform(this._authentication.internalValue),
       high_availability: postgresqlFlexibleServerHighAvailabilityToTerraform(this._highAvailability.internalValue),
       maintenance_window: postgresqlFlexibleServerMaintenanceWindowToTerraform(this._maintenanceWindow.internalValue),
       timeouts: postgresqlFlexibleServerTimeoutsToTerraform(this._timeouts.internalValue),

@@ -490,7 +490,7 @@ export class VpnGatewayNatRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_vpn_gateway_nat_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.31.0',
+        providerVersion: '3.33.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
