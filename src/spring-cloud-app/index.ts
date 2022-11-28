@@ -59,6 +59,12 @@ export interface SpringCloudAppConfig extends cdktf.TerraformMetaArguments {
   */
   readonly identity?: SpringCloudAppIdentity;
   /**
+  * ingress_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#ingress_settings SpringCloudApp#ingress_settings}
+  */
+  readonly ingressSettings?: SpringCloudAppIngressSettings;
+  /**
   * persistent_disk block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#persistent_disk SpringCloudApp#persistent_disk}
@@ -366,6 +372,179 @@ export class SpringCloudAppIdentityOutputReference extends cdktf.ComplexObject {
     return this._type;
   }
 }
+export interface SpringCloudAppIngressSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#backend_protocol SpringCloudApp#backend_protocol}
+  */
+  readonly backendProtocol?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#read_timeout_in_seconds SpringCloudApp#read_timeout_in_seconds}
+  */
+  readonly readTimeoutInSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#send_timeout_in_seconds SpringCloudApp#send_timeout_in_seconds}
+  */
+  readonly sendTimeoutInSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#session_affinity SpringCloudApp#session_affinity}
+  */
+  readonly sessionAffinity?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#session_cookie_max_age SpringCloudApp#session_cookie_max_age}
+  */
+  readonly sessionCookieMaxAge?: number;
+}
+
+export function springCloudAppIngressSettingsToTerraform(struct?: SpringCloudAppIngressSettingsOutputReference | SpringCloudAppIngressSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    backend_protocol: cdktf.stringToTerraform(struct!.backendProtocol),
+    read_timeout_in_seconds: cdktf.numberToTerraform(struct!.readTimeoutInSeconds),
+    send_timeout_in_seconds: cdktf.numberToTerraform(struct!.sendTimeoutInSeconds),
+    session_affinity: cdktf.stringToTerraform(struct!.sessionAffinity),
+    session_cookie_max_age: cdktf.numberToTerraform(struct!.sessionCookieMaxAge),
+  }
+}
+
+export class SpringCloudAppIngressSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SpringCloudAppIngressSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._backendProtocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.backendProtocol = this._backendProtocol;
+    }
+    if (this._readTimeoutInSeconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readTimeoutInSeconds = this._readTimeoutInSeconds;
+    }
+    if (this._sendTimeoutInSeconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sendTimeoutInSeconds = this._sendTimeoutInSeconds;
+    }
+    if (this._sessionAffinity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sessionAffinity = this._sessionAffinity;
+    }
+    if (this._sessionCookieMaxAge !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sessionCookieMaxAge = this._sessionCookieMaxAge;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudAppIngressSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._backendProtocol = undefined;
+      this._readTimeoutInSeconds = undefined;
+      this._sendTimeoutInSeconds = undefined;
+      this._sessionAffinity = undefined;
+      this._sessionCookieMaxAge = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._backendProtocol = value.backendProtocol;
+      this._readTimeoutInSeconds = value.readTimeoutInSeconds;
+      this._sendTimeoutInSeconds = value.sendTimeoutInSeconds;
+      this._sessionAffinity = value.sessionAffinity;
+      this._sessionCookieMaxAge = value.sessionCookieMaxAge;
+    }
+  }
+
+  // backend_protocol - computed: false, optional: true, required: false
+  private _backendProtocol?: string; 
+  public get backendProtocol() {
+    return this.getStringAttribute('backend_protocol');
+  }
+  public set backendProtocol(value: string) {
+    this._backendProtocol = value;
+  }
+  public resetBackendProtocol() {
+    this._backendProtocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendProtocolInput() {
+    return this._backendProtocol;
+  }
+
+  // read_timeout_in_seconds - computed: false, optional: true, required: false
+  private _readTimeoutInSeconds?: number; 
+  public get readTimeoutInSeconds() {
+    return this.getNumberAttribute('read_timeout_in_seconds');
+  }
+  public set readTimeoutInSeconds(value: number) {
+    this._readTimeoutInSeconds = value;
+  }
+  public resetReadTimeoutInSeconds() {
+    this._readTimeoutInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readTimeoutInSecondsInput() {
+    return this._readTimeoutInSeconds;
+  }
+
+  // send_timeout_in_seconds - computed: false, optional: true, required: false
+  private _sendTimeoutInSeconds?: number; 
+  public get sendTimeoutInSeconds() {
+    return this.getNumberAttribute('send_timeout_in_seconds');
+  }
+  public set sendTimeoutInSeconds(value: number) {
+    this._sendTimeoutInSeconds = value;
+  }
+  public resetSendTimeoutInSeconds() {
+    this._sendTimeoutInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sendTimeoutInSecondsInput() {
+    return this._sendTimeoutInSeconds;
+  }
+
+  // session_affinity - computed: false, optional: true, required: false
+  private _sessionAffinity?: string; 
+  public get sessionAffinity() {
+    return this.getStringAttribute('session_affinity');
+  }
+  public set sessionAffinity(value: string) {
+    this._sessionAffinity = value;
+  }
+  public resetSessionAffinity() {
+    this._sessionAffinity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sessionAffinityInput() {
+    return this._sessionAffinity;
+  }
+
+  // session_cookie_max_age - computed: false, optional: true, required: false
+  private _sessionCookieMaxAge?: number; 
+  public get sessionCookieMaxAge() {
+    return this.getNumberAttribute('session_cookie_max_age');
+  }
+  public set sessionCookieMaxAge(value: number) {
+    this._sessionCookieMaxAge = value;
+  }
+  public resetSessionCookieMaxAge() {
+    this._sessionCookieMaxAge = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sessionCookieMaxAgeInput() {
+    return this._sessionCookieMaxAge;
+  }
+}
 export interface SpringCloudAppPersistentDisk {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#mount_path SpringCloudApp#mount_path}
@@ -638,7 +817,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.31.0',
+        providerVersion: '3.33.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -660,6 +839,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
     this._tlsEnabled = config.tlsEnabled;
     this._customPersistentDisk.internalValue = config.customPersistentDisk;
     this._identity.internalValue = config.identity;
+    this._ingressSettings.internalValue = config.ingressSettings;
     this._persistentDisk.internalValue = config.persistentDisk;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -845,6 +1025,22 @@ export class SpringCloudApp extends cdktf.TerraformResource {
     return this._identity.internalValue;
   }
 
+  // ingress_settings - computed: false, optional: true, required: false
+  private _ingressSettings = new SpringCloudAppIngressSettingsOutputReference(this, "ingress_settings");
+  public get ingressSettings() {
+    return this._ingressSettings;
+  }
+  public putIngressSettings(value: SpringCloudAppIngressSettings) {
+    this._ingressSettings.internalValue = value;
+  }
+  public resetIngressSettings() {
+    this._ingressSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ingressSettingsInput() {
+    return this._ingressSettings.internalValue;
+  }
+
   // persistent_disk - computed: false, optional: true, required: false
   private _persistentDisk = new SpringCloudAppPersistentDiskOutputReference(this, "persistent_disk");
   public get persistentDisk() {
@@ -894,6 +1090,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
       tls_enabled: cdktf.booleanToTerraform(this._tlsEnabled),
       custom_persistent_disk: cdktf.listMapper(springCloudAppCustomPersistentDiskToTerraform, true)(this._customPersistentDisk.internalValue),
       identity: springCloudAppIdentityToTerraform(this._identity.internalValue),
+      ingress_settings: springCloudAppIngressSettingsToTerraform(this._ingressSettings.internalValue),
       persistent_disk: springCloudAppPersistentDiskToTerraform(this._persistentDisk.internalValue),
       timeouts: springCloudAppTimeoutsToTerraform(this._timeouts.internalValue),
     };

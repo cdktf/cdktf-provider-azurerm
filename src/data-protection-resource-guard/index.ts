@@ -224,7 +224,7 @@ export class DataProtectionResourceGuard extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_protection_resource_guard',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.31.0',
+        providerVersion: '3.33.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

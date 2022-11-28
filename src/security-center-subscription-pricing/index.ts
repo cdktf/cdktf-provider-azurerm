@@ -19,6 +19,10 @@ export interface SecurityCenterSubscriptionPricingConfig extends cdktf.Terraform
   */
   readonly resourceType?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_subscription_pricing#subplan SecurityCenterSubscriptionPricing#subplan}
+  */
+  readonly subplan?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_subscription_pricing#tier SecurityCenterSubscriptionPricing#tier}
   */
   readonly tier: string;
@@ -212,7 +216,7 @@ export class SecurityCenterSubscriptionPricing extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_security_center_subscription_pricing',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.31.0',
+        providerVersion: '3.33.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -225,6 +229,7 @@ export class SecurityCenterSubscriptionPricing extends cdktf.TerraformResource {
     });
     this._id = config.id;
     this._resourceType = config.resourceType;
+    this._subplan = config.subplan;
     this._tier = config.tier;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -265,6 +270,22 @@ export class SecurityCenterSubscriptionPricing extends cdktf.TerraformResource {
     return this._resourceType;
   }
 
+  // subplan - computed: false, optional: true, required: false
+  private _subplan?: string; 
+  public get subplan() {
+    return this.getStringAttribute('subplan');
+  }
+  public set subplan(value: string) {
+    this._subplan = value;
+  }
+  public resetSubplan() {
+    this._subplan = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subplanInput() {
+    return this._subplan;
+  }
+
   // tier - computed: false, optional: false, required: true
   private _tier?: string; 
   public get tier() {
@@ -302,6 +323,7 @@ export class SecurityCenterSubscriptionPricing extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       resource_type: cdktf.stringToTerraform(this._resourceType),
+      subplan: cdktf.stringToTerraform(this._subplan),
       tier: cdktf.stringToTerraform(this._tier),
       timeouts: securityCenterSubscriptionPricingTimeoutsToTerraform(this._timeouts.internalValue),
     };
