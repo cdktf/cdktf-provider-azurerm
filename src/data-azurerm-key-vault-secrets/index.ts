@@ -127,7 +127,7 @@ export class DataAzurermKeyVaultSecrets extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_key_vault_secrets',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.33.0',
+        providerVersion: '3.34.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

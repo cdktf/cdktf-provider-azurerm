@@ -131,7 +131,7 @@ export class DataAzurermCdnFrontdoorFirewallPolicy extends cdktf.TerraformDataSo
       terraformResourceType: 'azurerm_cdn_frontdoor_firewall_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.33.0',
+        providerVersion: '3.34.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -666,6 +666,85 @@ export class DataAzurermApiManagementIdentityList extends cdktf.ComplexList {
     return new DataAzurermApiManagementIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataAzurermApiManagementTenantAccess {
+}
+
+export function dataAzurermApiManagementTenantAccessToTerraform(struct?: DataAzurermApiManagementTenantAccess): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermApiManagementTenantAccessOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermApiManagementTenantAccess | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermApiManagementTenantAccess | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+
+  // primary_key - computed: true, optional: false, required: false
+  public get primaryKey() {
+    return this.getStringAttribute('primary_key');
+  }
+
+  // secondary_key - computed: true, optional: false, required: false
+  public get secondaryKey() {
+    return this.getStringAttribute('secondary_key');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+}
+
+export class DataAzurermApiManagementTenantAccessList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermApiManagementTenantAccessOutputReference {
+    return new DataAzurermApiManagementTenantAccessOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermApiManagementTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management#read DataAzurermApiManagement#read}
@@ -768,7 +847,7 @@ export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_api_management',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.33.0',
+        providerVersion: '3.34.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -923,6 +1002,12 @@ export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
   private _tags = new cdktf.StringMap(this, "tags");
   public get tags() {
     return this._tags;
+  }
+
+  // tenant_access - computed: true, optional: false, required: false
+  private _tenantAccess = new DataAzurermApiManagementTenantAccessList(this, "tenant_access", false);
+  public get tenantAccess() {
+    return this._tenantAccess;
   }
 
   // timeouts - computed: false, optional: true, required: false

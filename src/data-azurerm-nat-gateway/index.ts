@@ -139,7 +139,7 @@ export class DataAzurermNatGateway extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_nat_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.33.0',
+        providerVersion: '3.34.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

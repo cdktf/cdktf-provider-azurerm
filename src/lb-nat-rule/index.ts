@@ -256,7 +256,7 @@ export class LbNatRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lb_nat_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.33.0',
+        providerVersion: '3.34.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

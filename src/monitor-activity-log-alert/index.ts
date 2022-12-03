@@ -1107,7 +1107,7 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_activity_log_alert',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.33.0',
+        providerVersion: '3.34.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1238,7 +1238,7 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
 
   // action - computed: false, optional: true, required: false
-  private _action = new MonitorActivityLogAlertActionList(this, "action", true);
+  private _action = new MonitorActivityLogAlertActionList(this, "action", false);
   public get action() {
     return this._action;
   }

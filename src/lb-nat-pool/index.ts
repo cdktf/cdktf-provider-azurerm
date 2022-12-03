@@ -248,7 +248,7 @@ export class LbNatPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lb_nat_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.33.0',
+        providerVersion: '3.34.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

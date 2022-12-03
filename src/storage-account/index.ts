@@ -91,6 +91,10 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#sftp_enabled StorageAccount#sftp_enabled}
+  */
+  readonly sftpEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#shared_access_key_enabled StorageAccount#shared_access_key_enabled}
   */
   readonly sharedAccessKeyEnabled?: boolean | cdktf.IResolvable;
@@ -3532,7 +3536,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.33.0',
+        providerVersion: '3.34.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -3563,6 +3567,7 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._queueEncryptionKeyType = config.queueEncryptionKeyType;
     this._resourceGroupName = config.resourceGroupName;
+    this._sftpEnabled = config.sftpEnabled;
     this._sharedAccessKeyEnabled = config.sharedAccessKeyEnabled;
     this._tableEncryptionKeyType = config.tableEncryptionKeyType;
     this._tags = config.tags;
@@ -4050,6 +4055,22 @@ export class StorageAccount extends cdktf.TerraformResource {
     return this.getStringAttribute('secondary_web_host');
   }
 
+  // sftp_enabled - computed: false, optional: true, required: false
+  private _sftpEnabled?: boolean | cdktf.IResolvable; 
+  public get sftpEnabled() {
+    return this.getBooleanAttribute('sftp_enabled');
+  }
+  public set sftpEnabled(value: boolean | cdktf.IResolvable) {
+    this._sftpEnabled = value;
+  }
+  public resetSftpEnabled() {
+    this._sftpEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sftpEnabledInput() {
+    return this._sftpEnabled;
+  }
+
   // shared_access_key_enabled - computed: false, optional: true, required: false
   private _sharedAccessKeyEnabled?: boolean | cdktf.IResolvable; 
   public get sharedAccessKeyEnabled() {
@@ -4332,6 +4353,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       queue_encryption_key_type: cdktf.stringToTerraform(this._queueEncryptionKeyType),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sftp_enabled: cdktf.booleanToTerraform(this._sftpEnabled),
       shared_access_key_enabled: cdktf.booleanToTerraform(this._sharedAccessKeyEnabled),
       table_encryption_key_type: cdktf.stringToTerraform(this._tableEncryptionKeyType),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),

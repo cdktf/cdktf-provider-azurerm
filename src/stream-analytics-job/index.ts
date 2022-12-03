@@ -177,7 +177,7 @@ export interface StreamAnalyticsJobJobStorageAccount {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job#authentication_mode StreamAnalyticsJob#authentication_mode}
   */
-  readonly authenticationMode: string;
+  readonly authenticationMode?: string;
 }
 
 export function streamAnalyticsJobJobStorageAccountToTerraform(struct?: StreamAnalyticsJobJobStorageAccount | cdktf.IResolvable): any {
@@ -274,13 +274,16 @@ export class StreamAnalyticsJobJobStorageAccountOutputReference extends cdktf.Co
     return this._accountName;
   }
 
-  // authentication_mode - computed: false, optional: false, required: true
+  // authentication_mode - computed: false, optional: true, required: false
   private _authenticationMode?: string; 
   public get authenticationMode() {
     return this.getStringAttribute('authentication_mode');
   }
   public set authenticationMode(value: string) {
     this._authenticationMode = value;
+  }
+  public resetAuthenticationMode() {
+    this._authenticationMode = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get authenticationModeInput() {
@@ -490,7 +493,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stream_analytics_job',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.33.0',
+        providerVersion: '3.34.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

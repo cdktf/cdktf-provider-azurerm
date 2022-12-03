@@ -1085,7 +1085,7 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_monitor_action_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.33.0',
+        providerVersion: '3.34.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
