@@ -19,6 +19,10 @@ export interface SpringCloudGatewayRouteConfigConfig extends cdktf.TerraformMeta
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway_route_config#protocol SpringCloudGatewayRouteConfig#protocol}
+  */
+  readonly protocol?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway_route_config#spring_cloud_app_id SpringCloudGatewayRouteConfig#spring_cloud_app_id}
   */
   readonly springCloudAppId?: string;
@@ -606,7 +610,7 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_gateway_route_config',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.33.0',
+        providerVersion: '3.34.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -619,6 +623,7 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
     });
     this._id = config.id;
     this._name = config.name;
+    this._protocol = config.protocol;
     this._springCloudAppId = config.springCloudAppId;
     this._springCloudGatewayId = config.springCloudGatewayId;
     this._openApi.internalValue = config.openApi;
@@ -657,6 +662,22 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // protocol - computed: false, optional: true, required: false
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  public resetProtocol() {
+    this._protocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
   }
 
   // spring_cloud_app_id - computed: false, optional: true, required: false
@@ -744,6 +765,7 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
+      protocol: cdktf.stringToTerraform(this._protocol),
       spring_cloud_app_id: cdktf.stringToTerraform(this._springCloudAppId),
       spring_cloud_gateway_id: cdktf.stringToTerraform(this._springCloudGatewayId),
       open_api: springCloudGatewayRouteConfigOpenApiToTerraform(this._openApi.internalValue),

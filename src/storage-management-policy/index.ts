@@ -33,6 +33,10 @@ export interface StorageManagementPolicyConfig extends cdktf.TerraformMetaArgume
 }
 export interface StorageManagementPolicyRuleActionsBaseBlob {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#delete_after_days_since_creation_greater_than StorageManagementPolicy#delete_after_days_since_creation_greater_than}
+  */
+  readonly deleteAfterDaysSinceCreationGreaterThan?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#delete_after_days_since_last_access_time_greater_than StorageManagementPolicy#delete_after_days_since_last_access_time_greater_than}
   */
   readonly deleteAfterDaysSinceLastAccessTimeGreaterThan?: number;
@@ -40,6 +44,10 @@ export interface StorageManagementPolicyRuleActionsBaseBlob {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#delete_after_days_since_modification_greater_than StorageManagementPolicy#delete_after_days_since_modification_greater_than}
   */
   readonly deleteAfterDaysSinceModificationGreaterThan?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#tier_to_archive_after_days_since_creation_greater_than StorageManagementPolicy#tier_to_archive_after_days_since_creation_greater_than}
+  */
+  readonly tierToArchiveAfterDaysSinceCreationGreaterThan?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#tier_to_archive_after_days_since_last_access_time_greater_than StorageManagementPolicy#tier_to_archive_after_days_since_last_access_time_greater_than}
   */
@@ -52,6 +60,10 @@ export interface StorageManagementPolicyRuleActionsBaseBlob {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#tier_to_archive_after_days_since_modification_greater_than StorageManagementPolicy#tier_to_archive_after_days_since_modification_greater_than}
   */
   readonly tierToArchiveAfterDaysSinceModificationGreaterThan?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#tier_to_cool_after_days_since_creation_greater_than StorageManagementPolicy#tier_to_cool_after_days_since_creation_greater_than}
+  */
+  readonly tierToCoolAfterDaysSinceCreationGreaterThan?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#tier_to_cool_after_days_since_last_access_time_greater_than StorageManagementPolicy#tier_to_cool_after_days_since_last_access_time_greater_than}
   */
@@ -68,11 +80,14 @@ export function storageManagementPolicyRuleActionsBaseBlobToTerraform(struct?: S
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    delete_after_days_since_creation_greater_than: cdktf.numberToTerraform(struct!.deleteAfterDaysSinceCreationGreaterThan),
     delete_after_days_since_last_access_time_greater_than: cdktf.numberToTerraform(struct!.deleteAfterDaysSinceLastAccessTimeGreaterThan),
     delete_after_days_since_modification_greater_than: cdktf.numberToTerraform(struct!.deleteAfterDaysSinceModificationGreaterThan),
+    tier_to_archive_after_days_since_creation_greater_than: cdktf.numberToTerraform(struct!.tierToArchiveAfterDaysSinceCreationGreaterThan),
     tier_to_archive_after_days_since_last_access_time_greater_than: cdktf.numberToTerraform(struct!.tierToArchiveAfterDaysSinceLastAccessTimeGreaterThan),
     tier_to_archive_after_days_since_last_tier_change_greater_than: cdktf.numberToTerraform(struct!.tierToArchiveAfterDaysSinceLastTierChangeGreaterThan),
     tier_to_archive_after_days_since_modification_greater_than: cdktf.numberToTerraform(struct!.tierToArchiveAfterDaysSinceModificationGreaterThan),
+    tier_to_cool_after_days_since_creation_greater_than: cdktf.numberToTerraform(struct!.tierToCoolAfterDaysSinceCreationGreaterThan),
     tier_to_cool_after_days_since_last_access_time_greater_than: cdktf.numberToTerraform(struct!.tierToCoolAfterDaysSinceLastAccessTimeGreaterThan),
     tier_to_cool_after_days_since_modification_greater_than: cdktf.numberToTerraform(struct!.tierToCoolAfterDaysSinceModificationGreaterThan),
   }
@@ -92,6 +107,10 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
   public get internalValue(): StorageManagementPolicyRuleActionsBaseBlob | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._deleteAfterDaysSinceCreationGreaterThan !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deleteAfterDaysSinceCreationGreaterThan = this._deleteAfterDaysSinceCreationGreaterThan;
+    }
     if (this._deleteAfterDaysSinceLastAccessTimeGreaterThan !== undefined) {
       hasAnyValues = true;
       internalValueResult.deleteAfterDaysSinceLastAccessTimeGreaterThan = this._deleteAfterDaysSinceLastAccessTimeGreaterThan;
@@ -99,6 +118,10 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
     if (this._deleteAfterDaysSinceModificationGreaterThan !== undefined) {
       hasAnyValues = true;
       internalValueResult.deleteAfterDaysSinceModificationGreaterThan = this._deleteAfterDaysSinceModificationGreaterThan;
+    }
+    if (this._tierToArchiveAfterDaysSinceCreationGreaterThan !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tierToArchiveAfterDaysSinceCreationGreaterThan = this._tierToArchiveAfterDaysSinceCreationGreaterThan;
     }
     if (this._tierToArchiveAfterDaysSinceLastAccessTimeGreaterThan !== undefined) {
       hasAnyValues = true;
@@ -111,6 +134,10 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
     if (this._tierToArchiveAfterDaysSinceModificationGreaterThan !== undefined) {
       hasAnyValues = true;
       internalValueResult.tierToArchiveAfterDaysSinceModificationGreaterThan = this._tierToArchiveAfterDaysSinceModificationGreaterThan;
+    }
+    if (this._tierToCoolAfterDaysSinceCreationGreaterThan !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tierToCoolAfterDaysSinceCreationGreaterThan = this._tierToCoolAfterDaysSinceCreationGreaterThan;
     }
     if (this._tierToCoolAfterDaysSinceLastAccessTimeGreaterThan !== undefined) {
       hasAnyValues = true;
@@ -126,24 +153,46 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
   public set internalValue(value: StorageManagementPolicyRuleActionsBaseBlob | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._deleteAfterDaysSinceCreationGreaterThan = undefined;
       this._deleteAfterDaysSinceLastAccessTimeGreaterThan = undefined;
       this._deleteAfterDaysSinceModificationGreaterThan = undefined;
+      this._tierToArchiveAfterDaysSinceCreationGreaterThan = undefined;
       this._tierToArchiveAfterDaysSinceLastAccessTimeGreaterThan = undefined;
       this._tierToArchiveAfterDaysSinceLastTierChangeGreaterThan = undefined;
       this._tierToArchiveAfterDaysSinceModificationGreaterThan = undefined;
+      this._tierToCoolAfterDaysSinceCreationGreaterThan = undefined;
       this._tierToCoolAfterDaysSinceLastAccessTimeGreaterThan = undefined;
       this._tierToCoolAfterDaysSinceModificationGreaterThan = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._deleteAfterDaysSinceCreationGreaterThan = value.deleteAfterDaysSinceCreationGreaterThan;
       this._deleteAfterDaysSinceLastAccessTimeGreaterThan = value.deleteAfterDaysSinceLastAccessTimeGreaterThan;
       this._deleteAfterDaysSinceModificationGreaterThan = value.deleteAfterDaysSinceModificationGreaterThan;
+      this._tierToArchiveAfterDaysSinceCreationGreaterThan = value.tierToArchiveAfterDaysSinceCreationGreaterThan;
       this._tierToArchiveAfterDaysSinceLastAccessTimeGreaterThan = value.tierToArchiveAfterDaysSinceLastAccessTimeGreaterThan;
       this._tierToArchiveAfterDaysSinceLastTierChangeGreaterThan = value.tierToArchiveAfterDaysSinceLastTierChangeGreaterThan;
       this._tierToArchiveAfterDaysSinceModificationGreaterThan = value.tierToArchiveAfterDaysSinceModificationGreaterThan;
+      this._tierToCoolAfterDaysSinceCreationGreaterThan = value.tierToCoolAfterDaysSinceCreationGreaterThan;
       this._tierToCoolAfterDaysSinceLastAccessTimeGreaterThan = value.tierToCoolAfterDaysSinceLastAccessTimeGreaterThan;
       this._tierToCoolAfterDaysSinceModificationGreaterThan = value.tierToCoolAfterDaysSinceModificationGreaterThan;
     }
+  }
+
+  // delete_after_days_since_creation_greater_than - computed: false, optional: true, required: false
+  private _deleteAfterDaysSinceCreationGreaterThan?: number; 
+  public get deleteAfterDaysSinceCreationGreaterThan() {
+    return this.getNumberAttribute('delete_after_days_since_creation_greater_than');
+  }
+  public set deleteAfterDaysSinceCreationGreaterThan(value: number) {
+    this._deleteAfterDaysSinceCreationGreaterThan = value;
+  }
+  public resetDeleteAfterDaysSinceCreationGreaterThan() {
+    this._deleteAfterDaysSinceCreationGreaterThan = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteAfterDaysSinceCreationGreaterThanInput() {
+    return this._deleteAfterDaysSinceCreationGreaterThan;
   }
 
   // delete_after_days_since_last_access_time_greater_than - computed: false, optional: true, required: false
@@ -176,6 +225,22 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
   // Temporarily expose input value. Use with caution.
   public get deleteAfterDaysSinceModificationGreaterThanInput() {
     return this._deleteAfterDaysSinceModificationGreaterThan;
+  }
+
+  // tier_to_archive_after_days_since_creation_greater_than - computed: false, optional: true, required: false
+  private _tierToArchiveAfterDaysSinceCreationGreaterThan?: number; 
+  public get tierToArchiveAfterDaysSinceCreationGreaterThan() {
+    return this.getNumberAttribute('tier_to_archive_after_days_since_creation_greater_than');
+  }
+  public set tierToArchiveAfterDaysSinceCreationGreaterThan(value: number) {
+    this._tierToArchiveAfterDaysSinceCreationGreaterThan = value;
+  }
+  public resetTierToArchiveAfterDaysSinceCreationGreaterThan() {
+    this._tierToArchiveAfterDaysSinceCreationGreaterThan = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tierToArchiveAfterDaysSinceCreationGreaterThanInput() {
+    return this._tierToArchiveAfterDaysSinceCreationGreaterThan;
   }
 
   // tier_to_archive_after_days_since_last_access_time_greater_than - computed: false, optional: true, required: false
@@ -224,6 +289,22 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
   // Temporarily expose input value. Use with caution.
   public get tierToArchiveAfterDaysSinceModificationGreaterThanInput() {
     return this._tierToArchiveAfterDaysSinceModificationGreaterThan;
+  }
+
+  // tier_to_cool_after_days_since_creation_greater_than - computed: false, optional: true, required: false
+  private _tierToCoolAfterDaysSinceCreationGreaterThan?: number; 
+  public get tierToCoolAfterDaysSinceCreationGreaterThan() {
+    return this.getNumberAttribute('tier_to_cool_after_days_since_creation_greater_than');
+  }
+  public set tierToCoolAfterDaysSinceCreationGreaterThan(value: number) {
+    this._tierToCoolAfterDaysSinceCreationGreaterThan = value;
+  }
+  public resetTierToCoolAfterDaysSinceCreationGreaterThan() {
+    this._tierToCoolAfterDaysSinceCreationGreaterThan = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tierToCoolAfterDaysSinceCreationGreaterThanInput() {
+    return this._tierToCoolAfterDaysSinceCreationGreaterThan;
   }
 
   // tier_to_cool_after_days_since_last_access_time_greater_than - computed: false, optional: true, required: false
@@ -1294,7 +1375,7 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_management_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.33.0',
+        providerVersion: '3.34.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

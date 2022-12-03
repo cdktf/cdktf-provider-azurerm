@@ -135,6 +135,10 @@ export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   */
   readonly trustedLaunchEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk#upload_size_bytes ManagedDisk#upload_size_bytes}
+  */
+  readonly uploadSizeBytes?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk#zone ManagedDisk#zone}
   */
   readonly zone?: string;
@@ -629,7 +633,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_managed_disk',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.33.0',
+        providerVersion: '3.34.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -671,6 +675,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._tier = config.tier;
     this._trustedLaunchEnabled = config.trustedLaunchEnabled;
+    this._uploadSizeBytes = config.uploadSizeBytes;
     this._zone = config.zone;
     this._encryptionSettings.internalValue = config.encryptionSettings;
     this._timeouts.internalValue = config.timeouts;
@@ -1161,6 +1166,22 @@ export class ManagedDisk extends cdktf.TerraformResource {
     return this._trustedLaunchEnabled;
   }
 
+  // upload_size_bytes - computed: false, optional: true, required: false
+  private _uploadSizeBytes?: number; 
+  public get uploadSizeBytes() {
+    return this.getNumberAttribute('upload_size_bytes');
+  }
+  public set uploadSizeBytes(value: number) {
+    this._uploadSizeBytes = value;
+  }
+  public resetUploadSizeBytes() {
+    this._uploadSizeBytes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uploadSizeBytesInput() {
+    return this._uploadSizeBytes;
+  }
+
   // zone - computed: false, optional: true, required: false
   private _zone?: string; 
   public get zone() {
@@ -1246,6 +1267,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       tier: cdktf.stringToTerraform(this._tier),
       trusted_launch_enabled: cdktf.booleanToTerraform(this._trustedLaunchEnabled),
+      upload_size_bytes: cdktf.numberToTerraform(this._uploadSizeBytes),
       zone: cdktf.stringToTerraform(this._zone),
       encryption_settings: managedDiskEncryptionSettingsToTerraform(this._encryptionSettings.internalValue),
       timeouts: managedDiskTimeoutsToTerraform(this._timeouts.internalValue),

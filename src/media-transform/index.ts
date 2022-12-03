@@ -139,7 +139,7 @@ export interface MediaTransformOutputBuiltinPreset {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#preset_name MediaTransform#preset_name}
   */
-  readonly presetName?: string;
+  readonly presetName: string;
 }
 
 export function mediaTransformOutputBuiltinPresetToTerraform(struct?: MediaTransformOutputBuiltinPresetOutputReference | MediaTransformOutputBuiltinPreset): any {
@@ -184,16 +184,13 @@ export class MediaTransformOutputBuiltinPresetOutputReference extends cdktf.Comp
     }
   }
 
-  // preset_name - computed: false, optional: true, required: false
+  // preset_name - computed: false, optional: false, required: true
   private _presetName?: string; 
   public get presetName() {
     return this.getStringAttribute('preset_name');
   }
   public set presetName(value: string) {
     this._presetName = value;
-  }
-  public resetPresetName() {
-    this._presetName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get presetNameInput() {
@@ -807,7 +804,7 @@ export class MediaTransform extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_transform',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.33.0',
+        providerVersion: '3.34.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
