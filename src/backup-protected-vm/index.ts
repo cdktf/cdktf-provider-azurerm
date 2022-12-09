@@ -228,7 +228,7 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_backup_protected_vm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

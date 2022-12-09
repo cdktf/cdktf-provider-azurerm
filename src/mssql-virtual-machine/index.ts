@@ -352,6 +352,10 @@ export class MssqlVirtualMachineAssessmentOutputReference extends cdktf.ComplexO
 }
 export interface MssqlVirtualMachineAutoBackupManualSchedule {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#days_of_week MssqlVirtualMachine#days_of_week}
+  */
+  readonly daysOfWeek?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#full_backup_frequency MssqlVirtualMachine#full_backup_frequency}
   */
   readonly fullBackupFrequency: string;
@@ -375,6 +379,7 @@ export function mssqlVirtualMachineAutoBackupManualScheduleToTerraform(struct?: 
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    days_of_week: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.daysOfWeek),
     full_backup_frequency: cdktf.stringToTerraform(struct!.fullBackupFrequency),
     full_backup_start_hour: cdktf.numberToTerraform(struct!.fullBackupStartHour),
     full_backup_window_in_hours: cdktf.numberToTerraform(struct!.fullBackupWindowInHours),
@@ -396,6 +401,10 @@ export class MssqlVirtualMachineAutoBackupManualScheduleOutputReference extends 
   public get internalValue(): MssqlVirtualMachineAutoBackupManualSchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._daysOfWeek !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.daysOfWeek = this._daysOfWeek;
+    }
     if (this._fullBackupFrequency !== undefined) {
       hasAnyValues = true;
       internalValueResult.fullBackupFrequency = this._fullBackupFrequency;
@@ -418,6 +427,7 @@ export class MssqlVirtualMachineAutoBackupManualScheduleOutputReference extends 
   public set internalValue(value: MssqlVirtualMachineAutoBackupManualSchedule | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._daysOfWeek = undefined;
       this._fullBackupFrequency = undefined;
       this._fullBackupStartHour = undefined;
       this._fullBackupWindowInHours = undefined;
@@ -425,11 +435,28 @@ export class MssqlVirtualMachineAutoBackupManualScheduleOutputReference extends 
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._daysOfWeek = value.daysOfWeek;
       this._fullBackupFrequency = value.fullBackupFrequency;
       this._fullBackupStartHour = value.fullBackupStartHour;
       this._fullBackupWindowInHours = value.fullBackupWindowInHours;
       this._logBackupFrequencyInMinutes = value.logBackupFrequencyInMinutes;
     }
+  }
+
+  // days_of_week - computed: false, optional: true, required: false
+  private _daysOfWeek?: string[]; 
+  public get daysOfWeek() {
+    return cdktf.Fn.tolist(this.getListAttribute('days_of_week'));
+  }
+  public set daysOfWeek(value: string[]) {
+    this._daysOfWeek = value;
+  }
+  public resetDaysOfWeek() {
+    this._daysOfWeek = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysOfWeekInput() {
+    return this._daysOfWeek;
   }
 
   // full_backup_frequency - computed: false, optional: false, required: true
@@ -1951,7 +1978,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_virtual_machine',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

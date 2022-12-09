@@ -244,7 +244,7 @@ export class ContainerRegistryWebhook extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_registry_webhook',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

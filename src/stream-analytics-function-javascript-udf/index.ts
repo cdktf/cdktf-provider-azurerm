@@ -415,7 +415,7 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
       terraformResourceType: 'azurerm_stream_analytics_function_javascript_udf',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

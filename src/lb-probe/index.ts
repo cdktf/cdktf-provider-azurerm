@@ -35,6 +35,10 @@ export interface LbProbeConfig extends cdktf.TerraformMetaArguments {
   */
   readonly port: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe#probe_threshold LbProbe#probe_threshold}
+  */
+  readonly probeThreshold?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe#protocol LbProbe#protocol}
   */
   readonly protocol?: string;
@@ -232,7 +236,7 @@ export class LbProbe extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lb_probe',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -249,6 +253,7 @@ export class LbProbe extends cdktf.TerraformResource {
     this._name = config.name;
     this._numberOfProbes = config.numberOfProbes;
     this._port = config.port;
+    this._probeThreshold = config.probeThreshold;
     this._protocol = config.protocol;
     this._requestPath = config.requestPath;
     this._timeouts.internalValue = config.timeouts;
@@ -350,6 +355,22 @@ export class LbProbe extends cdktf.TerraformResource {
     return this._port;
   }
 
+  // probe_threshold - computed: false, optional: true, required: false
+  private _probeThreshold?: number; 
+  public get probeThreshold() {
+    return this.getNumberAttribute('probe_threshold');
+  }
+  public set probeThreshold(value: number) {
+    this._probeThreshold = value;
+  }
+  public resetProbeThreshold() {
+    this._probeThreshold = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get probeThresholdInput() {
+    return this._probeThreshold;
+  }
+
   // protocol - computed: true, optional: true, required: false
   private _protocol?: string; 
   public get protocol() {
@@ -410,6 +431,7 @@ export class LbProbe extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       number_of_probes: cdktf.numberToTerraform(this._numberOfProbes),
       port: cdktf.numberToTerraform(this._port),
+      probe_threshold: cdktf.numberToTerraform(this._probeThreshold),
       protocol: cdktf.stringToTerraform(this._protocol),
       request_path: cdktf.stringToTerraform(this._requestPath),
       timeouts: lbProbeTimeoutsToTerraform(this._timeouts.internalValue),

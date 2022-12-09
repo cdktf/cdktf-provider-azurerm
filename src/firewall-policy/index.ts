@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#auto_learn_private_ranges_enabled FirewallPolicy#auto_learn_private_ranges_enabled}
+  */
+  readonly autoLearnPrivateRangesEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#base_policy_id FirewallPolicy#base_policy_id}
   */
   readonly basePolicyId?: string;
@@ -56,6 +60,12 @@ export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#dns FirewallPolicy#dns}
   */
   readonly dns?: FirewallPolicyDns;
+  /**
+  * explicit_proxy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#explicit_proxy FirewallPolicy#explicit_proxy}
+  */
+  readonly explicitProxy?: FirewallPolicyExplicitProxy;
   /**
   * identity block
   * 
@@ -183,6 +193,206 @@ export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get serversInput() {
     return this._servers;
+  }
+}
+export interface FirewallPolicyExplicitProxy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#enable_pac_file FirewallPolicy#enable_pac_file}
+  */
+  readonly enablePacFile?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#enabled FirewallPolicy#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#http_port FirewallPolicy#http_port}
+  */
+  readonly httpPort?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#https_port FirewallPolicy#https_port}
+  */
+  readonly httpsPort?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#pac_file FirewallPolicy#pac_file}
+  */
+  readonly pacFile?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#pac_file_port FirewallPolicy#pac_file_port}
+  */
+  readonly pacFilePort?: number;
+}
+
+export function firewallPolicyExplicitProxyToTerraform(struct?: FirewallPolicyExplicitProxyOutputReference | FirewallPolicyExplicitProxy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enable_pac_file: cdktf.booleanToTerraform(struct!.enablePacFile),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    http_port: cdktf.numberToTerraform(struct!.httpPort),
+    https_port: cdktf.numberToTerraform(struct!.httpsPort),
+    pac_file: cdktf.stringToTerraform(struct!.pacFile),
+    pac_file_port: cdktf.numberToTerraform(struct!.pacFilePort),
+  }
+}
+
+export class FirewallPolicyExplicitProxyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): FirewallPolicyExplicitProxy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enablePacFile !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enablePacFile = this._enablePacFile;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._httpPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpPort = this._httpPort;
+    }
+    if (this._httpsPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpsPort = this._httpsPort;
+    }
+    if (this._pacFile !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pacFile = this._pacFile;
+    }
+    if (this._pacFilePort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pacFilePort = this._pacFilePort;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FirewallPolicyExplicitProxy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enablePacFile = undefined;
+      this._enabled = undefined;
+      this._httpPort = undefined;
+      this._httpsPort = undefined;
+      this._pacFile = undefined;
+      this._pacFilePort = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enablePacFile = value.enablePacFile;
+      this._enabled = value.enabled;
+      this._httpPort = value.httpPort;
+      this._httpsPort = value.httpsPort;
+      this._pacFile = value.pacFile;
+      this._pacFilePort = value.pacFilePort;
+    }
+  }
+
+  // enable_pac_file - computed: false, optional: true, required: false
+  private _enablePacFile?: boolean | cdktf.IResolvable; 
+  public get enablePacFile() {
+    return this.getBooleanAttribute('enable_pac_file');
+  }
+  public set enablePacFile(value: boolean | cdktf.IResolvable) {
+    this._enablePacFile = value;
+  }
+  public resetEnablePacFile() {
+    this._enablePacFile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enablePacFileInput() {
+    return this._enablePacFile;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // http_port - computed: false, optional: true, required: false
+  private _httpPort?: number; 
+  public get httpPort() {
+    return this.getNumberAttribute('http_port');
+  }
+  public set httpPort(value: number) {
+    this._httpPort = value;
+  }
+  public resetHttpPort() {
+    this._httpPort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpPortInput() {
+    return this._httpPort;
+  }
+
+  // https_port - computed: false, optional: true, required: false
+  private _httpsPort?: number; 
+  public get httpsPort() {
+    return this.getNumberAttribute('https_port');
+  }
+  public set httpsPort(value: number) {
+    this._httpsPort = value;
+  }
+  public resetHttpsPort() {
+    this._httpsPort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsPortInput() {
+    return this._httpsPort;
+  }
+
+  // pac_file - computed: false, optional: true, required: false
+  private _pacFile?: string; 
+  public get pacFile() {
+    return this.getStringAttribute('pac_file');
+  }
+  public set pacFile(value: string) {
+    this._pacFile = value;
+  }
+  public resetPacFile() {
+    this._pacFile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pacFileInput() {
+    return this._pacFile;
+  }
+
+  // pac_file_port - computed: false, optional: true, required: false
+  private _pacFilePort?: number; 
+  public get pacFilePort() {
+    return this.getNumberAttribute('pac_file_port');
+  }
+  public set pacFilePort(value: number) {
+    this._pacFilePort = value;
+  }
+  public resetPacFilePort() {
+    this._pacFilePort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pacFilePortInput() {
+    return this._pacFilePort;
   }
 }
 export interface FirewallPolicyIdentity {
@@ -1452,7 +1662,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_firewall_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1463,6 +1673,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._autoLearnPrivateRangesEnabled = config.autoLearnPrivateRangesEnabled;
     this._basePolicyId = config.basePolicyId;
     this._id = config.id;
     this._location = config.location;
@@ -1474,6 +1685,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._threatIntelligenceMode = config.threatIntelligenceMode;
     this._dns.internalValue = config.dns;
+    this._explicitProxy.internalValue = config.explicitProxy;
     this._identity.internalValue = config.identity;
     this._insights.internalValue = config.insights;
     this._intrusionDetection.internalValue = config.intrusionDetection;
@@ -1485,6 +1697,22 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // auto_learn_private_ranges_enabled - computed: false, optional: true, required: false
+  private _autoLearnPrivateRangesEnabled?: boolean | cdktf.IResolvable; 
+  public get autoLearnPrivateRangesEnabled() {
+    return this.getBooleanAttribute('auto_learn_private_ranges_enabled');
+  }
+  public set autoLearnPrivateRangesEnabled(value: boolean | cdktf.IResolvable) {
+    this._autoLearnPrivateRangesEnabled = value;
+  }
+  public resetAutoLearnPrivateRangesEnabled() {
+    this._autoLearnPrivateRangesEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoLearnPrivateRangesEnabledInput() {
+    return this._autoLearnPrivateRangesEnabled;
+  }
 
   // base_policy_id - computed: false, optional: true, required: false
   private _basePolicyId?: string; 
@@ -1668,6 +1896,22 @@ export class FirewallPolicy extends cdktf.TerraformResource {
     return this._dns.internalValue;
   }
 
+  // explicit_proxy - computed: false, optional: true, required: false
+  private _explicitProxy = new FirewallPolicyExplicitProxyOutputReference(this, "explicit_proxy");
+  public get explicitProxy() {
+    return this._explicitProxy;
+  }
+  public putExplicitProxy(value: FirewallPolicyExplicitProxy) {
+    this._explicitProxy.internalValue = value;
+  }
+  public resetExplicitProxy() {
+    this._explicitProxy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get explicitProxyInput() {
+    return this._explicitProxy.internalValue;
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity = new FirewallPolicyIdentityOutputReference(this, "identity");
   public get identity() {
@@ -1770,6 +2014,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      auto_learn_private_ranges_enabled: cdktf.booleanToTerraform(this._autoLearnPrivateRangesEnabled),
       base_policy_id: cdktf.stringToTerraform(this._basePolicyId),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
@@ -1781,6 +2026,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       threat_intelligence_mode: cdktf.stringToTerraform(this._threatIntelligenceMode),
       dns: firewallPolicyDnsToTerraform(this._dns.internalValue),
+      explicit_proxy: firewallPolicyExplicitProxyToTerraform(this._explicitProxy.internalValue),
       identity: firewallPolicyIdentityToTerraform(this._identity.internalValue),
       insights: firewallPolicyInsightsToTerraform(this._insights.internalValue),
       intrusion_detection: firewallPolicyIntrusionDetectionToTerraform(this._intrusionDetection.internalValue),
