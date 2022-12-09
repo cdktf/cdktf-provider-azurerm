@@ -232,7 +232,7 @@ export class KustoClusterManagedPrivateEndpoint extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_kusto_cluster_managed_private_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

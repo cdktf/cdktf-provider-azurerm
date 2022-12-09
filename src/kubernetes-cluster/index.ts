@@ -51,6 +51,14 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#image_cleaner_enabled KubernetesCluster#image_cleaner_enabled}
+  */
+  readonly imageCleanerEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#image_cleaner_interval_hours KubernetesCluster#image_cleaner_interval_hours}
+  */
+  readonly imageCleanerIntervalHours?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#kubernetes_version KubernetesCluster#kubernetes_version}
   */
   readonly kubernetesVersion?: string;
@@ -208,6 +216,12 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#service_principal KubernetesCluster#service_principal}
   */
   readonly servicePrincipal?: KubernetesClusterServicePrincipal;
+  /**
+  * storage_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#storage_profile KubernetesCluster#storage_profile}
+  */
+  readonly storageProfile?: KubernetesClusterStorageProfile;
   /**
   * timeouts block
   * 
@@ -2542,6 +2556,10 @@ export interface KubernetesClusterDefaultNodePool {
   */
   readonly capacityReservationGroupId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#custom_ca_trust_enabled KubernetesCluster#custom_ca_trust_enabled}
+  */
+  readonly customCaTrustEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#enable_auto_scaling KubernetesCluster#enable_auto_scaling}
   */
   readonly enableAutoScaling?: boolean | cdktf.IResolvable;
@@ -2688,6 +2706,7 @@ export function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesC
   }
   return {
     capacity_reservation_group_id: cdktf.stringToTerraform(struct!.capacityReservationGroupId),
+    custom_ca_trust_enabled: cdktf.booleanToTerraform(struct!.customCaTrustEnabled),
     enable_auto_scaling: cdktf.booleanToTerraform(struct!.enableAutoScaling),
     enable_host_encryption: cdktf.booleanToTerraform(struct!.enableHostEncryption),
     enable_node_public_ip: cdktf.booleanToTerraform(struct!.enableNodePublicIp),
@@ -2741,6 +2760,10 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
     if (this._capacityReservationGroupId !== undefined) {
       hasAnyValues = true;
       internalValueResult.capacityReservationGroupId = this._capacityReservationGroupId;
+    }
+    if (this._customCaTrustEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customCaTrustEnabled = this._customCaTrustEnabled;
     }
     if (this._enableAutoScaling !== undefined) {
       hasAnyValues = true;
@@ -2881,6 +2904,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
     if (value === undefined) {
       this.isEmptyObject = false;
       this._capacityReservationGroupId = undefined;
+      this._customCaTrustEnabled = undefined;
       this._enableAutoScaling = undefined;
       this._enableHostEncryption = undefined;
       this._enableNodePublicIp = undefined;
@@ -2918,6 +2942,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._capacityReservationGroupId = value.capacityReservationGroupId;
+      this._customCaTrustEnabled = value.customCaTrustEnabled;
       this._enableAutoScaling = value.enableAutoScaling;
       this._enableHostEncryption = value.enableHostEncryption;
       this._enableNodePublicIp = value.enableNodePublicIp;
@@ -2968,6 +2993,22 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get capacityReservationGroupIdInput() {
     return this._capacityReservationGroupId;
+  }
+
+  // custom_ca_trust_enabled - computed: false, optional: true, required: false
+  private _customCaTrustEnabled?: boolean | cdktf.IResolvable; 
+  public get customCaTrustEnabled() {
+    return this.getBooleanAttribute('custom_ca_trust_enabled');
+  }
+  public set customCaTrustEnabled(value: boolean | cdktf.IResolvable) {
+    this._customCaTrustEnabled = value;
+  }
+  public resetCustomCaTrustEnabled() {
+    this._customCaTrustEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customCaTrustEnabledInput() {
+    return this._customCaTrustEnabled;
   }
 
   // enable_auto_scaling - computed: false, optional: true, required: false
@@ -5115,6 +5156,10 @@ export interface KubernetesClusterNetworkProfile {
   */
   readonly dockerBridgeCidr?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#ebpf_data_plane KubernetesCluster#ebpf_data_plane}
+  */
+  readonly ebpfDataPlane?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#ip_versions KubernetesCluster#ip_versions}
   */
   readonly ipVersions?: string[];
@@ -5130,6 +5175,10 @@ export interface KubernetesClusterNetworkProfile {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#network_plugin KubernetesCluster#network_plugin}
   */
   readonly networkPlugin: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#network_plugin_mode KubernetesCluster#network_plugin_mode}
+  */
+  readonly networkPluginMode?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#network_policy KubernetesCluster#network_policy}
   */
@@ -5176,10 +5225,12 @@ export function kubernetesClusterNetworkProfileToTerraform(struct?: KubernetesCl
   return {
     dns_service_ip: cdktf.stringToTerraform(struct!.dnsServiceIp),
     docker_bridge_cidr: cdktf.stringToTerraform(struct!.dockerBridgeCidr),
+    ebpf_data_plane: cdktf.stringToTerraform(struct!.ebpfDataPlane),
     ip_versions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ipVersions),
     load_balancer_sku: cdktf.stringToTerraform(struct!.loadBalancerSku),
     network_mode: cdktf.stringToTerraform(struct!.networkMode),
     network_plugin: cdktf.stringToTerraform(struct!.networkPlugin),
+    network_plugin_mode: cdktf.stringToTerraform(struct!.networkPluginMode),
     network_policy: cdktf.stringToTerraform(struct!.networkPolicy),
     outbound_type: cdktf.stringToTerraform(struct!.outboundType),
     pod_cidr: cdktf.stringToTerraform(struct!.podCidr),
@@ -5213,6 +5264,10 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.dockerBridgeCidr = this._dockerBridgeCidr;
     }
+    if (this._ebpfDataPlane !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ebpfDataPlane = this._ebpfDataPlane;
+    }
     if (this._ipVersions !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipVersions = this._ipVersions;
@@ -5228,6 +5283,10 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
     if (this._networkPlugin !== undefined) {
       hasAnyValues = true;
       internalValueResult.networkPlugin = this._networkPlugin;
+    }
+    if (this._networkPluginMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.networkPluginMode = this._networkPluginMode;
     }
     if (this._networkPolicy !== undefined) {
       hasAnyValues = true;
@@ -5269,10 +5328,12 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
       this.isEmptyObject = false;
       this._dnsServiceIp = undefined;
       this._dockerBridgeCidr = undefined;
+      this._ebpfDataPlane = undefined;
       this._ipVersions = undefined;
       this._loadBalancerSku = undefined;
       this._networkMode = undefined;
       this._networkPlugin = undefined;
+      this._networkPluginMode = undefined;
       this._networkPolicy = undefined;
       this._outboundType = undefined;
       this._podCidr = undefined;
@@ -5286,10 +5347,12 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
       this.isEmptyObject = Object.keys(value).length === 0;
       this._dnsServiceIp = value.dnsServiceIp;
       this._dockerBridgeCidr = value.dockerBridgeCidr;
+      this._ebpfDataPlane = value.ebpfDataPlane;
       this._ipVersions = value.ipVersions;
       this._loadBalancerSku = value.loadBalancerSku;
       this._networkMode = value.networkMode;
       this._networkPlugin = value.networkPlugin;
+      this._networkPluginMode = value.networkPluginMode;
       this._networkPolicy = value.networkPolicy;
       this._outboundType = value.outboundType;
       this._podCidr = value.podCidr;
@@ -5331,6 +5394,22 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get dockerBridgeCidrInput() {
     return this._dockerBridgeCidr;
+  }
+
+  // ebpf_data_plane - computed: false, optional: true, required: false
+  private _ebpfDataPlane?: string; 
+  public get ebpfDataPlane() {
+    return this.getStringAttribute('ebpf_data_plane');
+  }
+  public set ebpfDataPlane(value: string) {
+    this._ebpfDataPlane = value;
+  }
+  public resetEbpfDataPlane() {
+    this._ebpfDataPlane = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ebpfDataPlaneInput() {
+    return this._ebpfDataPlane;
   }
 
   // ip_versions - computed: true, optional: true, required: false
@@ -5392,6 +5471,22 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get networkPluginInput() {
     return this._networkPlugin;
+  }
+
+  // network_plugin_mode - computed: false, optional: true, required: false
+  private _networkPluginMode?: string; 
+  public get networkPluginMode() {
+    return this.getStringAttribute('network_plugin_mode');
+  }
+  public set networkPluginMode(value: string) {
+    this._networkPluginMode = value;
+  }
+  public resetNetworkPluginMode() {
+    this._networkPluginMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkPluginModeInput() {
+    return this._networkPluginMode;
   }
 
   // network_policy - computed: true, optional: true, required: false
@@ -5748,6 +5843,179 @@ export class KubernetesClusterServicePrincipalOutputReference extends cdktf.Comp
   // Temporarily expose input value. Use with caution.
   public get clientSecretInput() {
     return this._clientSecret;
+  }
+}
+export interface KubernetesClusterStorageProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#blob_driver_enabled KubernetesCluster#blob_driver_enabled}
+  */
+  readonly blobDriverEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#disk_driver_enabled KubernetesCluster#disk_driver_enabled}
+  */
+  readonly diskDriverEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#disk_driver_version KubernetesCluster#disk_driver_version}
+  */
+  readonly diskDriverVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#file_driver_enabled KubernetesCluster#file_driver_enabled}
+  */
+  readonly fileDriverEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#snapshot_controller_enabled KubernetesCluster#snapshot_controller_enabled}
+  */
+  readonly snapshotControllerEnabled?: boolean | cdktf.IResolvable;
+}
+
+export function kubernetesClusterStorageProfileToTerraform(struct?: KubernetesClusterStorageProfileOutputReference | KubernetesClusterStorageProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    blob_driver_enabled: cdktf.booleanToTerraform(struct!.blobDriverEnabled),
+    disk_driver_enabled: cdktf.booleanToTerraform(struct!.diskDriverEnabled),
+    disk_driver_version: cdktf.stringToTerraform(struct!.diskDriverVersion),
+    file_driver_enabled: cdktf.booleanToTerraform(struct!.fileDriverEnabled),
+    snapshot_controller_enabled: cdktf.booleanToTerraform(struct!.snapshotControllerEnabled),
+  }
+}
+
+export class KubernetesClusterStorageProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KubernetesClusterStorageProfile | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._blobDriverEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.blobDriverEnabled = this._blobDriverEnabled;
+    }
+    if (this._diskDriverEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskDriverEnabled = this._diskDriverEnabled;
+    }
+    if (this._diskDriverVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskDriverVersion = this._diskDriverVersion;
+    }
+    if (this._fileDriverEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fileDriverEnabled = this._fileDriverEnabled;
+    }
+    if (this._snapshotControllerEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.snapshotControllerEnabled = this._snapshotControllerEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterStorageProfile | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._blobDriverEnabled = undefined;
+      this._diskDriverEnabled = undefined;
+      this._diskDriverVersion = undefined;
+      this._fileDriverEnabled = undefined;
+      this._snapshotControllerEnabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._blobDriverEnabled = value.blobDriverEnabled;
+      this._diskDriverEnabled = value.diskDriverEnabled;
+      this._diskDriverVersion = value.diskDriverVersion;
+      this._fileDriverEnabled = value.fileDriverEnabled;
+      this._snapshotControllerEnabled = value.snapshotControllerEnabled;
+    }
+  }
+
+  // blob_driver_enabled - computed: false, optional: true, required: false
+  private _blobDriverEnabled?: boolean | cdktf.IResolvable; 
+  public get blobDriverEnabled() {
+    return this.getBooleanAttribute('blob_driver_enabled');
+  }
+  public set blobDriverEnabled(value: boolean | cdktf.IResolvable) {
+    this._blobDriverEnabled = value;
+  }
+  public resetBlobDriverEnabled() {
+    this._blobDriverEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blobDriverEnabledInput() {
+    return this._blobDriverEnabled;
+  }
+
+  // disk_driver_enabled - computed: false, optional: true, required: false
+  private _diskDriverEnabled?: boolean | cdktf.IResolvable; 
+  public get diskDriverEnabled() {
+    return this.getBooleanAttribute('disk_driver_enabled');
+  }
+  public set diskDriverEnabled(value: boolean | cdktf.IResolvable) {
+    this._diskDriverEnabled = value;
+  }
+  public resetDiskDriverEnabled() {
+    this._diskDriverEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskDriverEnabledInput() {
+    return this._diskDriverEnabled;
+  }
+
+  // disk_driver_version - computed: false, optional: true, required: false
+  private _diskDriverVersion?: string; 
+  public get diskDriverVersion() {
+    return this.getStringAttribute('disk_driver_version');
+  }
+  public set diskDriverVersion(value: string) {
+    this._diskDriverVersion = value;
+  }
+  public resetDiskDriverVersion() {
+    this._diskDriverVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskDriverVersionInput() {
+    return this._diskDriverVersion;
+  }
+
+  // file_driver_enabled - computed: false, optional: true, required: false
+  private _fileDriverEnabled?: boolean | cdktf.IResolvable; 
+  public get fileDriverEnabled() {
+    return this.getBooleanAttribute('file_driver_enabled');
+  }
+  public set fileDriverEnabled(value: boolean | cdktf.IResolvable) {
+    this._fileDriverEnabled = value;
+  }
+  public resetFileDriverEnabled() {
+    this._fileDriverEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileDriverEnabledInput() {
+    return this._fileDriverEnabled;
+  }
+
+  // snapshot_controller_enabled - computed: false, optional: true, required: false
+  private _snapshotControllerEnabled?: boolean | cdktf.IResolvable; 
+  public get snapshotControllerEnabled() {
+    return this.getBooleanAttribute('snapshot_controller_enabled');
+  }
+  public set snapshotControllerEnabled(value: boolean | cdktf.IResolvable) {
+    this._snapshotControllerEnabled = value;
+  }
+  public resetSnapshotControllerEnabled() {
+    this._snapshotControllerEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotControllerEnabledInput() {
+    return this._snapshotControllerEnabled;
   }
 }
 export interface KubernetesClusterTimeouts {
@@ -6291,7 +6559,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -6312,6 +6580,8 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._enablePodSecurityPolicy = config.enablePodSecurityPolicy;
     this._httpApplicationRoutingEnabled = config.httpApplicationRoutingEnabled;
     this._id = config.id;
+    this._imageCleanerEnabled = config.imageCleanerEnabled;
+    this._imageCleanerIntervalHours = config.imageCleanerIntervalHours;
     this._kubernetesVersion = config.kubernetesVersion;
     this._localAccountDisabled = config.localAccountDisabled;
     this._location = config.location;
@@ -6344,6 +6614,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._networkProfile.internalValue = config.networkProfile;
     this._omsAgent.internalValue = config.omsAgent;
     this._servicePrincipal.internalValue = config.servicePrincipal;
+    this._storageProfile.internalValue = config.storageProfile;
     this._timeouts.internalValue = config.timeouts;
     this._webAppRouting.internalValue = config.webAppRouting;
     this._windowsProfile.internalValue = config.windowsProfile;
@@ -6522,6 +6793,38 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // image_cleaner_enabled - computed: false, optional: true, required: false
+  private _imageCleanerEnabled?: boolean | cdktf.IResolvable; 
+  public get imageCleanerEnabled() {
+    return this.getBooleanAttribute('image_cleaner_enabled');
+  }
+  public set imageCleanerEnabled(value: boolean | cdktf.IResolvable) {
+    this._imageCleanerEnabled = value;
+  }
+  public resetImageCleanerEnabled() {
+    this._imageCleanerEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageCleanerEnabledInput() {
+    return this._imageCleanerEnabled;
+  }
+
+  // image_cleaner_interval_hours - computed: false, optional: true, required: false
+  private _imageCleanerIntervalHours?: number; 
+  public get imageCleanerIntervalHours() {
+    return this.getNumberAttribute('image_cleaner_interval_hours');
+  }
+  public set imageCleanerIntervalHours(value: number) {
+    this._imageCleanerIntervalHours = value;
+  }
+  public resetImageCleanerIntervalHours() {
+    this._imageCleanerIntervalHours = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageCleanerIntervalHoursInput() {
+    return this._imageCleanerIntervalHours;
   }
 
   // kube_admin_config - computed: true, optional: false, required: false
@@ -7061,6 +7364,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._servicePrincipal.internalValue;
   }
 
+  // storage_profile - computed: false, optional: true, required: false
+  private _storageProfile = new KubernetesClusterStorageProfileOutputReference(this, "storage_profile");
+  public get storageProfile() {
+    return this._storageProfile;
+  }
+  public putStorageProfile(value: KubernetesClusterStorageProfile) {
+    this._storageProfile.internalValue = value;
+  }
+  public resetStorageProfile() {
+    this._storageProfile.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageProfileInput() {
+    return this._storageProfile.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new KubernetesClusterTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -7141,6 +7460,8 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       enable_pod_security_policy: cdktf.booleanToTerraform(this._enablePodSecurityPolicy),
       http_application_routing_enabled: cdktf.booleanToTerraform(this._httpApplicationRoutingEnabled),
       id: cdktf.stringToTerraform(this._id),
+      image_cleaner_enabled: cdktf.booleanToTerraform(this._imageCleanerEnabled),
+      image_cleaner_interval_hours: cdktf.numberToTerraform(this._imageCleanerIntervalHours),
       kubernetes_version: cdktf.stringToTerraform(this._kubernetesVersion),
       local_account_disabled: cdktf.booleanToTerraform(this._localAccountDisabled),
       location: cdktf.stringToTerraform(this._location),
@@ -7173,6 +7494,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       network_profile: kubernetesClusterNetworkProfileToTerraform(this._networkProfile.internalValue),
       oms_agent: kubernetesClusterOmsAgentToTerraform(this._omsAgent.internalValue),
       service_principal: kubernetesClusterServicePrincipalToTerraform(this._servicePrincipal.internalValue),
+      storage_profile: kubernetesClusterStorageProfileToTerraform(this._storageProfile.internalValue),
       timeouts: kubernetesClusterTimeoutsToTerraform(this._timeouts.internalValue),
       web_app_routing: kubernetesClusterWebAppRoutingToTerraform(this._webAppRouting.internalValue),
       windows_profile: kubernetesClusterWindowsProfileToTerraform(this._windowsProfile.internalValue),

@@ -2443,6 +2443,10 @@ export interface ApiManagementSecurity {
   */
   readonly tlsRsaWithAes256CbcShaCiphersEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#tls_rsa_with_aes256_gcm_sha384_ciphers_enabled ApiManagement#tls_rsa_with_aes256_gcm_sha384_ciphers_enabled}
+  */
+  readonly tlsRsaWithAes256GcmSha384CiphersEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#triple_des_ciphers_enabled ApiManagement#triple_des_ciphers_enabled}
   */
   readonly tripleDesCiphersEnabled?: boolean | cdktf.IResolvable;
@@ -2469,6 +2473,7 @@ export function apiManagementSecurityToTerraform(struct?: ApiManagementSecurityO
     tls_rsa_with_aes128_gcm_sha256_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsRsaWithAes128GcmSha256CiphersEnabled),
     tls_rsa_with_aes256_cbc_sha256_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsRsaWithAes256CbcSha256CiphersEnabled),
     tls_rsa_with_aes256_cbc_sha_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsRsaWithAes256CbcShaCiphersEnabled),
+    tls_rsa_with_aes256_gcm_sha384_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsRsaWithAes256GcmSha384CiphersEnabled),
     triple_des_ciphers_enabled: cdktf.booleanToTerraform(struct!.tripleDesCiphersEnabled),
   }
 }
@@ -2547,6 +2552,10 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.tlsRsaWithAes256CbcShaCiphersEnabled = this._tlsRsaWithAes256CbcShaCiphersEnabled;
     }
+    if (this._tlsRsaWithAes256GcmSha384CiphersEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tlsRsaWithAes256GcmSha384CiphersEnabled = this._tlsRsaWithAes256GcmSha384CiphersEnabled;
+    }
     if (this._tripleDesCiphersEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.tripleDesCiphersEnabled = this._tripleDesCiphersEnabled;
@@ -2572,6 +2581,7 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
       this._tlsRsaWithAes128GcmSha256CiphersEnabled = undefined;
       this._tlsRsaWithAes256CbcSha256CiphersEnabled = undefined;
       this._tlsRsaWithAes256CbcShaCiphersEnabled = undefined;
+      this._tlsRsaWithAes256GcmSha384CiphersEnabled = undefined;
       this._tripleDesCiphersEnabled = undefined;
     }
     else {
@@ -2591,6 +2601,7 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
       this._tlsRsaWithAes128GcmSha256CiphersEnabled = value.tlsRsaWithAes128GcmSha256CiphersEnabled;
       this._tlsRsaWithAes256CbcSha256CiphersEnabled = value.tlsRsaWithAes256CbcSha256CiphersEnabled;
       this._tlsRsaWithAes256CbcShaCiphersEnabled = value.tlsRsaWithAes256CbcShaCiphersEnabled;
+      this._tlsRsaWithAes256GcmSha384CiphersEnabled = value.tlsRsaWithAes256GcmSha384CiphersEnabled;
       this._tripleDesCiphersEnabled = value.tripleDesCiphersEnabled;
     }
   }
@@ -2833,6 +2844,22 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get tlsRsaWithAes256CbcShaCiphersEnabledInput() {
     return this._tlsRsaWithAes256CbcShaCiphersEnabled;
+  }
+
+  // tls_rsa_with_aes256_gcm_sha384_ciphers_enabled - computed: false, optional: true, required: false
+  private _tlsRsaWithAes256GcmSha384CiphersEnabled?: boolean | cdktf.IResolvable; 
+  public get tlsRsaWithAes256GcmSha384CiphersEnabled() {
+    return this.getBooleanAttribute('tls_rsa_with_aes256_gcm_sha384_ciphers_enabled');
+  }
+  public set tlsRsaWithAes256GcmSha384CiphersEnabled(value: boolean | cdktf.IResolvable) {
+    this._tlsRsaWithAes256GcmSha384CiphersEnabled = value;
+  }
+  public resetTlsRsaWithAes256GcmSha384CiphersEnabled() {
+    this._tlsRsaWithAes256GcmSha384CiphersEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tlsRsaWithAes256GcmSha384CiphersEnabledInput() {
+    return this._tlsRsaWithAes256GcmSha384CiphersEnabled;
   }
 
   // triple_des_ciphers_enabled - computed: false, optional: true, required: false
@@ -3436,7 +3463,7 @@ export class ApiManagement extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

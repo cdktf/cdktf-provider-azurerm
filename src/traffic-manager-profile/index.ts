@@ -698,7 +698,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_traffic_manager_profile',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -224,7 +224,7 @@ export class DataProtectionBackupInstanceBlobStorage extends cdktf.TerraformReso
       terraformResourceType: 'azurerm_data_protection_backup_instance_blob_storage',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

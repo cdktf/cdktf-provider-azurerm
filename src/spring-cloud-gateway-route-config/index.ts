@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudGatewayRouteConfigConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway_route_config#filters SpringCloudGatewayRouteConfig#filters}
+  */
+  readonly filters?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway_route_config#id SpringCloudGatewayRouteConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -18,6 +22,10 @@ export interface SpringCloudGatewayRouteConfigConfig extends cdktf.TerraformMeta
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway_route_config#name SpringCloudGatewayRouteConfig#name}
   */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway_route_config#predicates SpringCloudGatewayRouteConfig#predicates}
+  */
+  readonly predicates?: string[];
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway_route_config#protocol SpringCloudGatewayRouteConfig#protocol}
   */
@@ -30,6 +38,10 @@ export interface SpringCloudGatewayRouteConfigConfig extends cdktf.TerraformMeta
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway_route_config#spring_cloud_gateway_id SpringCloudGatewayRouteConfig#spring_cloud_gateway_id}
   */
   readonly springCloudGatewayId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway_route_config#sso_validation_enabled SpringCloudGatewayRouteConfig#sso_validation_enabled}
+  */
+  readonly ssoValidationEnabled?: boolean | cdktf.IResolvable;
   /**
   * open_api block
   * 
@@ -130,7 +142,7 @@ export interface SpringCloudGatewayRouteConfigRoute {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway_route_config#order SpringCloudGatewayRouteConfig#order}
   */
-  readonly order?: number;
+  readonly order: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway_route_config#predicates SpringCloudGatewayRouteConfig#predicates}
   */
@@ -311,16 +323,13 @@ export class SpringCloudGatewayRouteConfigRouteOutputReference extends cdktf.Com
     return this._filters;
   }
 
-  // order - computed: false, optional: true, required: false
+  // order - computed: false, optional: false, required: true
   private _order?: number; 
   public get order() {
     return this.getNumberAttribute('order');
   }
   public set order(value: number) {
     this._order = value;
-  }
-  public resetOrder() {
-    this._order = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get orderInput() {
@@ -610,7 +619,7 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_gateway_route_config',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -621,11 +630,14 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._filters = config.filters;
     this._id = config.id;
     this._name = config.name;
+    this._predicates = config.predicates;
     this._protocol = config.protocol;
     this._springCloudAppId = config.springCloudAppId;
     this._springCloudGatewayId = config.springCloudGatewayId;
+    this._ssoValidationEnabled = config.ssoValidationEnabled;
     this._openApi.internalValue = config.openApi;
     this._route.internalValue = config.route;
     this._timeouts.internalValue = config.timeouts;
@@ -634,6 +646,22 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // filters - computed: false, optional: true, required: false
+  private _filters?: string[]; 
+  public get filters() {
+    return cdktf.Fn.tolist(this.getListAttribute('filters'));
+  }
+  public set filters(value: string[]) {
+    this._filters = value;
+  }
+  public resetFilters() {
+    this._filters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filtersInput() {
+    return this._filters;
+  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -662,6 +690,22 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // predicates - computed: false, optional: true, required: false
+  private _predicates?: string[]; 
+  public get predicates() {
+    return cdktf.Fn.tolist(this.getListAttribute('predicates'));
+  }
+  public set predicates(value: string[]) {
+    this._predicates = value;
+  }
+  public resetPredicates() {
+    this._predicates = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get predicatesInput() {
+    return this._predicates;
   }
 
   // protocol - computed: false, optional: true, required: false
@@ -707,6 +751,22 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get springCloudGatewayIdInput() {
     return this._springCloudGatewayId;
+  }
+
+  // sso_validation_enabled - computed: false, optional: true, required: false
+  private _ssoValidationEnabled?: boolean | cdktf.IResolvable; 
+  public get ssoValidationEnabled() {
+    return this.getBooleanAttribute('sso_validation_enabled');
+  }
+  public set ssoValidationEnabled(value: boolean | cdktf.IResolvable) {
+    this._ssoValidationEnabled = value;
+  }
+  public resetSsoValidationEnabled() {
+    this._ssoValidationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ssoValidationEnabledInput() {
+    return this._ssoValidationEnabled;
   }
 
   // open_api - computed: false, optional: true, required: false
@@ -763,11 +823,14 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      filters: cdktf.listMapper(cdktf.stringToTerraform, false)(this._filters),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
+      predicates: cdktf.listMapper(cdktf.stringToTerraform, false)(this._predicates),
       protocol: cdktf.stringToTerraform(this._protocol),
       spring_cloud_app_id: cdktf.stringToTerraform(this._springCloudAppId),
       spring_cloud_gateway_id: cdktf.stringToTerraform(this._springCloudGatewayId),
+      sso_validation_enabled: cdktf.booleanToTerraform(this._ssoValidationEnabled),
       open_api: springCloudGatewayRouteConfigOpenApiToTerraform(this._openApi.internalValue),
       route: cdktf.listMapper(springCloudGatewayRouteConfigRouteToTerraform, true)(this._route.internalValue),
       timeouts: springCloudGatewayRouteConfigTimeoutsToTerraform(this._timeouts.internalValue),

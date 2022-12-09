@@ -197,7 +197,7 @@ export class AutomationHybridRunbookWorker extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_automation_hybrid_runbook_worker',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

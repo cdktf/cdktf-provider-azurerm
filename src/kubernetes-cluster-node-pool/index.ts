@@ -12,6 +12,10 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   */
   readonly capacityReservationGroupId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#custom_ca_trust_enabled KubernetesClusterNodePool#custom_ca_trust_enabled}
+  */
+  readonly customCaTrustEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#enable_auto_scaling KubernetesClusterNodePool#enable_auto_scaling}
   */
   readonly enableAutoScaling?: boolean | cdktf.IResolvable;
@@ -1701,7 +1705,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1713,6 +1717,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._capacityReservationGroupId = config.capacityReservationGroupId;
+    this._customCaTrustEnabled = config.customCaTrustEnabled;
     this._enableAutoScaling = config.enableAutoScaling;
     this._enableHostEncryption = config.enableHostEncryption;
     this._enableNodePublicIp = config.enableNodePublicIp;
@@ -1772,6 +1777,22 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get capacityReservationGroupIdInput() {
     return this._capacityReservationGroupId;
+  }
+
+  // custom_ca_trust_enabled - computed: false, optional: true, required: false
+  private _customCaTrustEnabled?: boolean | cdktf.IResolvable; 
+  public get customCaTrustEnabled() {
+    return this.getBooleanAttribute('custom_ca_trust_enabled');
+  }
+  public set customCaTrustEnabled(value: boolean | cdktf.IResolvable) {
+    this._customCaTrustEnabled = value;
+  }
+  public resetCustomCaTrustEnabled() {
+    this._customCaTrustEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customCaTrustEnabledInput() {
+    return this._customCaTrustEnabled;
   }
 
   // enable_auto_scaling - computed: false, optional: true, required: false
@@ -2396,6 +2417,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       capacity_reservation_group_id: cdktf.stringToTerraform(this._capacityReservationGroupId),
+      custom_ca_trust_enabled: cdktf.booleanToTerraform(this._customCaTrustEnabled),
       enable_auto_scaling: cdktf.booleanToTerraform(this._enableAutoScaling),
       enable_host_encryption: cdktf.booleanToTerraform(this._enableHostEncryption),
       enable_node_public_ip: cdktf.booleanToTerraform(this._enableNodePublicIp),

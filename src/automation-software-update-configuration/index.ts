@@ -1331,7 +1331,7 @@ export class AutomationSoftwareUpdateConfigurationTargetAzureQueryOutputReferenc
     return this._scope;
   }
 
-  // tag_filter - computed: false, optional: true, required: false
+  // tag_filter - computed: true, optional: true, required: false
   private _tagFilter?: string; 
   public get tagFilter() {
     return this.getStringAttribute('tag_filter');
@@ -1959,7 +1959,7 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
       terraformResourceType: 'azurerm_automation_software_update_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

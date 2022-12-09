@@ -131,7 +131,7 @@ export class DataAzurermHealthcareWorkspace extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_healthcare_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

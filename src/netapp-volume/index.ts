@@ -12,6 +12,10 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   */
   readonly accountName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#azure_vmware_data_store_enabled NetappVolume#azure_vmware_data_store_enabled}
+  */
+  readonly azureVmwareDataStoreEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#create_from_snapshot_resource_id NetappVolume#create_from_snapshot_resource_id}
   */
   readonly createFromSnapshotResourceId?: string;
@@ -711,7 +715,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_netapp_volume',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -723,6 +727,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._accountName = config.accountName;
+    this._azureVmwareDataStoreEnabled = config.azureVmwareDataStoreEnabled;
     this._createFromSnapshotResourceId = config.createFromSnapshotResourceId;
     this._id = config.id;
     this._location = config.location;
@@ -760,6 +765,22 @@ export class NetappVolume extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get accountNameInput() {
     return this._accountName;
+  }
+
+  // azure_vmware_data_store_enabled - computed: false, optional: true, required: false
+  private _azureVmwareDataStoreEnabled?: boolean | cdktf.IResolvable; 
+  public get azureVmwareDataStoreEnabled() {
+    return this.getBooleanAttribute('azure_vmware_data_store_enabled');
+  }
+  public set azureVmwareDataStoreEnabled(value: boolean | cdktf.IResolvable) {
+    this._azureVmwareDataStoreEnabled = value;
+  }
+  public resetAzureVmwareDataStoreEnabled() {
+    this._azureVmwareDataStoreEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureVmwareDataStoreEnabledInput() {
+    return this._azureVmwareDataStoreEnabled;
   }
 
   // create_from_snapshot_resource_id - computed: true, optional: true, required: false
@@ -1070,6 +1091,7 @@ export class NetappVolume extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       account_name: cdktf.stringToTerraform(this._accountName),
+      azure_vmware_data_store_enabled: cdktf.booleanToTerraform(this._azureVmwareDataStoreEnabled),
       create_from_snapshot_resource_id: cdktf.stringToTerraform(this._createFromSnapshotResourceId),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),

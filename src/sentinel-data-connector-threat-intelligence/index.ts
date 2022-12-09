@@ -189,7 +189,7 @@ export class SentinelDataConnectorThreatIntelligence extends cdktf.TerraformReso
       terraformResourceType: 'azurerm_sentinel_data_connector_threat_intelligence',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.34.0',
+        providerVersion: '3.35.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
