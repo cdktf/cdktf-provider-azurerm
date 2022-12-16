@@ -778,6 +778,68 @@ export class StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference ex
     return this._days;
   }
 }
+export interface StorageAccountBlobPropertiesRestorePolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#days StorageAccount#days}
+  */
+  readonly days: number;
+}
+
+export function storageAccountBlobPropertiesRestorePolicyToTerraform(struct?: StorageAccountBlobPropertiesRestorePolicyOutputReference | StorageAccountBlobPropertiesRestorePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    days: cdktf.numberToTerraform(struct!.days),
+  }
+}
+
+export class StorageAccountBlobPropertiesRestorePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): StorageAccountBlobPropertiesRestorePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._days !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.days = this._days;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountBlobPropertiesRestorePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._days = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._days = value.days;
+    }
+  }
+
+  // days - computed: false, optional: false, required: true
+  private _days?: number; 
+  public get days() {
+    return this.getNumberAttribute('days');
+  }
+  public set days(value: number) {
+    this._days = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysInput() {
+    return this._days;
+  }
+}
 export interface StorageAccountBlobProperties {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#change_feed_enabled StorageAccount#change_feed_enabled}
@@ -817,6 +879,12 @@ export interface StorageAccountBlobProperties {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#delete_retention_policy StorageAccount#delete_retention_policy}
   */
   readonly deleteRetentionPolicy?: StorageAccountBlobPropertiesDeleteRetentionPolicy;
+  /**
+  * restore_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#restore_policy StorageAccount#restore_policy}
+  */
+  readonly restorePolicy?: StorageAccountBlobPropertiesRestorePolicy;
 }
 
 export function storageAccountBlobPropertiesToTerraform(struct?: StorageAccountBlobPropertiesOutputReference | StorageAccountBlobProperties): any {
@@ -833,6 +901,7 @@ export function storageAccountBlobPropertiesToTerraform(struct?: StorageAccountB
     container_delete_retention_policy: storageAccountBlobPropertiesContainerDeleteRetentionPolicyToTerraform(struct!.containerDeleteRetentionPolicy),
     cors_rule: cdktf.listMapper(storageAccountBlobPropertiesCorsRuleToTerraform, true)(struct!.corsRule),
     delete_retention_policy: storageAccountBlobPropertiesDeleteRetentionPolicyToTerraform(struct!.deleteRetentionPolicy),
+    restore_policy: storageAccountBlobPropertiesRestorePolicyToTerraform(struct!.restorePolicy),
   }
 }
 
@@ -882,6 +951,10 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
       hasAnyValues = true;
       internalValueResult.deleteRetentionPolicy = this._deleteRetentionPolicy?.internalValue;
     }
+    if (this._restorePolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.restorePolicy = this._restorePolicy?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -896,6 +969,7 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
       this._containerDeleteRetentionPolicy.internalValue = undefined;
       this._corsRule.internalValue = undefined;
       this._deleteRetentionPolicy.internalValue = undefined;
+      this._restorePolicy.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -907,6 +981,7 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
       this._containerDeleteRetentionPolicy.internalValue = value.containerDeleteRetentionPolicy;
       this._corsRule.internalValue = value.corsRule;
       this._deleteRetentionPolicy.internalValue = value.deleteRetentionPolicy;
+      this._restorePolicy.internalValue = value.restorePolicy;
     }
   }
 
@@ -1036,6 +1111,22 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
   // Temporarily expose input value. Use with caution.
   public get deleteRetentionPolicyInput() {
     return this._deleteRetentionPolicy.internalValue;
+  }
+
+  // restore_policy - computed: false, optional: true, required: false
+  private _restorePolicy = new StorageAccountBlobPropertiesRestorePolicyOutputReference(this, "restore_policy");
+  public get restorePolicy() {
+    return this._restorePolicy;
+  }
+  public putRestorePolicy(value: StorageAccountBlobPropertiesRestorePolicy) {
+    this._restorePolicy.internalValue = value;
+  }
+  public resetRestorePolicy() {
+    this._restorePolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restorePolicyInput() {
+    return this._restorePolicy.internalValue;
   }
 }
 export interface StorageAccountCustomDomain {
@@ -3536,7 +3627,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

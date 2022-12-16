@@ -27,6 +27,10 @@ export interface KeyVaultManagedHardwareSecurityModuleConfig extends cdktf.Terra
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module#public_network_access_enabled KeyVaultManagedHardwareSecurityModule#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module#purge_protection_enabled KeyVaultManagedHardwareSecurityModule#purge_protection_enabled}
   */
   readonly purgeProtectionEnabled?: boolean | cdktf.IResolvable;
@@ -51,11 +55,103 @@ export interface KeyVaultManagedHardwareSecurityModuleConfig extends cdktf.Terra
   */
   readonly tenantId: string;
   /**
+  * network_acls block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module#network_acls KeyVaultManagedHardwareSecurityModule#network_acls}
+  */
+  readonly networkAcls?: KeyVaultManagedHardwareSecurityModuleNetworkAcls;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module#timeouts KeyVaultManagedHardwareSecurityModule#timeouts}
   */
   readonly timeouts?: KeyVaultManagedHardwareSecurityModuleTimeouts;
+}
+export interface KeyVaultManagedHardwareSecurityModuleNetworkAcls {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module#bypass KeyVaultManagedHardwareSecurityModule#bypass}
+  */
+  readonly bypass: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module#default_action KeyVaultManagedHardwareSecurityModule#default_action}
+  */
+  readonly defaultAction: string;
+}
+
+export function keyVaultManagedHardwareSecurityModuleNetworkAclsToTerraform(struct?: KeyVaultManagedHardwareSecurityModuleNetworkAclsOutputReference | KeyVaultManagedHardwareSecurityModuleNetworkAcls): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    bypass: cdktf.stringToTerraform(struct!.bypass),
+    default_action: cdktf.stringToTerraform(struct!.defaultAction),
+  }
+}
+
+export class KeyVaultManagedHardwareSecurityModuleNetworkAclsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KeyVaultManagedHardwareSecurityModuleNetworkAcls | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._bypass !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bypass = this._bypass;
+    }
+    if (this._defaultAction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultAction = this._defaultAction;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KeyVaultManagedHardwareSecurityModuleNetworkAcls | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._bypass = undefined;
+      this._defaultAction = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._bypass = value.bypass;
+      this._defaultAction = value.defaultAction;
+    }
+  }
+
+  // bypass - computed: false, optional: false, required: true
+  private _bypass?: string; 
+  public get bypass() {
+    return this.getStringAttribute('bypass');
+  }
+  public set bypass(value: string) {
+    this._bypass = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bypassInput() {
+    return this._bypass;
+  }
+
+  // default_action - computed: false, optional: false, required: true
+  private _defaultAction?: string; 
+  public get defaultAction() {
+    return this.getStringAttribute('default_action');
+  }
+  public set defaultAction(value: string) {
+    this._defaultAction = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultActionInput() {
+    return this._defaultAction;
+  }
 }
 export interface KeyVaultManagedHardwareSecurityModuleTimeouts {
   /**
@@ -213,7 +309,7 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
       terraformResourceType: 'azurerm_key_vault_managed_hardware_security_module',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -228,12 +324,14 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._purgeProtectionEnabled = config.purgeProtectionEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
     this._softDeleteRetentionDays = config.softDeleteRetentionDays;
     this._tags = config.tags;
     this._tenantId = config.tenantId;
+    this._networkAcls.internalValue = config.networkAcls;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -299,6 +397,22 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
   }
 
   // purge_protection_enabled - computed: false, optional: true, required: false
@@ -388,6 +502,22 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
     return this._tenantId;
   }
 
+  // network_acls - computed: false, optional: true, required: false
+  private _networkAcls = new KeyVaultManagedHardwareSecurityModuleNetworkAclsOutputReference(this, "network_acls");
+  public get networkAcls() {
+    return this._networkAcls;
+  }
+  public putNetworkAcls(value: KeyVaultManagedHardwareSecurityModuleNetworkAcls) {
+    this._networkAcls.internalValue = value;
+  }
+  public resetNetworkAcls() {
+    this._networkAcls.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkAclsInput() {
+    return this._networkAcls.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new KeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -414,12 +544,14 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       purge_protection_enabled: cdktf.booleanToTerraform(this._purgeProtectionEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       soft_delete_retention_days: cdktf.numberToTerraform(this._softDeleteRetentionDays),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       tenant_id: cdktf.stringToTerraform(this._tenantId),
+      network_acls: keyVaultManagedHardwareSecurityModuleNetworkAclsToTerraform(this._networkAcls.internalValue),
       timeouts: keyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

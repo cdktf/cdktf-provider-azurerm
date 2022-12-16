@@ -41,6 +41,12 @@ export interface LighthouseDefinitionConfig extends cdktf.TerraformMetaArguments
   */
   readonly authorization: LighthouseDefinitionAuthorization[] | cdktf.IResolvable;
   /**
+  * eligible_authorization block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition#eligible_authorization LighthouseDefinition#eligible_authorization}
+  */
+  readonly eligibleAuthorization?: LighthouseDefinitionEligibleAuthorization[] | cdktf.IResolvable;
+  /**
   * plan block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition#plan LighthouseDefinition#plan}
@@ -223,6 +229,422 @@ export class LighthouseDefinitionAuthorizationList extends cdktf.ComplexList {
   */
   public get(index: number): LighthouseDefinitionAuthorizationOutputReference {
     return new LighthouseDefinitionAuthorizationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApprover {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition#principal_display_name LighthouseDefinition#principal_display_name}
+  */
+  readonly principalDisplayName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition#principal_id LighthouseDefinition#principal_id}
+  */
+  readonly principalId: string;
+}
+
+export function lighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverToTerraform(struct?: LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApprover | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    principal_display_name: cdktf.stringToTerraform(struct!.principalDisplayName),
+    principal_id: cdktf.stringToTerraform(struct!.principalId),
+  }
+}
+
+export class LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApprover | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._principalDisplayName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.principalDisplayName = this._principalDisplayName;
+    }
+    if (this._principalId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.principalId = this._principalId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApprover | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._principalDisplayName = undefined;
+      this._principalId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._principalDisplayName = value.principalDisplayName;
+      this._principalId = value.principalId;
+    }
+  }
+
+  // principal_display_name - computed: false, optional: true, required: false
+  private _principalDisplayName?: string; 
+  public get principalDisplayName() {
+    return this.getStringAttribute('principal_display_name');
+  }
+  public set principalDisplayName(value: string) {
+    this._principalDisplayName = value;
+  }
+  public resetPrincipalDisplayName() {
+    this._principalDisplayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get principalDisplayNameInput() {
+    return this._principalDisplayName;
+  }
+
+  // principal_id - computed: false, optional: false, required: true
+  private _principalId?: string; 
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+  public set principalId(value: string) {
+    this._principalId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get principalIdInput() {
+    return this._principalId;
+  }
+}
+
+export class LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList extends cdktf.ComplexList {
+  public internalValue? : LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApprover[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverOutputReference {
+    return new LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition#maximum_activation_duration LighthouseDefinition#maximum_activation_duration}
+  */
+  readonly maximumActivationDuration?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition#multi_factor_auth_provider LighthouseDefinition#multi_factor_auth_provider}
+  */
+  readonly multiFactorAuthProvider?: string;
+  /**
+  * approver block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition#approver LighthouseDefinition#approver}
+  */
+  readonly approver?: LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApprover[] | cdktf.IResolvable;
+}
+
+export function lighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyToTerraform(struct?: LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyOutputReference | LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    maximum_activation_duration: cdktf.stringToTerraform(struct!.maximumActivationDuration),
+    multi_factor_auth_provider: cdktf.stringToTerraform(struct!.multiFactorAuthProvider),
+    approver: cdktf.listMapper(lighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverToTerraform, true)(struct!.approver),
+  }
+}
+
+export class LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maximumActivationDuration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maximumActivationDuration = this._maximumActivationDuration;
+    }
+    if (this._multiFactorAuthProvider !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.multiFactorAuthProvider = this._multiFactorAuthProvider;
+    }
+    if (this._approver?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.approver = this._approver?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maximumActivationDuration = undefined;
+      this._multiFactorAuthProvider = undefined;
+      this._approver.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maximumActivationDuration = value.maximumActivationDuration;
+      this._multiFactorAuthProvider = value.multiFactorAuthProvider;
+      this._approver.internalValue = value.approver;
+    }
+  }
+
+  // maximum_activation_duration - computed: false, optional: true, required: false
+  private _maximumActivationDuration?: string; 
+  public get maximumActivationDuration() {
+    return this.getStringAttribute('maximum_activation_duration');
+  }
+  public set maximumActivationDuration(value: string) {
+    this._maximumActivationDuration = value;
+  }
+  public resetMaximumActivationDuration() {
+    this._maximumActivationDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maximumActivationDurationInput() {
+    return this._maximumActivationDuration;
+  }
+
+  // multi_factor_auth_provider - computed: false, optional: true, required: false
+  private _multiFactorAuthProvider?: string; 
+  public get multiFactorAuthProvider() {
+    return this.getStringAttribute('multi_factor_auth_provider');
+  }
+  public set multiFactorAuthProvider(value: string) {
+    this._multiFactorAuthProvider = value;
+  }
+  public resetMultiFactorAuthProvider() {
+    this._multiFactorAuthProvider = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get multiFactorAuthProviderInput() {
+    return this._multiFactorAuthProvider;
+  }
+
+  // approver - computed: false, optional: true, required: false
+  private _approver = new LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList(this, "approver", true);
+  public get approver() {
+    return this._approver;
+  }
+  public putApprover(value: LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApprover[] | cdktf.IResolvable) {
+    this._approver.internalValue = value;
+  }
+  public resetApprover() {
+    this._approver.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get approverInput() {
+    return this._approver.internalValue;
+  }
+}
+export interface LighthouseDefinitionEligibleAuthorization {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition#principal_display_name LighthouseDefinition#principal_display_name}
+  */
+  readonly principalDisplayName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition#principal_id LighthouseDefinition#principal_id}
+  */
+  readonly principalId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition#role_definition_id LighthouseDefinition#role_definition_id}
+  */
+  readonly roleDefinitionId: string;
+  /**
+  * just_in_time_access_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition#just_in_time_access_policy LighthouseDefinition#just_in_time_access_policy}
+  */
+  readonly justInTimeAccessPolicy?: LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy;
+}
+
+export function lighthouseDefinitionEligibleAuthorizationToTerraform(struct?: LighthouseDefinitionEligibleAuthorization | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    principal_display_name: cdktf.stringToTerraform(struct!.principalDisplayName),
+    principal_id: cdktf.stringToTerraform(struct!.principalId),
+    role_definition_id: cdktf.stringToTerraform(struct!.roleDefinitionId),
+    just_in_time_access_policy: lighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyToTerraform(struct!.justInTimeAccessPolicy),
+  }
+}
+
+export class LighthouseDefinitionEligibleAuthorizationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LighthouseDefinitionEligibleAuthorization | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._principalDisplayName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.principalDisplayName = this._principalDisplayName;
+    }
+    if (this._principalId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.principalId = this._principalId;
+    }
+    if (this._roleDefinitionId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.roleDefinitionId = this._roleDefinitionId;
+    }
+    if (this._justInTimeAccessPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.justInTimeAccessPolicy = this._justInTimeAccessPolicy?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LighthouseDefinitionEligibleAuthorization | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._principalDisplayName = undefined;
+      this._principalId = undefined;
+      this._roleDefinitionId = undefined;
+      this._justInTimeAccessPolicy.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._principalDisplayName = value.principalDisplayName;
+      this._principalId = value.principalId;
+      this._roleDefinitionId = value.roleDefinitionId;
+      this._justInTimeAccessPolicy.internalValue = value.justInTimeAccessPolicy;
+    }
+  }
+
+  // principal_display_name - computed: false, optional: true, required: false
+  private _principalDisplayName?: string; 
+  public get principalDisplayName() {
+    return this.getStringAttribute('principal_display_name');
+  }
+  public set principalDisplayName(value: string) {
+    this._principalDisplayName = value;
+  }
+  public resetPrincipalDisplayName() {
+    this._principalDisplayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get principalDisplayNameInput() {
+    return this._principalDisplayName;
+  }
+
+  // principal_id - computed: false, optional: false, required: true
+  private _principalId?: string; 
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+  public set principalId(value: string) {
+    this._principalId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get principalIdInput() {
+    return this._principalId;
+  }
+
+  // role_definition_id - computed: false, optional: false, required: true
+  private _roleDefinitionId?: string; 
+  public get roleDefinitionId() {
+    return this.getStringAttribute('role_definition_id');
+  }
+  public set roleDefinitionId(value: string) {
+    this._roleDefinitionId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleDefinitionIdInput() {
+    return this._roleDefinitionId;
+  }
+
+  // just_in_time_access_policy - computed: false, optional: true, required: false
+  private _justInTimeAccessPolicy = new LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyOutputReference(this, "just_in_time_access_policy");
+  public get justInTimeAccessPolicy() {
+    return this._justInTimeAccessPolicy;
+  }
+  public putJustInTimeAccessPolicy(value: LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy) {
+    this._justInTimeAccessPolicy.internalValue = value;
+  }
+  public resetJustInTimeAccessPolicy() {
+    this._justInTimeAccessPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get justInTimeAccessPolicyInput() {
+    return this._justInTimeAccessPolicy.internalValue;
+  }
+}
+
+export class LighthouseDefinitionEligibleAuthorizationList extends cdktf.ComplexList {
+  public internalValue? : LighthouseDefinitionEligibleAuthorization[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LighthouseDefinitionEligibleAuthorizationOutputReference {
+    return new LighthouseDefinitionEligibleAuthorizationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface LighthouseDefinitionPlan {
@@ -542,7 +964,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lighthouse_definition',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -560,6 +982,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
     this._name = config.name;
     this._scope = config.scope;
     this._authorization.internalValue = config.authorization;
+    this._eligibleAuthorization.internalValue = config.eligibleAuthorization;
     this._plan.internalValue = config.plan;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -668,6 +1091,22 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
     return this._authorization.internalValue;
   }
 
+  // eligible_authorization - computed: false, optional: true, required: false
+  private _eligibleAuthorization = new LighthouseDefinitionEligibleAuthorizationList(this, "eligible_authorization", true);
+  public get eligibleAuthorization() {
+    return this._eligibleAuthorization;
+  }
+  public putEligibleAuthorization(value: LighthouseDefinitionEligibleAuthorization[] | cdktf.IResolvable) {
+    this._eligibleAuthorization.internalValue = value;
+  }
+  public resetEligibleAuthorization() {
+    this._eligibleAuthorization.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eligibleAuthorizationInput() {
+    return this._eligibleAuthorization.internalValue;
+  }
+
   // plan - computed: false, optional: true, required: false
   private _plan = new LighthouseDefinitionPlanOutputReference(this, "plan");
   public get plan() {
@@ -713,6 +1152,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       scope: cdktf.stringToTerraform(this._scope),
       authorization: cdktf.listMapper(lighthouseDefinitionAuthorizationToTerraform, true)(this._authorization.internalValue),
+      eligible_authorization: cdktf.listMapper(lighthouseDefinitionEligibleAuthorizationToTerraform, true)(this._eligibleAuthorization.internalValue),
       plan: lighthouseDefinitionPlanToTerraform(this._plan.internalValue),
       timeouts: lighthouseDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };

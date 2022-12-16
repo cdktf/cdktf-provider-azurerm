@@ -127,7 +127,7 @@ export class DataAzurermSubscriptionTemplateDeployment extends cdktf.TerraformDa
       terraformResourceType: 'azurerm_subscription_template_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

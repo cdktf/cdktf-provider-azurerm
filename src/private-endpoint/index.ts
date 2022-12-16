@@ -43,7 +43,7 @@ export interface PrivateEndpointConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint#ip_configuration PrivateEndpoint#ip_configuration}
   */
-  readonly ipConfiguration?: PrivateEndpointIpConfiguration;
+  readonly ipConfiguration?: PrivateEndpointIpConfiguration[] | cdktf.IResolvable;
   /**
   * private_dns_zone_group block
   * 
@@ -367,6 +367,10 @@ export class PrivateEndpointPrivateDnsZoneConfigsList extends cdktf.ComplexList 
 }
 export interface PrivateEndpointIpConfiguration {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint#member_name PrivateEndpoint#member_name}
+  */
+  readonly memberName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint#name PrivateEndpoint#name}
   */
   readonly name: string;
@@ -380,12 +384,13 @@ export interface PrivateEndpointIpConfiguration {
   readonly subresourceName: string;
 }
 
-export function privateEndpointIpConfigurationToTerraform(struct?: PrivateEndpointIpConfigurationOutputReference | PrivateEndpointIpConfiguration): any {
+export function privateEndpointIpConfigurationToTerraform(struct?: PrivateEndpointIpConfiguration | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    member_name: cdktf.stringToTerraform(struct!.memberName),
     name: cdktf.stringToTerraform(struct!.name),
     private_ip_address: cdktf.stringToTerraform(struct!.privateIpAddress),
     subresource_name: cdktf.stringToTerraform(struct!.subresourceName),
@@ -394,18 +399,28 @@ export function privateEndpointIpConfigurationToTerraform(struct?: PrivateEndpoi
 
 export class PrivateEndpointIpConfigurationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): PrivateEndpointIpConfiguration | undefined {
+  public get internalValue(): PrivateEndpointIpConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._memberName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.memberName = this._memberName;
+    }
     if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
@@ -421,19 +436,43 @@ export class PrivateEndpointIpConfigurationOutputReference extends cdktf.Complex
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: PrivateEndpointIpConfiguration | undefined) {
+  public set internalValue(value: PrivateEndpointIpConfiguration | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._memberName = undefined;
       this._name = undefined;
       this._privateIpAddress = undefined;
       this._subresourceName = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._memberName = value.memberName;
       this._name = value.name;
       this._privateIpAddress = value.privateIpAddress;
       this._subresourceName = value.subresourceName;
     }
+  }
+
+  // member_name - computed: true, optional: true, required: false
+  private _memberName?: string; 
+  public get memberName() {
+    return this.getStringAttribute('member_name');
+  }
+  public set memberName(value: string) {
+    this._memberName = value;
+  }
+  public resetMemberName() {
+    this._memberName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memberNameInput() {
+    return this._memberName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -473,6 +512,26 @@ export class PrivateEndpointIpConfigurationOutputReference extends cdktf.Complex
   // Temporarily expose input value. Use with caution.
   public get subresourceNameInput() {
     return this._subresourceName;
+  }
+}
+
+export class PrivateEndpointIpConfigurationList extends cdktf.ComplexList {
+  public internalValue? : PrivateEndpointIpConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): PrivateEndpointIpConfigurationOutputReference {
+    return new PrivateEndpointIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface PrivateEndpointPrivateDnsZoneGroup {
@@ -948,7 +1007,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_private_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1095,11 +1154,11 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
 
   // ip_configuration - computed: false, optional: true, required: false
-  private _ipConfiguration = new PrivateEndpointIpConfigurationOutputReference(this, "ip_configuration");
+  private _ipConfiguration = new PrivateEndpointIpConfigurationList(this, "ip_configuration", false);
   public get ipConfiguration() {
     return this._ipConfiguration;
   }
-  public putIpConfiguration(value: PrivateEndpointIpConfiguration) {
+  public putIpConfiguration(value: PrivateEndpointIpConfiguration[] | cdktf.IResolvable) {
     this._ipConfiguration.internalValue = value;
   }
   public resetIpConfiguration() {
@@ -1168,7 +1227,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      ip_configuration: privateEndpointIpConfigurationToTerraform(this._ipConfiguration.internalValue),
+      ip_configuration: cdktf.listMapper(privateEndpointIpConfigurationToTerraform, true)(this._ipConfiguration.internalValue),
       private_dns_zone_group: privateEndpointPrivateDnsZoneGroupToTerraform(this._privateDnsZoneGroup.internalValue),
       private_service_connection: privateEndpointPrivateServiceConnectionToTerraform(this._privateServiceConnection.internalValue),
       timeouts: privateEndpointTimeoutsToTerraform(this._timeouts.internalValue),

@@ -37,7 +37,7 @@ export interface StreamAnalyticsOutputMssqlConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#password StreamAnalyticsOutputMssql#password}
   */
-  readonly password: string;
+  readonly password?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#resource_group_name StreamAnalyticsOutputMssql#resource_group_name}
   */
@@ -57,7 +57,7 @@ export interface StreamAnalyticsOutputMssqlConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#user StreamAnalyticsOutputMssql#user}
   */
-  readonly user: string;
+  readonly user?: string;
   /**
   * timeouts block
   * 
@@ -248,7 +248,7 @@ export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stream_analytics_output_mssql',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -368,13 +368,16 @@ export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // password - computed: false, optional: false, required: true
+  // password - computed: false, optional: true, required: false
   private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
   public set password(value: string) {
     this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
@@ -433,13 +436,16 @@ export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
     return this._table;
   }
 
-  // user - computed: false, optional: false, required: true
+  // user - computed: false, optional: true, required: false
   private _user?: string; 
   public get user() {
     return this.getStringAttribute('user');
   }
   public set user(value: string) {
     this._user = value;
+  }
+  public resetUser() {
+    this._user = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get userInput() {

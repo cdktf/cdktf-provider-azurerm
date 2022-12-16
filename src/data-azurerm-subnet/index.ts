@@ -135,7 +135,7 @@ export class DataAzurermSubnet extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_subnet',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

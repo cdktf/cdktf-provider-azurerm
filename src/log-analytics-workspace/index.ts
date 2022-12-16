@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface LogAnalyticsWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace#allow_resource_only_permissions LogAnalyticsWorkspace#allow_resource_only_permissions}
+  */
+  readonly allowResourceOnlyPermissions?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace#cmk_for_query_forced LogAnalyticsWorkspace#cmk_for_query_forced}
   */
   readonly cmkForQueryForced?: boolean | cdktf.IResolvable;
@@ -248,7 +252,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_log_analytics_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -259,6 +263,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._allowResourceOnlyPermissions = config.allowResourceOnlyPermissions;
     this._cmkForQueryForced = config.cmkForQueryForced;
     this._dailyQuotaGb = config.dailyQuotaGb;
     this._id = config.id;
@@ -277,6 +282,22 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // allow_resource_only_permissions - computed: false, optional: true, required: false
+  private _allowResourceOnlyPermissions?: boolean | cdktf.IResolvable; 
+  public get allowResourceOnlyPermissions() {
+    return this.getBooleanAttribute('allow_resource_only_permissions');
+  }
+  public set allowResourceOnlyPermissions(value: boolean | cdktf.IResolvable) {
+    this._allowResourceOnlyPermissions = value;
+  }
+  public resetAllowResourceOnlyPermissions() {
+    this._allowResourceOnlyPermissions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowResourceOnlyPermissionsInput() {
+    return this._allowResourceOnlyPermissions;
+  }
 
   // cmk_for_query_forced - computed: false, optional: true, required: false
   private _cmkForQueryForced?: boolean | cdktf.IResolvable; 
@@ -498,6 +519,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      allow_resource_only_permissions: cdktf.booleanToTerraform(this._allowResourceOnlyPermissions),
       cmk_for_query_forced: cdktf.booleanToTerraform(this._cmkForQueryForced),
       daily_quota_gb: cdktf.numberToTerraform(this._dailyQuotaGb),
       id: cdktf.stringToTerraform(this._id),

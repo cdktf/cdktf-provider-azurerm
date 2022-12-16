@@ -31,6 +31,10 @@ export interface PointToSiteVpnGatewayConfig extends cdktf.TerraformMetaArgument
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway#routing_preference_internet_enabled PointToSiteVpnGateway#routing_preference_internet_enabled}
+  */
+  readonly routingPreferenceInternetEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway#scale_unit PointToSiteVpnGateway#scale_unit}
   */
   readonly scaleUnit: number;
@@ -154,6 +158,14 @@ export interface PointToSiteVpnGatewayConnectionConfigurationRoute {
   */
   readonly associatedRouteTableId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway#inbound_route_map_id PointToSiteVpnGateway#inbound_route_map_id}
+  */
+  readonly inboundRouteMapId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway#outbound_route_map_id PointToSiteVpnGateway#outbound_route_map_id}
+  */
+  readonly outboundRouteMapId?: string;
+  /**
   * propagated_route_table block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway#propagated_route_table PointToSiteVpnGateway#propagated_route_table}
@@ -168,6 +180,8 @@ export function pointToSiteVpnGatewayConnectionConfigurationRouteToTerraform(str
   }
   return {
     associated_route_table_id: cdktf.stringToTerraform(struct!.associatedRouteTableId),
+    inbound_route_map_id: cdktf.stringToTerraform(struct!.inboundRouteMapId),
+    outbound_route_map_id: cdktf.stringToTerraform(struct!.outboundRouteMapId),
     propagated_route_table: pointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTableToTerraform(struct!.propagatedRouteTable),
   }
 }
@@ -190,6 +204,14 @@ export class PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference ex
       hasAnyValues = true;
       internalValueResult.associatedRouteTableId = this._associatedRouteTableId;
     }
+    if (this._inboundRouteMapId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.inboundRouteMapId = this._inboundRouteMapId;
+    }
+    if (this._outboundRouteMapId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.outboundRouteMapId = this._outboundRouteMapId;
+    }
     if (this._propagatedRouteTable?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.propagatedRouteTable = this._propagatedRouteTable?.internalValue;
@@ -201,11 +223,15 @@ export class PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference ex
     if (value === undefined) {
       this.isEmptyObject = false;
       this._associatedRouteTableId = undefined;
+      this._inboundRouteMapId = undefined;
+      this._outboundRouteMapId = undefined;
       this._propagatedRouteTable.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._associatedRouteTableId = value.associatedRouteTableId;
+      this._inboundRouteMapId = value.inboundRouteMapId;
+      this._outboundRouteMapId = value.outboundRouteMapId;
       this._propagatedRouteTable.internalValue = value.propagatedRouteTable;
     }
   }
@@ -221,6 +247,38 @@ export class PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference ex
   // Temporarily expose input value. Use with caution.
   public get associatedRouteTableIdInput() {
     return this._associatedRouteTableId;
+  }
+
+  // inbound_route_map_id - computed: false, optional: true, required: false
+  private _inboundRouteMapId?: string; 
+  public get inboundRouteMapId() {
+    return this.getStringAttribute('inbound_route_map_id');
+  }
+  public set inboundRouteMapId(value: string) {
+    this._inboundRouteMapId = value;
+  }
+  public resetInboundRouteMapId() {
+    this._inboundRouteMapId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inboundRouteMapIdInput() {
+    return this._inboundRouteMapId;
+  }
+
+  // outbound_route_map_id - computed: false, optional: true, required: false
+  private _outboundRouteMapId?: string; 
+  public get outboundRouteMapId() {
+    return this.getStringAttribute('outbound_route_map_id');
+  }
+  public set outboundRouteMapId(value: string) {
+    this._outboundRouteMapId = value;
+  }
+  public resetOutboundRouteMapId() {
+    this._outboundRouteMapId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outboundRouteMapIdInput() {
+    return this._outboundRouteMapId;
   }
 
   // propagated_route_table - computed: false, optional: true, required: false
@@ -628,7 +686,7 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_point_to_site_vpn_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -644,6 +702,7 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._routingPreferenceInternetEnabled = config.routingPreferenceInternetEnabled;
     this._scaleUnit = config.scaleUnit;
     this._tags = config.tags;
     this._virtualHubId = config.virtualHubId;
@@ -725,6 +784,22 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName;
+  }
+
+  // routing_preference_internet_enabled - computed: false, optional: true, required: false
+  private _routingPreferenceInternetEnabled?: boolean | cdktf.IResolvable; 
+  public get routingPreferenceInternetEnabled() {
+    return this.getBooleanAttribute('routing_preference_internet_enabled');
+  }
+  public set routingPreferenceInternetEnabled(value: boolean | cdktf.IResolvable) {
+    this._routingPreferenceInternetEnabled = value;
+  }
+  public resetRoutingPreferenceInternetEnabled() {
+    this._routingPreferenceInternetEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routingPreferenceInternetEnabledInput() {
+    return this._routingPreferenceInternetEnabled;
   }
 
   // scale_unit - computed: false, optional: false, required: true
@@ -822,6 +897,7 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      routing_preference_internet_enabled: cdktf.booleanToTerraform(this._routingPreferenceInternetEnabled),
       scale_unit: cdktf.numberToTerraform(this._scaleUnit),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),

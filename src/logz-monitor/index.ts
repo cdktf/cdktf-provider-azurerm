@@ -73,7 +73,7 @@ export interface LogzMonitorPlan {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#plan_id LogzMonitor#plan_id}
   */
-  readonly planId: string;
+  readonly planId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#usage_type LogzMonitor#usage_type}
   */
@@ -169,13 +169,16 @@ export class LogzMonitorPlanOutputReference extends cdktf.ComplexObject {
     return this._effectiveDate;
   }
 
-  // plan_id - computed: false, optional: false, required: true
+  // plan_id - computed: false, optional: true, required: false
   private _planId?: string; 
   public get planId() {
     return this.getStringAttribute('plan_id');
   }
   public set planId(value: string) {
     this._planId = value;
+  }
+  public resetPlanId() {
+    this._planId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get planIdInput() {
@@ -512,7 +515,7 @@ export class LogzMonitor extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_logz_monitor',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
