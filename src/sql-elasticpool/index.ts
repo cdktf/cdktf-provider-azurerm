@@ -244,7 +244,7 @@ export class SqlElasticpool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sql_elasticpool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

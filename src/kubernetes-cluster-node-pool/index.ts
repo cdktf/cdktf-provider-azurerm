@@ -182,6 +182,12 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#upgrade_settings KubernetesClusterNodePool#upgrade_settings}
   */
   readonly upgradeSettings?: KubernetesClusterNodePoolUpgradeSettings;
+  /**
+  * windows_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#windows_profile KubernetesClusterNodePool#windows_profile}
+  */
+  readonly windowsProfile?: KubernetesClusterNodePoolWindowsProfile;
 }
 export interface KubernetesClusterNodePoolKubeletConfig {
   /**
@@ -1678,6 +1684,71 @@ export class KubernetesClusterNodePoolUpgradeSettingsOutputReference extends cdk
     return this._maxSurge;
   }
 }
+export interface KubernetesClusterNodePoolWindowsProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#outbound_nat_enabled KubernetesClusterNodePool#outbound_nat_enabled}
+  */
+  readonly outboundNatEnabled?: boolean | cdktf.IResolvable;
+}
+
+export function kubernetesClusterNodePoolWindowsProfileToTerraform(struct?: KubernetesClusterNodePoolWindowsProfileOutputReference | KubernetesClusterNodePoolWindowsProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    outbound_nat_enabled: cdktf.booleanToTerraform(struct!.outboundNatEnabled),
+  }
+}
+
+export class KubernetesClusterNodePoolWindowsProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KubernetesClusterNodePoolWindowsProfile | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._outboundNatEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.outboundNatEnabled = this._outboundNatEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterNodePoolWindowsProfile | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._outboundNatEnabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._outboundNatEnabled = value.outboundNatEnabled;
+    }
+  }
+
+  // outbound_nat_enabled - computed: false, optional: true, required: false
+  private _outboundNatEnabled?: boolean | cdktf.IResolvable; 
+  public get outboundNatEnabled() {
+    return this.getBooleanAttribute('outbound_nat_enabled');
+  }
+  public set outboundNatEnabled(value: boolean | cdktf.IResolvable) {
+    this._outboundNatEnabled = value;
+  }
+  public resetOutboundNatEnabled() {
+    this._outboundNatEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outboundNatEnabledInput() {
+    return this._outboundNatEnabled;
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool azurerm_kubernetes_cluster_node_pool}
@@ -1705,7 +1776,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1757,6 +1828,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     this._linuxOsConfig.internalValue = config.linuxOsConfig;
     this._timeouts.internalValue = config.timeouts;
     this._upgradeSettings.internalValue = config.upgradeSettings;
+    this._windowsProfile.internalValue = config.windowsProfile;
   }
 
   // ==========
@@ -2410,6 +2482,22 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     return this._upgradeSettings.internalValue;
   }
 
+  // windows_profile - computed: false, optional: true, required: false
+  private _windowsProfile = new KubernetesClusterNodePoolWindowsProfileOutputReference(this, "windows_profile");
+  public get windowsProfile() {
+    return this._windowsProfile;
+  }
+  public putWindowsProfile(value: KubernetesClusterNodePoolWindowsProfile) {
+    this._windowsProfile.internalValue = value;
+  }
+  public resetWindowsProfile() {
+    this._windowsProfile.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get windowsProfileInput() {
+    return this._windowsProfile.internalValue;
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -2457,6 +2545,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       linux_os_config: kubernetesClusterNodePoolLinuxOsConfigToTerraform(this._linuxOsConfig.internalValue),
       timeouts: kubernetesClusterNodePoolTimeoutsToTerraform(this._timeouts.internalValue),
       upgrade_settings: kubernetesClusterNodePoolUpgradeSettingsToTerraform(this._upgradeSettings.internalValue),
+      windows_profile: kubernetesClusterNodePoolWindowsProfileToTerraform(this._windowsProfile.internalValue),
     };
   }
 }

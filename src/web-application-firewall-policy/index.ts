@@ -982,6 +982,157 @@ export class WebApplicationFirewallPolicyManagedRulesExclusionList extends cdktf
     return new WebApplicationFirewallPolicyManagedRulesExclusionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#action WebApplicationFirewallPolicy#action}
+  */
+  readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#enabled WebApplicationFirewallPolicy#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#id WebApplicationFirewallPolicy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id: string;
+}
+
+export function webApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRuleToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    id: cdktf.stringToTerraform(struct!.id),
+  }
+}
+
+export class WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._enabled = undefined;
+      this._id = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._enabled = value.enabled;
+      this._id = value.id;
+    }
+  }
+
+  // action - computed: false, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // id - computed: false, optional: false, required: true
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+}
+
+export class WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRuleList extends cdktf.ComplexList {
+  public internalValue? : WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRuleOutputReference {
+    return new WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#disabled_rules WebApplicationFirewallPolicy#disabled_rules}
@@ -991,6 +1142,12 @@ export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroup
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#rule_group_name WebApplicationFirewallPolicy#rule_group_name}
   */
   readonly ruleGroupName: string;
+  /**
+  * rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#rule WebApplicationFirewallPolicy#rule}
+  */
+  readonly rule?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRule[] | cdktf.IResolvable;
 }
 
 export function webApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride | cdktf.IResolvable): any {
@@ -1001,6 +1158,7 @@ export function webApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupO
   return {
     disabled_rules: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.disabledRules),
     rule_group_name: cdktf.stringToTerraform(struct!.ruleGroupName),
+    rule: cdktf.listMapper(webApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRuleToTerraform, true)(struct!.rule),
   }
 }
 
@@ -1032,6 +1190,10 @@ export class WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOver
       hasAnyValues = true;
       internalValueResult.ruleGroupName = this._ruleGroupName;
     }
+    if (this._rule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rule = this._rule?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1041,6 +1203,7 @@ export class WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOver
       this.resolvableValue = undefined;
       this._disabledRules = undefined;
       this._ruleGroupName = undefined;
+      this._rule.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -1051,10 +1214,11 @@ export class WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOver
       this.resolvableValue = undefined;
       this._disabledRules = value.disabledRules;
       this._ruleGroupName = value.ruleGroupName;
+      this._rule.internalValue = value.rule;
     }
   }
 
-  // disabled_rules - computed: false, optional: true, required: false
+  // disabled_rules - computed: true, optional: true, required: false
   private _disabledRules?: string[]; 
   public get disabledRules() {
     return this.getListAttribute('disabled_rules');
@@ -1081,6 +1245,22 @@ export class WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOver
   // Temporarily expose input value. Use with caution.
   public get ruleGroupNameInput() {
     return this._ruleGroupName;
+  }
+
+  // rule - computed: false, optional: true, required: false
+  private _rule = new WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRuleList(this, "rule", false);
+  public get rule() {
+    return this._rule;
+  }
+  public putRule(value: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRule[] | cdktf.IResolvable) {
+    this._rule.internalValue = value;
+  }
+  public resetRule() {
+    this._rule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleInput() {
+    return this._rule.internalValue;
   }
 }
 
@@ -1702,7 +1882,7 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_web_application_firewall_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

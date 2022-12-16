@@ -199,6 +199,12 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly microsoftDefender?: KubernetesClusterMicrosoftDefender;
   /**
+  * monitor_metrics block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#monitor_metrics KubernetesCluster#monitor_metrics}
+  */
+  readonly monitorMetrics?: KubernetesClusterMonitorMetrics;
+  /**
   * network_profile block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#network_profile KubernetesCluster#network_profile}
@@ -4844,6 +4850,98 @@ export class KubernetesClusterMicrosoftDefenderOutputReference extends cdktf.Com
     return this._logAnalyticsWorkspaceId;
   }
 }
+export interface KubernetesClusterMonitorMetrics {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#annotations_allowed KubernetesCluster#annotations_allowed}
+  */
+  readonly annotationsAllowed?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#labels_allowed KubernetesCluster#labels_allowed}
+  */
+  readonly labelsAllowed?: string;
+}
+
+export function kubernetesClusterMonitorMetricsToTerraform(struct?: KubernetesClusterMonitorMetricsOutputReference | KubernetesClusterMonitorMetrics): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    annotations_allowed: cdktf.stringToTerraform(struct!.annotationsAllowed),
+    labels_allowed: cdktf.stringToTerraform(struct!.labelsAllowed),
+  }
+}
+
+export class KubernetesClusterMonitorMetricsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KubernetesClusterMonitorMetrics | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._annotationsAllowed !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.annotationsAllowed = this._annotationsAllowed;
+    }
+    if (this._labelsAllowed !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.labelsAllowed = this._labelsAllowed;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterMonitorMetrics | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._annotationsAllowed = undefined;
+      this._labelsAllowed = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._annotationsAllowed = value.annotationsAllowed;
+      this._labelsAllowed = value.labelsAllowed;
+    }
+  }
+
+  // annotations_allowed - computed: false, optional: true, required: false
+  private _annotationsAllowed?: string; 
+  public get annotationsAllowed() {
+    return this.getStringAttribute('annotations_allowed');
+  }
+  public set annotationsAllowed(value: string) {
+    this._annotationsAllowed = value;
+  }
+  public resetAnnotationsAllowed() {
+    this._annotationsAllowed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get annotationsAllowedInput() {
+    return this._annotationsAllowed;
+  }
+
+  // labels_allowed - computed: false, optional: true, required: false
+  private _labelsAllowed?: string; 
+  public get labelsAllowed() {
+    return this.getStringAttribute('labels_allowed');
+  }
+  public set labelsAllowed(value: string) {
+    this._labelsAllowed = value;
+  }
+  public resetLabelsAllowed() {
+    this._labelsAllowed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsAllowedInput() {
+    return this._labelsAllowed;
+  }
+}
 export interface KubernetesClusterNetworkProfileLoadBalancerProfile {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}
@@ -6559,7 +6657,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -6611,6 +6709,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._linuxProfile.internalValue = config.linuxProfile;
     this._maintenanceWindow.internalValue = config.maintenanceWindow;
     this._microsoftDefender.internalValue = config.microsoftDefender;
+    this._monitorMetrics.internalValue = config.monitorMetrics;
     this._networkProfile.internalValue = config.networkProfile;
     this._omsAgent.internalValue = config.omsAgent;
     this._servicePrincipal.internalValue = config.servicePrincipal;
@@ -7316,6 +7415,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._microsoftDefender.internalValue;
   }
 
+  // monitor_metrics - computed: false, optional: true, required: false
+  private _monitorMetrics = new KubernetesClusterMonitorMetricsOutputReference(this, "monitor_metrics");
+  public get monitorMetrics() {
+    return this._monitorMetrics;
+  }
+  public putMonitorMetrics(value: KubernetesClusterMonitorMetrics) {
+    this._monitorMetrics.internalValue = value;
+  }
+  public resetMonitorMetrics() {
+    this._monitorMetrics.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monitorMetricsInput() {
+    return this._monitorMetrics.internalValue;
+  }
+
   // network_profile - computed: false, optional: true, required: false
   private _networkProfile = new KubernetesClusterNetworkProfileOutputReference(this, "network_profile");
   public get networkProfile() {
@@ -7491,6 +7606,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       linux_profile: kubernetesClusterLinuxProfileToTerraform(this._linuxProfile.internalValue),
       maintenance_window: kubernetesClusterMaintenanceWindowToTerraform(this._maintenanceWindow.internalValue),
       microsoft_defender: kubernetesClusterMicrosoftDefenderToTerraform(this._microsoftDefender.internalValue),
+      monitor_metrics: kubernetesClusterMonitorMetricsToTerraform(this._monitorMetrics.internalValue),
       network_profile: kubernetesClusterNetworkProfileToTerraform(this._networkProfile.internalValue),
       oms_agent: kubernetesClusterOmsAgentToTerraform(this._omsAgent.internalValue),
       service_principal: kubernetesClusterServicePrincipalToTerraform(this._servicePrincipal.internalValue),

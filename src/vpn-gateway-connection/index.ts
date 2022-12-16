@@ -150,6 +150,14 @@ export interface VpnGatewayConnectionRouting {
   */
   readonly associatedRouteTable: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#inbound_route_map_id VpnGatewayConnection#inbound_route_map_id}
+  */
+  readonly inboundRouteMapId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#outbound_route_map_id VpnGatewayConnection#outbound_route_map_id}
+  */
+  readonly outboundRouteMapId?: string;
+  /**
   * propagated_route_table block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#propagated_route_table VpnGatewayConnection#propagated_route_table}
@@ -164,6 +172,8 @@ export function vpnGatewayConnectionRoutingToTerraform(struct?: VpnGatewayConnec
   }
   return {
     associated_route_table: cdktf.stringToTerraform(struct!.associatedRouteTable),
+    inbound_route_map_id: cdktf.stringToTerraform(struct!.inboundRouteMapId),
+    outbound_route_map_id: cdktf.stringToTerraform(struct!.outboundRouteMapId),
     propagated_route_table: vpnGatewayConnectionRoutingPropagatedRouteTableToTerraform(struct!.propagatedRouteTable),
   }
 }
@@ -186,6 +196,14 @@ export class VpnGatewayConnectionRoutingOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.associatedRouteTable = this._associatedRouteTable;
     }
+    if (this._inboundRouteMapId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.inboundRouteMapId = this._inboundRouteMapId;
+    }
+    if (this._outboundRouteMapId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.outboundRouteMapId = this._outboundRouteMapId;
+    }
     if (this._propagatedRouteTable?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.propagatedRouteTable = this._propagatedRouteTable?.internalValue;
@@ -197,11 +215,15 @@ export class VpnGatewayConnectionRoutingOutputReference extends cdktf.ComplexObj
     if (value === undefined) {
       this.isEmptyObject = false;
       this._associatedRouteTable = undefined;
+      this._inboundRouteMapId = undefined;
+      this._outboundRouteMapId = undefined;
       this._propagatedRouteTable.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._associatedRouteTable = value.associatedRouteTable;
+      this._inboundRouteMapId = value.inboundRouteMapId;
+      this._outboundRouteMapId = value.outboundRouteMapId;
       this._propagatedRouteTable.internalValue = value.propagatedRouteTable;
     }
   }
@@ -217,6 +239,38 @@ export class VpnGatewayConnectionRoutingOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get associatedRouteTableInput() {
     return this._associatedRouteTable;
+  }
+
+  // inbound_route_map_id - computed: false, optional: true, required: false
+  private _inboundRouteMapId?: string; 
+  public get inboundRouteMapId() {
+    return this.getStringAttribute('inbound_route_map_id');
+  }
+  public set inboundRouteMapId(value: string) {
+    this._inboundRouteMapId = value;
+  }
+  public resetInboundRouteMapId() {
+    this._inboundRouteMapId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inboundRouteMapIdInput() {
+    return this._inboundRouteMapId;
+  }
+
+  // outbound_route_map_id - computed: false, optional: true, required: false
+  private _outboundRouteMapId?: string; 
+  public get outboundRouteMapId() {
+    return this.getStringAttribute('outbound_route_map_id');
+  }
+  public set outboundRouteMapId(value: string) {
+    this._outboundRouteMapId = value;
+  }
+  public resetOutboundRouteMapId() {
+    this._outboundRouteMapId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outboundRouteMapIdInput() {
+    return this._outboundRouteMapId;
   }
 
   // propagated_route_table - computed: false, optional: true, required: false
@@ -1389,7 +1443,7 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_vpn_gateway_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

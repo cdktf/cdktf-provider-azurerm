@@ -131,7 +131,7 @@ export class DataAzurermSpatialAnchorsAccount extends cdktf.TerraformDataSource 
       terraformResourceType: 'azurerm_spatial_anchors_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.35.0',
+        providerVersion: '3.36.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
