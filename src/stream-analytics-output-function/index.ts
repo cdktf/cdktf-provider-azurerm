@@ -236,7 +236,7 @@ export class StreamAnalyticsOutputFunction extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stream_analytics_output_function',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.36.0',
+        providerVersion: '3.37.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

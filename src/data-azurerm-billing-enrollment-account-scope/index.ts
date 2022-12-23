@@ -131,7 +131,7 @@ export class DataAzurermBillingEnrollmentAccountScope extends cdktf.TerraformDat
       terraformResourceType: 'azurerm_billing_enrollment_account_scope',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.36.0',
+        providerVersion: '3.37.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

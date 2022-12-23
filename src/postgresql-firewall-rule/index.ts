@@ -224,7 +224,7 @@ export class PostgresqlFirewallRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_postgresql_firewall_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.36.0',
+        providerVersion: '3.37.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

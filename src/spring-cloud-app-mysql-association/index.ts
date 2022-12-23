@@ -228,7 +228,7 @@ export class SpringCloudAppMysqlAssociation extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_app_mysql_association',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.36.0',
+        providerVersion: '3.37.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
