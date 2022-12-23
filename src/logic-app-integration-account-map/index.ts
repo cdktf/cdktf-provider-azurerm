@@ -228,7 +228,7 @@ export class LogicAppIntegrationAccountMap extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_logic_app_integration_account_map',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.36.0',
+        providerVersion: '3.37.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

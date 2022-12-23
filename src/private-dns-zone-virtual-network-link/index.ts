@@ -228,7 +228,7 @@ export class PrivateDnsZoneVirtualNetworkLink extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_private_dns_zone_virtual_network_link',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.36.0',
+        providerVersion: '3.37.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

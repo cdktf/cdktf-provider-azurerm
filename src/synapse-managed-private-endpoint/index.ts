@@ -193,7 +193,7 @@ export class SynapseManagedPrivateEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_synapse_managed_private_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.36.0',
+        providerVersion: '3.37.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

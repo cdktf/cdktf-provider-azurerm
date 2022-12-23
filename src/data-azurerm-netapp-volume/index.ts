@@ -222,7 +222,7 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_netapp_volume',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.36.0',
+        providerVersion: '3.37.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -374,6 +374,11 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
   // volume_path - computed: true, optional: false, required: false
   public get volumePath() {
     return this.getStringAttribute('volume_path');
+  }
+
+  // zone - computed: true, optional: false, required: false
+  public get zone() {
+    return this.getStringAttribute('zone');
   }
 
   // timeouts - computed: false, optional: true, required: false

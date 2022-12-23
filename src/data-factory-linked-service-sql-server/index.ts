@@ -424,7 +424,7 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_linked_service_sql_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.36.0',
+        providerVersion: '3.37.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

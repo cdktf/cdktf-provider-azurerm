@@ -224,7 +224,7 @@ export class PrivateDnsResolverDnsForwardingRuleset extends cdktf.TerraformResou
       terraformResourceType: 'azurerm_private_dns_resolver_dns_forwarding_ruleset',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.36.0',
+        providerVersion: '3.37.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

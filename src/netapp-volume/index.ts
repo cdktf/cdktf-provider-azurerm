@@ -83,6 +83,10 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   */
   readonly volumePath: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#zone NetappVolume#zone}
+  */
+  readonly zone?: string;
+  /**
   * data_protection_replication block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#data_protection_replication NetappVolume#data_protection_replication}
@@ -715,7 +719,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_netapp_volume',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.36.0',
+        providerVersion: '3.37.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -744,6 +748,7 @@ export class NetappVolume extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._throughputInMibps = config.throughputInMibps;
     this._volumePath = config.volumePath;
+    this._zone = config.zone;
     this._dataProtectionReplication.internalValue = config.dataProtectionReplication;
     this._dataProtectionSnapshotPolicy.internalValue = config.dataProtectionSnapshotPolicy;
     this._exportPolicyRule.internalValue = config.exportPolicyRule;
@@ -1020,6 +1025,22 @@ export class NetappVolume extends cdktf.TerraformResource {
     return this._volumePath;
   }
 
+  // zone - computed: false, optional: true, required: false
+  private _zone?: string; 
+  public get zone() {
+    return this.getStringAttribute('zone');
+  }
+  public set zone(value: string) {
+    this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneInput() {
+    return this._zone;
+  }
+
   // data_protection_replication - computed: false, optional: true, required: false
   private _dataProtectionReplication = new NetappVolumeDataProtectionReplicationOutputReference(this, "data_protection_replication");
   public get dataProtectionReplication() {
@@ -1108,6 +1129,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       throughput_in_mibps: cdktf.numberToTerraform(this._throughputInMibps),
       volume_path: cdktf.stringToTerraform(this._volumePath),
+      zone: cdktf.stringToTerraform(this._zone),
       data_protection_replication: netappVolumeDataProtectionReplicationToTerraform(this._dataProtectionReplication.internalValue),
       data_protection_snapshot_policy: netappVolumeDataProtectionSnapshotPolicyToTerraform(this._dataProtectionSnapshotPolicy.internalValue),
       export_policy_rule: cdktf.listMapper(netappVolumeExportPolicyRuleToTerraform, true)(this._exportPolicyRule.internalValue),
