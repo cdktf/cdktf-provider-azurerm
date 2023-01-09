@@ -884,7 +884,7 @@ export class AutomationSoftwareUpdateConfigurationScheduleOutputReference extend
     return this._description;
   }
 
-  // expiry_time - computed: false, optional: true, required: false
+  // expiry_time - computed: true, optional: true, required: false
   private _expiryTime?: string; 
   public get expiryTime() {
     return this.getStringAttribute('expiry_time');
@@ -1959,7 +1959,7 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
       terraformResourceType: 'azurerm_automation_software_update_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.37.0',
+        providerVersion: '3.38.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
