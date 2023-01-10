@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface ProximityPlacementGroupConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/proximity_placement_group#allowed_vm_sizes ProximityPlacementGroup#allowed_vm_sizes}
+  */
+  readonly allowedVmSizes?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/proximity_placement_group#id ProximityPlacementGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -30,6 +34,10 @@ export interface ProximityPlacementGroupConfig extends cdktf.TerraformMetaArgume
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/proximity_placement_group#tags ProximityPlacementGroup#tags}
   */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/proximity_placement_group#zone ProximityPlacementGroup#zone}
+  */
+  readonly zone?: string;
   /**
   * timeouts block
   * 
@@ -220,7 +228,7 @@ export class ProximityPlacementGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_proximity_placement_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.37.0',
+        providerVersion: '3.38.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -231,17 +239,35 @@ export class ProximityPlacementGroup extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._allowedVmSizes = config.allowedVmSizes;
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
+    this._zone = config.zone;
     this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // allowed_vm_sizes - computed: false, optional: true, required: false
+  private _allowedVmSizes?: string[]; 
+  public get allowedVmSizes() {
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_vm_sizes'));
+  }
+  public set allowedVmSizes(value: string[]) {
+    this._allowedVmSizes = value;
+  }
+  public resetAllowedVmSizes() {
+    this._allowedVmSizes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedVmSizesInput() {
+    return this._allowedVmSizes;
+  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -314,6 +340,22 @@ export class ProximityPlacementGroup extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // zone - computed: false, optional: true, required: false
+  private _zone?: string; 
+  public get zone() {
+    return this.getStringAttribute('zone');
+  }
+  public set zone(value: string) {
+    this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneInput() {
+    return this._zone;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ProximityPlacementGroupTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -336,11 +378,13 @@ export class ProximityPlacementGroup extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      allowed_vm_sizes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._allowedVmSizes),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      zone: cdktf.stringToTerraform(this._zone),
       timeouts: proximityPlacementGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -236,7 +236,7 @@ export class ContainerRegistryAgentPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_registry_agent_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.37.0',
+        providerVersion: '3.38.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
