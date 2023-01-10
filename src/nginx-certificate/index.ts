@@ -197,7 +197,7 @@ export class NginxCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_nginx_certificate',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.37.0',
+        providerVersion: '3.38.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

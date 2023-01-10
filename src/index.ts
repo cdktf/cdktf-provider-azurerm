@@ -574,6 +574,7 @@ export * as networkInterfaceBackendAddressPoolAssociation from './network-interf
 export * as networkInterfaceNatRuleAssociation from './network-interface-nat-rule-association';
 export * as networkInterfaceSecurityGroupAssociation from './network-interface-security-group-association';
 export * as networkManager from './network-manager';
+export * as networkManagerNetworkGroup from './network-manager-network-group';
 export * as networkPacketCapture from './network-packet-capture';
 export * as networkProfile from './network-profile';
 export * as networkSecurityGroup from './network-security-group';
@@ -1056,6 +1057,7 @@ export * as dataAzurermManagementGroup from './data-azurerm-management-group';
 export * as dataAzurermManagementGroupTemplateDeployment from './data-azurerm-management-group-template-deployment';
 export * as dataAzurermMapsAccount from './data-azurerm-maps-account';
 export * as dataAzurermMariadbServer from './data-azurerm-mariadb-server';
+export * as dataAzurermMarketplaceAgreement from './data-azurerm-marketplace-agreement';
 export * as dataAzurermMonitorActionGroup from './data-azurerm-monitor-action-group';
 export * as dataAzurermMonitorDataCollectionEndpoint from './data-azurerm-monitor-data-collection-endpoint';
 export * as dataAzurermMonitorDataCollectionRule from './data-azurerm-monitor-data-collection-rule';
@@ -1169,6 +1171,7 @@ export * as dataAzurermTrafficManagerGeographicalLocation from './data-azurerm-t
 export * as dataAzurermTrafficManagerProfile from './data-azurerm-traffic-manager-profile';
 export * as dataAzurermUserAssignedIdentity from './data-azurerm-user-assigned-identity';
 export * as dataAzurermVirtualHub from './data-azurerm-virtual-hub';
+export * as dataAzurermVirtualHubRouteTable from './data-azurerm-virtual-hub-route-table';
 export * as dataAzurermVirtualMachine from './data-azurerm-virtual-machine';
 export * as dataAzurermVirtualMachineScaleSet from './data-azurerm-virtual-machine-scale-set';
 export * as dataAzurermVirtualNetwork from './data-azurerm-virtual-network';

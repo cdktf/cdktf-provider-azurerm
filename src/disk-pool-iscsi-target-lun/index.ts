@@ -189,7 +189,7 @@ export class DiskPoolIscsiTargetLun extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_disk_pool_iscsi_target_lun',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.37.0',
+        providerVersion: '3.38.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

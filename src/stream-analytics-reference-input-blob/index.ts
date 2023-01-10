@@ -37,7 +37,7 @@ export interface StreamAnalyticsReferenceInputBlobConfig extends cdktf.Terraform
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_blob#storage_account_key StreamAnalyticsReferenceInputBlob#storage_account_key}
   */
-  readonly storageAccountKey: string;
+  readonly storageAccountKey?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_blob#storage_account_name StreamAnalyticsReferenceInputBlob#storage_account_name}
   */
@@ -366,7 +366,7 @@ export class StreamAnalyticsReferenceInputBlob extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stream_analytics_reference_input_blob',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.37.0',
+        providerVersion: '3.38.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -480,13 +480,16 @@ export class StreamAnalyticsReferenceInputBlob extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
-  // storage_account_key - computed: false, optional: false, required: true
+  // storage_account_key - computed: false, optional: true, required: false
   private _storageAccountKey?: string; 
   public get storageAccountKey() {
     return this.getStringAttribute('storage_account_key');
   }
   public set storageAccountKey(value: string) {
     this._storageAccountKey = value;
+  }
+  public resetStorageAccountKey() {
+    this._storageAccountKey = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountKeyInput() {
