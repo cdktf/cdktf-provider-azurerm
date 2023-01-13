@@ -23,6 +23,10 @@ export interface MediaServicesAccountConfig extends cdktf.TerraformMetaArguments
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#public_network_access_enabled MediaServicesAccount#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#resource_group_name MediaServicesAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -34,6 +38,12 @@ export interface MediaServicesAccountConfig extends cdktf.TerraformMetaArguments
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#tags MediaServicesAccount#tags}
   */
   readonly tags?: { [key: string]: string };
+  /**
+  * encryption block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#encryption MediaServicesAccount#encryption}
+  */
+  readonly encryption?: MediaServicesAccountEncryption;
   /**
   * identity block
   * 
@@ -58,6 +68,224 @@ export interface MediaServicesAccountConfig extends cdktf.TerraformMetaArguments
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#timeouts MediaServicesAccount#timeouts}
   */
   readonly timeouts?: MediaServicesAccountTimeouts;
+}
+export interface MediaServicesAccountEncryptionManagedIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#use_system_assigned_identity MediaServicesAccount#use_system_assigned_identity}
+  */
+  readonly useSystemAssignedIdentity?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#user_assigned_identity_id MediaServicesAccount#user_assigned_identity_id}
+  */
+  readonly userAssignedIdentityId?: string;
+}
+
+export function mediaServicesAccountEncryptionManagedIdentityToTerraform(struct?: MediaServicesAccountEncryptionManagedIdentityOutputReference | MediaServicesAccountEncryptionManagedIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    use_system_assigned_identity: cdktf.booleanToTerraform(struct!.useSystemAssignedIdentity),
+    user_assigned_identity_id: cdktf.stringToTerraform(struct!.userAssignedIdentityId),
+  }
+}
+
+export class MediaServicesAccountEncryptionManagedIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MediaServicesAccountEncryptionManagedIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._useSystemAssignedIdentity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useSystemAssignedIdentity = this._useSystemAssignedIdentity;
+    }
+    if (this._userAssignedIdentityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userAssignedIdentityId = this._userAssignedIdentityId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaServicesAccountEncryptionManagedIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._useSystemAssignedIdentity = undefined;
+      this._userAssignedIdentityId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._useSystemAssignedIdentity = value.useSystemAssignedIdentity;
+      this._userAssignedIdentityId = value.userAssignedIdentityId;
+    }
+  }
+
+  // use_system_assigned_identity - computed: false, optional: true, required: false
+  private _useSystemAssignedIdentity?: boolean | cdktf.IResolvable; 
+  public get useSystemAssignedIdentity() {
+    return this.getBooleanAttribute('use_system_assigned_identity');
+  }
+  public set useSystemAssignedIdentity(value: boolean | cdktf.IResolvable) {
+    this._useSystemAssignedIdentity = value;
+  }
+  public resetUseSystemAssignedIdentity() {
+    this._useSystemAssignedIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useSystemAssignedIdentityInput() {
+    return this._useSystemAssignedIdentity;
+  }
+
+  // user_assigned_identity_id - computed: false, optional: true, required: false
+  private _userAssignedIdentityId?: string; 
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+  public set userAssignedIdentityId(value: string) {
+    this._userAssignedIdentityId = value;
+  }
+  public resetUserAssignedIdentityId() {
+    this._userAssignedIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignedIdentityIdInput() {
+    return this._userAssignedIdentityId;
+  }
+}
+export interface MediaServicesAccountEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#key_vault_key_identifier MediaServicesAccount#key_vault_key_identifier}
+  */
+  readonly keyVaultKeyIdentifier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#type MediaServicesAccount#type}
+  */
+  readonly type?: string;
+  /**
+  * managed_identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#managed_identity MediaServicesAccount#managed_identity}
+  */
+  readonly managedIdentity?: MediaServicesAccountEncryptionManagedIdentity;
+}
+
+export function mediaServicesAccountEncryptionToTerraform(struct?: MediaServicesAccountEncryptionOutputReference | MediaServicesAccountEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_vault_key_identifier: cdktf.stringToTerraform(struct!.keyVaultKeyIdentifier),
+    type: cdktf.stringToTerraform(struct!.type),
+    managed_identity: mediaServicesAccountEncryptionManagedIdentityToTerraform(struct!.managedIdentity),
+  }
+}
+
+export class MediaServicesAccountEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MediaServicesAccountEncryption | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyVaultKeyIdentifier !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultKeyIdentifier = this._keyVaultKeyIdentifier;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._managedIdentity?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.managedIdentity = this._managedIdentity?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaServicesAccountEncryption | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._keyVaultKeyIdentifier = undefined;
+      this._type = undefined;
+      this._managedIdentity.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._keyVaultKeyIdentifier = value.keyVaultKeyIdentifier;
+      this._type = value.type;
+      this._managedIdentity.internalValue = value.managedIdentity;
+    }
+  }
+
+  // current_key_identifier - computed: true, optional: false, required: false
+  public get currentKeyIdentifier() {
+    return this.getStringAttribute('current_key_identifier');
+  }
+
+  // key_vault_key_identifier - computed: false, optional: true, required: false
+  private _keyVaultKeyIdentifier?: string; 
+  public get keyVaultKeyIdentifier() {
+    return this.getStringAttribute('key_vault_key_identifier');
+  }
+  public set keyVaultKeyIdentifier(value: string) {
+    this._keyVaultKeyIdentifier = value;
+  }
+  public resetKeyVaultKeyIdentifier() {
+    this._keyVaultKeyIdentifier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyIdentifierInput() {
+    return this._keyVaultKeyIdentifier;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // managed_identity - computed: false, optional: true, required: false
+  private _managedIdentity = new MediaServicesAccountEncryptionManagedIdentityOutputReference(this, "managed_identity");
+  public get managedIdentity() {
+    return this._managedIdentity;
+  }
+  public putManagedIdentity(value: MediaServicesAccountEncryptionManagedIdentity) {
+    this._managedIdentity.internalValue = value;
+  }
+  public resetManagedIdentity() {
+    this._managedIdentity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedIdentityInput() {
+    return this._managedIdentity.internalValue;
+  }
 }
 export interface MediaServicesAccountIdentity {
   /**
@@ -250,6 +478,98 @@ export class MediaServicesAccountKeyDeliveryAccessControlOutputReference extends
     return this._ipAllowList;
   }
 }
+export interface MediaServicesAccountStorageAccountManagedIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#use_system_assigned_identity MediaServicesAccount#use_system_assigned_identity}
+  */
+  readonly useSystemAssignedIdentity?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#user_assigned_identity_id MediaServicesAccount#user_assigned_identity_id}
+  */
+  readonly userAssignedIdentityId?: string;
+}
+
+export function mediaServicesAccountStorageAccountManagedIdentityToTerraform(struct?: MediaServicesAccountStorageAccountManagedIdentityOutputReference | MediaServicesAccountStorageAccountManagedIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    use_system_assigned_identity: cdktf.booleanToTerraform(struct!.useSystemAssignedIdentity),
+    user_assigned_identity_id: cdktf.stringToTerraform(struct!.userAssignedIdentityId),
+  }
+}
+
+export class MediaServicesAccountStorageAccountManagedIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MediaServicesAccountStorageAccountManagedIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._useSystemAssignedIdentity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useSystemAssignedIdentity = this._useSystemAssignedIdentity;
+    }
+    if (this._userAssignedIdentityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userAssignedIdentityId = this._userAssignedIdentityId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaServicesAccountStorageAccountManagedIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._useSystemAssignedIdentity = undefined;
+      this._userAssignedIdentityId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._useSystemAssignedIdentity = value.useSystemAssignedIdentity;
+      this._userAssignedIdentityId = value.userAssignedIdentityId;
+    }
+  }
+
+  // use_system_assigned_identity - computed: false, optional: true, required: false
+  private _useSystemAssignedIdentity?: boolean | cdktf.IResolvable; 
+  public get useSystemAssignedIdentity() {
+    return this.getBooleanAttribute('use_system_assigned_identity');
+  }
+  public set useSystemAssignedIdentity(value: boolean | cdktf.IResolvable) {
+    this._useSystemAssignedIdentity = value;
+  }
+  public resetUseSystemAssignedIdentity() {
+    this._useSystemAssignedIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useSystemAssignedIdentityInput() {
+    return this._useSystemAssignedIdentity;
+  }
+
+  // user_assigned_identity_id - computed: false, optional: true, required: false
+  private _userAssignedIdentityId?: string; 
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+  public set userAssignedIdentityId(value: string) {
+    this._userAssignedIdentityId = value;
+  }
+  public resetUserAssignedIdentityId() {
+    this._userAssignedIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignedIdentityIdInput() {
+    return this._userAssignedIdentityId;
+  }
+}
 export interface MediaServicesAccountStorageAccount {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#id MediaServicesAccount#id}
@@ -262,6 +582,12 @@ export interface MediaServicesAccountStorageAccount {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#is_primary MediaServicesAccount#is_primary}
   */
   readonly isPrimary?: boolean | cdktf.IResolvable;
+  /**
+  * managed_identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#managed_identity MediaServicesAccount#managed_identity}
+  */
+  readonly managedIdentity?: MediaServicesAccountStorageAccountManagedIdentity;
 }
 
 export function mediaServicesAccountStorageAccountToTerraform(struct?: MediaServicesAccountStorageAccount | cdktf.IResolvable): any {
@@ -272,6 +598,7 @@ export function mediaServicesAccountStorageAccountToTerraform(struct?: MediaServ
   return {
     id: cdktf.stringToTerraform(struct!.id),
     is_primary: cdktf.booleanToTerraform(struct!.isPrimary),
+    managed_identity: mediaServicesAccountStorageAccountManagedIdentityToTerraform(struct!.managedIdentity),
   }
 }
 
@@ -303,6 +630,10 @@ export class MediaServicesAccountStorageAccountOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.isPrimary = this._isPrimary;
     }
+    if (this._managedIdentity?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.managedIdentity = this._managedIdentity?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -312,6 +643,7 @@ export class MediaServicesAccountStorageAccountOutputReference extends cdktf.Com
       this.resolvableValue = undefined;
       this._id = undefined;
       this._isPrimary = undefined;
+      this._managedIdentity.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -322,6 +654,7 @@ export class MediaServicesAccountStorageAccountOutputReference extends cdktf.Com
       this.resolvableValue = undefined;
       this._id = value.id;
       this._isPrimary = value.isPrimary;
+      this._managedIdentity.internalValue = value.managedIdentity;
     }
   }
 
@@ -352,6 +685,22 @@ export class MediaServicesAccountStorageAccountOutputReference extends cdktf.Com
   // Temporarily expose input value. Use with caution.
   public get isPrimaryInput() {
     return this._isPrimary;
+  }
+
+  // managed_identity - computed: false, optional: true, required: false
+  private _managedIdentity = new MediaServicesAccountStorageAccountManagedIdentityOutputReference(this, "managed_identity");
+  public get managedIdentity() {
+    return this._managedIdentity;
+  }
+  public putManagedIdentity(value: MediaServicesAccountStorageAccountManagedIdentity) {
+    this._managedIdentity.internalValue = value;
+  }
+  public resetManagedIdentity() {
+    this._managedIdentity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedIdentityInput() {
+    return this._managedIdentity.internalValue;
   }
 }
 
@@ -557,7 +906,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_services_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -571,9 +920,11 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._storageAuthenticationType = config.storageAuthenticationType;
     this._tags = config.tags;
+    this._encryption.internalValue = config.encryption;
     this._identity.internalValue = config.identity;
     this._keyDeliveryAccessControl.internalValue = config.keyDeliveryAccessControl;
     this._storageAccount.internalValue = config.storageAccount;
@@ -626,6 +977,22 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
@@ -669,6 +1036,22 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
     return this._tags;
+  }
+
+  // encryption - computed: false, optional: true, required: false
+  private _encryption = new MediaServicesAccountEncryptionOutputReference(this, "encryption");
+  public get encryption() {
+    return this._encryption;
+  }
+  public putEncryption(value: MediaServicesAccountEncryption) {
+    this._encryption.internalValue = value;
+  }
+  public resetEncryption() {
+    this._encryption.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionInput() {
+    return this._encryption.internalValue;
   }
 
   // identity - computed: false, optional: true, required: false
@@ -741,9 +1124,11 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       storage_authentication_type: cdktf.stringToTerraform(this._storageAuthenticationType),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      encryption: mediaServicesAccountEncryptionToTerraform(this._encryption.internalValue),
       identity: mediaServicesAccountIdentityToTerraform(this._identity.internalValue),
       key_delivery_access_control: mediaServicesAccountKeyDeliveryAccessControlToTerraform(this._keyDeliveryAccessControl.internalValue),
       storage_account: cdktf.listMapper(mediaServicesAccountStorageAccountToTerraform, true)(this._storageAccount.internalValue),

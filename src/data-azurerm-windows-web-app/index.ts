@@ -1455,6 +1455,11 @@ export class DataAzurermWindowsWebAppSiteConfigApplicationStackOutputReference e
     return this.getStringAttribute('docker_container_tag');
   }
 
+  // dotnet_core_version - computed: true, optional: false, required: false
+  public get dotnetCoreVersion() {
+    return this.getStringAttribute('dotnet_core_version');
+  }
+
   // dotnet_version - computed: true, optional: false, required: false
   public get dotnetVersion() {
     return this.getStringAttribute('dotnet_version');
@@ -1468,6 +1473,11 @@ export class DataAzurermWindowsWebAppSiteConfigApplicationStackOutputReference e
   // java_container_version - computed: true, optional: false, required: false
   public get javaContainerVersion() {
     return this.getStringAttribute('java_container_version');
+  }
+
+  // java_embedded_server_enabled - computed: true, optional: false, required: false
+  public get javaEmbeddedServerEnabled() {
+    return this.getBooleanAttribute('java_embedded_server_enabled');
   }
 
   // java_version - computed: true, optional: false, required: false
@@ -1485,9 +1495,19 @@ export class DataAzurermWindowsWebAppSiteConfigApplicationStackOutputReference e
     return this.getStringAttribute('php_version');
   }
 
+  // python - computed: true, optional: false, required: false
+  public get python() {
+    return this.getBooleanAttribute('python');
+  }
+
   // python_version - computed: true, optional: false, required: false
   public get pythonVersion() {
     return this.getStringAttribute('python_version');
+  }
+
+  // tomcat_version - computed: true, optional: false, required: false
+  public get tomcatVersion() {
+    return this.getStringAttribute('tomcat_version');
   }
 }
 
@@ -3168,7 +3188,7 @@ export class DataAzurermWindowsWebApp extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_windows_web_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

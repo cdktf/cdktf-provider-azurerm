@@ -29,6 +29,230 @@ export interface DataAzurermMaintenanceConfigurationConfig extends cdktf.Terrafo
   */
   readonly timeouts?: DataAzurermMaintenanceConfigurationTimeouts;
 }
+export interface DataAzurermMaintenanceConfigurationInstallPatchesLinux {
+}
+
+export function dataAzurermMaintenanceConfigurationInstallPatchesLinuxToTerraform(struct?: DataAzurermMaintenanceConfigurationInstallPatchesLinux): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMaintenanceConfigurationInstallPatchesLinuxOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMaintenanceConfigurationInstallPatchesLinux | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMaintenanceConfigurationInstallPatchesLinux | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // classifications_to_include - computed: true, optional: false, required: false
+  public get classificationsToInclude() {
+    return this.getListAttribute('classifications_to_include');
+  }
+
+  // package_names_mask_to_exclude - computed: true, optional: false, required: false
+  public get packageNamesMaskToExclude() {
+    return this.getListAttribute('package_names_mask_to_exclude');
+  }
+
+  // package_names_mask_to_include - computed: true, optional: false, required: false
+  public get packageNamesMaskToInclude() {
+    return this.getListAttribute('package_names_mask_to_include');
+  }
+}
+
+export class DataAzurermMaintenanceConfigurationInstallPatchesLinuxList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMaintenanceConfigurationInstallPatchesLinuxOutputReference {
+    return new DataAzurermMaintenanceConfigurationInstallPatchesLinuxOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMaintenanceConfigurationInstallPatchesWindows {
+}
+
+export function dataAzurermMaintenanceConfigurationInstallPatchesWindowsToTerraform(struct?: DataAzurermMaintenanceConfigurationInstallPatchesWindows): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMaintenanceConfigurationInstallPatchesWindowsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMaintenanceConfigurationInstallPatchesWindows | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMaintenanceConfigurationInstallPatchesWindows | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // classifications_to_include - computed: true, optional: false, required: false
+  public get classificationsToInclude() {
+    return this.getListAttribute('classifications_to_include');
+  }
+
+  // kb_numbers_to_exclude - computed: true, optional: false, required: false
+  public get kbNumbersToExclude() {
+    return this.getListAttribute('kb_numbers_to_exclude');
+  }
+
+  // kb_numbers_to_include - computed: true, optional: false, required: false
+  public get kbNumbersToInclude() {
+    return this.getListAttribute('kb_numbers_to_include');
+  }
+}
+
+export class DataAzurermMaintenanceConfigurationInstallPatchesWindowsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMaintenanceConfigurationInstallPatchesWindowsOutputReference {
+    return new DataAzurermMaintenanceConfigurationInstallPatchesWindowsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMaintenanceConfigurationInstallPatches {
+}
+
+export function dataAzurermMaintenanceConfigurationInstallPatchesToTerraform(struct?: DataAzurermMaintenanceConfigurationInstallPatches): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMaintenanceConfigurationInstallPatchesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMaintenanceConfigurationInstallPatches | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMaintenanceConfigurationInstallPatches | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // linux - computed: true, optional: false, required: false
+  private _linux = new DataAzurermMaintenanceConfigurationInstallPatchesLinuxList(this, "linux", false);
+  public get linux() {
+    return this._linux;
+  }
+
+  // reboot - computed: true, optional: false, required: false
+  public get reboot() {
+    return this.getStringAttribute('reboot');
+  }
+
+  // windows - computed: true, optional: false, required: false
+  private _windows = new DataAzurermMaintenanceConfigurationInstallPatchesWindowsList(this, "windows", false);
+  public get windows() {
+    return this._windows;
+  }
+}
+
+export class DataAzurermMaintenanceConfigurationInstallPatchesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMaintenanceConfigurationInstallPatchesOutputReference {
+    return new DataAzurermMaintenanceConfigurationInstallPatchesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermMaintenanceConfigurationWindow {
 }
 
@@ -215,7 +439,7 @@ export class DataAzurermMaintenanceConfiguration extends cdktf.TerraformDataSour
       terraformResourceType: 'azurerm_maintenance_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -250,6 +474,17 @@ export class DataAzurermMaintenanceConfiguration extends cdktf.TerraformDataSour
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // in_guest_user_patch_mode - computed: true, optional: false, required: false
+  public get inGuestUserPatchMode() {
+    return this.getStringAttribute('in_guest_user_patch_mode');
+  }
+
+  // install_patches - computed: true, optional: false, required: false
+  private _installPatches = new DataAzurermMaintenanceConfigurationInstallPatchesList(this, "install_patches", false);
+  public get installPatches() {
+    return this._installPatches;
   }
 
   // location - computed: true, optional: false, required: false

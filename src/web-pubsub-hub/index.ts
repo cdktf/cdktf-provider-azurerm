@@ -461,7 +461,7 @@ export class WebPubsubHub extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_web_pubsub_hub',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -543,7 +543,7 @@ export class WebPubsubHub extends cdktf.TerraformResource {
   }
 
   // event_handler - computed: false, optional: true, required: false
-  private _eventHandler = new WebPubsubHubEventHandlerList(this, "event_handler", true);
+  private _eventHandler = new WebPubsubHubEventHandlerList(this, "event_handler", false);
   public get eventHandler() {
     return this._eventHandler;
   }

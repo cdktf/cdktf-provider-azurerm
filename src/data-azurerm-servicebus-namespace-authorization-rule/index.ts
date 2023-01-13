@@ -139,7 +139,7 @@ export class DataAzurermServicebusNamespaceAuthorizationRule extends cdktf.Terra
       terraformResourceType: 'azurerm_servicebus_namespace_authorization_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

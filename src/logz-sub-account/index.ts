@@ -360,7 +360,7 @@ export class LogzSubAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_logz_sub_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

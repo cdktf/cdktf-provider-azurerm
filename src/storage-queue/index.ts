@@ -216,7 +216,7 @@ export class StorageQueue extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_queue',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -281,6 +281,11 @@ export class StorageQueue extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // resource_manager_id - computed: true, optional: false, required: false
+  public get resourceManagerId() {
+    return this.getStringAttribute('resource_manager_id');
   }
 
   // storage_account_name - computed: false, optional: false, required: true

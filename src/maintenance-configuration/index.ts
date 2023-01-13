@@ -15,6 +15,10 @@ export interface MaintenanceConfigurationConfig extends cdktf.TerraformMetaArgum
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#in_guest_user_patch_mode MaintenanceConfiguration#in_guest_user_patch_mode}
+  */
+  readonly inGuestUserPatchMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#location MaintenanceConfiguration#location}
   */
   readonly location: string;
@@ -43,6 +47,12 @@ export interface MaintenanceConfigurationConfig extends cdktf.TerraformMetaArgum
   */
   readonly visibility?: string;
   /**
+  * install_patches block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#install_patches MaintenanceConfiguration#install_patches}
+  */
+  readonly installPatches?: MaintenanceConfigurationInstallPatches;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#timeouts MaintenanceConfiguration#timeouts}
@@ -54,6 +64,431 @@ export interface MaintenanceConfigurationConfig extends cdktf.TerraformMetaArgum
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#window MaintenanceConfiguration#window}
   */
   readonly window?: MaintenanceConfigurationWindow;
+}
+export interface MaintenanceConfigurationInstallPatchesLinux {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#classifications_to_include MaintenanceConfiguration#classifications_to_include}
+  */
+  readonly classificationsToInclude?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#package_names_mask_to_exclude MaintenanceConfiguration#package_names_mask_to_exclude}
+  */
+  readonly packageNamesMaskToExclude?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#package_names_mask_to_include MaintenanceConfiguration#package_names_mask_to_include}
+  */
+  readonly packageNamesMaskToInclude?: string[];
+}
+
+export function maintenanceConfigurationInstallPatchesLinuxToTerraform(struct?: MaintenanceConfigurationInstallPatchesLinux | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    classifications_to_include: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.classificationsToInclude),
+    package_names_mask_to_exclude: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.packageNamesMaskToExclude),
+    package_names_mask_to_include: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.packageNamesMaskToInclude),
+  }
+}
+
+export class MaintenanceConfigurationInstallPatchesLinuxOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MaintenanceConfigurationInstallPatchesLinux | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._classificationsToInclude !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.classificationsToInclude = this._classificationsToInclude;
+    }
+    if (this._packageNamesMaskToExclude !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.packageNamesMaskToExclude = this._packageNamesMaskToExclude;
+    }
+    if (this._packageNamesMaskToInclude !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.packageNamesMaskToInclude = this._packageNamesMaskToInclude;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MaintenanceConfigurationInstallPatchesLinux | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._classificationsToInclude = undefined;
+      this._packageNamesMaskToExclude = undefined;
+      this._packageNamesMaskToInclude = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._classificationsToInclude = value.classificationsToInclude;
+      this._packageNamesMaskToExclude = value.packageNamesMaskToExclude;
+      this._packageNamesMaskToInclude = value.packageNamesMaskToInclude;
+    }
+  }
+
+  // classifications_to_include - computed: false, optional: true, required: false
+  private _classificationsToInclude?: string[]; 
+  public get classificationsToInclude() {
+    return this.getListAttribute('classifications_to_include');
+  }
+  public set classificationsToInclude(value: string[]) {
+    this._classificationsToInclude = value;
+  }
+  public resetClassificationsToInclude() {
+    this._classificationsToInclude = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get classificationsToIncludeInput() {
+    return this._classificationsToInclude;
+  }
+
+  // package_names_mask_to_exclude - computed: false, optional: true, required: false
+  private _packageNamesMaskToExclude?: string[]; 
+  public get packageNamesMaskToExclude() {
+    return this.getListAttribute('package_names_mask_to_exclude');
+  }
+  public set packageNamesMaskToExclude(value: string[]) {
+    this._packageNamesMaskToExclude = value;
+  }
+  public resetPackageNamesMaskToExclude() {
+    this._packageNamesMaskToExclude = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get packageNamesMaskToExcludeInput() {
+    return this._packageNamesMaskToExclude;
+  }
+
+  // package_names_mask_to_include - computed: false, optional: true, required: false
+  private _packageNamesMaskToInclude?: string[]; 
+  public get packageNamesMaskToInclude() {
+    return this.getListAttribute('package_names_mask_to_include');
+  }
+  public set packageNamesMaskToInclude(value: string[]) {
+    this._packageNamesMaskToInclude = value;
+  }
+  public resetPackageNamesMaskToInclude() {
+    this._packageNamesMaskToInclude = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get packageNamesMaskToIncludeInput() {
+    return this._packageNamesMaskToInclude;
+  }
+}
+
+export class MaintenanceConfigurationInstallPatchesLinuxList extends cdktf.ComplexList {
+  public internalValue? : MaintenanceConfigurationInstallPatchesLinux[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MaintenanceConfigurationInstallPatchesLinuxOutputReference {
+    return new MaintenanceConfigurationInstallPatchesLinuxOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MaintenanceConfigurationInstallPatchesWindows {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#classifications_to_include MaintenanceConfiguration#classifications_to_include}
+  */
+  readonly classificationsToInclude?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#kb_numbers_to_exclude MaintenanceConfiguration#kb_numbers_to_exclude}
+  */
+  readonly kbNumbersToExclude?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#kb_numbers_to_include MaintenanceConfiguration#kb_numbers_to_include}
+  */
+  readonly kbNumbersToInclude?: string[];
+}
+
+export function maintenanceConfigurationInstallPatchesWindowsToTerraform(struct?: MaintenanceConfigurationInstallPatchesWindows | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    classifications_to_include: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.classificationsToInclude),
+    kb_numbers_to_exclude: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.kbNumbersToExclude),
+    kb_numbers_to_include: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.kbNumbersToInclude),
+  }
+}
+
+export class MaintenanceConfigurationInstallPatchesWindowsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MaintenanceConfigurationInstallPatchesWindows | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._classificationsToInclude !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.classificationsToInclude = this._classificationsToInclude;
+    }
+    if (this._kbNumbersToExclude !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kbNumbersToExclude = this._kbNumbersToExclude;
+    }
+    if (this._kbNumbersToInclude !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kbNumbersToInclude = this._kbNumbersToInclude;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MaintenanceConfigurationInstallPatchesWindows | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._classificationsToInclude = undefined;
+      this._kbNumbersToExclude = undefined;
+      this._kbNumbersToInclude = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._classificationsToInclude = value.classificationsToInclude;
+      this._kbNumbersToExclude = value.kbNumbersToExclude;
+      this._kbNumbersToInclude = value.kbNumbersToInclude;
+    }
+  }
+
+  // classifications_to_include - computed: false, optional: true, required: false
+  private _classificationsToInclude?: string[]; 
+  public get classificationsToInclude() {
+    return this.getListAttribute('classifications_to_include');
+  }
+  public set classificationsToInclude(value: string[]) {
+    this._classificationsToInclude = value;
+  }
+  public resetClassificationsToInclude() {
+    this._classificationsToInclude = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get classificationsToIncludeInput() {
+    return this._classificationsToInclude;
+  }
+
+  // kb_numbers_to_exclude - computed: false, optional: true, required: false
+  private _kbNumbersToExclude?: string[]; 
+  public get kbNumbersToExclude() {
+    return this.getListAttribute('kb_numbers_to_exclude');
+  }
+  public set kbNumbersToExclude(value: string[]) {
+    this._kbNumbersToExclude = value;
+  }
+  public resetKbNumbersToExclude() {
+    this._kbNumbersToExclude = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kbNumbersToExcludeInput() {
+    return this._kbNumbersToExclude;
+  }
+
+  // kb_numbers_to_include - computed: false, optional: true, required: false
+  private _kbNumbersToInclude?: string[]; 
+  public get kbNumbersToInclude() {
+    return this.getListAttribute('kb_numbers_to_include');
+  }
+  public set kbNumbersToInclude(value: string[]) {
+    this._kbNumbersToInclude = value;
+  }
+  public resetKbNumbersToInclude() {
+    this._kbNumbersToInclude = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kbNumbersToIncludeInput() {
+    return this._kbNumbersToInclude;
+  }
+}
+
+export class MaintenanceConfigurationInstallPatchesWindowsList extends cdktf.ComplexList {
+  public internalValue? : MaintenanceConfigurationInstallPatchesWindows[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MaintenanceConfigurationInstallPatchesWindowsOutputReference {
+    return new MaintenanceConfigurationInstallPatchesWindowsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MaintenanceConfigurationInstallPatches {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#reboot MaintenanceConfiguration#reboot}
+  */
+  readonly reboot?: string;
+  /**
+  * linux block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#linux MaintenanceConfiguration#linux}
+  */
+  readonly linux?: MaintenanceConfigurationInstallPatchesLinux[] | cdktf.IResolvable;
+  /**
+  * windows block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#windows MaintenanceConfiguration#windows}
+  */
+  readonly windows?: MaintenanceConfigurationInstallPatchesWindows[] | cdktf.IResolvable;
+}
+
+export function maintenanceConfigurationInstallPatchesToTerraform(struct?: MaintenanceConfigurationInstallPatchesOutputReference | MaintenanceConfigurationInstallPatches): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    reboot: cdktf.stringToTerraform(struct!.reboot),
+    linux: cdktf.listMapper(maintenanceConfigurationInstallPatchesLinuxToTerraform, true)(struct!.linux),
+    windows: cdktf.listMapper(maintenanceConfigurationInstallPatchesWindowsToTerraform, true)(struct!.windows),
+  }
+}
+
+export class MaintenanceConfigurationInstallPatchesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MaintenanceConfigurationInstallPatches | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._reboot !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.reboot = this._reboot;
+    }
+    if (this._linux?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.linux = this._linux?.internalValue;
+    }
+    if (this._windows?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.windows = this._windows?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MaintenanceConfigurationInstallPatches | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._reboot = undefined;
+      this._linux.internalValue = undefined;
+      this._windows.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._reboot = value.reboot;
+      this._linux.internalValue = value.linux;
+      this._windows.internalValue = value.windows;
+    }
+  }
+
+  // reboot - computed: false, optional: true, required: false
+  private _reboot?: string; 
+  public get reboot() {
+    return this.getStringAttribute('reboot');
+  }
+  public set reboot(value: string) {
+    this._reboot = value;
+  }
+  public resetReboot() {
+    this._reboot = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rebootInput() {
+    return this._reboot;
+  }
+
+  // linux - computed: false, optional: true, required: false
+  private _linux = new MaintenanceConfigurationInstallPatchesLinuxList(this, "linux", false);
+  public get linux() {
+    return this._linux;
+  }
+  public putLinux(value: MaintenanceConfigurationInstallPatchesLinux[] | cdktf.IResolvable) {
+    this._linux.internalValue = value;
+  }
+  public resetLinux() {
+    this._linux.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linuxInput() {
+    return this._linux.internalValue;
+  }
+
+  // windows - computed: false, optional: true, required: false
+  private _windows = new MaintenanceConfigurationInstallPatchesWindowsList(this, "windows", false);
+  public get windows() {
+    return this._windows;
+  }
+  public putWindows(value: MaintenanceConfigurationInstallPatchesWindows[] | cdktf.IResolvable) {
+    this._windows.internalValue = value;
+  }
+  public resetWindows() {
+    this._windows.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get windowsInput() {
+    return this._windows.internalValue;
+  }
 }
 export interface MaintenanceConfigurationTimeouts {
   /**
@@ -405,7 +840,7 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_maintenance_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -417,6 +852,7 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._id = config.id;
+    this._inGuestUserPatchMode = config.inGuestUserPatchMode;
     this._location = config.location;
     this._name = config.name;
     this._properties = config.properties;
@@ -424,6 +860,7 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
     this._scope = config.scope;
     this._tags = config.tags;
     this._visibility = config.visibility;
+    this._installPatches.internalValue = config.installPatches;
     this._timeouts.internalValue = config.timeouts;
     this._window.internalValue = config.window;
   }
@@ -446,6 +883,22 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // in_guest_user_patch_mode - computed: false, optional: true, required: false
+  private _inGuestUserPatchMode?: string; 
+  public get inGuestUserPatchMode() {
+    return this.getStringAttribute('in_guest_user_patch_mode');
+  }
+  public set inGuestUserPatchMode(value: string) {
+    this._inGuestUserPatchMode = value;
+  }
+  public resetInGuestUserPatchMode() {
+    this._inGuestUserPatchMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inGuestUserPatchModeInput() {
+    return this._inGuestUserPatchMode;
   }
 
   // location - computed: false, optional: false, required: true
@@ -548,6 +1001,22 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
     return this._visibility;
   }
 
+  // install_patches - computed: false, optional: true, required: false
+  private _installPatches = new MaintenanceConfigurationInstallPatchesOutputReference(this, "install_patches");
+  public get installPatches() {
+    return this._installPatches;
+  }
+  public putInstallPatches(value: MaintenanceConfigurationInstallPatches) {
+    this._installPatches.internalValue = value;
+  }
+  public resetInstallPatches() {
+    this._installPatches.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get installPatchesInput() {
+    return this._installPatches.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new MaintenanceConfigurationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -587,6 +1056,7 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
+      in_guest_user_patch_mode: cdktf.stringToTerraform(this._inGuestUserPatchMode),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._properties),
@@ -594,6 +1064,7 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
       scope: cdktf.stringToTerraform(this._scope),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       visibility: cdktf.stringToTerraform(this._visibility),
+      install_patches: maintenanceConfigurationInstallPatchesToTerraform(this._installPatches.internalValue),
       timeouts: maintenanceConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
       window: maintenanceConfigurationWindowToTerraform(this._window.internalValue),
     };

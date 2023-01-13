@@ -133,6 +133,12 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly aciConnectorLinux?: KubernetesClusterAciConnectorLinux;
   /**
+  * api_server_access_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#api_server_access_profile KubernetesCluster#api_server_access_profile}
+  */
+  readonly apiServerAccessProfile?: KubernetesClusterApiServerAccessProfile;
+  /**
   * auto_scaler_profile block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#auto_scaler_profile KubernetesCluster#auto_scaler_profile}
@@ -491,6 +497,125 @@ export class KubernetesClusterAciConnectorLinuxOutputReference extends cdktf.Com
   // Temporarily expose input value. Use with caution.
   public get subnetNameInput() {
     return this._subnetName;
+  }
+}
+export interface KubernetesClusterApiServerAccessProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#authorized_ip_ranges KubernetesCluster#authorized_ip_ranges}
+  */
+  readonly authorizedIpRanges?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#subnet_id KubernetesCluster#subnet_id}
+  */
+  readonly subnetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#vnet_integration_enabled KubernetesCluster#vnet_integration_enabled}
+  */
+  readonly vnetIntegrationEnabled?: boolean | cdktf.IResolvable;
+}
+
+export function kubernetesClusterApiServerAccessProfileToTerraform(struct?: KubernetesClusterApiServerAccessProfileOutputReference | KubernetesClusterApiServerAccessProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    authorized_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.authorizedIpRanges),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    vnet_integration_enabled: cdktf.booleanToTerraform(struct!.vnetIntegrationEnabled),
+  }
+}
+
+export class KubernetesClusterApiServerAccessProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KubernetesClusterApiServerAccessProfile | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._authorizedIpRanges !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authorizedIpRanges = this._authorizedIpRanges;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    if (this._vnetIntegrationEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.vnetIntegrationEnabled = this._vnetIntegrationEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterApiServerAccessProfile | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._authorizedIpRanges = undefined;
+      this._subnetId = undefined;
+      this._vnetIntegrationEnabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._authorizedIpRanges = value.authorizedIpRanges;
+      this._subnetId = value.subnetId;
+      this._vnetIntegrationEnabled = value.vnetIntegrationEnabled;
+    }
+  }
+
+  // authorized_ip_ranges - computed: true, optional: true, required: false
+  private _authorizedIpRanges?: string[]; 
+  public get authorizedIpRanges() {
+    return cdktf.Fn.tolist(this.getListAttribute('authorized_ip_ranges'));
+  }
+  public set authorizedIpRanges(value: string[]) {
+    this._authorizedIpRanges = value;
+  }
+  public resetAuthorizedIpRanges() {
+    this._authorizedIpRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authorizedIpRangesInput() {
+    return this._authorizedIpRanges;
+  }
+
+  // subnet_id - computed: false, optional: true, required: false
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+
+  // vnet_integration_enabled - computed: false, optional: true, required: false
+  private _vnetIntegrationEnabled?: boolean | cdktf.IResolvable; 
+  public get vnetIntegrationEnabled() {
+    return this.getBooleanAttribute('vnet_integration_enabled');
+  }
+  public set vnetIntegrationEnabled(value: boolean | cdktf.IResolvable) {
+    this._vnetIntegrationEnabled = value;
+  }
+  public resetVnetIntegrationEnabled() {
+    this._vnetIntegrationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vnetIntegrationEnabledInput() {
+    return this._vnetIntegrationEnabled;
   }
 }
 export interface KubernetesClusterAutoScalerProfile {
@@ -6657,7 +6782,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -6698,6 +6823,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._workloadIdentityEnabled = config.workloadIdentityEnabled;
     this._aciConnectorLinux.internalValue = config.aciConnectorLinux;
+    this._apiServerAccessProfile.internalValue = config.apiServerAccessProfile;
     this._autoScalerProfile.internalValue = config.autoScalerProfile;
     this._azureActiveDirectoryRoleBasedAccessControl.internalValue = config.azureActiveDirectoryRoleBasedAccessControl;
     this._defaultNodePool.internalValue = config.defaultNodePool;
@@ -6724,7 +6850,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // api_server_authorized_ip_ranges - computed: false, optional: true, required: false
+  // api_server_authorized_ip_ranges - computed: true, optional: true, required: false
   private _apiServerAuthorizedIpRanges?: string[]; 
   public get apiServerAuthorizedIpRanges() {
     return cdktf.Fn.tolist(this.getListAttribute('api_server_authorized_ip_ranges'));
@@ -7242,6 +7368,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._aciConnectorLinux.internalValue;
   }
 
+  // api_server_access_profile - computed: false, optional: true, required: false
+  private _apiServerAccessProfile = new KubernetesClusterApiServerAccessProfileOutputReference(this, "api_server_access_profile");
+  public get apiServerAccessProfile() {
+    return this._apiServerAccessProfile;
+  }
+  public putApiServerAccessProfile(value: KubernetesClusterApiServerAccessProfile) {
+    this._apiServerAccessProfile.internalValue = value;
+  }
+  public resetApiServerAccessProfile() {
+    this._apiServerAccessProfile.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiServerAccessProfileInput() {
+    return this._apiServerAccessProfile.internalValue;
+  }
+
   // auto_scaler_profile - computed: false, optional: true, required: false
   private _autoScalerProfile = new KubernetesClusterAutoScalerProfileOutputReference(this, "auto_scaler_profile");
   public get autoScalerProfile() {
@@ -7595,6 +7737,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       workload_identity_enabled: cdktf.booleanToTerraform(this._workloadIdentityEnabled),
       aci_connector_linux: kubernetesClusterAciConnectorLinuxToTerraform(this._aciConnectorLinux.internalValue),
+      api_server_access_profile: kubernetesClusterApiServerAccessProfileToTerraform(this._apiServerAccessProfile.internalValue),
       auto_scaler_profile: kubernetesClusterAutoScalerProfileToTerraform(this._autoScalerProfile.internalValue),
       azure_active_directory_role_based_access_control: kubernetesClusterAzureActiveDirectoryRoleBasedAccessControlToTerraform(this._azureActiveDirectoryRoleBasedAccessControl.internalValue),
       default_node_pool: kubernetesClusterDefaultNodePoolToTerraform(this._defaultNodePool.internalValue),

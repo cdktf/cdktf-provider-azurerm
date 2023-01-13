@@ -232,7 +232,7 @@ export class LogAnalyticsStorageInsights extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_log_analytics_storage_insights',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

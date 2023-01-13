@@ -316,7 +316,7 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformReso
       terraformResourceType: 'azurerm_data_factory_integration_runtime_self_hosted',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

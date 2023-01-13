@@ -3129,13 +3129,13 @@ export class WindowsFunctionAppSlotSiteConfigAppServiceLogsOutputReference exten
 }
 export interface WindowsFunctionAppSlotSiteConfigApplicationStack {
   /**
-  * The version of .Net. Possible values are `3.1` `6` and `7`
+  * The version of .Net. Possible values are `v3.0`, `v4.0`, `v6.0` and `v7.0`
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#dotnet_version WindowsFunctionAppSlot#dotnet_version}
   */
   readonly dotnetVersion?: string;
   /**
-  * The version of Java to use. Possible values are `8`, and `11`
+  * The version of Java to use. Possible values are `1.8`, `11` and `17`
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#java_version WindowsFunctionAppSlot#java_version}
   */
@@ -3307,7 +3307,7 @@ export class WindowsFunctionAppSlotSiteConfigApplicationStackOutputReference ext
     return this._powershellCoreVersion;
   }
 
-  // use_custom_runtime - computed: false, optional: true, required: false
+  // use_custom_runtime - computed: true, optional: true, required: false
   private _useCustomRuntime?: boolean | cdktf.IResolvable; 
   public get useCustomRuntime() {
     return this.getBooleanAttribute('use_custom_runtime');
@@ -3323,7 +3323,7 @@ export class WindowsFunctionAppSlotSiteConfigApplicationStackOutputReference ext
     return this._useCustomRuntime;
   }
 
-  // use_dotnet_isolated_runtime - computed: false, optional: true, required: false
+  // use_dotnet_isolated_runtime - computed: true, optional: true, required: false
   private _useDotnetIsolatedRuntime?: boolean | cdktf.IResolvable; 
   public get useDotnetIsolatedRuntime() {
     return this.getBooleanAttribute('use_dotnet_isolated_runtime');
@@ -4807,7 +4807,7 @@ export class WindowsFunctionAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_function_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -131,7 +131,7 @@ export class DataAzurermManagedApplicationDefinition extends cdktf.TerraformData
       terraformResourceType: 'azurerm_managed_application_definition',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

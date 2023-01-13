@@ -1592,7 +1592,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cosmosdb_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1695,7 +1695,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     return this._createMode;
   }
 
-  // default_identity_type - computed: false, optional: true, required: false
+  // default_identity_type - computed: true, optional: true, required: false
   private _defaultIdentityType?: string; 
   public get defaultIdentityType() {
     return this.getStringAttribute('default_identity_type');

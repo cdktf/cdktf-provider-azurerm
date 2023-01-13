@@ -224,7 +224,7 @@ export class MonitorDataCollectionRuleAssociation extends cdktf.TerraformResourc
       terraformResourceType: 'azurerm_monitor_data_collection_rule_association',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

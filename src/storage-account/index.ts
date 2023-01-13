@@ -28,6 +28,10 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly allowNestedItemsToBePublic?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#allowed_copy_scope StorageAccount#allowed_copy_scope}
+  */
+  readonly allowedCopyScope?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#cross_tenant_replication_enabled StorageAccount#cross_tenant_replication_enabled}
   */
   readonly crossTenantReplicationEnabled?: boolean | cdktf.IResolvable;
@@ -3627,7 +3631,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -3643,6 +3647,7 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._accountReplicationType = config.accountReplicationType;
     this._accountTier = config.accountTier;
     this._allowNestedItemsToBePublic = config.allowNestedItemsToBePublic;
+    this._allowedCopyScope = config.allowedCopyScope;
     this._crossTenantReplicationEnabled = config.crossTenantReplicationEnabled;
     this._defaultToOauthAuthentication = config.defaultToOauthAuthentication;
     this._edgeZone = config.edgeZone;
@@ -3753,6 +3758,22 @@ export class StorageAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get allowNestedItemsToBePublicInput() {
     return this._allowNestedItemsToBePublic;
+  }
+
+  // allowed_copy_scope - computed: false, optional: true, required: false
+  private _allowedCopyScope?: string; 
+  public get allowedCopyScope() {
+    return this.getStringAttribute('allowed_copy_scope');
+  }
+  public set allowedCopyScope(value: string) {
+    this._allowedCopyScope = value;
+  }
+  public resetAllowedCopyScope() {
+    this._allowedCopyScope = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedCopyScopeInput() {
+    return this._allowedCopyScope;
   }
 
   // cross_tenant_replication_enabled - computed: false, optional: true, required: false
@@ -4429,6 +4450,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       account_replication_type: cdktf.stringToTerraform(this._accountReplicationType),
       account_tier: cdktf.stringToTerraform(this._accountTier),
       allow_nested_items_to_be_public: cdktf.booleanToTerraform(this._allowNestedItemsToBePublic),
+      allowed_copy_scope: cdktf.stringToTerraform(this._allowedCopyScope),
       cross_tenant_replication_enabled: cdktf.booleanToTerraform(this._crossTenantReplicationEnabled),
       default_to_oauth_authentication: cdktf.booleanToTerraform(this._defaultToOauthAuthentication),
       edge_zone: cdktf.stringToTerraform(this._edgeZone),
