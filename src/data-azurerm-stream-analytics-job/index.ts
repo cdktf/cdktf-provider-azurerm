@@ -205,7 +205,7 @@ export class DataAzurermStreamAnalyticsJob extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_stream_analytics_job',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -3637,6 +3637,12 @@ export interface WindowsWebAppSiteConfigApplicationStack {
   */
   readonly dockerContainerTag?: string;
   /**
+  * The version of DotNetCore to use.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#dotnet_core_version WindowsWebApp#dotnet_core_version}
+  */
+  readonly dotnetCoreVersion?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#dotnet_version WindowsWebApp#dotnet_version}
   */
   readonly dotnetVersion?: string;
@@ -3648,6 +3654,12 @@ export interface WindowsWebAppSiteConfigApplicationStack {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#java_container_version WindowsWebApp#java_container_version}
   */
   readonly javaContainerVersion?: string;
+  /**
+  * Should the application use the embedded web server for the version of Java in use.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#java_embedded_server_enabled WindowsWebApp#java_embedded_server_enabled}
+  */
+  readonly javaEmbeddedServerEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#java_version WindowsWebApp#java_version}
   */
@@ -3661,9 +3673,17 @@ export interface WindowsWebAppSiteConfigApplicationStack {
   */
   readonly phpVersion?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#python WindowsWebApp#python}
+  */
+  readonly python?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#python_version WindowsWebApp#python_version}
   */
   readonly pythonVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#tomcat_version WindowsWebApp#tomcat_version}
+  */
+  readonly tomcatVersion?: string;
 }
 
 export function windowsWebAppSiteConfigApplicationStackToTerraform(struct?: WindowsWebAppSiteConfigApplicationStackOutputReference | WindowsWebAppSiteConfigApplicationStack): any {
@@ -3676,13 +3696,17 @@ export function windowsWebAppSiteConfigApplicationStackToTerraform(struct?: Wind
     docker_container_name: cdktf.stringToTerraform(struct!.dockerContainerName),
     docker_container_registry: cdktf.stringToTerraform(struct!.dockerContainerRegistry),
     docker_container_tag: cdktf.stringToTerraform(struct!.dockerContainerTag),
+    dotnet_core_version: cdktf.stringToTerraform(struct!.dotnetCoreVersion),
     dotnet_version: cdktf.stringToTerraform(struct!.dotnetVersion),
     java_container: cdktf.stringToTerraform(struct!.javaContainer),
     java_container_version: cdktf.stringToTerraform(struct!.javaContainerVersion),
+    java_embedded_server_enabled: cdktf.booleanToTerraform(struct!.javaEmbeddedServerEnabled),
     java_version: cdktf.stringToTerraform(struct!.javaVersion),
     node_version: cdktf.stringToTerraform(struct!.nodeVersion),
     php_version: cdktf.stringToTerraform(struct!.phpVersion),
+    python: cdktf.booleanToTerraform(struct!.python),
     python_version: cdktf.stringToTerraform(struct!.pythonVersion),
+    tomcat_version: cdktf.stringToTerraform(struct!.tomcatVersion),
   }
 }
 
@@ -3716,6 +3740,10 @@ export class WindowsWebAppSiteConfigApplicationStackOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.dockerContainerTag = this._dockerContainerTag;
     }
+    if (this._dotnetCoreVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dotnetCoreVersion = this._dotnetCoreVersion;
+    }
     if (this._dotnetVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.dotnetVersion = this._dotnetVersion;
@@ -3727,6 +3755,10 @@ export class WindowsWebAppSiteConfigApplicationStackOutputReference extends cdkt
     if (this._javaContainerVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.javaContainerVersion = this._javaContainerVersion;
+    }
+    if (this._javaEmbeddedServerEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.javaEmbeddedServerEnabled = this._javaEmbeddedServerEnabled;
     }
     if (this._javaVersion !== undefined) {
       hasAnyValues = true;
@@ -3740,9 +3772,17 @@ export class WindowsWebAppSiteConfigApplicationStackOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.phpVersion = this._phpVersion;
     }
+    if (this._python !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.python = this._python;
+    }
     if (this._pythonVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.pythonVersion = this._pythonVersion;
+    }
+    if (this._tomcatVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tomcatVersion = this._tomcatVersion;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -3754,13 +3794,17 @@ export class WindowsWebAppSiteConfigApplicationStackOutputReference extends cdkt
       this._dockerContainerName = undefined;
       this._dockerContainerRegistry = undefined;
       this._dockerContainerTag = undefined;
+      this._dotnetCoreVersion = undefined;
       this._dotnetVersion = undefined;
       this._javaContainer = undefined;
       this._javaContainerVersion = undefined;
+      this._javaEmbeddedServerEnabled = undefined;
       this._javaVersion = undefined;
       this._nodeVersion = undefined;
       this._phpVersion = undefined;
+      this._python = undefined;
       this._pythonVersion = undefined;
+      this._tomcatVersion = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -3768,17 +3812,21 @@ export class WindowsWebAppSiteConfigApplicationStackOutputReference extends cdkt
       this._dockerContainerName = value.dockerContainerName;
       this._dockerContainerRegistry = value.dockerContainerRegistry;
       this._dockerContainerTag = value.dockerContainerTag;
+      this._dotnetCoreVersion = value.dotnetCoreVersion;
       this._dotnetVersion = value.dotnetVersion;
       this._javaContainer = value.javaContainer;
       this._javaContainerVersion = value.javaContainerVersion;
+      this._javaEmbeddedServerEnabled = value.javaEmbeddedServerEnabled;
       this._javaVersion = value.javaVersion;
       this._nodeVersion = value.nodeVersion;
       this._phpVersion = value.phpVersion;
+      this._python = value.python;
       this._pythonVersion = value.pythonVersion;
+      this._tomcatVersion = value.tomcatVersion;
     }
   }
 
-  // current_stack - computed: false, optional: true, required: false
+  // current_stack - computed: true, optional: true, required: false
   private _currentStack?: string; 
   public get currentStack() {
     return this.getStringAttribute('current_stack');
@@ -3842,7 +3890,23 @@ export class WindowsWebAppSiteConfigApplicationStackOutputReference extends cdkt
     return this._dockerContainerTag;
   }
 
-  // dotnet_version - computed: false, optional: true, required: false
+  // dotnet_core_version - computed: false, optional: true, required: false
+  private _dotnetCoreVersion?: string; 
+  public get dotnetCoreVersion() {
+    return this.getStringAttribute('dotnet_core_version');
+  }
+  public set dotnetCoreVersion(value: string) {
+    this._dotnetCoreVersion = value;
+  }
+  public resetDotnetCoreVersion() {
+    this._dotnetCoreVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dotnetCoreVersionInput() {
+    return this._dotnetCoreVersion;
+  }
+
+  // dotnet_version - computed: true, optional: true, required: false
   private _dotnetVersion?: string; 
   public get dotnetVersion() {
     return this.getStringAttribute('dotnet_version');
@@ -3890,6 +3954,22 @@ export class WindowsWebAppSiteConfigApplicationStackOutputReference extends cdkt
     return this._javaContainerVersion;
   }
 
+  // java_embedded_server_enabled - computed: true, optional: true, required: false
+  private _javaEmbeddedServerEnabled?: boolean | cdktf.IResolvable; 
+  public get javaEmbeddedServerEnabled() {
+    return this.getBooleanAttribute('java_embedded_server_enabled');
+  }
+  public set javaEmbeddedServerEnabled(value: boolean | cdktf.IResolvable) {
+    this._javaEmbeddedServerEnabled = value;
+  }
+  public resetJavaEmbeddedServerEnabled() {
+    this._javaEmbeddedServerEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get javaEmbeddedServerEnabledInput() {
+    return this._javaEmbeddedServerEnabled;
+  }
+
   // java_version - computed: false, optional: true, required: false
   private _javaVersion?: string; 
   public get javaVersion() {
@@ -3922,7 +4002,7 @@ export class WindowsWebAppSiteConfigApplicationStackOutputReference extends cdkt
     return this._nodeVersion;
   }
 
-  // php_version - computed: false, optional: true, required: false
+  // php_version - computed: true, optional: true, required: false
   private _phpVersion?: string; 
   public get phpVersion() {
     return this.getStringAttribute('php_version');
@@ -3938,7 +4018,23 @@ export class WindowsWebAppSiteConfigApplicationStackOutputReference extends cdkt
     return this._phpVersion;
   }
 
-  // python_version - computed: false, optional: true, required: false
+  // python - computed: false, optional: true, required: false
+  private _python?: boolean | cdktf.IResolvable; 
+  public get python() {
+    return this.getBooleanAttribute('python');
+  }
+  public set python(value: boolean | cdktf.IResolvable) {
+    this._python = value;
+  }
+  public resetPython() {
+    this._python = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pythonInput() {
+    return this._python;
+  }
+
+  // python_version - computed: true, optional: true, required: false
   private _pythonVersion?: string; 
   public get pythonVersion() {
     return this.getStringAttribute('python_version');
@@ -3952,6 +4048,22 @@ export class WindowsWebAppSiteConfigApplicationStackOutputReference extends cdkt
   // Temporarily expose input value. Use with caution.
   public get pythonVersionInput() {
     return this._pythonVersion;
+  }
+
+  // tomcat_version - computed: false, optional: true, required: false
+  private _tomcatVersion?: string; 
+  public get tomcatVersion() {
+    return this.getStringAttribute('tomcat_version');
+  }
+  public set tomcatVersion(value: string) {
+    this._tomcatVersion = value;
+  }
+  public resetTomcatVersion() {
+    this._tomcatVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tomcatVersionInput() {
+    return this._tomcatVersion;
   }
 }
 export interface WindowsWebAppSiteConfigAutoHealSettingActionCustomAction {
@@ -6609,7 +6721,7 @@ export class WindowsWebApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_web_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

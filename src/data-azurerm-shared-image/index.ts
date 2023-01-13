@@ -107,6 +107,80 @@ export class DataAzurermSharedImageIdentifierList extends cdktf.ComplexList {
     return new DataAzurermSharedImageIdentifierOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataAzurermSharedImagePurchasePlan {
+}
+
+export function dataAzurermSharedImagePurchasePlanToTerraform(struct?: DataAzurermSharedImagePurchasePlan): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSharedImagePurchasePlanOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSharedImagePurchasePlan | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSharedImagePurchasePlan | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // product - computed: true, optional: false, required: false
+  public get product() {
+    return this.getStringAttribute('product');
+  }
+
+  // publisher - computed: true, optional: false, required: false
+  public get publisher() {
+    return this.getStringAttribute('publisher');
+  }
+}
+
+export class DataAzurermSharedImagePurchasePlanList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSharedImagePurchasePlanOutputReference {
+    return new DataAzurermSharedImagePurchasePlanOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermSharedImageTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image#read DataAzurermSharedImage#read}
@@ -209,7 +283,7 @@ export class DataAzurermSharedImage extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_shared_image',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -312,6 +386,12 @@ export class DataAzurermSharedImage extends cdktf.TerraformDataSource {
   // privacy_statement_uri - computed: true, optional: false, required: false
   public get privacyStatementUri() {
     return this.getStringAttribute('privacy_statement_uri');
+  }
+
+  // purchase_plan - computed: true, optional: false, required: false
+  private _purchasePlan = new DataAzurermSharedImagePurchasePlanList(this, "purchase_plan", false);
+  public get purchasePlan() {
+    return this._purchasePlan;
   }
 
   // release_note_uri - computed: true, optional: false, required: false

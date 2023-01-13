@@ -1450,6 +1450,11 @@ export class DataAzurermLinuxWebAppSiteConfigApplicationStackOutputReference ext
     return this.getStringAttribute('dotnet_version');
   }
 
+  // go_version - computed: true, optional: false, required: false
+  public get goVersion() {
+    return this.getStringAttribute('go_version');
+  }
+
   // java_server - computed: true, optional: false, required: false
   public get javaServer() {
     return this.getStringAttribute('java_server');
@@ -2928,7 +2933,7 @@ export class DataAzurermLinuxWebApp extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_linux_web_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

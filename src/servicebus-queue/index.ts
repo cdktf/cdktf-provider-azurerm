@@ -276,7 +276,7 @@ export class ServicebusQueue extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_servicebus_queue',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

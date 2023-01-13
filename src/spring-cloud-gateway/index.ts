@@ -8,6 +8,14 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway#application_performance_monitoring_types SpringCloudGateway#application_performance_monitoring_types}
+  */
+  readonly applicationPerformanceMonitoringTypes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway#environment_variables SpringCloudGateway#environment_variables}
+  */
+  readonly environmentVariables?: { [key: string]: string };
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway#https_only SpringCloudGateway#https_only}
   */
   readonly httpsOnly?: boolean | cdktf.IResolvable;
@@ -30,6 +38,10 @@ export interface SpringCloudGatewayConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway#public_network_access_enabled SpringCloudGateway#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway#sensitive_environment_variables SpringCloudGateway#sensitive_environment_variables}
+  */
+  readonly sensitiveEnvironmentVariables?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway#spring_cloud_service_id SpringCloudGateway#spring_cloud_service_id}
   */
@@ -859,7 +871,7 @@ export class SpringCloudGateway extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -870,11 +882,14 @@ export class SpringCloudGateway extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._applicationPerformanceMonitoringTypes = config.applicationPerformanceMonitoringTypes;
+    this._environmentVariables = config.environmentVariables;
     this._httpsOnly = config.httpsOnly;
     this._id = config.id;
     this._instanceCount = config.instanceCount;
     this._name = config.name;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
+    this._sensitiveEnvironmentVariables = config.sensitiveEnvironmentVariables;
     this._springCloudServiceId = config.springCloudServiceId;
     this._apiMetadata.internalValue = config.apiMetadata;
     this._cors.internalValue = config.cors;
@@ -886,6 +901,38 @@ export class SpringCloudGateway extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // application_performance_monitoring_types - computed: false, optional: true, required: false
+  private _applicationPerformanceMonitoringTypes?: string[]; 
+  public get applicationPerformanceMonitoringTypes() {
+    return this.getListAttribute('application_performance_monitoring_types');
+  }
+  public set applicationPerformanceMonitoringTypes(value: string[]) {
+    this._applicationPerformanceMonitoringTypes = value;
+  }
+  public resetApplicationPerformanceMonitoringTypes() {
+    this._applicationPerformanceMonitoringTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applicationPerformanceMonitoringTypesInput() {
+    return this._applicationPerformanceMonitoringTypes;
+  }
+
+  // environment_variables - computed: false, optional: true, required: false
+  private _environmentVariables?: { [key: string]: string }; 
+  public get environmentVariables() {
+    return this.getStringMapAttribute('environment_variables');
+  }
+  public set environmentVariables(value: { [key: string]: string }) {
+    this._environmentVariables = value;
+  }
+  public resetEnvironmentVariables() {
+    this._environmentVariables = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get environmentVariablesInput() {
+    return this._environmentVariables;
+  }
 
   // https_only - computed: false, optional: true, required: false
   private _httpsOnly?: boolean | cdktf.IResolvable; 
@@ -962,6 +1009,22 @@ export class SpringCloudGateway extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get publicNetworkAccessEnabledInput() {
     return this._publicNetworkAccessEnabled;
+  }
+
+  // sensitive_environment_variables - computed: false, optional: true, required: false
+  private _sensitiveEnvironmentVariables?: { [key: string]: string }; 
+  public get sensitiveEnvironmentVariables() {
+    return this.getStringMapAttribute('sensitive_environment_variables');
+  }
+  public set sensitiveEnvironmentVariables(value: { [key: string]: string }) {
+    this._sensitiveEnvironmentVariables = value;
+  }
+  public resetSensitiveEnvironmentVariables() {
+    this._sensitiveEnvironmentVariables = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sensitiveEnvironmentVariablesInput() {
+    return this._sensitiveEnvironmentVariables;
   }
 
   // spring_cloud_service_id - computed: false, optional: false, required: true
@@ -1068,11 +1131,14 @@ export class SpringCloudGateway extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      application_performance_monitoring_types: cdktf.listMapper(cdktf.stringToTerraform, false)(this._applicationPerformanceMonitoringTypes),
+      environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._environmentVariables),
       https_only: cdktf.booleanToTerraform(this._httpsOnly),
       id: cdktf.stringToTerraform(this._id),
       instance_count: cdktf.numberToTerraform(this._instanceCount),
       name: cdktf.stringToTerraform(this._name),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
+      sensitive_environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._sensitiveEnvironmentVariables),
       spring_cloud_service_id: cdktf.stringToTerraform(this._springCloudServiceId),
       api_metadata: springCloudGatewayApiMetadataToTerraform(this._apiMetadata.internalValue),
       cors: springCloudGatewayCorsToTerraform(this._cors.internalValue),

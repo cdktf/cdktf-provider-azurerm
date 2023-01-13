@@ -714,6 +714,10 @@ export class SiteRecoveryReplicatedVmManagedDiskList extends cdktf.ComplexList {
 }
 export interface SiteRecoveryReplicatedVmNetworkInterface {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#is_primary SiteRecoveryReplicatedVm#is_primary}
+  */
+  readonly isPrimary?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#recovery_public_ip_address_id SiteRecoveryReplicatedVm#recovery_public_ip_address_id}
   */
   readonly recoveryPublicIpAddressId?: string;
@@ -737,6 +741,7 @@ export function siteRecoveryReplicatedVmNetworkInterfaceToTerraform(struct?: Sit
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    is_primary: cdktf.booleanToTerraform(struct!.isPrimary),
     recovery_public_ip_address_id: cdktf.stringToTerraform(struct!.recoveryPublicIpAddressId),
     source_network_interface_id: struct!.sourceNetworkInterfaceId === undefined ? null : cdktf.stringToTerraform(struct!.sourceNetworkInterfaceId),
     target_static_ip: struct!.targetStaticIp === undefined ? null : cdktf.stringToTerraform(struct!.targetStaticIp),
@@ -764,6 +769,10 @@ export class SiteRecoveryReplicatedVmNetworkInterfaceOutputReference extends cdk
     }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._isPrimary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.isPrimary = this._isPrimary;
+    }
     if (this._recoveryPublicIpAddressId !== undefined) {
       hasAnyValues = true;
       internalValueResult.recoveryPublicIpAddressId = this._recoveryPublicIpAddressId;
@@ -787,6 +796,7 @@ export class SiteRecoveryReplicatedVmNetworkInterfaceOutputReference extends cdk
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
+      this._isPrimary = undefined;
       this._recoveryPublicIpAddressId = undefined;
       this._sourceNetworkInterfaceId = undefined;
       this._targetStaticIp = undefined;
@@ -799,11 +809,28 @@ export class SiteRecoveryReplicatedVmNetworkInterfaceOutputReference extends cdk
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
+      this._isPrimary = value.isPrimary;
       this._recoveryPublicIpAddressId = value.recoveryPublicIpAddressId;
       this._sourceNetworkInterfaceId = value.sourceNetworkInterfaceId;
       this._targetStaticIp = value.targetStaticIp;
       this._targetSubnetName = value.targetSubnetName;
     }
+  }
+
+  // is_primary - computed: true, optional: true, required: false
+  private _isPrimary?: boolean | cdktf.IResolvable; 
+  public get isPrimary() {
+    return this.getBooleanAttribute('is_primary');
+  }
+  public set isPrimary(value: boolean | cdktf.IResolvable) {
+    this._isPrimary = value;
+  }
+  public resetIsPrimary() {
+    this._isPrimary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isPrimaryInput() {
+    return this._isPrimary;
   }
 
   // recovery_public_ip_address_id - computed: true, optional: true, required: false
@@ -1073,7 +1100,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_site_recovery_replicated_vm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

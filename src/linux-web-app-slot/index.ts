@@ -3619,6 +3619,10 @@ export interface LinuxWebAppSlotSiteConfigApplicationStack {
   */
   readonly dotnetVersion?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#go_version LinuxWebAppSlot#go_version}
+  */
+  readonly goVersion?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#java_server LinuxWebAppSlot#java_server}
   */
   readonly javaServer?: string;
@@ -3657,6 +3661,7 @@ export function linuxWebAppSlotSiteConfigApplicationStackToTerraform(struct?: Li
     docker_image: cdktf.stringToTerraform(struct!.dockerImage),
     docker_image_tag: cdktf.stringToTerraform(struct!.dockerImageTag),
     dotnet_version: cdktf.stringToTerraform(struct!.dotnetVersion),
+    go_version: cdktf.stringToTerraform(struct!.goVersion),
     java_server: cdktf.stringToTerraform(struct!.javaServer),
     java_server_version: cdktf.stringToTerraform(struct!.javaServerVersion),
     java_version: cdktf.stringToTerraform(struct!.javaVersion),
@@ -3692,6 +3697,10 @@ export class LinuxWebAppSlotSiteConfigApplicationStackOutputReference extends cd
     if (this._dotnetVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.dotnetVersion = this._dotnetVersion;
+    }
+    if (this._goVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.goVersion = this._goVersion;
     }
     if (this._javaServer !== undefined) {
       hasAnyValues = true;
@@ -3730,6 +3739,7 @@ export class LinuxWebAppSlotSiteConfigApplicationStackOutputReference extends cd
       this._dockerImage = undefined;
       this._dockerImageTag = undefined;
       this._dotnetVersion = undefined;
+      this._goVersion = undefined;
       this._javaServer = undefined;
       this._javaServerVersion = undefined;
       this._javaVersion = undefined;
@@ -3743,6 +3753,7 @@ export class LinuxWebAppSlotSiteConfigApplicationStackOutputReference extends cd
       this._dockerImage = value.dockerImage;
       this._dockerImageTag = value.dockerImageTag;
       this._dotnetVersion = value.dotnetVersion;
+      this._goVersion = value.goVersion;
       this._javaServer = value.javaServer;
       this._javaServerVersion = value.javaServerVersion;
       this._javaVersion = value.javaVersion;
@@ -3799,6 +3810,22 @@ export class LinuxWebAppSlotSiteConfigApplicationStackOutputReference extends cd
   // Temporarily expose input value. Use with caution.
   public get dotnetVersionInput() {
     return this._dotnetVersion;
+  }
+
+  // go_version - computed: false, optional: true, required: false
+  private _goVersion?: string; 
+  public get goVersion() {
+    return this.getStringAttribute('go_version');
+  }
+  public set goVersion(value: string) {
+    this._goVersion = value;
+  }
+  public resetGoVersion() {
+    this._goVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get goVersionInput() {
+    return this._goVersion;
   }
 
   // java_server - computed: false, optional: true, required: false
@@ -6035,7 +6062,7 @@ export class LinuxWebAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_web_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

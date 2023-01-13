@@ -3341,7 +3341,7 @@ export interface LinuxFunctionAppSlotSiteConfigApplicationStack {
   */
   readonly dotnetVersion?: string;
   /**
-  * The version of Java to use. Possible values are `8`, and `11`
+  * The version of Java to use. Possible values are `8`, `11`, and `17`
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#java_version LinuxFunctionAppSlot#java_version}
   */
@@ -5127,7 +5127,7 @@ export class LinuxFunctionAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_function_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

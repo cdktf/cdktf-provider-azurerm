@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface SentinelAutomationRuleConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#condition_json SentinelAutomationRule#condition_json}
+  */
+  readonly conditionJson?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#display_name SentinelAutomationRule#display_name}
   */
   readonly displayName: string;
@@ -38,6 +42,14 @@ export interface SentinelAutomationRuleConfig extends cdktf.TerraformMetaArgumen
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#order SentinelAutomationRule#order}
   */
   readonly order: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#triggers_on SentinelAutomationRule#triggers_on}
+  */
+  readonly triggersOn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#triggers_when SentinelAutomationRule#triggers_when}
+  */
+  readonly triggersWhen?: string;
   /**
   * action_incident block
   * 
@@ -789,7 +801,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sentinel_automation_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -800,6 +812,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._conditionJson = config.conditionJson;
     this._displayName = config.displayName;
     this._enabled = config.enabled;
     this._expiration = config.expiration;
@@ -807,6 +820,8 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
     this._logAnalyticsWorkspaceId = config.logAnalyticsWorkspaceId;
     this._name = config.name;
     this._order = config.order;
+    this._triggersOn = config.triggersOn;
+    this._triggersWhen = config.triggersWhen;
     this._actionIncident.internalValue = config.actionIncident;
     this._actionPlaybook.internalValue = config.actionPlaybook;
     this._condition.internalValue = config.condition;
@@ -816,6 +831,22 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // condition_json - computed: true, optional: true, required: false
+  private _conditionJson?: string; 
+  public get conditionJson() {
+    return this.getStringAttribute('condition_json');
+  }
+  public set conditionJson(value: string) {
+    this._conditionJson = value;
+  }
+  public resetConditionJson() {
+    this._conditionJson = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionJsonInput() {
+    return this._conditionJson;
+  }
 
   // display_name - computed: false, optional: false, required: true
   private _displayName?: string; 
@@ -917,6 +948,38 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
     return this._order;
   }
 
+  // triggers_on - computed: false, optional: true, required: false
+  private _triggersOn?: string; 
+  public get triggersOn() {
+    return this.getStringAttribute('triggers_on');
+  }
+  public set triggersOn(value: string) {
+    this._triggersOn = value;
+  }
+  public resetTriggersOn() {
+    this._triggersOn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get triggersOnInput() {
+    return this._triggersOn;
+  }
+
+  // triggers_when - computed: false, optional: true, required: false
+  private _triggersWhen?: string; 
+  public get triggersWhen() {
+    return this.getStringAttribute('triggers_when');
+  }
+  public set triggersWhen(value: string) {
+    this._triggersWhen = value;
+  }
+  public resetTriggersWhen() {
+    this._triggersWhen = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get triggersWhenInput() {
+    return this._triggersWhen;
+  }
+
   // action_incident - computed: false, optional: true, required: false
   private _actionIncident = new SentinelAutomationRuleActionIncidentList(this, "action_incident", false);
   public get actionIncident() {
@@ -987,6 +1050,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      condition_json: cdktf.stringToTerraform(this._conditionJson),
       display_name: cdktf.stringToTerraform(this._displayName),
       enabled: cdktf.booleanToTerraform(this._enabled),
       expiration: cdktf.stringToTerraform(this._expiration),
@@ -994,6 +1058,8 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
       order: cdktf.numberToTerraform(this._order),
+      triggers_on: cdktf.stringToTerraform(this._triggersOn),
+      triggers_when: cdktf.stringToTerraform(this._triggersWhen),
       action_incident: cdktf.listMapper(sentinelAutomationRuleActionIncidentToTerraform, true)(this._actionIncident.internalValue),
       action_playbook: cdktf.listMapper(sentinelAutomationRuleActionPlaybookToTerraform, true)(this._actionPlaybook.internalValue),
       condition: cdktf.listMapper(sentinelAutomationRuleConditionToTerraform, true)(this._condition.internalValue),

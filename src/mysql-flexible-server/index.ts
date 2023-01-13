@@ -83,11 +83,23 @@ export interface MysqlFlexibleServerConfig extends cdktf.TerraformMetaArguments 
   */
   readonly zone?: string;
   /**
+  * customer_managed_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server#customer_managed_key MysqlFlexibleServer#customer_managed_key}
+  */
+  readonly customerManagedKey?: MysqlFlexibleServerCustomerManagedKey;
+  /**
   * high_availability block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server#high_availability MysqlFlexibleServer#high_availability}
   */
   readonly highAvailability?: MysqlFlexibleServerHighAvailability;
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server#identity MysqlFlexibleServer#identity}
+  */
+  readonly identity?: MysqlFlexibleServerIdentity;
   /**
   * maintenance_window block
   * 
@@ -106,6 +118,98 @@ export interface MysqlFlexibleServerConfig extends cdktf.TerraformMetaArguments 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server#timeouts MysqlFlexibleServer#timeouts}
   */
   readonly timeouts?: MysqlFlexibleServerTimeouts;
+}
+export interface MysqlFlexibleServerCustomerManagedKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server#key_vault_key_id MysqlFlexibleServer#key_vault_key_id}
+  */
+  readonly keyVaultKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server#primary_user_assigned_identity_id MysqlFlexibleServer#primary_user_assigned_identity_id}
+  */
+  readonly primaryUserAssignedIdentityId?: string;
+}
+
+export function mysqlFlexibleServerCustomerManagedKeyToTerraform(struct?: MysqlFlexibleServerCustomerManagedKeyOutputReference | MysqlFlexibleServerCustomerManagedKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
+    primary_user_assigned_identity_id: cdktf.stringToTerraform(struct!.primaryUserAssignedIdentityId),
+  }
+}
+
+export class MysqlFlexibleServerCustomerManagedKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MysqlFlexibleServerCustomerManagedKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyVaultKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultKeyId = this._keyVaultKeyId;
+    }
+    if (this._primaryUserAssignedIdentityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primaryUserAssignedIdentityId = this._primaryUserAssignedIdentityId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MysqlFlexibleServerCustomerManagedKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._keyVaultKeyId = undefined;
+      this._primaryUserAssignedIdentityId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._keyVaultKeyId = value.keyVaultKeyId;
+      this._primaryUserAssignedIdentityId = value.primaryUserAssignedIdentityId;
+    }
+  }
+
+  // key_vault_key_id - computed: false, optional: true, required: false
+  private _keyVaultKeyId?: string; 
+  public get keyVaultKeyId() {
+    return this.getStringAttribute('key_vault_key_id');
+  }
+  public set keyVaultKeyId(value: string) {
+    this._keyVaultKeyId = value;
+  }
+  public resetKeyVaultKeyId() {
+    this._keyVaultKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyIdInput() {
+    return this._keyVaultKeyId;
+  }
+
+  // primary_user_assigned_identity_id - computed: false, optional: true, required: false
+  private _primaryUserAssignedIdentityId?: string; 
+  public get primaryUserAssignedIdentityId() {
+    return this.getStringAttribute('primary_user_assigned_identity_id');
+  }
+  public set primaryUserAssignedIdentityId(value: string) {
+    this._primaryUserAssignedIdentityId = value;
+  }
+  public resetPrimaryUserAssignedIdentityId() {
+    this._primaryUserAssignedIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryUserAssignedIdentityIdInput() {
+    return this._primaryUserAssignedIdentityId;
+  }
 }
 export interface MysqlFlexibleServerHighAvailability {
   /**
@@ -194,6 +298,105 @@ export class MysqlFlexibleServerHighAvailabilityOutputReference extends cdktf.Co
   // Temporarily expose input value. Use with caution.
   public get standbyAvailabilityZoneInput() {
     return this._standbyAvailabilityZone;
+  }
+}
+export interface MysqlFlexibleServerIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server#identity_ids MysqlFlexibleServer#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server#type MysqlFlexibleServer#type}
+  */
+  readonly type: string;
+}
+
+export function mysqlFlexibleServerIdentityToTerraform(struct?: MysqlFlexibleServerIdentityOutputReference | MysqlFlexibleServerIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class MysqlFlexibleServerIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MysqlFlexibleServerIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MysqlFlexibleServerIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
   }
 }
 export interface MysqlFlexibleServerMaintenanceWindow {
@@ -617,7 +820,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mysql_flexible_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -646,7 +849,9 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._version = config.version;
     this._zone = config.zone;
+    this._customerManagedKey.internalValue = config.customerManagedKey;
     this._highAvailability.internalValue = config.highAvailability;
+    this._identity.internalValue = config.identity;
     this._maintenanceWindow.internalValue = config.maintenanceWindow;
     this._storage.internalValue = config.storage;
     this._timeouts.internalValue = config.timeouts;
@@ -950,6 +1155,22 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
     return this._zone;
   }
 
+  // customer_managed_key - computed: false, optional: true, required: false
+  private _customerManagedKey = new MysqlFlexibleServerCustomerManagedKeyOutputReference(this, "customer_managed_key");
+  public get customerManagedKey() {
+    return this._customerManagedKey;
+  }
+  public putCustomerManagedKey(value: MysqlFlexibleServerCustomerManagedKey) {
+    this._customerManagedKey.internalValue = value;
+  }
+  public resetCustomerManagedKey() {
+    this._customerManagedKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedKeyInput() {
+    return this._customerManagedKey.internalValue;
+  }
+
   // high_availability - computed: false, optional: true, required: false
   private _highAvailability = new MysqlFlexibleServerHighAvailabilityOutputReference(this, "high_availability");
   public get highAvailability() {
@@ -964,6 +1185,22 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get highAvailabilityInput() {
     return this._highAvailability.internalValue;
+  }
+
+  // identity - computed: false, optional: true, required: false
+  private _identity = new MysqlFlexibleServerIdentityOutputReference(this, "identity");
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: MysqlFlexibleServerIdentity) {
+    this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
   }
 
   // maintenance_window - computed: false, optional: true, required: false
@@ -1038,7 +1275,9 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       zone: cdktf.stringToTerraform(this._zone),
+      customer_managed_key: mysqlFlexibleServerCustomerManagedKeyToTerraform(this._customerManagedKey.internalValue),
       high_availability: mysqlFlexibleServerHighAvailabilityToTerraform(this._highAvailability.internalValue),
+      identity: mysqlFlexibleServerIdentityToTerraform(this._identity.internalValue),
       maintenance_window: mysqlFlexibleServerMaintenanceWindowToTerraform(this._maintenanceWindow.internalValue),
       storage: mysqlFlexibleServerStorageToTerraform(this._storage.internalValue),
       timeouts: mysqlFlexibleServerTimeoutsToTerraform(this._timeouts.internalValue),

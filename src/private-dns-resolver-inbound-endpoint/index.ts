@@ -352,7 +352,7 @@ export class PrivateDnsResolverInboundEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_private_dns_resolver_inbound_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.38.0',
+        providerVersion: '3.39.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
