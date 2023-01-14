@@ -216,7 +216,7 @@ export class MssqlServerTransparentDataEncryption extends cdktf.TerraformResourc
       terraformResourceType: 'azurerm_mssql_server_transparent_data_encryption',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.0',
+        providerVersion: '3.39.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
