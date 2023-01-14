@@ -1009,7 +1009,7 @@ export class SentinelAlertRuleNrt extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sentinel_alert_rule_nrt',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.0',
+        providerVersion: '3.39.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

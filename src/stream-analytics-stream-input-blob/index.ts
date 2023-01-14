@@ -362,7 +362,7 @@ export class StreamAnalyticsStreamInputBlob extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stream_analytics_stream_input_blob',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.0',
+        providerVersion: '3.39.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

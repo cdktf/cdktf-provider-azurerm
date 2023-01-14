@@ -193,7 +193,7 @@ export class PostgresqlFlexibleServerDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_postgresql_flexible_server_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.0',
+        providerVersion: '3.39.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

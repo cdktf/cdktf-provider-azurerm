@@ -232,7 +232,7 @@ export class IntegrationServiceEnvironment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_integration_service_environment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.0',
+        providerVersion: '3.39.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

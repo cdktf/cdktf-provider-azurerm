@@ -220,7 +220,7 @@ export class SynapseFirewallRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_synapse_firewall_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.0',
+        providerVersion: '3.39.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

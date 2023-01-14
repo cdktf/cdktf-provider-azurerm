@@ -4237,7 +4237,7 @@ export class AppServiceSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_service_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.0',
+        providerVersion: '3.39.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
