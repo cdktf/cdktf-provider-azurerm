@@ -786,7 +786,7 @@ export class NginxDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_nginx_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -224,7 +224,7 @@ export class IpGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_ip_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -262,6 +262,16 @@ export class IpGroup extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get cidrsInput() {
     return this._cidrs;
+  }
+
+  // firewall_ids - computed: true, optional: false, required: false
+  public get firewallIds() {
+    return this.getListAttribute('firewall_ids');
+  }
+
+  // firewall_policy_ids - computed: true, optional: false, required: false
+  public get firewallPolicyIds() {
+    return this.getListAttribute('firewall_policy_ids');
   }
 
   // id - computed: true, optional: true, required: false

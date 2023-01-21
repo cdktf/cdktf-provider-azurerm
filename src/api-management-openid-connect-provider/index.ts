@@ -236,7 +236,7 @@ export class ApiManagementOpenidConnectProvider extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_api_management_openid_connect_provider',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

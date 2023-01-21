@@ -196,7 +196,7 @@ export class DataAzurermWebPubsubPrivateLinkResource extends cdktf.TerraformData
       terraformResourceType: 'azurerm_web_pubsub_private_link_resource',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -367,7 +367,7 @@ export class DataAzurermHealthcareFhirService extends cdktf.TerraformDataSource 
       terraformResourceType: 'azurerm_healthcare_fhir_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

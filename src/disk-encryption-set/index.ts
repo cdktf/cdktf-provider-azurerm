@@ -341,7 +341,7 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_disk_encryption_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

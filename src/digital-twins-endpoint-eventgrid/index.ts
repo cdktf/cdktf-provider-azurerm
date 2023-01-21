@@ -228,7 +228,7 @@ export class DigitalTwinsEndpointEventgrid extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_digital_twins_endpoint_eventgrid',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

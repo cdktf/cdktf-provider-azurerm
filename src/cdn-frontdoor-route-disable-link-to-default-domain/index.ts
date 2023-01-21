@@ -212,7 +212,7 @@ export class CdnFrontdoorRouteDisableLinkToDefaultDomain extends cdktf.Terraform
       terraformResourceType: 'azurerm_cdn_frontdoor_route_disable_link_to_default_domain',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

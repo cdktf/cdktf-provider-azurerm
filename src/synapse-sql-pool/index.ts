@@ -20,6 +20,10 @@ export interface SynapseSqlPoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly dataEncrypted?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool#geo_backup_policy_enabled SynapseSqlPool#geo_backup_policy_enabled}
+  */
+  readonly geoBackupPolicyEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool#id SynapseSqlPool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -328,7 +332,7 @@ export class SynapseSqlPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_synapse_sql_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -342,6 +346,7 @@ export class SynapseSqlPool extends cdktf.TerraformResource {
     this._collation = config.collation;
     this._createMode = config.createMode;
     this._dataEncrypted = config.dataEncrypted;
+    this._geoBackupPolicyEnabled = config.geoBackupPolicyEnabled;
     this._id = config.id;
     this._name = config.name;
     this._recoveryDatabaseId = config.recoveryDatabaseId;
@@ -402,6 +407,22 @@ export class SynapseSqlPool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get dataEncryptedInput() {
     return this._dataEncrypted;
+  }
+
+  // geo_backup_policy_enabled - computed: false, optional: true, required: false
+  private _geoBackupPolicyEnabled?: boolean | cdktf.IResolvable; 
+  public get geoBackupPolicyEnabled() {
+    return this.getBooleanAttribute('geo_backup_policy_enabled');
+  }
+  public set geoBackupPolicyEnabled(value: boolean | cdktf.IResolvable) {
+    this._geoBackupPolicyEnabled = value;
+  }
+  public resetGeoBackupPolicyEnabled() {
+    this._geoBackupPolicyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get geoBackupPolicyEnabledInput() {
+    return this._geoBackupPolicyEnabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -532,6 +553,7 @@ export class SynapseSqlPool extends cdktf.TerraformResource {
       collation: cdktf.stringToTerraform(this._collation),
       create_mode: cdktf.stringToTerraform(this._createMode),
       data_encrypted: cdktf.booleanToTerraform(this._dataEncrypted),
+      geo_backup_policy_enabled: cdktf.booleanToTerraform(this._geoBackupPolicyEnabled),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       recovery_database_id: cdktf.stringToTerraform(this._recoveryDatabaseId),
