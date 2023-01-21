@@ -224,7 +224,7 @@ export class LogicAppTriggerHttpRequest extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_logic_app_trigger_http_request',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

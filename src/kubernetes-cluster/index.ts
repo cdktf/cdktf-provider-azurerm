@@ -175,6 +175,12 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly ingressApplicationGateway?: KubernetesClusterIngressApplicationGateway;
   /**
+  * key_management_service block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#key_management_service KubernetesCluster#key_management_service}
+  */
+  readonly keyManagementService?: KubernetesClusterKeyManagementService;
+  /**
   * key_vault_secrets_provider block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#key_vault_secrets_provider KubernetesCluster#key_vault_secrets_provider}
@@ -4140,6 +4146,95 @@ export class KubernetesClusterIngressApplicationGatewayOutputReference extends c
     return this._subnetId;
   }
 }
+export interface KubernetesClusterKeyManagementService {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#key_vault_key_id KubernetesCluster#key_vault_key_id}
+  */
+  readonly keyVaultKeyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#key_vault_network_access KubernetesCluster#key_vault_network_access}
+  */
+  readonly keyVaultNetworkAccess?: string;
+}
+
+export function kubernetesClusterKeyManagementServiceToTerraform(struct?: KubernetesClusterKeyManagementServiceOutputReference | KubernetesClusterKeyManagementService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
+    key_vault_network_access: cdktf.stringToTerraform(struct!.keyVaultNetworkAccess),
+  }
+}
+
+export class KubernetesClusterKeyManagementServiceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KubernetesClusterKeyManagementService | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyVaultKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultKeyId = this._keyVaultKeyId;
+    }
+    if (this._keyVaultNetworkAccess !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultNetworkAccess = this._keyVaultNetworkAccess;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterKeyManagementService | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._keyVaultKeyId = undefined;
+      this._keyVaultNetworkAccess = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._keyVaultKeyId = value.keyVaultKeyId;
+      this._keyVaultNetworkAccess = value.keyVaultNetworkAccess;
+    }
+  }
+
+  // key_vault_key_id - computed: false, optional: false, required: true
+  private _keyVaultKeyId?: string; 
+  public get keyVaultKeyId() {
+    return this.getStringAttribute('key_vault_key_id');
+  }
+  public set keyVaultKeyId(value: string) {
+    this._keyVaultKeyId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyIdInput() {
+    return this._keyVaultKeyId;
+  }
+
+  // key_vault_network_access - computed: false, optional: true, required: false
+  private _keyVaultNetworkAccess?: string; 
+  public get keyVaultNetworkAccess() {
+    return this.getStringAttribute('key_vault_network_access');
+  }
+  public set keyVaultNetworkAccess(value: string) {
+    this._keyVaultNetworkAccess = value;
+  }
+  public resetKeyVaultNetworkAccess() {
+    this._keyVaultNetworkAccess = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultNetworkAccessInput() {
+    return this._keyVaultNetworkAccess;
+  }
+}
 export interface KubernetesClusterKeyVaultSecretsProviderSecretIdentity {
 }
 
@@ -6782,7 +6877,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -6830,6 +6925,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._httpProxyConfig.internalValue = config.httpProxyConfig;
     this._identity.internalValue = config.identity;
     this._ingressApplicationGateway.internalValue = config.ingressApplicationGateway;
+    this._keyManagementService.internalValue = config.keyManagementService;
     this._keyVaultSecretsProvider.internalValue = config.keyVaultSecretsProvider;
     this._kubeletIdentity.internalValue = config.kubeletIdentity;
     this._linuxProfile.internalValue = config.linuxProfile;
@@ -7477,6 +7573,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._ingressApplicationGateway.internalValue;
   }
 
+  // key_management_service - computed: false, optional: true, required: false
+  private _keyManagementService = new KubernetesClusterKeyManagementServiceOutputReference(this, "key_management_service");
+  public get keyManagementService() {
+    return this._keyManagementService;
+  }
+  public putKeyManagementService(value: KubernetesClusterKeyManagementService) {
+    this._keyManagementService.internalValue = value;
+  }
+  public resetKeyManagementService() {
+    this._keyManagementService.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyManagementServiceInput() {
+    return this._keyManagementService.internalValue;
+  }
+
   // key_vault_secrets_provider - computed: false, optional: true, required: false
   private _keyVaultSecretsProvider = new KubernetesClusterKeyVaultSecretsProviderOutputReference(this, "key_vault_secrets_provider");
   public get keyVaultSecretsProvider() {
@@ -7744,6 +7856,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       http_proxy_config: kubernetesClusterHttpProxyConfigToTerraform(this._httpProxyConfig.internalValue),
       identity: kubernetesClusterIdentityToTerraform(this._identity.internalValue),
       ingress_application_gateway: kubernetesClusterIngressApplicationGatewayToTerraform(this._ingressApplicationGateway.internalValue),
+      key_management_service: kubernetesClusterKeyManagementServiceToTerraform(this._keyManagementService.internalValue),
       key_vault_secrets_provider: kubernetesClusterKeyVaultSecretsProviderToTerraform(this._keyVaultSecretsProvider.internalValue),
       kubelet_identity: kubernetesClusterKubeletIdentityToTerraform(this._kubeletIdentity.internalValue),
       linux_profile: kubernetesClusterLinuxProfileToTerraform(this._linuxProfile.internalValue),

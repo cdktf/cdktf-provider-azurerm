@@ -19,6 +19,10 @@ export interface RecoveryServicesVaultConfig extends cdktf.TerraformMetaArgument
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault#immutability RecoveryServicesVault#immutability}
+  */
+  readonly immutability?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault#location RecoveryServicesVault#location}
   */
   readonly location: string;
@@ -26,6 +30,10 @@ export interface RecoveryServicesVaultConfig extends cdktf.TerraformMetaArgument
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault#name RecoveryServicesVault#name}
   */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault#public_network_access_enabled RecoveryServicesVault#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault#resource_group_name RecoveryServicesVault#resource_group_name}
   */
@@ -78,6 +86,10 @@ export interface RecoveryServicesVaultEncryption {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault#use_system_assigned_identity RecoveryServicesVault#use_system_assigned_identity}
   */
   readonly useSystemAssignedIdentity?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault#user_assigned_identity_id RecoveryServicesVault#user_assigned_identity_id}
+  */
+  readonly userAssignedIdentityId?: string;
 }
 
 export function recoveryServicesVaultEncryptionToTerraform(struct?: RecoveryServicesVaultEncryptionOutputReference | RecoveryServicesVaultEncryption): any {
@@ -89,6 +101,7 @@ export function recoveryServicesVaultEncryptionToTerraform(struct?: RecoveryServ
     infrastructure_encryption_enabled: cdktf.booleanToTerraform(struct!.infrastructureEncryptionEnabled),
     key_id: cdktf.stringToTerraform(struct!.keyId),
     use_system_assigned_identity: cdktf.booleanToTerraform(struct!.useSystemAssignedIdentity),
+    user_assigned_identity_id: cdktf.stringToTerraform(struct!.userAssignedIdentityId),
   }
 }
 
@@ -118,6 +131,10 @@ export class RecoveryServicesVaultEncryptionOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.useSystemAssignedIdentity = this._useSystemAssignedIdentity;
     }
+    if (this._userAssignedIdentityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userAssignedIdentityId = this._userAssignedIdentityId;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -127,12 +144,14 @@ export class RecoveryServicesVaultEncryptionOutputReference extends cdktf.Comple
       this._infrastructureEncryptionEnabled = undefined;
       this._keyId = undefined;
       this._useSystemAssignedIdentity = undefined;
+      this._userAssignedIdentityId = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._infrastructureEncryptionEnabled = value.infrastructureEncryptionEnabled;
       this._keyId = value.keyId;
       this._useSystemAssignedIdentity = value.useSystemAssignedIdentity;
+      this._userAssignedIdentityId = value.userAssignedIdentityId;
     }
   }
 
@@ -177,8 +196,28 @@ export class RecoveryServicesVaultEncryptionOutputReference extends cdktf.Comple
   public get useSystemAssignedIdentityInput() {
     return this._useSystemAssignedIdentity;
   }
+
+  // user_assigned_identity_id - computed: false, optional: true, required: false
+  private _userAssignedIdentityId?: string; 
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+  public set userAssignedIdentityId(value: string) {
+    this._userAssignedIdentityId = value;
+  }
+  public resetUserAssignedIdentityId() {
+    this._userAssignedIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignedIdentityIdInput() {
+    return this._userAssignedIdentityId;
+  }
 }
 export interface RecoveryServicesVaultIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault#identity_ids RecoveryServicesVault#identity_ids}
+  */
+  readonly identityIds?: string[];
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault#type RecoveryServicesVault#type}
   */
@@ -191,6 +230,7 @@ export function recoveryServicesVaultIdentityToTerraform(struct?: RecoveryServic
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -209,6 +249,10 @@ export class RecoveryServicesVaultIdentityOutputReference extends cdktf.ComplexO
   public get internalValue(): RecoveryServicesVaultIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
@@ -219,12 +263,30 @@ export class RecoveryServicesVaultIdentityOutputReference extends cdktf.ComplexO
   public set internalValue(value: RecoveryServicesVaultIdentity | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._identityIds = undefined;
       this._type = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
       this._type = value.type;
     }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
   }
 
   // principal_id - computed: true, optional: false, required: false
@@ -433,7 +495,7 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_recovery_services_vault',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -446,8 +508,10 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
     });
     this._crossRegionRestoreEnabled = config.crossRegionRestoreEnabled;
     this._id = config.id;
+    this._immutability = config.immutability;
     this._location = config.location;
     this._name = config.name;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._softDeleteEnabled = config.softDeleteEnabled;
@@ -494,6 +558,22 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
     return this._id;
   }
 
+  // immutability - computed: true, optional: true, required: false
+  private _immutability?: string; 
+  public get immutability() {
+    return this.getStringAttribute('immutability');
+  }
+  public set immutability(value: string) {
+    this._immutability = value;
+  }
+  public resetImmutability() {
+    this._immutability = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get immutabilityInput() {
+    return this._immutability;
+  }
+
   // location - computed: false, optional: false, required: true
   private _location?: string; 
   public get location() {
@@ -518,6 +598,22 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -650,8 +746,10 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
     return {
       cross_region_restore_enabled: cdktf.booleanToTerraform(this._crossRegionRestoreEnabled),
       id: cdktf.stringToTerraform(this._id),
+      immutability: cdktf.stringToTerraform(this._immutability),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       soft_delete_enabled: cdktf.booleanToTerraform(this._softDeleteEnabled),

@@ -272,7 +272,7 @@ export class PublicIp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_public_ip',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -220,7 +220,7 @@ export class DatadogMonitorSsoConfiguration extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_datadog_monitor_sso_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

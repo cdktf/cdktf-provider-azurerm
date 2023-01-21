@@ -197,7 +197,7 @@ export class DataFactoryManagedPrivateEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_managed_private_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -526,7 +526,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_network_interface',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.39.1',
+        providerVersion: '3.40.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
