@@ -57,6 +57,10 @@ export interface WindowsWebAppSlotConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#service_plan_id WindowsWebAppSlot#service_plan_id}
+  */
+  readonly servicePlanId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#tags WindowsWebAppSlot#tags}
   */
   readonly tags?: { [key: string]: string };
@@ -6637,7 +6641,7 @@ export class WindowsWebAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_web_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.40.0',
+        providerVersion: '3.41.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -6659,6 +6663,7 @@ export class WindowsWebAppSlot extends cdktf.TerraformResource {
     this._id = config.id;
     this._keyVaultReferenceIdentityId = config.keyVaultReferenceIdentityId;
     this._name = config.name;
+    this._servicePlanId = config.servicePlanId;
     this._tags = config.tags;
     this._virtualNetworkSubnetId = config.virtualNetworkSubnetId;
     this._zipDeployFile = config.zipDeployFile;
@@ -6881,6 +6886,22 @@ export class WindowsWebAppSlot extends cdktf.TerraformResource {
     return this.getStringAttribute('possible_outbound_ip_addresses');
   }
 
+  // service_plan_id - computed: false, optional: true, required: false
+  private _servicePlanId?: string; 
+  public get servicePlanId() {
+    return this.getStringAttribute('service_plan_id');
+  }
+  public set servicePlanId(value: string) {
+    this._servicePlanId = value;
+  }
+  public resetServicePlanId() {
+    this._servicePlanId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get servicePlanIdInput() {
+    return this._servicePlanId;
+  }
+
   // site_credential - computed: true, optional: false, required: false
   private _siteCredential = new WindowsWebAppSlotSiteCredentialList(this, "site_credential", false);
   public get siteCredential() {
@@ -7077,6 +7098,7 @@ export class WindowsWebAppSlot extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       key_vault_reference_identity_id: cdktf.stringToTerraform(this._keyVaultReferenceIdentityId),
       name: cdktf.stringToTerraform(this._name),
+      service_plan_id: cdktf.stringToTerraform(this._servicePlanId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_network_subnet_id: cdktf.stringToTerraform(this._virtualNetworkSubnetId),
       zip_deploy_file: cdktf.stringToTerraform(this._zipDeployFile),

@@ -31,6 +31,14 @@ export interface DatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments 
   */
   readonly location: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace#managed_disk_cmk_key_vault_key_id DatabricksWorkspace#managed_disk_cmk_key_vault_key_id}
+  */
+  readonly managedDiskCmkKeyVaultKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace#managed_disk_cmk_rotation_to_latest_version_enabled DatabricksWorkspace#managed_disk_cmk_rotation_to_latest_version_enabled}
+  */
+  readonly managedDiskCmkRotationToLatestVersionEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace#managed_resource_group_name DatabricksWorkspace#managed_resource_group_name}
   */
   readonly managedResourceGroupName?: string;
@@ -74,6 +82,80 @@ export interface DatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace#timeouts DatabricksWorkspace#timeouts}
   */
   readonly timeouts?: DatabricksWorkspaceTimeouts;
+}
+export interface DatabricksWorkspaceManagedDiskIdentity {
+}
+
+export function databricksWorkspaceManagedDiskIdentityToTerraform(struct?: DatabricksWorkspaceManagedDiskIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DatabricksWorkspaceManagedDiskIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatabricksWorkspaceManagedDiskIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatabricksWorkspaceManagedDiskIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
+
+export class DatabricksWorkspaceManagedDiskIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatabricksWorkspaceManagedDiskIdentityOutputReference {
+    return new DatabricksWorkspaceManagedDiskIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface DatabricksWorkspaceStorageAccountIdentity {
 }
@@ -694,7 +776,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_databricks_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.40.0',
+        providerVersion: '3.41.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -710,6 +792,8 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
     this._infrastructureEncryptionEnabled = config.infrastructureEncryptionEnabled;
     this._loadBalancerBackendAddressPoolId = config.loadBalancerBackendAddressPoolId;
     this._location = config.location;
+    this._managedDiskCmkKeyVaultKeyId = config.managedDiskCmkKeyVaultKeyId;
+    this._managedDiskCmkRotationToLatestVersionEnabled = config.managedDiskCmkRotationToLatestVersionEnabled;
     this._managedResourceGroupName = config.managedResourceGroupName;
     this._managedServicesCmkKeyVaultKeyId = config.managedServicesCmkKeyVaultKeyId;
     this._name = config.name;
@@ -740,6 +824,11 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get customerManagedKeyEnabledInput() {
     return this._customerManagedKeyEnabled;
+  }
+
+  // disk_encryption_set_id - computed: true, optional: false, required: false
+  public get diskEncryptionSetId() {
+    return this.getStringAttribute('disk_encryption_set_id');
   }
 
   // id - computed: true, optional: true, required: false
@@ -801,6 +890,44 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location;
+  }
+
+  // managed_disk_cmk_key_vault_key_id - computed: false, optional: true, required: false
+  private _managedDiskCmkKeyVaultKeyId?: string; 
+  public get managedDiskCmkKeyVaultKeyId() {
+    return this.getStringAttribute('managed_disk_cmk_key_vault_key_id');
+  }
+  public set managedDiskCmkKeyVaultKeyId(value: string) {
+    this._managedDiskCmkKeyVaultKeyId = value;
+  }
+  public resetManagedDiskCmkKeyVaultKeyId() {
+    this._managedDiskCmkKeyVaultKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedDiskCmkKeyVaultKeyIdInput() {
+    return this._managedDiskCmkKeyVaultKeyId;
+  }
+
+  // managed_disk_cmk_rotation_to_latest_version_enabled - computed: false, optional: true, required: false
+  private _managedDiskCmkRotationToLatestVersionEnabled?: boolean | cdktf.IResolvable; 
+  public get managedDiskCmkRotationToLatestVersionEnabled() {
+    return this.getBooleanAttribute('managed_disk_cmk_rotation_to_latest_version_enabled');
+  }
+  public set managedDiskCmkRotationToLatestVersionEnabled(value: boolean | cdktf.IResolvable) {
+    this._managedDiskCmkRotationToLatestVersionEnabled = value;
+  }
+  public resetManagedDiskCmkRotationToLatestVersionEnabled() {
+    this._managedDiskCmkRotationToLatestVersionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedDiskCmkRotationToLatestVersionEnabledInput() {
+    return this._managedDiskCmkRotationToLatestVersionEnabled;
+  }
+
+  // managed_disk_identity - computed: true, optional: false, required: false
+  private _managedDiskIdentity = new DatabricksWorkspaceManagedDiskIdentityList(this, "managed_disk_identity", false);
+  public get managedDiskIdentity() {
+    return this._managedDiskIdentity;
   }
 
   // managed_resource_group_id - computed: true, optional: false, required: false
@@ -986,6 +1113,8 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
       infrastructure_encryption_enabled: cdktf.booleanToTerraform(this._infrastructureEncryptionEnabled),
       load_balancer_backend_address_pool_id: cdktf.stringToTerraform(this._loadBalancerBackendAddressPoolId),
       location: cdktf.stringToTerraform(this._location),
+      managed_disk_cmk_key_vault_key_id: cdktf.stringToTerraform(this._managedDiskCmkKeyVaultKeyId),
+      managed_disk_cmk_rotation_to_latest_version_enabled: cdktf.booleanToTerraform(this._managedDiskCmkRotationToLatestVersionEnabled),
       managed_resource_group_name: cdktf.stringToTerraform(this._managedResourceGroupName),
       managed_services_cmk_key_vault_key_id: cdktf.stringToTerraform(this._managedServicesCmkKeyVaultKeyId),
       name: cdktf.stringToTerraform(this._name),

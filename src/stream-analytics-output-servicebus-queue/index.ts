@@ -41,11 +41,11 @@ export interface StreamAnalyticsOutputServicebusQueueConfig extends cdktf.Terraf
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue#shared_access_policy_key StreamAnalyticsOutputServicebusQueue#shared_access_policy_key}
   */
-  readonly sharedAccessPolicyKey: string;
+  readonly sharedAccessPolicyKey?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue#shared_access_policy_name StreamAnalyticsOutputServicebusQueue#shared_access_policy_name}
   */
-  readonly sharedAccessPolicyName: string;
+  readonly sharedAccessPolicyName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue#stream_analytics_job_name StreamAnalyticsOutputServicebusQueue#stream_analytics_job_name}
   */
@@ -393,7 +393,7 @@ export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResourc
       terraformResourceType: 'azurerm_stream_analytics_output_servicebus_queue',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.40.0',
+        providerVersion: '3.41.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -523,7 +523,7 @@ export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResourc
     return this._servicebusNamespace;
   }
 
-  // shared_access_policy_key - computed: false, optional: false, required: true
+  // shared_access_policy_key - computed: false, optional: true, required: false
   private _sharedAccessPolicyKey?: string; 
   public get sharedAccessPolicyKey() {
     return this.getStringAttribute('shared_access_policy_key');
@@ -531,18 +531,24 @@ export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResourc
   public set sharedAccessPolicyKey(value: string) {
     this._sharedAccessPolicyKey = value;
   }
+  public resetSharedAccessPolicyKey() {
+    this._sharedAccessPolicyKey = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get sharedAccessPolicyKeyInput() {
     return this._sharedAccessPolicyKey;
   }
 
-  // shared_access_policy_name - computed: false, optional: false, required: true
+  // shared_access_policy_name - computed: false, optional: true, required: false
   private _sharedAccessPolicyName?: string; 
   public get sharedAccessPolicyName() {
     return this.getStringAttribute('shared_access_policy_name');
   }
   public set sharedAccessPolicyName(value: string) {
     this._sharedAccessPolicyName = value;
+  }
+  public resetSharedAccessPolicyName() {
+    this._sharedAccessPolicyName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sharedAccessPolicyNameInput() {

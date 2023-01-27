@@ -89,11 +89,23 @@ export interface PostgresqlFlexibleServerConfig extends cdktf.TerraformMetaArgum
   */
   readonly authentication?: PostgresqlFlexibleServerAuthentication;
   /**
+  * customer_managed_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#customer_managed_key PostgresqlFlexibleServer#customer_managed_key}
+  */
+  readonly customerManagedKey?: PostgresqlFlexibleServerCustomerManagedKey;
+  /**
   * high_availability block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#high_availability PostgresqlFlexibleServer#high_availability}
   */
   readonly highAvailability?: PostgresqlFlexibleServerHighAvailability;
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#identity PostgresqlFlexibleServer#identity}
+  */
+  readonly identity?: PostgresqlFlexibleServerIdentity;
   /**
   * maintenance_window block
   * 
@@ -226,6 +238,98 @@ export class PostgresqlFlexibleServerAuthenticationOutputReference extends cdktf
     return this._tenantId;
   }
 }
+export interface PostgresqlFlexibleServerCustomerManagedKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#key_vault_key_id PostgresqlFlexibleServer#key_vault_key_id}
+  */
+  readonly keyVaultKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#primary_user_assigned_identity_id PostgresqlFlexibleServer#primary_user_assigned_identity_id}
+  */
+  readonly primaryUserAssignedIdentityId?: string;
+}
+
+export function postgresqlFlexibleServerCustomerManagedKeyToTerraform(struct?: PostgresqlFlexibleServerCustomerManagedKeyOutputReference | PostgresqlFlexibleServerCustomerManagedKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
+    primary_user_assigned_identity_id: cdktf.stringToTerraform(struct!.primaryUserAssignedIdentityId),
+  }
+}
+
+export class PostgresqlFlexibleServerCustomerManagedKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PostgresqlFlexibleServerCustomerManagedKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyVaultKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultKeyId = this._keyVaultKeyId;
+    }
+    if (this._primaryUserAssignedIdentityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primaryUserAssignedIdentityId = this._primaryUserAssignedIdentityId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PostgresqlFlexibleServerCustomerManagedKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._keyVaultKeyId = undefined;
+      this._primaryUserAssignedIdentityId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._keyVaultKeyId = value.keyVaultKeyId;
+      this._primaryUserAssignedIdentityId = value.primaryUserAssignedIdentityId;
+    }
+  }
+
+  // key_vault_key_id - computed: false, optional: true, required: false
+  private _keyVaultKeyId?: string; 
+  public get keyVaultKeyId() {
+    return this.getStringAttribute('key_vault_key_id');
+  }
+  public set keyVaultKeyId(value: string) {
+    this._keyVaultKeyId = value;
+  }
+  public resetKeyVaultKeyId() {
+    this._keyVaultKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyIdInput() {
+    return this._keyVaultKeyId;
+  }
+
+  // primary_user_assigned_identity_id - computed: false, optional: true, required: false
+  private _primaryUserAssignedIdentityId?: string; 
+  public get primaryUserAssignedIdentityId() {
+    return this.getStringAttribute('primary_user_assigned_identity_id');
+  }
+  public set primaryUserAssignedIdentityId(value: string) {
+    this._primaryUserAssignedIdentityId = value;
+  }
+  public resetPrimaryUserAssignedIdentityId() {
+    this._primaryUserAssignedIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryUserAssignedIdentityIdInput() {
+    return this._primaryUserAssignedIdentityId;
+  }
+}
 export interface PostgresqlFlexibleServerHighAvailability {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#mode PostgresqlFlexibleServer#mode}
@@ -313,6 +417,105 @@ export class PostgresqlFlexibleServerHighAvailabilityOutputReference extends cdk
   // Temporarily expose input value. Use with caution.
   public get standbyAvailabilityZoneInput() {
     return this._standbyAvailabilityZone;
+  }
+}
+export interface PostgresqlFlexibleServerIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#identity_ids PostgresqlFlexibleServer#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#type PostgresqlFlexibleServer#type}
+  */
+  readonly type: string;
+}
+
+export function postgresqlFlexibleServerIdentityToTerraform(struct?: PostgresqlFlexibleServerIdentityOutputReference | PostgresqlFlexibleServerIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class PostgresqlFlexibleServerIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PostgresqlFlexibleServerIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PostgresqlFlexibleServerIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
   }
 }
 export interface PostgresqlFlexibleServerMaintenanceWindow {
@@ -617,7 +820,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_postgresql_flexible_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.40.0',
+        providerVersion: '3.41.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -647,7 +850,9 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
     this._version = config.version;
     this._zone = config.zone;
     this._authentication.internalValue = config.authentication;
+    this._customerManagedKey.internalValue = config.customerManagedKey;
     this._highAvailability.internalValue = config.highAvailability;
+    this._identity.internalValue = config.identity;
     this._maintenanceWindow.internalValue = config.maintenanceWindow;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -961,6 +1166,22 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
     return this._authentication.internalValue;
   }
 
+  // customer_managed_key - computed: false, optional: true, required: false
+  private _customerManagedKey = new PostgresqlFlexibleServerCustomerManagedKeyOutputReference(this, "customer_managed_key");
+  public get customerManagedKey() {
+    return this._customerManagedKey;
+  }
+  public putCustomerManagedKey(value: PostgresqlFlexibleServerCustomerManagedKey) {
+    this._customerManagedKey.internalValue = value;
+  }
+  public resetCustomerManagedKey() {
+    this._customerManagedKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedKeyInput() {
+    return this._customerManagedKey.internalValue;
+  }
+
   // high_availability - computed: false, optional: true, required: false
   private _highAvailability = new PostgresqlFlexibleServerHighAvailabilityOutputReference(this, "high_availability");
   public get highAvailability() {
@@ -975,6 +1196,22 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get highAvailabilityInput() {
     return this._highAvailability.internalValue;
+  }
+
+  // identity - computed: false, optional: true, required: false
+  private _identity = new PostgresqlFlexibleServerIdentityOutputReference(this, "identity");
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: PostgresqlFlexibleServerIdentity) {
+    this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
   }
 
   // maintenance_window - computed: false, optional: true, required: false
@@ -1034,7 +1271,9 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
       version: cdktf.stringToTerraform(this._version),
       zone: cdktf.stringToTerraform(this._zone),
       authentication: postgresqlFlexibleServerAuthenticationToTerraform(this._authentication.internalValue),
+      customer_managed_key: postgresqlFlexibleServerCustomerManagedKeyToTerraform(this._customerManagedKey.internalValue),
       high_availability: postgresqlFlexibleServerHighAvailabilityToTerraform(this._highAvailability.internalValue),
+      identity: postgresqlFlexibleServerIdentityToTerraform(this._identity.internalValue),
       maintenance_window: postgresqlFlexibleServerMaintenanceWindowToTerraform(this._maintenanceWindow.internalValue),
       timeouts: postgresqlFlexibleServerTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -232,7 +232,7 @@ export class NotificationHubNamespace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_notification_hub_namespace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.40.0',
+        providerVersion: '3.41.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
