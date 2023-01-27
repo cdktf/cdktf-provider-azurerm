@@ -269,7 +269,7 @@ export class DataAzurermCdnFrontdoorSecret extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_cdn_frontdoor_secret',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.40.0',
+        providerVersion: '3.41.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

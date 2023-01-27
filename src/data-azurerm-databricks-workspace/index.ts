@@ -33,6 +33,80 @@ export interface DataAzurermDatabricksWorkspaceConfig extends cdktf.TerraformMet
   */
   readonly timeouts?: DataAzurermDatabricksWorkspaceTimeouts;
 }
+export interface DataAzurermDatabricksWorkspaceManagedDiskIdentity {
+}
+
+export function dataAzurermDatabricksWorkspaceManagedDiskIdentityToTerraform(struct?: DataAzurermDatabricksWorkspaceManagedDiskIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermDatabricksWorkspaceManagedDiskIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermDatabricksWorkspaceManagedDiskIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermDatabricksWorkspaceManagedDiskIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
+
+export class DataAzurermDatabricksWorkspaceManagedDiskIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermDatabricksWorkspaceManagedDiskIdentityOutputReference {
+    return new DataAzurermDatabricksWorkspaceManagedDiskIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermDatabricksWorkspaceStorageAccountIdentity {
 }
 
@@ -209,7 +283,7 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_databricks_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.40.0',
+        providerVersion: '3.41.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -250,6 +324,12 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
   // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
+  }
+
+  // managed_disk_identity - computed: true, optional: false, required: false
+  private _managedDiskIdentity = new DataAzurermDatabricksWorkspaceManagedDiskIdentityList(this, "managed_disk_identity", false);
+  public get managedDiskIdentity() {
+    return this._managedDiskIdentity;
   }
 
   // name - computed: false, optional: false, required: true

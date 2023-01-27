@@ -171,6 +171,12 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   */
   readonly linuxOsConfig?: KubernetesClusterNodePoolLinuxOsConfig;
   /**
+  * node_network_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#node_network_profile KubernetesClusterNodePool#node_network_profile}
+  */
+  readonly nodeNetworkProfile?: KubernetesClusterNodePoolNodeNetworkProfile;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#timeouts KubernetesClusterNodePool#timeouts}
@@ -1466,6 +1472,71 @@ export class KubernetesClusterNodePoolLinuxOsConfigOutputReference extends cdktf
     return this._sysctlConfig.internalValue;
   }
 }
+export interface KubernetesClusterNodePoolNodeNetworkProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#node_public_ip_tags KubernetesClusterNodePool#node_public_ip_tags}
+  */
+  readonly nodePublicIpTags?: { [key: string]: string };
+}
+
+export function kubernetesClusterNodePoolNodeNetworkProfileToTerraform(struct?: KubernetesClusterNodePoolNodeNetworkProfileOutputReference | KubernetesClusterNodePoolNodeNetworkProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    node_public_ip_tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.nodePublicIpTags),
+  }
+}
+
+export class KubernetesClusterNodePoolNodeNetworkProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KubernetesClusterNodePoolNodeNetworkProfile | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._nodePublicIpTags !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodePublicIpTags = this._nodePublicIpTags;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterNodePoolNodeNetworkProfile | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._nodePublicIpTags = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._nodePublicIpTags = value.nodePublicIpTags;
+    }
+  }
+
+  // node_public_ip_tags - computed: false, optional: true, required: false
+  private _nodePublicIpTags?: { [key: string]: string }; 
+  public get nodePublicIpTags() {
+    return this.getStringMapAttribute('node_public_ip_tags');
+  }
+  public set nodePublicIpTags(value: { [key: string]: string }) {
+    this._nodePublicIpTags = value;
+  }
+  public resetNodePublicIpTags() {
+    this._nodePublicIpTags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodePublicIpTagsInput() {
+    return this._nodePublicIpTags;
+  }
+}
 export interface KubernetesClusterNodePoolTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#create KubernetesClusterNodePool#create}
@@ -1776,7 +1847,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.40.0',
+        providerVersion: '3.41.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1826,6 +1897,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     this._zones = config.zones;
     this._kubeletConfig.internalValue = config.kubeletConfig;
     this._linuxOsConfig.internalValue = config.linuxOsConfig;
+    this._nodeNetworkProfile.internalValue = config.nodeNetworkProfile;
     this._timeouts.internalValue = config.timeouts;
     this._upgradeSettings.internalValue = config.upgradeSettings;
     this._windowsProfile.internalValue = config.windowsProfile;
@@ -2450,6 +2522,22 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     return this._linuxOsConfig.internalValue;
   }
 
+  // node_network_profile - computed: false, optional: true, required: false
+  private _nodeNetworkProfile = new KubernetesClusterNodePoolNodeNetworkProfileOutputReference(this, "node_network_profile");
+  public get nodeNetworkProfile() {
+    return this._nodeNetworkProfile;
+  }
+  public putNodeNetworkProfile(value: KubernetesClusterNodePoolNodeNetworkProfile) {
+    this._nodeNetworkProfile.internalValue = value;
+  }
+  public resetNodeNetworkProfile() {
+    this._nodeNetworkProfile.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeNetworkProfileInput() {
+    return this._nodeNetworkProfile.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new KubernetesClusterNodePoolTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -2543,6 +2631,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
       kubelet_config: kubernetesClusterNodePoolKubeletConfigToTerraform(this._kubeletConfig.internalValue),
       linux_os_config: kubernetesClusterNodePoolLinuxOsConfigToTerraform(this._linuxOsConfig.internalValue),
+      node_network_profile: kubernetesClusterNodePoolNodeNetworkProfileToTerraform(this._nodeNetworkProfile.internalValue),
       timeouts: kubernetesClusterNodePoolTimeoutsToTerraform(this._timeouts.internalValue),
       upgrade_settings: kubernetesClusterNodePoolUpgradeSettingsToTerraform(this._upgradeSettings.internalValue),
       windows_profile: kubernetesClusterNodePoolWindowsProfileToTerraform(this._windowsProfile.internalValue),

@@ -93,6 +93,10 @@ export interface WindowsFunctionAppSlotConfig extends cdktf.TerraformMetaArgumen
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#service_plan_id WindowsFunctionAppSlot#service_plan_id}
+  */
+  readonly servicePlanId?: string;
+  /**
   * The access key which will be used to access the storage account for the Function App Slot.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#storage_account_access_key WindowsFunctionAppSlot#storage_account_access_key}
@@ -4807,7 +4811,7 @@ export class WindowsFunctionAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_function_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.40.0',
+        providerVersion: '3.41.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -4832,6 +4836,7 @@ export class WindowsFunctionAppSlot extends cdktf.TerraformResource {
     this._id = config.id;
     this._keyVaultReferenceIdentityId = config.keyVaultReferenceIdentityId;
     this._name = config.name;
+    this._servicePlanId = config.servicePlanId;
     this._storageAccountAccessKey = config.storageAccountAccessKey;
     this._storageAccountName = config.storageAccountName;
     this._storageKeyVaultSecretId = config.storageKeyVaultSecretId;
@@ -5104,6 +5109,22 @@ export class WindowsFunctionAppSlot extends cdktf.TerraformResource {
     return this.getStringAttribute('possible_outbound_ip_addresses');
   }
 
+  // service_plan_id - computed: false, optional: true, required: false
+  private _servicePlanId?: string; 
+  public get servicePlanId() {
+    return this.getStringAttribute('service_plan_id');
+  }
+  public set servicePlanId(value: string) {
+    this._servicePlanId = value;
+  }
+  public resetServicePlanId() {
+    this._servicePlanId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get servicePlanIdInput() {
+    return this._servicePlanId;
+  }
+
   // site_credential - computed: true, optional: false, required: false
   private _siteCredential = new WindowsFunctionAppSlotSiteCredentialList(this, "site_credential", false);
   public get siteCredential() {
@@ -5335,6 +5356,7 @@ export class WindowsFunctionAppSlot extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       key_vault_reference_identity_id: cdktf.stringToTerraform(this._keyVaultReferenceIdentityId),
       name: cdktf.stringToTerraform(this._name),
+      service_plan_id: cdktf.stringToTerraform(this._servicePlanId),
       storage_account_access_key: cdktf.stringToTerraform(this._storageAccountAccessKey),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
       storage_key_vault_secret_id: cdktf.stringToTerraform(this._storageKeyVaultSecretId),

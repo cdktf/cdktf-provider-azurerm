@@ -337,6 +337,95 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReferen
     return this._offlineRentalConfiguration.internalValue;
   }
 }
+export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestriction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#best_effort_enforced MediaContentKeyPolicy#best_effort_enforced}
+  */
+  readonly bestEffortEnforced?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#control_bits MediaContentKeyPolicy#control_bits}
+  */
+  readonly controlBits: number;
+}
+
+export function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestrictionToTerraform(struct?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestrictionOutputReference | MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestriction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    best_effort_enforced: cdktf.booleanToTerraform(struct!.bestEffortEnforced),
+    control_bits: cdktf.numberToTerraform(struct!.controlBits),
+  }
+}
+
+export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestrictionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestriction | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._bestEffortEnforced !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bestEffortEnforced = this._bestEffortEnforced;
+    }
+    if (this._controlBits !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.controlBits = this._controlBits;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestriction | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._bestEffortEnforced = undefined;
+      this._controlBits = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._bestEffortEnforced = value.bestEffortEnforced;
+      this._controlBits = value.controlBits;
+    }
+  }
+
+  // best_effort_enforced - computed: false, optional: true, required: false
+  private _bestEffortEnforced?: boolean | cdktf.IResolvable; 
+  public get bestEffortEnforced() {
+    return this.getBooleanAttribute('best_effort_enforced');
+  }
+  public set bestEffortEnforced(value: boolean | cdktf.IResolvable) {
+    this._bestEffortEnforced = value;
+  }
+  public resetBestEffortEnforced() {
+    this._bestEffortEnforced = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bestEffortEnforcedInput() {
+    return this._bestEffortEnforced;
+  }
+
+  // control_bits - computed: false, optional: false, required: true
+  private _controlBits?: number; 
+  public get controlBits() {
+    return this.getNumberAttribute('control_bits');
+  }
+  public set controlBits(value: number) {
+    this._controlBits = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get controlBitsInput() {
+    return this._controlBits;
+  }
+}
 export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#agc_and_color_stripe_restriction MediaContentKeyPolicy#agc_and_color_stripe_restriction}
@@ -354,6 +443,10 @@ export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseP
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#compressed_digital_audio_opl MediaContentKeyPolicy#compressed_digital_audio_opl}
   */
   readonly compressedDigitalAudioOpl?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#compressed_digital_video_opl MediaContentKeyPolicy#compressed_digital_video_opl}
+  */
+  readonly compressedDigitalVideoOpl?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#digital_video_only_content_restriction MediaContentKeyPolicy#digital_video_only_content_restriction}
   */
@@ -382,6 +475,12 @@ export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseP
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#uncompressed_digital_video_opl MediaContentKeyPolicy#uncompressed_digital_video_opl}
   */
   readonly uncompressedDigitalVideoOpl?: number;
+  /**
+  * explicit_analog_television_output_restriction block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#explicit_analog_television_output_restriction MediaContentKeyPolicy#explicit_analog_television_output_restriction}
+  */
+  readonly explicitAnalogTelevisionOutputRestriction?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestriction;
 }
 
 export function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightToTerraform(struct?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightOutputReference | MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight): any {
@@ -394,6 +493,7 @@ export function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePl
     allow_passing_video_content_to_unknown_output: cdktf.stringToTerraform(struct!.allowPassingVideoContentToUnknownOutput),
     analog_video_opl: cdktf.numberToTerraform(struct!.analogVideoOpl),
     compressed_digital_audio_opl: cdktf.numberToTerraform(struct!.compressedDigitalAudioOpl),
+    compressed_digital_video_opl: cdktf.numberToTerraform(struct!.compressedDigitalVideoOpl),
     digital_video_only_content_restriction: cdktf.booleanToTerraform(struct!.digitalVideoOnlyContentRestriction),
     first_play_expiration: cdktf.stringToTerraform(struct!.firstPlayExpiration),
     image_constraint_for_analog_component_video_restriction: cdktf.booleanToTerraform(struct!.imageConstraintForAnalogComponentVideoRestriction),
@@ -401,6 +501,7 @@ export function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePl
     scms_restriction: cdktf.numberToTerraform(struct!.scmsRestriction),
     uncompressed_digital_audio_opl: cdktf.numberToTerraform(struct!.uncompressedDigitalAudioOpl),
     uncompressed_digital_video_opl: cdktf.numberToTerraform(struct!.uncompressedDigitalVideoOpl),
+    explicit_analog_television_output_restriction: mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestrictionToTerraform(struct!.explicitAnalogTelevisionOutputRestriction),
   }
 }
 
@@ -434,6 +535,10 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
       hasAnyValues = true;
       internalValueResult.compressedDigitalAudioOpl = this._compressedDigitalAudioOpl;
     }
+    if (this._compressedDigitalVideoOpl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.compressedDigitalVideoOpl = this._compressedDigitalVideoOpl;
+    }
     if (this._digitalVideoOnlyContentRestriction !== undefined) {
       hasAnyValues = true;
       internalValueResult.digitalVideoOnlyContentRestriction = this._digitalVideoOnlyContentRestriction;
@@ -462,6 +567,10 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
       hasAnyValues = true;
       internalValueResult.uncompressedDigitalVideoOpl = this._uncompressedDigitalVideoOpl;
     }
+    if (this._explicitAnalogTelevisionOutputRestriction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.explicitAnalogTelevisionOutputRestriction = this._explicitAnalogTelevisionOutputRestriction?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -472,6 +581,7 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
       this._allowPassingVideoContentToUnknownOutput = undefined;
       this._analogVideoOpl = undefined;
       this._compressedDigitalAudioOpl = undefined;
+      this._compressedDigitalVideoOpl = undefined;
       this._digitalVideoOnlyContentRestriction = undefined;
       this._firstPlayExpiration = undefined;
       this._imageConstraintForAnalogComponentVideoRestriction = undefined;
@@ -479,6 +589,7 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
       this._scmsRestriction = undefined;
       this._uncompressedDigitalAudioOpl = undefined;
       this._uncompressedDigitalVideoOpl = undefined;
+      this._explicitAnalogTelevisionOutputRestriction.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -486,6 +597,7 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
       this._allowPassingVideoContentToUnknownOutput = value.allowPassingVideoContentToUnknownOutput;
       this._analogVideoOpl = value.analogVideoOpl;
       this._compressedDigitalAudioOpl = value.compressedDigitalAudioOpl;
+      this._compressedDigitalVideoOpl = value.compressedDigitalVideoOpl;
       this._digitalVideoOnlyContentRestriction = value.digitalVideoOnlyContentRestriction;
       this._firstPlayExpiration = value.firstPlayExpiration;
       this._imageConstraintForAnalogComponentVideoRestriction = value.imageConstraintForAnalogComponentVideoRestriction;
@@ -493,6 +605,7 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
       this._scmsRestriction = value.scmsRestriction;
       this._uncompressedDigitalAudioOpl = value.uncompressedDigitalAudioOpl;
       this._uncompressedDigitalVideoOpl = value.uncompressedDigitalVideoOpl;
+      this._explicitAnalogTelevisionOutputRestriction.internalValue = value.explicitAnalogTelevisionOutputRestriction;
     }
   }
 
@@ -558,6 +671,22 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   // Temporarily expose input value. Use with caution.
   public get compressedDigitalAudioOplInput() {
     return this._compressedDigitalAudioOpl;
+  }
+
+  // compressed_digital_video_opl - computed: false, optional: true, required: false
+  private _compressedDigitalVideoOpl?: number; 
+  public get compressedDigitalVideoOpl() {
+    return this.getNumberAttribute('compressed_digital_video_opl');
+  }
+  public set compressedDigitalVideoOpl(value: number) {
+    this._compressedDigitalVideoOpl = value;
+  }
+  public resetCompressedDigitalVideoOpl() {
+    this._compressedDigitalVideoOpl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get compressedDigitalVideoOplInput() {
+    return this._compressedDigitalVideoOpl;
   }
 
   // digital_video_only_content_restriction - computed: false, optional: true, required: false
@@ -671,6 +800,22 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   public get uncompressedDigitalVideoOplInput() {
     return this._uncompressedDigitalVideoOpl;
   }
+
+  // explicit_analog_television_output_restriction - computed: false, optional: true, required: false
+  private _explicitAnalogTelevisionOutputRestriction = new MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestrictionOutputReference(this, "explicit_analog_television_output_restriction");
+  public get explicitAnalogTelevisionOutputRestriction() {
+    return this._explicitAnalogTelevisionOutputRestriction;
+  }
+  public putExplicitAnalogTelevisionOutputRestriction(value: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestriction) {
+    this._explicitAnalogTelevisionOutputRestriction.internalValue = value;
+  }
+  public resetExplicitAnalogTelevisionOutputRestriction() {
+    this._explicitAnalogTelevisionOutputRestriction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get explicitAnalogTelevisionOutputRestrictionInput() {
+    return this._explicitAnalogTelevisionOutputRestriction.internalValue;
+  }
 }
 export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense {
   /**
@@ -714,6 +859,10 @@ export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense 
   */
   readonly relativeExpirationDate?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#security_level MediaContentKeyPolicy#security_level}
+  */
+  readonly securityLevel?: string;
+  /**
   * play_right block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#play_right MediaContentKeyPolicy#play_right}
@@ -737,6 +886,7 @@ export function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseTo
     license_type: cdktf.stringToTerraform(struct!.licenseType),
     relative_begin_date: cdktf.stringToTerraform(struct!.relativeBeginDate),
     relative_expiration_date: cdktf.stringToTerraform(struct!.relativeExpirationDate),
+    security_level: cdktf.stringToTerraform(struct!.securityLevel),
     play_right: mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightToTerraform(struct!.playRight),
   }
 }
@@ -801,6 +951,10 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseOutpu
       hasAnyValues = true;
       internalValueResult.relativeExpirationDate = this._relativeExpirationDate;
     }
+    if (this._securityLevel !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.securityLevel = this._securityLevel;
+    }
     if (this._playRight?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.playRight = this._playRight?.internalValue;
@@ -822,6 +976,7 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseOutpu
       this._licenseType = undefined;
       this._relativeBeginDate = undefined;
       this._relativeExpirationDate = undefined;
+      this._securityLevel = undefined;
       this._playRight.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -841,6 +996,7 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseOutpu
       this._licenseType = value.licenseType;
       this._relativeBeginDate = value.relativeBeginDate;
       this._relativeExpirationDate = value.relativeExpirationDate;
+      this._securityLevel = value.securityLevel;
       this._playRight.internalValue = value.playRight;
     }
   }
@@ -1005,6 +1161,22 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseOutpu
     return this._relativeExpirationDate;
   }
 
+  // security_level - computed: false, optional: true, required: false
+  private _securityLevel?: string; 
+  public get securityLevel() {
+    return this.getStringAttribute('security_level');
+  }
+  public set securityLevel(value: string) {
+    this._securityLevel = value;
+  }
+  public resetSecurityLevel() {
+    this._securityLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityLevelInput() {
+    return this._securityLevel;
+  }
+
   // play_right - computed: false, optional: true, required: false
   private _playRight = new MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightOutputReference(this, "play_right");
   public get playRight() {
@@ -1039,6 +1211,184 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseList 
   */
   public get(index: number): MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseOutputReference {
     return new MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#rsa_token_key_exponent MediaContentKeyPolicy#rsa_token_key_exponent}
+  */
+  readonly rsaTokenKeyExponent?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#rsa_token_key_modulus MediaContentKeyPolicy#rsa_token_key_modulus}
+  */
+  readonly rsaTokenKeyModulus?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#symmetric_token_key MediaContentKeyPolicy#symmetric_token_key}
+  */
+  readonly symmetricTokenKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#x509_token_key_raw MediaContentKeyPolicy#x509_token_key_raw}
+  */
+  readonly x509TokenKeyRaw?: string;
+}
+
+export function mediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKeyToTerraform(struct?: MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKey | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    rsa_token_key_exponent: cdktf.stringToTerraform(struct!.rsaTokenKeyExponent),
+    rsa_token_key_modulus: cdktf.stringToTerraform(struct!.rsaTokenKeyModulus),
+    symmetric_token_key: cdktf.stringToTerraform(struct!.symmetricTokenKey),
+    x509_token_key_raw: cdktf.stringToTerraform(struct!.x509TokenKeyRaw),
+  }
+}
+
+export class MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKey | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._rsaTokenKeyExponent !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rsaTokenKeyExponent = this._rsaTokenKeyExponent;
+    }
+    if (this._rsaTokenKeyModulus !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rsaTokenKeyModulus = this._rsaTokenKeyModulus;
+    }
+    if (this._symmetricTokenKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.symmetricTokenKey = this._symmetricTokenKey;
+    }
+    if (this._x509TokenKeyRaw !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.x509TokenKeyRaw = this._x509TokenKeyRaw;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKey | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._rsaTokenKeyExponent = undefined;
+      this._rsaTokenKeyModulus = undefined;
+      this._symmetricTokenKey = undefined;
+      this._x509TokenKeyRaw = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._rsaTokenKeyExponent = value.rsaTokenKeyExponent;
+      this._rsaTokenKeyModulus = value.rsaTokenKeyModulus;
+      this._symmetricTokenKey = value.symmetricTokenKey;
+      this._x509TokenKeyRaw = value.x509TokenKeyRaw;
+    }
+  }
+
+  // rsa_token_key_exponent - computed: false, optional: true, required: false
+  private _rsaTokenKeyExponent?: string; 
+  public get rsaTokenKeyExponent() {
+    return this.getStringAttribute('rsa_token_key_exponent');
+  }
+  public set rsaTokenKeyExponent(value: string) {
+    this._rsaTokenKeyExponent = value;
+  }
+  public resetRsaTokenKeyExponent() {
+    this._rsaTokenKeyExponent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rsaTokenKeyExponentInput() {
+    return this._rsaTokenKeyExponent;
+  }
+
+  // rsa_token_key_modulus - computed: false, optional: true, required: false
+  private _rsaTokenKeyModulus?: string; 
+  public get rsaTokenKeyModulus() {
+    return this.getStringAttribute('rsa_token_key_modulus');
+  }
+  public set rsaTokenKeyModulus(value: string) {
+    this._rsaTokenKeyModulus = value;
+  }
+  public resetRsaTokenKeyModulus() {
+    this._rsaTokenKeyModulus = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rsaTokenKeyModulusInput() {
+    return this._rsaTokenKeyModulus;
+  }
+
+  // symmetric_token_key - computed: false, optional: true, required: false
+  private _symmetricTokenKey?: string; 
+  public get symmetricTokenKey() {
+    return this.getStringAttribute('symmetric_token_key');
+  }
+  public set symmetricTokenKey(value: string) {
+    this._symmetricTokenKey = value;
+  }
+  public resetSymmetricTokenKey() {
+    this._symmetricTokenKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get symmetricTokenKeyInput() {
+    return this._symmetricTokenKey;
+  }
+
+  // x509_token_key_raw - computed: false, optional: true, required: false
+  private _x509TokenKeyRaw?: string; 
+  public get x509TokenKeyRaw() {
+    return this.getStringAttribute('x509_token_key_raw');
+  }
+  public set x509TokenKeyRaw(value: string) {
+    this._x509TokenKeyRaw = value;
+  }
+  public resetX509TokenKeyRaw() {
+    this._x509TokenKeyRaw = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get x509TokenKeyRawInput() {
+    return this._x509TokenKeyRaw;
+  }
+}
+
+export class MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKeyList extends cdktf.ComplexList {
+  public internalValue? : MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKey[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKeyOutputReference {
+    return new MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim {
@@ -1199,6 +1549,12 @@ export interface MediaContentKeyPolicyPolicyOptionTokenRestriction {
   */
   readonly tokenType?: string;
   /**
+  * alternate_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#alternate_key MediaContentKeyPolicy#alternate_key}
+  */
+  readonly alternateKey?: MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKey[] | cdktf.IResolvable;
+  /**
   * required_claim block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#required_claim MediaContentKeyPolicy#required_claim}
@@ -1220,6 +1576,7 @@ export function mediaContentKeyPolicyPolicyOptionTokenRestrictionToTerraform(str
     primary_symmetric_token_key: cdktf.stringToTerraform(struct!.primarySymmetricTokenKey),
     primary_x509_token_key_raw: cdktf.stringToTerraform(struct!.primaryX509TokenKeyRaw),
     token_type: cdktf.stringToTerraform(struct!.tokenType),
+    alternate_key: cdktf.listMapper(mediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKeyToTerraform, true)(struct!.alternateKey),
     required_claim: cdktf.listMapper(mediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimToTerraform, true)(struct!.requiredClaim),
   }
 }
@@ -1270,6 +1627,10 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
       hasAnyValues = true;
       internalValueResult.tokenType = this._tokenType;
     }
+    if (this._alternateKey?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.alternateKey = this._alternateKey?.internalValue;
+    }
     if (this._requiredClaim?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.requiredClaim = this._requiredClaim?.internalValue;
@@ -1288,6 +1649,7 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
       this._primarySymmetricTokenKey = undefined;
       this._primaryX509TokenKeyRaw = undefined;
       this._tokenType = undefined;
+      this._alternateKey.internalValue = undefined;
       this._requiredClaim.internalValue = undefined;
     }
     else {
@@ -1300,6 +1662,7 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
       this._primarySymmetricTokenKey = value.primarySymmetricTokenKey;
       this._primaryX509TokenKeyRaw = value.primaryX509TokenKeyRaw;
       this._tokenType = value.tokenType;
+      this._alternateKey.internalValue = value.alternateKey;
       this._requiredClaim.internalValue = value.requiredClaim;
     }
   }
@@ -1432,6 +1795,22 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
     return this._tokenType;
   }
 
+  // alternate_key - computed: false, optional: true, required: false
+  private _alternateKey = new MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKeyList(this, "alternate_key", false);
+  public get alternateKey() {
+    return this._alternateKey;
+  }
+  public putAlternateKey(value: MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKey[] | cdktf.IResolvable) {
+    this._alternateKey.internalValue = value;
+  }
+  public resetAlternateKey() {
+    this._alternateKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alternateKeyInput() {
+    return this._alternateKey.internalValue;
+  }
+
   // required_claim - computed: false, optional: true, required: false
   private _requiredClaim = new MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimList(this, "required_claim", false);
   public get requiredClaim() {
@@ -1461,6 +1840,10 @@ export interface MediaContentKeyPolicyPolicyOption {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#open_restriction_enabled MediaContentKeyPolicy#open_restriction_enabled}
   */
   readonly openRestrictionEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#playready_response_custom_data MediaContentKeyPolicy#playready_response_custom_data}
+  */
+  readonly playreadyResponseCustomData?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#widevine_configuration_template MediaContentKeyPolicy#widevine_configuration_template}
   */
@@ -1494,6 +1877,7 @@ export function mediaContentKeyPolicyPolicyOptionToTerraform(struct?: MediaConte
     clear_key_configuration_enabled: cdktf.booleanToTerraform(struct!.clearKeyConfigurationEnabled),
     name: cdktf.stringToTerraform(struct!.name),
     open_restriction_enabled: cdktf.booleanToTerraform(struct!.openRestrictionEnabled),
+    playready_response_custom_data: cdktf.stringToTerraform(struct!.playreadyResponseCustomData),
     widevine_configuration_template: cdktf.stringToTerraform(struct!.widevineConfigurationTemplate),
     fairplay_configuration: mediaContentKeyPolicyPolicyOptionFairplayConfigurationToTerraform(struct!.fairplayConfiguration),
     playready_configuration_license: cdktf.listMapper(mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseToTerraform, true)(struct!.playreadyConfigurationLicense),
@@ -1533,6 +1917,10 @@ export class MediaContentKeyPolicyPolicyOptionOutputReference extends cdktf.Comp
       hasAnyValues = true;
       internalValueResult.openRestrictionEnabled = this._openRestrictionEnabled;
     }
+    if (this._playreadyResponseCustomData !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.playreadyResponseCustomData = this._playreadyResponseCustomData;
+    }
     if (this._widevineConfigurationTemplate !== undefined) {
       hasAnyValues = true;
       internalValueResult.widevineConfigurationTemplate = this._widevineConfigurationTemplate;
@@ -1559,6 +1947,7 @@ export class MediaContentKeyPolicyPolicyOptionOutputReference extends cdktf.Comp
       this._clearKeyConfigurationEnabled = undefined;
       this._name = undefined;
       this._openRestrictionEnabled = undefined;
+      this._playreadyResponseCustomData = undefined;
       this._widevineConfigurationTemplate = undefined;
       this._fairplayConfiguration.internalValue = undefined;
       this._playreadyConfigurationLicense.internalValue = undefined;
@@ -1574,6 +1963,7 @@ export class MediaContentKeyPolicyPolicyOptionOutputReference extends cdktf.Comp
       this._clearKeyConfigurationEnabled = value.clearKeyConfigurationEnabled;
       this._name = value.name;
       this._openRestrictionEnabled = value.openRestrictionEnabled;
+      this._playreadyResponseCustomData = value.playreadyResponseCustomData;
       this._widevineConfigurationTemplate = value.widevineConfigurationTemplate;
       this._fairplayConfiguration.internalValue = value.fairplayConfiguration;
       this._playreadyConfigurationLicense.internalValue = value.playreadyConfigurationLicense;
@@ -1624,6 +2014,22 @@ export class MediaContentKeyPolicyPolicyOptionOutputReference extends cdktf.Comp
   // Temporarily expose input value. Use with caution.
   public get openRestrictionEnabledInput() {
     return this._openRestrictionEnabled;
+  }
+
+  // playready_response_custom_data - computed: false, optional: true, required: false
+  private _playreadyResponseCustomData?: string; 
+  public get playreadyResponseCustomData() {
+    return this.getStringAttribute('playready_response_custom_data');
+  }
+  public set playreadyResponseCustomData(value: string) {
+    this._playreadyResponseCustomData = value;
+  }
+  public resetPlayreadyResponseCustomData() {
+    this._playreadyResponseCustomData = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get playreadyResponseCustomDataInput() {
+    return this._playreadyResponseCustomData;
   }
 
   // widevine_configuration_template - computed: false, optional: true, required: false
@@ -1893,7 +2299,7 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_content_key_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.40.0',
+        providerVersion: '3.41.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

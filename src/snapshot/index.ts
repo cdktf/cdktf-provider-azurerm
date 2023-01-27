@@ -541,7 +541,7 @@ export class Snapshot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_snapshot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.40.0',
+        providerVersion: '3.41.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

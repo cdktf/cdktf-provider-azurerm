@@ -35,6 +35,10 @@ export interface LogAnalyticsWorkspaceConfig extends cdktf.TerraformMetaArgument
   */
   readonly internetQueryEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace#local_authentication_disabled LogAnalyticsWorkspace#local_authentication_disabled}
+  */
+  readonly localAuthenticationDisabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace#location LogAnalyticsWorkspace#location}
   */
   readonly location: string;
@@ -252,7 +256,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_log_analytics_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.40.0',
+        providerVersion: '3.41.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -269,6 +273,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
     this._id = config.id;
     this._internetIngestionEnabled = config.internetIngestionEnabled;
     this._internetQueryEnabled = config.internetQueryEnabled;
+    this._localAuthenticationDisabled = config.localAuthenticationDisabled;
     this._location = config.location;
     this._name = config.name;
     this._reservationCapacityInGbPerDay = config.reservationCapacityInGbPerDay;
@@ -377,6 +382,22 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get internetQueryEnabledInput() {
     return this._internetQueryEnabled;
+  }
+
+  // local_authentication_disabled - computed: false, optional: true, required: false
+  private _localAuthenticationDisabled?: boolean | cdktf.IResolvable; 
+  public get localAuthenticationDisabled() {
+    return this.getBooleanAttribute('local_authentication_disabled');
+  }
+  public set localAuthenticationDisabled(value: boolean | cdktf.IResolvable) {
+    this._localAuthenticationDisabled = value;
+  }
+  public resetLocalAuthenticationDisabled() {
+    this._localAuthenticationDisabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAuthenticationDisabledInput() {
+    return this._localAuthenticationDisabled;
   }
 
   // location - computed: false, optional: false, required: true
@@ -525,6 +546,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       internet_ingestion_enabled: cdktf.booleanToTerraform(this._internetIngestionEnabled),
       internet_query_enabled: cdktf.booleanToTerraform(this._internetQueryEnabled),
+      local_authentication_disabled: cdktf.booleanToTerraform(this._localAuthenticationDisabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       reservation_capacity_in_gb_per_day: cdktf.numberToTerraform(this._reservationCapacityInGbPerDay),

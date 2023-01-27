@@ -189,7 +189,7 @@ export class DataShareDatasetKustoCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_share_dataset_kusto_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.40.0',
+        providerVersion: '3.41.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

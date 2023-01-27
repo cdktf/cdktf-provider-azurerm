@@ -381,7 +381,7 @@ export interface PrivateEndpointIpConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint#subresource_name PrivateEndpoint#subresource_name}
   */
-  readonly subresourceName: string;
+  readonly subresourceName?: string;
 }
 
 export function privateEndpointIpConfigurationToTerraform(struct?: PrivateEndpointIpConfiguration | cdktf.IResolvable): any {
@@ -501,13 +501,16 @@ export class PrivateEndpointIpConfigurationOutputReference extends cdktf.Complex
     return this._privateIpAddress;
   }
 
-  // subresource_name - computed: false, optional: false, required: true
+  // subresource_name - computed: false, optional: true, required: false
   private _subresourceName?: string; 
   public get subresourceName() {
     return this.getStringAttribute('subresource_name');
   }
   public set subresourceName(value: string) {
     this._subresourceName = value;
+  }
+  public resetSubresourceName() {
+    this._subresourceName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get subresourceNameInput() {
@@ -1007,7 +1010,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_private_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.40.0',
+        providerVersion: '3.41.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -2625,6 +2625,71 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference extend
     return this._sysctlConfig.internalValue;
   }
 }
+export interface KubernetesClusterDefaultNodePoolNodeNetworkProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#node_public_ip_tags KubernetesCluster#node_public_ip_tags}
+  */
+  readonly nodePublicIpTags?: { [key: string]: string };
+}
+
+export function kubernetesClusterDefaultNodePoolNodeNetworkProfileToTerraform(struct?: KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference | KubernetesClusterDefaultNodePoolNodeNetworkProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    node_public_ip_tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.nodePublicIpTags),
+  }
+}
+
+export class KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KubernetesClusterDefaultNodePoolNodeNetworkProfile | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._nodePublicIpTags !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodePublicIpTags = this._nodePublicIpTags;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterDefaultNodePoolNodeNetworkProfile | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._nodePublicIpTags = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._nodePublicIpTags = value.nodePublicIpTags;
+    }
+  }
+
+  // node_public_ip_tags - computed: false, optional: true, required: false
+  private _nodePublicIpTags?: { [key: string]: string }; 
+  public get nodePublicIpTags() {
+    return this.getStringMapAttribute('node_public_ip_tags');
+  }
+  public set nodePublicIpTags(value: { [key: string]: string }) {
+    this._nodePublicIpTags = value;
+  }
+  public resetNodePublicIpTags() {
+    this._nodePublicIpTags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodePublicIpTagsInput() {
+    return this._nodePublicIpTags;
+  }
+}
 export interface KubernetesClusterDefaultNodePoolUpgradeSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#max_surge KubernetesCluster#max_surge}
@@ -2829,6 +2894,12 @@ export interface KubernetesClusterDefaultNodePool {
   */
   readonly linuxOsConfig?: KubernetesClusterDefaultNodePoolLinuxOsConfig;
   /**
+  * node_network_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#node_network_profile KubernetesCluster#node_network_profile}
+  */
+  readonly nodeNetworkProfile?: KubernetesClusterDefaultNodePoolNodeNetworkProfile;
+  /**
   * upgrade_settings block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#upgrade_settings KubernetesCluster#upgrade_settings}
@@ -2876,6 +2947,7 @@ export function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesC
     zones: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.zones),
     kubelet_config: kubernetesClusterDefaultNodePoolKubeletConfigToTerraform(struct!.kubeletConfig),
     linux_os_config: kubernetesClusterDefaultNodePoolLinuxOsConfigToTerraform(struct!.linuxOsConfig),
+    node_network_profile: kubernetesClusterDefaultNodePoolNodeNetworkProfileToTerraform(struct!.nodeNetworkProfile),
     upgrade_settings: kubernetesClusterDefaultNodePoolUpgradeSettingsToTerraform(struct!.upgradeSettings),
   }
 }
@@ -3030,6 +3102,10 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.linuxOsConfig = this._linuxOsConfig?.internalValue;
     }
+    if (this._nodeNetworkProfile?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodeNetworkProfile = this._nodeNetworkProfile?.internalValue;
+    }
     if (this._upgradeSettings?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.upgradeSettings = this._upgradeSettings?.internalValue;
@@ -3074,6 +3150,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       this._zones = undefined;
       this._kubeletConfig.internalValue = undefined;
       this._linuxOsConfig.internalValue = undefined;
+      this._nodeNetworkProfile.internalValue = undefined;
       this._upgradeSettings.internalValue = undefined;
     }
     else {
@@ -3112,6 +3189,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       this._zones = value.zones;
       this._kubeletConfig.internalValue = value.kubeletConfig;
       this._linuxOsConfig.internalValue = value.linuxOsConfig;
+      this._nodeNetworkProfile.internalValue = value.nodeNetworkProfile;
       this._upgradeSettings.internalValue = value.upgradeSettings;
     }
   }
@@ -3652,6 +3730,22 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get linuxOsConfigInput() {
     return this._linuxOsConfig.internalValue;
+  }
+
+  // node_network_profile - computed: false, optional: true, required: false
+  private _nodeNetworkProfile = new KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference(this, "node_network_profile");
+  public get nodeNetworkProfile() {
+    return this._nodeNetworkProfile;
+  }
+  public putNodeNetworkProfile(value: KubernetesClusterDefaultNodePoolNodeNetworkProfile) {
+    this._nodeNetworkProfile.internalValue = value;
+  }
+  public resetNodeNetworkProfile() {
+    this._nodeNetworkProfile.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeNetworkProfileInput() {
+    return this._nodeNetworkProfile.internalValue;
   }
 
   // upgrade_settings - computed: false, optional: true, required: false
@@ -6877,7 +6971,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.40.0',
+        providerVersion: '3.41.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
