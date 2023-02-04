@@ -189,7 +189,7 @@ export class SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection exte
       terraformResourceType: 'azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.41.0',
+        providerVersion: '3.42.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -23,6 +23,10 @@ export interface LbBackendAddressPoolConfig extends cdktf.TerraformMetaArguments
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool#virtual_network_id LbBackendAddressPool#virtual_network_id}
+  */
+  readonly virtualNetworkId?: string;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool#timeouts LbBackendAddressPool#timeouts}
@@ -384,7 +388,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lb_backend_address_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.41.0',
+        providerVersion: '3.42.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -398,6 +402,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
     this._id = config.id;
     this._loadbalancerId = config.loadbalancerId;
     this._name = config.name;
+    this._virtualNetworkId = config.virtualNetworkId;
     this._timeouts.internalValue = config.timeouts;
     this._tunnelInterface.internalValue = config.tunnelInterface;
   }
@@ -468,6 +473,22 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
     return this.getListAttribute('outbound_rules');
   }
 
+  // virtual_network_id - computed: false, optional: true, required: false
+  private _virtualNetworkId?: string; 
+  public get virtualNetworkId() {
+    return this.getStringAttribute('virtual_network_id');
+  }
+  public set virtualNetworkId(value: string) {
+    this._virtualNetworkId = value;
+  }
+  public resetVirtualNetworkId() {
+    this._virtualNetworkId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkIdInput() {
+    return this._virtualNetworkId;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new LbBackendAddressPoolTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -509,6 +530,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
       name: cdktf.stringToTerraform(this._name),
+      virtual_network_id: cdktf.stringToTerraform(this._virtualNetworkId),
       timeouts: lbBackendAddressPoolTimeoutsToTerraform(this._timeouts.internalValue),
       tunnel_interface: cdktf.listMapper(lbBackendAddressPoolTunnelInterfaceToTerraform, true)(this._tunnelInterface.internalValue),
     };

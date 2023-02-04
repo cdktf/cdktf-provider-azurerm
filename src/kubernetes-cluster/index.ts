@@ -151,6 +151,12 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly azureActiveDirectoryRoleBasedAccessControl?: KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl;
   /**
+  * confidential_computing block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#confidential_computing KubernetesCluster#confidential_computing}
+  */
+  readonly confidentialComputing?: KubernetesClusterConfidentialComputing;
+  /**
   * default_node_pool block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#default_node_pool KubernetesCluster#default_node_pool}
@@ -443,6 +449,80 @@ export class KubernetesClusterKubeConfigList extends cdktf.ComplexList {
     return new KubernetesClusterKubeConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface KubernetesClusterAciConnectorLinuxConnectorIdentity {
+}
+
+export function kubernetesClusterAciConnectorLinuxConnectorIdentityToTerraform(struct?: KubernetesClusterAciConnectorLinuxConnectorIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class KubernetesClusterAciConnectorLinuxConnectorIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KubernetesClusterAciConnectorLinuxConnectorIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterAciConnectorLinuxConnectorIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
+
+export class KubernetesClusterAciConnectorLinuxConnectorIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KubernetesClusterAciConnectorLinuxConnectorIdentityOutputReference {
+    return new KubernetesClusterAciConnectorLinuxConnectorIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface KubernetesClusterAciConnectorLinux {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#subnet_name KubernetesCluster#subnet_name}
@@ -490,6 +570,12 @@ export class KubernetesClusterAciConnectorLinuxOutputReference extends cdktf.Com
       this.isEmptyObject = Object.keys(value).length === 0;
       this._subnetName = value.subnetName;
     }
+  }
+
+  // connector_identity - computed: true, optional: false, required: false
+  private _connectorIdentity = new KubernetesClusterAciConnectorLinuxConnectorIdentityList(this, "connector_identity", false);
+  public get connectorIdentity() {
+    return this._connectorIdentity;
   }
 
   // subnet_name - computed: false, optional: false, required: true
@@ -1346,6 +1432,68 @@ export class KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputRe
   // Temporarily expose input value. Use with caution.
   public get tenantIdInput() {
     return this._tenantId;
+  }
+}
+export interface KubernetesClusterConfidentialComputing {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#sgx_quote_helper_enabled KubernetesCluster#sgx_quote_helper_enabled}
+  */
+  readonly sgxQuoteHelperEnabled: boolean | cdktf.IResolvable;
+}
+
+export function kubernetesClusterConfidentialComputingToTerraform(struct?: KubernetesClusterConfidentialComputingOutputReference | KubernetesClusterConfidentialComputing): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    sgx_quote_helper_enabled: cdktf.booleanToTerraform(struct!.sgxQuoteHelperEnabled),
+  }
+}
+
+export class KubernetesClusterConfidentialComputingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KubernetesClusterConfidentialComputing | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._sgxQuoteHelperEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sgxQuoteHelperEnabled = this._sgxQuoteHelperEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterConfidentialComputing | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._sgxQuoteHelperEnabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._sgxQuoteHelperEnabled = value.sgxQuoteHelperEnabled;
+    }
+  }
+
+  // sgx_quote_helper_enabled - computed: false, optional: false, required: true
+  private _sgxQuoteHelperEnabled?: boolean | cdktf.IResolvable; 
+  public get sgxQuoteHelperEnabled() {
+    return this.getBooleanAttribute('sgx_quote_helper_enabled');
+  }
+  public set sgxQuoteHelperEnabled(value: boolean | cdktf.IResolvable) {
+    this._sgxQuoteHelperEnabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sgxQuoteHelperEnabledInput() {
+    return this._sgxQuoteHelperEnabled;
   }
 }
 export interface KubernetesClusterDefaultNodePoolKubeletConfig {
@@ -6971,7 +7119,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.41.0',
+        providerVersion: '3.42.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -7015,6 +7163,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._apiServerAccessProfile.internalValue = config.apiServerAccessProfile;
     this._autoScalerProfile.internalValue = config.autoScalerProfile;
     this._azureActiveDirectoryRoleBasedAccessControl.internalValue = config.azureActiveDirectoryRoleBasedAccessControl;
+    this._confidentialComputing.internalValue = config.confidentialComputing;
     this._defaultNodePool.internalValue = config.defaultNodePool;
     this._httpProxyConfig.internalValue = config.httpProxyConfig;
     this._identity.internalValue = config.identity;
@@ -7606,6 +7755,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._azureActiveDirectoryRoleBasedAccessControl.internalValue;
   }
 
+  // confidential_computing - computed: false, optional: true, required: false
+  private _confidentialComputing = new KubernetesClusterConfidentialComputingOutputReference(this, "confidential_computing");
+  public get confidentialComputing() {
+    return this._confidentialComputing;
+  }
+  public putConfidentialComputing(value: KubernetesClusterConfidentialComputing) {
+    this._confidentialComputing.internalValue = value;
+  }
+  public resetConfidentialComputing() {
+    this._confidentialComputing.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get confidentialComputingInput() {
+    return this._confidentialComputing.internalValue;
+  }
+
   // default_node_pool - computed: false, optional: false, required: true
   private _defaultNodePool = new KubernetesClusterDefaultNodePoolOutputReference(this, "default_node_pool");
   public get defaultNodePool() {
@@ -7946,6 +8111,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       api_server_access_profile: kubernetesClusterApiServerAccessProfileToTerraform(this._apiServerAccessProfile.internalValue),
       auto_scaler_profile: kubernetesClusterAutoScalerProfileToTerraform(this._autoScalerProfile.internalValue),
       azure_active_directory_role_based_access_control: kubernetesClusterAzureActiveDirectoryRoleBasedAccessControlToTerraform(this._azureActiveDirectoryRoleBasedAccessControl.internalValue),
+      confidential_computing: kubernetesClusterConfidentialComputingToTerraform(this._confidentialComputing.internalValue),
       default_node_pool: kubernetesClusterDefaultNodePoolToTerraform(this._defaultNodePool.internalValue),
       http_proxy_config: kubernetesClusterHttpProxyConfigToTerraform(this._httpProxyConfig.internalValue),
       identity: kubernetesClusterIdentityToTerraform(this._identity.internalValue),
