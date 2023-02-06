@@ -388,6 +388,7 @@ export * as iothubFallbackRoute from './iothub-fallback-route';
 export * as iothubRoute from './iothub-route';
 export * as iothubSharedAccessPolicy from './iothub-shared-access-policy';
 export * as ipGroup from './ip-group';
+export * as ipGroupCidr from './ip-group-cidr';
 export * as keyVault from './key-vault';
 export * as keyVaultAccessPolicy from './key-vault-access-policy';
 export * as keyVaultCertificate from './key-vault-certificate';
@@ -581,6 +582,7 @@ export * as networkInterfaceBackendAddressPoolAssociation from './network-interf
 export * as networkInterfaceNatRuleAssociation from './network-interface-nat-rule-association';
 export * as networkInterfaceSecurityGroupAssociation from './network-interface-security-group-association';
 export * as networkManager from './network-manager';
+export * as networkManagerConnectivityConfiguration from './network-manager-connectivity-configuration';
 export * as networkManagerManagementGroupConnection from './network-manager-management-group-connection';
 export * as networkManagerNetworkGroup from './network-manager-network-group';
 export * as networkManagerScopeConnection from './network-manager-scope-connection';

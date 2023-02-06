@@ -210,7 +210,7 @@ export class DataAzurermMariadbServer extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_mariadb_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.41.0',
+        providerVersion: '3.42.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
