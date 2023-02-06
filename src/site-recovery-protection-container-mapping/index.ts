@@ -43,11 +43,109 @@ export interface SiteRecoveryProtectionContainerMappingConfig extends cdktf.Terr
   */
   readonly resourceGroupName: string;
   /**
+  * automatic_update block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping#automatic_update SiteRecoveryProtectionContainerMapping#automatic_update}
+  */
+  readonly automaticUpdate?: SiteRecoveryProtectionContainerMappingAutomaticUpdate;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping#timeouts SiteRecoveryProtectionContainerMapping#timeouts}
   */
   readonly timeouts?: SiteRecoveryProtectionContainerMappingTimeouts;
+}
+export interface SiteRecoveryProtectionContainerMappingAutomaticUpdate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping#automation_account_id SiteRecoveryProtectionContainerMapping#automation_account_id}
+  */
+  readonly automationAccountId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping#enabled SiteRecoveryProtectionContainerMapping#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+}
+
+export function siteRecoveryProtectionContainerMappingAutomaticUpdateToTerraform(struct?: SiteRecoveryProtectionContainerMappingAutomaticUpdateOutputReference | SiteRecoveryProtectionContainerMappingAutomaticUpdate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    automation_account_id: cdktf.stringToTerraform(struct!.automationAccountId),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
+export class SiteRecoveryProtectionContainerMappingAutomaticUpdateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SiteRecoveryProtectionContainerMappingAutomaticUpdate | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._automationAccountId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.automationAccountId = this._automationAccountId;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SiteRecoveryProtectionContainerMappingAutomaticUpdate | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._automationAccountId = undefined;
+      this._enabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._automationAccountId = value.automationAccountId;
+      this._enabled = value.enabled;
+    }
+  }
+
+  // automation_account_id - computed: false, optional: true, required: false
+  private _automationAccountId?: string; 
+  public get automationAccountId() {
+    return this.getStringAttribute('automation_account_id');
+  }
+  public set automationAccountId(value: string) {
+    this._automationAccountId = value;
+  }
+  public resetAutomationAccountId() {
+    this._automationAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automationAccountIdInput() {
+    return this._automationAccountId;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
 }
 export interface SiteRecoveryProtectionContainerMappingTimeouts {
   /**
@@ -232,7 +330,7 @@ export class SiteRecoveryProtectionContainerMapping extends cdktf.TerraformResou
       terraformResourceType: 'azurerm_site_recovery_protection_container_mapping',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.41.0',
+        providerVersion: '3.42.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -251,6 +349,7 @@ export class SiteRecoveryProtectionContainerMapping extends cdktf.TerraformResou
     this._recoveryTargetProtectionContainerId = config.recoveryTargetProtectionContainerId;
     this._recoveryVaultName = config.recoveryVaultName;
     this._resourceGroupName = config.resourceGroupName;
+    this._automaticUpdate.internalValue = config.automaticUpdate;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -365,6 +464,22 @@ export class SiteRecoveryProtectionContainerMapping extends cdktf.TerraformResou
     return this._resourceGroupName;
   }
 
+  // automatic_update - computed: false, optional: true, required: false
+  private _automaticUpdate = new SiteRecoveryProtectionContainerMappingAutomaticUpdateOutputReference(this, "automatic_update");
+  public get automaticUpdate() {
+    return this._automaticUpdate;
+  }
+  public putAutomaticUpdate(value: SiteRecoveryProtectionContainerMappingAutomaticUpdate) {
+    this._automaticUpdate.internalValue = value;
+  }
+  public resetAutomaticUpdate() {
+    this._automaticUpdate.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automaticUpdateInput() {
+    return this._automaticUpdate.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new SiteRecoveryProtectionContainerMappingTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -395,6 +510,7 @@ export class SiteRecoveryProtectionContainerMapping extends cdktf.TerraformResou
       recovery_target_protection_container_id: cdktf.stringToTerraform(this._recoveryTargetProtectionContainerId),
       recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      automatic_update: siteRecoveryProtectionContainerMappingAutomaticUpdateToTerraform(this._automaticUpdate.internalValue),
       timeouts: siteRecoveryProtectionContainerMappingTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

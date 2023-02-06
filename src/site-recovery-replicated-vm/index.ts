@@ -19,6 +19,10 @@ export interface SiteRecoveryReplicatedVmConfig extends cdktf.TerraformMetaArgum
   */
   readonly managedDisk?: SiteRecoveryReplicatedVmManagedDisk[] | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#multi_vm_group_name SiteRecoveryReplicatedVm#multi_vm_group_name}
+  */
+  readonly multiVmGroupName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#name SiteRecoveryReplicatedVm#name}
   */
   readonly name: string;
@@ -55,9 +59,25 @@ export interface SiteRecoveryReplicatedVmConfig extends cdktf.TerraformMetaArgum
   */
   readonly targetAvailabilitySetId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#target_boot_diagnostic_storage_account_id SiteRecoveryReplicatedVm#target_boot_diagnostic_storage_account_id}
+  */
+  readonly targetBootDiagnosticStorageAccountId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#target_capacity_reservation_group_id SiteRecoveryReplicatedVm#target_capacity_reservation_group_id}
+  */
+  readonly targetCapacityReservationGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#target_edge_zone SiteRecoveryReplicatedVm#target_edge_zone}
+  */
+  readonly targetEdgeZone?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#target_network_id SiteRecoveryReplicatedVm#target_network_id}
   */
   readonly targetNetworkId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#target_proximity_placement_group_id SiteRecoveryReplicatedVm#target_proximity_placement_group_id}
+  */
+  readonly targetProximityPlacementGroupId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#target_recovery_fabric_id SiteRecoveryReplicatedVm#target_recovery_fabric_id}
   */
@@ -71,9 +91,21 @@ export interface SiteRecoveryReplicatedVmConfig extends cdktf.TerraformMetaArgum
   */
   readonly targetResourceGroupId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#target_virtual_machine_scale_set_id SiteRecoveryReplicatedVm#target_virtual_machine_scale_set_id}
+  */
+  readonly targetVirtualMachineScaleSetId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#target_zone SiteRecoveryReplicatedVm#target_zone}
   */
   readonly targetZone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#test_network_id SiteRecoveryReplicatedVm#test_network_id}
+  */
+  readonly testNetworkId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#unmanaged_disk SiteRecoveryReplicatedVm#unmanaged_disk}
+  */
+  readonly unmanagedDisk?: SiteRecoveryReplicatedVmUnmanagedDisk[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -714,6 +746,18 @@ export class SiteRecoveryReplicatedVmManagedDiskList extends cdktf.ComplexList {
 }
 export interface SiteRecoveryReplicatedVmNetworkInterface {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#failover_test_public_ip_address_id SiteRecoveryReplicatedVm#failover_test_public_ip_address_id}
+  */
+  readonly failoverTestPublicIpAddressId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#failover_test_static_ip SiteRecoveryReplicatedVm#failover_test_static_ip}
+  */
+  readonly failoverTestStaticIp?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#failover_test_subnet_name SiteRecoveryReplicatedVm#failover_test_subnet_name}
+  */
+  readonly failoverTestSubnetName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#is_primary SiteRecoveryReplicatedVm#is_primary}
   */
   readonly isPrimary?: boolean | cdktf.IResolvable;
@@ -741,6 +785,9 @@ export function siteRecoveryReplicatedVmNetworkInterfaceToTerraform(struct?: Sit
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    failover_test_public_ip_address_id: cdktf.stringToTerraform(struct!.failoverTestPublicIpAddressId),
+    failover_test_static_ip: cdktf.stringToTerraform(struct!.failoverTestStaticIp),
+    failover_test_subnet_name: cdktf.stringToTerraform(struct!.failoverTestSubnetName),
     is_primary: cdktf.booleanToTerraform(struct!.isPrimary),
     recovery_public_ip_address_id: cdktf.stringToTerraform(struct!.recoveryPublicIpAddressId),
     source_network_interface_id: struct!.sourceNetworkInterfaceId === undefined ? null : cdktf.stringToTerraform(struct!.sourceNetworkInterfaceId),
@@ -769,6 +816,18 @@ export class SiteRecoveryReplicatedVmNetworkInterfaceOutputReference extends cdk
     }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._failoverTestPublicIpAddressId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failoverTestPublicIpAddressId = this._failoverTestPublicIpAddressId;
+    }
+    if (this._failoverTestStaticIp !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failoverTestStaticIp = this._failoverTestStaticIp;
+    }
+    if (this._failoverTestSubnetName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failoverTestSubnetName = this._failoverTestSubnetName;
+    }
     if (this._isPrimary !== undefined) {
       hasAnyValues = true;
       internalValueResult.isPrimary = this._isPrimary;
@@ -796,6 +855,9 @@ export class SiteRecoveryReplicatedVmNetworkInterfaceOutputReference extends cdk
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
+      this._failoverTestPublicIpAddressId = undefined;
+      this._failoverTestStaticIp = undefined;
+      this._failoverTestSubnetName = undefined;
       this._isPrimary = undefined;
       this._recoveryPublicIpAddressId = undefined;
       this._sourceNetworkInterfaceId = undefined;
@@ -809,12 +871,63 @@ export class SiteRecoveryReplicatedVmNetworkInterfaceOutputReference extends cdk
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
+      this._failoverTestPublicIpAddressId = value.failoverTestPublicIpAddressId;
+      this._failoverTestStaticIp = value.failoverTestStaticIp;
+      this._failoverTestSubnetName = value.failoverTestSubnetName;
       this._isPrimary = value.isPrimary;
       this._recoveryPublicIpAddressId = value.recoveryPublicIpAddressId;
       this._sourceNetworkInterfaceId = value.sourceNetworkInterfaceId;
       this._targetStaticIp = value.targetStaticIp;
       this._targetSubnetName = value.targetSubnetName;
     }
+  }
+
+  // failover_test_public_ip_address_id - computed: true, optional: true, required: false
+  private _failoverTestPublicIpAddressId?: string; 
+  public get failoverTestPublicIpAddressId() {
+    return this.getStringAttribute('failover_test_public_ip_address_id');
+  }
+  public set failoverTestPublicIpAddressId(value: string) {
+    this._failoverTestPublicIpAddressId = value;
+  }
+  public resetFailoverTestPublicIpAddressId() {
+    this._failoverTestPublicIpAddressId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failoverTestPublicIpAddressIdInput() {
+    return this._failoverTestPublicIpAddressId;
+  }
+
+  // failover_test_static_ip - computed: true, optional: true, required: false
+  private _failoverTestStaticIp?: string; 
+  public get failoverTestStaticIp() {
+    return this.getStringAttribute('failover_test_static_ip');
+  }
+  public set failoverTestStaticIp(value: string) {
+    this._failoverTestStaticIp = value;
+  }
+  public resetFailoverTestStaticIp() {
+    this._failoverTestStaticIp = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failoverTestStaticIpInput() {
+    return this._failoverTestStaticIp;
+  }
+
+  // failover_test_subnet_name - computed: true, optional: true, required: false
+  private _failoverTestSubnetName?: string; 
+  public get failoverTestSubnetName() {
+    return this.getStringAttribute('failover_test_subnet_name');
+  }
+  public set failoverTestSubnetName(value: string) {
+    this._failoverTestSubnetName = value;
+  }
+  public resetFailoverTestSubnetName() {
+    this._failoverTestSubnetName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failoverTestSubnetNameInput() {
+    return this._failoverTestSubnetName;
   }
 
   // is_primary - computed: true, optional: true, required: false
@@ -915,6 +1028,157 @@ export class SiteRecoveryReplicatedVmNetworkInterfaceList extends cdktf.ComplexL
   */
   public get(index: number): SiteRecoveryReplicatedVmNetworkInterfaceOutputReference {
     return new SiteRecoveryReplicatedVmNetworkInterfaceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SiteRecoveryReplicatedVmUnmanagedDisk {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#disk_uri SiteRecoveryReplicatedVm#disk_uri}
+  */
+  readonly diskUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#staging_storage_account_id SiteRecoveryReplicatedVm#staging_storage_account_id}
+  */
+  readonly stagingStorageAccountId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#target_storage_account_id SiteRecoveryReplicatedVm#target_storage_account_id}
+  */
+  readonly targetStorageAccountId?: string;
+}
+
+export function siteRecoveryReplicatedVmUnmanagedDiskToTerraform(struct?: SiteRecoveryReplicatedVmUnmanagedDisk | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    disk_uri: cdktf.stringToTerraform(struct!.diskUri),
+    staging_storage_account_id: cdktf.stringToTerraform(struct!.stagingStorageAccountId),
+    target_storage_account_id: cdktf.stringToTerraform(struct!.targetStorageAccountId),
+  }
+}
+
+export class SiteRecoveryReplicatedVmUnmanagedDiskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SiteRecoveryReplicatedVmUnmanagedDisk | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._diskUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskUri = this._diskUri;
+    }
+    if (this._stagingStorageAccountId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.stagingStorageAccountId = this._stagingStorageAccountId;
+    }
+    if (this._targetStorageAccountId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetStorageAccountId = this._targetStorageAccountId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SiteRecoveryReplicatedVmUnmanagedDisk | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._diskUri = undefined;
+      this._stagingStorageAccountId = undefined;
+      this._targetStorageAccountId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._diskUri = value.diskUri;
+      this._stagingStorageAccountId = value.stagingStorageAccountId;
+      this._targetStorageAccountId = value.targetStorageAccountId;
+    }
+  }
+
+  // disk_uri - computed: false, optional: true, required: false
+  private _diskUri?: string; 
+  public get diskUri() {
+    return this.getStringAttribute('disk_uri');
+  }
+  public set diskUri(value: string) {
+    this._diskUri = value;
+  }
+  public resetDiskUri() {
+    this._diskUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskUriInput() {
+    return this._diskUri;
+  }
+
+  // staging_storage_account_id - computed: false, optional: true, required: false
+  private _stagingStorageAccountId?: string; 
+  public get stagingStorageAccountId() {
+    return this.getStringAttribute('staging_storage_account_id');
+  }
+  public set stagingStorageAccountId(value: string) {
+    this._stagingStorageAccountId = value;
+  }
+  public resetStagingStorageAccountId() {
+    this._stagingStorageAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stagingStorageAccountIdInput() {
+    return this._stagingStorageAccountId;
+  }
+
+  // target_storage_account_id - computed: false, optional: true, required: false
+  private _targetStorageAccountId?: string; 
+  public get targetStorageAccountId() {
+    return this.getStringAttribute('target_storage_account_id');
+  }
+  public set targetStorageAccountId(value: string) {
+    this._targetStorageAccountId = value;
+  }
+  public resetTargetStorageAccountId() {
+    this._targetStorageAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetStorageAccountIdInput() {
+    return this._targetStorageAccountId;
+  }
+}
+
+export class SiteRecoveryReplicatedVmUnmanagedDiskList extends cdktf.ComplexList {
+  public internalValue? : SiteRecoveryReplicatedVmUnmanagedDisk[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SiteRecoveryReplicatedVmUnmanagedDiskOutputReference {
+    return new SiteRecoveryReplicatedVmUnmanagedDiskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface SiteRecoveryReplicatedVmTimeouts {
@@ -1100,7 +1364,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_site_recovery_replicated_vm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.41.0',
+        providerVersion: '3.42.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1113,6 +1377,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
     });
     this._id = config.id;
     this._managedDisk.internalValue = config.managedDisk;
+    this._multiVmGroupName = config.multiVmGroupName;
     this._name = config.name;
     this._networkInterface.internalValue = config.networkInterface;
     this._recoveryReplicationPolicyId = config.recoveryReplicationPolicyId;
@@ -1122,11 +1387,18 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
     this._sourceRecoveryProtectionContainerName = config.sourceRecoveryProtectionContainerName;
     this._sourceVmId = config.sourceVmId;
     this._targetAvailabilitySetId = config.targetAvailabilitySetId;
+    this._targetBootDiagnosticStorageAccountId = config.targetBootDiagnosticStorageAccountId;
+    this._targetCapacityReservationGroupId = config.targetCapacityReservationGroupId;
+    this._targetEdgeZone = config.targetEdgeZone;
     this._targetNetworkId = config.targetNetworkId;
+    this._targetProximityPlacementGroupId = config.targetProximityPlacementGroupId;
     this._targetRecoveryFabricId = config.targetRecoveryFabricId;
     this._targetRecoveryProtectionContainerId = config.targetRecoveryProtectionContainerId;
     this._targetResourceGroupId = config.targetResourceGroupId;
+    this._targetVirtualMachineScaleSetId = config.targetVirtualMachineScaleSetId;
     this._targetZone = config.targetZone;
+    this._testNetworkId = config.testNetworkId;
+    this._unmanagedDisk.internalValue = config.unmanagedDisk;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1164,6 +1436,22 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get managedDiskInput() {
     return this._managedDisk.internalValue;
+  }
+
+  // multi_vm_group_name - computed: false, optional: true, required: false
+  private _multiVmGroupName?: string; 
+  public get multiVmGroupName() {
+    return this.getStringAttribute('multi_vm_group_name');
+  }
+  public set multiVmGroupName(value: string) {
+    this._multiVmGroupName = value;
+  }
+  public resetMultiVmGroupName() {
+    this._multiVmGroupName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get multiVmGroupNameInput() {
+    return this._multiVmGroupName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1289,6 +1577,54 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
     return this._targetAvailabilitySetId;
   }
 
+  // target_boot_diagnostic_storage_account_id - computed: false, optional: true, required: false
+  private _targetBootDiagnosticStorageAccountId?: string; 
+  public get targetBootDiagnosticStorageAccountId() {
+    return this.getStringAttribute('target_boot_diagnostic_storage_account_id');
+  }
+  public set targetBootDiagnosticStorageAccountId(value: string) {
+    this._targetBootDiagnosticStorageAccountId = value;
+  }
+  public resetTargetBootDiagnosticStorageAccountId() {
+    this._targetBootDiagnosticStorageAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetBootDiagnosticStorageAccountIdInput() {
+    return this._targetBootDiagnosticStorageAccountId;
+  }
+
+  // target_capacity_reservation_group_id - computed: false, optional: true, required: false
+  private _targetCapacityReservationGroupId?: string; 
+  public get targetCapacityReservationGroupId() {
+    return this.getStringAttribute('target_capacity_reservation_group_id');
+  }
+  public set targetCapacityReservationGroupId(value: string) {
+    this._targetCapacityReservationGroupId = value;
+  }
+  public resetTargetCapacityReservationGroupId() {
+    this._targetCapacityReservationGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetCapacityReservationGroupIdInput() {
+    return this._targetCapacityReservationGroupId;
+  }
+
+  // target_edge_zone - computed: false, optional: true, required: false
+  private _targetEdgeZone?: string; 
+  public get targetEdgeZone() {
+    return this.getStringAttribute('target_edge_zone');
+  }
+  public set targetEdgeZone(value: string) {
+    this._targetEdgeZone = value;
+  }
+  public resetTargetEdgeZone() {
+    this._targetEdgeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetEdgeZoneInput() {
+    return this._targetEdgeZone;
+  }
+
   // target_network_id - computed: true, optional: true, required: false
   private _targetNetworkId?: string; 
   public get targetNetworkId() {
@@ -1303,6 +1639,22 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get targetNetworkIdInput() {
     return this._targetNetworkId;
+  }
+
+  // target_proximity_placement_group_id - computed: false, optional: true, required: false
+  private _targetProximityPlacementGroupId?: string; 
+  public get targetProximityPlacementGroupId() {
+    return this.getStringAttribute('target_proximity_placement_group_id');
+  }
+  public set targetProximityPlacementGroupId(value: string) {
+    this._targetProximityPlacementGroupId = value;
+  }
+  public resetTargetProximityPlacementGroupId() {
+    this._targetProximityPlacementGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetProximityPlacementGroupIdInput() {
+    return this._targetProximityPlacementGroupId;
   }
 
   // target_recovery_fabric_id - computed: false, optional: false, required: true
@@ -1344,6 +1696,22 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
     return this._targetResourceGroupId;
   }
 
+  // target_virtual_machine_scale_set_id - computed: false, optional: true, required: false
+  private _targetVirtualMachineScaleSetId?: string; 
+  public get targetVirtualMachineScaleSetId() {
+    return this.getStringAttribute('target_virtual_machine_scale_set_id');
+  }
+  public set targetVirtualMachineScaleSetId(value: string) {
+    this._targetVirtualMachineScaleSetId = value;
+  }
+  public resetTargetVirtualMachineScaleSetId() {
+    this._targetVirtualMachineScaleSetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetVirtualMachineScaleSetIdInput() {
+    return this._targetVirtualMachineScaleSetId;
+  }
+
   // target_zone - computed: false, optional: true, required: false
   private _targetZone?: string; 
   public get targetZone() {
@@ -1358,6 +1726,38 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get targetZoneInput() {
     return this._targetZone;
+  }
+
+  // test_network_id - computed: true, optional: true, required: false
+  private _testNetworkId?: string; 
+  public get testNetworkId() {
+    return this.getStringAttribute('test_network_id');
+  }
+  public set testNetworkId(value: string) {
+    this._testNetworkId = value;
+  }
+  public resetTestNetworkId() {
+    this._testNetworkId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get testNetworkIdInput() {
+    return this._testNetworkId;
+  }
+
+  // unmanaged_disk - computed: false, optional: true, required: false
+  private _unmanagedDisk = new SiteRecoveryReplicatedVmUnmanagedDiskList(this, "unmanaged_disk", true);
+  public get unmanagedDisk() {
+    return this._unmanagedDisk;
+  }
+  public putUnmanagedDisk(value: SiteRecoveryReplicatedVmUnmanagedDisk[] | cdktf.IResolvable) {
+    this._unmanagedDisk.internalValue = value;
+  }
+  public resetUnmanagedDisk() {
+    this._unmanagedDisk.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get unmanagedDiskInput() {
+    return this._unmanagedDisk.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -1384,6 +1784,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       managed_disk: cdktf.listMapper(siteRecoveryReplicatedVmManagedDiskToTerraform, false)(this._managedDisk.internalValue),
+      multi_vm_group_name: cdktf.stringToTerraform(this._multiVmGroupName),
       name: cdktf.stringToTerraform(this._name),
       network_interface: cdktf.listMapper(siteRecoveryReplicatedVmNetworkInterfaceToTerraform, false)(this._networkInterface.internalValue),
       recovery_replication_policy_id: cdktf.stringToTerraform(this._recoveryReplicationPolicyId),
@@ -1393,11 +1794,18 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
       source_recovery_protection_container_name: cdktf.stringToTerraform(this._sourceRecoveryProtectionContainerName),
       source_vm_id: cdktf.stringToTerraform(this._sourceVmId),
       target_availability_set_id: cdktf.stringToTerraform(this._targetAvailabilitySetId),
+      target_boot_diagnostic_storage_account_id: cdktf.stringToTerraform(this._targetBootDiagnosticStorageAccountId),
+      target_capacity_reservation_group_id: cdktf.stringToTerraform(this._targetCapacityReservationGroupId),
+      target_edge_zone: cdktf.stringToTerraform(this._targetEdgeZone),
       target_network_id: cdktf.stringToTerraform(this._targetNetworkId),
+      target_proximity_placement_group_id: cdktf.stringToTerraform(this._targetProximityPlacementGroupId),
       target_recovery_fabric_id: cdktf.stringToTerraform(this._targetRecoveryFabricId),
       target_recovery_protection_container_id: cdktf.stringToTerraform(this._targetRecoveryProtectionContainerId),
       target_resource_group_id: cdktf.stringToTerraform(this._targetResourceGroupId),
+      target_virtual_machine_scale_set_id: cdktf.stringToTerraform(this._targetVirtualMachineScaleSetId),
       target_zone: cdktf.stringToTerraform(this._targetZone),
+      test_network_id: cdktf.stringToTerraform(this._testNetworkId),
+      unmanaged_disk: cdktf.listMapper(siteRecoveryReplicatedVmUnmanagedDiskToTerraform, false)(this._unmanagedDisk.internalValue),
       timeouts: siteRecoveryReplicatedVmTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

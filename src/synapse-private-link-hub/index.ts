@@ -220,7 +220,7 @@ export class SynapsePrivateLinkHub extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_synapse_private_link_hub',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.41.0',
+        providerVersion: '3.42.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

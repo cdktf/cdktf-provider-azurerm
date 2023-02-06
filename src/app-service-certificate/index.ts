@@ -236,7 +236,7 @@ export class AppServiceCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_service_certificate',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.41.0',
+        providerVersion: '3.42.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -292,6 +292,11 @@ export class AppServiceCertificate extends cdktf.TerraformResource {
   // host_names - computed: true, optional: false, required: false
   public get hostNames() {
     return this.getListAttribute('host_names');
+  }
+
+  // hosting_environment_profile_id - computed: true, optional: false, required: false
+  public get hostingEnvironmentProfileId() {
+    return this.getStringAttribute('hosting_environment_profile_id');
   }
 
   // id - computed: true, optional: true, required: false

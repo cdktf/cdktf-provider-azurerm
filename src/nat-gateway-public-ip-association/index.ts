@@ -185,7 +185,7 @@ export class NatGatewayPublicIpAssociation extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_nat_gateway_public_ip_association',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.41.0',
+        providerVersion: '3.42.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
