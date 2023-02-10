@@ -55,6 +55,10 @@ export interface PostgresqlFlexibleServerConfig extends cdktf.TerraformMetaArgum
   */
   readonly privateDnsZoneId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#replication_role PostgresqlFlexibleServer#replication_role}
+  */
+  readonly replicationRole?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#resource_group_name PostgresqlFlexibleServer#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -820,7 +824,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_postgresql_flexible_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.42.0',
+        providerVersion: '3.43.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -842,6 +846,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
     this._name = config.name;
     this._pointInTimeRestoreTimeInUtc = config.pointInTimeRestoreTimeInUtc;
     this._privateDnsZoneId = config.privateDnsZoneId;
+    this._replicationRole = config.replicationRole;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
     this._sourceServerId = config.sourceServerId;
@@ -1039,6 +1044,22 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   // public_network_access_enabled - computed: true, optional: false, required: false
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
+  }
+
+  // replication_role - computed: false, optional: true, required: false
+  private _replicationRole?: string; 
+  public get replicationRole() {
+    return this.getStringAttribute('replication_role');
+  }
+  public set replicationRole(value: string) {
+    this._replicationRole = value;
+  }
+  public resetReplicationRole() {
+    this._replicationRole = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicationRoleInput() {
+    return this._replicationRole;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -1263,6 +1284,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       point_in_time_restore_time_in_utc: cdktf.stringToTerraform(this._pointInTimeRestoreTimeInUtc),
       private_dns_zone_id: cdktf.stringToTerraform(this._privateDnsZoneId),
+      replication_role: cdktf.stringToTerraform(this._replicationRole),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       source_server_id: cdktf.stringToTerraform(this._sourceServerId),

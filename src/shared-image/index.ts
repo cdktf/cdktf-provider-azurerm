@@ -16,6 +16,14 @@ export interface SharedImageConfig extends cdktf.TerraformMetaArguments {
   */
   readonly architecture?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#confidential_vm_enabled SharedImage#confidential_vm_enabled}
+  */
+  readonly confidentialVmEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#confidential_vm_supported SharedImage#confidential_vm_supported}
+  */
+  readonly confidentialVmSupported?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#description SharedImage#description}
   */
   readonly description?: string;
@@ -526,7 +534,7 @@ export class SharedImage extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_shared_image',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.42.0',
+        providerVersion: '3.43.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -539,6 +547,8 @@ export class SharedImage extends cdktf.TerraformResource {
     });
     this._acceleratedNetworkSupportEnabled = config.acceleratedNetworkSupportEnabled;
     this._architecture = config.architecture;
+    this._confidentialVmEnabled = config.confidentialVmEnabled;
+    this._confidentialVmSupported = config.confidentialVmSupported;
     this._description = config.description;
     this._diskTypesNotAllowed = config.diskTypesNotAllowed;
     this._endOfLifeDate = config.endOfLifeDate;
@@ -598,6 +608,38 @@ export class SharedImage extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get architectureInput() {
     return this._architecture;
+  }
+
+  // confidential_vm_enabled - computed: false, optional: true, required: false
+  private _confidentialVmEnabled?: boolean | cdktf.IResolvable; 
+  public get confidentialVmEnabled() {
+    return this.getBooleanAttribute('confidential_vm_enabled');
+  }
+  public set confidentialVmEnabled(value: boolean | cdktf.IResolvable) {
+    this._confidentialVmEnabled = value;
+  }
+  public resetConfidentialVmEnabled() {
+    this._confidentialVmEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get confidentialVmEnabledInput() {
+    return this._confidentialVmEnabled;
+  }
+
+  // confidential_vm_supported - computed: false, optional: true, required: false
+  private _confidentialVmSupported?: boolean | cdktf.IResolvable; 
+  public get confidentialVmSupported() {
+    return this.getBooleanAttribute('confidential_vm_supported');
+  }
+  public set confidentialVmSupported(value: boolean | cdktf.IResolvable) {
+    this._confidentialVmSupported = value;
+  }
+  public resetConfidentialVmSupported() {
+    this._confidentialVmSupported = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get confidentialVmSupportedInput() {
+    return this._confidentialVmSupported;
   }
 
   // description - computed: false, optional: true, required: false
@@ -958,6 +1000,8 @@ export class SharedImage extends cdktf.TerraformResource {
     return {
       accelerated_network_support_enabled: cdktf.booleanToTerraform(this._acceleratedNetworkSupportEnabled),
       architecture: cdktf.stringToTerraform(this._architecture),
+      confidential_vm_enabled: cdktf.booleanToTerraform(this._confidentialVmEnabled),
+      confidential_vm_supported: cdktf.booleanToTerraform(this._confidentialVmSupported),
       description: cdktf.stringToTerraform(this._description),
       disk_types_not_allowed: cdktf.listMapper(cdktf.stringToTerraform, false)(this._diskTypesNotAllowed),
       end_of_life_date: cdktf.stringToTerraform(this._endOfLifeDate),

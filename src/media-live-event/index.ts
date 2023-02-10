@@ -43,6 +43,10 @@ export interface MediaLiveEventConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event#stream_options MediaLiveEvent#stream_options}
+  */
+  readonly streamOptions?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event#tags MediaLiveEvent#tags}
   */
   readonly tags?: { [key: string]: string };
@@ -1254,7 +1258,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_live_event',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.42.0',
+        providerVersion: '3.43.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1273,6 +1277,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
     this._mediaServicesAccountName = config.mediaServicesAccountName;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._streamOptions = config.streamOptions;
     this._tags = config.tags;
     this._transcriptionLanguages = config.transcriptionLanguages;
     this._useStaticHostname = config.useStaticHostname;
@@ -1401,6 +1406,22 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName;
+  }
+
+  // stream_options - computed: false, optional: true, required: false
+  private _streamOptions?: string[]; 
+  public get streamOptions() {
+    return this.getListAttribute('stream_options');
+  }
+  public set streamOptions(value: string[]) {
+    this._streamOptions = value;
+  }
+  public resetStreamOptions() {
+    this._streamOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamOptionsInput() {
+    return this._streamOptions;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -1542,6 +1563,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
       media_services_account_name: cdktf.stringToTerraform(this._mediaServicesAccountName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      stream_options: cdktf.listMapper(cdktf.stringToTerraform, false)(this._streamOptions),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       transcription_languages: cdktf.listMapper(cdktf.stringToTerraform, false)(this._transcriptionLanguages),
       use_static_hostname: cdktf.booleanToTerraform(this._useStaticHostname),

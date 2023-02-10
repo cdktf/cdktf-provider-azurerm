@@ -362,7 +362,7 @@ export function eventhubNamespaceNetworkRulesetsToTerraform(struct?: EventhubNam
   return {
     default_action: struct!.defaultAction === undefined ? null : cdktf.stringToTerraform(struct!.defaultAction),
     ip_rule: struct!.ipRule === undefined ? null : cdktf.listMapper(eventhubNamespaceNetworkRulesetsIpRuleToTerraform, false)(struct!.ipRule),
-    public_network_access_enabled: cdktf.booleanToTerraform(struct!.publicNetworkAccessEnabled),
+    public_network_access_enabled: struct!.publicNetworkAccessEnabled === undefined ? null : cdktf.booleanToTerraform(struct!.publicNetworkAccessEnabled),
     trusted_service_access_enabled: struct!.trustedServiceAccessEnabled === undefined ? null : cdktf.booleanToTerraform(struct!.trustedServiceAccessEnabled),
     virtual_network_rule: struct!.virtualNetworkRule === undefined ? null : cdktf.listMapper(eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform, false)(struct!.virtualNetworkRule),
   }
@@ -818,7 +818,7 @@ export class EventhubNamespace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_eventhub_namespace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.42.0',
+        providerVersion: '3.43.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

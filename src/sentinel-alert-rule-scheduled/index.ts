@@ -111,11 +111,135 @@ export interface SentinelAlertRuleScheduledConfig extends cdktf.TerraformMetaArg
   */
   readonly incidentConfiguration?: SentinelAlertRuleScheduledIncidentConfiguration;
   /**
+  * sentinel_entity_mapping block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled#sentinel_entity_mapping SentinelAlertRuleScheduled#sentinel_entity_mapping}
+  */
+  readonly sentinelEntityMapping?: SentinelAlertRuleScheduledSentinelEntityMapping[] | cdktf.IResolvable;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled#timeouts SentinelAlertRuleScheduled#timeouts}
   */
   readonly timeouts?: SentinelAlertRuleScheduledTimeouts;
+}
+export interface SentinelAlertRuleScheduledAlertDetailsOverrideDynamicProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled#name SentinelAlertRuleScheduled#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled#value SentinelAlertRuleScheduled#value}
+  */
+  readonly value: string;
+}
+
+export function sentinelAlertRuleScheduledAlertDetailsOverrideDynamicPropertyToTerraform(struct?: SentinelAlertRuleScheduledAlertDetailsOverrideDynamicProperty | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export class SentinelAlertRuleScheduledAlertDetailsOverrideDynamicPropertyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SentinelAlertRuleScheduledAlertDetailsOverrideDynamicProperty | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SentinelAlertRuleScheduledAlertDetailsOverrideDynamicProperty | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class SentinelAlertRuleScheduledAlertDetailsOverrideDynamicPropertyList extends cdktf.ComplexList {
+  public internalValue? : SentinelAlertRuleScheduledAlertDetailsOverrideDynamicProperty[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SentinelAlertRuleScheduledAlertDetailsOverrideDynamicPropertyOutputReference {
+    return new SentinelAlertRuleScheduledAlertDetailsOverrideDynamicPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface SentinelAlertRuleScheduledAlertDetailsOverride {
   /**
@@ -134,6 +258,12 @@ export interface SentinelAlertRuleScheduledAlertDetailsOverride {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled#tactics_column_name SentinelAlertRuleScheduled#tactics_column_name}
   */
   readonly tacticsColumnName?: string;
+  /**
+  * dynamic_property block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled#dynamic_property SentinelAlertRuleScheduled#dynamic_property}
+  */
+  readonly dynamicProperty?: SentinelAlertRuleScheduledAlertDetailsOverrideDynamicProperty[] | cdktf.IResolvable;
 }
 
 export function sentinelAlertRuleScheduledAlertDetailsOverrideToTerraform(struct?: SentinelAlertRuleScheduledAlertDetailsOverride | cdktf.IResolvable): any {
@@ -146,6 +276,7 @@ export function sentinelAlertRuleScheduledAlertDetailsOverrideToTerraform(struct
     display_name_format: cdktf.stringToTerraform(struct!.displayNameFormat),
     severity_column_name: cdktf.stringToTerraform(struct!.severityColumnName),
     tactics_column_name: cdktf.stringToTerraform(struct!.tacticsColumnName),
+    dynamic_property: cdktf.listMapper(sentinelAlertRuleScheduledAlertDetailsOverrideDynamicPropertyToTerraform, true)(struct!.dynamicProperty),
   }
 }
 
@@ -185,6 +316,10 @@ export class SentinelAlertRuleScheduledAlertDetailsOverrideOutputReference exten
       hasAnyValues = true;
       internalValueResult.tacticsColumnName = this._tacticsColumnName;
     }
+    if (this._dynamicProperty?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dynamicProperty = this._dynamicProperty?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -196,6 +331,7 @@ export class SentinelAlertRuleScheduledAlertDetailsOverrideOutputReference exten
       this._displayNameFormat = undefined;
       this._severityColumnName = undefined;
       this._tacticsColumnName = undefined;
+      this._dynamicProperty.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -208,6 +344,7 @@ export class SentinelAlertRuleScheduledAlertDetailsOverrideOutputReference exten
       this._displayNameFormat = value.displayNameFormat;
       this._severityColumnName = value.severityColumnName;
       this._tacticsColumnName = value.tacticsColumnName;
+      this._dynamicProperty.internalValue = value.dynamicProperty;
     }
   }
 
@@ -273,6 +410,22 @@ export class SentinelAlertRuleScheduledAlertDetailsOverrideOutputReference exten
   // Temporarily expose input value. Use with caution.
   public get tacticsColumnNameInput() {
     return this._tacticsColumnName;
+  }
+
+  // dynamic_property - computed: false, optional: true, required: false
+  private _dynamicProperty = new SentinelAlertRuleScheduledAlertDetailsOverrideDynamicPropertyList(this, "dynamic_property", false);
+  public get dynamicProperty() {
+    return this._dynamicProperty;
+  }
+  public putDynamicProperty(value: SentinelAlertRuleScheduledAlertDetailsOverrideDynamicProperty[] | cdktf.IResolvable) {
+    this._dynamicProperty.internalValue = value;
+  }
+  public resetDynamicProperty() {
+    this._dynamicProperty.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dynamicPropertyInput() {
+    return this._dynamicProperty.internalValue;
   }
 }
 
@@ -910,6 +1063,100 @@ export class SentinelAlertRuleScheduledIncidentConfigurationOutputReference exte
     return this._grouping.internalValue;
   }
 }
+export interface SentinelAlertRuleScheduledSentinelEntityMapping {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled#column_name SentinelAlertRuleScheduled#column_name}
+  */
+  readonly columnName: string;
+}
+
+export function sentinelAlertRuleScheduledSentinelEntityMappingToTerraform(struct?: SentinelAlertRuleScheduledSentinelEntityMapping | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    column_name: cdktf.stringToTerraform(struct!.columnName),
+  }
+}
+
+export class SentinelAlertRuleScheduledSentinelEntityMappingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SentinelAlertRuleScheduledSentinelEntityMapping | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._columnName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.columnName = this._columnName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SentinelAlertRuleScheduledSentinelEntityMapping | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._columnName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._columnName = value.columnName;
+    }
+  }
+
+  // column_name - computed: false, optional: false, required: true
+  private _columnName?: string; 
+  public get columnName() {
+    return this.getStringAttribute('column_name');
+  }
+  public set columnName(value: string) {
+    this._columnName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get columnNameInput() {
+    return this._columnName;
+  }
+}
+
+export class SentinelAlertRuleScheduledSentinelEntityMappingList extends cdktf.ComplexList {
+  public internalValue? : SentinelAlertRuleScheduledSentinelEntityMapping[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SentinelAlertRuleScheduledSentinelEntityMappingOutputReference {
+    return new SentinelAlertRuleScheduledSentinelEntityMappingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface SentinelAlertRuleScheduledTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled#create SentinelAlertRuleScheduled#create}
@@ -1093,7 +1340,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sentinel_alert_rule_scheduled',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.42.0',
+        providerVersion: '3.43.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1127,6 +1374,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
     this._entityMapping.internalValue = config.entityMapping;
     this._eventGrouping.internalValue = config.eventGrouping;
     this._incidentConfiguration.internalValue = config.incidentConfiguration;
+    this._sentinelEntityMapping.internalValue = config.sentinelEntityMapping;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1487,6 +1735,22 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
     return this._incidentConfiguration.internalValue;
   }
 
+  // sentinel_entity_mapping - computed: false, optional: true, required: false
+  private _sentinelEntityMapping = new SentinelAlertRuleScheduledSentinelEntityMappingList(this, "sentinel_entity_mapping", false);
+  public get sentinelEntityMapping() {
+    return this._sentinelEntityMapping;
+  }
+  public putSentinelEntityMapping(value: SentinelAlertRuleScheduledSentinelEntityMapping[] | cdktf.IResolvable) {
+    this._sentinelEntityMapping.internalValue = value;
+  }
+  public resetSentinelEntityMapping() {
+    this._sentinelEntityMapping.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sentinelEntityMappingInput() {
+    return this._sentinelEntityMapping.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new SentinelAlertRuleScheduledTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -1532,6 +1796,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
       entity_mapping: cdktf.listMapper(sentinelAlertRuleScheduledEntityMappingToTerraform, true)(this._entityMapping.internalValue),
       event_grouping: sentinelAlertRuleScheduledEventGroupingToTerraform(this._eventGrouping.internalValue),
       incident_configuration: sentinelAlertRuleScheduledIncidentConfigurationToTerraform(this._incidentConfiguration.internalValue),
+      sentinel_entity_mapping: cdktf.listMapper(sentinelAlertRuleScheduledSentinelEntityMappingToTerraform, true)(this._sentinelEntityMapping.internalValue),
       timeouts: sentinelAlertRuleScheduledTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

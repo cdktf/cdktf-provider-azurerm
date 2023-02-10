@@ -162,15 +162,15 @@ export function iothubEndpointToTerraform(struct?: IothubEndpoint | cdktf.IResol
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    authentication_type: cdktf.stringToTerraform(struct!.authenticationType),
+    authentication_type: struct!.authenticationType === undefined ? null : cdktf.stringToTerraform(struct!.authenticationType),
     batch_frequency_in_seconds: struct!.batchFrequencyInSeconds === undefined ? null : cdktf.numberToTerraform(struct!.batchFrequencyInSeconds),
     connection_string: struct!.connectionString === undefined ? null : cdktf.stringToTerraform(struct!.connectionString),
     container_name: struct!.containerName === undefined ? null : cdktf.stringToTerraform(struct!.containerName),
     encoding: struct!.encoding === undefined ? null : cdktf.stringToTerraform(struct!.encoding),
-    endpoint_uri: cdktf.stringToTerraform(struct!.endpointUri),
-    entity_path: cdktf.stringToTerraform(struct!.entityPath),
+    endpoint_uri: struct!.endpointUri === undefined ? null : cdktf.stringToTerraform(struct!.endpointUri),
+    entity_path: struct!.entityPath === undefined ? null : cdktf.stringToTerraform(struct!.entityPath),
     file_name_format: struct!.fileNameFormat === undefined ? null : cdktf.stringToTerraform(struct!.fileNameFormat),
-    identity_id: cdktf.stringToTerraform(struct!.identityId),
+    identity_id: struct!.identityId === undefined ? null : cdktf.stringToTerraform(struct!.identityId),
     max_chunk_size_in_bytes: struct!.maxChunkSizeInBytes === undefined ? null : cdktf.numberToTerraform(struct!.maxChunkSizeInBytes),
     name: struct!.name === undefined ? null : cdktf.stringToTerraform(struct!.name),
     resource_group_name: struct!.resourceGroupName === undefined ? null : cdktf.stringToTerraform(struct!.resourceGroupName),
@@ -2316,7 +2316,7 @@ export class Iothub extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_iothub',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.42.0',
+        providerVersion: '3.43.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

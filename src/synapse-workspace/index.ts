@@ -285,9 +285,9 @@ export function synapseWorkspaceSqlAadAdminToTerraform(struct?: SynapseWorkspace
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    login: cdktf.stringToTerraform(struct!.login),
-    object_id: cdktf.stringToTerraform(struct!.objectId),
-    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+    login: struct!.login === undefined ? null : cdktf.stringToTerraform(struct!.login),
+    object_id: struct!.objectId === undefined ? null : cdktf.stringToTerraform(struct!.objectId),
+    tenant_id: struct!.tenantId === undefined ? null : cdktf.stringToTerraform(struct!.tenantId),
   }
 }
 
@@ -1186,7 +1186,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_synapse_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.42.0',
+        providerVersion: '3.43.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
