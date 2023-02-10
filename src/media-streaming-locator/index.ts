@@ -24,6 +24,10 @@ export interface MediaStreamingLocatorConfig extends cdktf.TerraformMetaArgument
   */
   readonly endTime?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_locator#filter_names MediaStreamingLocator#filter_names}
+  */
+  readonly filterNames?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_locator#id MediaStreamingLocator#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -428,7 +432,7 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_streaming_locator',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.42.0',
+        providerVersion: '3.43.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -443,6 +447,7 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
     this._assetName = config.assetName;
     this._defaultContentKeyPolicyName = config.defaultContentKeyPolicyName;
     this._endTime = config.endTime;
+    this._filterNames = config.filterNames;
     this._id = config.id;
     this._mediaServicesAccountName = config.mediaServicesAccountName;
     this._name = config.name;
@@ -517,6 +522,22 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get endTimeInput() {
     return this._endTime;
+  }
+
+  // filter_names - computed: false, optional: true, required: false
+  private _filterNames?: string[]; 
+  public get filterNames() {
+    return this.getListAttribute('filter_names');
+  }
+  public set filterNames(value: string[]) {
+    this._filterNames = value;
+  }
+  public resetFilterNames() {
+    this._filterNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterNamesInput() {
+    return this._filterNames;
   }
 
   // id - computed: true, optional: true, required: false
@@ -661,6 +682,7 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
       asset_name: cdktf.stringToTerraform(this._assetName),
       default_content_key_policy_name: cdktf.stringToTerraform(this._defaultContentKeyPolicyName),
       end_time: cdktf.stringToTerraform(this._endTime),
+      filter_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._filterNames),
       id: cdktf.stringToTerraform(this._id),
       media_services_account_name: cdktf.stringToTerraform(this._mediaServicesAccountName),
       name: cdktf.stringToTerraform(this._name),

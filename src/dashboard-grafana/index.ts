@@ -55,6 +55,12 @@ export interface DashboardGrafanaConfig extends cdktf.TerraformMetaArguments {
   */
   readonly zoneRedundancyEnabled?: boolean | cdktf.IResolvable;
   /**
+  * azure_monitor_workspace_integrations block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard_grafana#azure_monitor_workspace_integrations DashboardGrafana#azure_monitor_workspace_integrations}
+  */
+  readonly azureMonitorWorkspaceIntegrations?: DashboardGrafanaAzureMonitorWorkspaceIntegrations[] | cdktf.IResolvable;
+  /**
   * identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard_grafana#identity DashboardGrafana#identity}
@@ -66,6 +72,100 @@ export interface DashboardGrafanaConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard_grafana#timeouts DashboardGrafana#timeouts}
   */
   readonly timeouts?: DashboardGrafanaTimeouts;
+}
+export interface DashboardGrafanaAzureMonitorWorkspaceIntegrations {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard_grafana#resource_id DashboardGrafana#resource_id}
+  */
+  readonly resourceId: string;
+}
+
+export function dashboardGrafanaAzureMonitorWorkspaceIntegrationsToTerraform(struct?: DashboardGrafanaAzureMonitorWorkspaceIntegrations | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    resource_id: cdktf.stringToTerraform(struct!.resourceId),
+  }
+}
+
+export class DashboardGrafanaAzureMonitorWorkspaceIntegrationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DashboardGrafanaAzureMonitorWorkspaceIntegrations | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._resourceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceId = this._resourceId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DashboardGrafanaAzureMonitorWorkspaceIntegrations | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._resourceId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._resourceId = value.resourceId;
+    }
+  }
+
+  // resource_id - computed: false, optional: false, required: true
+  private _resourceId?: string; 
+  public get resourceId() {
+    return this.getStringAttribute('resource_id');
+  }
+  public set resourceId(value: string) {
+    this._resourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceIdInput() {
+    return this._resourceId;
+  }
+}
+
+export class DashboardGrafanaAzureMonitorWorkspaceIntegrationsList extends cdktf.ComplexList {
+  public internalValue? : DashboardGrafanaAzureMonitorWorkspaceIntegrations[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DashboardGrafanaAzureMonitorWorkspaceIntegrationsOutputReference {
+    return new DashboardGrafanaAzureMonitorWorkspaceIntegrationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface DashboardGrafanaIdentity {
   /**
@@ -322,7 +422,7 @@ export class DashboardGrafana extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_dashboard_grafana',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.42.0',
+        providerVersion: '3.43.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -344,6 +444,7 @@ export class DashboardGrafana extends cdktf.TerraformResource {
     this._sku = config.sku;
     this._tags = config.tags;
     this._zoneRedundancyEnabled = config.zoneRedundancyEnabled;
+    this._azureMonitorWorkspaceIntegrations.internalValue = config.azureMonitorWorkspaceIntegrations;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -534,6 +635,22 @@ export class DashboardGrafana extends cdktf.TerraformResource {
     return this._zoneRedundancyEnabled;
   }
 
+  // azure_monitor_workspace_integrations - computed: false, optional: true, required: false
+  private _azureMonitorWorkspaceIntegrations = new DashboardGrafanaAzureMonitorWorkspaceIntegrationsList(this, "azure_monitor_workspace_integrations", false);
+  public get azureMonitorWorkspaceIntegrations() {
+    return this._azureMonitorWorkspaceIntegrations;
+  }
+  public putAzureMonitorWorkspaceIntegrations(value: DashboardGrafanaAzureMonitorWorkspaceIntegrations[] | cdktf.IResolvable) {
+    this._azureMonitorWorkspaceIntegrations.internalValue = value;
+  }
+  public resetAzureMonitorWorkspaceIntegrations() {
+    this._azureMonitorWorkspaceIntegrations.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureMonitorWorkspaceIntegrationsInput() {
+    return this._azureMonitorWorkspaceIntegrations.internalValue;
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity = new DashboardGrafanaIdentityOutputReference(this, "identity");
   public get identity() {
@@ -583,6 +700,7 @@ export class DashboardGrafana extends cdktf.TerraformResource {
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zone_redundancy_enabled: cdktf.booleanToTerraform(this._zoneRedundancyEnabled),
+      azure_monitor_workspace_integrations: cdktf.listMapper(dashboardGrafanaAzureMonitorWorkspaceIntegrationsToTerraform, true)(this._azureMonitorWorkspaceIntegrations.internalValue),
       identity: dashboardGrafanaIdentityToTerraform(this._identity.internalValue),
       timeouts: dashboardGrafanaTimeoutsToTerraform(this._timeouts.internalValue),
     };

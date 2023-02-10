@@ -35,7 +35,7 @@ export interface DatabricksAccessConnectorConfig extends cdktf.TerraformMetaArgu
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_access_connector#identity DatabricksAccessConnector#identity}
   */
-  readonly identity: DatabricksAccessConnectorIdentity;
+  readonly identity?: DatabricksAccessConnectorIdentity;
   /**
   * timeouts block
   * 
@@ -298,7 +298,7 @@ export class DatabricksAccessConnector extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_databricks_access_connector',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.42.0',
+        providerVersion: '3.43.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -393,13 +393,16 @@ export class DatabricksAccessConnector extends cdktf.TerraformResource {
     return this._tags;
   }
 
-  // identity - computed: false, optional: false, required: true
+  // identity - computed: false, optional: true, required: false
   private _identity = new DatabricksAccessConnectorIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
   public putIdentity(value: DatabricksAccessConnectorIdentity) {
     this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {

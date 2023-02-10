@@ -37,6 +37,10 @@ export interface StorageBlobInventoryPolicyRulesFilter {
   */
   readonly blobTypes: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy#exclude_prefixes StorageBlobInventoryPolicy#exclude_prefixes}
+  */
+  readonly excludePrefixes?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy#include_blob_versions StorageBlobInventoryPolicy#include_blob_versions}
   */
   readonly includeBlobVersions?: boolean | cdktf.IResolvable;
@@ -61,6 +65,7 @@ export function storageBlobInventoryPolicyRulesFilterToTerraform(struct?: Storag
   }
   return {
     blob_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.blobTypes),
+    exclude_prefixes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludePrefixes),
     include_blob_versions: cdktf.booleanToTerraform(struct!.includeBlobVersions),
     include_deleted: cdktf.booleanToTerraform(struct!.includeDeleted),
     include_snapshots: cdktf.booleanToTerraform(struct!.includeSnapshots),
@@ -86,6 +91,10 @@ export class StorageBlobInventoryPolicyRulesFilterOutputReference extends cdktf.
       hasAnyValues = true;
       internalValueResult.blobTypes = this._blobTypes;
     }
+    if (this._excludePrefixes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludePrefixes = this._excludePrefixes;
+    }
     if (this._includeBlobVersions !== undefined) {
       hasAnyValues = true;
       internalValueResult.includeBlobVersions = this._includeBlobVersions;
@@ -109,6 +118,7 @@ export class StorageBlobInventoryPolicyRulesFilterOutputReference extends cdktf.
     if (value === undefined) {
       this.isEmptyObject = false;
       this._blobTypes = undefined;
+      this._excludePrefixes = undefined;
       this._includeBlobVersions = undefined;
       this._includeDeleted = undefined;
       this._includeSnapshots = undefined;
@@ -117,6 +127,7 @@ export class StorageBlobInventoryPolicyRulesFilterOutputReference extends cdktf.
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._blobTypes = value.blobTypes;
+      this._excludePrefixes = value.excludePrefixes;
       this._includeBlobVersions = value.includeBlobVersions;
       this._includeDeleted = value.includeDeleted;
       this._includeSnapshots = value.includeSnapshots;
@@ -135,6 +146,22 @@ export class StorageBlobInventoryPolicyRulesFilterOutputReference extends cdktf.
   // Temporarily expose input value. Use with caution.
   public get blobTypesInput() {
     return this._blobTypes;
+  }
+
+  // exclude_prefixes - computed: false, optional: true, required: false
+  private _excludePrefixes?: string[]; 
+  public get excludePrefixes() {
+    return cdktf.Fn.tolist(this.getListAttribute('exclude_prefixes'));
+  }
+  public set excludePrefixes(value: string[]) {
+    this._excludePrefixes = value;
+  }
+  public resetExcludePrefixes() {
+    this._excludePrefixes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludePrefixesInput() {
+    return this._excludePrefixes;
   }
 
   // include_blob_versions - computed: false, optional: true, required: false
@@ -627,7 +654,7 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_blob_inventory_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.42.0',
+        providerVersion: '3.43.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

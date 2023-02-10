@@ -47,6 +47,10 @@ export interface MediaLiveEventOutputConfig extends cdktf.TerraformMetaArguments
   */
   readonly outputSnapTimeInSeconds?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output#rewind_window_duration MediaLiveEventOutput#rewind_window_duration}
+  */
+  readonly rewindWindowDuration?: string;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output#timeouts MediaLiveEventOutput#timeouts}
@@ -236,7 +240,7 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_live_event_output',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.42.0',
+        providerVersion: '3.43.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -256,6 +260,7 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
     this._manifestName = config.manifestName;
     this._name = config.name;
     this._outputSnapTimeInSeconds = config.outputSnapTimeInSeconds;
+    this._rewindWindowDuration = config.rewindWindowDuration;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -395,6 +400,22 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
     return this._outputSnapTimeInSeconds;
   }
 
+  // rewind_window_duration - computed: false, optional: true, required: false
+  private _rewindWindowDuration?: string; 
+  public get rewindWindowDuration() {
+    return this.getStringAttribute('rewind_window_duration');
+  }
+  public set rewindWindowDuration(value: string) {
+    this._rewindWindowDuration = value;
+  }
+  public resetRewindWindowDuration() {
+    this._rewindWindowDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rewindWindowDurationInput() {
+    return this._rewindWindowDuration;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new MediaLiveEventOutputTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -426,6 +447,7 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
       manifest_name: cdktf.stringToTerraform(this._manifestName),
       name: cdktf.stringToTerraform(this._name),
       output_snap_time_in_seconds: cdktf.numberToTerraform(this._outputSnapTimeInSeconds),
+      rewind_window_duration: cdktf.stringToTerraform(this._rewindWindowDuration),
       timeouts: mediaLiveEventOutputTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

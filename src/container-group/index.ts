@@ -130,8 +130,8 @@ export function containerGroupExposedPortToTerraform(struct?: ContainerGroupExpo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    port: cdktf.numberToTerraform(struct!.port),
-    protocol: cdktf.stringToTerraform(struct!.protocol),
+    port: struct!.port === undefined ? null : cdktf.numberToTerraform(struct!.port),
+    protocol: struct!.protocol === undefined ? null : cdktf.stringToTerraform(struct!.protocol),
   }
 }
 
@@ -3691,7 +3691,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.42.0',
+        providerVersion: '3.43.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -122,9 +122,9 @@ export function containerRegistryEncryptionToTerraform(struct?: ContainerRegistr
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    enabled: cdktf.booleanToTerraform(struct!.enabled),
-    identity_client_id: cdktf.stringToTerraform(struct!.identityClientId),
-    key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
+    enabled: struct!.enabled === undefined ? null : cdktf.booleanToTerraform(struct!.enabled),
+    identity_client_id: struct!.identityClientId === undefined ? null : cdktf.stringToTerraform(struct!.identityClientId),
+    key_vault_key_id: struct!.keyVaultKeyId === undefined ? null : cdktf.stringToTerraform(struct!.keyVaultKeyId),
   }
 }
 
@@ -1329,7 +1329,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_registry',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.42.0',
+        providerVersion: '3.43.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
