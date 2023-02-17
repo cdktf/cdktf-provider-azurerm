@@ -388,7 +388,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lb_backend_address_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.43.0',
+        providerVersion: '3.44.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

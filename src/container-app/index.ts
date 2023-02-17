@@ -812,11 +812,17 @@ export class ContainerAppIngressOutputReference extends cdktf.ComplexObject {
 }
 export interface ContainerAppRegistry {
   /**
+  * ID of the System or User Managed Identity used to pull images from the Container Registry
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_app#identity ContainerApp#identity}
+  */
+  readonly identity?: string;
+  /**
   * The name of the Secret Reference containing the password value for this user on the Container Registry.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_app#password_secret_name ContainerApp#password_secret_name}
   */
-  readonly passwordSecretName: string;
+  readonly passwordSecretName?: string;
   /**
   * The hostname for the Container Registry.
   * 
@@ -828,7 +834,7 @@ export interface ContainerAppRegistry {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_app#username ContainerApp#username}
   */
-  readonly username: string;
+  readonly username?: string;
 }
 
 export function containerAppRegistryToTerraform(struct?: ContainerAppRegistry | cdktf.IResolvable): any {
@@ -837,6 +843,7 @@ export function containerAppRegistryToTerraform(struct?: ContainerAppRegistry | 
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    identity: cdktf.stringToTerraform(struct!.identity),
     password_secret_name: cdktf.stringToTerraform(struct!.passwordSecretName),
     server: cdktf.stringToTerraform(struct!.server),
     username: cdktf.stringToTerraform(struct!.username),
@@ -863,6 +870,10 @@ export class ContainerAppRegistryOutputReference extends cdktf.ComplexObject {
     }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._identity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identity = this._identity;
+    }
     if (this._passwordSecretName !== undefined) {
       hasAnyValues = true;
       internalValueResult.passwordSecretName = this._passwordSecretName;
@@ -882,6 +893,7 @@ export class ContainerAppRegistryOutputReference extends cdktf.ComplexObject {
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
+      this._identity = undefined;
       this._passwordSecretName = undefined;
       this._server = undefined;
       this._username = undefined;
@@ -893,19 +905,39 @@ export class ContainerAppRegistryOutputReference extends cdktf.ComplexObject {
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
+      this._identity = value.identity;
       this._passwordSecretName = value.passwordSecretName;
       this._server = value.server;
       this._username = value.username;
     }
   }
 
-  // password_secret_name - computed: false, optional: false, required: true
+  // identity - computed: false, optional: true, required: false
+  private _identity?: string; 
+  public get identity() {
+    return this.getStringAttribute('identity');
+  }
+  public set identity(value: string) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity;
+  }
+
+  // password_secret_name - computed: false, optional: true, required: false
   private _passwordSecretName?: string; 
   public get passwordSecretName() {
     return this.getStringAttribute('password_secret_name');
   }
   public set passwordSecretName(value: string) {
     this._passwordSecretName = value;
+  }
+  public resetPasswordSecretName() {
+    this._passwordSecretName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get passwordSecretNameInput() {
@@ -925,13 +957,16 @@ export class ContainerAppRegistryOutputReference extends cdktf.ComplexObject {
     return this._server;
   }
 
-  // username - computed: false, optional: false, required: true
+  // username - computed: false, optional: true, required: false
   private _username?: string; 
   public get username() {
     return this.getStringAttribute('username');
   }
   public set username(value: string) {
     this._username = value;
+  }
+  public resetUsername() {
+    this._username = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
@@ -2747,7 +2782,7 @@ export interface ContainerAppTemplateContainer {
   readonly volumeMounts?: ContainerAppTemplateContainerVolumeMounts[] | cdktf.IResolvable;
 }
 
-export function containerAppTemplateContainerToTerraform(struct?: ContainerAppTemplateContainerOutputReference | ContainerAppTemplateContainer): any {
+export function containerAppTemplateContainerToTerraform(struct?: ContainerAppTemplateContainer | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2769,16 +2804,22 @@ export function containerAppTemplateContainerToTerraform(struct?: ContainerAppTe
 
 export class ContainerAppTemplateContainerOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): ContainerAppTemplateContainer | undefined {
+  public get internalValue(): ContainerAppTemplateContainer | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._args !== undefined) {
@@ -2828,9 +2869,10 @@ export class ContainerAppTemplateContainerOutputReference extends cdktf.ComplexO
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ContainerAppTemplateContainer | undefined) {
+  public set internalValue(value: ContainerAppTemplateContainer | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._args = undefined;
       this._command = undefined;
       this._cpu = undefined;
@@ -2843,8 +2885,13 @@ export class ContainerAppTemplateContainerOutputReference extends cdktf.ComplexO
       this._startupProbe.internalValue = undefined;
       this._volumeMounts.internalValue = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._args = value.args;
       this._command = value.command;
       this._cpu = value.cpu;
@@ -3028,6 +3075,26 @@ export class ContainerAppTemplateContainerOutputReference extends cdktf.ComplexO
     return this._volumeMounts.internalValue;
   }
 }
+
+export class ContainerAppTemplateContainerList extends cdktf.ComplexList {
+  public internalValue? : ContainerAppTemplateContainer[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerAppTemplateContainerOutputReference {
+    return new ContainerAppTemplateContainerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerAppTemplateVolume {
   /**
   * The name of the volume.
@@ -3206,7 +3273,7 @@ export interface ContainerAppTemplate {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_app#container ContainerApp#container}
   */
-  readonly container: ContainerAppTemplateContainer;
+  readonly container: ContainerAppTemplateContainer[] | cdktf.IResolvable;
   /**
   * volume block
   * 
@@ -3224,7 +3291,7 @@ export function containerAppTemplateToTerraform(struct?: ContainerAppTemplateOut
     max_replicas: cdktf.numberToTerraform(struct!.maxReplicas),
     min_replicas: cdktf.numberToTerraform(struct!.minReplicas),
     revision_suffix: cdktf.stringToTerraform(struct!.revisionSuffix),
-    container: containerAppTemplateContainerToTerraform(struct!.container),
+    container: cdktf.listMapper(containerAppTemplateContainerToTerraform, true)(struct!.container),
     volume: cdktf.listMapper(containerAppTemplateVolumeToTerraform, true)(struct!.volume),
   }
 }
@@ -3334,11 +3401,11 @@ export class ContainerAppTemplateOutputReference extends cdktf.ComplexObject {
   }
 
   // container - computed: false, optional: false, required: true
-  private _container = new ContainerAppTemplateContainerOutputReference(this, "container");
+  private _container = new ContainerAppTemplateContainerList(this, "container", false);
   public get container() {
     return this._container;
   }
-  public putContainer(value: ContainerAppTemplateContainer) {
+  public putContainer(value: ContainerAppTemplateContainer[] | cdktf.IResolvable) {
     this._container.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -3545,7 +3612,7 @@ export class ContainerApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.43.0',
+        providerVersion: '3.44.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

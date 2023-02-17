@@ -189,7 +189,7 @@ export class SentinelDataConnectorAzureAdvancedThreatProtection extends cdktf.Te
       terraformResourceType: 'azurerm_sentinel_data_connector_azure_advanced_threat_protection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.43.0',
+        providerVersion: '3.44.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -20,6 +20,10 @@ export interface DataFactoryLinkedServiceAzureBlobStorageConfig extends cdktf.Te
   */
   readonly connectionString?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage#connection_string_insecure DataFactoryLinkedServiceAzureBlobStorage#connection_string_insecure}
+  */
+  readonly connectionStringInsecure?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage#data_factory_id DataFactoryLinkedServiceAzureBlobStorage#data_factory_id}
   */
   readonly dataFactoryId: string;
@@ -448,7 +452,7 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
       terraformResourceType: 'azurerm_data_factory_linked_service_azure_blob_storage',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.43.0',
+        providerVersion: '3.44.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -462,6 +466,7 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
     this._additionalProperties = config.additionalProperties;
     this._annotations = config.annotations;
     this._connectionString = config.connectionString;
+    this._connectionStringInsecure = config.connectionStringInsecure;
     this._dataFactoryId = config.dataFactoryId;
     this._description = config.description;
     this._id = config.id;
@@ -530,6 +535,22 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
     return this._connectionString;
+  }
+
+  // connection_string_insecure - computed: false, optional: true, required: false
+  private _connectionStringInsecure?: string; 
+  public get connectionStringInsecure() {
+    return this.getStringAttribute('connection_string_insecure');
+  }
+  public set connectionStringInsecure(value: string) {
+    this._connectionStringInsecure = value;
+  }
+  public resetConnectionStringInsecure() {
+    this._connectionStringInsecure = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionStringInsecureInput() {
+    return this._connectionStringInsecure;
   }
 
   // data_factory_id - computed: false, optional: false, required: true
@@ -791,6 +812,7 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
       additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._annotations),
       connection_string: cdktf.stringToTerraform(this._connectionString),
+      connection_string_insecure: cdktf.stringToTerraform(this._connectionStringInsecure),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
