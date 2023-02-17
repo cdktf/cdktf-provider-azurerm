@@ -19,6 +19,10 @@ export interface SentinelDataConnectorThreatIntelligenceConfig extends cdktf.Ter
   */
   readonly logAnalyticsWorkspaceId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_threat_intelligence#lookback_date SentinelDataConnectorThreatIntelligence#lookback_date}
+  */
+  readonly lookbackDate?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_threat_intelligence#name SentinelDataConnectorThreatIntelligence#name}
   */
   readonly name: string;
@@ -189,7 +193,7 @@ export class SentinelDataConnectorThreatIntelligence extends cdktf.TerraformReso
       terraformResourceType: 'azurerm_sentinel_data_connector_threat_intelligence',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.43.0',
+        providerVersion: '3.44.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -202,6 +206,7 @@ export class SentinelDataConnectorThreatIntelligence extends cdktf.TerraformReso
     });
     this._id = config.id;
     this._logAnalyticsWorkspaceId = config.logAnalyticsWorkspaceId;
+    this._lookbackDate = config.lookbackDate;
     this._name = config.name;
     this._tenantId = config.tenantId;
     this._timeouts.internalValue = config.timeouts;
@@ -238,6 +243,22 @@ export class SentinelDataConnectorThreatIntelligence extends cdktf.TerraformReso
   // Temporarily expose input value. Use with caution.
   public get logAnalyticsWorkspaceIdInput() {
     return this._logAnalyticsWorkspaceId;
+  }
+
+  // lookback_date - computed: false, optional: true, required: false
+  private _lookbackDate?: string; 
+  public get lookbackDate() {
+    return this.getStringAttribute('lookback_date');
+  }
+  public set lookbackDate(value: string) {
+    this._lookbackDate = value;
+  }
+  public resetLookbackDate() {
+    this._lookbackDate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lookbackDateInput() {
+    return this._lookbackDate;
   }
 
   // name - computed: false, optional: false, required: true
@@ -293,6 +314,7 @@ export class SentinelDataConnectorThreatIntelligence extends cdktf.TerraformReso
     return {
       id: cdktf.stringToTerraform(this._id),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
+      lookback_date: cdktf.stringToTerraform(this._lookbackDate),
       name: cdktf.stringToTerraform(this._name),
       tenant_id: cdktf.stringToTerraform(this._tenantId),
       timeouts: sentinelDataConnectorThreatIntelligenceTimeoutsToTerraform(this._timeouts.internalValue),

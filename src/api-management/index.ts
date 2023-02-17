@@ -91,6 +91,12 @@ export interface ApiManagementConfig extends cdktf.TerraformMetaArguments {
   */
   readonly certificate?: ApiManagementCertificate[] | cdktf.IResolvable;
   /**
+  * delegation block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#delegation ApiManagement#delegation}
+  */
+  readonly delegation?: ApiManagementDelegation;
+  /**
   * hostname_configuration block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#hostname_configuration ApiManagement#hostname_configuration}
@@ -735,6 +741,152 @@ export class ApiManagementCertificateList extends cdktf.ComplexList {
   */
   public get(index: number): ApiManagementCertificateOutputReference {
     return new ApiManagementCertificateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ApiManagementDelegation {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#subscriptions_enabled ApiManagement#subscriptions_enabled}
+  */
+  readonly subscriptionsEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#url ApiManagement#url}
+  */
+  readonly url?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#user_registration_enabled ApiManagement#user_registration_enabled}
+  */
+  readonly userRegistrationEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#validation_key ApiManagement#validation_key}
+  */
+  readonly validationKey?: string;
+}
+
+export function apiManagementDelegationToTerraform(struct?: ApiManagementDelegationOutputReference | ApiManagementDelegation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    subscriptions_enabled: cdktf.booleanToTerraform(struct!.subscriptionsEnabled),
+    url: cdktf.stringToTerraform(struct!.url),
+    user_registration_enabled: cdktf.booleanToTerraform(struct!.userRegistrationEnabled),
+    validation_key: cdktf.stringToTerraform(struct!.validationKey),
+  }
+}
+
+export class ApiManagementDelegationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ApiManagementDelegation | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._subscriptionsEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subscriptionsEnabled = this._subscriptionsEnabled;
+    }
+    if (this._url !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.url = this._url;
+    }
+    if (this._userRegistrationEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userRegistrationEnabled = this._userRegistrationEnabled;
+    }
+    if (this._validationKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.validationKey = this._validationKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementDelegation | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._subscriptionsEnabled = undefined;
+      this._url = undefined;
+      this._userRegistrationEnabled = undefined;
+      this._validationKey = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._subscriptionsEnabled = value.subscriptionsEnabled;
+      this._url = value.url;
+      this._userRegistrationEnabled = value.userRegistrationEnabled;
+      this._validationKey = value.validationKey;
+    }
+  }
+
+  // subscriptions_enabled - computed: false, optional: true, required: false
+  private _subscriptionsEnabled?: boolean | cdktf.IResolvable; 
+  public get subscriptionsEnabled() {
+    return this.getBooleanAttribute('subscriptions_enabled');
+  }
+  public set subscriptionsEnabled(value: boolean | cdktf.IResolvable) {
+    this._subscriptionsEnabled = value;
+  }
+  public resetSubscriptionsEnabled() {
+    this._subscriptionsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subscriptionsEnabledInput() {
+    return this._subscriptionsEnabled;
+  }
+
+  // url - computed: false, optional: true, required: false
+  private _url?: string; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string) {
+    this._url = value;
+  }
+  public resetUrl() {
+    this._url = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url;
+  }
+
+  // user_registration_enabled - computed: false, optional: true, required: false
+  private _userRegistrationEnabled?: boolean | cdktf.IResolvable; 
+  public get userRegistrationEnabled() {
+    return this.getBooleanAttribute('user_registration_enabled');
+  }
+  public set userRegistrationEnabled(value: boolean | cdktf.IResolvable) {
+    this._userRegistrationEnabled = value;
+  }
+  public resetUserRegistrationEnabled() {
+    this._userRegistrationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userRegistrationEnabledInput() {
+    return this._userRegistrationEnabled;
+  }
+
+  // validation_key - computed: false, optional: true, required: false
+  private _validationKey?: string; 
+  public get validationKey() {
+    return this.getStringAttribute('validation_key');
+  }
+  public set validationKey(value: string) {
+    this._validationKey = value;
+  }
+  public resetValidationKey() {
+    this._validationKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get validationKeyInput() {
+    return this._validationKey;
   }
 }
 export interface ApiManagementHostnameConfigurationDeveloperPortal {
@@ -3463,7 +3615,7 @@ export class ApiManagement extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.43.0',
+        providerVersion: '3.44.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -3493,6 +3645,7 @@ export class ApiManagement extends cdktf.TerraformResource {
     this._zones = config.zones;
     this._additionalLocation.internalValue = config.additionalLocation;
     this._certificate.internalValue = config.certificate;
+    this._delegation.internalValue = config.delegation;
     this._hostnameConfiguration.internalValue = config.hostnameConfiguration;
     this._identity.internalValue = config.identity;
     this._protocols.internalValue = config.protocols;
@@ -3834,6 +3987,22 @@ export class ApiManagement extends cdktf.TerraformResource {
     return this._certificate.internalValue;
   }
 
+  // delegation - computed: false, optional: true, required: false
+  private _delegation = new ApiManagementDelegationOutputReference(this, "delegation");
+  public get delegation() {
+    return this._delegation;
+  }
+  public putDelegation(value: ApiManagementDelegation) {
+    this._delegation.internalValue = value;
+  }
+  public resetDelegation() {
+    this._delegation.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get delegationInput() {
+    return this._delegation.internalValue;
+  }
+
   // hostname_configuration - computed: false, optional: true, required: false
   private _hostnameConfiguration = new ApiManagementHostnameConfigurationOutputReference(this, "hostname_configuration");
   public get hostnameConfiguration() {
@@ -4003,6 +4172,7 @@ export class ApiManagement extends cdktf.TerraformResource {
       zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
       additional_location: cdktf.listMapper(apiManagementAdditionalLocationToTerraform, true)(this._additionalLocation.internalValue),
       certificate: cdktf.listMapper(apiManagementCertificateToTerraform, true)(this._certificate.internalValue),
+      delegation: apiManagementDelegationToTerraform(this._delegation.internalValue),
       hostname_configuration: apiManagementHostnameConfigurationToTerraform(this._hostnameConfiguration.internalValue),
       identity: apiManagementIdentityToTerraform(this._identity.internalValue),
       protocols: apiManagementProtocolsToTerraform(this._protocols.internalValue),

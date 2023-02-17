@@ -244,7 +244,7 @@ export class MachineLearningDatastoreDatalakeGen2 extends cdktf.TerraformResourc
       terraformResourceType: 'azurerm_machine_learning_datastore_datalake_gen2',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.43.0',
+        providerVersion: '3.44.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

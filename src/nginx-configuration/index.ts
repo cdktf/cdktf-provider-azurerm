@@ -31,7 +31,7 @@ export interface NginxConfigurationConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nginx_configuration#config_file NginxConfiguration#config_file}
   */
-  readonly configFile: NginxConfigurationConfigFile[] | cdktf.IResolvable;
+  readonly configFile?: NginxConfigurationConfigFile[] | cdktf.IResolvable;
   /**
   * protected_file block
   * 
@@ -464,7 +464,7 @@ export class NginxConfiguration extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_nginx_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.43.0',
+        providerVersion: '3.44.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -546,13 +546,16 @@ export class NginxConfiguration extends cdktf.TerraformResource {
     return this._rootFile;
   }
 
-  // config_file - computed: false, optional: false, required: true
+  // config_file - computed: false, optional: true, required: false
   private _configFile = new NginxConfigurationConfigFileList(this, "config_file", true);
   public get configFile() {
     return this._configFile;
   }
   public putConfigFile(value: NginxConfigurationConfigFile[] | cdktf.IResolvable) {
     this._configFile.internalValue = value;
+  }
+  public resetConfigFile() {
+    this._configFile.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get configFileInput() {

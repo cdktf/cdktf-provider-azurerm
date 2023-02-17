@@ -212,7 +212,7 @@ export class SubnetNetworkSecurityGroupAssociation extends cdktf.TerraformResour
       terraformResourceType: 'azurerm_subnet_network_security_group_association',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.43.0',
+        providerVersion: '3.44.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

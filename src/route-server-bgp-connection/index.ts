@@ -193,7 +193,7 @@ export class RouteServerBgpConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_route_server_bgp_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.43.0',
+        providerVersion: '3.44.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

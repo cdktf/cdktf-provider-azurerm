@@ -12,6 +12,10 @@ export interface ExpressRoutePortConfig extends cdktf.TerraformMetaArguments {
   */
   readonly bandwidthInGbps: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#billing_type ExpressRoutePort#billing_type}
+  */
+  readonly billingType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#encapsulation ExpressRoutePort#encapsulation}
   */
   readonly encapsulation: string;
@@ -688,7 +692,7 @@ export class ExpressRoutePort extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_express_route_port',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.43.0',
+        providerVersion: '3.44.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -700,6 +704,7 @@ export class ExpressRoutePort extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._bandwidthInGbps = config.bandwidthInGbps;
+    this._billingType = config.billingType;
     this._encapsulation = config.encapsulation;
     this._id = config.id;
     this._location = config.location;
@@ -728,6 +733,22 @@ export class ExpressRoutePort extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get bandwidthInGbpsInput() {
     return this._bandwidthInGbps;
+  }
+
+  // billing_type - computed: true, optional: true, required: false
+  private _billingType?: string; 
+  public get billingType() {
+    return this.getStringAttribute('billing_type');
+  }
+  public set billingType(value: string) {
+    this._billingType = value;
+  }
+  public resetBillingType() {
+    this._billingType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get billingTypeInput() {
+    return this._billingType;
   }
 
   // encapsulation - computed: false, optional: false, required: true
@@ -913,6 +934,7 @@ export class ExpressRoutePort extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bandwidth_in_gbps: cdktf.numberToTerraform(this._bandwidthInGbps),
+      billing_type: cdktf.stringToTerraform(this._billingType),
       encapsulation: cdktf.stringToTerraform(this._encapsulation),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),

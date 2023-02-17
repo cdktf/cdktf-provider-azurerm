@@ -12,6 +12,12 @@ export interface AzurermProviderConfig {
   */
   readonly auxiliaryTenantIds?: string[];
   /**
+  * Base64 encoded PKCS#12 certificate bundle to use when authenticating as a Service Principal using a Client Certificate
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#client_certificate AzurermProvider#client_certificate}
+  */
+  readonly clientCertificate?: string;
+  /**
   * The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#client_certificate_password AzurermProvider#client_certificate_password}
@@ -120,7 +126,13 @@ export interface AzurermProviderConfig {
   */
   readonly tenantId?: string;
   /**
-  * Allowed Managed Service Identity be used for Authentication.
+  * Allow Azure CLI to be used for Authentication.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#use_cli AzurermProvider#use_cli}
+  */
+  readonly useCli?: boolean | cdktf.IResolvable;
+  /**
+  * Allow Managed Service Identity to be used for Authentication.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#use_msi AzurermProvider#use_msi}
   */
@@ -559,12 +571,13 @@ export class AzurermProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'azurerm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.43.0',
+        providerVersion: '3.44.0',
         providerVersionConstraint: '~> 3.10'
       },
       terraformProviderSource: 'azurerm'
     });
     this._auxiliaryTenantIds = config.auxiliaryTenantIds;
+    this._clientCertificate = config.clientCertificate;
     this._clientCertificatePassword = config.clientCertificatePassword;
     this._clientCertificatePath = config.clientCertificatePath;
     this._clientId = config.clientId;
@@ -583,6 +596,7 @@ export class AzurermProvider extends cdktf.TerraformProvider {
     this._storageUseAzuread = config.storageUseAzuread;
     this._subscriptionId = config.subscriptionId;
     this._tenantId = config.tenantId;
+    this._useCli = config.useCli;
     this._useMsi = config.useMsi;
     this._useOidc = config.useOidc;
     this._alias = config.alias;
@@ -607,6 +621,22 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get auxiliaryTenantIdsInput() {
     return this._auxiliaryTenantIds;
+  }
+
+  // client_certificate - computed: false, optional: true, required: false
+  private _clientCertificate?: string; 
+  public get clientCertificate() {
+    return this._clientCertificate;
+  }
+  public set clientCertificate(value: string | undefined) {
+    this._clientCertificate = value;
+  }
+  public resetClientCertificate() {
+    this._clientCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientCertificateInput() {
+    return this._clientCertificate;
   }
 
   // client_certificate_password - computed: false, optional: true, required: false
@@ -897,6 +927,22 @@ export class AzurermProvider extends cdktf.TerraformProvider {
     return this._tenantId;
   }
 
+  // use_cli - computed: false, optional: true, required: false
+  private _useCli?: boolean | cdktf.IResolvable; 
+  public get useCli() {
+    return this._useCli;
+  }
+  public set useCli(value: boolean | cdktf.IResolvable | undefined) {
+    this._useCli = value;
+  }
+  public resetUseCli() {
+    this._useCli = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useCliInput() {
+    return this._useCli;
+  }
+
   // use_msi - computed: false, optional: true, required: false
   private _useMsi?: boolean | cdktf.IResolvable; 
   public get useMsi() {
@@ -965,6 +1011,7 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auxiliary_tenant_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._auxiliaryTenantIds),
+      client_certificate: cdktf.stringToTerraform(this._clientCertificate),
       client_certificate_password: cdktf.stringToTerraform(this._clientCertificatePassword),
       client_certificate_path: cdktf.stringToTerraform(this._clientCertificatePath),
       client_id: cdktf.stringToTerraform(this._clientId),
@@ -983,6 +1030,7 @@ export class AzurermProvider extends cdktf.TerraformProvider {
       storage_use_azuread: cdktf.booleanToTerraform(this._storageUseAzuread),
       subscription_id: cdktf.stringToTerraform(this._subscriptionId),
       tenant_id: cdktf.stringToTerraform(this._tenantId),
+      use_cli: cdktf.booleanToTerraform(this._useCli),
       use_msi: cdktf.booleanToTerraform(this._useMsi),
       use_oidc: cdktf.booleanToTerraform(this._useOidc),
       alias: cdktf.stringToTerraform(this._alias),

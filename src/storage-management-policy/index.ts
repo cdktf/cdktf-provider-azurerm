@@ -1039,7 +1039,7 @@ export interface StorageManagementPolicyRule {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#filters StorageManagementPolicy#filters}
   */
-  readonly filters?: StorageManagementPolicyRuleFilters;
+  readonly filters: StorageManagementPolicyRuleFilters;
 }
 
 export function storageManagementPolicyRuleToTerraform(struct?: StorageManagementPolicyRule | cdktf.IResolvable): any {
@@ -1156,16 +1156,13 @@ export class StorageManagementPolicyRuleOutputReference extends cdktf.ComplexObj
     return this._actions.internalValue;
   }
 
-  // filters - computed: false, optional: true, required: false
+  // filters - computed: false, optional: false, required: true
   private _filters = new StorageManagementPolicyRuleFiltersOutputReference(this, "filters");
   public get filters() {
     return this._filters;
   }
   public putFilters(value: StorageManagementPolicyRuleFilters) {
     this._filters.internalValue = value;
-  }
-  public resetFilters() {
-    this._filters.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get filtersInput() {
@@ -1375,7 +1372,7 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_management_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.43.0',
+        providerVersion: '3.44.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
