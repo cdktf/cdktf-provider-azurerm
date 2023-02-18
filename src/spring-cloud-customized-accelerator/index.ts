@@ -664,7 +664,7 @@ export class SpringCloudCustomizedAccelerator extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_customized_accelerator',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.0',
+        providerVersion: '3.44.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

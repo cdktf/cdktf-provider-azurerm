@@ -131,7 +131,7 @@ export class DataAzurermPrivateDnsResolverVirtualNetworkLink extends cdktf.Terra
       terraformResourceType: 'azurerm_private_dns_resolver_virtual_network_link',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.0',
+        providerVersion: '3.44.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

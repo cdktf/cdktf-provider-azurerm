@@ -310,7 +310,7 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_machine_learning_synapse_spark',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.0',
+        providerVersion: '3.44.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

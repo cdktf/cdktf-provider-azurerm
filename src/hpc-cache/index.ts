@@ -1380,7 +1380,7 @@ export class HpcCache extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hpc_cache',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.0',
+        providerVersion: '3.44.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

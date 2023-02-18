@@ -331,7 +331,7 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_synapse_linked_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.0',
+        providerVersion: '3.44.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

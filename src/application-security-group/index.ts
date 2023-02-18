@@ -220,7 +220,7 @@ export class ApplicationSecurityGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_application_security_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.0',
+        providerVersion: '3.44.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

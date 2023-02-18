@@ -510,7 +510,7 @@ export class TrafficManagerAzureEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_traffic_manager_azure_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.0',
+        providerVersion: '3.44.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

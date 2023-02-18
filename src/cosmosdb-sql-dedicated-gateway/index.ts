@@ -216,7 +216,7 @@ export class CosmosdbSqlDedicatedGateway extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cosmosdb_sql_dedicated_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.0',
+        providerVersion: '3.44.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
