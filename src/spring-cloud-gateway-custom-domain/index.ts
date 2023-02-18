@@ -216,7 +216,7 @@ export class SpringCloudGatewayCustomDomain extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_gateway_custom_domain',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.0',
+        providerVersion: '3.44.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

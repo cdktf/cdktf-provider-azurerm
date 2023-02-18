@@ -3786,7 +3786,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hdinsight_kafka_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.0',
+        providerVersion: '3.44.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

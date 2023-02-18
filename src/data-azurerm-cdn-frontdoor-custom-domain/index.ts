@@ -209,7 +209,7 @@ export class DataAzurermCdnFrontdoorCustomDomain extends cdktf.TerraformDataSour
       terraformResourceType: 'azurerm_cdn_frontdoor_custom_domain',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.0',
+        providerVersion: '3.44.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

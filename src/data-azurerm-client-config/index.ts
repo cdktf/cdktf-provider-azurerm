@@ -123,7 +123,7 @@ export class DataAzurermClientConfig extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_client_config',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.0',
+        providerVersion: '3.44.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

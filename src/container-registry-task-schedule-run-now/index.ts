@@ -181,7 +181,7 @@ export class ContainerRegistryTaskScheduleRunNow extends cdktf.TerraformResource
       terraformResourceType: 'azurerm_container_registry_task_schedule_run_now',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.0',
+        providerVersion: '3.44.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

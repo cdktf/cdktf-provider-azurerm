@@ -409,7 +409,7 @@ export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_data_lake_gen2_path',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.0',
+        providerVersion: '3.44.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
