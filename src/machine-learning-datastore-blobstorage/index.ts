@@ -240,7 +240,7 @@ export class MachineLearningDatastoreBlobstorage extends cdktf.TerraformResource
       terraformResourceType: 'azurerm_machine_learning_datastore_blobstorage',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

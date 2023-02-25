@@ -68,7 +68,6 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.resetId">ResetId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.resetTags">ResetTags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
 
 ---
@@ -275,12 +274,6 @@ private void PutTimeouts(DataAzurermDiskAccessTimeouts Value)
 private void ResetId()
 ```
 
-##### `ResetTags` <a name="ResetTags" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.resetTags"></a>
-
-```csharp
-private void ResetTags()
-```
-
 ##### `ResetTimeouts` <a name="ResetTimeouts" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.resetTimeouts"></a>
 
 ```csharp
@@ -373,16 +366,15 @@ DataAzurermDiskAccess.IsTerraformDataSource(object X);
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.tags">Tags</a></code> | <code>HashiCorp.Cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessTimeoutsOutputReference">DataAzurermDiskAccessTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.resourceGroupNameInput">ResourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.tagsInput">TagsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 
 ---
 
@@ -508,6 +500,16 @@ public TerraformProvider Provider { get; }
 
 ---
 
+##### `Tags`<sup>Required</sup> <a name="Tags" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.tags"></a>
+
+```csharp
+public StringMap Tags { get; }
+```
+
+- *Type:* HashiCorp.Cdktf.StringMap
+
+---
+
 ##### `Timeouts`<sup>Required</sup> <a name="Timeouts" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.timeouts"></a>
 
 ```csharp
@@ -545,16 +547,6 @@ public string ResourceGroupNameInput { get; }
 ```
 
 - *Type:* string
-
----
-
-##### `TagsInput`<sup>Optional</sup> <a name="TagsInput" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.tagsInput"></a>
-
-```csharp
-public System.Collections.Generic.IDictionary<string, string> TagsInput { get; }
-```
-
-- *Type:* System.Collections.Generic.IDictionary<string, string>
 
 ---
 
@@ -598,16 +590,6 @@ public string ResourceGroupName { get; }
 
 ---
 
-##### `Tags`<sup>Required</sup> <a name="Tags" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.tags"></a>
-
-```csharp
-public System.Collections.Generic.IDictionary<string, string> Tags { get; }
-```
-
-- *Type:* System.Collections.Generic.IDictionary<string, string>
-
----
-
 #### Constants <a name="Constants" id="Constants"></a>
 
 | **Name** | **Type** | **Description** |
@@ -646,7 +628,6 @@ new DataAzurermDiskAccessConfig {
     string Name,
     string ResourceGroupName,
     string Id = null,
-    System.Collections.Generic.IDictionary<string, string> Tags = null,
     DataAzurermDiskAccessTimeouts Timeouts = null
 };
 ```
@@ -665,7 +646,6 @@ new DataAzurermDiskAccessConfig {
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#name DataAzurermDiskAccess#name}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#resource_group_name DataAzurermDiskAccess#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#id DataAzurermDiskAccess#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#tags DataAzurermDiskAccess#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessTimeouts">DataAzurermDiskAccessTimeouts</a></code> | timeouts block. |
 
 ---
@@ -776,18 +756,6 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-
----
-
-##### `Tags`<sup>Optional</sup> <a name="Tags" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.tags"></a>
-
-```csharp
-public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
-```
-
-- *Type:* System.Collections.Generic.IDictionary<string, string>
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#tags DataAzurermDiskAccess#tags}.
 
 ---
 

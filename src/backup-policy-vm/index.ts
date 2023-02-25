@@ -45,6 +45,12 @@ export interface BackupPolicyVmConfig extends cdktf.TerraformMetaArguments {
   */
   readonly backup: BackupPolicyVmBackup;
   /**
+  * instant_restore_resource_group block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm#instant_restore_resource_group BackupPolicyVm#instant_restore_resource_group}
+  */
+  readonly instantRestoreResourceGroup?: BackupPolicyVmInstantRestoreResourceGroup;
+  /**
   * retention_daily block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm#retention_daily BackupPolicyVm#retention_daily}
@@ -240,6 +246,95 @@ export class BackupPolicyVmBackupOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get weekdaysInput() {
     return this._weekdays;
+  }
+}
+export interface BackupPolicyVmInstantRestoreResourceGroup {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm#prefix BackupPolicyVm#prefix}
+  */
+  readonly prefix: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm#suffix BackupPolicyVm#suffix}
+  */
+  readonly suffix?: string;
+}
+
+export function backupPolicyVmInstantRestoreResourceGroupToTerraform(struct?: BackupPolicyVmInstantRestoreResourceGroupOutputReference | BackupPolicyVmInstantRestoreResourceGroup): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    prefix: cdktf.stringToTerraform(struct!.prefix),
+    suffix: cdktf.stringToTerraform(struct!.suffix),
+  }
+}
+
+export class BackupPolicyVmInstantRestoreResourceGroupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BackupPolicyVmInstantRestoreResourceGroup | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._prefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prefix = this._prefix;
+    }
+    if (this._suffix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.suffix = this._suffix;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BackupPolicyVmInstantRestoreResourceGroup | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._prefix = undefined;
+      this._suffix = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._prefix = value.prefix;
+      this._suffix = value.suffix;
+    }
+  }
+
+  // prefix - computed: false, optional: false, required: true
+  private _prefix?: string; 
+  public get prefix() {
+    return this.getStringAttribute('prefix');
+  }
+  public set prefix(value: string) {
+    this._prefix = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixInput() {
+    return this._prefix;
+  }
+
+  // suffix - computed: false, optional: true, required: false
+  private _suffix?: string; 
+  public get suffix() {
+    return this.getStringAttribute('suffix');
+  }
+  public set suffix(value: string) {
+    this._suffix = value;
+  }
+  public resetSuffix() {
+    this._suffix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get suffixInput() {
+    return this._suffix;
   }
 }
 export interface BackupPolicyVmRetentionDaily {
@@ -817,7 +912,7 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_backup_policy_vm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -836,6 +931,7 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._timezone = config.timezone;
     this._backup.internalValue = config.backup;
+    this._instantRestoreResourceGroup.internalValue = config.instantRestoreResourceGroup;
     this._retentionDaily.internalValue = config.retentionDaily;
     this._retentionMonthly.internalValue = config.retentionMonthly;
     this._retentionWeekly.internalValue = config.retentionWeekly;
@@ -963,6 +1059,22 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
     return this._backup.internalValue;
   }
 
+  // instant_restore_resource_group - computed: false, optional: true, required: false
+  private _instantRestoreResourceGroup = new BackupPolicyVmInstantRestoreResourceGroupOutputReference(this, "instant_restore_resource_group");
+  public get instantRestoreResourceGroup() {
+    return this._instantRestoreResourceGroup;
+  }
+  public putInstantRestoreResourceGroup(value: BackupPolicyVmInstantRestoreResourceGroup) {
+    this._instantRestoreResourceGroup.internalValue = value;
+  }
+  public resetInstantRestoreResourceGroup() {
+    this._instantRestoreResourceGroup.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instantRestoreResourceGroupInput() {
+    return this._instantRestoreResourceGroup.internalValue;
+  }
+
   // retention_daily - computed: false, optional: true, required: false
   private _retentionDaily = new BackupPolicyVmRetentionDailyOutputReference(this, "retention_daily");
   public get retentionDaily() {
@@ -1057,6 +1169,7 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timezone: cdktf.stringToTerraform(this._timezone),
       backup: backupPolicyVmBackupToTerraform(this._backup.internalValue),
+      instant_restore_resource_group: backupPolicyVmInstantRestoreResourceGroupToTerraform(this._instantRestoreResourceGroup.internalValue),
       retention_daily: backupPolicyVmRetentionDailyToTerraform(this._retentionDaily.internalValue),
       retention_monthly: backupPolicyVmRetentionMonthlyToTerraform(this._retentionMonthly.internalValue),
       retention_weekly: backupPolicyVmRetentionWeeklyToTerraform(this._retentionWeekly.internalValue),

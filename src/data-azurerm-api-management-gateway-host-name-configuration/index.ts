@@ -135,7 +135,7 @@ export class DataAzurermApiManagementGatewayHostNameConfiguration extends cdktf.
       terraformResourceType: 'azurerm_api_management_gateway_host_name_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

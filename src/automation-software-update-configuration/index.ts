@@ -1959,7 +1959,7 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
       terraformResourceType: 'azurerm_automation_software_update_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -2027,6 +2027,11 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
   // error_meesage - computed: true, optional: false, required: false
   public get errorMeesage() {
     return this.getStringAttribute('error_meesage');
+  }
+
+  // error_message - computed: true, optional: false, required: false
+  public get errorMessage() {
+    return this.getStringAttribute('error_message');
   }
 
   // id - computed: true, optional: true, required: false

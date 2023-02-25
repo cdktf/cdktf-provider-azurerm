@@ -1058,6 +1058,8 @@ The following submodules are available:
 - [signalrServiceNetworkAcl](./signalrServiceNetworkAcl.python.md)
 - [signalrSharedPrivateLinkResource](./signalrSharedPrivateLinkResource.python.md)
 - [siteRecoveryFabric](./siteRecoveryFabric.python.md)
+- [siteRecoveryHypervReplicationPolicy](./siteRecoveryHypervReplicationPolicy.python.md)
+- [siteRecoveryHypervReplicationPolicyAssociation](./siteRecoveryHypervReplicationPolicyAssociation.python.md)
 - [siteRecoveryNetworkMapping](./siteRecoveryNetworkMapping.python.md)
 - [siteRecoveryProtectionContainer](./siteRecoveryProtectionContainer.python.md)
 - [siteRecoveryProtectionContainerMapping](./siteRecoveryProtectionContainerMapping.python.md)

@@ -1854,7 +1854,7 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_autoscale_setting',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

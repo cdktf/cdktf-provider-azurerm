@@ -220,7 +220,7 @@ export class ApiManagementProductTag extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_product_tag',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

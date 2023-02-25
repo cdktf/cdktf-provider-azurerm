@@ -85,6 +85,75 @@ export interface MediaStreamingEndpointConfig extends cdktf.TerraformMetaArgumen
   */
   readonly timeouts?: MediaStreamingEndpointTimeouts;
 }
+export interface MediaStreamingEndpointSku {
+}
+
+export function mediaStreamingEndpointSkuToTerraform(struct?: MediaStreamingEndpointSku): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class MediaStreamingEndpointSkuOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaStreamingEndpointSku | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingEndpointSku | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // capacity - computed: true, optional: false, required: false
+  public get capacity() {
+    return this.getNumberAttribute('capacity');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+}
+
+export class MediaStreamingEndpointSkuList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaStreamingEndpointSkuOutputReference {
+    return new MediaStreamingEndpointSkuOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#base64_key MediaStreamingEndpoint#base64_key}
@@ -758,7 +827,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_streaming_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -988,6 +1057,12 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get scaleUnitsInput() {
     return this._scaleUnits;
+  }
+
+  // sku - computed: true, optional: false, required: false
+  private _sku = new MediaStreamingEndpointSkuList(this, "sku", false);
+  public get sku() {
+    return this._sku;
   }
 
   // tags - computed: false, optional: true, required: false

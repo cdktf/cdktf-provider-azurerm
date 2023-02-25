@@ -24,7 +24,6 @@ dataAzurermDiskAccess.DataAzurermDiskAccess(
   name: str,
   resource_group_name: str,
   id: str = None,
-  tags: typing.Mapping[str] = None,
   timeouts: DataAzurermDiskAccessTimeouts = None
 )
 ```
@@ -43,7 +42,6 @@ dataAzurermDiskAccess.DataAzurermDiskAccess(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#name DataAzurermDiskAccess#name}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#resource_group_name DataAzurermDiskAccess#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#id DataAzurermDiskAccess#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#tags DataAzurermDiskAccess#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessTimeouts">DataAzurermDiskAccessTimeouts</a></code> | timeouts block. |
 
 ---
@@ -135,14 +133,6 @@ If you experience problems setting this value it might not be settable. Please t
 
 ---
 
-##### `tags`<sup>Optional</sup> <a name="tags" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.tags"></a>
-
-- *Type:* typing.Mapping[str]
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#tags DataAzurermDiskAccess#tags}.
-
----
-
 ##### `timeouts`<sup>Optional</sup> <a name="timeouts" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.timeouts"></a>
 
 - *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessTimeouts">DataAzurermDiskAccessTimeouts</a>
@@ -175,7 +165,6 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.putTimeouts">put_timeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.resetId">reset_id</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.resetTags">reset_tags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.resetTimeouts">reset_timeouts</a></code> | *No description.* |
 
 ---
@@ -411,12 +400,6 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 def reset_id() -> None
 ```
 
-##### `reset_tags` <a name="reset_tags" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.resetTags"></a>
-
-```python
-def reset_tags() -> None
-```
-
 ##### `reset_timeouts` <a name="reset_timeouts" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.resetTimeouts"></a>
 
 ```python
@@ -515,16 +498,15 @@ dataAzurermDiskAccess.DataAzurermDiskAccess.is_terraform_data_source(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.tags">tags</a></code> | <code>cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessTimeoutsOutputReference">DataAzurermDiskAccessTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessTimeouts">DataAzurermDiskAccessTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 
 ---
 
@@ -650,6 +632,16 @@ provider: TerraformProvider
 
 ---
 
+##### `tags`<sup>Required</sup> <a name="tags" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.tags"></a>
+
+```python
+tags: StringMap
+```
+
+- *Type:* cdktf.StringMap
+
+---
+
 ##### `timeouts`<sup>Required</sup> <a name="timeouts" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.timeouts"></a>
 
 ```python
@@ -687,16 +679,6 @@ resource_group_name_input: str
 ```
 
 - *Type:* str
-
----
-
-##### `tags_input`<sup>Optional</sup> <a name="tags_input" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.tagsInput"></a>
-
-```python
-tags_input: typing.Mapping[str]
-```
-
-- *Type:* typing.Mapping[str]
 
 ---
 
@@ -740,16 +722,6 @@ resource_group_name: str
 
 ---
 
-##### `tags`<sup>Required</sup> <a name="tags" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.property.tags"></a>
-
-```python
-tags: typing.Mapping[str]
-```
-
-- *Type:* typing.Mapping[str]
-
----
-
 #### Constants <a name="Constants" id="Constants"></a>
 
 | **Name** | **Type** | **Description** |
@@ -788,7 +760,6 @@ dataAzurermDiskAccess.DataAzurermDiskAccessConfig(
   name: str,
   resource_group_name: str,
   id: str = None,
-  tags: typing.Mapping[str] = None,
   timeouts: DataAzurermDiskAccessTimeouts = None
 )
 ```
@@ -807,7 +778,6 @@ dataAzurermDiskAccess.DataAzurermDiskAccessConfig(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#name DataAzurermDiskAccess#name}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#resource_group_name DataAzurermDiskAccess#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#id DataAzurermDiskAccess#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#tags DataAzurermDiskAccess#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessTimeouts">DataAzurermDiskAccessTimeouts</a></code> | timeouts block. |
 
 ---
@@ -918,18 +888,6 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-
----
-
-##### `tags`<sup>Optional</sup> <a name="tags" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.tags"></a>
-
-```python
-tags: typing.Mapping[str]
-```
-
-- *Type:* typing.Mapping[str]
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#tags DataAzurermDiskAccess#tags}.
 
 ---
 

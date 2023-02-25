@@ -240,7 +240,7 @@ export class VirtualDesktopApplicationGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_desktop_application_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

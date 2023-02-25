@@ -67,6 +67,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.putAuthSettings">PutAuthSettings</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.putAuthSettingsV2">PutAuthSettingsV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.putBackup">PutBackup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.putConnectionString">PutConnectionString</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.putIdentity">PutIdentity</a></code> | *No description.* |
@@ -77,6 +78,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.resetAppSettings">ResetAppSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.resetAuthSettings">ResetAuthSettings</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.resetAuthSettingsV2">ResetAuthSettingsV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.resetBackup">ResetBackup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.resetClientAffinityEnabled">ResetClientAffinityEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.resetClientCertificateEnabled">ResetClientCertificateEnabled</a></code> | *No description.* |
@@ -294,6 +296,18 @@ private void PutAuthSettings(LinuxWebAppAuthSettings Value)
 
 ---
 
+##### `PutAuthSettingsV2` <a name="PutAuthSettingsV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.putAuthSettingsV2"></a>
+
+```csharp
+private void PutAuthSettingsV2(LinuxWebAppAuthSettingsV2 Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.putAuthSettingsV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2">LinuxWebAppAuthSettingsV2</a>
+
+---
+
 ##### `PutBackup` <a name="PutBackup" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.putBackup"></a>
 
 ```csharp
@@ -400,6 +414,12 @@ private void ResetAppSettings()
 
 ```csharp
 private void ResetAuthSettings()
+```
+
+##### `ResetAuthSettingsV2` <a name="ResetAuthSettingsV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.resetAuthSettingsV2"></a>
+
+```csharp
+private void ResetAuthSettingsV2()
 ```
 
 ##### `ResetBackup` <a name="ResetBackup" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.resetBackup"></a>
@@ -599,6 +619,7 @@ LinuxWebApp.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.authSettings">AuthSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsOutputReference">LinuxWebAppAuthSettingsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.authSettingsV2">AuthSettingsV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference">LinuxWebAppAuthSettingsV2OutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.backup">Backup</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppBackupOutputReference">LinuxWebAppBackupOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.connectionString">ConnectionString</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConnectionStringList">LinuxWebAppConnectionStringList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.customDomainVerificationId">CustomDomainVerificationId</a></code> | <code>string</code> | *No description.* |
@@ -617,6 +638,7 @@ LinuxWebApp.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeoutsOutputReference">LinuxWebAppTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.appSettingsInput">AppSettingsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.authSettingsInput">AuthSettingsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettings">LinuxWebAppAuthSettings</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.authSettingsV2Input">AuthSettingsV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2">LinuxWebAppAuthSettingsV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.backupInput">BackupInput</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppBackup">LinuxWebAppBackup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.clientAffinityEnabledInput">ClientAffinityEnabledInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.clientCertificateEnabledInput">ClientCertificateEnabledInput</a></code> | <code>object</code> | *No description.* |
@@ -811,6 +833,16 @@ public LinuxWebAppAuthSettingsOutputReference AuthSettings { get; }
 
 ---
 
+##### `AuthSettingsV2`<sup>Required</sup> <a name="AuthSettingsV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.authSettingsV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2OutputReference AuthSettingsV2 { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference">LinuxWebAppAuthSettingsV2OutputReference</a>
+
+---
+
 ##### `Backup`<sup>Required</sup> <a name="Backup" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.backup"></a>
 
 ```csharp
@@ -988,6 +1020,16 @@ public LinuxWebAppAuthSettings AuthSettingsInput { get; }
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettings">LinuxWebAppAuthSettings</a>
+
+---
+
+##### `AuthSettingsV2Input`<sup>Optional</sup> <a name="AuthSettingsV2Input" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.authSettingsV2Input"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2 AuthSettingsV2Input { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2">LinuxWebAppAuthSettingsV2</a>
 
 ---
 
@@ -2139,6 +2181,1332 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ---
 
+### LinuxWebAppAuthSettingsV2 <a name="LinuxWebAppAuthSettingsV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2 {
+    LinuxWebAppAuthSettingsV2Login Login,
+    LinuxWebAppAuthSettingsV2ActiveDirectoryV2 ActiveDirectoryV2 = null,
+    LinuxWebAppAuthSettingsV2AppleV2 AppleV2 = null,
+    object AuthEnabled = null,
+    LinuxWebAppAuthSettingsV2AzureStaticWebAppV2 AzureStaticWebAppV2 = null,
+    string ConfigFilePath = null,
+    object CustomOidcV2 = null,
+    string DefaultProvider = null,
+    string[] ExcludedPaths = null,
+    LinuxWebAppAuthSettingsV2FacebookV2 FacebookV2 = null,
+    string ForwardProxyConvention = null,
+    string ForwardProxyCustomHostHeaderName = null,
+    string ForwardProxyCustomSchemeHeaderName = null,
+    LinuxWebAppAuthSettingsV2GithubV2 GithubV2 = null,
+    LinuxWebAppAuthSettingsV2GoogleV2 GoogleV2 = null,
+    string HttpRouteApiPrefix = null,
+    LinuxWebAppAuthSettingsV2MicrosoftV2 MicrosoftV2 = null,
+    object RequireAuthentication = null,
+    object RequireHttps = null,
+    string RuntimeVersion = null,
+    LinuxWebAppAuthSettingsV2TwitterV2 TwitterV2 = null,
+    string UnauthenticatedAction = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.login">Login</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login">LinuxWebAppAuthSettingsV2Login</a></code> | login block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.activeDirectoryV2">ActiveDirectoryV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2">LinuxWebAppAuthSettingsV2ActiveDirectoryV2</a></code> | active_directory_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.appleV2">AppleV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2">LinuxWebAppAuthSettingsV2AppleV2</a></code> | apple_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.authEnabled">AuthEnabled</a></code> | <code>object</code> | Should the AuthV2 Settings be enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.azureStaticWebAppV2">AzureStaticWebAppV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2">LinuxWebAppAuthSettingsV2AzureStaticWebAppV2</a></code> | azure_static_web_app_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.configFilePath">ConfigFilePath</a></code> | <code>string</code> | The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.customOidcV2">CustomOidcV2</a></code> | <code>object</code> | custom_oidc_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.defaultProvider">DefaultProvider</a></code> | <code>string</code> | The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.excludedPaths">ExcludedPaths</a></code> | <code>string[]</code> | The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.facebookV2">FacebookV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2">LinuxWebAppAuthSettingsV2FacebookV2</a></code> | facebook_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.forwardProxyConvention">ForwardProxyConvention</a></code> | <code>string</code> | The convention used to determine the url of the request made. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.forwardProxyCustomHostHeaderName">ForwardProxyCustomHostHeaderName</a></code> | <code>string</code> | The name of the header containing the host of the request. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.forwardProxyCustomSchemeHeaderName">ForwardProxyCustomSchemeHeaderName</a></code> | <code>string</code> | The name of the header containing the scheme of the request. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.githubV2">GithubV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2">LinuxWebAppAuthSettingsV2GithubV2</a></code> | github_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.googleV2">GoogleV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2">LinuxWebAppAuthSettingsV2GoogleV2</a></code> | google_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.httpRouteApiPrefix">HttpRouteApiPrefix</a></code> | <code>string</code> | The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.microsoftV2">MicrosoftV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2">LinuxWebAppAuthSettingsV2MicrosoftV2</a></code> | microsoft_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.requireAuthentication">RequireAuthentication</a></code> | <code>object</code> | Should the authentication flow be used for all requests. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.requireHttps">RequireHttps</a></code> | <code>object</code> | Should HTTPS be required on connections? Defaults to true. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.runtimeVersion">RuntimeVersion</a></code> | <code>string</code> | The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.twitterV2">TwitterV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2">LinuxWebAppAuthSettingsV2TwitterV2</a></code> | twitter_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.unauthenticatedAction">UnauthenticatedAction</a></code> | <code>string</code> | The action to take for requests made without authentication. |
+
+---
+
+##### `Login`<sup>Required</sup> <a name="Login" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.login"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2Login Login { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login">LinuxWebAppAuthSettingsV2Login</a>
+
+login block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#login LinuxWebApp#login}
+
+---
+
+##### `ActiveDirectoryV2`<sup>Optional</sup> <a name="ActiveDirectoryV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.activeDirectoryV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2ActiveDirectoryV2 ActiveDirectoryV2 { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2">LinuxWebAppAuthSettingsV2ActiveDirectoryV2</a>
+
+active_directory_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#active_directory_v2 LinuxWebApp#active_directory_v2}
+
+---
+
+##### `AppleV2`<sup>Optional</sup> <a name="AppleV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.appleV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2AppleV2 AppleV2 { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2">LinuxWebAppAuthSettingsV2AppleV2</a>
+
+apple_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#apple_v2 LinuxWebApp#apple_v2}
+
+---
+
+##### `AuthEnabled`<sup>Optional</sup> <a name="AuthEnabled" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.authEnabled"></a>
+
+```csharp
+public object AuthEnabled { get; set; }
+```
+
+- *Type:* object
+
+Should the AuthV2 Settings be enabled. Defaults to `false`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#auth_enabled LinuxWebApp#auth_enabled}
+
+---
+
+##### `AzureStaticWebAppV2`<sup>Optional</sup> <a name="AzureStaticWebAppV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.azureStaticWebAppV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2AzureStaticWebAppV2 AzureStaticWebAppV2 { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2">LinuxWebAppAuthSettingsV2AzureStaticWebAppV2</a>
+
+azure_static_web_app_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#azure_static_web_app_v2 LinuxWebApp#azure_static_web_app_v2}
+
+---
+
+##### `ConfigFilePath`<sup>Optional</sup> <a name="ConfigFilePath" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.configFilePath"></a>
+
+```csharp
+public string ConfigFilePath { get; set; }
+```
+
+- *Type:* string
+
+The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#config_file_path LinuxWebApp#config_file_path}
+
+---
+
+##### `CustomOidcV2`<sup>Optional</sup> <a name="CustomOidcV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.customOidcV2"></a>
+
+```csharp
+public object CustomOidcV2 { get; set; }
+```
+
+- *Type:* object
+
+custom_oidc_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#custom_oidc_v2 LinuxWebApp#custom_oidc_v2}
+
+---
+
+##### `DefaultProvider`<sup>Optional</sup> <a name="DefaultProvider" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.defaultProvider"></a>
+
+```csharp
+public string DefaultProvider { get; set; }
+```
+
+- *Type:* string
+
+The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#default_provider LinuxWebApp#default_provider}
+
+---
+
+##### `ExcludedPaths`<sup>Optional</sup> <a name="ExcludedPaths" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.excludedPaths"></a>
+
+```csharp
+public string[] ExcludedPaths { get; set; }
+```
+
+- *Type:* string[]
+
+The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#excluded_paths LinuxWebApp#excluded_paths}
+
+---
+
+##### `FacebookV2`<sup>Optional</sup> <a name="FacebookV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.facebookV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2FacebookV2 FacebookV2 { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2">LinuxWebAppAuthSettingsV2FacebookV2</a>
+
+facebook_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#facebook_v2 LinuxWebApp#facebook_v2}
+
+---
+
+##### `ForwardProxyConvention`<sup>Optional</sup> <a name="ForwardProxyConvention" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.forwardProxyConvention"></a>
+
+```csharp
+public string ForwardProxyConvention { get; set; }
+```
+
+- *Type:* string
+
+The convention used to determine the url of the request made.
+
+Possible values include `ForwardProxyConventionNoProxy`, `ForwardProxyConventionStandard`, `ForwardProxyConventionCustom`. Defaults to `ForwardProxyConventionNoProxy`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#forward_proxy_convention LinuxWebApp#forward_proxy_convention}
+
+---
+
+##### `ForwardProxyCustomHostHeaderName`<sup>Optional</sup> <a name="ForwardProxyCustomHostHeaderName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.forwardProxyCustomHostHeaderName"></a>
+
+```csharp
+public string ForwardProxyCustomHostHeaderName { get; set; }
+```
+
+- *Type:* string
+
+The name of the header containing the host of the request.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#forward_proxy_custom_host_header_name LinuxWebApp#forward_proxy_custom_host_header_name}
+
+---
+
+##### `ForwardProxyCustomSchemeHeaderName`<sup>Optional</sup> <a name="ForwardProxyCustomSchemeHeaderName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.forwardProxyCustomSchemeHeaderName"></a>
+
+```csharp
+public string ForwardProxyCustomSchemeHeaderName { get; set; }
+```
+
+- *Type:* string
+
+The name of the header containing the scheme of the request.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#forward_proxy_custom_scheme_header_name LinuxWebApp#forward_proxy_custom_scheme_header_name}
+
+---
+
+##### `GithubV2`<sup>Optional</sup> <a name="GithubV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.githubV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2GithubV2 GithubV2 { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2">LinuxWebAppAuthSettingsV2GithubV2</a>
+
+github_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#github_v2 LinuxWebApp#github_v2}
+
+---
+
+##### `GoogleV2`<sup>Optional</sup> <a name="GoogleV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.googleV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2GoogleV2 GoogleV2 { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2">LinuxWebAppAuthSettingsV2GoogleV2</a>
+
+google_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#google_v2 LinuxWebApp#google_v2}
+
+---
+
+##### `HttpRouteApiPrefix`<sup>Optional</sup> <a name="HttpRouteApiPrefix" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.httpRouteApiPrefix"></a>
+
+```csharp
+public string HttpRouteApiPrefix { get; set; }
+```
+
+- *Type:* string
+
+The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#http_route_api_prefix LinuxWebApp#http_route_api_prefix}
+
+---
+
+##### `MicrosoftV2`<sup>Optional</sup> <a name="MicrosoftV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.microsoftV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2MicrosoftV2 MicrosoftV2 { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2">LinuxWebAppAuthSettingsV2MicrosoftV2</a>
+
+microsoft_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#microsoft_v2 LinuxWebApp#microsoft_v2}
+
+---
+
+##### `RequireAuthentication`<sup>Optional</sup> <a name="RequireAuthentication" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.requireAuthentication"></a>
+
+```csharp
+public object RequireAuthentication { get; set; }
+```
+
+- *Type:* object
+
+Should the authentication flow be used for all requests.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#require_authentication LinuxWebApp#require_authentication}
+
+---
+
+##### `RequireHttps`<sup>Optional</sup> <a name="RequireHttps" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.requireHttps"></a>
+
+```csharp
+public object RequireHttps { get; set; }
+```
+
+- *Type:* object
+
+Should HTTPS be required on connections? Defaults to true.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#require_https LinuxWebApp#require_https}
+
+---
+
+##### `RuntimeVersion`<sup>Optional</sup> <a name="RuntimeVersion" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.runtimeVersion"></a>
+
+```csharp
+public string RuntimeVersion { get; set; }
+```
+
+- *Type:* string
+
+The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#runtime_version LinuxWebApp#runtime_version}
+
+---
+
+##### `TwitterV2`<sup>Optional</sup> <a name="TwitterV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.twitterV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2TwitterV2 TwitterV2 { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2">LinuxWebAppAuthSettingsV2TwitterV2</a>
+
+twitter_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#twitter_v2 LinuxWebApp#twitter_v2}
+
+---
+
+##### `UnauthenticatedAction`<sup>Optional</sup> <a name="UnauthenticatedAction" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2.property.unauthenticatedAction"></a>
+
+```csharp
+public string UnauthenticatedAction { get; set; }
+```
+
+- *Type:* string
+
+The action to take for requests made without authentication.
+
+Possible values include `RedirectToLoginPage`, `AllowAnonymous`, `Return401`, and `Return403`. Defaults to `RedirectToLoginPage`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#unauthenticated_action LinuxWebApp#unauthenticated_action}
+
+---
+
+### LinuxWebAppAuthSettingsV2ActiveDirectoryV2 <a name="LinuxWebAppAuthSettingsV2ActiveDirectoryV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2ActiveDirectoryV2 {
+    string ClientId,
+    string TenantAuthEndpoint,
+    string[] AllowedApplications = null,
+    string[] AllowedAudiences = null,
+    string[] AllowedGroups = null,
+    string[] AllowedIdentities = null,
+    string ClientSecretCertificateThumbprint = null,
+    string ClientSecretSettingName = null,
+    string[] JwtAllowedClientApplications = null,
+    string[] JwtAllowedGroups = null,
+    System.Collections.Generic.IDictionary<string, string> LoginParameters = null,
+    object WwwAuthenticationDisabled = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.clientId">ClientId</a></code> | <code>string</code> | The ID of the Client to use to authenticate with Azure Active Directory. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.tenantAuthEndpoint">TenantAuthEndpoint</a></code> | <code>string</code> | The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.allowedApplications">AllowedApplications</a></code> | <code>string[]</code> | The list of allowed Applications for the Default Authorisation Policy. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.allowedAudiences">AllowedAudiences</a></code> | <code>string[]</code> | Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.allowedGroups">AllowedGroups</a></code> | <code>string[]</code> | The list of allowed Group Names for the Default Authorisation Policy. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.allowedIdentities">AllowedIdentities</a></code> | <code>string[]</code> | The list of allowed Identities for the Default Authorisation Policy. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.clientSecretCertificateThumbprint">ClientSecretCertificateThumbprint</a></code> | <code>string</code> | The thumbprint of the certificate used for signing purposes. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>string</code> | The App Setting name that contains the client secret of the Client. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedClientApplications">JwtAllowedClientApplications</a></code> | <code>string[]</code> | A list of Allowed Client Applications in the JWT Claim. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedGroups">JwtAllowedGroups</a></code> | <code>string[]</code> | A list of Allowed Groups in the JWT Claim. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.loginParameters">LoginParameters</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | A map of key-value pairs to send to the Authorisation Endpoint when a user logs in. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.wwwAuthenticationDisabled">WwwAuthenticationDisabled</a></code> | <code>object</code> | Should the www-authenticate provider should be omitted from the request? Defaults to `false`. |
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.clientId"></a>
+
+```csharp
+public string ClientId { get; set; }
+```
+
+- *Type:* string
+
+The ID of the Client to use to authenticate with Azure Active Directory.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_id LinuxWebApp#client_id}
+
+---
+
+##### `TenantAuthEndpoint`<sup>Required</sup> <a name="TenantAuthEndpoint" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.tenantAuthEndpoint"></a>
+
+```csharp
+public string TenantAuthEndpoint { get; set; }
+```
+
+- *Type:* string
+
+The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#tenant_auth_endpoint LinuxWebApp#tenant_auth_endpoint}
+
+---
+
+##### `AllowedApplications`<sup>Optional</sup> <a name="AllowedApplications" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.allowedApplications"></a>
+
+```csharp
+public string[] AllowedApplications { get; set; }
+```
+
+- *Type:* string[]
+
+The list of allowed Applications for the Default Authorisation Policy.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#allowed_applications LinuxWebApp#allowed_applications}
+
+---
+
+##### `AllowedAudiences`<sup>Optional</sup> <a name="AllowedAudiences" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.allowedAudiences"></a>
+
+```csharp
+public string[] AllowedAudiences { get; set; }
+```
+
+- *Type:* string[]
+
+Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#allowed_audiences LinuxWebApp#allowed_audiences}
+
+---
+
+##### `AllowedGroups`<sup>Optional</sup> <a name="AllowedGroups" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.allowedGroups"></a>
+
+```csharp
+public string[] AllowedGroups { get; set; }
+```
+
+- *Type:* string[]
+
+The list of allowed Group Names for the Default Authorisation Policy.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#allowed_groups LinuxWebApp#allowed_groups}
+
+---
+
+##### `AllowedIdentities`<sup>Optional</sup> <a name="AllowedIdentities" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.allowedIdentities"></a>
+
+```csharp
+public string[] AllowedIdentities { get; set; }
+```
+
+- *Type:* string[]
+
+The list of allowed Identities for the Default Authorisation Policy.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#allowed_identities LinuxWebApp#allowed_identities}
+
+---
+
+##### `ClientSecretCertificateThumbprint`<sup>Optional</sup> <a name="ClientSecretCertificateThumbprint" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.clientSecretCertificateThumbprint"></a>
+
+```csharp
+public string ClientSecretCertificateThumbprint { get; set; }
+```
+
+- *Type:* string
+
+The thumbprint of the certificate used for signing purposes.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_secret_certificate_thumbprint LinuxWebApp#client_secret_certificate_thumbprint}
+
+---
+
+##### `ClientSecretSettingName`<sup>Optional</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.clientSecretSettingName"></a>
+
+```csharp
+public string ClientSecretSettingName { get; set; }
+```
+
+- *Type:* string
+
+The App Setting name that contains the client secret of the Client.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_secret_setting_name LinuxWebApp#client_secret_setting_name}
+
+---
+
+##### `JwtAllowedClientApplications`<sup>Optional</sup> <a name="JwtAllowedClientApplications" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedClientApplications"></a>
+
+```csharp
+public string[] JwtAllowedClientApplications { get; set; }
+```
+
+- *Type:* string[]
+
+A list of Allowed Client Applications in the JWT Claim.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#jwt_allowed_client_applications LinuxWebApp#jwt_allowed_client_applications}
+
+---
+
+##### `JwtAllowedGroups`<sup>Optional</sup> <a name="JwtAllowedGroups" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedGroups"></a>
+
+```csharp
+public string[] JwtAllowedGroups { get; set; }
+```
+
+- *Type:* string[]
+
+A list of Allowed Groups in the JWT Claim.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#jwt_allowed_groups LinuxWebApp#jwt_allowed_groups}
+
+---
+
+##### `LoginParameters`<sup>Optional</sup> <a name="LoginParameters" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.loginParameters"></a>
+
+```csharp
+public System.Collections.Generic.IDictionary<string, string> LoginParameters { get; set; }
+```
+
+- *Type:* System.Collections.Generic.IDictionary<string, string>
+
+A map of key-value pairs to send to the Authorisation Endpoint when a user logs in.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#login_parameters LinuxWebApp#login_parameters}
+
+---
+
+##### `WwwAuthenticationDisabled`<sup>Optional</sup> <a name="WwwAuthenticationDisabled" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2.property.wwwAuthenticationDisabled"></a>
+
+```csharp
+public object WwwAuthenticationDisabled { get; set; }
+```
+
+- *Type:* object
+
+Should the www-authenticate provider should be omitted from the request? Defaults to `false`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#www_authentication_disabled LinuxWebApp#www_authentication_disabled}
+
+---
+
+### LinuxWebAppAuthSettingsV2AppleV2 <a name="LinuxWebAppAuthSettingsV2AppleV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2AppleV2 {
+    string ClientId,
+    string ClientSecretSettingName
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2.property.clientId">ClientId</a></code> | <code>string</code> | The OpenID Connect Client ID for the Apple web application. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>string</code> | The app setting name that contains the `client_secret` value used for Apple Login. |
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2.property.clientId"></a>
+
+```csharp
+public string ClientId { get; set; }
+```
+
+- *Type:* string
+
+The OpenID Connect Client ID for the Apple web application.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_id LinuxWebApp#client_id}
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2.property.clientSecretSettingName"></a>
+
+```csharp
+public string ClientSecretSettingName { get; set; }
+```
+
+- *Type:* string
+
+The app setting name that contains the `client_secret` value used for Apple Login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_secret_setting_name LinuxWebApp#client_secret_setting_name}
+
+---
+
+### LinuxWebAppAuthSettingsV2AzureStaticWebAppV2 <a name="LinuxWebAppAuthSettingsV2AzureStaticWebAppV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2AzureStaticWebAppV2 {
+    string ClientId
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2.property.clientId">ClientId</a></code> | <code>string</code> | The ID of the Client to use to authenticate with Azure Static Web App Authentication. |
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2.property.clientId"></a>
+
+```csharp
+public string ClientId { get; set; }
+```
+
+- *Type:* string
+
+The ID of the Client to use to authenticate with Azure Static Web App Authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_id LinuxWebApp#client_id}
+
+---
+
+### LinuxWebAppAuthSettingsV2CustomOidcV2 <a name="LinuxWebAppAuthSettingsV2CustomOidcV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2CustomOidcV2 {
+    string ClientId,
+    string Name,
+    string OpenidConfigurationEndpoint,
+    string NameClaimType = null,
+    string[] Scopes = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2.property.clientId">ClientId</a></code> | <code>string</code> | The ID of the Client to use to authenticate with this Custom OIDC. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2.property.name">Name</a></code> | <code>string</code> | The name of the Custom OIDC Authentication Provider. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2.property.openidConfigurationEndpoint">OpenidConfigurationEndpoint</a></code> | <code>string</code> | The endpoint that contains all the configuration endpoints for this Custom OIDC provider. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2.property.nameClaimType">NameClaimType</a></code> | <code>string</code> | The name of the claim that contains the users name. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2.property.scopes">Scopes</a></code> | <code>string[]</code> | The list of the scopes that should be requested while authenticating. |
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2.property.clientId"></a>
+
+```csharp
+public string ClientId { get; set; }
+```
+
+- *Type:* string
+
+The ID of the Client to use to authenticate with this Custom OIDC.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_id LinuxWebApp#client_id}
+
+---
+
+##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2.property.name"></a>
+
+```csharp
+public string Name { get; set; }
+```
+
+- *Type:* string
+
+The name of the Custom OIDC Authentication Provider.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#name LinuxWebApp#name}
+
+---
+
+##### `OpenidConfigurationEndpoint`<sup>Required</sup> <a name="OpenidConfigurationEndpoint" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2.property.openidConfigurationEndpoint"></a>
+
+```csharp
+public string OpenidConfigurationEndpoint { get; set; }
+```
+
+- *Type:* string
+
+The endpoint that contains all the configuration endpoints for this Custom OIDC provider.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#openid_configuration_endpoint LinuxWebApp#openid_configuration_endpoint}
+
+---
+
+##### `NameClaimType`<sup>Optional</sup> <a name="NameClaimType" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2.property.nameClaimType"></a>
+
+```csharp
+public string NameClaimType { get; set; }
+```
+
+- *Type:* string
+
+The name of the claim that contains the users name.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#name_claim_type LinuxWebApp#name_claim_type}
+
+---
+
+##### `Scopes`<sup>Optional</sup> <a name="Scopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2.property.scopes"></a>
+
+```csharp
+public string[] Scopes { get; set; }
+```
+
+- *Type:* string[]
+
+The list of the scopes that should be requested while authenticating.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#scopes LinuxWebApp#scopes}
+
+---
+
+### LinuxWebAppAuthSettingsV2FacebookV2 <a name="LinuxWebAppAuthSettingsV2FacebookV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2FacebookV2 {
+    string AppId,
+    string AppSecretSettingName,
+    string GraphApiVersion = null,
+    string[] LoginScopes = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2.property.appId">AppId</a></code> | <code>string</code> | The App ID of the Facebook app used for login. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2.property.appSecretSettingName">AppSecretSettingName</a></code> | <code>string</code> | The app setting name that contains the `app_secret` value used for Facebook Login. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2.property.graphApiVersion">GraphApiVersion</a></code> | <code>string</code> | The version of the Facebook API to be used while logging in. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2.property.loginScopes">LoginScopes</a></code> | <code>string[]</code> | Specifies a list of scopes to be requested as part of Facebook Login authentication. |
+
+---
+
+##### `AppId`<sup>Required</sup> <a name="AppId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2.property.appId"></a>
+
+```csharp
+public string AppId { get; set; }
+```
+
+- *Type:* string
+
+The App ID of the Facebook app used for login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#app_id LinuxWebApp#app_id}
+
+---
+
+##### `AppSecretSettingName`<sup>Required</sup> <a name="AppSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2.property.appSecretSettingName"></a>
+
+```csharp
+public string AppSecretSettingName { get; set; }
+```
+
+- *Type:* string
+
+The app setting name that contains the `app_secret` value used for Facebook Login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#app_secret_setting_name LinuxWebApp#app_secret_setting_name}
+
+---
+
+##### `GraphApiVersion`<sup>Optional</sup> <a name="GraphApiVersion" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2.property.graphApiVersion"></a>
+
+```csharp
+public string GraphApiVersion { get; set; }
+```
+
+- *Type:* string
+
+The version of the Facebook API to be used while logging in.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#graph_api_version LinuxWebApp#graph_api_version}
+
+---
+
+##### `LoginScopes`<sup>Optional</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2.property.loginScopes"></a>
+
+```csharp
+public string[] LoginScopes { get; set; }
+```
+
+- *Type:* string[]
+
+Specifies a list of scopes to be requested as part of Facebook Login authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#login_scopes LinuxWebApp#login_scopes}
+
+---
+
+### LinuxWebAppAuthSettingsV2GithubV2 <a name="LinuxWebAppAuthSettingsV2GithubV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2GithubV2 {
+    string ClientId,
+    string ClientSecretSettingName,
+    string[] LoginScopes = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2.property.clientId">ClientId</a></code> | <code>string</code> | The ID of the GitHub app used for login. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>string</code> | The app setting name that contains the `client_secret` value used for GitHub Login. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2.property.loginScopes">LoginScopes</a></code> | <code>string[]</code> | Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication. |
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2.property.clientId"></a>
+
+```csharp
+public string ClientId { get; set; }
+```
+
+- *Type:* string
+
+The ID of the GitHub app used for login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_id LinuxWebApp#client_id}
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2.property.clientSecretSettingName"></a>
+
+```csharp
+public string ClientSecretSettingName { get; set; }
+```
+
+- *Type:* string
+
+The app setting name that contains the `client_secret` value used for GitHub Login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_secret_setting_name LinuxWebApp#client_secret_setting_name}
+
+---
+
+##### `LoginScopes`<sup>Optional</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2.property.loginScopes"></a>
+
+```csharp
+public string[] LoginScopes { get; set; }
+```
+
+- *Type:* string[]
+
+Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#login_scopes LinuxWebApp#login_scopes}
+
+---
+
+### LinuxWebAppAuthSettingsV2GoogleV2 <a name="LinuxWebAppAuthSettingsV2GoogleV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2GoogleV2 {
+    string ClientId,
+    string ClientSecretSettingName,
+    string[] AllowedAudiences = null,
+    string[] LoginScopes = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2.property.clientId">ClientId</a></code> | <code>string</code> | The OpenID Connect Client ID for the Google web application. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>string</code> | The app setting name that contains the `client_secret` value used for Google Login. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2.property.allowedAudiences">AllowedAudiences</a></code> | <code>string[]</code> | Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2.property.loginScopes">LoginScopes</a></code> | <code>string[]</code> | Specifies a list of Login scopes that will be requested as part of Google Sign-In authentication. |
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2.property.clientId"></a>
+
+```csharp
+public string ClientId { get; set; }
+```
+
+- *Type:* string
+
+The OpenID Connect Client ID for the Google web application.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_id LinuxWebApp#client_id}
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2.property.clientSecretSettingName"></a>
+
+```csharp
+public string ClientSecretSettingName { get; set; }
+```
+
+- *Type:* string
+
+The app setting name that contains the `client_secret` value used for Google Login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_secret_setting_name LinuxWebApp#client_secret_setting_name}
+
+---
+
+##### `AllowedAudiences`<sup>Optional</sup> <a name="AllowedAudiences" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2.property.allowedAudiences"></a>
+
+```csharp
+public string[] AllowedAudiences { get; set; }
+```
+
+- *Type:* string[]
+
+Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#allowed_audiences LinuxWebApp#allowed_audiences}
+
+---
+
+##### `LoginScopes`<sup>Optional</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2.property.loginScopes"></a>
+
+```csharp
+public string[] LoginScopes { get; set; }
+```
+
+- *Type:* string[]
+
+Specifies a list of Login scopes that will be requested as part of Google Sign-In authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#login_scopes LinuxWebApp#login_scopes}
+
+---
+
+### LinuxWebAppAuthSettingsV2Login <a name="LinuxWebAppAuthSettingsV2Login" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2Login {
+    string[] AllowedExternalRedirectUrls = null,
+    string CookieExpirationConvention = null,
+    string CookieExpirationTime = null,
+    string LogoutEndpoint = null,
+    string NonceExpirationTime = null,
+    object PreserveUrlFragmentsForLogins = null,
+    double TokenRefreshExtensionTime = null,
+    object TokenStoreEnabled = null,
+    string TokenStorePath = null,
+    string TokenStoreSasSettingName = null,
+    object ValidateNonce = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.allowedExternalRedirectUrls">AllowedExternalRedirectUrls</a></code> | <code>string[]</code> | External URLs that can be redirected to as part of logging in or logging out of the app. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.cookieExpirationConvention">CookieExpirationConvention</a></code> | <code>string</code> | The method by which cookies expire. Possible values include: `FixedTime`, and `IdentityProviderDerived`. Defaults to `FixedTime`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.cookieExpirationTime">CookieExpirationTime</a></code> | <code>string</code> | The time after the request is made when the session cookie should expire. Defaults to `08:00:00`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.logoutEndpoint">LogoutEndpoint</a></code> | <code>string</code> | The endpoint to which logout requests should be made. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.nonceExpirationTime">NonceExpirationTime</a></code> | <code>string</code> | The time after the request is made when the nonce should expire. Defaults to `00:05:00`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.preserveUrlFragmentsForLogins">PreserveUrlFragmentsForLogins</a></code> | <code>object</code> | Should the fragments from the request be preserved after the login request is made. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.tokenRefreshExtensionTime">TokenRefreshExtensionTime</a></code> | <code>double</code> | The number of hours after session token expiration that a session token can be used to call the token refresh API. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.tokenStoreEnabled">TokenStoreEnabled</a></code> | <code>object</code> | Should the Token Store configuration Enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.tokenStorePath">TokenStorePath</a></code> | <code>string</code> | The directory path in the App Filesystem in which the tokens will be stored. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.tokenStoreSasSettingName">TokenStoreSasSettingName</a></code> | <code>string</code> | The name of the app setting which contains the SAS URL of the blob storage containing the tokens. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.validateNonce">ValidateNonce</a></code> | <code>object</code> | Should the nonce be validated while completing the login flow. Defaults to `true`. |
+
+---
+
+##### `AllowedExternalRedirectUrls`<sup>Optional</sup> <a name="AllowedExternalRedirectUrls" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.allowedExternalRedirectUrls"></a>
+
+```csharp
+public string[] AllowedExternalRedirectUrls { get; set; }
+```
+
+- *Type:* string[]
+
+External URLs that can be redirected to as part of logging in or logging out of the app.
+
+This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#allowed_external_redirect_urls LinuxWebApp#allowed_external_redirect_urls}
+
+---
+
+##### `CookieExpirationConvention`<sup>Optional</sup> <a name="CookieExpirationConvention" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.cookieExpirationConvention"></a>
+
+```csharp
+public string CookieExpirationConvention { get; set; }
+```
+
+- *Type:* string
+
+The method by which cookies expire. Possible values include: `FixedTime`, and `IdentityProviderDerived`. Defaults to `FixedTime`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#cookie_expiration_convention LinuxWebApp#cookie_expiration_convention}
+
+---
+
+##### `CookieExpirationTime`<sup>Optional</sup> <a name="CookieExpirationTime" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.cookieExpirationTime"></a>
+
+```csharp
+public string CookieExpirationTime { get; set; }
+```
+
+- *Type:* string
+
+The time after the request is made when the session cookie should expire. Defaults to `08:00:00`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#cookie_expiration_time LinuxWebApp#cookie_expiration_time}
+
+---
+
+##### `LogoutEndpoint`<sup>Optional</sup> <a name="LogoutEndpoint" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.logoutEndpoint"></a>
+
+```csharp
+public string LogoutEndpoint { get; set; }
+```
+
+- *Type:* string
+
+The endpoint to which logout requests should be made.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#logout_endpoint LinuxWebApp#logout_endpoint}
+
+---
+
+##### `NonceExpirationTime`<sup>Optional</sup> <a name="NonceExpirationTime" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.nonceExpirationTime"></a>
+
+```csharp
+public string NonceExpirationTime { get; set; }
+```
+
+- *Type:* string
+
+The time after the request is made when the nonce should expire. Defaults to `00:05:00`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#nonce_expiration_time LinuxWebApp#nonce_expiration_time}
+
+---
+
+##### `PreserveUrlFragmentsForLogins`<sup>Optional</sup> <a name="PreserveUrlFragmentsForLogins" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.preserveUrlFragmentsForLogins"></a>
+
+```csharp
+public object PreserveUrlFragmentsForLogins { get; set; }
+```
+
+- *Type:* object
+
+Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#preserve_url_fragments_for_logins LinuxWebApp#preserve_url_fragments_for_logins}
+
+---
+
+##### `TokenRefreshExtensionTime`<sup>Optional</sup> <a name="TokenRefreshExtensionTime" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.tokenRefreshExtensionTime"></a>
+
+```csharp
+public double TokenRefreshExtensionTime { get; set; }
+```
+
+- *Type:* double
+
+The number of hours after session token expiration that a session token can be used to call the token refresh API.
+
+Defaults to `72` hours.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#token_refresh_extension_time LinuxWebApp#token_refresh_extension_time}
+
+---
+
+##### `TokenStoreEnabled`<sup>Optional</sup> <a name="TokenStoreEnabled" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.tokenStoreEnabled"></a>
+
+```csharp
+public object TokenStoreEnabled { get; set; }
+```
+
+- *Type:* object
+
+Should the Token Store configuration Enabled. Defaults to `false`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#token_store_enabled LinuxWebApp#token_store_enabled}
+
+---
+
+##### `TokenStorePath`<sup>Optional</sup> <a name="TokenStorePath" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.tokenStorePath"></a>
+
+```csharp
+public string TokenStorePath { get; set; }
+```
+
+- *Type:* string
+
+The directory path in the App Filesystem in which the tokens will be stored.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#token_store_path LinuxWebApp#token_store_path}
+
+---
+
+##### `TokenStoreSasSettingName`<sup>Optional</sup> <a name="TokenStoreSasSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.tokenStoreSasSettingName"></a>
+
+```csharp
+public string TokenStoreSasSettingName { get; set; }
+```
+
+- *Type:* string
+
+The name of the app setting which contains the SAS URL of the blob storage containing the tokens.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#token_store_sas_setting_name LinuxWebApp#token_store_sas_setting_name}
+
+---
+
+##### `ValidateNonce`<sup>Optional</sup> <a name="ValidateNonce" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login.property.validateNonce"></a>
+
+```csharp
+public object ValidateNonce { get; set; }
+```
+
+- *Type:* object
+
+Should the nonce be validated while completing the login flow. Defaults to `true`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#validate_nonce LinuxWebApp#validate_nonce}
+
+---
+
+### LinuxWebAppAuthSettingsV2MicrosoftV2 <a name="LinuxWebAppAuthSettingsV2MicrosoftV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2MicrosoftV2 {
+    string ClientId,
+    string ClientSecretSettingName,
+    string[] AllowedAudiences = null,
+    string[] LoginScopes = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2.property.clientId">ClientId</a></code> | <code>string</code> | The OAuth 2.0 client ID that was created for the app used for authentication. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>string</code> | The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2.property.allowedAudiences">AllowedAudiences</a></code> | <code>string[]</code> | Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2.property.loginScopes">LoginScopes</a></code> | <code>string[]</code> | The list of Login scopes that will be requested as part of Microsoft Account authentication. |
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2.property.clientId"></a>
+
+```csharp
+public string ClientId { get; set; }
+```
+
+- *Type:* string
+
+The OAuth 2.0 client ID that was created for the app used for authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_id LinuxWebApp#client_id}
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2.property.clientSecretSettingName"></a>
+
+```csharp
+public string ClientSecretSettingName { get; set; }
+```
+
+- *Type:* string
+
+The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_secret_setting_name LinuxWebApp#client_secret_setting_name}
+
+---
+
+##### `AllowedAudiences`<sup>Optional</sup> <a name="AllowedAudiences" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2.property.allowedAudiences"></a>
+
+```csharp
+public string[] AllowedAudiences { get; set; }
+```
+
+- *Type:* string[]
+
+Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#allowed_audiences LinuxWebApp#allowed_audiences}
+
+---
+
+##### `LoginScopes`<sup>Optional</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2.property.loginScopes"></a>
+
+```csharp
+public string[] LoginScopes { get; set; }
+```
+
+- *Type:* string[]
+
+The list of Login scopes that will be requested as part of Microsoft Account authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#login_scopes LinuxWebApp#login_scopes}
+
+---
+
+### LinuxWebAppAuthSettingsV2TwitterV2 <a name="LinuxWebAppAuthSettingsV2TwitterV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2TwitterV2 {
+    string ConsumerKey,
+    string ConsumerSecretSettingName
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2.property.consumerKey">ConsumerKey</a></code> | <code>string</code> | The OAuth 1.0a consumer key of the Twitter application used for sign-in. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2.property.consumerSecretSettingName">ConsumerSecretSettingName</a></code> | <code>string</code> | The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in. |
+
+---
+
+##### `ConsumerKey`<sup>Required</sup> <a name="ConsumerKey" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2.property.consumerKey"></a>
+
+```csharp
+public string ConsumerKey { get; set; }
+```
+
+- *Type:* string
+
+The OAuth 1.0a consumer key of the Twitter application used for sign-in.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#consumer_key LinuxWebApp#consumer_key}
+
+---
+
+##### `ConsumerSecretSettingName`<sup>Required</sup> <a name="ConsumerSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2.property.consumerSecretSettingName"></a>
+
+```csharp
+public string ConsumerSecretSettingName { get; set; }
+```
+
+- *Type:* string
+
+The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#consumer_secret_setting_name LinuxWebApp#consumer_secret_setting_name}
+
+---
+
 ### LinuxWebAppBackup <a name="LinuxWebAppBackup" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppBackup"></a>
 
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppBackup.Initializer"></a>
@@ -2341,6 +3709,7 @@ new LinuxWebAppConfig {
     LinuxWebAppSiteConfig SiteConfig,
     System.Collections.Generic.IDictionary<string, string> AppSettings = null,
     LinuxWebAppAuthSettings AuthSettings = null,
+    LinuxWebAppAuthSettingsV2 AuthSettingsV2 = null,
     LinuxWebAppBackup Backup = null,
     object ClientAffinityEnabled = null,
     object ClientCertificateEnabled = null,
@@ -2380,6 +3749,7 @@ new LinuxWebAppConfig {
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConfig.property.siteConfig">SiteConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfig">LinuxWebAppSiteConfig</a></code> | site_config block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConfig.property.appSettings">AppSettings</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#app_settings LinuxWebApp#app_settings}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConfig.property.authSettings">AuthSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettings">LinuxWebAppAuthSettings</a></code> | auth_settings block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConfig.property.authSettingsV2">AuthSettingsV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2">LinuxWebAppAuthSettingsV2</a></code> | auth_settings_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConfig.property.backup">Backup</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppBackup">LinuxWebAppBackup</a></code> | backup block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConfig.property.clientAffinityEnabled">ClientAffinityEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_affinity_enabled LinuxWebApp#client_affinity_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConfig.property.clientCertificateEnabled">ClientCertificateEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#client_certificate_enabled LinuxWebApp#client_certificate_enabled}. |
@@ -2556,6 +3926,20 @@ public LinuxWebAppAuthSettings AuthSettings { get; set; }
 auth_settings block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#auth_settings LinuxWebApp#auth_settings}
+
+---
+
+##### `AuthSettingsV2`<sup>Optional</sup> <a name="AuthSettingsV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConfig.property.authSettingsV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2 AuthSettingsV2 { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2">LinuxWebAppAuthSettingsV2</a>
+
+auth_settings_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#auth_settings_v2 LinuxWebApp#auth_settings_v2}
 
 ---
 
@@ -7767,6 +9151,5010 @@ public LinuxWebAppAuthSettingsTwitter InternalValue { get; }
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsTwitter">LinuxWebAppAuthSettingsTwitter</a>
+
+---
+
+
+### LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference <a name="LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedApplications">ResetAllowedApplications</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedAudiences">ResetAllowedAudiences</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedGroups">ResetAllowedGroups</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedIdentities">ResetAllowedIdentities</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetClientSecretCertificateThumbprint">ResetClientSecretCertificateThumbprint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetClientSecretSettingName">ResetClientSecretSettingName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetJwtAllowedClientApplications">ResetJwtAllowedClientApplications</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetJwtAllowedGroups">ResetJwtAllowedGroups</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetLoginParameters">ResetLoginParameters</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetWwwAuthenticationDisabled">ResetWwwAuthenticationDisabled</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetAllowedApplications` <a name="ResetAllowedApplications" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedApplications"></a>
+
+```csharp
+private void ResetAllowedApplications()
+```
+
+##### `ResetAllowedAudiences` <a name="ResetAllowedAudiences" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedAudiences"></a>
+
+```csharp
+private void ResetAllowedAudiences()
+```
+
+##### `ResetAllowedGroups` <a name="ResetAllowedGroups" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedGroups"></a>
+
+```csharp
+private void ResetAllowedGroups()
+```
+
+##### `ResetAllowedIdentities` <a name="ResetAllowedIdentities" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedIdentities"></a>
+
+```csharp
+private void ResetAllowedIdentities()
+```
+
+##### `ResetClientSecretCertificateThumbprint` <a name="ResetClientSecretCertificateThumbprint" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetClientSecretCertificateThumbprint"></a>
+
+```csharp
+private void ResetClientSecretCertificateThumbprint()
+```
+
+##### `ResetClientSecretSettingName` <a name="ResetClientSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetClientSecretSettingName"></a>
+
+```csharp
+private void ResetClientSecretSettingName()
+```
+
+##### `ResetJwtAllowedClientApplications` <a name="ResetJwtAllowedClientApplications" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetJwtAllowedClientApplications"></a>
+
+```csharp
+private void ResetJwtAllowedClientApplications()
+```
+
+##### `ResetJwtAllowedGroups` <a name="ResetJwtAllowedGroups" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetJwtAllowedGroups"></a>
+
+```csharp
+private void ResetJwtAllowedGroups()
+```
+
+##### `ResetLoginParameters` <a name="ResetLoginParameters" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetLoginParameters"></a>
+
+```csharp
+private void ResetLoginParameters()
+```
+
+##### `ResetWwwAuthenticationDisabled` <a name="ResetWwwAuthenticationDisabled" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetWwwAuthenticationDisabled"></a>
+
+```csharp
+private void ResetWwwAuthenticationDisabled()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedApplicationsInput">AllowedApplicationsInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedAudiencesInput">AllowedAudiencesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedGroupsInput">AllowedGroupsInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedIdentitiesInput">AllowedIdentitiesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientIdInput">ClientIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretCertificateThumbprintInput">ClientSecretCertificateThumbprintInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretSettingNameInput">ClientSecretSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedClientApplicationsInput">JwtAllowedClientApplicationsInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroupsInput">JwtAllowedGroupsInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParametersInput">LoginParametersInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpointInput">TenantAuthEndpointInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabledInput">WwwAuthenticationDisabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedApplications">AllowedApplications</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedAudiences">AllowedAudiences</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedGroups">AllowedGroups</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedIdentities">AllowedIdentities</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientId">ClientId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretCertificateThumbprint">ClientSecretCertificateThumbprint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedClientApplications">JwtAllowedClientApplications</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroups">JwtAllowedGroups</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParameters">LoginParameters</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpoint">TenantAuthEndpoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabled">WwwAuthenticationDisabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2">LinuxWebAppAuthSettingsV2ActiveDirectoryV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `AllowedApplicationsInput`<sup>Optional</sup> <a name="AllowedApplicationsInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedApplicationsInput"></a>
+
+```csharp
+public string[] AllowedApplicationsInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `AllowedAudiencesInput`<sup>Optional</sup> <a name="AllowedAudiencesInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedAudiencesInput"></a>
+
+```csharp
+public string[] AllowedAudiencesInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `AllowedGroupsInput`<sup>Optional</sup> <a name="AllowedGroupsInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedGroupsInput"></a>
+
+```csharp
+public string[] AllowedGroupsInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `AllowedIdentitiesInput`<sup>Optional</sup> <a name="AllowedIdentitiesInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedIdentitiesInput"></a>
+
+```csharp
+public string[] AllowedIdentitiesInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `ClientIdInput`<sup>Optional</sup> <a name="ClientIdInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientIdInput"></a>
+
+```csharp
+public string ClientIdInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientSecretCertificateThumbprintInput`<sup>Optional</sup> <a name="ClientSecretCertificateThumbprintInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretCertificateThumbprintInput"></a>
+
+```csharp
+public string ClientSecretCertificateThumbprintInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientSecretSettingNameInput`<sup>Optional</sup> <a name="ClientSecretSettingNameInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretSettingNameInput"></a>
+
+```csharp
+public string ClientSecretSettingNameInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `JwtAllowedClientApplicationsInput`<sup>Optional</sup> <a name="JwtAllowedClientApplicationsInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedClientApplicationsInput"></a>
+
+```csharp
+public string[] JwtAllowedClientApplicationsInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `JwtAllowedGroupsInput`<sup>Optional</sup> <a name="JwtAllowedGroupsInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroupsInput"></a>
+
+```csharp
+public string[] JwtAllowedGroupsInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `LoginParametersInput`<sup>Optional</sup> <a name="LoginParametersInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParametersInput"></a>
+
+```csharp
+public System.Collections.Generic.IDictionary<string, string> LoginParametersInput { get; }
+```
+
+- *Type:* System.Collections.Generic.IDictionary<string, string>
+
+---
+
+##### `TenantAuthEndpointInput`<sup>Optional</sup> <a name="TenantAuthEndpointInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpointInput"></a>
+
+```csharp
+public string TenantAuthEndpointInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `WwwAuthenticationDisabledInput`<sup>Optional</sup> <a name="WwwAuthenticationDisabledInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabledInput"></a>
+
+```csharp
+public object WwwAuthenticationDisabledInput { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `AllowedApplications`<sup>Required</sup> <a name="AllowedApplications" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedApplications"></a>
+
+```csharp
+public string[] AllowedApplications { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `AllowedAudiences`<sup>Required</sup> <a name="AllowedAudiences" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedAudiences"></a>
+
+```csharp
+public string[] AllowedAudiences { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `AllowedGroups`<sup>Required</sup> <a name="AllowedGroups" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedGroups"></a>
+
+```csharp
+public string[] AllowedGroups { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `AllowedIdentities`<sup>Required</sup> <a name="AllowedIdentities" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedIdentities"></a>
+
+```csharp
+public string[] AllowedIdentities { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientId"></a>
+
+```csharp
+public string ClientId { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientSecretCertificateThumbprint`<sup>Required</sup> <a name="ClientSecretCertificateThumbprint" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretCertificateThumbprint"></a>
+
+```csharp
+public string ClientSecretCertificateThumbprint { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretSettingName"></a>
+
+```csharp
+public string ClientSecretSettingName { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `JwtAllowedClientApplications`<sup>Required</sup> <a name="JwtAllowedClientApplications" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedClientApplications"></a>
+
+```csharp
+public string[] JwtAllowedClientApplications { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `JwtAllowedGroups`<sup>Required</sup> <a name="JwtAllowedGroups" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroups"></a>
+
+```csharp
+public string[] JwtAllowedGroups { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `LoginParameters`<sup>Required</sup> <a name="LoginParameters" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParameters"></a>
+
+```csharp
+public System.Collections.Generic.IDictionary<string, string> LoginParameters { get; }
+```
+
+- *Type:* System.Collections.Generic.IDictionary<string, string>
+
+---
+
+##### `TenantAuthEndpoint`<sup>Required</sup> <a name="TenantAuthEndpoint" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpoint"></a>
+
+```csharp
+public string TenantAuthEndpoint { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `WwwAuthenticationDisabled`<sup>Required</sup> <a name="WwwAuthenticationDisabled" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabled"></a>
+
+```csharp
+public object WwwAuthenticationDisabled { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.internalValue"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2ActiveDirectoryV2 InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2">LinuxWebAppAuthSettingsV2ActiveDirectoryV2</a>
+
+---
+
+
+### LinuxWebAppAuthSettingsV2AppleV2OutputReference <a name="LinuxWebAppAuthSettingsV2AppleV2OutputReference" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2AppleV2OutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.loginScopes">LoginScopes</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.clientIdInput">ClientIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.clientSecretSettingNameInput">ClientSecretSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.clientId">ClientId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2">LinuxWebAppAuthSettingsV2AppleV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LoginScopes`<sup>Required</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.loginScopes"></a>
+
+```csharp
+public string[] LoginScopes { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `ClientIdInput`<sup>Optional</sup> <a name="ClientIdInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.clientIdInput"></a>
+
+```csharp
+public string ClientIdInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientSecretSettingNameInput`<sup>Optional</sup> <a name="ClientSecretSettingNameInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.clientSecretSettingNameInput"></a>
+
+```csharp
+public string ClientSecretSettingNameInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.clientId"></a>
+
+```csharp
+public string ClientId { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.clientSecretSettingName"></a>
+
+```csharp
+public string ClientSecretSettingName { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference.property.internalValue"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2AppleV2 InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2">LinuxWebAppAuthSettingsV2AppleV2</a>
+
+---
+
+
+### LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference <a name="LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.clientIdInput">ClientIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.clientId">ClientId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2">LinuxWebAppAuthSettingsV2AzureStaticWebAppV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientIdInput`<sup>Optional</sup> <a name="ClientIdInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.clientIdInput"></a>
+
+```csharp
+public string ClientIdInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.clientId"></a>
+
+```csharp
+public string ClientId { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.internalValue"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2AzureStaticWebAppV2 InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2">LinuxWebAppAuthSettingsV2AzureStaticWebAppV2</a>
+
+---
+
+
+### LinuxWebAppAuthSettingsV2CustomOidcV2List <a name="LinuxWebAppAuthSettingsV2CustomOidcV2List" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2CustomOidcV2List(IInterpolatingParent TerraformResource, string TerraformAttribute, bool WrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.wrapsSet">WrapsSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `WrapsSet`<sup>Required</sup> <a name="WrapsSet" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.get">Get</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `Get` <a name="Get" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.get"></a>
+
+```csharp
+private LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference Get(double Index)
+```
+
+###### `Index`<sup>Required</sup> <a name="Index" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.get.parameter.index"></a>
+
+- *Type:* double
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List.property.internalValue"></a>
+
+```csharp
+public object InternalValue { get; }
+```
+
+- *Type:* object
+
+---
+
+
+### LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference <a name="LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute, double ComplexObjectIndex, bool ComplexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.complexObjectIndex">ComplexObjectIndex</a></code> | <code>double</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.complexObjectIsFromSet">ComplexObjectIsFromSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `ComplexObjectIndex`<sup>Required</sup> <a name="ComplexObjectIndex" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* double
+
+the index of this item in the list.
+
+---
+
+##### `ComplexObjectIsFromSet`<sup>Required</sup> <a name="ComplexObjectIsFromSet" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.resetNameClaimType">ResetNameClaimType</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.resetScopes">ResetScopes</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetNameClaimType` <a name="ResetNameClaimType" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.resetNameClaimType"></a>
+
+```csharp
+private void ResetNameClaimType()
+```
+
+##### `ResetScopes` <a name="ResetScopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.resetScopes"></a>
+
+```csharp
+private void ResetScopes()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.authorisationEndpoint">AuthorisationEndpoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.certificationUri">CertificationUri</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.clientCredentialMethod">ClientCredentialMethod</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.issuerEndpoint">IssuerEndpoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.tokenEndpoint">TokenEndpoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.clientIdInput">ClientIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimTypeInput">NameClaimTypeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpointInput">OpenidConfigurationEndpointInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.scopesInput">ScopesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.clientId">ClientId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimType">NameClaimType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpoint">OpenidConfigurationEndpoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.scopes">Scopes</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `AuthorisationEndpoint`<sup>Required</sup> <a name="AuthorisationEndpoint" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.authorisationEndpoint"></a>
+
+```csharp
+public string AuthorisationEndpoint { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `CertificationUri`<sup>Required</sup> <a name="CertificationUri" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.certificationUri"></a>
+
+```csharp
+public string CertificationUri { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientCredentialMethod`<sup>Required</sup> <a name="ClientCredentialMethod" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.clientCredentialMethod"></a>
+
+```csharp
+public string ClientCredentialMethod { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.clientSecretSettingName"></a>
+
+```csharp
+public string ClientSecretSettingName { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `IssuerEndpoint`<sup>Required</sup> <a name="IssuerEndpoint" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.issuerEndpoint"></a>
+
+```csharp
+public string IssuerEndpoint { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `TokenEndpoint`<sup>Required</sup> <a name="TokenEndpoint" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.tokenEndpoint"></a>
+
+```csharp
+public string TokenEndpoint { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientIdInput`<sup>Optional</sup> <a name="ClientIdInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.clientIdInput"></a>
+
+```csharp
+public string ClientIdInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `NameClaimTypeInput`<sup>Optional</sup> <a name="NameClaimTypeInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimTypeInput"></a>
+
+```csharp
+public string NameClaimTypeInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `NameInput`<sup>Optional</sup> <a name="NameInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.nameInput"></a>
+
+```csharp
+public string NameInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `OpenidConfigurationEndpointInput`<sup>Optional</sup> <a name="OpenidConfigurationEndpointInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpointInput"></a>
+
+```csharp
+public string OpenidConfigurationEndpointInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ScopesInput`<sup>Optional</sup> <a name="ScopesInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.scopesInput"></a>
+
+```csharp
+public string[] ScopesInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.clientId"></a>
+
+```csharp
+public string ClientId { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.name"></a>
+
+```csharp
+public string Name { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `NameClaimType`<sup>Required</sup> <a name="NameClaimType" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimType"></a>
+
+```csharp
+public string NameClaimType { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `OpenidConfigurationEndpoint`<sup>Required</sup> <a name="OpenidConfigurationEndpoint" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpoint"></a>
+
+```csharp
+public string OpenidConfigurationEndpoint { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Scopes`<sup>Required</sup> <a name="Scopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.scopes"></a>
+
+```csharp
+public string[] Scopes { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.internalValue"></a>
+
+```csharp
+public object InternalValue { get; }
+```
+
+- *Type:* object
+
+---
+
+
+### LinuxWebAppAuthSettingsV2FacebookV2OutputReference <a name="LinuxWebAppAuthSettingsV2FacebookV2OutputReference" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2FacebookV2OutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.resetGraphApiVersion">ResetGraphApiVersion</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.resetLoginScopes">ResetLoginScopes</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetGraphApiVersion` <a name="ResetGraphApiVersion" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.resetGraphApiVersion"></a>
+
+```csharp
+private void ResetGraphApiVersion()
+```
+
+##### `ResetLoginScopes` <a name="ResetLoginScopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.resetLoginScopes"></a>
+
+```csharp
+private void ResetLoginScopes()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.appIdInput">AppIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.appSecretSettingNameInput">AppSecretSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.graphApiVersionInput">GraphApiVersionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.loginScopesInput">LoginScopesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.appId">AppId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.appSecretSettingName">AppSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.graphApiVersion">GraphApiVersion</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.loginScopes">LoginScopes</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2">LinuxWebAppAuthSettingsV2FacebookV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `AppIdInput`<sup>Optional</sup> <a name="AppIdInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.appIdInput"></a>
+
+```csharp
+public string AppIdInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `AppSecretSettingNameInput`<sup>Optional</sup> <a name="AppSecretSettingNameInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.appSecretSettingNameInput"></a>
+
+```csharp
+public string AppSecretSettingNameInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `GraphApiVersionInput`<sup>Optional</sup> <a name="GraphApiVersionInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.graphApiVersionInput"></a>
+
+```csharp
+public string GraphApiVersionInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LoginScopesInput`<sup>Optional</sup> <a name="LoginScopesInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.loginScopesInput"></a>
+
+```csharp
+public string[] LoginScopesInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `AppId`<sup>Required</sup> <a name="AppId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.appId"></a>
+
+```csharp
+public string AppId { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `AppSecretSettingName`<sup>Required</sup> <a name="AppSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.appSecretSettingName"></a>
+
+```csharp
+public string AppSecretSettingName { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `GraphApiVersion`<sup>Required</sup> <a name="GraphApiVersion" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.graphApiVersion"></a>
+
+```csharp
+public string GraphApiVersion { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LoginScopes`<sup>Required</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.loginScopes"></a>
+
+```csharp
+public string[] LoginScopes { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference.property.internalValue"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2FacebookV2 InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2">LinuxWebAppAuthSettingsV2FacebookV2</a>
+
+---
+
+
+### LinuxWebAppAuthSettingsV2GithubV2OutputReference <a name="LinuxWebAppAuthSettingsV2GithubV2OutputReference" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2GithubV2OutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.resetLoginScopes">ResetLoginScopes</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetLoginScopes` <a name="ResetLoginScopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.resetLoginScopes"></a>
+
+```csharp
+private void ResetLoginScopes()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.clientIdInput">ClientIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.clientSecretSettingNameInput">ClientSecretSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.loginScopesInput">LoginScopesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.clientId">ClientId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.loginScopes">LoginScopes</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2">LinuxWebAppAuthSettingsV2GithubV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientIdInput`<sup>Optional</sup> <a name="ClientIdInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.clientIdInput"></a>
+
+```csharp
+public string ClientIdInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientSecretSettingNameInput`<sup>Optional</sup> <a name="ClientSecretSettingNameInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.clientSecretSettingNameInput"></a>
+
+```csharp
+public string ClientSecretSettingNameInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LoginScopesInput`<sup>Optional</sup> <a name="LoginScopesInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.loginScopesInput"></a>
+
+```csharp
+public string[] LoginScopesInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.clientId"></a>
+
+```csharp
+public string ClientId { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.clientSecretSettingName"></a>
+
+```csharp
+public string ClientSecretSettingName { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LoginScopes`<sup>Required</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.loginScopes"></a>
+
+```csharp
+public string[] LoginScopes { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference.property.internalValue"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2GithubV2 InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2">LinuxWebAppAuthSettingsV2GithubV2</a>
+
+---
+
+
+### LinuxWebAppAuthSettingsV2GoogleV2OutputReference <a name="LinuxWebAppAuthSettingsV2GoogleV2OutputReference" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2GoogleV2OutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.resetAllowedAudiences">ResetAllowedAudiences</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.resetLoginScopes">ResetLoginScopes</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetAllowedAudiences` <a name="ResetAllowedAudiences" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.resetAllowedAudiences"></a>
+
+```csharp
+private void ResetAllowedAudiences()
+```
+
+##### `ResetLoginScopes` <a name="ResetLoginScopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.resetLoginScopes"></a>
+
+```csharp
+private void ResetLoginScopes()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.allowedAudiencesInput">AllowedAudiencesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.clientIdInput">ClientIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.clientSecretSettingNameInput">ClientSecretSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.loginScopesInput">LoginScopesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.allowedAudiences">AllowedAudiences</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.clientId">ClientId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.loginScopes">LoginScopes</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2">LinuxWebAppAuthSettingsV2GoogleV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `AllowedAudiencesInput`<sup>Optional</sup> <a name="AllowedAudiencesInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.allowedAudiencesInput"></a>
+
+```csharp
+public string[] AllowedAudiencesInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `ClientIdInput`<sup>Optional</sup> <a name="ClientIdInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.clientIdInput"></a>
+
+```csharp
+public string ClientIdInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientSecretSettingNameInput`<sup>Optional</sup> <a name="ClientSecretSettingNameInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.clientSecretSettingNameInput"></a>
+
+```csharp
+public string ClientSecretSettingNameInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LoginScopesInput`<sup>Optional</sup> <a name="LoginScopesInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.loginScopesInput"></a>
+
+```csharp
+public string[] LoginScopesInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `AllowedAudiences`<sup>Required</sup> <a name="AllowedAudiences" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.allowedAudiences"></a>
+
+```csharp
+public string[] AllowedAudiences { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.clientId"></a>
+
+```csharp
+public string ClientId { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.clientSecretSettingName"></a>
+
+```csharp
+public string ClientSecretSettingName { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LoginScopes`<sup>Required</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.loginScopes"></a>
+
+```csharp
+public string[] LoginScopes { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference.property.internalValue"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2GoogleV2 InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2">LinuxWebAppAuthSettingsV2GoogleV2</a>
+
+---
+
+
+### LinuxWebAppAuthSettingsV2LoginOutputReference <a name="LinuxWebAppAuthSettingsV2LoginOutputReference" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2LoginOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetAllowedExternalRedirectUrls">ResetAllowedExternalRedirectUrls</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetCookieExpirationConvention">ResetCookieExpirationConvention</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetCookieExpirationTime">ResetCookieExpirationTime</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetLogoutEndpoint">ResetLogoutEndpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetNonceExpirationTime">ResetNonceExpirationTime</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetPreserveUrlFragmentsForLogins">ResetPreserveUrlFragmentsForLogins</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetTokenRefreshExtensionTime">ResetTokenRefreshExtensionTime</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetTokenStoreEnabled">ResetTokenStoreEnabled</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetTokenStorePath">ResetTokenStorePath</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetTokenStoreSasSettingName">ResetTokenStoreSasSettingName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetValidateNonce">ResetValidateNonce</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetAllowedExternalRedirectUrls` <a name="ResetAllowedExternalRedirectUrls" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetAllowedExternalRedirectUrls"></a>
+
+```csharp
+private void ResetAllowedExternalRedirectUrls()
+```
+
+##### `ResetCookieExpirationConvention` <a name="ResetCookieExpirationConvention" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetCookieExpirationConvention"></a>
+
+```csharp
+private void ResetCookieExpirationConvention()
+```
+
+##### `ResetCookieExpirationTime` <a name="ResetCookieExpirationTime" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetCookieExpirationTime"></a>
+
+```csharp
+private void ResetCookieExpirationTime()
+```
+
+##### `ResetLogoutEndpoint` <a name="ResetLogoutEndpoint" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetLogoutEndpoint"></a>
+
+```csharp
+private void ResetLogoutEndpoint()
+```
+
+##### `ResetNonceExpirationTime` <a name="ResetNonceExpirationTime" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetNonceExpirationTime"></a>
+
+```csharp
+private void ResetNonceExpirationTime()
+```
+
+##### `ResetPreserveUrlFragmentsForLogins` <a name="ResetPreserveUrlFragmentsForLogins" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetPreserveUrlFragmentsForLogins"></a>
+
+```csharp
+private void ResetPreserveUrlFragmentsForLogins()
+```
+
+##### `ResetTokenRefreshExtensionTime` <a name="ResetTokenRefreshExtensionTime" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetTokenRefreshExtensionTime"></a>
+
+```csharp
+private void ResetTokenRefreshExtensionTime()
+```
+
+##### `ResetTokenStoreEnabled` <a name="ResetTokenStoreEnabled" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetTokenStoreEnabled"></a>
+
+```csharp
+private void ResetTokenStoreEnabled()
+```
+
+##### `ResetTokenStorePath` <a name="ResetTokenStorePath" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetTokenStorePath"></a>
+
+```csharp
+private void ResetTokenStorePath()
+```
+
+##### `ResetTokenStoreSasSettingName` <a name="ResetTokenStoreSasSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetTokenStoreSasSettingName"></a>
+
+```csharp
+private void ResetTokenStoreSasSettingName()
+```
+
+##### `ResetValidateNonce` <a name="ResetValidateNonce" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.resetValidateNonce"></a>
+
+```csharp
+private void ResetValidateNonce()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.allowedExternalRedirectUrlsInput">AllowedExternalRedirectUrlsInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.cookieExpirationConventionInput">CookieExpirationConventionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.cookieExpirationTimeInput">CookieExpirationTimeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.logoutEndpointInput">LogoutEndpointInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.nonceExpirationTimeInput">NonceExpirationTimeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLoginsInput">PreserveUrlFragmentsForLoginsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTimeInput">TokenRefreshExtensionTimeInput</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabledInput">TokenStoreEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenStorePathInput">TokenStorePathInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingNameInput">TokenStoreSasSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.validateNonceInput">ValidateNonceInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.allowedExternalRedirectUrls">AllowedExternalRedirectUrls</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.cookieExpirationConvention">CookieExpirationConvention</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.cookieExpirationTime">CookieExpirationTime</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.logoutEndpoint">LogoutEndpoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.nonceExpirationTime">NonceExpirationTime</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLogins">PreserveUrlFragmentsForLogins</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTime">TokenRefreshExtensionTime</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabled">TokenStoreEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenStorePath">TokenStorePath</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingName">TokenStoreSasSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.validateNonce">ValidateNonce</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login">LinuxWebAppAuthSettingsV2Login</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `AllowedExternalRedirectUrlsInput`<sup>Optional</sup> <a name="AllowedExternalRedirectUrlsInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.allowedExternalRedirectUrlsInput"></a>
+
+```csharp
+public string[] AllowedExternalRedirectUrlsInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `CookieExpirationConventionInput`<sup>Optional</sup> <a name="CookieExpirationConventionInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.cookieExpirationConventionInput"></a>
+
+```csharp
+public string CookieExpirationConventionInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `CookieExpirationTimeInput`<sup>Optional</sup> <a name="CookieExpirationTimeInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.cookieExpirationTimeInput"></a>
+
+```csharp
+public string CookieExpirationTimeInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LogoutEndpointInput`<sup>Optional</sup> <a name="LogoutEndpointInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.logoutEndpointInput"></a>
+
+```csharp
+public string LogoutEndpointInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `NonceExpirationTimeInput`<sup>Optional</sup> <a name="NonceExpirationTimeInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.nonceExpirationTimeInput"></a>
+
+```csharp
+public string NonceExpirationTimeInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `PreserveUrlFragmentsForLoginsInput`<sup>Optional</sup> <a name="PreserveUrlFragmentsForLoginsInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLoginsInput"></a>
+
+```csharp
+public object PreserveUrlFragmentsForLoginsInput { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `TokenRefreshExtensionTimeInput`<sup>Optional</sup> <a name="TokenRefreshExtensionTimeInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTimeInput"></a>
+
+```csharp
+public double TokenRefreshExtensionTimeInput { get; }
+```
+
+- *Type:* double
+
+---
+
+##### `TokenStoreEnabledInput`<sup>Optional</sup> <a name="TokenStoreEnabledInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabledInput"></a>
+
+```csharp
+public object TokenStoreEnabledInput { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `TokenStorePathInput`<sup>Optional</sup> <a name="TokenStorePathInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenStorePathInput"></a>
+
+```csharp
+public string TokenStorePathInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `TokenStoreSasSettingNameInput`<sup>Optional</sup> <a name="TokenStoreSasSettingNameInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingNameInput"></a>
+
+```csharp
+public string TokenStoreSasSettingNameInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ValidateNonceInput`<sup>Optional</sup> <a name="ValidateNonceInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.validateNonceInput"></a>
+
+```csharp
+public object ValidateNonceInput { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `AllowedExternalRedirectUrls`<sup>Required</sup> <a name="AllowedExternalRedirectUrls" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.allowedExternalRedirectUrls"></a>
+
+```csharp
+public string[] AllowedExternalRedirectUrls { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `CookieExpirationConvention`<sup>Required</sup> <a name="CookieExpirationConvention" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.cookieExpirationConvention"></a>
+
+```csharp
+public string CookieExpirationConvention { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `CookieExpirationTime`<sup>Required</sup> <a name="CookieExpirationTime" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.cookieExpirationTime"></a>
+
+```csharp
+public string CookieExpirationTime { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LogoutEndpoint`<sup>Required</sup> <a name="LogoutEndpoint" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.logoutEndpoint"></a>
+
+```csharp
+public string LogoutEndpoint { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `NonceExpirationTime`<sup>Required</sup> <a name="NonceExpirationTime" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.nonceExpirationTime"></a>
+
+```csharp
+public string NonceExpirationTime { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `PreserveUrlFragmentsForLogins`<sup>Required</sup> <a name="PreserveUrlFragmentsForLogins" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLogins"></a>
+
+```csharp
+public object PreserveUrlFragmentsForLogins { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `TokenRefreshExtensionTime`<sup>Required</sup> <a name="TokenRefreshExtensionTime" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTime"></a>
+
+```csharp
+public double TokenRefreshExtensionTime { get; }
+```
+
+- *Type:* double
+
+---
+
+##### `TokenStoreEnabled`<sup>Required</sup> <a name="TokenStoreEnabled" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabled"></a>
+
+```csharp
+public object TokenStoreEnabled { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `TokenStorePath`<sup>Required</sup> <a name="TokenStorePath" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenStorePath"></a>
+
+```csharp
+public string TokenStorePath { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `TokenStoreSasSettingName`<sup>Required</sup> <a name="TokenStoreSasSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingName"></a>
+
+```csharp
+public string TokenStoreSasSettingName { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ValidateNonce`<sup>Required</sup> <a name="ValidateNonce" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.validateNonce"></a>
+
+```csharp
+public object ValidateNonce { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference.property.internalValue"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2Login InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login">LinuxWebAppAuthSettingsV2Login</a>
+
+---
+
+
+### LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference <a name="LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.resetAllowedAudiences">ResetAllowedAudiences</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.resetLoginScopes">ResetLoginScopes</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetAllowedAudiences` <a name="ResetAllowedAudiences" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.resetAllowedAudiences"></a>
+
+```csharp
+private void ResetAllowedAudiences()
+```
+
+##### `ResetLoginScopes` <a name="ResetLoginScopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.resetLoginScopes"></a>
+
+```csharp
+private void ResetLoginScopes()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.allowedAudiencesInput">AllowedAudiencesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.clientIdInput">ClientIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.clientSecretSettingNameInput">ClientSecretSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.loginScopesInput">LoginScopesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.allowedAudiences">AllowedAudiences</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.clientId">ClientId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.loginScopes">LoginScopes</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2">LinuxWebAppAuthSettingsV2MicrosoftV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `AllowedAudiencesInput`<sup>Optional</sup> <a name="AllowedAudiencesInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.allowedAudiencesInput"></a>
+
+```csharp
+public string[] AllowedAudiencesInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `ClientIdInput`<sup>Optional</sup> <a name="ClientIdInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.clientIdInput"></a>
+
+```csharp
+public string ClientIdInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientSecretSettingNameInput`<sup>Optional</sup> <a name="ClientSecretSettingNameInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.clientSecretSettingNameInput"></a>
+
+```csharp
+public string ClientSecretSettingNameInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LoginScopesInput`<sup>Optional</sup> <a name="LoginScopesInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.loginScopesInput"></a>
+
+```csharp
+public string[] LoginScopesInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `AllowedAudiences`<sup>Required</sup> <a name="AllowedAudiences" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.allowedAudiences"></a>
+
+```csharp
+public string[] AllowedAudiences { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.clientId"></a>
+
+```csharp
+public string ClientId { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.clientSecretSettingName"></a>
+
+```csharp
+public string ClientSecretSettingName { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LoginScopes`<sup>Required</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.loginScopes"></a>
+
+```csharp
+public string[] LoginScopes { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.property.internalValue"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2MicrosoftV2 InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2">LinuxWebAppAuthSettingsV2MicrosoftV2</a>
+
+---
+
+
+### LinuxWebAppAuthSettingsV2OutputReference <a name="LinuxWebAppAuthSettingsV2OutputReference" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2OutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putActiveDirectoryV2">PutActiveDirectoryV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putAppleV2">PutAppleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putAzureStaticWebAppV2">PutAzureStaticWebAppV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putCustomOidcV2">PutCustomOidcV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putFacebookV2">PutFacebookV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putGithubV2">PutGithubV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putGoogleV2">PutGoogleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putLogin">PutLogin</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putMicrosoftV2">PutMicrosoftV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putTwitterV2">PutTwitterV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetActiveDirectoryV2">ResetActiveDirectoryV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetAppleV2">ResetAppleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetAuthEnabled">ResetAuthEnabled</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetAzureStaticWebAppV2">ResetAzureStaticWebAppV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetConfigFilePath">ResetConfigFilePath</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetCustomOidcV2">ResetCustomOidcV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetDefaultProvider">ResetDefaultProvider</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetExcludedPaths">ResetExcludedPaths</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetFacebookV2">ResetFacebookV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetForwardProxyConvention">ResetForwardProxyConvention</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetForwardProxyCustomHostHeaderName">ResetForwardProxyCustomHostHeaderName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetForwardProxyCustomSchemeHeaderName">ResetForwardProxyCustomSchemeHeaderName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetGithubV2">ResetGithubV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetGoogleV2">ResetGoogleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetHttpRouteApiPrefix">ResetHttpRouteApiPrefix</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetMicrosoftV2">ResetMicrosoftV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetRequireAuthentication">ResetRequireAuthentication</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetRequireHttps">ResetRequireHttps</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetRuntimeVersion">ResetRuntimeVersion</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetTwitterV2">ResetTwitterV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetUnauthenticatedAction">ResetUnauthenticatedAction</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `PutActiveDirectoryV2` <a name="PutActiveDirectoryV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putActiveDirectoryV2"></a>
+
+```csharp
+private void PutActiveDirectoryV2(LinuxWebAppAuthSettingsV2ActiveDirectoryV2 Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putActiveDirectoryV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2">LinuxWebAppAuthSettingsV2ActiveDirectoryV2</a>
+
+---
+
+##### `PutAppleV2` <a name="PutAppleV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putAppleV2"></a>
+
+```csharp
+private void PutAppleV2(LinuxWebAppAuthSettingsV2AppleV2 Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putAppleV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2">LinuxWebAppAuthSettingsV2AppleV2</a>
+
+---
+
+##### `PutAzureStaticWebAppV2` <a name="PutAzureStaticWebAppV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putAzureStaticWebAppV2"></a>
+
+```csharp
+private void PutAzureStaticWebAppV2(LinuxWebAppAuthSettingsV2AzureStaticWebAppV2 Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putAzureStaticWebAppV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2">LinuxWebAppAuthSettingsV2AzureStaticWebAppV2</a>
+
+---
+
+##### `PutCustomOidcV2` <a name="PutCustomOidcV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putCustomOidcV2"></a>
+
+```csharp
+private void PutCustomOidcV2(object Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putCustomOidcV2.parameter.value"></a>
+
+- *Type:* object
+
+---
+
+##### `PutFacebookV2` <a name="PutFacebookV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putFacebookV2"></a>
+
+```csharp
+private void PutFacebookV2(LinuxWebAppAuthSettingsV2FacebookV2 Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putFacebookV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2">LinuxWebAppAuthSettingsV2FacebookV2</a>
+
+---
+
+##### `PutGithubV2` <a name="PutGithubV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putGithubV2"></a>
+
+```csharp
+private void PutGithubV2(LinuxWebAppAuthSettingsV2GithubV2 Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putGithubV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2">LinuxWebAppAuthSettingsV2GithubV2</a>
+
+---
+
+##### `PutGoogleV2` <a name="PutGoogleV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putGoogleV2"></a>
+
+```csharp
+private void PutGoogleV2(LinuxWebAppAuthSettingsV2GoogleV2 Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putGoogleV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2">LinuxWebAppAuthSettingsV2GoogleV2</a>
+
+---
+
+##### `PutLogin` <a name="PutLogin" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putLogin"></a>
+
+```csharp
+private void PutLogin(LinuxWebAppAuthSettingsV2Login Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putLogin.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login">LinuxWebAppAuthSettingsV2Login</a>
+
+---
+
+##### `PutMicrosoftV2` <a name="PutMicrosoftV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putMicrosoftV2"></a>
+
+```csharp
+private void PutMicrosoftV2(LinuxWebAppAuthSettingsV2MicrosoftV2 Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putMicrosoftV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2">LinuxWebAppAuthSettingsV2MicrosoftV2</a>
+
+---
+
+##### `PutTwitterV2` <a name="PutTwitterV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putTwitterV2"></a>
+
+```csharp
+private void PutTwitterV2(LinuxWebAppAuthSettingsV2TwitterV2 Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.putTwitterV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2">LinuxWebAppAuthSettingsV2TwitterV2</a>
+
+---
+
+##### `ResetActiveDirectoryV2` <a name="ResetActiveDirectoryV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetActiveDirectoryV2"></a>
+
+```csharp
+private void ResetActiveDirectoryV2()
+```
+
+##### `ResetAppleV2` <a name="ResetAppleV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetAppleV2"></a>
+
+```csharp
+private void ResetAppleV2()
+```
+
+##### `ResetAuthEnabled` <a name="ResetAuthEnabled" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetAuthEnabled"></a>
+
+```csharp
+private void ResetAuthEnabled()
+```
+
+##### `ResetAzureStaticWebAppV2` <a name="ResetAzureStaticWebAppV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetAzureStaticWebAppV2"></a>
+
+```csharp
+private void ResetAzureStaticWebAppV2()
+```
+
+##### `ResetConfigFilePath` <a name="ResetConfigFilePath" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetConfigFilePath"></a>
+
+```csharp
+private void ResetConfigFilePath()
+```
+
+##### `ResetCustomOidcV2` <a name="ResetCustomOidcV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetCustomOidcV2"></a>
+
+```csharp
+private void ResetCustomOidcV2()
+```
+
+##### `ResetDefaultProvider` <a name="ResetDefaultProvider" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetDefaultProvider"></a>
+
+```csharp
+private void ResetDefaultProvider()
+```
+
+##### `ResetExcludedPaths` <a name="ResetExcludedPaths" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetExcludedPaths"></a>
+
+```csharp
+private void ResetExcludedPaths()
+```
+
+##### `ResetFacebookV2` <a name="ResetFacebookV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetFacebookV2"></a>
+
+```csharp
+private void ResetFacebookV2()
+```
+
+##### `ResetForwardProxyConvention` <a name="ResetForwardProxyConvention" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetForwardProxyConvention"></a>
+
+```csharp
+private void ResetForwardProxyConvention()
+```
+
+##### `ResetForwardProxyCustomHostHeaderName` <a name="ResetForwardProxyCustomHostHeaderName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetForwardProxyCustomHostHeaderName"></a>
+
+```csharp
+private void ResetForwardProxyCustomHostHeaderName()
+```
+
+##### `ResetForwardProxyCustomSchemeHeaderName` <a name="ResetForwardProxyCustomSchemeHeaderName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetForwardProxyCustomSchemeHeaderName"></a>
+
+```csharp
+private void ResetForwardProxyCustomSchemeHeaderName()
+```
+
+##### `ResetGithubV2` <a name="ResetGithubV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetGithubV2"></a>
+
+```csharp
+private void ResetGithubV2()
+```
+
+##### `ResetGoogleV2` <a name="ResetGoogleV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetGoogleV2"></a>
+
+```csharp
+private void ResetGoogleV2()
+```
+
+##### `ResetHttpRouteApiPrefix` <a name="ResetHttpRouteApiPrefix" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetHttpRouteApiPrefix"></a>
+
+```csharp
+private void ResetHttpRouteApiPrefix()
+```
+
+##### `ResetMicrosoftV2` <a name="ResetMicrosoftV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetMicrosoftV2"></a>
+
+```csharp
+private void ResetMicrosoftV2()
+```
+
+##### `ResetRequireAuthentication` <a name="ResetRequireAuthentication" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetRequireAuthentication"></a>
+
+```csharp
+private void ResetRequireAuthentication()
+```
+
+##### `ResetRequireHttps` <a name="ResetRequireHttps" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetRequireHttps"></a>
+
+```csharp
+private void ResetRequireHttps()
+```
+
+##### `ResetRuntimeVersion` <a name="ResetRuntimeVersion" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetRuntimeVersion"></a>
+
+```csharp
+private void ResetRuntimeVersion()
+```
+
+##### `ResetTwitterV2` <a name="ResetTwitterV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetTwitterV2"></a>
+
+```csharp
+private void ResetTwitterV2()
+```
+
+##### `ResetUnauthenticatedAction` <a name="ResetUnauthenticatedAction" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.resetUnauthenticatedAction"></a>
+
+```csharp
+private void ResetUnauthenticatedAction()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.activeDirectoryV2">ActiveDirectoryV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference">LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.appleV2">AppleV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference">LinuxWebAppAuthSettingsV2AppleV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.azureStaticWebAppV2">AzureStaticWebAppV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference">LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.customOidcV2">CustomOidcV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List">LinuxWebAppAuthSettingsV2CustomOidcV2List</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.facebookV2">FacebookV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference">LinuxWebAppAuthSettingsV2FacebookV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.githubV2">GithubV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference">LinuxWebAppAuthSettingsV2GithubV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.googleV2">GoogleV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference">LinuxWebAppAuthSettingsV2GoogleV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.login">Login</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference">LinuxWebAppAuthSettingsV2LoginOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.microsoftV2">MicrosoftV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference">LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.twitterV2">TwitterV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference">LinuxWebAppAuthSettingsV2TwitterV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.activeDirectoryV2Input">ActiveDirectoryV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2">LinuxWebAppAuthSettingsV2ActiveDirectoryV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.appleV2Input">AppleV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2">LinuxWebAppAuthSettingsV2AppleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.authEnabledInput">AuthEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.azureStaticWebAppV2Input">AzureStaticWebAppV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2">LinuxWebAppAuthSettingsV2AzureStaticWebAppV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.configFilePathInput">ConfigFilePathInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.customOidcV2Input">CustomOidcV2Input</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.defaultProviderInput">DefaultProviderInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.excludedPathsInput">ExcludedPathsInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.facebookV2Input">FacebookV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2">LinuxWebAppAuthSettingsV2FacebookV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.forwardProxyConventionInput">ForwardProxyConventionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.forwardProxyCustomHostHeaderNameInput">ForwardProxyCustomHostHeaderNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.forwardProxyCustomSchemeHeaderNameInput">ForwardProxyCustomSchemeHeaderNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.githubV2Input">GithubV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2">LinuxWebAppAuthSettingsV2GithubV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.googleV2Input">GoogleV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2">LinuxWebAppAuthSettingsV2GoogleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.httpRouteApiPrefixInput">HttpRouteApiPrefixInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.loginInput">LoginInput</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login">LinuxWebAppAuthSettingsV2Login</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.microsoftV2Input">MicrosoftV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2">LinuxWebAppAuthSettingsV2MicrosoftV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.requireAuthenticationInput">RequireAuthenticationInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.requireHttpsInput">RequireHttpsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.runtimeVersionInput">RuntimeVersionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.twitterV2Input">TwitterV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2">LinuxWebAppAuthSettingsV2TwitterV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.unauthenticatedActionInput">UnauthenticatedActionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.authEnabled">AuthEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.configFilePath">ConfigFilePath</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.defaultProvider">DefaultProvider</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.excludedPaths">ExcludedPaths</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.forwardProxyConvention">ForwardProxyConvention</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.forwardProxyCustomHostHeaderName">ForwardProxyCustomHostHeaderName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.forwardProxyCustomSchemeHeaderName">ForwardProxyCustomSchemeHeaderName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.httpRouteApiPrefix">HttpRouteApiPrefix</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.requireAuthentication">RequireAuthentication</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.requireHttps">RequireHttps</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.runtimeVersion">RuntimeVersion</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.unauthenticatedAction">UnauthenticatedAction</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2">LinuxWebAppAuthSettingsV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ActiveDirectoryV2`<sup>Required</sup> <a name="ActiveDirectoryV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.activeDirectoryV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference ActiveDirectoryV2 { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference">LinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference</a>
+
+---
+
+##### `AppleV2`<sup>Required</sup> <a name="AppleV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.appleV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2AppleV2OutputReference AppleV2 { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2OutputReference">LinuxWebAppAuthSettingsV2AppleV2OutputReference</a>
+
+---
+
+##### `AzureStaticWebAppV2`<sup>Required</sup> <a name="AzureStaticWebAppV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.azureStaticWebAppV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference AzureStaticWebAppV2 { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference">LinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference</a>
+
+---
+
+##### `CustomOidcV2`<sup>Required</sup> <a name="CustomOidcV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.customOidcV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2CustomOidcV2List CustomOidcV2 { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2List">LinuxWebAppAuthSettingsV2CustomOidcV2List</a>
+
+---
+
+##### `FacebookV2`<sup>Required</sup> <a name="FacebookV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.facebookV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2FacebookV2OutputReference FacebookV2 { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2OutputReference">LinuxWebAppAuthSettingsV2FacebookV2OutputReference</a>
+
+---
+
+##### `GithubV2`<sup>Required</sup> <a name="GithubV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.githubV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2GithubV2OutputReference GithubV2 { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2OutputReference">LinuxWebAppAuthSettingsV2GithubV2OutputReference</a>
+
+---
+
+##### `GoogleV2`<sup>Required</sup> <a name="GoogleV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.googleV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2GoogleV2OutputReference GoogleV2 { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2OutputReference">LinuxWebAppAuthSettingsV2GoogleV2OutputReference</a>
+
+---
+
+##### `Login`<sup>Required</sup> <a name="Login" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.login"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2LoginOutputReference Login { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2LoginOutputReference">LinuxWebAppAuthSettingsV2LoginOutputReference</a>
+
+---
+
+##### `MicrosoftV2`<sup>Required</sup> <a name="MicrosoftV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.microsoftV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference MicrosoftV2 { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference">LinuxWebAppAuthSettingsV2MicrosoftV2OutputReference</a>
+
+---
+
+##### `TwitterV2`<sup>Required</sup> <a name="TwitterV2" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.twitterV2"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2TwitterV2OutputReference TwitterV2 { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference">LinuxWebAppAuthSettingsV2TwitterV2OutputReference</a>
+
+---
+
+##### `ActiveDirectoryV2Input`<sup>Optional</sup> <a name="ActiveDirectoryV2Input" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.activeDirectoryV2Input"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2ActiveDirectoryV2 ActiveDirectoryV2Input { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2ActiveDirectoryV2">LinuxWebAppAuthSettingsV2ActiveDirectoryV2</a>
+
+---
+
+##### `AppleV2Input`<sup>Optional</sup> <a name="AppleV2Input" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.appleV2Input"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2AppleV2 AppleV2Input { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AppleV2">LinuxWebAppAuthSettingsV2AppleV2</a>
+
+---
+
+##### `AuthEnabledInput`<sup>Optional</sup> <a name="AuthEnabledInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.authEnabledInput"></a>
+
+```csharp
+public object AuthEnabledInput { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `AzureStaticWebAppV2Input`<sup>Optional</sup> <a name="AzureStaticWebAppV2Input" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.azureStaticWebAppV2Input"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2AzureStaticWebAppV2 AzureStaticWebAppV2Input { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2AzureStaticWebAppV2">LinuxWebAppAuthSettingsV2AzureStaticWebAppV2</a>
+
+---
+
+##### `ConfigFilePathInput`<sup>Optional</sup> <a name="ConfigFilePathInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.configFilePathInput"></a>
+
+```csharp
+public string ConfigFilePathInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `CustomOidcV2Input`<sup>Optional</sup> <a name="CustomOidcV2Input" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.customOidcV2Input"></a>
+
+```csharp
+public object CustomOidcV2Input { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `DefaultProviderInput`<sup>Optional</sup> <a name="DefaultProviderInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.defaultProviderInput"></a>
+
+```csharp
+public string DefaultProviderInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ExcludedPathsInput`<sup>Optional</sup> <a name="ExcludedPathsInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.excludedPathsInput"></a>
+
+```csharp
+public string[] ExcludedPathsInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `FacebookV2Input`<sup>Optional</sup> <a name="FacebookV2Input" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.facebookV2Input"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2FacebookV2 FacebookV2Input { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2FacebookV2">LinuxWebAppAuthSettingsV2FacebookV2</a>
+
+---
+
+##### `ForwardProxyConventionInput`<sup>Optional</sup> <a name="ForwardProxyConventionInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.forwardProxyConventionInput"></a>
+
+```csharp
+public string ForwardProxyConventionInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ForwardProxyCustomHostHeaderNameInput`<sup>Optional</sup> <a name="ForwardProxyCustomHostHeaderNameInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.forwardProxyCustomHostHeaderNameInput"></a>
+
+```csharp
+public string ForwardProxyCustomHostHeaderNameInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ForwardProxyCustomSchemeHeaderNameInput`<sup>Optional</sup> <a name="ForwardProxyCustomSchemeHeaderNameInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.forwardProxyCustomSchemeHeaderNameInput"></a>
+
+```csharp
+public string ForwardProxyCustomSchemeHeaderNameInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `GithubV2Input`<sup>Optional</sup> <a name="GithubV2Input" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.githubV2Input"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2GithubV2 GithubV2Input { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GithubV2">LinuxWebAppAuthSettingsV2GithubV2</a>
+
+---
+
+##### `GoogleV2Input`<sup>Optional</sup> <a name="GoogleV2Input" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.googleV2Input"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2GoogleV2 GoogleV2Input { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2GoogleV2">LinuxWebAppAuthSettingsV2GoogleV2</a>
+
+---
+
+##### `HttpRouteApiPrefixInput`<sup>Optional</sup> <a name="HttpRouteApiPrefixInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.httpRouteApiPrefixInput"></a>
+
+```csharp
+public string HttpRouteApiPrefixInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LoginInput`<sup>Optional</sup> <a name="LoginInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.loginInput"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2Login LoginInput { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2Login">LinuxWebAppAuthSettingsV2Login</a>
+
+---
+
+##### `MicrosoftV2Input`<sup>Optional</sup> <a name="MicrosoftV2Input" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.microsoftV2Input"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2MicrosoftV2 MicrosoftV2Input { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2MicrosoftV2">LinuxWebAppAuthSettingsV2MicrosoftV2</a>
+
+---
+
+##### `RequireAuthenticationInput`<sup>Optional</sup> <a name="RequireAuthenticationInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.requireAuthenticationInput"></a>
+
+```csharp
+public object RequireAuthenticationInput { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `RequireHttpsInput`<sup>Optional</sup> <a name="RequireHttpsInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.requireHttpsInput"></a>
+
+```csharp
+public object RequireHttpsInput { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `RuntimeVersionInput`<sup>Optional</sup> <a name="RuntimeVersionInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.runtimeVersionInput"></a>
+
+```csharp
+public string RuntimeVersionInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `TwitterV2Input`<sup>Optional</sup> <a name="TwitterV2Input" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.twitterV2Input"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2TwitterV2 TwitterV2Input { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2">LinuxWebAppAuthSettingsV2TwitterV2</a>
+
+---
+
+##### `UnauthenticatedActionInput`<sup>Optional</sup> <a name="UnauthenticatedActionInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.unauthenticatedActionInput"></a>
+
+```csharp
+public string UnauthenticatedActionInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `AuthEnabled`<sup>Required</sup> <a name="AuthEnabled" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.authEnabled"></a>
+
+```csharp
+public object AuthEnabled { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `ConfigFilePath`<sup>Required</sup> <a name="ConfigFilePath" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.configFilePath"></a>
+
+```csharp
+public string ConfigFilePath { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `DefaultProvider`<sup>Required</sup> <a name="DefaultProvider" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.defaultProvider"></a>
+
+```csharp
+public string DefaultProvider { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ExcludedPaths`<sup>Required</sup> <a name="ExcludedPaths" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.excludedPaths"></a>
+
+```csharp
+public string[] ExcludedPaths { get; }
+```
+
+- *Type:* string[]
+
+---
+
+##### `ForwardProxyConvention`<sup>Required</sup> <a name="ForwardProxyConvention" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.forwardProxyConvention"></a>
+
+```csharp
+public string ForwardProxyConvention { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ForwardProxyCustomHostHeaderName`<sup>Required</sup> <a name="ForwardProxyCustomHostHeaderName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.forwardProxyCustomHostHeaderName"></a>
+
+```csharp
+public string ForwardProxyCustomHostHeaderName { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ForwardProxyCustomSchemeHeaderName`<sup>Required</sup> <a name="ForwardProxyCustomSchemeHeaderName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.forwardProxyCustomSchemeHeaderName"></a>
+
+```csharp
+public string ForwardProxyCustomSchemeHeaderName { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `HttpRouteApiPrefix`<sup>Required</sup> <a name="HttpRouteApiPrefix" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.httpRouteApiPrefix"></a>
+
+```csharp
+public string HttpRouteApiPrefix { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `RequireAuthentication`<sup>Required</sup> <a name="RequireAuthentication" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.requireAuthentication"></a>
+
+```csharp
+public object RequireAuthentication { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `RequireHttps`<sup>Required</sup> <a name="RequireHttps" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.requireHttps"></a>
+
+```csharp
+public object RequireHttps { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `RuntimeVersion`<sup>Required</sup> <a name="RuntimeVersion" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.runtimeVersion"></a>
+
+```csharp
+public string RuntimeVersion { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `UnauthenticatedAction`<sup>Required</sup> <a name="UnauthenticatedAction" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.unauthenticatedAction"></a>
+
+```csharp
+public string UnauthenticatedAction { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2OutputReference.property.internalValue"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2 InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2">LinuxWebAppAuthSettingsV2</a>
+
+---
+
+
+### LinuxWebAppAuthSettingsV2TwitterV2OutputReference <a name="LinuxWebAppAuthSettingsV2TwitterV2OutputReference" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new LinuxWebAppAuthSettingsV2TwitterV2OutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.property.consumerKeyInput">ConsumerKeyInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.property.consumerSecretSettingNameInput">ConsumerSecretSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.property.consumerKey">ConsumerKey</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.property.consumerSecretSettingName">ConsumerSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2">LinuxWebAppAuthSettingsV2TwitterV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ConsumerKeyInput`<sup>Optional</sup> <a name="ConsumerKeyInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.property.consumerKeyInput"></a>
+
+```csharp
+public string ConsumerKeyInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ConsumerSecretSettingNameInput`<sup>Optional</sup> <a name="ConsumerSecretSettingNameInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.property.consumerSecretSettingNameInput"></a>
+
+```csharp
+public string ConsumerSecretSettingNameInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ConsumerKey`<sup>Required</sup> <a name="ConsumerKey" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.property.consumerKey"></a>
+
+```csharp
+public string ConsumerKey { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `ConsumerSecretSettingName`<sup>Required</sup> <a name="ConsumerSecretSettingName" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.property.consumerSecretSettingName"></a>
+
+```csharp
+public string ConsumerSecretSettingName { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2OutputReference.property.internalValue"></a>
+
+```csharp
+public LinuxWebAppAuthSettingsV2TwitterV2 InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2TwitterV2">LinuxWebAppAuthSettingsV2TwitterV2</a>
 
 ---
 

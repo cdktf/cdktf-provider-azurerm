@@ -749,6 +749,8 @@ export * as signalrService from './signalr-service';
 export * as signalrServiceNetworkAcl from './signalr-service-network-acl';
 export * as signalrSharedPrivateLinkResource from './signalr-shared-private-link-resource';
 export * as siteRecoveryFabric from './site-recovery-fabric';
+export * as siteRecoveryHypervReplicationPolicy from './site-recovery-hyperv-replication-policy';
+export * as siteRecoveryHypervReplicationPolicyAssociation from './site-recovery-hyperv-replication-policy-association';
 export * as siteRecoveryNetworkMapping from './site-recovery-network-mapping';
 export * as siteRecoveryProtectionContainer from './site-recovery-protection-container';
 export * as siteRecoveryProtectionContainerMapping from './site-recovery-protection-container-mapping';

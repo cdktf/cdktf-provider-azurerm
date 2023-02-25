@@ -1264,7 +1264,7 @@ export class ConsumptionBudgetManagementGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_consumption_budget_management_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
