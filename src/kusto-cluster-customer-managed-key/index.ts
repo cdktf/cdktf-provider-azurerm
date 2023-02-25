@@ -29,7 +29,7 @@ export interface KustoClusterCustomerManagedKeyConfig extends cdktf.TerraformMet
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_customer_managed_key#key_version KustoClusterCustomerManagedKey#key_version}
   */
-  readonly keyVersion: string;
+  readonly keyVersion?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_customer_managed_key#user_identity KustoClusterCustomerManagedKey#user_identity}
   */
@@ -224,7 +224,7 @@ export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kusto_cluster_customer_managed_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -303,13 +303,16 @@ export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
     return this._keyVaultId;
   }
 
-  // key_version - computed: false, optional: false, required: true
+  // key_version - computed: false, optional: true, required: false
   private _keyVersion?: string; 
   public get keyVersion() {
     return this.getStringAttribute('key_version');
   }
   public set keyVersion(value: string) {
     this._keyVersion = value;
+  }
+  public resetKeyVersion() {
+    this._keyVersion = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get keyVersionInput() {

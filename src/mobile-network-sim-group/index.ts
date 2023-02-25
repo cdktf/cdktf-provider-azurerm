@@ -51,7 +51,7 @@ export interface MobileNetworkSimGroupIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mobile_network_sim_group#identity_ids MobileNetworkSimGroup#identity_ids}
   */
-  readonly identityIds?: string[];
+  readonly identityIds: string[];
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mobile_network_sim_group#type MobileNetworkSimGroup#type}
   */
@@ -107,7 +107,7 @@ export class MobileNetworkSimGroupIdentityOutputReference extends cdktf.ComplexO
     }
   }
 
-  // identity_ids - computed: false, optional: true, required: false
+  // identity_ids - computed: false, optional: false, required: true
   private _identityIds?: string[]; 
   public get identityIds() {
     return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
@@ -115,22 +115,9 @@ export class MobileNetworkSimGroupIdentityOutputReference extends cdktf.ComplexO
   public set identityIds(value: string[]) {
     this._identityIds = value;
   }
-  public resetIdentityIds() {
-    this._identityIds = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
     return this._identityIds;
-  }
-
-  // principal_id - computed: true, optional: false, required: false
-  public get principalId() {
-    return this.getStringAttribute('principal_id');
-  }
-
-  // tenant_id - computed: true, optional: false, required: false
-  public get tenantId() {
-    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -329,7 +316,7 @@ export class MobileNetworkSimGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mobile_network_sim_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

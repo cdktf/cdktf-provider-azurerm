@@ -1058,6 +1058,8 @@ The following submodules are available:
 - [signalrServiceNetworkAcl](./signalrServiceNetworkAcl.typescript.md)
 - [signalrSharedPrivateLinkResource](./signalrSharedPrivateLinkResource.typescript.md)
 - [siteRecoveryFabric](./siteRecoveryFabric.typescript.md)
+- [siteRecoveryHypervReplicationPolicy](./siteRecoveryHypervReplicationPolicy.typescript.md)
+- [siteRecoveryHypervReplicationPolicyAssociation](./siteRecoveryHypervReplicationPolicyAssociation.typescript.md)
 - [siteRecoveryNetworkMapping](./siteRecoveryNetworkMapping.typescript.md)
 - [siteRecoveryProtectionContainer](./siteRecoveryProtectionContainer.typescript.md)
 - [siteRecoveryProtectionContainerMapping](./siteRecoveryProtectionContainerMapping.typescript.md)

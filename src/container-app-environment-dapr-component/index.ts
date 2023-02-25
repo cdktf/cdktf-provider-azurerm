@@ -534,7 +534,7 @@ export class ContainerAppEnvironmentDaprComponent extends cdktf.TerraformResourc
       terraformResourceType: 'azurerm_container_app_environment_dapr_component',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

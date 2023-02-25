@@ -149,7 +149,7 @@
   "cdktf": {
     "provider": {
       "name": "registry.terraform.io/hashicorp/azurerm",
-      "version": "3.44.1"
+      "version": "3.45.0"
     }
   },
   "resolutions": {

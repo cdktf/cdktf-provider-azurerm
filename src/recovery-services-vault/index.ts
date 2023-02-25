@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface RecoveryServicesVaultConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault#classic_vmware_replication_enabled RecoveryServicesVault#classic_vmware_replication_enabled}
+  */
+  readonly classicVmwareReplicationEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault#cross_region_restore_enabled RecoveryServicesVault#cross_region_restore_enabled}
   */
   readonly crossRegionRestoreEnabled?: boolean | cdktf.IResolvable;
@@ -495,7 +499,7 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_recovery_services_vault',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -506,6 +510,7 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._classicVmwareReplicationEnabled = config.classicVmwareReplicationEnabled;
     this._crossRegionRestoreEnabled = config.crossRegionRestoreEnabled;
     this._id = config.id;
     this._immutability = config.immutability;
@@ -525,6 +530,22 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // classic_vmware_replication_enabled - computed: true, optional: true, required: false
+  private _classicVmwareReplicationEnabled?: boolean | cdktf.IResolvable; 
+  public get classicVmwareReplicationEnabled() {
+    return this.getBooleanAttribute('classic_vmware_replication_enabled');
+  }
+  public set classicVmwareReplicationEnabled(value: boolean | cdktf.IResolvable) {
+    this._classicVmwareReplicationEnabled = value;
+  }
+  public resetClassicVmwareReplicationEnabled() {
+    this._classicVmwareReplicationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get classicVmwareReplicationEnabledInput() {
+    return this._classicVmwareReplicationEnabled;
+  }
 
   // cross_region_restore_enabled - computed: false, optional: true, required: false
   private _crossRegionRestoreEnabled?: boolean | cdktf.IResolvable; 
@@ -744,6 +765,7 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      classic_vmware_replication_enabled: cdktf.booleanToTerraform(this._classicVmwareReplicationEnabled),
       cross_region_restore_enabled: cdktf.booleanToTerraform(this._crossRegionRestoreEnabled),
       id: cdktf.stringToTerraform(this._id),
       immutability: cdktf.stringToTerraform(this._immutability),

@@ -135,7 +135,7 @@ export class DataAzurermPolicyDefinitionBuiltIn extends cdktf.TerraformDataSourc
       terraformResourceType: 'azurerm_policy_definition_built_in',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

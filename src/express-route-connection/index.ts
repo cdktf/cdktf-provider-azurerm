@@ -20,6 +20,10 @@ export interface ExpressRouteConnectionConfig extends cdktf.TerraformMetaArgumen
   */
   readonly expressRouteCircuitPeeringId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#express_route_gateway_bypass_enabled ExpressRouteConnection#express_route_gateway_bypass_enabled}
+  */
+  readonly expressRouteGatewayBypassEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#express_route_gateway_id ExpressRouteConnection#express_route_gateway_id}
   */
   readonly expressRouteGatewayId: string;
@@ -149,6 +153,14 @@ export interface ExpressRouteConnectionRouting {
   */
   readonly associatedRouteTableId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#inbound_route_map_id ExpressRouteConnection#inbound_route_map_id}
+  */
+  readonly inboundRouteMapId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#outbound_route_map_id ExpressRouteConnection#outbound_route_map_id}
+  */
+  readonly outboundRouteMapId?: string;
+  /**
   * propagated_route_table block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#propagated_route_table ExpressRouteConnection#propagated_route_table}
@@ -163,6 +175,8 @@ export function expressRouteConnectionRoutingToTerraform(struct?: ExpressRouteCo
   }
   return {
     associated_route_table_id: cdktf.stringToTerraform(struct!.associatedRouteTableId),
+    inbound_route_map_id: cdktf.stringToTerraform(struct!.inboundRouteMapId),
+    outbound_route_map_id: cdktf.stringToTerraform(struct!.outboundRouteMapId),
     propagated_route_table: expressRouteConnectionRoutingPropagatedRouteTableToTerraform(struct!.propagatedRouteTable),
   }
 }
@@ -185,6 +199,14 @@ export class ExpressRouteConnectionRoutingOutputReference extends cdktf.ComplexO
       hasAnyValues = true;
       internalValueResult.associatedRouteTableId = this._associatedRouteTableId;
     }
+    if (this._inboundRouteMapId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.inboundRouteMapId = this._inboundRouteMapId;
+    }
+    if (this._outboundRouteMapId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.outboundRouteMapId = this._outboundRouteMapId;
+    }
     if (this._propagatedRouteTable?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.propagatedRouteTable = this._propagatedRouteTable?.internalValue;
@@ -196,11 +218,15 @@ export class ExpressRouteConnectionRoutingOutputReference extends cdktf.ComplexO
     if (value === undefined) {
       this.isEmptyObject = false;
       this._associatedRouteTableId = undefined;
+      this._inboundRouteMapId = undefined;
+      this._outboundRouteMapId = undefined;
       this._propagatedRouteTable.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._associatedRouteTableId = value.associatedRouteTableId;
+      this._inboundRouteMapId = value.inboundRouteMapId;
+      this._outboundRouteMapId = value.outboundRouteMapId;
       this._propagatedRouteTable.internalValue = value.propagatedRouteTable;
     }
   }
@@ -219,6 +245,38 @@ export class ExpressRouteConnectionRoutingOutputReference extends cdktf.ComplexO
   // Temporarily expose input value. Use with caution.
   public get associatedRouteTableIdInput() {
     return this._associatedRouteTableId;
+  }
+
+  // inbound_route_map_id - computed: false, optional: true, required: false
+  private _inboundRouteMapId?: string; 
+  public get inboundRouteMapId() {
+    return this.getStringAttribute('inbound_route_map_id');
+  }
+  public set inboundRouteMapId(value: string) {
+    this._inboundRouteMapId = value;
+  }
+  public resetInboundRouteMapId() {
+    this._inboundRouteMapId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inboundRouteMapIdInput() {
+    return this._inboundRouteMapId;
+  }
+
+  // outbound_route_map_id - computed: false, optional: true, required: false
+  private _outboundRouteMapId?: string; 
+  public get outboundRouteMapId() {
+    return this.getStringAttribute('outbound_route_map_id');
+  }
+  public set outboundRouteMapId(value: string) {
+    this._outboundRouteMapId = value;
+  }
+  public resetOutboundRouteMapId() {
+    this._outboundRouteMapId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outboundRouteMapIdInput() {
+    return this._outboundRouteMapId;
   }
 
   // propagated_route_table - computed: false, optional: true, required: false
@@ -420,7 +478,7 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_express_route_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -434,6 +492,7 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
     this._authorizationKey = config.authorizationKey;
     this._enableInternetSecurity = config.enableInternetSecurity;
     this._expressRouteCircuitPeeringId = config.expressRouteCircuitPeeringId;
+    this._expressRouteGatewayBypassEnabled = config.expressRouteGatewayBypassEnabled;
     this._expressRouteGatewayId = config.expressRouteGatewayId;
     this._id = config.id;
     this._name = config.name;
@@ -489,6 +548,22 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get expressRouteCircuitPeeringIdInput() {
     return this._expressRouteCircuitPeeringId;
+  }
+
+  // express_route_gateway_bypass_enabled - computed: false, optional: true, required: false
+  private _expressRouteGatewayBypassEnabled?: boolean | cdktf.IResolvable; 
+  public get expressRouteGatewayBypassEnabled() {
+    return this.getBooleanAttribute('express_route_gateway_bypass_enabled');
+  }
+  public set expressRouteGatewayBypassEnabled(value: boolean | cdktf.IResolvable) {
+    this._expressRouteGatewayBypassEnabled = value;
+  }
+  public resetExpressRouteGatewayBypassEnabled() {
+    this._expressRouteGatewayBypassEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expressRouteGatewayBypassEnabledInput() {
+    return this._expressRouteGatewayBypassEnabled;
   }
 
   // express_route_gateway_id - computed: false, optional: false, required: true
@@ -590,6 +665,7 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
       authorization_key: cdktf.stringToTerraform(this._authorizationKey),
       enable_internet_security: cdktf.booleanToTerraform(this._enableInternetSecurity),
       express_route_circuit_peering_id: cdktf.stringToTerraform(this._expressRouteCircuitPeeringId),
+      express_route_gateway_bypass_enabled: cdktf.booleanToTerraform(this._expressRouteGatewayBypassEnabled),
       express_route_gateway_id: cdktf.stringToTerraform(this._expressRouteGatewayId),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),

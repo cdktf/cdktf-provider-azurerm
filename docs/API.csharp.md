@@ -1058,6 +1058,8 @@ The following submodules are available:
 - [signalrServiceNetworkAcl](./signalrServiceNetworkAcl.csharp.md)
 - [signalrSharedPrivateLinkResource](./signalrSharedPrivateLinkResource.csharp.md)
 - [siteRecoveryFabric](./siteRecoveryFabric.csharp.md)
+- [siteRecoveryHypervReplicationPolicy](./siteRecoveryHypervReplicationPolicy.csharp.md)
+- [siteRecoveryHypervReplicationPolicyAssociation](./siteRecoveryHypervReplicationPolicyAssociation.csharp.md)
 - [siteRecoveryNetworkMapping](./siteRecoveryNetworkMapping.csharp.md)
 - [siteRecoveryProtectionContainer](./siteRecoveryProtectionContainer.csharp.md)
 - [siteRecoveryProtectionContainerMapping](./siteRecoveryProtectionContainerMapping.csharp.md)

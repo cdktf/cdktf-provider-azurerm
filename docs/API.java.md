@@ -1058,6 +1058,8 @@ The following submodules are available:
 - [signalrServiceNetworkAcl](./signalrServiceNetworkAcl.java.md)
 - [signalrSharedPrivateLinkResource](./signalrSharedPrivateLinkResource.java.md)
 - [siteRecoveryFabric](./siteRecoveryFabric.java.md)
+- [siteRecoveryHypervReplicationPolicy](./siteRecoveryHypervReplicationPolicy.java.md)
+- [siteRecoveryHypervReplicationPolicyAssociation](./siteRecoveryHypervReplicationPolicyAssociation.java.md)
 - [siteRecoveryNetworkMapping](./siteRecoveryNetworkMapping.java.md)
 - [siteRecoveryProtectionContainer](./siteRecoveryProtectionContainer.java.md)
 - [siteRecoveryProtectionContainerMapping](./siteRecoveryProtectionContainerMapping.java.md)

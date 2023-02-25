@@ -1004,7 +1004,7 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_diagnostic_setting',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1082,7 +1082,7 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
     return this._id;
   }
 
-  // log_analytics_destination_type - computed: false, optional: true, required: false
+  // log_analytics_destination_type - computed: true, optional: true, required: false
   private _logAnalyticsDestinationType?: string; 
   public get logAnalyticsDestinationType() {
     return this.getStringAttribute('log_analytics_destination_type');

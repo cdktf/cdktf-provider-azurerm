@@ -23,10 +23,6 @@ export interface DataAzurermDiskAccessConfig extends cdktf.TerraformMetaArgument
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#tags DataAzurermDiskAccess#tags}
-  */
-  readonly tags?: { [key: string]: string };
-  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#timeouts DataAzurermDiskAccess#timeouts}
@@ -135,7 +131,7 @@ export class DataAzurermDiskAccess extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_disk_access',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -149,7 +145,6 @@ export class DataAzurermDiskAccess extends cdktf.TerraformDataSource {
     this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._tags = config.tags;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -199,19 +194,9 @@ export class DataAzurermDiskAccess extends cdktf.TerraformDataSource {
     return this._resourceGroupName;
   }
 
-  // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string }; 
+  // tags - computed: true, optional: false, required: false
+  private _tags = new cdktf.StringMap(this, "tags");
   public get tags() {
-    return this.getStringMapAttribute('tags');
-  }
-  public set tags(value: { [key: string]: string }) {
-    this._tags = value;
-  }
-  public resetTags() {
-    this._tags = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tagsInput() {
     return this._tags;
   }
 
@@ -240,7 +225,6 @@ export class DataAzurermDiskAccess extends cdktf.TerraformDataSource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: dataAzurermDiskAccessTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

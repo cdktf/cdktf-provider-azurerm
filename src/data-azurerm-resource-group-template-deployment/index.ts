@@ -131,7 +131,7 @@ export class DataAzurermResourceGroupTemplateDeployment extends cdktf.TerraformD
       terraformResourceType: 'azurerm_resource_group_template_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.44.1',
+        providerVersion: '3.45.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
