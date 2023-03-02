@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/linux_func
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlot(scope Construct, id *string, config LinuxFunctionAppSlotConfig) LinuxFunctionAppSlot
 ```
@@ -532,7 +532,7 @@ func ResetVirtualNetworkSubnetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.LinuxFunctionAppSlot_IsConstruct(x interface{}) *bool
 ```
@@ -564,7 +564,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.LinuxFunctionAppSlot_IsTerraformElement(x interface{}) *bool
 ```
@@ -578,7 +578,7 @@ linuxfunctionappslot.LinuxFunctionAppSlot_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.LinuxFunctionAppSlot_IsTerraformResource(x interface{}) *bool
 ```
@@ -1481,23 +1481,23 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotAuthSettings {
 	Enabled: interface{},
-	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsActiveDirectory,
+	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsActiveDirectory,
 	AdditionalLoginParameters: *map[string]*string,
 	AllowedExternalRedirectUrls: *[]*string,
 	DefaultProvider: *string,
-	Facebook: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsFacebook,
-	Github: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsGithub,
-	Google: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsGoogle,
+	Facebook: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsFacebook,
+	Github: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsGithub,
+	Google: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsGoogle,
 	Issuer: *string,
-	Microsoft: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsMicrosoft,
+	Microsoft: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsMicrosoft,
 	RuntimeVersion: *string,
 	TokenRefreshExtensionHours: *f64,
 	TokenStoreEnabled: interface{},
-	Twitter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsTwitter,
+	Twitter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsTwitter,
 	UnauthenticatedClientAction: *string,
 }
 ```
@@ -1743,7 +1743,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsActiveDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotAuthSettingsActiveDirectory {
 	ClientId: *string,
@@ -1825,7 +1825,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsFacebook.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotAuthSettingsFacebook {
 	AppId: *string,
@@ -1907,7 +1907,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsGithub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotAuthSettingsGithub {
 	ClientId: *string,
@@ -1989,7 +1989,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsGoogle.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotAuthSettingsGoogle {
 	ClientId: *string,
@@ -2071,7 +2071,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsMicrosoft.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotAuthSettingsMicrosoft {
 	ClientId: *string,
@@ -2153,7 +2153,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsTwitter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotAuthSettingsTwitter {
 	ConsumerKey: *string,
@@ -2219,11 +2219,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotBackup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotBackup {
 	Name: *string,
-	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotBackupSchedule,
+	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionAppSlot.LinuxFunctionAppSlotBackupSchedule,
 	StorageAccountUrl: *string,
 	Enabled: interface{},
 }
@@ -2301,7 +2301,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotBackupSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotBackupSchedule {
 	FrequencyInterval: *f64,
@@ -2399,7 +2399,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotConfig {
 	Connection: interface{},
@@ -2411,10 +2411,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
 	Provisioners: *[]interface{},
 	FunctionAppId: *string,
 	Name: *string,
-	SiteConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig,
+	SiteConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig,
 	AppSettings: *map[string]*string,
-	AuthSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettings,
-	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotBackup,
+	AuthSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettings,
+	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionAppSlot.LinuxFunctionAppSlotBackup,
 	BuiltinLoggingEnabled: interface{},
 	ClientCertificateEnabled: interface{},
 	ClientCertificateExclusionPaths: *string,
@@ -2426,7 +2426,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
 	FunctionsExtensionVersion: *string,
 	HttpsOnly: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionAppSlot.LinuxFunctionAppSlotIdentity,
 	KeyVaultReferenceIdentityId: *string,
 	ServicePlanId: *string,
 	StorageAccount: interface{},
@@ -2435,7 +2435,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
 	StorageKeyVaultSecretId: *string,
 	StorageUsesManagedIdentity: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionAppSlot.LinuxFunctionAppSlotTimeouts,
 	VirtualNetworkSubnetId: *string,
 }
 ```
@@ -2948,7 +2948,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConnectionString.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotConnectionString {
 	Name: *string,
@@ -3014,7 +3014,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotIdentity {
 	Type: *string,
@@ -3060,7 +3060,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotSiteConfig {
 	AlwaysOn: interface{},
@@ -3069,13 +3069,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
 	AppCommandLine: *string,
 	ApplicationInsightsConnectionString: *string,
 	ApplicationInsightsKey: *string,
-	ApplicationStack: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack,
+	ApplicationStack: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack,
 	AppScaleLimit: *f64,
-	AppServiceLogs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigAppServiceLogs,
+	AppServiceLogs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigAppServiceLogs,
 	AutoSwapSlotName: *string,
 	ContainerRegistryManagedIdentityClientId: *string,
 	ContainerRegistryUseManagedIdentity: interface{},
-	Cors: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigCors,
+	Cors: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigCors,
 	DefaultDocuments: *[]*string,
 	ElasticInstanceMinimum: *f64,
 	FtpsState: *string,
@@ -3624,7 +3624,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotSiteConfigApplicationStack {
 	Docker: interface{},
@@ -3768,7 +3768,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStackDocker.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotSiteConfigApplicationStackDocker {
 	ImageName: *string,
@@ -3866,7 +3866,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigAppServiceLogs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotSiteConfigAppServiceLogs {
 	DiskQuotaMb: *f64,
@@ -3916,7 +3916,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigCors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotSiteConfigCors {
 	AllowedOrigins: *[]*string,
@@ -3966,7 +3966,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotSiteConfigIpRestriction {
 	Action: *string,
@@ -4082,7 +4082,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders {
 	XAzureFdid: *[]*string,
@@ -4156,7 +4156,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotSiteConfigScmIpRestriction {
 	Action: *string,
@@ -4272,7 +4272,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders {
 	XAzureFdid: *[]*string,
@@ -4346,7 +4346,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotSiteCredential {
 
@@ -4359,7 +4359,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotStorageAccount {
 	AccessKey: *string,
@@ -4461,7 +4461,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 &linuxfunctionappslot.LinuxFunctionAppSlotTimeouts {
 	Create: *string,
@@ -4537,7 +4537,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsActiveDirectoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotAuthSettingsActiveDirectoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSlotAuthSettingsActiveDirectoryOutputReference
 ```
@@ -4895,7 +4895,7 @@ func InternalValue() LinuxFunctionAppSlotAuthSettingsActiveDirectory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsFacebookOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotAuthSettingsFacebookOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSlotAuthSettingsFacebookOutputReference
 ```
@@ -5253,7 +5253,7 @@ func InternalValue() LinuxFunctionAppSlotAuthSettingsFacebook
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsGithubOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotAuthSettingsGithubOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSlotAuthSettingsGithubOutputReference
 ```
@@ -5611,7 +5611,7 @@ func InternalValue() LinuxFunctionAppSlotAuthSettingsGithub
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsGoogleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotAuthSettingsGoogleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSlotAuthSettingsGoogleOutputReference
 ```
@@ -5969,7 +5969,7 @@ func InternalValue() LinuxFunctionAppSlotAuthSettingsGoogle
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsMicrosoftOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotAuthSettingsMicrosoftOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSlotAuthSettingsMicrosoftOutputReference
 ```
@@ -6327,7 +6327,7 @@ func InternalValue() LinuxFunctionAppSlotAuthSettingsMicrosoft
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotAuthSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSlotAuthSettingsOutputReference
 ```
@@ -7082,7 +7082,7 @@ func InternalValue() LinuxFunctionAppSlotAuthSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotAuthSettingsTwitterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotAuthSettingsTwitterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSlotAuthSettingsTwitterOutputReference
 ```
@@ -7411,7 +7411,7 @@ func InternalValue() LinuxFunctionAppSlotAuthSettingsTwitter
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotBackupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotBackupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSlotBackupOutputReference
 ```
@@ -7768,7 +7768,7 @@ func InternalValue() LinuxFunctionAppSlotBackup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotBackupScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotBackupScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSlotBackupScheduleOutputReference
 ```
@@ -8159,7 +8159,7 @@ func InternalValue() LinuxFunctionAppSlotBackupSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConnectionStringList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotConnectionStringList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppSlotConnectionStringList
 ```
@@ -8302,7 +8302,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConnectionStringOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotConnectionStringOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppSlotConnectionStringOutputReference
 ```
@@ -8635,7 +8635,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSlotIdentityOutputReference
 ```
@@ -8957,7 +8957,7 @@ func InternalValue() LinuxFunctionAppSlotIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStackDockerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteConfigApplicationStackDockerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppSlotSiteConfigApplicationStackDockerList
 ```
@@ -9100,7 +9100,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStackDockerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteConfigApplicationStackDockerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppSlotSiteConfigApplicationStackDockerOutputReference
 ```
@@ -9491,7 +9491,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStackOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteConfigApplicationStackOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSlotSiteConfigApplicationStackOutputReference
 ```
@@ -9985,7 +9985,7 @@ func InternalValue() LinuxFunctionAppSlotSiteConfigApplicationStack
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigAppServiceLogsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteConfigAppServiceLogsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSlotSiteConfigAppServiceLogsOutputReference
 ```
@@ -10292,7 +10292,7 @@ func InternalValue() LinuxFunctionAppSlotSiteConfigAppServiceLogs
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigCorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteConfigCorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSlotSiteConfigCorsOutputReference
 ```
@@ -10592,7 +10592,7 @@ func InternalValue() LinuxFunctionAppSlotSiteConfigCors
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteConfigIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppSlotSiteConfigIpRestrictionHeadersList
 ```
@@ -10735,7 +10735,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteConfigIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppSlotSiteConfigIpRestrictionHeadersOutputReference
 ```
@@ -11118,7 +11118,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteConfigIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppSlotSiteConfigIpRestrictionList
 ```
@@ -11261,7 +11261,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteConfigIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppSlotSiteConfigIpRestrictionOutputReference
 ```
@@ -11744,7 +11744,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSlotSiteConfigOutputReference
 ```
@@ -13077,7 +13077,7 @@ func InternalValue() LinuxFunctionAppSlotSiteConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteConfigScmIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeadersList
 ```
@@ -13220,7 +13220,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteConfigScmIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeadersOutputReference
 ```
@@ -13603,7 +13603,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteConfigScmIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppSlotSiteConfigScmIpRestrictionList
 ```
@@ -13746,7 +13746,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteConfigScmIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppSlotSiteConfigScmIpRestrictionOutputReference
 ```
@@ -14229,7 +14229,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteCredentialList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteCredentialList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppSlotSiteCredentialList
 ```
@@ -14361,7 +14361,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotSiteCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppSlotSiteCredentialOutputReference
 ```
@@ -14650,7 +14650,7 @@ func InternalValue() LinuxFunctionAppSlotSiteCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotStorageAccountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppSlotStorageAccountList
 ```
@@ -14793,7 +14793,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotStorageAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppSlotStorageAccountOutputReference
 ```
@@ -15199,7 +15199,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappslot"
 
 linuxfunctionappslot.NewLinuxFunctionAppSlotTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSlotTimeoutsOutputReference
 ```

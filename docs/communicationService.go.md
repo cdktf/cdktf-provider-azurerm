@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/communicat
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.communicationService.CommunicationService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/communicationservice"
 
 communicationservice.NewCommunicationService(scope Construct, id *string, config CommunicationServiceConfig) CommunicationService
 ```
@@ -307,7 +307,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.communicationService.CommunicationService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/communicationservice"
 
 communicationservice.CommunicationService_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.communicationService.CommunicationService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/communicationservice"
 
 communicationservice.CommunicationService_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ communicationservice.CommunicationService_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.communicationService.CommunicationService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/communicationservice"
 
 communicationservice.CommunicationService_IsTerraformResource(x interface{}) *bool
 ```
@@ -728,7 +728,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.communicationService.CommunicationServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/communicationservice"
 
 &communicationservice.CommunicationServiceConfig {
 	Connection: interface{},
@@ -743,7 +743,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
 	DataLocation: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.communicationService.CommunicationServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.communicationService.CommunicationServiceTimeouts,
 }
 ```
 
@@ -919,7 +919,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/communicationservice"
 
 &communicationservice.CommunicationServiceTimeouts {
 	Create: *string,
@@ -995,7 +995,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/communicationservice"
 
 communicationservice.NewCommunicationServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CommunicationServiceTimeoutsOutputReference
 ```
