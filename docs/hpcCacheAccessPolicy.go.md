@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hpcCacheAccessPolicy.HpcCacheAccessPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/hpccacheaccesspolicy"
 
 hpccacheaccesspolicy.NewHpcCacheAccessPolicy(scope Construct, id *string, config HpcCacheAccessPolicyConfig) HpcCacheAccessPolicy
 ```
@@ -306,7 +306,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.hpcCacheAccessPolicy.HpcCacheAccessPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/hpccacheaccesspolicy"
 
 hpccacheaccesspolicy.HpcCacheAccessPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -338,7 +338,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.hpcCacheAccessPolicy.HpcCacheAccessPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/hpccacheaccesspolicy"
 
 hpccacheaccesspolicy.HpcCacheAccessPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -352,7 +352,7 @@ hpccacheaccesspolicy.HpcCacheAccessPolicy_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.hpcCacheAccessPolicy.HpcCacheAccessPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/hpccacheaccesspolicy"
 
 hpccacheaccesspolicy.HpcCacheAccessPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -661,7 +661,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hpcCacheAccessPolicy.HpcCacheAccessPolicyAccessRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/hpccacheaccesspolicy"
 
 &hpccacheaccesspolicy.HpcCacheAccessPolicyAccessRule {
 	Access: *string,
@@ -791,7 +791,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hpcCacheAccessPolicy.HpcCacheAccessPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/hpccacheaccesspolicy"
 
 &hpccacheaccesspolicy.HpcCacheAccessPolicyConfig {
 	Connection: interface{},
@@ -805,7 +805,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccacheaccesspolicy"
 	HpcCacheId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hpcCacheAccessPolicy.HpcCacheAccessPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.hpcCacheAccessPolicy.HpcCacheAccessPolicyTimeouts,
 }
 ```
 
@@ -970,7 +970,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hpcCacheAccessPolicy.HpcCacheAccessPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/hpccacheaccesspolicy"
 
 &hpccacheaccesspolicy.HpcCacheAccessPolicyTimeouts {
 	Create: *string,
@@ -1046,7 +1046,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hpcCacheAccessPolicy.HpcCacheAccessPolicyAccessRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/hpccacheaccesspolicy"
 
 hpccacheaccesspolicy.NewHpcCacheAccessPolicyAccessRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HpcCacheAccessPolicyAccessRuleList
 ```
@@ -1189,7 +1189,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hpcCacheAccessPolicy.HpcCacheAccessPolicyAccessRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/hpccacheaccesspolicy"
 
 hpccacheaccesspolicy.NewHpcCacheAccessPolicyAccessRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HpcCacheAccessPolicyAccessRuleOutputReference
 ```
@@ -1674,7 +1674,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hpcCacheAccessPolicy.HpcCacheAccessPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/hpccacheaccesspolicy"
 
 hpccacheaccesspolicy.NewHpcCacheAccessPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HpcCacheAccessPolicyTimeoutsOutputReference
 ```

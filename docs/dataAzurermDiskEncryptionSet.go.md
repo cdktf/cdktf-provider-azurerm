@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/disk_encry
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDiskEncryptionSet.DataAzurermDiskEncryptionSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdiskencryptionset"
 
 dataazurermdiskencryptionset.NewDataAzurermDiskEncryptionSet(scope Construct, id *string, config DataAzurermDiskEncryptionSetConfig) DataAzurermDiskEncryptionSet
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermDiskEncryptionSet.DataAzurermDiskEncryptionSet.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdiskencryptionset"
 
 dataazurermdiskencryptionset.DataAzurermDiskEncryptionSet_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermDiskEncryptionSet.DataAzurermDiskEncryptionSet.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdiskencryptionset"
 
 dataazurermdiskencryptionset.DataAzurermDiskEncryptionSet_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermdiskencryptionset.DataAzurermDiskEncryptionSet_IsTerraformElement(x i
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermDiskEncryptionSet.DataAzurermDiskEncryptionSet.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdiskencryptionset"
 
 dataazurermdiskencryptionset.DataAzurermDiskEncryptionSet_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -637,7 +637,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDiskEncryptionSet.DataAzurermDiskEncryptionSetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdiskencryptionset"
 
 &dataazurermdiskencryptionset.DataAzurermDiskEncryptionSetConfig {
 	Connection: interface{},
@@ -650,7 +650,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskencryp
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermDiskEncryptionSet.DataAzurermDiskEncryptionSetTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermDiskEncryptionSet.DataAzurermDiskEncryptionSetTimeouts,
 }
 ```
 
@@ -800,7 +800,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDiskEncryptionSet.DataAzurermDiskEncryptionSetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdiskencryptionset"
 
 &dataazurermdiskencryptionset.DataAzurermDiskEncryptionSetTimeouts {
 	Read: *string,
@@ -834,7 +834,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDiskEncryptionSet.DataAzurermDiskEncryptionSetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdiskencryptionset"
 
 dataazurermdiskencryptionset.NewDataAzurermDiskEncryptionSetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDiskEncryptionSetTimeoutsOutputReference
 ```

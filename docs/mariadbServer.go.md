@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_se
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
 
 mariadbserver.NewMariadbServer(scope Construct, id *string, config MariadbServerConfig) MariadbServer
 ```
@@ -370,7 +370,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
 
 mariadbserver.MariadbServer_IsConstruct(x interface{}) *bool
 ```
@@ -402,7 +402,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
 
 mariadbserver.MariadbServer_IsTerraformElement(x interface{}) *bool
 ```
@@ -416,7 +416,7 @@ mariadbserver.MariadbServer_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
 
 mariadbserver.MariadbServer_IsTerraformResource(x interface{}) *bool
 ```
@@ -1044,7 +1044,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
 
 &mariadbserver.MariadbServerConfig {
 	Connection: interface{},
@@ -1072,7 +1072,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mariadbserver"
 	RestorePointInTime: *string,
 	StorageMb: *f64,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mariadbServer.MariadbServerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.mariadbServer.MariadbServerTimeouts,
 }
 ```
 
@@ -1417,7 +1417,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mariadbServer.MariadbServerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
 
 &mariadbserver.MariadbServerTimeouts {
 	Create: *string,
@@ -1493,7 +1493,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mariadbServer.MariadbServerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
 
 mariadbserver.NewMariadbServerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MariadbServerTimeoutsOutputReference
 ```

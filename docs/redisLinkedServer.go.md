@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/redis_link
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/redislinkedserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/redislinkedserver"
 
 redislinkedserver.NewRedisLinkedServer(scope Construct, id *string, config RedisLinkedServerConfig) RedisLinkedServer
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/redislinkedserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/redislinkedserver"
 
 redislinkedserver.RedisLinkedServer_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/redislinkedserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/redislinkedserver"
 
 redislinkedserver.RedisLinkedServer_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ redislinkedserver.RedisLinkedServer_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/redislinkedserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/redislinkedserver"
 
 redislinkedserver.RedisLinkedServer_IsTerraformResource(x interface{}) *bool
 ```
@@ -703,7 +703,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/redislinkedserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/redislinkedserver"
 
 &redislinkedserver.RedisLinkedServerConfig {
 	Connection: interface{},
@@ -719,7 +719,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/redislinkedserver"
 	ServerRole: *string,
 	TargetRedisCacheName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.redisLinkedServer.RedisLinkedServerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.redisLinkedServer.RedisLinkedServerTimeouts,
 }
 ```
 
@@ -908,7 +908,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/redislinkedserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/redislinkedserver"
 
 &redislinkedserver.RedisLinkedServerTimeouts {
 	Create: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/redislinkedserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/redislinkedserver"
 
 redislinkedserver.NewRedisLinkedServerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RedisLinkedServerTimeoutsOutputReference
 ```

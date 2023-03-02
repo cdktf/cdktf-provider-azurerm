@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 cognitiveaccount.NewCognitiveAccount(scope Construct, id *string, config CognitiveAccountConfig) CognitiveAccount
 ```
@@ -471,7 +471,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 cognitiveaccount.CognitiveAccount_IsConstruct(x interface{}) *bool
 ```
@@ -503,7 +503,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 cognitiveaccount.CognitiveAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -517,7 +517,7 @@ cognitiveaccount.CognitiveAccount_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccount.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 cognitiveaccount.CognitiveAccount_IsTerraformResource(x interface{}) *bool
 ```
@@ -1299,7 +1299,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 &cognitiveaccount.CognitiveAccountConfig {
 	Connection: interface{},
@@ -1314,26 +1314,26 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
 	Name: *string,
 	ResourceGroupName: *string,
 	SkuName: *string,
-	CustomerManagedKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cognitiveAccount.CognitiveAccountCustomerManagedKey,
+	CustomerManagedKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.cognitiveAccount.CognitiveAccountCustomerManagedKey,
 	CustomQuestionAnsweringSearchServiceId: *string,
 	CustomQuestionAnsweringSearchServiceKey: *string,
 	CustomSubdomainName: *string,
 	DynamicThrottlingEnabled: interface{},
 	Fqdns: *[]*string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cognitiveAccount.CognitiveAccountIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.cognitiveAccount.CognitiveAccountIdentity,
 	LocalAuthEnabled: interface{},
 	MetricsAdvisorAadClientId: *string,
 	MetricsAdvisorAadTenantId: *string,
 	MetricsAdvisorSuperUserName: *string,
 	MetricsAdvisorWebsiteName: *string,
-	NetworkAcls: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cognitiveAccount.CognitiveAccountNetworkAcls,
+	NetworkAcls: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.cognitiveAccount.CognitiveAccountNetworkAcls,
 	OutboundNetworkAccessRestricted: interface{},
 	PublicNetworkAccessEnabled: interface{},
 	QnaRuntimeEndpoint: *string,
 	Storage: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cognitiveAccount.CognitiveAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.cognitiveAccount.CognitiveAccountTimeouts,
 }
 ```
 
@@ -1764,7 +1764,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccountCustomerManagedKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 &cognitiveaccount.CognitiveAccountCustomerManagedKey {
 	KeyVaultKeyId: *string,
@@ -1810,7 +1810,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccountIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 &cognitiveaccount.CognitiveAccountIdentity {
 	Type: *string,
@@ -1856,7 +1856,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccountNetworkAcls.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 &cognitiveaccount.CognitiveAccountNetworkAcls {
 	DefaultAction: *string,
@@ -1918,7 +1918,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccountNetworkAclsVirtualNetworkRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 &cognitiveaccount.CognitiveAccountNetworkAclsVirtualNetworkRules {
 	SubnetId: *string,
@@ -1964,7 +1964,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccountStorage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 &cognitiveaccount.CognitiveAccountStorage {
 	StorageAccountId: *string,
@@ -2010,7 +2010,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 &cognitiveaccount.CognitiveAccountTimeouts {
 	Create: *string,
@@ -2086,7 +2086,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccountCustomerManagedKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 cognitiveaccount.NewCognitiveAccountCustomerManagedKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CognitiveAccountCustomerManagedKeyOutputReference
 ```
@@ -2386,7 +2386,7 @@ func InternalValue() CognitiveAccountCustomerManagedKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccountIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 cognitiveaccount.NewCognitiveAccountIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CognitiveAccountIdentityOutputReference
 ```
@@ -2708,7 +2708,7 @@ func InternalValue() CognitiveAccountIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccountNetworkAclsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 cognitiveaccount.NewCognitiveAccountNetworkAclsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CognitiveAccountNetworkAclsOutputReference
 ```
@@ -3050,7 +3050,7 @@ func InternalValue() CognitiveAccountNetworkAcls
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccountNetworkAclsVirtualNetworkRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 cognitiveaccount.NewCognitiveAccountNetworkAclsVirtualNetworkRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CognitiveAccountNetworkAclsVirtualNetworkRulesList
 ```
@@ -3193,7 +3193,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccountNetworkAclsVirtualNetworkRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 cognitiveaccount.NewCognitiveAccountNetworkAclsVirtualNetworkRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CognitiveAccountNetworkAclsVirtualNetworkRulesOutputReference
 ```
@@ -3511,7 +3511,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccountStorageList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 cognitiveaccount.NewCognitiveAccountStorageList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CognitiveAccountStorageList
 ```
@@ -3654,7 +3654,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccountStorageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 cognitiveaccount.NewCognitiveAccountStorageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CognitiveAccountStorageOutputReference
 ```
@@ -3972,7 +3972,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveAccount.CognitiveAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cognitiveaccount"
 
 cognitiveaccount.NewCognitiveAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CognitiveAccountTimeoutsOutputReference
 ```
