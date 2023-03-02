@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flex
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 mysqlflexibleserver.NewMysqlFlexibleServer(scope Construct, id *string, config MysqlFlexibleServerConfig) MysqlFlexibleServer
 ```
@@ -491,7 +491,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 mysqlflexibleserver.MysqlFlexibleServer_IsConstruct(x interface{}) *bool
 ```
@@ -523,7 +523,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 mysqlflexibleserver.MysqlFlexibleServer_IsTerraformElement(x interface{}) *bool
 ```
@@ -537,7 +537,7 @@ mysqlflexibleserver.MysqlFlexibleServer_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServer.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 mysqlflexibleserver.MysqlFlexibleServer_IsTerraformResource(x interface{}) *bool
 ```
@@ -1297,7 +1297,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 &mysqlflexibleserver.MysqlFlexibleServerConfig {
 	Connection: interface{},
@@ -1314,21 +1314,21 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
 	AdministratorPassword: *string,
 	BackupRetentionDays: *f64,
 	CreateMode: *string,
-	CustomerManagedKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mysqlFlexibleServer.MysqlFlexibleServerCustomerManagedKey,
+	CustomerManagedKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.mysqlFlexibleServer.MysqlFlexibleServerCustomerManagedKey,
 	DelegatedSubnetId: *string,
 	GeoRedundantBackupEnabled: interface{},
-	HighAvailability: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mysqlFlexibleServer.MysqlFlexibleServerHighAvailability,
+	HighAvailability: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.mysqlFlexibleServer.MysqlFlexibleServerHighAvailability,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mysqlFlexibleServer.MysqlFlexibleServerIdentity,
-	MaintenanceWindow: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mysqlFlexibleServer.MysqlFlexibleServerMaintenanceWindow,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.mysqlFlexibleServer.MysqlFlexibleServerIdentity,
+	MaintenanceWindow: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.mysqlFlexibleServer.MysqlFlexibleServerMaintenanceWindow,
 	PointInTimeRestoreTimeInUtc: *string,
 	PrivateDnsZoneId: *string,
 	ReplicationRole: *string,
 	SkuName: *string,
 	SourceServerId: *string,
-	Storage: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mysqlFlexibleServer.MysqlFlexibleServerStorage,
+	Storage: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.mysqlFlexibleServer.MysqlFlexibleServerStorage,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mysqlFlexibleServer.MysqlFlexibleServerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.mysqlFlexibleServer.MysqlFlexibleServerTimeouts,
 	Version: *string,
 	Zone: *string,
 }
@@ -1750,7 +1750,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServerCustomerManagedKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 &mysqlflexibleserver.MysqlFlexibleServerCustomerManagedKey {
 	KeyVaultKeyId: *string,
@@ -1796,7 +1796,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServerHighAvailability.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 &mysqlflexibleserver.MysqlFlexibleServerHighAvailability {
 	Mode: *string,
@@ -1842,7 +1842,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServerIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 &mysqlflexibleserver.MysqlFlexibleServerIdentity {
 	Type: *string,
@@ -1888,7 +1888,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServerMaintenanceWindow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 &mysqlflexibleserver.MysqlFlexibleServerMaintenanceWindow {
 	DayOfWeek: *f64,
@@ -1948,7 +1948,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServerStorage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 &mysqlflexibleserver.MysqlFlexibleServerStorage {
 	AutoGrowEnabled: interface{},
@@ -2008,7 +2008,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 &mysqlflexibleserver.MysqlFlexibleServerTimeouts {
 	Create: *string,
@@ -2084,7 +2084,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServerCustomerManagedKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 mysqlflexibleserver.NewMysqlFlexibleServerCustomerManagedKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MysqlFlexibleServerCustomerManagedKeyOutputReference
 ```
@@ -2391,7 +2391,7 @@ func InternalValue() MysqlFlexibleServerCustomerManagedKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServerHighAvailabilityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 mysqlflexibleserver.NewMysqlFlexibleServerHighAvailabilityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MysqlFlexibleServerHighAvailabilityOutputReference
 ```
@@ -2691,7 +2691,7 @@ func InternalValue() MysqlFlexibleServerHighAvailability
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServerIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 mysqlflexibleserver.NewMysqlFlexibleServerIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MysqlFlexibleServerIdentityOutputReference
 ```
@@ -3013,7 +3013,7 @@ func InternalValue() MysqlFlexibleServerIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServerMaintenanceWindowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 mysqlflexibleserver.NewMysqlFlexibleServerMaintenanceWindowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MysqlFlexibleServerMaintenanceWindowOutputReference
 ```
@@ -3349,7 +3349,7 @@ func InternalValue() MysqlFlexibleServerMaintenanceWindow
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServerStorageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 mysqlflexibleserver.NewMysqlFlexibleServerStorageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MysqlFlexibleServerStorageOutputReference
 ```
@@ -3685,7 +3685,7 @@ func InternalValue() MysqlFlexibleServerStorage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlFlexibleServer.MysqlFlexibleServerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlflexibleserver"
 
 mysqlflexibleserver.NewMysqlFlexibleServerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MysqlFlexibleServerTimeoutsOutputReference
 ```

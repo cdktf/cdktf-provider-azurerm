@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/managed_di
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/manageddisksastoken"
 
 manageddisksastoken.NewManagedDiskSasToken(scope Construct, id *string, config ManagedDiskSasTokenConfig) ManagedDiskSasToken
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/manageddisksastoken"
 
 manageddisksastoken.ManagedDiskSasToken_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/manageddisksastoken"
 
 manageddisksastoken.ManagedDiskSasToken_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ manageddisksastoken.ManagedDiskSasToken_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/manageddisksastoken"
 
 manageddisksastoken.ManagedDiskSasToken_IsTerraformResource(x interface{}) *bool
 ```
@@ -659,7 +659,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasTokenConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/manageddisksastoken"
 
 &manageddisksastoken.ManagedDiskSasTokenConfig {
 	Connection: interface{},
@@ -673,7 +673,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
 	DurationInSeconds: *f64,
 	ManagedDiskId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.managedDiskSasToken.ManagedDiskSasTokenTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.managedDiskSasToken.ManagedDiskSasTokenTimeouts,
 }
 ```
 
@@ -836,7 +836,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasTokenTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/manageddisksastoken"
 
 &manageddisksastoken.ManagedDiskSasTokenTimeouts {
 	Create: *string,
@@ -898,7 +898,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasTokenTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/manageddisksastoken"
 
 manageddisksastoken.NewManagedDiskSasTokenTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ManagedDiskSasTokenTimeoutsOutputReference
 ```
