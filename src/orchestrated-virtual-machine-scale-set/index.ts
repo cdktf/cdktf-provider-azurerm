@@ -159,6 +159,12 @@ export interface OrchestratedVirtualMachineScaleSetConfig extends cdktf.Terrafor
   */
   readonly plan?: OrchestratedVirtualMachineScaleSetPlan;
   /**
+  * priority_mix block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#priority_mix OrchestratedVirtualMachineScaleSet#priority_mix}
+  */
+  readonly priorityMix?: OrchestratedVirtualMachineScaleSetPriorityMix;
+  /**
   * source_image_reference block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#source_image_reference OrchestratedVirtualMachineScaleSet#source_image_reference}
@@ -3966,6 +3972,98 @@ export class OrchestratedVirtualMachineScaleSetPlanOutputReference extends cdktf
     return this._publisher;
   }
 }
+export interface OrchestratedVirtualMachineScaleSetPriorityMix {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#base_regular_count OrchestratedVirtualMachineScaleSet#base_regular_count}
+  */
+  readonly baseRegularCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#regular_percentage_above_base OrchestratedVirtualMachineScaleSet#regular_percentage_above_base}
+  */
+  readonly regularPercentageAboveBase?: number;
+}
+
+export function orchestratedVirtualMachineScaleSetPriorityMixToTerraform(struct?: OrchestratedVirtualMachineScaleSetPriorityMixOutputReference | OrchestratedVirtualMachineScaleSetPriorityMix): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    base_regular_count: cdktf.numberToTerraform(struct!.baseRegularCount),
+    regular_percentage_above_base: cdktf.numberToTerraform(struct!.regularPercentageAboveBase),
+  }
+}
+
+export class OrchestratedVirtualMachineScaleSetPriorityMixOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): OrchestratedVirtualMachineScaleSetPriorityMix | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._baseRegularCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.baseRegularCount = this._baseRegularCount;
+    }
+    if (this._regularPercentageAboveBase !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.regularPercentageAboveBase = this._regularPercentageAboveBase;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrchestratedVirtualMachineScaleSetPriorityMix | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._baseRegularCount = undefined;
+      this._regularPercentageAboveBase = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._baseRegularCount = value.baseRegularCount;
+      this._regularPercentageAboveBase = value.regularPercentageAboveBase;
+    }
+  }
+
+  // base_regular_count - computed: false, optional: true, required: false
+  private _baseRegularCount?: number; 
+  public get baseRegularCount() {
+    return this.getNumberAttribute('base_regular_count');
+  }
+  public set baseRegularCount(value: number) {
+    this._baseRegularCount = value;
+  }
+  public resetBaseRegularCount() {
+    this._baseRegularCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get baseRegularCountInput() {
+    return this._baseRegularCount;
+  }
+
+  // regular_percentage_above_base - computed: false, optional: true, required: false
+  private _regularPercentageAboveBase?: number; 
+  public get regularPercentageAboveBase() {
+    return this.getNumberAttribute('regular_percentage_above_base');
+  }
+  public set regularPercentageAboveBase(value: number) {
+    this._regularPercentageAboveBase = value;
+  }
+  public resetRegularPercentageAboveBase() {
+    this._regularPercentageAboveBase = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regularPercentageAboveBaseInput() {
+    return this._regularPercentageAboveBase;
+  }
+}
 export interface OrchestratedVirtualMachineScaleSetSourceImageReference {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#offer OrchestratedVirtualMachineScaleSet#offer}
@@ -4372,7 +4470,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_orchestrated_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.45.0',
+        providerVersion: '3.46.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -4415,6 +4513,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
     this._osDisk.internalValue = config.osDisk;
     this._osProfile.internalValue = config.osProfile;
     this._plan.internalValue = config.plan;
+    this._priorityMix.internalValue = config.priorityMix;
     this._sourceImageReference.internalValue = config.sourceImageReference;
     this._terminationNotification.internalValue = config.terminationNotification;
     this._timeouts.internalValue = config.timeouts;
@@ -4929,6 +5028,22 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
     return this._plan.internalValue;
   }
 
+  // priority_mix - computed: false, optional: true, required: false
+  private _priorityMix = new OrchestratedVirtualMachineScaleSetPriorityMixOutputReference(this, "priority_mix");
+  public get priorityMix() {
+    return this._priorityMix;
+  }
+  public putPriorityMix(value: OrchestratedVirtualMachineScaleSetPriorityMix) {
+    this._priorityMix.internalValue = value;
+  }
+  public resetPriorityMix() {
+    this._priorityMix.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityMixInput() {
+    return this._priorityMix.internalValue;
+  }
+
   // source_image_reference - computed: false, optional: true, required: false
   private _sourceImageReference = new OrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReference(this, "source_image_reference");
   public get sourceImageReference() {
@@ -5015,6 +5130,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
       os_disk: orchestratedVirtualMachineScaleSetOsDiskToTerraform(this._osDisk.internalValue),
       os_profile: orchestratedVirtualMachineScaleSetOsProfileToTerraform(this._osProfile.internalValue),
       plan: orchestratedVirtualMachineScaleSetPlanToTerraform(this._plan.internalValue),
+      priority_mix: orchestratedVirtualMachineScaleSetPriorityMixToTerraform(this._priorityMix.internalValue),
       source_image_reference: orchestratedVirtualMachineScaleSetSourceImageReferenceToTerraform(this._sourceImageReference.internalValue),
       termination_notification: orchestratedVirtualMachineScaleSetTerminationNotificationToTerraform(this._terminationNotification.internalValue),
       timeouts: orchestratedVirtualMachineScaleSetTimeoutsToTerraform(this._timeouts.internalValue),

@@ -827,7 +827,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_streaming_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.45.0',
+        providerVersion: '3.46.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -33,6 +33,10 @@ export interface StorageManagementPolicyConfig extends cdktf.TerraformMetaArgume
 }
 export interface StorageManagementPolicyRuleActionsBaseBlob {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#auto_tier_to_hot_from_cool_enabled StorageManagementPolicy#auto_tier_to_hot_from_cool_enabled}
+  */
+  readonly autoTierToHotFromCoolEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#delete_after_days_since_creation_greater_than StorageManagementPolicy#delete_after_days_since_creation_greater_than}
   */
   readonly deleteAfterDaysSinceCreationGreaterThan?: number;
@@ -80,6 +84,7 @@ export function storageManagementPolicyRuleActionsBaseBlobToTerraform(struct?: S
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    auto_tier_to_hot_from_cool_enabled: cdktf.booleanToTerraform(struct!.autoTierToHotFromCoolEnabled),
     delete_after_days_since_creation_greater_than: cdktf.numberToTerraform(struct!.deleteAfterDaysSinceCreationGreaterThan),
     delete_after_days_since_last_access_time_greater_than: cdktf.numberToTerraform(struct!.deleteAfterDaysSinceLastAccessTimeGreaterThan),
     delete_after_days_since_modification_greater_than: cdktf.numberToTerraform(struct!.deleteAfterDaysSinceModificationGreaterThan),
@@ -107,6 +112,10 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
   public get internalValue(): StorageManagementPolicyRuleActionsBaseBlob | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._autoTierToHotFromCoolEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.autoTierToHotFromCoolEnabled = this._autoTierToHotFromCoolEnabled;
+    }
     if (this._deleteAfterDaysSinceCreationGreaterThan !== undefined) {
       hasAnyValues = true;
       internalValueResult.deleteAfterDaysSinceCreationGreaterThan = this._deleteAfterDaysSinceCreationGreaterThan;
@@ -153,6 +162,7 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
   public set internalValue(value: StorageManagementPolicyRuleActionsBaseBlob | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._autoTierToHotFromCoolEnabled = undefined;
       this._deleteAfterDaysSinceCreationGreaterThan = undefined;
       this._deleteAfterDaysSinceLastAccessTimeGreaterThan = undefined;
       this._deleteAfterDaysSinceModificationGreaterThan = undefined;
@@ -166,6 +176,7 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._autoTierToHotFromCoolEnabled = value.autoTierToHotFromCoolEnabled;
       this._deleteAfterDaysSinceCreationGreaterThan = value.deleteAfterDaysSinceCreationGreaterThan;
       this._deleteAfterDaysSinceLastAccessTimeGreaterThan = value.deleteAfterDaysSinceLastAccessTimeGreaterThan;
       this._deleteAfterDaysSinceModificationGreaterThan = value.deleteAfterDaysSinceModificationGreaterThan;
@@ -177,6 +188,22 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
       this._tierToCoolAfterDaysSinceLastAccessTimeGreaterThan = value.tierToCoolAfterDaysSinceLastAccessTimeGreaterThan;
       this._tierToCoolAfterDaysSinceModificationGreaterThan = value.tierToCoolAfterDaysSinceModificationGreaterThan;
     }
+  }
+
+  // auto_tier_to_hot_from_cool_enabled - computed: false, optional: true, required: false
+  private _autoTierToHotFromCoolEnabled?: boolean | cdktf.IResolvable; 
+  public get autoTierToHotFromCoolEnabled() {
+    return this.getBooleanAttribute('auto_tier_to_hot_from_cool_enabled');
+  }
+  public set autoTierToHotFromCoolEnabled(value: boolean | cdktf.IResolvable) {
+    this._autoTierToHotFromCoolEnabled = value;
+  }
+  public resetAutoTierToHotFromCoolEnabled() {
+    this._autoTierToHotFromCoolEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoTierToHotFromCoolEnabledInput() {
+    return this._autoTierToHotFromCoolEnabled;
   }
 
   // delete_after_days_since_creation_greater_than - computed: false, optional: true, required: false
@@ -1372,7 +1399,7 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_management_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.45.0',
+        providerVersion: '3.46.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

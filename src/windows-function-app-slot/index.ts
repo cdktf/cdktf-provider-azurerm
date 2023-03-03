@@ -135,6 +135,12 @@ export interface WindowsFunctionAppSlotConfig extends cdktf.TerraformMetaArgumen
   */
   readonly authSettings?: WindowsFunctionAppSlotAuthSettings;
   /**
+  * auth_settings_v2 block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#auth_settings_v2 WindowsFunctionAppSlot#auth_settings_v2}
+  */
+  readonly authSettingsV2?: WindowsFunctionAppSlotAuthSettingsV2;
+  /**
   * backup block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#backup WindowsFunctionAppSlot#backup}
@@ -1585,6 +1591,2464 @@ export class WindowsFunctionAppSlotAuthSettingsOutputReference extends cdktf.Com
   // Temporarily expose input value. Use with caution.
   public get twitterInput() {
     return this._twitter.internalValue;
+  }
+}
+export interface WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2 {
+  /**
+  * The list of allowed Applications for the Default Authorisation Policy.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#allowed_applications WindowsFunctionAppSlot#allowed_applications}
+  */
+  readonly allowedApplications?: string[];
+  /**
+  * Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#allowed_audiences WindowsFunctionAppSlot#allowed_audiences}
+  */
+  readonly allowedAudiences?: string[];
+  /**
+  * The list of allowed Group Names for the Default Authorisation Policy.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#allowed_groups WindowsFunctionAppSlot#allowed_groups}
+  */
+  readonly allowedGroups?: string[];
+  /**
+  * The list of allowed Identities for the Default Authorisation Policy.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#allowed_identities WindowsFunctionAppSlot#allowed_identities}
+  */
+  readonly allowedIdentities?: string[];
+  /**
+  * The ID of the Client to use to authenticate with Azure Active Directory.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#client_id WindowsFunctionAppSlot#client_id}
+  */
+  readonly clientId: string;
+  /**
+  * The thumbprint of the certificate used for signing purposes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#client_secret_certificate_thumbprint WindowsFunctionAppSlot#client_secret_certificate_thumbprint}
+  */
+  readonly clientSecretCertificateThumbprint?: string;
+  /**
+  * The App Setting name that contains the client secret of the Client.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#client_secret_setting_name WindowsFunctionAppSlot#client_secret_setting_name}
+  */
+  readonly clientSecretSettingName?: string;
+  /**
+  * A list of Allowed Client Applications in the JWT Claim.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#jwt_allowed_client_applications WindowsFunctionAppSlot#jwt_allowed_client_applications}
+  */
+  readonly jwtAllowedClientApplications?: string[];
+  /**
+  * A list of Allowed Groups in the JWT Claim.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#jwt_allowed_groups WindowsFunctionAppSlot#jwt_allowed_groups}
+  */
+  readonly jwtAllowedGroups?: string[];
+  /**
+  * A map of key-value pairs to send to the Authorisation Endpoint when a user logs in.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#login_parameters WindowsFunctionAppSlot#login_parameters}
+  */
+  readonly loginParameters?: { [key: string]: string };
+  /**
+  * The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#tenant_auth_endpoint WindowsFunctionAppSlot#tenant_auth_endpoint}
+  */
+  readonly tenantAuthEndpoint: string;
+  /**
+  * Should the www-authenticate provider should be omitted from the request? Defaults to `false`
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#www_authentication_disabled WindowsFunctionAppSlot#www_authentication_disabled}
+  */
+  readonly wwwAuthenticationDisabled?: boolean | cdktf.IResolvable;
+}
+
+export function windowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2ToTerraform(struct?: WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2OutputReference | WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    allowed_applications: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedApplications),
+    allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedAudiences),
+    allowed_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedGroups),
+    allowed_identities: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedIdentities),
+    client_id: cdktf.stringToTerraform(struct!.clientId),
+    client_secret_certificate_thumbprint: cdktf.stringToTerraform(struct!.clientSecretCertificateThumbprint),
+    client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
+    jwt_allowed_client_applications: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.jwtAllowedClientApplications),
+    jwt_allowed_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.jwtAllowedGroups),
+    login_parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.loginParameters),
+    tenant_auth_endpoint: cdktf.stringToTerraform(struct!.tenantAuthEndpoint),
+    www_authentication_disabled: cdktf.booleanToTerraform(struct!.wwwAuthenticationDisabled),
+  }
+}
+
+export class WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowedApplications !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedApplications = this._allowedApplications;
+    }
+    if (this._allowedAudiences !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedAudiences = this._allowedAudiences;
+    }
+    if (this._allowedGroups !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedGroups = this._allowedGroups;
+    }
+    if (this._allowedIdentities !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedIdentities = this._allowedIdentities;
+    }
+    if (this._clientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientId = this._clientId;
+    }
+    if (this._clientSecretCertificateThumbprint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientSecretCertificateThumbprint = this._clientSecretCertificateThumbprint;
+    }
+    if (this._clientSecretSettingName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientSecretSettingName = this._clientSecretSettingName;
+    }
+    if (this._jwtAllowedClientApplications !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.jwtAllowedClientApplications = this._jwtAllowedClientApplications;
+    }
+    if (this._jwtAllowedGroups !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.jwtAllowedGroups = this._jwtAllowedGroups;
+    }
+    if (this._loginParameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loginParameters = this._loginParameters;
+    }
+    if (this._tenantAuthEndpoint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tenantAuthEndpoint = this._tenantAuthEndpoint;
+    }
+    if (this._wwwAuthenticationDisabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.wwwAuthenticationDisabled = this._wwwAuthenticationDisabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._allowedApplications = undefined;
+      this._allowedAudiences = undefined;
+      this._allowedGroups = undefined;
+      this._allowedIdentities = undefined;
+      this._clientId = undefined;
+      this._clientSecretCertificateThumbprint = undefined;
+      this._clientSecretSettingName = undefined;
+      this._jwtAllowedClientApplications = undefined;
+      this._jwtAllowedGroups = undefined;
+      this._loginParameters = undefined;
+      this._tenantAuthEndpoint = undefined;
+      this._wwwAuthenticationDisabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowedApplications = value.allowedApplications;
+      this._allowedAudiences = value.allowedAudiences;
+      this._allowedGroups = value.allowedGroups;
+      this._allowedIdentities = value.allowedIdentities;
+      this._clientId = value.clientId;
+      this._clientSecretCertificateThumbprint = value.clientSecretCertificateThumbprint;
+      this._clientSecretSettingName = value.clientSecretSettingName;
+      this._jwtAllowedClientApplications = value.jwtAllowedClientApplications;
+      this._jwtAllowedGroups = value.jwtAllowedGroups;
+      this._loginParameters = value.loginParameters;
+      this._tenantAuthEndpoint = value.tenantAuthEndpoint;
+      this._wwwAuthenticationDisabled = value.wwwAuthenticationDisabled;
+    }
+  }
+
+  // allowed_applications - computed: false, optional: true, required: false
+  private _allowedApplications?: string[]; 
+  public get allowedApplications() {
+    return this.getListAttribute('allowed_applications');
+  }
+  public set allowedApplications(value: string[]) {
+    this._allowedApplications = value;
+  }
+  public resetAllowedApplications() {
+    this._allowedApplications = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedApplicationsInput() {
+    return this._allowedApplications;
+  }
+
+  // allowed_audiences - computed: false, optional: true, required: false
+  private _allowedAudiences?: string[]; 
+  public get allowedAudiences() {
+    return this.getListAttribute('allowed_audiences');
+  }
+  public set allowedAudiences(value: string[]) {
+    this._allowedAudiences = value;
+  }
+  public resetAllowedAudiences() {
+    this._allowedAudiences = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedAudiencesInput() {
+    return this._allowedAudiences;
+  }
+
+  // allowed_groups - computed: false, optional: true, required: false
+  private _allowedGroups?: string[]; 
+  public get allowedGroups() {
+    return this.getListAttribute('allowed_groups');
+  }
+  public set allowedGroups(value: string[]) {
+    this._allowedGroups = value;
+  }
+  public resetAllowedGroups() {
+    this._allowedGroups = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedGroupsInput() {
+    return this._allowedGroups;
+  }
+
+  // allowed_identities - computed: false, optional: true, required: false
+  private _allowedIdentities?: string[]; 
+  public get allowedIdentities() {
+    return this.getListAttribute('allowed_identities');
+  }
+  public set allowedIdentities(value: string[]) {
+    this._allowedIdentities = value;
+  }
+  public resetAllowedIdentities() {
+    this._allowedIdentities = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedIdentitiesInput() {
+    return this._allowedIdentities;
+  }
+
+  // client_id - computed: false, optional: false, required: true
+  private _clientId?: string; 
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+  public set clientId(value: string) {
+    this._clientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId;
+  }
+
+  // client_secret_certificate_thumbprint - computed: false, optional: true, required: false
+  private _clientSecretCertificateThumbprint?: string; 
+  public get clientSecretCertificateThumbprint() {
+    return this.getStringAttribute('client_secret_certificate_thumbprint');
+  }
+  public set clientSecretCertificateThumbprint(value: string) {
+    this._clientSecretCertificateThumbprint = value;
+  }
+  public resetClientSecretCertificateThumbprint() {
+    this._clientSecretCertificateThumbprint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientSecretCertificateThumbprintInput() {
+    return this._clientSecretCertificateThumbprint;
+  }
+
+  // client_secret_setting_name - computed: false, optional: true, required: false
+  private _clientSecretSettingName?: string; 
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+  public set clientSecretSettingName(value: string) {
+    this._clientSecretSettingName = value;
+  }
+  public resetClientSecretSettingName() {
+    this._clientSecretSettingName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientSecretSettingNameInput() {
+    return this._clientSecretSettingName;
+  }
+
+  // jwt_allowed_client_applications - computed: false, optional: true, required: false
+  private _jwtAllowedClientApplications?: string[]; 
+  public get jwtAllowedClientApplications() {
+    return this.getListAttribute('jwt_allowed_client_applications');
+  }
+  public set jwtAllowedClientApplications(value: string[]) {
+    this._jwtAllowedClientApplications = value;
+  }
+  public resetJwtAllowedClientApplications() {
+    this._jwtAllowedClientApplications = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jwtAllowedClientApplicationsInput() {
+    return this._jwtAllowedClientApplications;
+  }
+
+  // jwt_allowed_groups - computed: false, optional: true, required: false
+  private _jwtAllowedGroups?: string[]; 
+  public get jwtAllowedGroups() {
+    return this.getListAttribute('jwt_allowed_groups');
+  }
+  public set jwtAllowedGroups(value: string[]) {
+    this._jwtAllowedGroups = value;
+  }
+  public resetJwtAllowedGroups() {
+    this._jwtAllowedGroups = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jwtAllowedGroupsInput() {
+    return this._jwtAllowedGroups;
+  }
+
+  // login_parameters - computed: false, optional: true, required: false
+  private _loginParameters?: { [key: string]: string }; 
+  public get loginParameters() {
+    return this.getStringMapAttribute('login_parameters');
+  }
+  public set loginParameters(value: { [key: string]: string }) {
+    this._loginParameters = value;
+  }
+  public resetLoginParameters() {
+    this._loginParameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginParametersInput() {
+    return this._loginParameters;
+  }
+
+  // tenant_auth_endpoint - computed: false, optional: false, required: true
+  private _tenantAuthEndpoint?: string; 
+  public get tenantAuthEndpoint() {
+    return this.getStringAttribute('tenant_auth_endpoint');
+  }
+  public set tenantAuthEndpoint(value: string) {
+    this._tenantAuthEndpoint = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantAuthEndpointInput() {
+    return this._tenantAuthEndpoint;
+  }
+
+  // www_authentication_disabled - computed: false, optional: true, required: false
+  private _wwwAuthenticationDisabled?: boolean | cdktf.IResolvable; 
+  public get wwwAuthenticationDisabled() {
+    return this.getBooleanAttribute('www_authentication_disabled');
+  }
+  public set wwwAuthenticationDisabled(value: boolean | cdktf.IResolvable) {
+    this._wwwAuthenticationDisabled = value;
+  }
+  public resetWwwAuthenticationDisabled() {
+    this._wwwAuthenticationDisabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get wwwAuthenticationDisabledInput() {
+    return this._wwwAuthenticationDisabled;
+  }
+}
+export interface WindowsFunctionAppSlotAuthSettingsV2AppleV2 {
+  /**
+  * The OpenID Connect Client ID for the Apple web application.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#client_id WindowsFunctionAppSlot#client_id}
+  */
+  readonly clientId: string;
+  /**
+  * The app setting name that contains the `client_secret` value used for Apple Login.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#client_secret_setting_name WindowsFunctionAppSlot#client_secret_setting_name}
+  */
+  readonly clientSecretSettingName: string;
+}
+
+export function windowsFunctionAppSlotAuthSettingsV2AppleV2ToTerraform(struct?: WindowsFunctionAppSlotAuthSettingsV2AppleV2OutputReference | WindowsFunctionAppSlotAuthSettingsV2AppleV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    client_id: cdktf.stringToTerraform(struct!.clientId),
+    client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
+  }
+}
+
+export class WindowsFunctionAppSlotAuthSettingsV2AppleV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WindowsFunctionAppSlotAuthSettingsV2AppleV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._clientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientId = this._clientId;
+    }
+    if (this._clientSecretSettingName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientSecretSettingName = this._clientSecretSettingName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsFunctionAppSlotAuthSettingsV2AppleV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._clientId = undefined;
+      this._clientSecretSettingName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._clientId = value.clientId;
+      this._clientSecretSettingName = value.clientSecretSettingName;
+    }
+  }
+
+  // client_id - computed: false, optional: false, required: true
+  private _clientId?: string; 
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+  public set clientId(value: string) {
+    this._clientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId;
+  }
+
+  // client_secret_setting_name - computed: false, optional: false, required: true
+  private _clientSecretSettingName?: string; 
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+  public set clientSecretSettingName(value: string) {
+    this._clientSecretSettingName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientSecretSettingNameInput() {
+    return this._clientSecretSettingName;
+  }
+
+  // login_scopes - computed: true, optional: false, required: false
+  public get loginScopes() {
+    return this.getListAttribute('login_scopes');
+  }
+}
+export interface WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2 {
+  /**
+  * The ID of the Client to use to authenticate with Azure Static Web App Authentication.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#client_id WindowsFunctionAppSlot#client_id}
+  */
+  readonly clientId: string;
+}
+
+export function windowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2ToTerraform(struct?: WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2OutputReference | WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    client_id: cdktf.stringToTerraform(struct!.clientId),
+  }
+}
+
+export class WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._clientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientId = this._clientId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._clientId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._clientId = value.clientId;
+    }
+  }
+
+  // client_id - computed: false, optional: false, required: true
+  private _clientId?: string; 
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+  public set clientId(value: string) {
+    this._clientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId;
+  }
+}
+export interface WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2 {
+  /**
+  * The ID of the Client to use to authenticate with this Custom OIDC.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#client_id WindowsFunctionAppSlot#client_id}
+  */
+  readonly clientId: string;
+  /**
+  * The name of the Custom OIDC Authentication Provider.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#name WindowsFunctionAppSlot#name}
+  */
+  readonly name: string;
+  /**
+  * The name of the claim that contains the users name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#name_claim_type WindowsFunctionAppSlot#name_claim_type}
+  */
+  readonly nameClaimType?: string;
+  /**
+  * The endpoint that contains all the configuration endpoints for this Custom OIDC provider.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#openid_configuration_endpoint WindowsFunctionAppSlot#openid_configuration_endpoint}
+  */
+  readonly openidConfigurationEndpoint: string;
+  /**
+  * The list of the scopes that should be requested while authenticating.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#scopes WindowsFunctionAppSlot#scopes}
+  */
+  readonly scopes?: string[];
+}
+
+export function windowsFunctionAppSlotAuthSettingsV2CustomOidcV2ToTerraform(struct?: WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2 | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    client_id: cdktf.stringToTerraform(struct!.clientId),
+    name: cdktf.stringToTerraform(struct!.name),
+    name_claim_type: cdktf.stringToTerraform(struct!.nameClaimType),
+    openid_configuration_endpoint: cdktf.stringToTerraform(struct!.openidConfigurationEndpoint),
+    scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.scopes),
+  }
+}
+
+export class WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2 | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._clientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientId = this._clientId;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._nameClaimType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nameClaimType = this._nameClaimType;
+    }
+    if (this._openidConfigurationEndpoint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.openidConfigurationEndpoint = this._openidConfigurationEndpoint;
+    }
+    if (this._scopes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scopes = this._scopes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2 | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._clientId = undefined;
+      this._name = undefined;
+      this._nameClaimType = undefined;
+      this._openidConfigurationEndpoint = undefined;
+      this._scopes = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._clientId = value.clientId;
+      this._name = value.name;
+      this._nameClaimType = value.nameClaimType;
+      this._openidConfigurationEndpoint = value.openidConfigurationEndpoint;
+      this._scopes = value.scopes;
+    }
+  }
+
+  // authorisation_endpoint - computed: true, optional: false, required: false
+  public get authorisationEndpoint() {
+    return this.getStringAttribute('authorisation_endpoint');
+  }
+
+  // certification_uri - computed: true, optional: false, required: false
+  public get certificationUri() {
+    return this.getStringAttribute('certification_uri');
+  }
+
+  // client_credential_method - computed: true, optional: false, required: false
+  public get clientCredentialMethod() {
+    return this.getStringAttribute('client_credential_method');
+  }
+
+  // client_id - computed: false, optional: false, required: true
+  private _clientId?: string; 
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+  public set clientId(value: string) {
+    this._clientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId;
+  }
+
+  // client_secret_setting_name - computed: true, optional: false, required: false
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+
+  // issuer_endpoint - computed: true, optional: false, required: false
+  public get issuerEndpoint() {
+    return this.getStringAttribute('issuer_endpoint');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // name_claim_type - computed: false, optional: true, required: false
+  private _nameClaimType?: string; 
+  public get nameClaimType() {
+    return this.getStringAttribute('name_claim_type');
+  }
+  public set nameClaimType(value: string) {
+    this._nameClaimType = value;
+  }
+  public resetNameClaimType() {
+    this._nameClaimType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameClaimTypeInput() {
+    return this._nameClaimType;
+  }
+
+  // openid_configuration_endpoint - computed: false, optional: false, required: true
+  private _openidConfigurationEndpoint?: string; 
+  public get openidConfigurationEndpoint() {
+    return this.getStringAttribute('openid_configuration_endpoint');
+  }
+  public set openidConfigurationEndpoint(value: string) {
+    this._openidConfigurationEndpoint = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get openidConfigurationEndpointInput() {
+    return this._openidConfigurationEndpoint;
+  }
+
+  // scopes - computed: false, optional: true, required: false
+  private _scopes?: string[]; 
+  public get scopes() {
+    return this.getListAttribute('scopes');
+  }
+  public set scopes(value: string[]) {
+    this._scopes = value;
+  }
+  public resetScopes() {
+    this._scopes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopesInput() {
+    return this._scopes;
+  }
+
+  // token_endpoint - computed: true, optional: false, required: false
+  public get tokenEndpoint() {
+    return this.getStringAttribute('token_endpoint');
+  }
+}
+
+export class WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2List extends cdktf.ComplexList {
+  public internalValue? : WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2OutputReference {
+    return new WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2OutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface WindowsFunctionAppSlotAuthSettingsV2FacebookV2 {
+  /**
+  * The App ID of the Facebook app used for login.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#app_id WindowsFunctionAppSlot#app_id}
+  */
+  readonly appId: string;
+  /**
+  * The app setting name that contains the `app_secret` value used for Facebook Login.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#app_secret_setting_name WindowsFunctionAppSlot#app_secret_setting_name}
+  */
+  readonly appSecretSettingName: string;
+  /**
+  * The version of the Facebook API to be used while logging in.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#graph_api_version WindowsFunctionAppSlot#graph_api_version}
+  */
+  readonly graphApiVersion?: string;
+  /**
+  * Specifies a list of scopes to be requested as part of Facebook Login authentication.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#login_scopes WindowsFunctionAppSlot#login_scopes}
+  */
+  readonly loginScopes?: string[];
+}
+
+export function windowsFunctionAppSlotAuthSettingsV2FacebookV2ToTerraform(struct?: WindowsFunctionAppSlotAuthSettingsV2FacebookV2OutputReference | WindowsFunctionAppSlotAuthSettingsV2FacebookV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    app_id: cdktf.stringToTerraform(struct!.appId),
+    app_secret_setting_name: cdktf.stringToTerraform(struct!.appSecretSettingName),
+    graph_api_version: cdktf.stringToTerraform(struct!.graphApiVersion),
+    login_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.loginScopes),
+  }
+}
+
+export class WindowsFunctionAppSlotAuthSettingsV2FacebookV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WindowsFunctionAppSlotAuthSettingsV2FacebookV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._appId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.appId = this._appId;
+    }
+    if (this._appSecretSettingName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.appSecretSettingName = this._appSecretSettingName;
+    }
+    if (this._graphApiVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.graphApiVersion = this._graphApiVersion;
+    }
+    if (this._loginScopes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loginScopes = this._loginScopes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsFunctionAppSlotAuthSettingsV2FacebookV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._appId = undefined;
+      this._appSecretSettingName = undefined;
+      this._graphApiVersion = undefined;
+      this._loginScopes = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._appId = value.appId;
+      this._appSecretSettingName = value.appSecretSettingName;
+      this._graphApiVersion = value.graphApiVersion;
+      this._loginScopes = value.loginScopes;
+    }
+  }
+
+  // app_id - computed: false, optional: false, required: true
+  private _appId?: string; 
+  public get appId() {
+    return this.getStringAttribute('app_id');
+  }
+  public set appId(value: string) {
+    this._appId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appIdInput() {
+    return this._appId;
+  }
+
+  // app_secret_setting_name - computed: false, optional: false, required: true
+  private _appSecretSettingName?: string; 
+  public get appSecretSettingName() {
+    return this.getStringAttribute('app_secret_setting_name');
+  }
+  public set appSecretSettingName(value: string) {
+    this._appSecretSettingName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appSecretSettingNameInput() {
+    return this._appSecretSettingName;
+  }
+
+  // graph_api_version - computed: true, optional: true, required: false
+  private _graphApiVersion?: string; 
+  public get graphApiVersion() {
+    return this.getStringAttribute('graph_api_version');
+  }
+  public set graphApiVersion(value: string) {
+    this._graphApiVersion = value;
+  }
+  public resetGraphApiVersion() {
+    this._graphApiVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get graphApiVersionInput() {
+    return this._graphApiVersion;
+  }
+
+  // login_scopes - computed: false, optional: true, required: false
+  private _loginScopes?: string[]; 
+  public get loginScopes() {
+    return this.getListAttribute('login_scopes');
+  }
+  public set loginScopes(value: string[]) {
+    this._loginScopes = value;
+  }
+  public resetLoginScopes() {
+    this._loginScopes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginScopesInput() {
+    return this._loginScopes;
+  }
+}
+export interface WindowsFunctionAppSlotAuthSettingsV2GithubV2 {
+  /**
+  * The ID of the GitHub app used for login.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#client_id WindowsFunctionAppSlot#client_id}
+  */
+  readonly clientId: string;
+  /**
+  * The app setting name that contains the `client_secret` value used for GitHub Login.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#client_secret_setting_name WindowsFunctionAppSlot#client_secret_setting_name}
+  */
+  readonly clientSecretSettingName: string;
+  /**
+  * Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#login_scopes WindowsFunctionAppSlot#login_scopes}
+  */
+  readonly loginScopes?: string[];
+}
+
+export function windowsFunctionAppSlotAuthSettingsV2GithubV2ToTerraform(struct?: WindowsFunctionAppSlotAuthSettingsV2GithubV2OutputReference | WindowsFunctionAppSlotAuthSettingsV2GithubV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    client_id: cdktf.stringToTerraform(struct!.clientId),
+    client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
+    login_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.loginScopes),
+  }
+}
+
+export class WindowsFunctionAppSlotAuthSettingsV2GithubV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WindowsFunctionAppSlotAuthSettingsV2GithubV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._clientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientId = this._clientId;
+    }
+    if (this._clientSecretSettingName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientSecretSettingName = this._clientSecretSettingName;
+    }
+    if (this._loginScopes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loginScopes = this._loginScopes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsFunctionAppSlotAuthSettingsV2GithubV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._clientId = undefined;
+      this._clientSecretSettingName = undefined;
+      this._loginScopes = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._clientId = value.clientId;
+      this._clientSecretSettingName = value.clientSecretSettingName;
+      this._loginScopes = value.loginScopes;
+    }
+  }
+
+  // client_id - computed: false, optional: false, required: true
+  private _clientId?: string; 
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+  public set clientId(value: string) {
+    this._clientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId;
+  }
+
+  // client_secret_setting_name - computed: false, optional: false, required: true
+  private _clientSecretSettingName?: string; 
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+  public set clientSecretSettingName(value: string) {
+    this._clientSecretSettingName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientSecretSettingNameInput() {
+    return this._clientSecretSettingName;
+  }
+
+  // login_scopes - computed: false, optional: true, required: false
+  private _loginScopes?: string[]; 
+  public get loginScopes() {
+    return this.getListAttribute('login_scopes');
+  }
+  public set loginScopes(value: string[]) {
+    this._loginScopes = value;
+  }
+  public resetLoginScopes() {
+    this._loginScopes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginScopesInput() {
+    return this._loginScopes;
+  }
+}
+export interface WindowsFunctionAppSlotAuthSettingsV2GoogleV2 {
+  /**
+  * Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#allowed_audiences WindowsFunctionAppSlot#allowed_audiences}
+  */
+  readonly allowedAudiences?: string[];
+  /**
+  * The OpenID Connect Client ID for the Google web application.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#client_id WindowsFunctionAppSlot#client_id}
+  */
+  readonly clientId: string;
+  /**
+  * The app setting name that contains the `client_secret` value used for Google Login.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#client_secret_setting_name WindowsFunctionAppSlot#client_secret_setting_name}
+  */
+  readonly clientSecretSettingName: string;
+  /**
+  * Specifies a list of Login scopes that will be requested as part of Google Sign-In authentication.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#login_scopes WindowsFunctionAppSlot#login_scopes}
+  */
+  readonly loginScopes?: string[];
+}
+
+export function windowsFunctionAppSlotAuthSettingsV2GoogleV2ToTerraform(struct?: WindowsFunctionAppSlotAuthSettingsV2GoogleV2OutputReference | WindowsFunctionAppSlotAuthSettingsV2GoogleV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedAudiences),
+    client_id: cdktf.stringToTerraform(struct!.clientId),
+    client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
+    login_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.loginScopes),
+  }
+}
+
+export class WindowsFunctionAppSlotAuthSettingsV2GoogleV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WindowsFunctionAppSlotAuthSettingsV2GoogleV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowedAudiences !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedAudiences = this._allowedAudiences;
+    }
+    if (this._clientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientId = this._clientId;
+    }
+    if (this._clientSecretSettingName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientSecretSettingName = this._clientSecretSettingName;
+    }
+    if (this._loginScopes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loginScopes = this._loginScopes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsFunctionAppSlotAuthSettingsV2GoogleV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._allowedAudiences = undefined;
+      this._clientId = undefined;
+      this._clientSecretSettingName = undefined;
+      this._loginScopes = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowedAudiences = value.allowedAudiences;
+      this._clientId = value.clientId;
+      this._clientSecretSettingName = value.clientSecretSettingName;
+      this._loginScopes = value.loginScopes;
+    }
+  }
+
+  // allowed_audiences - computed: false, optional: true, required: false
+  private _allowedAudiences?: string[]; 
+  public get allowedAudiences() {
+    return this.getListAttribute('allowed_audiences');
+  }
+  public set allowedAudiences(value: string[]) {
+    this._allowedAudiences = value;
+  }
+  public resetAllowedAudiences() {
+    this._allowedAudiences = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedAudiencesInput() {
+    return this._allowedAudiences;
+  }
+
+  // client_id - computed: false, optional: false, required: true
+  private _clientId?: string; 
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+  public set clientId(value: string) {
+    this._clientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId;
+  }
+
+  // client_secret_setting_name - computed: false, optional: false, required: true
+  private _clientSecretSettingName?: string; 
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+  public set clientSecretSettingName(value: string) {
+    this._clientSecretSettingName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientSecretSettingNameInput() {
+    return this._clientSecretSettingName;
+  }
+
+  // login_scopes - computed: false, optional: true, required: false
+  private _loginScopes?: string[]; 
+  public get loginScopes() {
+    return this.getListAttribute('login_scopes');
+  }
+  public set loginScopes(value: string[]) {
+    this._loginScopes = value;
+  }
+  public resetLoginScopes() {
+    this._loginScopes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginScopesInput() {
+    return this._loginScopes;
+  }
+}
+export interface WindowsFunctionAppSlotAuthSettingsV2Login {
+  /**
+  * External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#allowed_external_redirect_urls WindowsFunctionAppSlot#allowed_external_redirect_urls}
+  */
+  readonly allowedExternalRedirectUrls?: string[];
+  /**
+  * The method by which cookies expire. Possible values include: `FixedTime`, and `IdentityProviderDerived`. Defaults to `FixedTime`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#cookie_expiration_convention WindowsFunctionAppSlot#cookie_expiration_convention}
+  */
+  readonly cookieExpirationConvention?: string;
+  /**
+  * The time after the request is made when the session cookie should expire. Defaults to `08:00:00`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#cookie_expiration_time WindowsFunctionAppSlot#cookie_expiration_time}
+  */
+  readonly cookieExpirationTime?: string;
+  /**
+  * The endpoint to which logout requests should be made.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#logout_endpoint WindowsFunctionAppSlot#logout_endpoint}
+  */
+  readonly logoutEndpoint?: string;
+  /**
+  * The time after the request is made when the nonce should expire. Defaults to `00:05:00`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#nonce_expiration_time WindowsFunctionAppSlot#nonce_expiration_time}
+  */
+  readonly nonceExpirationTime?: string;
+  /**
+  * Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#preserve_url_fragments_for_logins WindowsFunctionAppSlot#preserve_url_fragments_for_logins}
+  */
+  readonly preserveUrlFragmentsForLogins?: boolean | cdktf.IResolvable;
+  /**
+  * The number of hours after session token expiration that a session token can be used to call the token refresh API. Defaults to `72` hours.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#token_refresh_extension_time WindowsFunctionAppSlot#token_refresh_extension_time}
+  */
+  readonly tokenRefreshExtensionTime?: number;
+  /**
+  * Should the Token Store configuration Enabled. Defaults to `false`
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#token_store_enabled WindowsFunctionAppSlot#token_store_enabled}
+  */
+  readonly tokenStoreEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * The directory path in the App Filesystem in which the tokens will be stored.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#token_store_path WindowsFunctionAppSlot#token_store_path}
+  */
+  readonly tokenStorePath?: string;
+  /**
+  * The name of the app setting which contains the SAS URL of the blob storage containing the tokens.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#token_store_sas_setting_name WindowsFunctionAppSlot#token_store_sas_setting_name}
+  */
+  readonly tokenStoreSasSettingName?: string;
+  /**
+  * Should the nonce be validated while completing the login flow. Defaults to `true`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#validate_nonce WindowsFunctionAppSlot#validate_nonce}
+  */
+  readonly validateNonce?: boolean | cdktf.IResolvable;
+}
+
+export function windowsFunctionAppSlotAuthSettingsV2LoginToTerraform(struct?: WindowsFunctionAppSlotAuthSettingsV2LoginOutputReference | WindowsFunctionAppSlotAuthSettingsV2Login): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    allowed_external_redirect_urls: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedExternalRedirectUrls),
+    cookie_expiration_convention: cdktf.stringToTerraform(struct!.cookieExpirationConvention),
+    cookie_expiration_time: cdktf.stringToTerraform(struct!.cookieExpirationTime),
+    logout_endpoint: cdktf.stringToTerraform(struct!.logoutEndpoint),
+    nonce_expiration_time: cdktf.stringToTerraform(struct!.nonceExpirationTime),
+    preserve_url_fragments_for_logins: cdktf.booleanToTerraform(struct!.preserveUrlFragmentsForLogins),
+    token_refresh_extension_time: cdktf.numberToTerraform(struct!.tokenRefreshExtensionTime),
+    token_store_enabled: cdktf.booleanToTerraform(struct!.tokenStoreEnabled),
+    token_store_path: cdktf.stringToTerraform(struct!.tokenStorePath),
+    token_store_sas_setting_name: cdktf.stringToTerraform(struct!.tokenStoreSasSettingName),
+    validate_nonce: cdktf.booleanToTerraform(struct!.validateNonce),
+  }
+}
+
+export class WindowsFunctionAppSlotAuthSettingsV2LoginOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WindowsFunctionAppSlotAuthSettingsV2Login | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowedExternalRedirectUrls !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedExternalRedirectUrls = this._allowedExternalRedirectUrls;
+    }
+    if (this._cookieExpirationConvention !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cookieExpirationConvention = this._cookieExpirationConvention;
+    }
+    if (this._cookieExpirationTime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cookieExpirationTime = this._cookieExpirationTime;
+    }
+    if (this._logoutEndpoint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logoutEndpoint = this._logoutEndpoint;
+    }
+    if (this._nonceExpirationTime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nonceExpirationTime = this._nonceExpirationTime;
+    }
+    if (this._preserveUrlFragmentsForLogins !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.preserveUrlFragmentsForLogins = this._preserveUrlFragmentsForLogins;
+    }
+    if (this._tokenRefreshExtensionTime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tokenRefreshExtensionTime = this._tokenRefreshExtensionTime;
+    }
+    if (this._tokenStoreEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tokenStoreEnabled = this._tokenStoreEnabled;
+    }
+    if (this._tokenStorePath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tokenStorePath = this._tokenStorePath;
+    }
+    if (this._tokenStoreSasSettingName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tokenStoreSasSettingName = this._tokenStoreSasSettingName;
+    }
+    if (this._validateNonce !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.validateNonce = this._validateNonce;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsFunctionAppSlotAuthSettingsV2Login | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._allowedExternalRedirectUrls = undefined;
+      this._cookieExpirationConvention = undefined;
+      this._cookieExpirationTime = undefined;
+      this._logoutEndpoint = undefined;
+      this._nonceExpirationTime = undefined;
+      this._preserveUrlFragmentsForLogins = undefined;
+      this._tokenRefreshExtensionTime = undefined;
+      this._tokenStoreEnabled = undefined;
+      this._tokenStorePath = undefined;
+      this._tokenStoreSasSettingName = undefined;
+      this._validateNonce = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowedExternalRedirectUrls = value.allowedExternalRedirectUrls;
+      this._cookieExpirationConvention = value.cookieExpirationConvention;
+      this._cookieExpirationTime = value.cookieExpirationTime;
+      this._logoutEndpoint = value.logoutEndpoint;
+      this._nonceExpirationTime = value.nonceExpirationTime;
+      this._preserveUrlFragmentsForLogins = value.preserveUrlFragmentsForLogins;
+      this._tokenRefreshExtensionTime = value.tokenRefreshExtensionTime;
+      this._tokenStoreEnabled = value.tokenStoreEnabled;
+      this._tokenStorePath = value.tokenStorePath;
+      this._tokenStoreSasSettingName = value.tokenStoreSasSettingName;
+      this._validateNonce = value.validateNonce;
+    }
+  }
+
+  // allowed_external_redirect_urls - computed: false, optional: true, required: false
+  private _allowedExternalRedirectUrls?: string[]; 
+  public get allowedExternalRedirectUrls() {
+    return this.getListAttribute('allowed_external_redirect_urls');
+  }
+  public set allowedExternalRedirectUrls(value: string[]) {
+    this._allowedExternalRedirectUrls = value;
+  }
+  public resetAllowedExternalRedirectUrls() {
+    this._allowedExternalRedirectUrls = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedExternalRedirectUrlsInput() {
+    return this._allowedExternalRedirectUrls;
+  }
+
+  // cookie_expiration_convention - computed: false, optional: true, required: false
+  private _cookieExpirationConvention?: string; 
+  public get cookieExpirationConvention() {
+    return this.getStringAttribute('cookie_expiration_convention');
+  }
+  public set cookieExpirationConvention(value: string) {
+    this._cookieExpirationConvention = value;
+  }
+  public resetCookieExpirationConvention() {
+    this._cookieExpirationConvention = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cookieExpirationConventionInput() {
+    return this._cookieExpirationConvention;
+  }
+
+  // cookie_expiration_time - computed: false, optional: true, required: false
+  private _cookieExpirationTime?: string; 
+  public get cookieExpirationTime() {
+    return this.getStringAttribute('cookie_expiration_time');
+  }
+  public set cookieExpirationTime(value: string) {
+    this._cookieExpirationTime = value;
+  }
+  public resetCookieExpirationTime() {
+    this._cookieExpirationTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cookieExpirationTimeInput() {
+    return this._cookieExpirationTime;
+  }
+
+  // logout_endpoint - computed: false, optional: true, required: false
+  private _logoutEndpoint?: string; 
+  public get logoutEndpoint() {
+    return this.getStringAttribute('logout_endpoint');
+  }
+  public set logoutEndpoint(value: string) {
+    this._logoutEndpoint = value;
+  }
+  public resetLogoutEndpoint() {
+    this._logoutEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logoutEndpointInput() {
+    return this._logoutEndpoint;
+  }
+
+  // nonce_expiration_time - computed: false, optional: true, required: false
+  private _nonceExpirationTime?: string; 
+  public get nonceExpirationTime() {
+    return this.getStringAttribute('nonce_expiration_time');
+  }
+  public set nonceExpirationTime(value: string) {
+    this._nonceExpirationTime = value;
+  }
+  public resetNonceExpirationTime() {
+    this._nonceExpirationTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nonceExpirationTimeInput() {
+    return this._nonceExpirationTime;
+  }
+
+  // preserve_url_fragments_for_logins - computed: false, optional: true, required: false
+  private _preserveUrlFragmentsForLogins?: boolean | cdktf.IResolvable; 
+  public get preserveUrlFragmentsForLogins() {
+    return this.getBooleanAttribute('preserve_url_fragments_for_logins');
+  }
+  public set preserveUrlFragmentsForLogins(value: boolean | cdktf.IResolvable) {
+    this._preserveUrlFragmentsForLogins = value;
+  }
+  public resetPreserveUrlFragmentsForLogins() {
+    this._preserveUrlFragmentsForLogins = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preserveUrlFragmentsForLoginsInput() {
+    return this._preserveUrlFragmentsForLogins;
+  }
+
+  // token_refresh_extension_time - computed: false, optional: true, required: false
+  private _tokenRefreshExtensionTime?: number; 
+  public get tokenRefreshExtensionTime() {
+    return this.getNumberAttribute('token_refresh_extension_time');
+  }
+  public set tokenRefreshExtensionTime(value: number) {
+    this._tokenRefreshExtensionTime = value;
+  }
+  public resetTokenRefreshExtensionTime() {
+    this._tokenRefreshExtensionTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tokenRefreshExtensionTimeInput() {
+    return this._tokenRefreshExtensionTime;
+  }
+
+  // token_store_enabled - computed: false, optional: true, required: false
+  private _tokenStoreEnabled?: boolean | cdktf.IResolvable; 
+  public get tokenStoreEnabled() {
+    return this.getBooleanAttribute('token_store_enabled');
+  }
+  public set tokenStoreEnabled(value: boolean | cdktf.IResolvable) {
+    this._tokenStoreEnabled = value;
+  }
+  public resetTokenStoreEnabled() {
+    this._tokenStoreEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tokenStoreEnabledInput() {
+    return this._tokenStoreEnabled;
+  }
+
+  // token_store_path - computed: false, optional: true, required: false
+  private _tokenStorePath?: string; 
+  public get tokenStorePath() {
+    return this.getStringAttribute('token_store_path');
+  }
+  public set tokenStorePath(value: string) {
+    this._tokenStorePath = value;
+  }
+  public resetTokenStorePath() {
+    this._tokenStorePath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tokenStorePathInput() {
+    return this._tokenStorePath;
+  }
+
+  // token_store_sas_setting_name - computed: false, optional: true, required: false
+  private _tokenStoreSasSettingName?: string; 
+  public get tokenStoreSasSettingName() {
+    return this.getStringAttribute('token_store_sas_setting_name');
+  }
+  public set tokenStoreSasSettingName(value: string) {
+    this._tokenStoreSasSettingName = value;
+  }
+  public resetTokenStoreSasSettingName() {
+    this._tokenStoreSasSettingName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tokenStoreSasSettingNameInput() {
+    return this._tokenStoreSasSettingName;
+  }
+
+  // validate_nonce - computed: false, optional: true, required: false
+  private _validateNonce?: boolean | cdktf.IResolvable; 
+  public get validateNonce() {
+    return this.getBooleanAttribute('validate_nonce');
+  }
+  public set validateNonce(value: boolean | cdktf.IResolvable) {
+    this._validateNonce = value;
+  }
+  public resetValidateNonce() {
+    this._validateNonce = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get validateNonceInput() {
+    return this._validateNonce;
+  }
+}
+export interface WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2 {
+  /**
+  * Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#allowed_audiences WindowsFunctionAppSlot#allowed_audiences}
+  */
+  readonly allowedAudiences?: string[];
+  /**
+  * The OAuth 2.0 client ID that was created for the app used for authentication.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#client_id WindowsFunctionAppSlot#client_id}
+  */
+  readonly clientId: string;
+  /**
+  * The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#client_secret_setting_name WindowsFunctionAppSlot#client_secret_setting_name}
+  */
+  readonly clientSecretSettingName: string;
+  /**
+  * The list of Login scopes that will be requested as part of Microsoft Account authentication.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#login_scopes WindowsFunctionAppSlot#login_scopes}
+  */
+  readonly loginScopes?: string[];
+}
+
+export function windowsFunctionAppSlotAuthSettingsV2MicrosoftV2ToTerraform(struct?: WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2OutputReference | WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedAudiences),
+    client_id: cdktf.stringToTerraform(struct!.clientId),
+    client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
+    login_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.loginScopes),
+  }
+}
+
+export class WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowedAudiences !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedAudiences = this._allowedAudiences;
+    }
+    if (this._clientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientId = this._clientId;
+    }
+    if (this._clientSecretSettingName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientSecretSettingName = this._clientSecretSettingName;
+    }
+    if (this._loginScopes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loginScopes = this._loginScopes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._allowedAudiences = undefined;
+      this._clientId = undefined;
+      this._clientSecretSettingName = undefined;
+      this._loginScopes = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowedAudiences = value.allowedAudiences;
+      this._clientId = value.clientId;
+      this._clientSecretSettingName = value.clientSecretSettingName;
+      this._loginScopes = value.loginScopes;
+    }
+  }
+
+  // allowed_audiences - computed: false, optional: true, required: false
+  private _allowedAudiences?: string[]; 
+  public get allowedAudiences() {
+    return this.getListAttribute('allowed_audiences');
+  }
+  public set allowedAudiences(value: string[]) {
+    this._allowedAudiences = value;
+  }
+  public resetAllowedAudiences() {
+    this._allowedAudiences = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedAudiencesInput() {
+    return this._allowedAudiences;
+  }
+
+  // client_id - computed: false, optional: false, required: true
+  private _clientId?: string; 
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+  public set clientId(value: string) {
+    this._clientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId;
+  }
+
+  // client_secret_setting_name - computed: false, optional: false, required: true
+  private _clientSecretSettingName?: string; 
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+  public set clientSecretSettingName(value: string) {
+    this._clientSecretSettingName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientSecretSettingNameInput() {
+    return this._clientSecretSettingName;
+  }
+
+  // login_scopes - computed: false, optional: true, required: false
+  private _loginScopes?: string[]; 
+  public get loginScopes() {
+    return this.getListAttribute('login_scopes');
+  }
+  public set loginScopes(value: string[]) {
+    this._loginScopes = value;
+  }
+  public resetLoginScopes() {
+    this._loginScopes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginScopesInput() {
+    return this._loginScopes;
+  }
+}
+export interface WindowsFunctionAppSlotAuthSettingsV2TwitterV2 {
+  /**
+  * The OAuth 1.0a consumer key of the Twitter application used for sign-in.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#consumer_key WindowsFunctionAppSlot#consumer_key}
+  */
+  readonly consumerKey: string;
+  /**
+  * The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#consumer_secret_setting_name WindowsFunctionAppSlot#consumer_secret_setting_name}
+  */
+  readonly consumerSecretSettingName: string;
+}
+
+export function windowsFunctionAppSlotAuthSettingsV2TwitterV2ToTerraform(struct?: WindowsFunctionAppSlotAuthSettingsV2TwitterV2OutputReference | WindowsFunctionAppSlotAuthSettingsV2TwitterV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    consumer_key: cdktf.stringToTerraform(struct!.consumerKey),
+    consumer_secret_setting_name: cdktf.stringToTerraform(struct!.consumerSecretSettingName),
+  }
+}
+
+export class WindowsFunctionAppSlotAuthSettingsV2TwitterV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WindowsFunctionAppSlotAuthSettingsV2TwitterV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._consumerKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.consumerKey = this._consumerKey;
+    }
+    if (this._consumerSecretSettingName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.consumerSecretSettingName = this._consumerSecretSettingName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsFunctionAppSlotAuthSettingsV2TwitterV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._consumerKey = undefined;
+      this._consumerSecretSettingName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._consumerKey = value.consumerKey;
+      this._consumerSecretSettingName = value.consumerSecretSettingName;
+    }
+  }
+
+  // consumer_key - computed: false, optional: false, required: true
+  private _consumerKey?: string; 
+  public get consumerKey() {
+    return this.getStringAttribute('consumer_key');
+  }
+  public set consumerKey(value: string) {
+    this._consumerKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumerKeyInput() {
+    return this._consumerKey;
+  }
+
+  // consumer_secret_setting_name - computed: false, optional: false, required: true
+  private _consumerSecretSettingName?: string; 
+  public get consumerSecretSettingName() {
+    return this.getStringAttribute('consumer_secret_setting_name');
+  }
+  public set consumerSecretSettingName(value: string) {
+    this._consumerSecretSettingName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumerSecretSettingNameInput() {
+    return this._consumerSecretSettingName;
+  }
+}
+export interface WindowsFunctionAppSlotAuthSettingsV2 {
+  /**
+  * Should the AuthV2 Settings be enabled. Defaults to `false`
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#auth_enabled WindowsFunctionAppSlot#auth_enabled}
+  */
+  readonly authEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#config_file_path WindowsFunctionAppSlot#config_file_path}
+  */
+  readonly configFilePath?: string;
+  /**
+  * The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#default_provider WindowsFunctionAppSlot#default_provider}
+  */
+  readonly defaultProvider?: string;
+  /**
+  * The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#excluded_paths WindowsFunctionAppSlot#excluded_paths}
+  */
+  readonly excludedPaths?: string[];
+  /**
+  * The convention used to determine the url of the request made. Possible values include `ForwardProxyConventionNoProxy`, `ForwardProxyConventionStandard`, `ForwardProxyConventionCustom`. Defaults to `ForwardProxyConventionNoProxy`
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#forward_proxy_convention WindowsFunctionAppSlot#forward_proxy_convention}
+  */
+  readonly forwardProxyConvention?: string;
+  /**
+  * The name of the header containing the host of the request.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#forward_proxy_custom_host_header_name WindowsFunctionAppSlot#forward_proxy_custom_host_header_name}
+  */
+  readonly forwardProxyCustomHostHeaderName?: string;
+  /**
+  * The name of the header containing the scheme of the request.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#forward_proxy_custom_scheme_header_name WindowsFunctionAppSlot#forward_proxy_custom_scheme_header_name}
+  */
+  readonly forwardProxyCustomSchemeHeaderName?: string;
+  /**
+  * The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#http_route_api_prefix WindowsFunctionAppSlot#http_route_api_prefix}
+  */
+  readonly httpRouteApiPrefix?: string;
+  /**
+  * Should the authentication flow be used for all requests.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#require_authentication WindowsFunctionAppSlot#require_authentication}
+  */
+  readonly requireAuthentication?: boolean | cdktf.IResolvable;
+  /**
+  * Should HTTPS be required on connections? Defaults to true.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#require_https WindowsFunctionAppSlot#require_https}
+  */
+  readonly requireHttps?: boolean | cdktf.IResolvable;
+  /**
+  * The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#runtime_version WindowsFunctionAppSlot#runtime_version}
+  */
+  readonly runtimeVersion?: string;
+  /**
+  * The action to take for requests made without authentication. Possible values include `RedirectToLoginPage`, `AllowAnonymous`, `Return401`, and `Return403`. Defaults to `RedirectToLoginPage`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#unauthenticated_action WindowsFunctionAppSlot#unauthenticated_action}
+  */
+  readonly unauthenticatedAction?: string;
+  /**
+  * active_directory_v2 block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#active_directory_v2 WindowsFunctionAppSlot#active_directory_v2}
+  */
+  readonly activeDirectoryV2?: WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2;
+  /**
+  * apple_v2 block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#apple_v2 WindowsFunctionAppSlot#apple_v2}
+  */
+  readonly appleV2?: WindowsFunctionAppSlotAuthSettingsV2AppleV2;
+  /**
+  * azure_static_web_app_v2 block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#azure_static_web_app_v2 WindowsFunctionAppSlot#azure_static_web_app_v2}
+  */
+  readonly azureStaticWebAppV2?: WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2;
+  /**
+  * custom_oidc_v2 block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#custom_oidc_v2 WindowsFunctionAppSlot#custom_oidc_v2}
+  */
+  readonly customOidcV2?: WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2[] | cdktf.IResolvable;
+  /**
+  * facebook_v2 block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#facebook_v2 WindowsFunctionAppSlot#facebook_v2}
+  */
+  readonly facebookV2?: WindowsFunctionAppSlotAuthSettingsV2FacebookV2;
+  /**
+  * github_v2 block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#github_v2 WindowsFunctionAppSlot#github_v2}
+  */
+  readonly githubV2?: WindowsFunctionAppSlotAuthSettingsV2GithubV2;
+  /**
+  * google_v2 block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#google_v2 WindowsFunctionAppSlot#google_v2}
+  */
+  readonly googleV2?: WindowsFunctionAppSlotAuthSettingsV2GoogleV2;
+  /**
+  * login block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#login WindowsFunctionAppSlot#login}
+  */
+  readonly login: WindowsFunctionAppSlotAuthSettingsV2Login;
+  /**
+  * microsoft_v2 block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#microsoft_v2 WindowsFunctionAppSlot#microsoft_v2}
+  */
+  readonly microsoftV2?: WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2;
+  /**
+  * twitter_v2 block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#twitter_v2 WindowsFunctionAppSlot#twitter_v2}
+  */
+  readonly twitterV2?: WindowsFunctionAppSlotAuthSettingsV2TwitterV2;
+}
+
+export function windowsFunctionAppSlotAuthSettingsV2ToTerraform(struct?: WindowsFunctionAppSlotAuthSettingsV2OutputReference | WindowsFunctionAppSlotAuthSettingsV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    auth_enabled: cdktf.booleanToTerraform(struct!.authEnabled),
+    config_file_path: cdktf.stringToTerraform(struct!.configFilePath),
+    default_provider: cdktf.stringToTerraform(struct!.defaultProvider),
+    excluded_paths: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludedPaths),
+    forward_proxy_convention: cdktf.stringToTerraform(struct!.forwardProxyConvention),
+    forward_proxy_custom_host_header_name: cdktf.stringToTerraform(struct!.forwardProxyCustomHostHeaderName),
+    forward_proxy_custom_scheme_header_name: cdktf.stringToTerraform(struct!.forwardProxyCustomSchemeHeaderName),
+    http_route_api_prefix: cdktf.stringToTerraform(struct!.httpRouteApiPrefix),
+    require_authentication: cdktf.booleanToTerraform(struct!.requireAuthentication),
+    require_https: cdktf.booleanToTerraform(struct!.requireHttps),
+    runtime_version: cdktf.stringToTerraform(struct!.runtimeVersion),
+    unauthenticated_action: cdktf.stringToTerraform(struct!.unauthenticatedAction),
+    active_directory_v2: windowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2ToTerraform(struct!.activeDirectoryV2),
+    apple_v2: windowsFunctionAppSlotAuthSettingsV2AppleV2ToTerraform(struct!.appleV2),
+    azure_static_web_app_v2: windowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2ToTerraform(struct!.azureStaticWebAppV2),
+    custom_oidc_v2: cdktf.listMapper(windowsFunctionAppSlotAuthSettingsV2CustomOidcV2ToTerraform, true)(struct!.customOidcV2),
+    facebook_v2: windowsFunctionAppSlotAuthSettingsV2FacebookV2ToTerraform(struct!.facebookV2),
+    github_v2: windowsFunctionAppSlotAuthSettingsV2GithubV2ToTerraform(struct!.githubV2),
+    google_v2: windowsFunctionAppSlotAuthSettingsV2GoogleV2ToTerraform(struct!.googleV2),
+    login: windowsFunctionAppSlotAuthSettingsV2LoginToTerraform(struct!.login),
+    microsoft_v2: windowsFunctionAppSlotAuthSettingsV2MicrosoftV2ToTerraform(struct!.microsoftV2),
+    twitter_v2: windowsFunctionAppSlotAuthSettingsV2TwitterV2ToTerraform(struct!.twitterV2),
+  }
+}
+
+export class WindowsFunctionAppSlotAuthSettingsV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WindowsFunctionAppSlotAuthSettingsV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._authEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authEnabled = this._authEnabled;
+    }
+    if (this._configFilePath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.configFilePath = this._configFilePath;
+    }
+    if (this._defaultProvider !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultProvider = this._defaultProvider;
+    }
+    if (this._excludedPaths !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludedPaths = this._excludedPaths;
+    }
+    if (this._forwardProxyConvention !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.forwardProxyConvention = this._forwardProxyConvention;
+    }
+    if (this._forwardProxyCustomHostHeaderName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.forwardProxyCustomHostHeaderName = this._forwardProxyCustomHostHeaderName;
+    }
+    if (this._forwardProxyCustomSchemeHeaderName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.forwardProxyCustomSchemeHeaderName = this._forwardProxyCustomSchemeHeaderName;
+    }
+    if (this._httpRouteApiPrefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpRouteApiPrefix = this._httpRouteApiPrefix;
+    }
+    if (this._requireAuthentication !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requireAuthentication = this._requireAuthentication;
+    }
+    if (this._requireHttps !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requireHttps = this._requireHttps;
+    }
+    if (this._runtimeVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.runtimeVersion = this._runtimeVersion;
+    }
+    if (this._unauthenticatedAction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.unauthenticatedAction = this._unauthenticatedAction;
+    }
+    if (this._activeDirectoryV2?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.activeDirectoryV2 = this._activeDirectoryV2?.internalValue;
+    }
+    if (this._appleV2?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.appleV2 = this._appleV2?.internalValue;
+    }
+    if (this._azureStaticWebAppV2?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.azureStaticWebAppV2 = this._azureStaticWebAppV2?.internalValue;
+    }
+    if (this._customOidcV2?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customOidcV2 = this._customOidcV2?.internalValue;
+    }
+    if (this._facebookV2?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.facebookV2 = this._facebookV2?.internalValue;
+    }
+    if (this._githubV2?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.githubV2 = this._githubV2?.internalValue;
+    }
+    if (this._googleV2?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.googleV2 = this._googleV2?.internalValue;
+    }
+    if (this._login?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.login = this._login?.internalValue;
+    }
+    if (this._microsoftV2?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.microsoftV2 = this._microsoftV2?.internalValue;
+    }
+    if (this._twitterV2?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.twitterV2 = this._twitterV2?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsFunctionAppSlotAuthSettingsV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._authEnabled = undefined;
+      this._configFilePath = undefined;
+      this._defaultProvider = undefined;
+      this._excludedPaths = undefined;
+      this._forwardProxyConvention = undefined;
+      this._forwardProxyCustomHostHeaderName = undefined;
+      this._forwardProxyCustomSchemeHeaderName = undefined;
+      this._httpRouteApiPrefix = undefined;
+      this._requireAuthentication = undefined;
+      this._requireHttps = undefined;
+      this._runtimeVersion = undefined;
+      this._unauthenticatedAction = undefined;
+      this._activeDirectoryV2.internalValue = undefined;
+      this._appleV2.internalValue = undefined;
+      this._azureStaticWebAppV2.internalValue = undefined;
+      this._customOidcV2.internalValue = undefined;
+      this._facebookV2.internalValue = undefined;
+      this._githubV2.internalValue = undefined;
+      this._googleV2.internalValue = undefined;
+      this._login.internalValue = undefined;
+      this._microsoftV2.internalValue = undefined;
+      this._twitterV2.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._authEnabled = value.authEnabled;
+      this._configFilePath = value.configFilePath;
+      this._defaultProvider = value.defaultProvider;
+      this._excludedPaths = value.excludedPaths;
+      this._forwardProxyConvention = value.forwardProxyConvention;
+      this._forwardProxyCustomHostHeaderName = value.forwardProxyCustomHostHeaderName;
+      this._forwardProxyCustomSchemeHeaderName = value.forwardProxyCustomSchemeHeaderName;
+      this._httpRouteApiPrefix = value.httpRouteApiPrefix;
+      this._requireAuthentication = value.requireAuthentication;
+      this._requireHttps = value.requireHttps;
+      this._runtimeVersion = value.runtimeVersion;
+      this._unauthenticatedAction = value.unauthenticatedAction;
+      this._activeDirectoryV2.internalValue = value.activeDirectoryV2;
+      this._appleV2.internalValue = value.appleV2;
+      this._azureStaticWebAppV2.internalValue = value.azureStaticWebAppV2;
+      this._customOidcV2.internalValue = value.customOidcV2;
+      this._facebookV2.internalValue = value.facebookV2;
+      this._githubV2.internalValue = value.githubV2;
+      this._googleV2.internalValue = value.googleV2;
+      this._login.internalValue = value.login;
+      this._microsoftV2.internalValue = value.microsoftV2;
+      this._twitterV2.internalValue = value.twitterV2;
+    }
+  }
+
+  // auth_enabled - computed: false, optional: true, required: false
+  private _authEnabled?: boolean | cdktf.IResolvable; 
+  public get authEnabled() {
+    return this.getBooleanAttribute('auth_enabled');
+  }
+  public set authEnabled(value: boolean | cdktf.IResolvable) {
+    this._authEnabled = value;
+  }
+  public resetAuthEnabled() {
+    this._authEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authEnabledInput() {
+    return this._authEnabled;
+  }
+
+  // config_file_path - computed: false, optional: true, required: false
+  private _configFilePath?: string; 
+  public get configFilePath() {
+    return this.getStringAttribute('config_file_path');
+  }
+  public set configFilePath(value: string) {
+    this._configFilePath = value;
+  }
+  public resetConfigFilePath() {
+    this._configFilePath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configFilePathInput() {
+    return this._configFilePath;
+  }
+
+  // default_provider - computed: false, optional: true, required: false
+  private _defaultProvider?: string; 
+  public get defaultProvider() {
+    return this.getStringAttribute('default_provider');
+  }
+  public set defaultProvider(value: string) {
+    this._defaultProvider = value;
+  }
+  public resetDefaultProvider() {
+    this._defaultProvider = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultProviderInput() {
+    return this._defaultProvider;
+  }
+
+  // excluded_paths - computed: false, optional: true, required: false
+  private _excludedPaths?: string[]; 
+  public get excludedPaths() {
+    return this.getListAttribute('excluded_paths');
+  }
+  public set excludedPaths(value: string[]) {
+    this._excludedPaths = value;
+  }
+  public resetExcludedPaths() {
+    this._excludedPaths = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludedPathsInput() {
+    return this._excludedPaths;
+  }
+
+  // forward_proxy_convention - computed: false, optional: true, required: false
+  private _forwardProxyConvention?: string; 
+  public get forwardProxyConvention() {
+    return this.getStringAttribute('forward_proxy_convention');
+  }
+  public set forwardProxyConvention(value: string) {
+    this._forwardProxyConvention = value;
+  }
+  public resetForwardProxyConvention() {
+    this._forwardProxyConvention = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forwardProxyConventionInput() {
+    return this._forwardProxyConvention;
+  }
+
+  // forward_proxy_custom_host_header_name - computed: false, optional: true, required: false
+  private _forwardProxyCustomHostHeaderName?: string; 
+  public get forwardProxyCustomHostHeaderName() {
+    return this.getStringAttribute('forward_proxy_custom_host_header_name');
+  }
+  public set forwardProxyCustomHostHeaderName(value: string) {
+    this._forwardProxyCustomHostHeaderName = value;
+  }
+  public resetForwardProxyCustomHostHeaderName() {
+    this._forwardProxyCustomHostHeaderName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forwardProxyCustomHostHeaderNameInput() {
+    return this._forwardProxyCustomHostHeaderName;
+  }
+
+  // forward_proxy_custom_scheme_header_name - computed: false, optional: true, required: false
+  private _forwardProxyCustomSchemeHeaderName?: string; 
+  public get forwardProxyCustomSchemeHeaderName() {
+    return this.getStringAttribute('forward_proxy_custom_scheme_header_name');
+  }
+  public set forwardProxyCustomSchemeHeaderName(value: string) {
+    this._forwardProxyCustomSchemeHeaderName = value;
+  }
+  public resetForwardProxyCustomSchemeHeaderName() {
+    this._forwardProxyCustomSchemeHeaderName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forwardProxyCustomSchemeHeaderNameInput() {
+    return this._forwardProxyCustomSchemeHeaderName;
+  }
+
+  // http_route_api_prefix - computed: false, optional: true, required: false
+  private _httpRouteApiPrefix?: string; 
+  public get httpRouteApiPrefix() {
+    return this.getStringAttribute('http_route_api_prefix');
+  }
+  public set httpRouteApiPrefix(value: string) {
+    this._httpRouteApiPrefix = value;
+  }
+  public resetHttpRouteApiPrefix() {
+    this._httpRouteApiPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpRouteApiPrefixInput() {
+    return this._httpRouteApiPrefix;
+  }
+
+  // require_authentication - computed: false, optional: true, required: false
+  private _requireAuthentication?: boolean | cdktf.IResolvable; 
+  public get requireAuthentication() {
+    return this.getBooleanAttribute('require_authentication');
+  }
+  public set requireAuthentication(value: boolean | cdktf.IResolvable) {
+    this._requireAuthentication = value;
+  }
+  public resetRequireAuthentication() {
+    this._requireAuthentication = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requireAuthenticationInput() {
+    return this._requireAuthentication;
+  }
+
+  // require_https - computed: false, optional: true, required: false
+  private _requireHttps?: boolean | cdktf.IResolvable; 
+  public get requireHttps() {
+    return this.getBooleanAttribute('require_https');
+  }
+  public set requireHttps(value: boolean | cdktf.IResolvable) {
+    this._requireHttps = value;
+  }
+  public resetRequireHttps() {
+    this._requireHttps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requireHttpsInput() {
+    return this._requireHttps;
+  }
+
+  // runtime_version - computed: false, optional: true, required: false
+  private _runtimeVersion?: string; 
+  public get runtimeVersion() {
+    return this.getStringAttribute('runtime_version');
+  }
+  public set runtimeVersion(value: string) {
+    this._runtimeVersion = value;
+  }
+  public resetRuntimeVersion() {
+    this._runtimeVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runtimeVersionInput() {
+    return this._runtimeVersion;
+  }
+
+  // unauthenticated_action - computed: false, optional: true, required: false
+  private _unauthenticatedAction?: string; 
+  public get unauthenticatedAction() {
+    return this.getStringAttribute('unauthenticated_action');
+  }
+  public set unauthenticatedAction(value: string) {
+    this._unauthenticatedAction = value;
+  }
+  public resetUnauthenticatedAction() {
+    this._unauthenticatedAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get unauthenticatedActionInput() {
+    return this._unauthenticatedAction;
+  }
+
+  // active_directory_v2 - computed: false, optional: true, required: false
+  private _activeDirectoryV2 = new WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2OutputReference(this, "active_directory_v2");
+  public get activeDirectoryV2() {
+    return this._activeDirectoryV2;
+  }
+  public putActiveDirectoryV2(value: WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2) {
+    this._activeDirectoryV2.internalValue = value;
+  }
+  public resetActiveDirectoryV2() {
+    this._activeDirectoryV2.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get activeDirectoryV2Input() {
+    return this._activeDirectoryV2.internalValue;
+  }
+
+  // apple_v2 - computed: false, optional: true, required: false
+  private _appleV2 = new WindowsFunctionAppSlotAuthSettingsV2AppleV2OutputReference(this, "apple_v2");
+  public get appleV2() {
+    return this._appleV2;
+  }
+  public putAppleV2(value: WindowsFunctionAppSlotAuthSettingsV2AppleV2) {
+    this._appleV2.internalValue = value;
+  }
+  public resetAppleV2() {
+    this._appleV2.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appleV2Input() {
+    return this._appleV2.internalValue;
+  }
+
+  // azure_static_web_app_v2 - computed: false, optional: true, required: false
+  private _azureStaticWebAppV2 = new WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2OutputReference(this, "azure_static_web_app_v2");
+  public get azureStaticWebAppV2() {
+    return this._azureStaticWebAppV2;
+  }
+  public putAzureStaticWebAppV2(value: WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2) {
+    this._azureStaticWebAppV2.internalValue = value;
+  }
+  public resetAzureStaticWebAppV2() {
+    this._azureStaticWebAppV2.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureStaticWebAppV2Input() {
+    return this._azureStaticWebAppV2.internalValue;
+  }
+
+  // custom_oidc_v2 - computed: false, optional: true, required: false
+  private _customOidcV2 = new WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2List(this, "custom_oidc_v2", false);
+  public get customOidcV2() {
+    return this._customOidcV2;
+  }
+  public putCustomOidcV2(value: WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2[] | cdktf.IResolvable) {
+    this._customOidcV2.internalValue = value;
+  }
+  public resetCustomOidcV2() {
+    this._customOidcV2.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customOidcV2Input() {
+    return this._customOidcV2.internalValue;
+  }
+
+  // facebook_v2 - computed: false, optional: true, required: false
+  private _facebookV2 = new WindowsFunctionAppSlotAuthSettingsV2FacebookV2OutputReference(this, "facebook_v2");
+  public get facebookV2() {
+    return this._facebookV2;
+  }
+  public putFacebookV2(value: WindowsFunctionAppSlotAuthSettingsV2FacebookV2) {
+    this._facebookV2.internalValue = value;
+  }
+  public resetFacebookV2() {
+    this._facebookV2.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get facebookV2Input() {
+    return this._facebookV2.internalValue;
+  }
+
+  // github_v2 - computed: false, optional: true, required: false
+  private _githubV2 = new WindowsFunctionAppSlotAuthSettingsV2GithubV2OutputReference(this, "github_v2");
+  public get githubV2() {
+    return this._githubV2;
+  }
+  public putGithubV2(value: WindowsFunctionAppSlotAuthSettingsV2GithubV2) {
+    this._githubV2.internalValue = value;
+  }
+  public resetGithubV2() {
+    this._githubV2.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get githubV2Input() {
+    return this._githubV2.internalValue;
+  }
+
+  // google_v2 - computed: false, optional: true, required: false
+  private _googleV2 = new WindowsFunctionAppSlotAuthSettingsV2GoogleV2OutputReference(this, "google_v2");
+  public get googleV2() {
+    return this._googleV2;
+  }
+  public putGoogleV2(value: WindowsFunctionAppSlotAuthSettingsV2GoogleV2) {
+    this._googleV2.internalValue = value;
+  }
+  public resetGoogleV2() {
+    this._googleV2.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get googleV2Input() {
+    return this._googleV2.internalValue;
+  }
+
+  // login - computed: false, optional: false, required: true
+  private _login = new WindowsFunctionAppSlotAuthSettingsV2LoginOutputReference(this, "login");
+  public get login() {
+    return this._login;
+  }
+  public putLogin(value: WindowsFunctionAppSlotAuthSettingsV2Login) {
+    this._login.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginInput() {
+    return this._login.internalValue;
+  }
+
+  // microsoft_v2 - computed: false, optional: true, required: false
+  private _microsoftV2 = new WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2OutputReference(this, "microsoft_v2");
+  public get microsoftV2() {
+    return this._microsoftV2;
+  }
+  public putMicrosoftV2(value: WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2) {
+    this._microsoftV2.internalValue = value;
+  }
+  public resetMicrosoftV2() {
+    this._microsoftV2.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get microsoftV2Input() {
+    return this._microsoftV2.internalValue;
+  }
+
+  // twitter_v2 - computed: false, optional: true, required: false
+  private _twitterV2 = new WindowsFunctionAppSlotAuthSettingsV2TwitterV2OutputReference(this, "twitter_v2");
+  public get twitterV2() {
+    return this._twitterV2;
+  }
+  public putTwitterV2(value: WindowsFunctionAppSlotAuthSettingsV2TwitterV2) {
+    this._twitterV2.internalValue = value;
+  }
+  public resetTwitterV2() {
+    this._twitterV2.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get twitterV2Input() {
+    return this._twitterV2.internalValue;
   }
 }
 export interface WindowsFunctionAppSlotBackupSchedule {
@@ -4811,7 +7275,7 @@ export class WindowsFunctionAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_function_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.45.0',
+        providerVersion: '3.46.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -4844,6 +7308,7 @@ export class WindowsFunctionAppSlot extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._virtualNetworkSubnetId = config.virtualNetworkSubnetId;
     this._authSettings.internalValue = config.authSettings;
+    this._authSettingsV2.internalValue = config.authSettingsV2;
     this._backup.internalValue = config.backup;
     this._connectionString.internalValue = config.connectionString;
     this._identity.internalValue = config.identity;
@@ -5243,6 +7708,22 @@ export class WindowsFunctionAppSlot extends cdktf.TerraformResource {
     return this._authSettings.internalValue;
   }
 
+  // auth_settings_v2 - computed: false, optional: true, required: false
+  private _authSettingsV2 = new WindowsFunctionAppSlotAuthSettingsV2OutputReference(this, "auth_settings_v2");
+  public get authSettingsV2() {
+    return this._authSettingsV2;
+  }
+  public putAuthSettingsV2(value: WindowsFunctionAppSlotAuthSettingsV2) {
+    this._authSettingsV2.internalValue = value;
+  }
+  public resetAuthSettingsV2() {
+    this._authSettingsV2.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authSettingsV2Input() {
+    return this._authSettingsV2.internalValue;
+  }
+
   // backup - computed: false, optional: true, required: false
   private _backup = new WindowsFunctionAppSlotBackupOutputReference(this, "backup");
   public get backup() {
@@ -5364,6 +7845,7 @@ export class WindowsFunctionAppSlot extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_network_subnet_id: cdktf.stringToTerraform(this._virtualNetworkSubnetId),
       auth_settings: windowsFunctionAppSlotAuthSettingsToTerraform(this._authSettings.internalValue),
+      auth_settings_v2: windowsFunctionAppSlotAuthSettingsV2ToTerraform(this._authSettingsV2.internalValue),
       backup: windowsFunctionAppSlotBackupToTerraform(this._backup.internalValue),
       connection_string: cdktf.listMapper(windowsFunctionAppSlotConnectionStringToTerraform, true)(this._connectionString.internalValue),
       identity: windowsFunctionAppSlotIdentityToTerraform(this._identity.internalValue),

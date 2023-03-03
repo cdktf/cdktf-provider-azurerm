@@ -67,6 +67,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.putAuthSettings">putAuthSettings</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.putAuthSettingsV2">putAuthSettingsV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.putBackup">putBackup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.putConnectionString">putConnectionString</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.putIdentity">putIdentity</a></code> | *No description.* |
@@ -76,6 +77,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.putTimeouts">putTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetAppSettings">resetAppSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetAuthSettings">resetAuthSettings</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetAuthSettingsV2">resetAuthSettingsV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetBackup">resetBackup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetBuiltinLoggingEnabled">resetBuiltinLoggingEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetClientCertificateEnabled">resetClientCertificateEnabled</a></code> | *No description.* |
@@ -298,6 +300,18 @@ public putAuthSettings(value: WindowsFunctionAppAuthSettings): void
 
 ---
 
+##### `putAuthSettingsV2` <a name="putAuthSettingsV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.putAuthSettingsV2"></a>
+
+```typescript
+public putAuthSettingsV2(value: WindowsFunctionAppAuthSettingsV2): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.putAuthSettingsV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2">WindowsFunctionAppAuthSettingsV2</a>
+
+---
+
 ##### `putBackup` <a name="putBackup" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.putBackup"></a>
 
 ```typescript
@@ -392,6 +406,12 @@ public resetAppSettings(): void
 
 ```typescript
 public resetAuthSettings(): void
+```
+
+##### `resetAuthSettingsV2` <a name="resetAuthSettingsV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetAuthSettingsV2"></a>
+
+```typescript
+public resetAuthSettingsV2(): void
 ```
 
 ##### `resetBackup` <a name="resetBackup" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetBackup"></a>
@@ -621,6 +641,7 @@ windowsFunctionApp.WindowsFunctionApp.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.authSettings">authSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsOutputReference">WindowsFunctionAppAuthSettingsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.authSettingsV2">authSettingsV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference">WindowsFunctionAppAuthSettingsV2OutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.backup">backup</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppBackupOutputReference">WindowsFunctionAppBackupOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.connectionString">connectionString</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConnectionStringList">WindowsFunctionAppConnectionStringList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.customDomainVerificationId">customDomainVerificationId</a></code> | <code>string</code> | *No description.* |
@@ -638,6 +659,7 @@ windowsFunctionApp.WindowsFunctionApp.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppTimeoutsOutputReference">WindowsFunctionAppTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.appSettingsInput">appSettingsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.authSettingsInput">authSettingsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettings">WindowsFunctionAppAuthSettings</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.authSettingsV2Input">authSettingsV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2">WindowsFunctionAppAuthSettingsV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.backupInput">backupInput</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppBackup">WindowsFunctionAppBackup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.builtinLoggingEnabledInput">builtinLoggingEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.clientCertificateEnabledInput">clientCertificateEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
@@ -843,6 +865,16 @@ public readonly authSettings: WindowsFunctionAppAuthSettingsOutputReference;
 
 ---
 
+##### `authSettingsV2`<sup>Required</sup> <a name="authSettingsV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.authSettingsV2"></a>
+
+```typescript
+public readonly authSettingsV2: WindowsFunctionAppAuthSettingsV2OutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference">WindowsFunctionAppAuthSettingsV2OutputReference</a>
+
+---
+
 ##### `backup`<sup>Required</sup> <a name="backup" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.backup"></a>
 
 ```typescript
@@ -1010,6 +1042,16 @@ public readonly authSettingsInput: WindowsFunctionAppAuthSettings;
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettings">WindowsFunctionAppAuthSettings</a>
+
+---
+
+##### `authSettingsV2Input`<sup>Optional</sup> <a name="authSettingsV2Input" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.authSettingsV2Input"></a>
+
+```typescript
+public readonly authSettingsV2Input: WindowsFunctionAppAuthSettingsV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2">WindowsFunctionAppAuthSettingsV2</a>
 
 ---
 
@@ -2226,6 +2268,1251 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ---
 
+### WindowsFunctionAppAuthSettingsV2 <a name="WindowsFunctionAppAuthSettingsV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+const windowsFunctionAppAuthSettingsV2: windowsFunctionApp.WindowsFunctionAppAuthSettingsV2 = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.login">login</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login">WindowsFunctionAppAuthSettingsV2Login</a></code> | login block. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.activeDirectoryV2">activeDirectoryV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2">WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2</a></code> | active_directory_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.appleV2">appleV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2">WindowsFunctionAppAuthSettingsV2AppleV2</a></code> | apple_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.authEnabled">authEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Should the AuthV2 Settings be enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.azureStaticWebAppV2">azureStaticWebAppV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2">WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2</a></code> | azure_static_web_app_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.configFilePath">configFilePath</a></code> | <code>string</code> | The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.customOidcV2">customOidcV2</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2">WindowsFunctionAppAuthSettingsV2CustomOidcV2</a>[]</code> | custom_oidc_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.defaultProvider">defaultProvider</a></code> | <code>string</code> | The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.excludedPaths">excludedPaths</a></code> | <code>string[]</code> | The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.facebookV2">facebookV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2">WindowsFunctionAppAuthSettingsV2FacebookV2</a></code> | facebook_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.forwardProxyConvention">forwardProxyConvention</a></code> | <code>string</code> | The convention used to determine the url of the request made. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.forwardProxyCustomHostHeaderName">forwardProxyCustomHostHeaderName</a></code> | <code>string</code> | The name of the header containing the host of the request. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.forwardProxyCustomSchemeHeaderName">forwardProxyCustomSchemeHeaderName</a></code> | <code>string</code> | The name of the header containing the scheme of the request. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.githubV2">githubV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2">WindowsFunctionAppAuthSettingsV2GithubV2</a></code> | github_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.googleV2">googleV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2">WindowsFunctionAppAuthSettingsV2GoogleV2</a></code> | google_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.httpRouteApiPrefix">httpRouteApiPrefix</a></code> | <code>string</code> | The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.microsoftV2">microsoftV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2">WindowsFunctionAppAuthSettingsV2MicrosoftV2</a></code> | microsoft_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.requireAuthentication">requireAuthentication</a></code> | <code>boolean \| cdktf.IResolvable</code> | Should the authentication flow be used for all requests. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.requireHttps">requireHttps</a></code> | <code>boolean \| cdktf.IResolvable</code> | Should HTTPS be required on connections? Defaults to true. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.runtimeVersion">runtimeVersion</a></code> | <code>string</code> | The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.twitterV2">twitterV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2">WindowsFunctionAppAuthSettingsV2TwitterV2</a></code> | twitter_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.unauthenticatedAction">unauthenticatedAction</a></code> | <code>string</code> | The action to take for requests made without authentication. |
+
+---
+
+##### `login`<sup>Required</sup> <a name="login" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.login"></a>
+
+```typescript
+public readonly login: WindowsFunctionAppAuthSettingsV2Login;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login">WindowsFunctionAppAuthSettingsV2Login</a>
+
+login block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#login WindowsFunctionApp#login}
+
+---
+
+##### `activeDirectoryV2`<sup>Optional</sup> <a name="activeDirectoryV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.activeDirectoryV2"></a>
+
+```typescript
+public readonly activeDirectoryV2: WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2">WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2</a>
+
+active_directory_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#active_directory_v2 WindowsFunctionApp#active_directory_v2}
+
+---
+
+##### `appleV2`<sup>Optional</sup> <a name="appleV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.appleV2"></a>
+
+```typescript
+public readonly appleV2: WindowsFunctionAppAuthSettingsV2AppleV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2">WindowsFunctionAppAuthSettingsV2AppleV2</a>
+
+apple_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#apple_v2 WindowsFunctionApp#apple_v2}
+
+---
+
+##### `authEnabled`<sup>Optional</sup> <a name="authEnabled" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.authEnabled"></a>
+
+```typescript
+public readonly authEnabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+Should the AuthV2 Settings be enabled. Defaults to `false`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#auth_enabled WindowsFunctionApp#auth_enabled}
+
+---
+
+##### `azureStaticWebAppV2`<sup>Optional</sup> <a name="azureStaticWebAppV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.azureStaticWebAppV2"></a>
+
+```typescript
+public readonly azureStaticWebAppV2: WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2">WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2</a>
+
+azure_static_web_app_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#azure_static_web_app_v2 WindowsFunctionApp#azure_static_web_app_v2}
+
+---
+
+##### `configFilePath`<sup>Optional</sup> <a name="configFilePath" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.configFilePath"></a>
+
+```typescript
+public readonly configFilePath: string;
+```
+
+- *Type:* string
+
+The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#config_file_path WindowsFunctionApp#config_file_path}
+
+---
+
+##### `customOidcV2`<sup>Optional</sup> <a name="customOidcV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.customOidcV2"></a>
+
+```typescript
+public readonly customOidcV2: IResolvable | WindowsFunctionAppAuthSettingsV2CustomOidcV2[];
+```
+
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2">WindowsFunctionAppAuthSettingsV2CustomOidcV2</a>[]
+
+custom_oidc_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#custom_oidc_v2 WindowsFunctionApp#custom_oidc_v2}
+
+---
+
+##### `defaultProvider`<sup>Optional</sup> <a name="defaultProvider" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.defaultProvider"></a>
+
+```typescript
+public readonly defaultProvider: string;
+```
+
+- *Type:* string
+
+The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#default_provider WindowsFunctionApp#default_provider}
+
+---
+
+##### `excludedPaths`<sup>Optional</sup> <a name="excludedPaths" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.excludedPaths"></a>
+
+```typescript
+public readonly excludedPaths: string[];
+```
+
+- *Type:* string[]
+
+The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#excluded_paths WindowsFunctionApp#excluded_paths}
+
+---
+
+##### `facebookV2`<sup>Optional</sup> <a name="facebookV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.facebookV2"></a>
+
+```typescript
+public readonly facebookV2: WindowsFunctionAppAuthSettingsV2FacebookV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2">WindowsFunctionAppAuthSettingsV2FacebookV2</a>
+
+facebook_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#facebook_v2 WindowsFunctionApp#facebook_v2}
+
+---
+
+##### `forwardProxyConvention`<sup>Optional</sup> <a name="forwardProxyConvention" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.forwardProxyConvention"></a>
+
+```typescript
+public readonly forwardProxyConvention: string;
+```
+
+- *Type:* string
+
+The convention used to determine the url of the request made.
+
+Possible values include `ForwardProxyConventionNoProxy`, `ForwardProxyConventionStandard`, `ForwardProxyConventionCustom`. Defaults to `ForwardProxyConventionNoProxy`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#forward_proxy_convention WindowsFunctionApp#forward_proxy_convention}
+
+---
+
+##### `forwardProxyCustomHostHeaderName`<sup>Optional</sup> <a name="forwardProxyCustomHostHeaderName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.forwardProxyCustomHostHeaderName"></a>
+
+```typescript
+public readonly forwardProxyCustomHostHeaderName: string;
+```
+
+- *Type:* string
+
+The name of the header containing the host of the request.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#forward_proxy_custom_host_header_name WindowsFunctionApp#forward_proxy_custom_host_header_name}
+
+---
+
+##### `forwardProxyCustomSchemeHeaderName`<sup>Optional</sup> <a name="forwardProxyCustomSchemeHeaderName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.forwardProxyCustomSchemeHeaderName"></a>
+
+```typescript
+public readonly forwardProxyCustomSchemeHeaderName: string;
+```
+
+- *Type:* string
+
+The name of the header containing the scheme of the request.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#forward_proxy_custom_scheme_header_name WindowsFunctionApp#forward_proxy_custom_scheme_header_name}
+
+---
+
+##### `githubV2`<sup>Optional</sup> <a name="githubV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.githubV2"></a>
+
+```typescript
+public readonly githubV2: WindowsFunctionAppAuthSettingsV2GithubV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2">WindowsFunctionAppAuthSettingsV2GithubV2</a>
+
+github_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#github_v2 WindowsFunctionApp#github_v2}
+
+---
+
+##### `googleV2`<sup>Optional</sup> <a name="googleV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.googleV2"></a>
+
+```typescript
+public readonly googleV2: WindowsFunctionAppAuthSettingsV2GoogleV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2">WindowsFunctionAppAuthSettingsV2GoogleV2</a>
+
+google_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#google_v2 WindowsFunctionApp#google_v2}
+
+---
+
+##### `httpRouteApiPrefix`<sup>Optional</sup> <a name="httpRouteApiPrefix" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.httpRouteApiPrefix"></a>
+
+```typescript
+public readonly httpRouteApiPrefix: string;
+```
+
+- *Type:* string
+
+The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#http_route_api_prefix WindowsFunctionApp#http_route_api_prefix}
+
+---
+
+##### `microsoftV2`<sup>Optional</sup> <a name="microsoftV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.microsoftV2"></a>
+
+```typescript
+public readonly microsoftV2: WindowsFunctionAppAuthSettingsV2MicrosoftV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2">WindowsFunctionAppAuthSettingsV2MicrosoftV2</a>
+
+microsoft_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#microsoft_v2 WindowsFunctionApp#microsoft_v2}
+
+---
+
+##### `requireAuthentication`<sup>Optional</sup> <a name="requireAuthentication" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.requireAuthentication"></a>
+
+```typescript
+public readonly requireAuthentication: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+Should the authentication flow be used for all requests.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#require_authentication WindowsFunctionApp#require_authentication}
+
+---
+
+##### `requireHttps`<sup>Optional</sup> <a name="requireHttps" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.requireHttps"></a>
+
+```typescript
+public readonly requireHttps: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+Should HTTPS be required on connections? Defaults to true.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#require_https WindowsFunctionApp#require_https}
+
+---
+
+##### `runtimeVersion`<sup>Optional</sup> <a name="runtimeVersion" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.runtimeVersion"></a>
+
+```typescript
+public readonly runtimeVersion: string;
+```
+
+- *Type:* string
+
+The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#runtime_version WindowsFunctionApp#runtime_version}
+
+---
+
+##### `twitterV2`<sup>Optional</sup> <a name="twitterV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.twitterV2"></a>
+
+```typescript
+public readonly twitterV2: WindowsFunctionAppAuthSettingsV2TwitterV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2">WindowsFunctionAppAuthSettingsV2TwitterV2</a>
+
+twitter_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#twitter_v2 WindowsFunctionApp#twitter_v2}
+
+---
+
+##### `unauthenticatedAction`<sup>Optional</sup> <a name="unauthenticatedAction" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2.property.unauthenticatedAction"></a>
+
+```typescript
+public readonly unauthenticatedAction: string;
+```
+
+- *Type:* string
+
+The action to take for requests made without authentication.
+
+Possible values include `RedirectToLoginPage`, `AllowAnonymous`, `Return401`, and `Return403`. Defaults to `RedirectToLoginPage`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#unauthenticated_action WindowsFunctionApp#unauthenticated_action}
+
+---
+
+### WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2 <a name="WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+const windowsFunctionAppAuthSettingsV2ActiveDirectoryV2: windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2 = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.clientId">clientId</a></code> | <code>string</code> | The ID of the Client to use to authenticate with Azure Active Directory. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.tenantAuthEndpoint">tenantAuthEndpoint</a></code> | <code>string</code> | The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedApplications">allowedApplications</a></code> | <code>string[]</code> | The list of allowed Applications for the Default Authorisation Policy. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedAudiences">allowedAudiences</a></code> | <code>string[]</code> | Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedGroups">allowedGroups</a></code> | <code>string[]</code> | The list of allowed Group Names for the Default Authorisation Policy. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedIdentities">allowedIdentities</a></code> | <code>string[]</code> | The list of allowed Identities for the Default Authorisation Policy. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.clientSecretCertificateThumbprint">clientSecretCertificateThumbprint</a></code> | <code>string</code> | The thumbprint of the certificate used for signing purposes. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.clientSecretSettingName">clientSecretSettingName</a></code> | <code>string</code> | The App Setting name that contains the client secret of the Client. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedClientApplications">jwtAllowedClientApplications</a></code> | <code>string[]</code> | A list of Allowed Client Applications in the JWT Claim. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedGroups">jwtAllowedGroups</a></code> | <code>string[]</code> | A list of Allowed Groups in the JWT Claim. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.loginParameters">loginParameters</a></code> | <code>{[ key: string ]: string}</code> | A map of key-value pairs to send to the Authorisation Endpoint when a user logs in. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.wwwAuthenticationDisabled">wwwAuthenticationDisabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Should the www-authenticate provider should be omitted from the request? Defaults to `false`. |
+
+---
+
+##### `clientId`<sup>Required</sup> <a name="clientId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.clientId"></a>
+
+```typescript
+public readonly clientId: string;
+```
+
+- *Type:* string
+
+The ID of the Client to use to authenticate with Azure Active Directory.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#client_id WindowsFunctionApp#client_id}
+
+---
+
+##### `tenantAuthEndpoint`<sup>Required</sup> <a name="tenantAuthEndpoint" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.tenantAuthEndpoint"></a>
+
+```typescript
+public readonly tenantAuthEndpoint: string;
+```
+
+- *Type:* string
+
+The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#tenant_auth_endpoint WindowsFunctionApp#tenant_auth_endpoint}
+
+---
+
+##### `allowedApplications`<sup>Optional</sup> <a name="allowedApplications" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedApplications"></a>
+
+```typescript
+public readonly allowedApplications: string[];
+```
+
+- *Type:* string[]
+
+The list of allowed Applications for the Default Authorisation Policy.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#allowed_applications WindowsFunctionApp#allowed_applications}
+
+---
+
+##### `allowedAudiences`<sup>Optional</sup> <a name="allowedAudiences" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedAudiences"></a>
+
+```typescript
+public readonly allowedAudiences: string[];
+```
+
+- *Type:* string[]
+
+Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#allowed_audiences WindowsFunctionApp#allowed_audiences}
+
+---
+
+##### `allowedGroups`<sup>Optional</sup> <a name="allowedGroups" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedGroups"></a>
+
+```typescript
+public readonly allowedGroups: string[];
+```
+
+- *Type:* string[]
+
+The list of allowed Group Names for the Default Authorisation Policy.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#allowed_groups WindowsFunctionApp#allowed_groups}
+
+---
+
+##### `allowedIdentities`<sup>Optional</sup> <a name="allowedIdentities" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedIdentities"></a>
+
+```typescript
+public readonly allowedIdentities: string[];
+```
+
+- *Type:* string[]
+
+The list of allowed Identities for the Default Authorisation Policy.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#allowed_identities WindowsFunctionApp#allowed_identities}
+
+---
+
+##### `clientSecretCertificateThumbprint`<sup>Optional</sup> <a name="clientSecretCertificateThumbprint" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.clientSecretCertificateThumbprint"></a>
+
+```typescript
+public readonly clientSecretCertificateThumbprint: string;
+```
+
+- *Type:* string
+
+The thumbprint of the certificate used for signing purposes.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#client_secret_certificate_thumbprint WindowsFunctionApp#client_secret_certificate_thumbprint}
+
+---
+
+##### `clientSecretSettingName`<sup>Optional</sup> <a name="clientSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.clientSecretSettingName"></a>
+
+```typescript
+public readonly clientSecretSettingName: string;
+```
+
+- *Type:* string
+
+The App Setting name that contains the client secret of the Client.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#client_secret_setting_name WindowsFunctionApp#client_secret_setting_name}
+
+---
+
+##### `jwtAllowedClientApplications`<sup>Optional</sup> <a name="jwtAllowedClientApplications" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedClientApplications"></a>
+
+```typescript
+public readonly jwtAllowedClientApplications: string[];
+```
+
+- *Type:* string[]
+
+A list of Allowed Client Applications in the JWT Claim.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#jwt_allowed_client_applications WindowsFunctionApp#jwt_allowed_client_applications}
+
+---
+
+##### `jwtAllowedGroups`<sup>Optional</sup> <a name="jwtAllowedGroups" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedGroups"></a>
+
+```typescript
+public readonly jwtAllowedGroups: string[];
+```
+
+- *Type:* string[]
+
+A list of Allowed Groups in the JWT Claim.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#jwt_allowed_groups WindowsFunctionApp#jwt_allowed_groups}
+
+---
+
+##### `loginParameters`<sup>Optional</sup> <a name="loginParameters" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.loginParameters"></a>
+
+```typescript
+public readonly loginParameters: {[ key: string ]: string};
+```
+
+- *Type:* {[ key: string ]: string}
+
+A map of key-value pairs to send to the Authorisation Endpoint when a user logs in.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#login_parameters WindowsFunctionApp#login_parameters}
+
+---
+
+##### `wwwAuthenticationDisabled`<sup>Optional</sup> <a name="wwwAuthenticationDisabled" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.property.wwwAuthenticationDisabled"></a>
+
+```typescript
+public readonly wwwAuthenticationDisabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+Should the www-authenticate provider should be omitted from the request? Defaults to `false`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#www_authentication_disabled WindowsFunctionApp#www_authentication_disabled}
+
+---
+
+### WindowsFunctionAppAuthSettingsV2AppleV2 <a name="WindowsFunctionAppAuthSettingsV2AppleV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+const windowsFunctionAppAuthSettingsV2AppleV2: windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2 = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2.property.clientId">clientId</a></code> | <code>string</code> | The OpenID Connect Client ID for the Apple web application. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2.property.clientSecretSettingName">clientSecretSettingName</a></code> | <code>string</code> | The app setting name that contains the `client_secret` value used for Apple Login. |
+
+---
+
+##### `clientId`<sup>Required</sup> <a name="clientId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2.property.clientId"></a>
+
+```typescript
+public readonly clientId: string;
+```
+
+- *Type:* string
+
+The OpenID Connect Client ID for the Apple web application.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#client_id WindowsFunctionApp#client_id}
+
+---
+
+##### `clientSecretSettingName`<sup>Required</sup> <a name="clientSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2.property.clientSecretSettingName"></a>
+
+```typescript
+public readonly clientSecretSettingName: string;
+```
+
+- *Type:* string
+
+The app setting name that contains the `client_secret` value used for Apple Login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#client_secret_setting_name WindowsFunctionApp#client_secret_setting_name}
+
+---
+
+### WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2 <a name="WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+const windowsFunctionAppAuthSettingsV2AzureStaticWebAppV2: windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2 = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2.property.clientId">clientId</a></code> | <code>string</code> | The ID of the Client to use to authenticate with Azure Static Web App Authentication. |
+
+---
+
+##### `clientId`<sup>Required</sup> <a name="clientId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2.property.clientId"></a>
+
+```typescript
+public readonly clientId: string;
+```
+
+- *Type:* string
+
+The ID of the Client to use to authenticate with Azure Static Web App Authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#client_id WindowsFunctionApp#client_id}
+
+---
+
+### WindowsFunctionAppAuthSettingsV2CustomOidcV2 <a name="WindowsFunctionAppAuthSettingsV2CustomOidcV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+const windowsFunctionAppAuthSettingsV2CustomOidcV2: windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2 = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2.property.clientId">clientId</a></code> | <code>string</code> | The ID of the Client to use to authenticate with this Custom OIDC. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2.property.name">name</a></code> | <code>string</code> | The name of the Custom OIDC Authentication Provider. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2.property.openidConfigurationEndpoint">openidConfigurationEndpoint</a></code> | <code>string</code> | The endpoint that contains all the configuration endpoints for this Custom OIDC provider. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2.property.nameClaimType">nameClaimType</a></code> | <code>string</code> | The name of the claim that contains the users name. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2.property.scopes">scopes</a></code> | <code>string[]</code> | The list of the scopes that should be requested while authenticating. |
+
+---
+
+##### `clientId`<sup>Required</sup> <a name="clientId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2.property.clientId"></a>
+
+```typescript
+public readonly clientId: string;
+```
+
+- *Type:* string
+
+The ID of the Client to use to authenticate with this Custom OIDC.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#client_id WindowsFunctionApp#client_id}
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+The name of the Custom OIDC Authentication Provider.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#name WindowsFunctionApp#name}
+
+---
+
+##### `openidConfigurationEndpoint`<sup>Required</sup> <a name="openidConfigurationEndpoint" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2.property.openidConfigurationEndpoint"></a>
+
+```typescript
+public readonly openidConfigurationEndpoint: string;
+```
+
+- *Type:* string
+
+The endpoint that contains all the configuration endpoints for this Custom OIDC provider.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#openid_configuration_endpoint WindowsFunctionApp#openid_configuration_endpoint}
+
+---
+
+##### `nameClaimType`<sup>Optional</sup> <a name="nameClaimType" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2.property.nameClaimType"></a>
+
+```typescript
+public readonly nameClaimType: string;
+```
+
+- *Type:* string
+
+The name of the claim that contains the users name.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#name_claim_type WindowsFunctionApp#name_claim_type}
+
+---
+
+##### `scopes`<sup>Optional</sup> <a name="scopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2.property.scopes"></a>
+
+```typescript
+public readonly scopes: string[];
+```
+
+- *Type:* string[]
+
+The list of the scopes that should be requested while authenticating.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#scopes WindowsFunctionApp#scopes}
+
+---
+
+### WindowsFunctionAppAuthSettingsV2FacebookV2 <a name="WindowsFunctionAppAuthSettingsV2FacebookV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+const windowsFunctionAppAuthSettingsV2FacebookV2: windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2 = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2.property.appId">appId</a></code> | <code>string</code> | The App ID of the Facebook app used for login. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2.property.appSecretSettingName">appSecretSettingName</a></code> | <code>string</code> | The app setting name that contains the `app_secret` value used for Facebook Login. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2.property.graphApiVersion">graphApiVersion</a></code> | <code>string</code> | The version of the Facebook API to be used while logging in. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2.property.loginScopes">loginScopes</a></code> | <code>string[]</code> | Specifies a list of scopes to be requested as part of Facebook Login authentication. |
+
+---
+
+##### `appId`<sup>Required</sup> <a name="appId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2.property.appId"></a>
+
+```typescript
+public readonly appId: string;
+```
+
+- *Type:* string
+
+The App ID of the Facebook app used for login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#app_id WindowsFunctionApp#app_id}
+
+---
+
+##### `appSecretSettingName`<sup>Required</sup> <a name="appSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2.property.appSecretSettingName"></a>
+
+```typescript
+public readonly appSecretSettingName: string;
+```
+
+- *Type:* string
+
+The app setting name that contains the `app_secret` value used for Facebook Login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#app_secret_setting_name WindowsFunctionApp#app_secret_setting_name}
+
+---
+
+##### `graphApiVersion`<sup>Optional</sup> <a name="graphApiVersion" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2.property.graphApiVersion"></a>
+
+```typescript
+public readonly graphApiVersion: string;
+```
+
+- *Type:* string
+
+The version of the Facebook API to be used while logging in.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#graph_api_version WindowsFunctionApp#graph_api_version}
+
+---
+
+##### `loginScopes`<sup>Optional</sup> <a name="loginScopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2.property.loginScopes"></a>
+
+```typescript
+public readonly loginScopes: string[];
+```
+
+- *Type:* string[]
+
+Specifies a list of scopes to be requested as part of Facebook Login authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#login_scopes WindowsFunctionApp#login_scopes}
+
+---
+
+### WindowsFunctionAppAuthSettingsV2GithubV2 <a name="WindowsFunctionAppAuthSettingsV2GithubV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+const windowsFunctionAppAuthSettingsV2GithubV2: windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2 = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2.property.clientId">clientId</a></code> | <code>string</code> | The ID of the GitHub app used for login. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2.property.clientSecretSettingName">clientSecretSettingName</a></code> | <code>string</code> | The app setting name that contains the `client_secret` value used for GitHub Login. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2.property.loginScopes">loginScopes</a></code> | <code>string[]</code> | Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication. |
+
+---
+
+##### `clientId`<sup>Required</sup> <a name="clientId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2.property.clientId"></a>
+
+```typescript
+public readonly clientId: string;
+```
+
+- *Type:* string
+
+The ID of the GitHub app used for login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#client_id WindowsFunctionApp#client_id}
+
+---
+
+##### `clientSecretSettingName`<sup>Required</sup> <a name="clientSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2.property.clientSecretSettingName"></a>
+
+```typescript
+public readonly clientSecretSettingName: string;
+```
+
+- *Type:* string
+
+The app setting name that contains the `client_secret` value used for GitHub Login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#client_secret_setting_name WindowsFunctionApp#client_secret_setting_name}
+
+---
+
+##### `loginScopes`<sup>Optional</sup> <a name="loginScopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2.property.loginScopes"></a>
+
+```typescript
+public readonly loginScopes: string[];
+```
+
+- *Type:* string[]
+
+Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#login_scopes WindowsFunctionApp#login_scopes}
+
+---
+
+### WindowsFunctionAppAuthSettingsV2GoogleV2 <a name="WindowsFunctionAppAuthSettingsV2GoogleV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+const windowsFunctionAppAuthSettingsV2GoogleV2: windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2 = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2.property.clientId">clientId</a></code> | <code>string</code> | The OpenID Connect Client ID for the Google web application. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2.property.clientSecretSettingName">clientSecretSettingName</a></code> | <code>string</code> | The app setting name that contains the `client_secret` value used for Google Login. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2.property.allowedAudiences">allowedAudiences</a></code> | <code>string[]</code> | Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2.property.loginScopes">loginScopes</a></code> | <code>string[]</code> | Specifies a list of Login scopes that will be requested as part of Google Sign-In authentication. |
+
+---
+
+##### `clientId`<sup>Required</sup> <a name="clientId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2.property.clientId"></a>
+
+```typescript
+public readonly clientId: string;
+```
+
+- *Type:* string
+
+The OpenID Connect Client ID for the Google web application.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#client_id WindowsFunctionApp#client_id}
+
+---
+
+##### `clientSecretSettingName`<sup>Required</sup> <a name="clientSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2.property.clientSecretSettingName"></a>
+
+```typescript
+public readonly clientSecretSettingName: string;
+```
+
+- *Type:* string
+
+The app setting name that contains the `client_secret` value used for Google Login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#client_secret_setting_name WindowsFunctionApp#client_secret_setting_name}
+
+---
+
+##### `allowedAudiences`<sup>Optional</sup> <a name="allowedAudiences" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2.property.allowedAudiences"></a>
+
+```typescript
+public readonly allowedAudiences: string[];
+```
+
+- *Type:* string[]
+
+Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#allowed_audiences WindowsFunctionApp#allowed_audiences}
+
+---
+
+##### `loginScopes`<sup>Optional</sup> <a name="loginScopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2.property.loginScopes"></a>
+
+```typescript
+public readonly loginScopes: string[];
+```
+
+- *Type:* string[]
+
+Specifies a list of Login scopes that will be requested as part of Google Sign-In authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#login_scopes WindowsFunctionApp#login_scopes}
+
+---
+
+### WindowsFunctionAppAuthSettingsV2Login <a name="WindowsFunctionAppAuthSettingsV2Login" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+const windowsFunctionAppAuthSettingsV2Login: windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.allowedExternalRedirectUrls">allowedExternalRedirectUrls</a></code> | <code>string[]</code> | External URLs that can be redirected to as part of logging in or logging out of the app. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.cookieExpirationConvention">cookieExpirationConvention</a></code> | <code>string</code> | The method by which cookies expire. Possible values include: `FixedTime`, and `IdentityProviderDerived`. Defaults to `FixedTime`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.cookieExpirationTime">cookieExpirationTime</a></code> | <code>string</code> | The time after the request is made when the session cookie should expire. Defaults to `08:00:00`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.logoutEndpoint">logoutEndpoint</a></code> | <code>string</code> | The endpoint to which logout requests should be made. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.nonceExpirationTime">nonceExpirationTime</a></code> | <code>string</code> | The time after the request is made when the nonce should expire. Defaults to `00:05:00`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.preserveUrlFragmentsForLogins">preserveUrlFragmentsForLogins</a></code> | <code>boolean \| cdktf.IResolvable</code> | Should the fragments from the request be preserved after the login request is made. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.tokenRefreshExtensionTime">tokenRefreshExtensionTime</a></code> | <code>number</code> | The number of hours after session token expiration that a session token can be used to call the token refresh API. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.tokenStoreEnabled">tokenStoreEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Should the Token Store configuration Enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.tokenStorePath">tokenStorePath</a></code> | <code>string</code> | The directory path in the App Filesystem in which the tokens will be stored. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.tokenStoreSasSettingName">tokenStoreSasSettingName</a></code> | <code>string</code> | The name of the app setting which contains the SAS URL of the blob storage containing the tokens. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.validateNonce">validateNonce</a></code> | <code>boolean \| cdktf.IResolvable</code> | Should the nonce be validated while completing the login flow. Defaults to `true`. |
+
+---
+
+##### `allowedExternalRedirectUrls`<sup>Optional</sup> <a name="allowedExternalRedirectUrls" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.allowedExternalRedirectUrls"></a>
+
+```typescript
+public readonly allowedExternalRedirectUrls: string[];
+```
+
+- *Type:* string[]
+
+External URLs that can be redirected to as part of logging in or logging out of the app.
+
+This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#allowed_external_redirect_urls WindowsFunctionApp#allowed_external_redirect_urls}
+
+---
+
+##### `cookieExpirationConvention`<sup>Optional</sup> <a name="cookieExpirationConvention" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.cookieExpirationConvention"></a>
+
+```typescript
+public readonly cookieExpirationConvention: string;
+```
+
+- *Type:* string
+
+The method by which cookies expire. Possible values include: `FixedTime`, and `IdentityProviderDerived`. Defaults to `FixedTime`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#cookie_expiration_convention WindowsFunctionApp#cookie_expiration_convention}
+
+---
+
+##### `cookieExpirationTime`<sup>Optional</sup> <a name="cookieExpirationTime" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.cookieExpirationTime"></a>
+
+```typescript
+public readonly cookieExpirationTime: string;
+```
+
+- *Type:* string
+
+The time after the request is made when the session cookie should expire. Defaults to `08:00:00`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#cookie_expiration_time WindowsFunctionApp#cookie_expiration_time}
+
+---
+
+##### `logoutEndpoint`<sup>Optional</sup> <a name="logoutEndpoint" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.logoutEndpoint"></a>
+
+```typescript
+public readonly logoutEndpoint: string;
+```
+
+- *Type:* string
+
+The endpoint to which logout requests should be made.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#logout_endpoint WindowsFunctionApp#logout_endpoint}
+
+---
+
+##### `nonceExpirationTime`<sup>Optional</sup> <a name="nonceExpirationTime" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.nonceExpirationTime"></a>
+
+```typescript
+public readonly nonceExpirationTime: string;
+```
+
+- *Type:* string
+
+The time after the request is made when the nonce should expire. Defaults to `00:05:00`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#nonce_expiration_time WindowsFunctionApp#nonce_expiration_time}
+
+---
+
+##### `preserveUrlFragmentsForLogins`<sup>Optional</sup> <a name="preserveUrlFragmentsForLogins" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.preserveUrlFragmentsForLogins"></a>
+
+```typescript
+public readonly preserveUrlFragmentsForLogins: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#preserve_url_fragments_for_logins WindowsFunctionApp#preserve_url_fragments_for_logins}
+
+---
+
+##### `tokenRefreshExtensionTime`<sup>Optional</sup> <a name="tokenRefreshExtensionTime" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.tokenRefreshExtensionTime"></a>
+
+```typescript
+public readonly tokenRefreshExtensionTime: number;
+```
+
+- *Type:* number
+
+The number of hours after session token expiration that a session token can be used to call the token refresh API.
+
+Defaults to `72` hours.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#token_refresh_extension_time WindowsFunctionApp#token_refresh_extension_time}
+
+---
+
+##### `tokenStoreEnabled`<sup>Optional</sup> <a name="tokenStoreEnabled" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.tokenStoreEnabled"></a>
+
+```typescript
+public readonly tokenStoreEnabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+Should the Token Store configuration Enabled. Defaults to `false`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#token_store_enabled WindowsFunctionApp#token_store_enabled}
+
+---
+
+##### `tokenStorePath`<sup>Optional</sup> <a name="tokenStorePath" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.tokenStorePath"></a>
+
+```typescript
+public readonly tokenStorePath: string;
+```
+
+- *Type:* string
+
+The directory path in the App Filesystem in which the tokens will be stored.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#token_store_path WindowsFunctionApp#token_store_path}
+
+---
+
+##### `tokenStoreSasSettingName`<sup>Optional</sup> <a name="tokenStoreSasSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.tokenStoreSasSettingName"></a>
+
+```typescript
+public readonly tokenStoreSasSettingName: string;
+```
+
+- *Type:* string
+
+The name of the app setting which contains the SAS URL of the blob storage containing the tokens.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#token_store_sas_setting_name WindowsFunctionApp#token_store_sas_setting_name}
+
+---
+
+##### `validateNonce`<sup>Optional</sup> <a name="validateNonce" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login.property.validateNonce"></a>
+
+```typescript
+public readonly validateNonce: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+Should the nonce be validated while completing the login flow. Defaults to `true`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#validate_nonce WindowsFunctionApp#validate_nonce}
+
+---
+
+### WindowsFunctionAppAuthSettingsV2MicrosoftV2 <a name="WindowsFunctionAppAuthSettingsV2MicrosoftV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+const windowsFunctionAppAuthSettingsV2MicrosoftV2: windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2 = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2.property.clientId">clientId</a></code> | <code>string</code> | The OAuth 2.0 client ID that was created for the app used for authentication. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2.property.clientSecretSettingName">clientSecretSettingName</a></code> | <code>string</code> | The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2.property.allowedAudiences">allowedAudiences</a></code> | <code>string[]</code> | Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2.property.loginScopes">loginScopes</a></code> | <code>string[]</code> | The list of Login scopes that will be requested as part of Microsoft Account authentication. |
+
+---
+
+##### `clientId`<sup>Required</sup> <a name="clientId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2.property.clientId"></a>
+
+```typescript
+public readonly clientId: string;
+```
+
+- *Type:* string
+
+The OAuth 2.0 client ID that was created for the app used for authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#client_id WindowsFunctionApp#client_id}
+
+---
+
+##### `clientSecretSettingName`<sup>Required</sup> <a name="clientSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2.property.clientSecretSettingName"></a>
+
+```typescript
+public readonly clientSecretSettingName: string;
+```
+
+- *Type:* string
+
+The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#client_secret_setting_name WindowsFunctionApp#client_secret_setting_name}
+
+---
+
+##### `allowedAudiences`<sup>Optional</sup> <a name="allowedAudiences" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2.property.allowedAudiences"></a>
+
+```typescript
+public readonly allowedAudiences: string[];
+```
+
+- *Type:* string[]
+
+Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#allowed_audiences WindowsFunctionApp#allowed_audiences}
+
+---
+
+##### `loginScopes`<sup>Optional</sup> <a name="loginScopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2.property.loginScopes"></a>
+
+```typescript
+public readonly loginScopes: string[];
+```
+
+- *Type:* string[]
+
+The list of Login scopes that will be requested as part of Microsoft Account authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#login_scopes WindowsFunctionApp#login_scopes}
+
+---
+
+### WindowsFunctionAppAuthSettingsV2TwitterV2 <a name="WindowsFunctionAppAuthSettingsV2TwitterV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+const windowsFunctionAppAuthSettingsV2TwitterV2: windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2 = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2.property.consumerKey">consumerKey</a></code> | <code>string</code> | The OAuth 1.0a consumer key of the Twitter application used for sign-in. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2.property.consumerSecretSettingName">consumerSecretSettingName</a></code> | <code>string</code> | The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in. |
+
+---
+
+##### `consumerKey`<sup>Required</sup> <a name="consumerKey" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2.property.consumerKey"></a>
+
+```typescript
+public readonly consumerKey: string;
+```
+
+- *Type:* string
+
+The OAuth 1.0a consumer key of the Twitter application used for sign-in.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#consumer_key WindowsFunctionApp#consumer_key}
+
+---
+
+##### `consumerSecretSettingName`<sup>Required</sup> <a name="consumerSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2.property.consumerSecretSettingName"></a>
+
+```typescript
+public readonly consumerSecretSettingName: string;
+```
+
+- *Type:* string
+
+The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#consumer_secret_setting_name WindowsFunctionApp#consumer_secret_setting_name}
+
+---
+
 ### WindowsFunctionAppBackup <a name="WindowsFunctionAppBackup" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppBackup"></a>
 
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppBackup.Initializer"></a>
@@ -2423,6 +3710,7 @@ const windowsFunctionAppConfig: windowsFunctionApp.WindowsFunctionAppConfig = { 
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.siteConfig">siteConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppSiteConfig">WindowsFunctionAppSiteConfig</a></code> | site_config block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.appSettings">appSettings</a></code> | <code>{[ key: string ]: string}</code> | A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.authSettings">authSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettings">WindowsFunctionAppAuthSettings</a></code> | auth_settings block. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.authSettingsV2">authSettingsV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2">WindowsFunctionAppAuthSettingsV2</a></code> | auth_settings_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.backup">backup</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppBackup">WindowsFunctionAppBackup</a></code> | backup block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.builtinLoggingEnabled">builtinLoggingEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Should built in logging be enabled. Configures `AzureWebJobsDashboard` app setting based on the configured storage setting. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.clientCertificateEnabled">clientCertificateEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Should the function app use Client Certificates. |
@@ -2610,6 +3898,20 @@ public readonly authSettings: WindowsFunctionAppAuthSettings;
 auth_settings block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#auth_settings WindowsFunctionApp#auth_settings}
+
+---
+
+##### `authSettingsV2`<sup>Optional</sup> <a name="authSettingsV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.authSettingsV2"></a>
+
+```typescript
+public readonly authSettingsV2: WindowsFunctionAppAuthSettingsV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2">WindowsFunctionAppAuthSettingsV2</a>
+
+auth_settings_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#auth_settings_v2 WindowsFunctionApp#auth_settings_v2}
 
 ---
 
@@ -7172,6 +8474,5010 @@ public readonly internalValue: WindowsFunctionAppAuthSettingsTwitter;
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsTwitter">WindowsFunctionAppAuthSettingsTwitter</a>
+
+---
+
+
+### WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference <a name="WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+new windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedApplications">resetAllowedApplications</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedAudiences">resetAllowedAudiences</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedGroups">resetAllowedGroups</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedIdentities">resetAllowedIdentities</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetClientSecretCertificateThumbprint">resetClientSecretCertificateThumbprint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetClientSecretSettingName">resetClientSecretSettingName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetJwtAllowedClientApplications">resetJwtAllowedClientApplications</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetJwtAllowedGroups">resetJwtAllowedGroups</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetLoginParameters">resetLoginParameters</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetWwwAuthenticationDisabled">resetWwwAuthenticationDisabled</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetAllowedApplications` <a name="resetAllowedApplications" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedApplications"></a>
+
+```typescript
+public resetAllowedApplications(): void
+```
+
+##### `resetAllowedAudiences` <a name="resetAllowedAudiences" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedAudiences"></a>
+
+```typescript
+public resetAllowedAudiences(): void
+```
+
+##### `resetAllowedGroups` <a name="resetAllowedGroups" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedGroups"></a>
+
+```typescript
+public resetAllowedGroups(): void
+```
+
+##### `resetAllowedIdentities` <a name="resetAllowedIdentities" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedIdentities"></a>
+
+```typescript
+public resetAllowedIdentities(): void
+```
+
+##### `resetClientSecretCertificateThumbprint` <a name="resetClientSecretCertificateThumbprint" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetClientSecretCertificateThumbprint"></a>
+
+```typescript
+public resetClientSecretCertificateThumbprint(): void
+```
+
+##### `resetClientSecretSettingName` <a name="resetClientSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetClientSecretSettingName"></a>
+
+```typescript
+public resetClientSecretSettingName(): void
+```
+
+##### `resetJwtAllowedClientApplications` <a name="resetJwtAllowedClientApplications" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetJwtAllowedClientApplications"></a>
+
+```typescript
+public resetJwtAllowedClientApplications(): void
+```
+
+##### `resetJwtAllowedGroups` <a name="resetJwtAllowedGroups" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetJwtAllowedGroups"></a>
+
+```typescript
+public resetJwtAllowedGroups(): void
+```
+
+##### `resetLoginParameters` <a name="resetLoginParameters" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetLoginParameters"></a>
+
+```typescript
+public resetLoginParameters(): void
+```
+
+##### `resetWwwAuthenticationDisabled` <a name="resetWwwAuthenticationDisabled" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetWwwAuthenticationDisabled"></a>
+
+```typescript
+public resetWwwAuthenticationDisabled(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedApplicationsInput">allowedApplicationsInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedAudiencesInput">allowedAudiencesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedGroupsInput">allowedGroupsInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedIdentitiesInput">allowedIdentitiesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientIdInput">clientIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretCertificateThumbprintInput">clientSecretCertificateThumbprintInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretSettingNameInput">clientSecretSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedClientApplicationsInput">jwtAllowedClientApplicationsInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroupsInput">jwtAllowedGroupsInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParametersInput">loginParametersInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpointInput">tenantAuthEndpointInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabledInput">wwwAuthenticationDisabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedApplications">allowedApplications</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedAudiences">allowedAudiences</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedGroups">allowedGroups</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedIdentities">allowedIdentities</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientId">clientId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretCertificateThumbprint">clientSecretCertificateThumbprint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretSettingName">clientSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedClientApplications">jwtAllowedClientApplications</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroups">jwtAllowedGroups</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParameters">loginParameters</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpoint">tenantAuthEndpoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabled">wwwAuthenticationDisabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2">WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `allowedApplicationsInput`<sup>Optional</sup> <a name="allowedApplicationsInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedApplicationsInput"></a>
+
+```typescript
+public readonly allowedApplicationsInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `allowedAudiencesInput`<sup>Optional</sup> <a name="allowedAudiencesInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedAudiencesInput"></a>
+
+```typescript
+public readonly allowedAudiencesInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `allowedGroupsInput`<sup>Optional</sup> <a name="allowedGroupsInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedGroupsInput"></a>
+
+```typescript
+public readonly allowedGroupsInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `allowedIdentitiesInput`<sup>Optional</sup> <a name="allowedIdentitiesInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedIdentitiesInput"></a>
+
+```typescript
+public readonly allowedIdentitiesInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `clientIdInput`<sup>Optional</sup> <a name="clientIdInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientIdInput"></a>
+
+```typescript
+public readonly clientIdInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientSecretCertificateThumbprintInput`<sup>Optional</sup> <a name="clientSecretCertificateThumbprintInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretCertificateThumbprintInput"></a>
+
+```typescript
+public readonly clientSecretCertificateThumbprintInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientSecretSettingNameInput`<sup>Optional</sup> <a name="clientSecretSettingNameInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretSettingNameInput"></a>
+
+```typescript
+public readonly clientSecretSettingNameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `jwtAllowedClientApplicationsInput`<sup>Optional</sup> <a name="jwtAllowedClientApplicationsInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedClientApplicationsInput"></a>
+
+```typescript
+public readonly jwtAllowedClientApplicationsInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `jwtAllowedGroupsInput`<sup>Optional</sup> <a name="jwtAllowedGroupsInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroupsInput"></a>
+
+```typescript
+public readonly jwtAllowedGroupsInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `loginParametersInput`<sup>Optional</sup> <a name="loginParametersInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParametersInput"></a>
+
+```typescript
+public readonly loginParametersInput: {[ key: string ]: string};
+```
+
+- *Type:* {[ key: string ]: string}
+
+---
+
+##### `tenantAuthEndpointInput`<sup>Optional</sup> <a name="tenantAuthEndpointInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpointInput"></a>
+
+```typescript
+public readonly tenantAuthEndpointInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `wwwAuthenticationDisabledInput`<sup>Optional</sup> <a name="wwwAuthenticationDisabledInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabledInput"></a>
+
+```typescript
+public readonly wwwAuthenticationDisabledInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `allowedApplications`<sup>Required</sup> <a name="allowedApplications" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedApplications"></a>
+
+```typescript
+public readonly allowedApplications: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `allowedAudiences`<sup>Required</sup> <a name="allowedAudiences" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedAudiences"></a>
+
+```typescript
+public readonly allowedAudiences: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `allowedGroups`<sup>Required</sup> <a name="allowedGroups" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedGroups"></a>
+
+```typescript
+public readonly allowedGroups: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `allowedIdentities`<sup>Required</sup> <a name="allowedIdentities" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedIdentities"></a>
+
+```typescript
+public readonly allowedIdentities: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `clientId`<sup>Required</sup> <a name="clientId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientId"></a>
+
+```typescript
+public readonly clientId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientSecretCertificateThumbprint`<sup>Required</sup> <a name="clientSecretCertificateThumbprint" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretCertificateThumbprint"></a>
+
+```typescript
+public readonly clientSecretCertificateThumbprint: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientSecretSettingName`<sup>Required</sup> <a name="clientSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretSettingName"></a>
+
+```typescript
+public readonly clientSecretSettingName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `jwtAllowedClientApplications`<sup>Required</sup> <a name="jwtAllowedClientApplications" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedClientApplications"></a>
+
+```typescript
+public readonly jwtAllowedClientApplications: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `jwtAllowedGroups`<sup>Required</sup> <a name="jwtAllowedGroups" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroups"></a>
+
+```typescript
+public readonly jwtAllowedGroups: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `loginParameters`<sup>Required</sup> <a name="loginParameters" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParameters"></a>
+
+```typescript
+public readonly loginParameters: {[ key: string ]: string};
+```
+
+- *Type:* {[ key: string ]: string}
+
+---
+
+##### `tenantAuthEndpoint`<sup>Required</sup> <a name="tenantAuthEndpoint" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpoint"></a>
+
+```typescript
+public readonly tenantAuthEndpoint: string;
+```
+
+- *Type:* string
+
+---
+
+##### `wwwAuthenticationDisabled`<sup>Required</sup> <a name="wwwAuthenticationDisabled" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabled"></a>
+
+```typescript
+public readonly wwwAuthenticationDisabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2">WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2</a>
+
+---
+
+
+### WindowsFunctionAppAuthSettingsV2AppleV2OutputReference <a name="WindowsFunctionAppAuthSettingsV2AppleV2OutputReference" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+new windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.loginScopes">loginScopes</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientIdInput">clientIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientSecretSettingNameInput">clientSecretSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientId">clientId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientSecretSettingName">clientSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2">WindowsFunctionAppAuthSettingsV2AppleV2</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `loginScopes`<sup>Required</sup> <a name="loginScopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.loginScopes"></a>
+
+```typescript
+public readonly loginScopes: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `clientIdInput`<sup>Optional</sup> <a name="clientIdInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientIdInput"></a>
+
+```typescript
+public readonly clientIdInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientSecretSettingNameInput`<sup>Optional</sup> <a name="clientSecretSettingNameInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientSecretSettingNameInput"></a>
+
+```typescript
+public readonly clientSecretSettingNameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientId`<sup>Required</sup> <a name="clientId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientId"></a>
+
+```typescript
+public readonly clientId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientSecretSettingName`<sup>Required</sup> <a name="clientSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientSecretSettingName"></a>
+
+```typescript
+public readonly clientSecretSettingName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: WindowsFunctionAppAuthSettingsV2AppleV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2">WindowsFunctionAppAuthSettingsV2AppleV2</a>
+
+---
+
+
+### WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference <a name="WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+new windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.clientIdInput">clientIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.clientId">clientId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2">WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientIdInput`<sup>Optional</sup> <a name="clientIdInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.clientIdInput"></a>
+
+```typescript
+public readonly clientIdInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientId`<sup>Required</sup> <a name="clientId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.clientId"></a>
+
+```typescript
+public readonly clientId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2">WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2</a>
+
+---
+
+
+### WindowsFunctionAppAuthSettingsV2CustomOidcV2List <a name="WindowsFunctionAppAuthSettingsV2CustomOidcV2List" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+new windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.get">get</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.get"></a>
+
+```typescript
+public get(index: number): WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.get.parameter.index"></a>
+
+- *Type:* number
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2">WindowsFunctionAppAuthSettingsV2CustomOidcV2</a>[]</code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | WindowsFunctionAppAuthSettingsV2CustomOidcV2[];
+```
+
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2">WindowsFunctionAppAuthSettingsV2CustomOidcV2</a>[]
+
+---
+
+
+### WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference <a name="WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+new windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>number</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* number
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.resetNameClaimType">resetNameClaimType</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.resetScopes">resetScopes</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetNameClaimType` <a name="resetNameClaimType" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.resetNameClaimType"></a>
+
+```typescript
+public resetNameClaimType(): void
+```
+
+##### `resetScopes` <a name="resetScopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.resetScopes"></a>
+
+```typescript
+public resetScopes(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.authorisationEndpoint">authorisationEndpoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.certificationUri">certificationUri</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientCredentialMethod">clientCredentialMethod</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientSecretSettingName">clientSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.issuerEndpoint">issuerEndpoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.tokenEndpoint">tokenEndpoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientIdInput">clientIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimTypeInput">nameClaimTypeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpointInput">openidConfigurationEndpointInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.scopesInput">scopesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientId">clientId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimType">nameClaimType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpoint">openidConfigurationEndpoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.scopes">scopes</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2">WindowsFunctionAppAuthSettingsV2CustomOidcV2</a> \| cdktf.IResolvable</code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `authorisationEndpoint`<sup>Required</sup> <a name="authorisationEndpoint" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.authorisationEndpoint"></a>
+
+```typescript
+public readonly authorisationEndpoint: string;
+```
+
+- *Type:* string
+
+---
+
+##### `certificationUri`<sup>Required</sup> <a name="certificationUri" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.certificationUri"></a>
+
+```typescript
+public readonly certificationUri: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientCredentialMethod`<sup>Required</sup> <a name="clientCredentialMethod" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientCredentialMethod"></a>
+
+```typescript
+public readonly clientCredentialMethod: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientSecretSettingName`<sup>Required</sup> <a name="clientSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientSecretSettingName"></a>
+
+```typescript
+public readonly clientSecretSettingName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `issuerEndpoint`<sup>Required</sup> <a name="issuerEndpoint" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.issuerEndpoint"></a>
+
+```typescript
+public readonly issuerEndpoint: string;
+```
+
+- *Type:* string
+
+---
+
+##### `tokenEndpoint`<sup>Required</sup> <a name="tokenEndpoint" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.tokenEndpoint"></a>
+
+```typescript
+public readonly tokenEndpoint: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientIdInput`<sup>Optional</sup> <a name="clientIdInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientIdInput"></a>
+
+```typescript
+public readonly clientIdInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `nameClaimTypeInput`<sup>Optional</sup> <a name="nameClaimTypeInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimTypeInput"></a>
+
+```typescript
+public readonly nameClaimTypeInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `nameInput`<sup>Optional</sup> <a name="nameInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.nameInput"></a>
+
+```typescript
+public readonly nameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `openidConfigurationEndpointInput`<sup>Optional</sup> <a name="openidConfigurationEndpointInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpointInput"></a>
+
+```typescript
+public readonly openidConfigurationEndpointInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `scopesInput`<sup>Optional</sup> <a name="scopesInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.scopesInput"></a>
+
+```typescript
+public readonly scopesInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `clientId`<sup>Required</sup> <a name="clientId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientId"></a>
+
+```typescript
+public readonly clientId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+---
+
+##### `nameClaimType`<sup>Required</sup> <a name="nameClaimType" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimType"></a>
+
+```typescript
+public readonly nameClaimType: string;
+```
+
+- *Type:* string
+
+---
+
+##### `openidConfigurationEndpoint`<sup>Required</sup> <a name="openidConfigurationEndpoint" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpoint"></a>
+
+```typescript
+public readonly openidConfigurationEndpoint: string;
+```
+
+- *Type:* string
+
+---
+
+##### `scopes`<sup>Required</sup> <a name="scopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.scopes"></a>
+
+```typescript
+public readonly scopes: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: WindowsFunctionAppAuthSettingsV2CustomOidcV2 | IResolvable;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2">WindowsFunctionAppAuthSettingsV2CustomOidcV2</a> | cdktf.IResolvable
+
+---
+
+
+### WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference <a name="WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+new windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.resetGraphApiVersion">resetGraphApiVersion</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.resetLoginScopes">resetLoginScopes</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetGraphApiVersion` <a name="resetGraphApiVersion" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.resetGraphApiVersion"></a>
+
+```typescript
+public resetGraphApiVersion(): void
+```
+
+##### `resetLoginScopes` <a name="resetLoginScopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.resetLoginScopes"></a>
+
+```typescript
+public resetLoginScopes(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appIdInput">appIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appSecretSettingNameInput">appSecretSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.graphApiVersionInput">graphApiVersionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.loginScopesInput">loginScopesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appId">appId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appSecretSettingName">appSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.graphApiVersion">graphApiVersion</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.loginScopes">loginScopes</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2">WindowsFunctionAppAuthSettingsV2FacebookV2</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `appIdInput`<sup>Optional</sup> <a name="appIdInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appIdInput"></a>
+
+```typescript
+public readonly appIdInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `appSecretSettingNameInput`<sup>Optional</sup> <a name="appSecretSettingNameInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appSecretSettingNameInput"></a>
+
+```typescript
+public readonly appSecretSettingNameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `graphApiVersionInput`<sup>Optional</sup> <a name="graphApiVersionInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.graphApiVersionInput"></a>
+
+```typescript
+public readonly graphApiVersionInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `loginScopesInput`<sup>Optional</sup> <a name="loginScopesInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.loginScopesInput"></a>
+
+```typescript
+public readonly loginScopesInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `appId`<sup>Required</sup> <a name="appId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appId"></a>
+
+```typescript
+public readonly appId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `appSecretSettingName`<sup>Required</sup> <a name="appSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appSecretSettingName"></a>
+
+```typescript
+public readonly appSecretSettingName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `graphApiVersion`<sup>Required</sup> <a name="graphApiVersion" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.graphApiVersion"></a>
+
+```typescript
+public readonly graphApiVersion: string;
+```
+
+- *Type:* string
+
+---
+
+##### `loginScopes`<sup>Required</sup> <a name="loginScopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.loginScopes"></a>
+
+```typescript
+public readonly loginScopes: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: WindowsFunctionAppAuthSettingsV2FacebookV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2">WindowsFunctionAppAuthSettingsV2FacebookV2</a>
+
+---
+
+
+### WindowsFunctionAppAuthSettingsV2GithubV2OutputReference <a name="WindowsFunctionAppAuthSettingsV2GithubV2OutputReference" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+new windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.resetLoginScopes">resetLoginScopes</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetLoginScopes` <a name="resetLoginScopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.resetLoginScopes"></a>
+
+```typescript
+public resetLoginScopes(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientIdInput">clientIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientSecretSettingNameInput">clientSecretSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.loginScopesInput">loginScopesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientId">clientId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientSecretSettingName">clientSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.loginScopes">loginScopes</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2">WindowsFunctionAppAuthSettingsV2GithubV2</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientIdInput`<sup>Optional</sup> <a name="clientIdInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientIdInput"></a>
+
+```typescript
+public readonly clientIdInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientSecretSettingNameInput`<sup>Optional</sup> <a name="clientSecretSettingNameInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientSecretSettingNameInput"></a>
+
+```typescript
+public readonly clientSecretSettingNameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `loginScopesInput`<sup>Optional</sup> <a name="loginScopesInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.loginScopesInput"></a>
+
+```typescript
+public readonly loginScopesInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `clientId`<sup>Required</sup> <a name="clientId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientId"></a>
+
+```typescript
+public readonly clientId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientSecretSettingName`<sup>Required</sup> <a name="clientSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientSecretSettingName"></a>
+
+```typescript
+public readonly clientSecretSettingName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `loginScopes`<sup>Required</sup> <a name="loginScopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.loginScopes"></a>
+
+```typescript
+public readonly loginScopes: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: WindowsFunctionAppAuthSettingsV2GithubV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2">WindowsFunctionAppAuthSettingsV2GithubV2</a>
+
+---
+
+
+### WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference <a name="WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+new windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.resetAllowedAudiences">resetAllowedAudiences</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.resetLoginScopes">resetLoginScopes</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetAllowedAudiences` <a name="resetAllowedAudiences" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.resetAllowedAudiences"></a>
+
+```typescript
+public resetAllowedAudiences(): void
+```
+
+##### `resetLoginScopes` <a name="resetLoginScopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.resetLoginScopes"></a>
+
+```typescript
+public resetLoginScopes(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.allowedAudiencesInput">allowedAudiencesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientIdInput">clientIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientSecretSettingNameInput">clientSecretSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.loginScopesInput">loginScopesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.allowedAudiences">allowedAudiences</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientId">clientId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientSecretSettingName">clientSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.loginScopes">loginScopes</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2">WindowsFunctionAppAuthSettingsV2GoogleV2</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `allowedAudiencesInput`<sup>Optional</sup> <a name="allowedAudiencesInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.allowedAudiencesInput"></a>
+
+```typescript
+public readonly allowedAudiencesInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `clientIdInput`<sup>Optional</sup> <a name="clientIdInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientIdInput"></a>
+
+```typescript
+public readonly clientIdInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientSecretSettingNameInput`<sup>Optional</sup> <a name="clientSecretSettingNameInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientSecretSettingNameInput"></a>
+
+```typescript
+public readonly clientSecretSettingNameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `loginScopesInput`<sup>Optional</sup> <a name="loginScopesInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.loginScopesInput"></a>
+
+```typescript
+public readonly loginScopesInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `allowedAudiences`<sup>Required</sup> <a name="allowedAudiences" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.allowedAudiences"></a>
+
+```typescript
+public readonly allowedAudiences: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `clientId`<sup>Required</sup> <a name="clientId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientId"></a>
+
+```typescript
+public readonly clientId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientSecretSettingName`<sup>Required</sup> <a name="clientSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientSecretSettingName"></a>
+
+```typescript
+public readonly clientSecretSettingName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `loginScopes`<sup>Required</sup> <a name="loginScopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.loginScopes"></a>
+
+```typescript
+public readonly loginScopes: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: WindowsFunctionAppAuthSettingsV2GoogleV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2">WindowsFunctionAppAuthSettingsV2GoogleV2</a>
+
+---
+
+
+### WindowsFunctionAppAuthSettingsV2LoginOutputReference <a name="WindowsFunctionAppAuthSettingsV2LoginOutputReference" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+new windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetAllowedExternalRedirectUrls">resetAllowedExternalRedirectUrls</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetCookieExpirationConvention">resetCookieExpirationConvention</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetCookieExpirationTime">resetCookieExpirationTime</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetLogoutEndpoint">resetLogoutEndpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetNonceExpirationTime">resetNonceExpirationTime</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetPreserveUrlFragmentsForLogins">resetPreserveUrlFragmentsForLogins</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetTokenRefreshExtensionTime">resetTokenRefreshExtensionTime</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetTokenStoreEnabled">resetTokenStoreEnabled</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetTokenStorePath">resetTokenStorePath</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetTokenStoreSasSettingName">resetTokenStoreSasSettingName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetValidateNonce">resetValidateNonce</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetAllowedExternalRedirectUrls` <a name="resetAllowedExternalRedirectUrls" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetAllowedExternalRedirectUrls"></a>
+
+```typescript
+public resetAllowedExternalRedirectUrls(): void
+```
+
+##### `resetCookieExpirationConvention` <a name="resetCookieExpirationConvention" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetCookieExpirationConvention"></a>
+
+```typescript
+public resetCookieExpirationConvention(): void
+```
+
+##### `resetCookieExpirationTime` <a name="resetCookieExpirationTime" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetCookieExpirationTime"></a>
+
+```typescript
+public resetCookieExpirationTime(): void
+```
+
+##### `resetLogoutEndpoint` <a name="resetLogoutEndpoint" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetLogoutEndpoint"></a>
+
+```typescript
+public resetLogoutEndpoint(): void
+```
+
+##### `resetNonceExpirationTime` <a name="resetNonceExpirationTime" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetNonceExpirationTime"></a>
+
+```typescript
+public resetNonceExpirationTime(): void
+```
+
+##### `resetPreserveUrlFragmentsForLogins` <a name="resetPreserveUrlFragmentsForLogins" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetPreserveUrlFragmentsForLogins"></a>
+
+```typescript
+public resetPreserveUrlFragmentsForLogins(): void
+```
+
+##### `resetTokenRefreshExtensionTime` <a name="resetTokenRefreshExtensionTime" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetTokenRefreshExtensionTime"></a>
+
+```typescript
+public resetTokenRefreshExtensionTime(): void
+```
+
+##### `resetTokenStoreEnabled` <a name="resetTokenStoreEnabled" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetTokenStoreEnabled"></a>
+
+```typescript
+public resetTokenStoreEnabled(): void
+```
+
+##### `resetTokenStorePath` <a name="resetTokenStorePath" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetTokenStorePath"></a>
+
+```typescript
+public resetTokenStorePath(): void
+```
+
+##### `resetTokenStoreSasSettingName` <a name="resetTokenStoreSasSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetTokenStoreSasSettingName"></a>
+
+```typescript
+public resetTokenStoreSasSettingName(): void
+```
+
+##### `resetValidateNonce` <a name="resetValidateNonce" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.resetValidateNonce"></a>
+
+```typescript
+public resetValidateNonce(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.allowedExternalRedirectUrlsInput">allowedExternalRedirectUrlsInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationConventionInput">cookieExpirationConventionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationTimeInput">cookieExpirationTimeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.logoutEndpointInput">logoutEndpointInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.nonceExpirationTimeInput">nonceExpirationTimeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLoginsInput">preserveUrlFragmentsForLoginsInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTimeInput">tokenRefreshExtensionTimeInput</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabledInput">tokenStoreEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStorePathInput">tokenStorePathInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingNameInput">tokenStoreSasSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.validateNonceInput">validateNonceInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.allowedExternalRedirectUrls">allowedExternalRedirectUrls</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationConvention">cookieExpirationConvention</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationTime">cookieExpirationTime</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.logoutEndpoint">logoutEndpoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.nonceExpirationTime">nonceExpirationTime</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLogins">preserveUrlFragmentsForLogins</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTime">tokenRefreshExtensionTime</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabled">tokenStoreEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStorePath">tokenStorePath</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingName">tokenStoreSasSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.validateNonce">validateNonce</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login">WindowsFunctionAppAuthSettingsV2Login</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `allowedExternalRedirectUrlsInput`<sup>Optional</sup> <a name="allowedExternalRedirectUrlsInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.allowedExternalRedirectUrlsInput"></a>
+
+```typescript
+public readonly allowedExternalRedirectUrlsInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `cookieExpirationConventionInput`<sup>Optional</sup> <a name="cookieExpirationConventionInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationConventionInput"></a>
+
+```typescript
+public readonly cookieExpirationConventionInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `cookieExpirationTimeInput`<sup>Optional</sup> <a name="cookieExpirationTimeInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationTimeInput"></a>
+
+```typescript
+public readonly cookieExpirationTimeInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `logoutEndpointInput`<sup>Optional</sup> <a name="logoutEndpointInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.logoutEndpointInput"></a>
+
+```typescript
+public readonly logoutEndpointInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `nonceExpirationTimeInput`<sup>Optional</sup> <a name="nonceExpirationTimeInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.nonceExpirationTimeInput"></a>
+
+```typescript
+public readonly nonceExpirationTimeInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `preserveUrlFragmentsForLoginsInput`<sup>Optional</sup> <a name="preserveUrlFragmentsForLoginsInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLoginsInput"></a>
+
+```typescript
+public readonly preserveUrlFragmentsForLoginsInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `tokenRefreshExtensionTimeInput`<sup>Optional</sup> <a name="tokenRefreshExtensionTimeInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTimeInput"></a>
+
+```typescript
+public readonly tokenRefreshExtensionTimeInput: number;
+```
+
+- *Type:* number
+
+---
+
+##### `tokenStoreEnabledInput`<sup>Optional</sup> <a name="tokenStoreEnabledInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabledInput"></a>
+
+```typescript
+public readonly tokenStoreEnabledInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `tokenStorePathInput`<sup>Optional</sup> <a name="tokenStorePathInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStorePathInput"></a>
+
+```typescript
+public readonly tokenStorePathInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `tokenStoreSasSettingNameInput`<sup>Optional</sup> <a name="tokenStoreSasSettingNameInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingNameInput"></a>
+
+```typescript
+public readonly tokenStoreSasSettingNameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `validateNonceInput`<sup>Optional</sup> <a name="validateNonceInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.validateNonceInput"></a>
+
+```typescript
+public readonly validateNonceInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `allowedExternalRedirectUrls`<sup>Required</sup> <a name="allowedExternalRedirectUrls" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.allowedExternalRedirectUrls"></a>
+
+```typescript
+public readonly allowedExternalRedirectUrls: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `cookieExpirationConvention`<sup>Required</sup> <a name="cookieExpirationConvention" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationConvention"></a>
+
+```typescript
+public readonly cookieExpirationConvention: string;
+```
+
+- *Type:* string
+
+---
+
+##### `cookieExpirationTime`<sup>Required</sup> <a name="cookieExpirationTime" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationTime"></a>
+
+```typescript
+public readonly cookieExpirationTime: string;
+```
+
+- *Type:* string
+
+---
+
+##### `logoutEndpoint`<sup>Required</sup> <a name="logoutEndpoint" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.logoutEndpoint"></a>
+
+```typescript
+public readonly logoutEndpoint: string;
+```
+
+- *Type:* string
+
+---
+
+##### `nonceExpirationTime`<sup>Required</sup> <a name="nonceExpirationTime" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.nonceExpirationTime"></a>
+
+```typescript
+public readonly nonceExpirationTime: string;
+```
+
+- *Type:* string
+
+---
+
+##### `preserveUrlFragmentsForLogins`<sup>Required</sup> <a name="preserveUrlFragmentsForLogins" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLogins"></a>
+
+```typescript
+public readonly preserveUrlFragmentsForLogins: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `tokenRefreshExtensionTime`<sup>Required</sup> <a name="tokenRefreshExtensionTime" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTime"></a>
+
+```typescript
+public readonly tokenRefreshExtensionTime: number;
+```
+
+- *Type:* number
+
+---
+
+##### `tokenStoreEnabled`<sup>Required</sup> <a name="tokenStoreEnabled" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabled"></a>
+
+```typescript
+public readonly tokenStoreEnabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `tokenStorePath`<sup>Required</sup> <a name="tokenStorePath" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStorePath"></a>
+
+```typescript
+public readonly tokenStorePath: string;
+```
+
+- *Type:* string
+
+---
+
+##### `tokenStoreSasSettingName`<sup>Required</sup> <a name="tokenStoreSasSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingName"></a>
+
+```typescript
+public readonly tokenStoreSasSettingName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `validateNonce`<sup>Required</sup> <a name="validateNonce" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.validateNonce"></a>
+
+```typescript
+public readonly validateNonce: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: WindowsFunctionAppAuthSettingsV2Login;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login">WindowsFunctionAppAuthSettingsV2Login</a>
+
+---
+
+
+### WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference <a name="WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+new windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.resetAllowedAudiences">resetAllowedAudiences</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.resetLoginScopes">resetLoginScopes</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetAllowedAudiences` <a name="resetAllowedAudiences" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.resetAllowedAudiences"></a>
+
+```typescript
+public resetAllowedAudiences(): void
+```
+
+##### `resetLoginScopes` <a name="resetLoginScopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.resetLoginScopes"></a>
+
+```typescript
+public resetLoginScopes(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.allowedAudiencesInput">allowedAudiencesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientIdInput">clientIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientSecretSettingNameInput">clientSecretSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.loginScopesInput">loginScopesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.allowedAudiences">allowedAudiences</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientId">clientId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientSecretSettingName">clientSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.loginScopes">loginScopes</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2">WindowsFunctionAppAuthSettingsV2MicrosoftV2</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `allowedAudiencesInput`<sup>Optional</sup> <a name="allowedAudiencesInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.allowedAudiencesInput"></a>
+
+```typescript
+public readonly allowedAudiencesInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `clientIdInput`<sup>Optional</sup> <a name="clientIdInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientIdInput"></a>
+
+```typescript
+public readonly clientIdInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientSecretSettingNameInput`<sup>Optional</sup> <a name="clientSecretSettingNameInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientSecretSettingNameInput"></a>
+
+```typescript
+public readonly clientSecretSettingNameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `loginScopesInput`<sup>Optional</sup> <a name="loginScopesInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.loginScopesInput"></a>
+
+```typescript
+public readonly loginScopesInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `allowedAudiences`<sup>Required</sup> <a name="allowedAudiences" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.allowedAudiences"></a>
+
+```typescript
+public readonly allowedAudiences: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `clientId`<sup>Required</sup> <a name="clientId" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientId"></a>
+
+```typescript
+public readonly clientId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientSecretSettingName`<sup>Required</sup> <a name="clientSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientSecretSettingName"></a>
+
+```typescript
+public readonly clientSecretSettingName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `loginScopes`<sup>Required</sup> <a name="loginScopes" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.loginScopes"></a>
+
+```typescript
+public readonly loginScopes: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: WindowsFunctionAppAuthSettingsV2MicrosoftV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2">WindowsFunctionAppAuthSettingsV2MicrosoftV2</a>
+
+---
+
+
+### WindowsFunctionAppAuthSettingsV2OutputReference <a name="WindowsFunctionAppAuthSettingsV2OutputReference" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+new windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putActiveDirectoryV2">putActiveDirectoryV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putAppleV2">putAppleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putAzureStaticWebAppV2">putAzureStaticWebAppV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putCustomOidcV2">putCustomOidcV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putFacebookV2">putFacebookV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putGithubV2">putGithubV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putGoogleV2">putGoogleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putLogin">putLogin</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putMicrosoftV2">putMicrosoftV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putTwitterV2">putTwitterV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetActiveDirectoryV2">resetActiveDirectoryV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetAppleV2">resetAppleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetAuthEnabled">resetAuthEnabled</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetAzureStaticWebAppV2">resetAzureStaticWebAppV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetConfigFilePath">resetConfigFilePath</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetCustomOidcV2">resetCustomOidcV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetDefaultProvider">resetDefaultProvider</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetExcludedPaths">resetExcludedPaths</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetFacebookV2">resetFacebookV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetForwardProxyConvention">resetForwardProxyConvention</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetForwardProxyCustomHostHeaderName">resetForwardProxyCustomHostHeaderName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetForwardProxyCustomSchemeHeaderName">resetForwardProxyCustomSchemeHeaderName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetGithubV2">resetGithubV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetGoogleV2">resetGoogleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetHttpRouteApiPrefix">resetHttpRouteApiPrefix</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetMicrosoftV2">resetMicrosoftV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetRequireAuthentication">resetRequireAuthentication</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetRequireHttps">resetRequireHttps</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetRuntimeVersion">resetRuntimeVersion</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetTwitterV2">resetTwitterV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetUnauthenticatedAction">resetUnauthenticatedAction</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `putActiveDirectoryV2` <a name="putActiveDirectoryV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putActiveDirectoryV2"></a>
+
+```typescript
+public putActiveDirectoryV2(value: WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putActiveDirectoryV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2">WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2</a>
+
+---
+
+##### `putAppleV2` <a name="putAppleV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putAppleV2"></a>
+
+```typescript
+public putAppleV2(value: WindowsFunctionAppAuthSettingsV2AppleV2): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putAppleV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2">WindowsFunctionAppAuthSettingsV2AppleV2</a>
+
+---
+
+##### `putAzureStaticWebAppV2` <a name="putAzureStaticWebAppV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putAzureStaticWebAppV2"></a>
+
+```typescript
+public putAzureStaticWebAppV2(value: WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putAzureStaticWebAppV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2">WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2</a>
+
+---
+
+##### `putCustomOidcV2` <a name="putCustomOidcV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putCustomOidcV2"></a>
+
+```typescript
+public putCustomOidcV2(value: IResolvable | WindowsFunctionAppAuthSettingsV2CustomOidcV2[]): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putCustomOidcV2.parameter.value"></a>
+
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2">WindowsFunctionAppAuthSettingsV2CustomOidcV2</a>[]
+
+---
+
+##### `putFacebookV2` <a name="putFacebookV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putFacebookV2"></a>
+
+```typescript
+public putFacebookV2(value: WindowsFunctionAppAuthSettingsV2FacebookV2): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putFacebookV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2">WindowsFunctionAppAuthSettingsV2FacebookV2</a>
+
+---
+
+##### `putGithubV2` <a name="putGithubV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putGithubV2"></a>
+
+```typescript
+public putGithubV2(value: WindowsFunctionAppAuthSettingsV2GithubV2): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putGithubV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2">WindowsFunctionAppAuthSettingsV2GithubV2</a>
+
+---
+
+##### `putGoogleV2` <a name="putGoogleV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putGoogleV2"></a>
+
+```typescript
+public putGoogleV2(value: WindowsFunctionAppAuthSettingsV2GoogleV2): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putGoogleV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2">WindowsFunctionAppAuthSettingsV2GoogleV2</a>
+
+---
+
+##### `putLogin` <a name="putLogin" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putLogin"></a>
+
+```typescript
+public putLogin(value: WindowsFunctionAppAuthSettingsV2Login): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putLogin.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login">WindowsFunctionAppAuthSettingsV2Login</a>
+
+---
+
+##### `putMicrosoftV2` <a name="putMicrosoftV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putMicrosoftV2"></a>
+
+```typescript
+public putMicrosoftV2(value: WindowsFunctionAppAuthSettingsV2MicrosoftV2): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putMicrosoftV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2">WindowsFunctionAppAuthSettingsV2MicrosoftV2</a>
+
+---
+
+##### `putTwitterV2` <a name="putTwitterV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putTwitterV2"></a>
+
+```typescript
+public putTwitterV2(value: WindowsFunctionAppAuthSettingsV2TwitterV2): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.putTwitterV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2">WindowsFunctionAppAuthSettingsV2TwitterV2</a>
+
+---
+
+##### `resetActiveDirectoryV2` <a name="resetActiveDirectoryV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetActiveDirectoryV2"></a>
+
+```typescript
+public resetActiveDirectoryV2(): void
+```
+
+##### `resetAppleV2` <a name="resetAppleV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetAppleV2"></a>
+
+```typescript
+public resetAppleV2(): void
+```
+
+##### `resetAuthEnabled` <a name="resetAuthEnabled" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetAuthEnabled"></a>
+
+```typescript
+public resetAuthEnabled(): void
+```
+
+##### `resetAzureStaticWebAppV2` <a name="resetAzureStaticWebAppV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetAzureStaticWebAppV2"></a>
+
+```typescript
+public resetAzureStaticWebAppV2(): void
+```
+
+##### `resetConfigFilePath` <a name="resetConfigFilePath" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetConfigFilePath"></a>
+
+```typescript
+public resetConfigFilePath(): void
+```
+
+##### `resetCustomOidcV2` <a name="resetCustomOidcV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetCustomOidcV2"></a>
+
+```typescript
+public resetCustomOidcV2(): void
+```
+
+##### `resetDefaultProvider` <a name="resetDefaultProvider" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetDefaultProvider"></a>
+
+```typescript
+public resetDefaultProvider(): void
+```
+
+##### `resetExcludedPaths` <a name="resetExcludedPaths" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetExcludedPaths"></a>
+
+```typescript
+public resetExcludedPaths(): void
+```
+
+##### `resetFacebookV2` <a name="resetFacebookV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetFacebookV2"></a>
+
+```typescript
+public resetFacebookV2(): void
+```
+
+##### `resetForwardProxyConvention` <a name="resetForwardProxyConvention" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetForwardProxyConvention"></a>
+
+```typescript
+public resetForwardProxyConvention(): void
+```
+
+##### `resetForwardProxyCustomHostHeaderName` <a name="resetForwardProxyCustomHostHeaderName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetForwardProxyCustomHostHeaderName"></a>
+
+```typescript
+public resetForwardProxyCustomHostHeaderName(): void
+```
+
+##### `resetForwardProxyCustomSchemeHeaderName` <a name="resetForwardProxyCustomSchemeHeaderName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetForwardProxyCustomSchemeHeaderName"></a>
+
+```typescript
+public resetForwardProxyCustomSchemeHeaderName(): void
+```
+
+##### `resetGithubV2` <a name="resetGithubV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetGithubV2"></a>
+
+```typescript
+public resetGithubV2(): void
+```
+
+##### `resetGoogleV2` <a name="resetGoogleV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetGoogleV2"></a>
+
+```typescript
+public resetGoogleV2(): void
+```
+
+##### `resetHttpRouteApiPrefix` <a name="resetHttpRouteApiPrefix" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetHttpRouteApiPrefix"></a>
+
+```typescript
+public resetHttpRouteApiPrefix(): void
+```
+
+##### `resetMicrosoftV2` <a name="resetMicrosoftV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetMicrosoftV2"></a>
+
+```typescript
+public resetMicrosoftV2(): void
+```
+
+##### `resetRequireAuthentication` <a name="resetRequireAuthentication" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetRequireAuthentication"></a>
+
+```typescript
+public resetRequireAuthentication(): void
+```
+
+##### `resetRequireHttps` <a name="resetRequireHttps" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetRequireHttps"></a>
+
+```typescript
+public resetRequireHttps(): void
+```
+
+##### `resetRuntimeVersion` <a name="resetRuntimeVersion" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetRuntimeVersion"></a>
+
+```typescript
+public resetRuntimeVersion(): void
+```
+
+##### `resetTwitterV2` <a name="resetTwitterV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetTwitterV2"></a>
+
+```typescript
+public resetTwitterV2(): void
+```
+
+##### `resetUnauthenticatedAction` <a name="resetUnauthenticatedAction" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.resetUnauthenticatedAction"></a>
+
+```typescript
+public resetUnauthenticatedAction(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.activeDirectoryV2">activeDirectoryV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference">WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.appleV2">appleV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference">WindowsFunctionAppAuthSettingsV2AppleV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.azureStaticWebAppV2">azureStaticWebAppV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference">WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.customOidcV2">customOidcV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List">WindowsFunctionAppAuthSettingsV2CustomOidcV2List</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.facebookV2">facebookV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference">WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.githubV2">githubV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference">WindowsFunctionAppAuthSettingsV2GithubV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.googleV2">googleV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference">WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.login">login</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference">WindowsFunctionAppAuthSettingsV2LoginOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.microsoftV2">microsoftV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference">WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.twitterV2">twitterV2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference">WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.activeDirectoryV2Input">activeDirectoryV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2">WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.appleV2Input">appleV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2">WindowsFunctionAppAuthSettingsV2AppleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.authEnabledInput">authEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.azureStaticWebAppV2Input">azureStaticWebAppV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2">WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.configFilePathInput">configFilePathInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.customOidcV2Input">customOidcV2Input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2">WindowsFunctionAppAuthSettingsV2CustomOidcV2</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.defaultProviderInput">defaultProviderInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.excludedPathsInput">excludedPathsInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.facebookV2Input">facebookV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2">WindowsFunctionAppAuthSettingsV2FacebookV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.forwardProxyConventionInput">forwardProxyConventionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomHostHeaderNameInput">forwardProxyCustomHostHeaderNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomSchemeHeaderNameInput">forwardProxyCustomSchemeHeaderNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.githubV2Input">githubV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2">WindowsFunctionAppAuthSettingsV2GithubV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.googleV2Input">googleV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2">WindowsFunctionAppAuthSettingsV2GoogleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.httpRouteApiPrefixInput">httpRouteApiPrefixInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.loginInput">loginInput</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login">WindowsFunctionAppAuthSettingsV2Login</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.microsoftV2Input">microsoftV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2">WindowsFunctionAppAuthSettingsV2MicrosoftV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.requireAuthenticationInput">requireAuthenticationInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.requireHttpsInput">requireHttpsInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.runtimeVersionInput">runtimeVersionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.twitterV2Input">twitterV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2">WindowsFunctionAppAuthSettingsV2TwitterV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.unauthenticatedActionInput">unauthenticatedActionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.authEnabled">authEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.configFilePath">configFilePath</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.defaultProvider">defaultProvider</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.excludedPaths">excludedPaths</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.forwardProxyConvention">forwardProxyConvention</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomHostHeaderName">forwardProxyCustomHostHeaderName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomSchemeHeaderName">forwardProxyCustomSchemeHeaderName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.httpRouteApiPrefix">httpRouteApiPrefix</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.requireAuthentication">requireAuthentication</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.requireHttps">requireHttps</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.runtimeVersion">runtimeVersion</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.unauthenticatedAction">unauthenticatedAction</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2">WindowsFunctionAppAuthSettingsV2</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `activeDirectoryV2`<sup>Required</sup> <a name="activeDirectoryV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.activeDirectoryV2"></a>
+
+```typescript
+public readonly activeDirectoryV2: WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference">WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference</a>
+
+---
+
+##### `appleV2`<sup>Required</sup> <a name="appleV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.appleV2"></a>
+
+```typescript
+public readonly appleV2: WindowsFunctionAppAuthSettingsV2AppleV2OutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2OutputReference">WindowsFunctionAppAuthSettingsV2AppleV2OutputReference</a>
+
+---
+
+##### `azureStaticWebAppV2`<sup>Required</sup> <a name="azureStaticWebAppV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.azureStaticWebAppV2"></a>
+
+```typescript
+public readonly azureStaticWebAppV2: WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference">WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference</a>
+
+---
+
+##### `customOidcV2`<sup>Required</sup> <a name="customOidcV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.customOidcV2"></a>
+
+```typescript
+public readonly customOidcV2: WindowsFunctionAppAuthSettingsV2CustomOidcV2List;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2List">WindowsFunctionAppAuthSettingsV2CustomOidcV2List</a>
+
+---
+
+##### `facebookV2`<sup>Required</sup> <a name="facebookV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.facebookV2"></a>
+
+```typescript
+public readonly facebookV2: WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference">WindowsFunctionAppAuthSettingsV2FacebookV2OutputReference</a>
+
+---
+
+##### `githubV2`<sup>Required</sup> <a name="githubV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.githubV2"></a>
+
+```typescript
+public readonly githubV2: WindowsFunctionAppAuthSettingsV2GithubV2OutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2OutputReference">WindowsFunctionAppAuthSettingsV2GithubV2OutputReference</a>
+
+---
+
+##### `googleV2`<sup>Required</sup> <a name="googleV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.googleV2"></a>
+
+```typescript
+public readonly googleV2: WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference">WindowsFunctionAppAuthSettingsV2GoogleV2OutputReference</a>
+
+---
+
+##### `login`<sup>Required</sup> <a name="login" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.login"></a>
+
+```typescript
+public readonly login: WindowsFunctionAppAuthSettingsV2LoginOutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2LoginOutputReference">WindowsFunctionAppAuthSettingsV2LoginOutputReference</a>
+
+---
+
+##### `microsoftV2`<sup>Required</sup> <a name="microsoftV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.microsoftV2"></a>
+
+```typescript
+public readonly microsoftV2: WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference">WindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference</a>
+
+---
+
+##### `twitterV2`<sup>Required</sup> <a name="twitterV2" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.twitterV2"></a>
+
+```typescript
+public readonly twitterV2: WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference">WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference</a>
+
+---
+
+##### `activeDirectoryV2Input`<sup>Optional</sup> <a name="activeDirectoryV2Input" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.activeDirectoryV2Input"></a>
+
+```typescript
+public readonly activeDirectoryV2Input: WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2">WindowsFunctionAppAuthSettingsV2ActiveDirectoryV2</a>
+
+---
+
+##### `appleV2Input`<sup>Optional</sup> <a name="appleV2Input" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.appleV2Input"></a>
+
+```typescript
+public readonly appleV2Input: WindowsFunctionAppAuthSettingsV2AppleV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AppleV2">WindowsFunctionAppAuthSettingsV2AppleV2</a>
+
+---
+
+##### `authEnabledInput`<sup>Optional</sup> <a name="authEnabledInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.authEnabledInput"></a>
+
+```typescript
+public readonly authEnabledInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `azureStaticWebAppV2Input`<sup>Optional</sup> <a name="azureStaticWebAppV2Input" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.azureStaticWebAppV2Input"></a>
+
+```typescript
+public readonly azureStaticWebAppV2Input: WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2">WindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2</a>
+
+---
+
+##### `configFilePathInput`<sup>Optional</sup> <a name="configFilePathInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.configFilePathInput"></a>
+
+```typescript
+public readonly configFilePathInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `customOidcV2Input`<sup>Optional</sup> <a name="customOidcV2Input" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.customOidcV2Input"></a>
+
+```typescript
+public readonly customOidcV2Input: IResolvable | WindowsFunctionAppAuthSettingsV2CustomOidcV2[];
+```
+
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2CustomOidcV2">WindowsFunctionAppAuthSettingsV2CustomOidcV2</a>[]
+
+---
+
+##### `defaultProviderInput`<sup>Optional</sup> <a name="defaultProviderInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.defaultProviderInput"></a>
+
+```typescript
+public readonly defaultProviderInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `excludedPathsInput`<sup>Optional</sup> <a name="excludedPathsInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.excludedPathsInput"></a>
+
+```typescript
+public readonly excludedPathsInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `facebookV2Input`<sup>Optional</sup> <a name="facebookV2Input" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.facebookV2Input"></a>
+
+```typescript
+public readonly facebookV2Input: WindowsFunctionAppAuthSettingsV2FacebookV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2FacebookV2">WindowsFunctionAppAuthSettingsV2FacebookV2</a>
+
+---
+
+##### `forwardProxyConventionInput`<sup>Optional</sup> <a name="forwardProxyConventionInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.forwardProxyConventionInput"></a>
+
+```typescript
+public readonly forwardProxyConventionInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `forwardProxyCustomHostHeaderNameInput`<sup>Optional</sup> <a name="forwardProxyCustomHostHeaderNameInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomHostHeaderNameInput"></a>
+
+```typescript
+public readonly forwardProxyCustomHostHeaderNameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `forwardProxyCustomSchemeHeaderNameInput`<sup>Optional</sup> <a name="forwardProxyCustomSchemeHeaderNameInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomSchemeHeaderNameInput"></a>
+
+```typescript
+public readonly forwardProxyCustomSchemeHeaderNameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `githubV2Input`<sup>Optional</sup> <a name="githubV2Input" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.githubV2Input"></a>
+
+```typescript
+public readonly githubV2Input: WindowsFunctionAppAuthSettingsV2GithubV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GithubV2">WindowsFunctionAppAuthSettingsV2GithubV2</a>
+
+---
+
+##### `googleV2Input`<sup>Optional</sup> <a name="googleV2Input" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.googleV2Input"></a>
+
+```typescript
+public readonly googleV2Input: WindowsFunctionAppAuthSettingsV2GoogleV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2GoogleV2">WindowsFunctionAppAuthSettingsV2GoogleV2</a>
+
+---
+
+##### `httpRouteApiPrefixInput`<sup>Optional</sup> <a name="httpRouteApiPrefixInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.httpRouteApiPrefixInput"></a>
+
+```typescript
+public readonly httpRouteApiPrefixInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `loginInput`<sup>Optional</sup> <a name="loginInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.loginInput"></a>
+
+```typescript
+public readonly loginInput: WindowsFunctionAppAuthSettingsV2Login;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2Login">WindowsFunctionAppAuthSettingsV2Login</a>
+
+---
+
+##### `microsoftV2Input`<sup>Optional</sup> <a name="microsoftV2Input" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.microsoftV2Input"></a>
+
+```typescript
+public readonly microsoftV2Input: WindowsFunctionAppAuthSettingsV2MicrosoftV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2MicrosoftV2">WindowsFunctionAppAuthSettingsV2MicrosoftV2</a>
+
+---
+
+##### `requireAuthenticationInput`<sup>Optional</sup> <a name="requireAuthenticationInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.requireAuthenticationInput"></a>
+
+```typescript
+public readonly requireAuthenticationInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `requireHttpsInput`<sup>Optional</sup> <a name="requireHttpsInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.requireHttpsInput"></a>
+
+```typescript
+public readonly requireHttpsInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `runtimeVersionInput`<sup>Optional</sup> <a name="runtimeVersionInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.runtimeVersionInput"></a>
+
+```typescript
+public readonly runtimeVersionInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `twitterV2Input`<sup>Optional</sup> <a name="twitterV2Input" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.twitterV2Input"></a>
+
+```typescript
+public readonly twitterV2Input: WindowsFunctionAppAuthSettingsV2TwitterV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2">WindowsFunctionAppAuthSettingsV2TwitterV2</a>
+
+---
+
+##### `unauthenticatedActionInput`<sup>Optional</sup> <a name="unauthenticatedActionInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.unauthenticatedActionInput"></a>
+
+```typescript
+public readonly unauthenticatedActionInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `authEnabled`<sup>Required</sup> <a name="authEnabled" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.authEnabled"></a>
+
+```typescript
+public readonly authEnabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `configFilePath`<sup>Required</sup> <a name="configFilePath" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.configFilePath"></a>
+
+```typescript
+public readonly configFilePath: string;
+```
+
+- *Type:* string
+
+---
+
+##### `defaultProvider`<sup>Required</sup> <a name="defaultProvider" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.defaultProvider"></a>
+
+```typescript
+public readonly defaultProvider: string;
+```
+
+- *Type:* string
+
+---
+
+##### `excludedPaths`<sup>Required</sup> <a name="excludedPaths" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.excludedPaths"></a>
+
+```typescript
+public readonly excludedPaths: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `forwardProxyConvention`<sup>Required</sup> <a name="forwardProxyConvention" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.forwardProxyConvention"></a>
+
+```typescript
+public readonly forwardProxyConvention: string;
+```
+
+- *Type:* string
+
+---
+
+##### `forwardProxyCustomHostHeaderName`<sup>Required</sup> <a name="forwardProxyCustomHostHeaderName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomHostHeaderName"></a>
+
+```typescript
+public readonly forwardProxyCustomHostHeaderName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `forwardProxyCustomSchemeHeaderName`<sup>Required</sup> <a name="forwardProxyCustomSchemeHeaderName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomSchemeHeaderName"></a>
+
+```typescript
+public readonly forwardProxyCustomSchemeHeaderName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `httpRouteApiPrefix`<sup>Required</sup> <a name="httpRouteApiPrefix" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.httpRouteApiPrefix"></a>
+
+```typescript
+public readonly httpRouteApiPrefix: string;
+```
+
+- *Type:* string
+
+---
+
+##### `requireAuthentication`<sup>Required</sup> <a name="requireAuthentication" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.requireAuthentication"></a>
+
+```typescript
+public readonly requireAuthentication: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `requireHttps`<sup>Required</sup> <a name="requireHttps" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.requireHttps"></a>
+
+```typescript
+public readonly requireHttps: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `runtimeVersion`<sup>Required</sup> <a name="runtimeVersion" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.runtimeVersion"></a>
+
+```typescript
+public readonly runtimeVersion: string;
+```
+
+- *Type:* string
+
+---
+
+##### `unauthenticatedAction`<sup>Required</sup> <a name="unauthenticatedAction" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.unauthenticatedAction"></a>
+
+```typescript
+public readonly unauthenticatedAction: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2OutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: WindowsFunctionAppAuthSettingsV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2">WindowsFunctionAppAuthSettingsV2</a>
+
+---
+
+
+### WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference <a name="WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.Initializer"></a>
+
+```typescript
+import { windowsFunctionApp } from '@cdktf/provider-azurerm'
+
+new windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerKeyInput">consumerKeyInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerSecretSettingNameInput">consumerSecretSettingNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerKey">consumerKey</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerSecretSettingName">consumerSecretSettingName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2">WindowsFunctionAppAuthSettingsV2TwitterV2</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `consumerKeyInput`<sup>Optional</sup> <a name="consumerKeyInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerKeyInput"></a>
+
+```typescript
+public readonly consumerKeyInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `consumerSecretSettingNameInput`<sup>Optional</sup> <a name="consumerSecretSettingNameInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerSecretSettingNameInput"></a>
+
+```typescript
+public readonly consumerSecretSettingNameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `consumerKey`<sup>Required</sup> <a name="consumerKey" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerKey"></a>
+
+```typescript
+public readonly consumerKey: string;
+```
+
+- *Type:* string
+
+---
+
+##### `consumerSecretSettingName`<sup>Required</sup> <a name="consumerSecretSettingName" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerSecretSettingName"></a>
+
+```typescript
+public readonly consumerSecretSettingName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: WindowsFunctionAppAuthSettingsV2TwitterV2;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppAuthSettingsV2TwitterV2">WindowsFunctionAppAuthSettingsV2TwitterV2</a>
 
 ---
 

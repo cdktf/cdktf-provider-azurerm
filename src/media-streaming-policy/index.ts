@@ -43,6 +43,12 @@ export interface MediaStreamingPolicyConfig extends cdktf.TerraformMetaArguments
   */
   readonly commonEncryptionCenc?: MediaStreamingPolicyCommonEncryptionCenc;
   /**
+  * envelope_encryption block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#envelope_encryption MediaStreamingPolicy#envelope_encryption}
+  */
+  readonly envelopeEncryption?: MediaStreamingPolicyEnvelopeEncryption;
+  /**
   * no_encryption_enabled_protocols block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#no_encryption_enabled_protocols MediaStreamingPolicy#no_encryption_enabled_protocols}
@@ -54,6 +60,68 @@ export interface MediaStreamingPolicyConfig extends cdktf.TerraformMetaArguments
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#timeouts MediaStreamingPolicy#timeouts}
   */
   readonly timeouts?: MediaStreamingPolicyTimeouts;
+}
+export interface MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#custom_keys_acquisition_url_template MediaStreamingPolicy#custom_keys_acquisition_url_template}
+  */
+  readonly customKeysAcquisitionUrlTemplate: string;
+}
+
+export function mediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryptionToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryptionOutputReference | MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    custom_keys_acquisition_url_template: cdktf.stringToTerraform(struct!.customKeysAcquisitionUrlTemplate),
+  }
+}
+
+export class MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryption | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._customKeysAcquisitionUrlTemplate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customKeysAcquisitionUrlTemplate = this._customKeysAcquisitionUrlTemplate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryption | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._customKeysAcquisitionUrlTemplate = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._customKeysAcquisitionUrlTemplate = value.customKeysAcquisitionUrlTemplate;
+    }
+  }
+
+  // custom_keys_acquisition_url_template - computed: false, optional: false, required: true
+  private _customKeysAcquisitionUrlTemplate?: string; 
+  public get customKeysAcquisitionUrlTemplate() {
+    return this.getStringAttribute('custom_keys_acquisition_url_template');
+  }
+  public set customKeysAcquisitionUrlTemplate(value: string) {
+    this._customKeysAcquisitionUrlTemplate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customKeysAcquisitionUrlTemplateInput() {
+    return this._customKeysAcquisitionUrlTemplate;
+  }
 }
 export interface MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey {
   /**
@@ -387,6 +455,12 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
 }
 export interface MediaStreamingPolicyCommonEncryptionCbcs {
   /**
+  * clear_key_encryption block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#clear_key_encryption MediaStreamingPolicy#clear_key_encryption}
+  */
+  readonly clearKeyEncryption?: MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryption;
+  /**
   * default_content_key block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#default_content_key MediaStreamingPolicy#default_content_key}
@@ -412,6 +486,7 @@ export function mediaStreamingPolicyCommonEncryptionCbcsToTerraform(struct?: Med
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    clear_key_encryption: mediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryptionToTerraform(struct!.clearKeyEncryption),
     default_content_key: mediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyToTerraform(struct!.defaultContentKey),
     drm_fairplay: mediaStreamingPolicyCommonEncryptionCbcsDrmFairplayToTerraform(struct!.drmFairplay),
     enabled_protocols: mediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsToTerraform(struct!.enabledProtocols),
@@ -432,6 +507,10 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcs | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._clearKeyEncryption?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clearKeyEncryption = this._clearKeyEncryption?.internalValue;
+    }
     if (this._defaultContentKey?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultContentKey = this._defaultContentKey?.internalValue;
@@ -450,16 +529,34 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
   public set internalValue(value: MediaStreamingPolicyCommonEncryptionCbcs | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._clearKeyEncryption.internalValue = undefined;
       this._defaultContentKey.internalValue = undefined;
       this._drmFairplay.internalValue = undefined;
       this._enabledProtocols.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._clearKeyEncryption.internalValue = value.clearKeyEncryption;
       this._defaultContentKey.internalValue = value.defaultContentKey;
       this._drmFairplay.internalValue = value.drmFairplay;
       this._enabledProtocols.internalValue = value.enabledProtocols;
     }
+  }
+
+  // clear_key_encryption - computed: false, optional: true, required: false
+  private _clearKeyEncryption = new MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryptionOutputReference(this, "clear_key_encryption");
+  public get clearKeyEncryption() {
+    return this._clearKeyEncryption;
+  }
+  public putClearKeyEncryption(value: MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryption) {
+    this._clearKeyEncryption.internalValue = value;
+  }
+  public resetClearKeyEncryption() {
+    this._clearKeyEncryption.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clearKeyEncryptionInput() {
+    return this._clearKeyEncryption.internalValue;
   }
 
   // default_content_key - computed: false, optional: true, required: false
@@ -508,6 +605,694 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
   // Temporarily expose input value. Use with caution.
   public get enabledProtocolsInput() {
     return this._enabledProtocols.internalValue;
+  }
+}
+export interface MediaStreamingPolicyCommonEncryptionCencClearKeyEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#custom_keys_acquisition_url_template MediaStreamingPolicy#custom_keys_acquisition_url_template}
+  */
+  readonly customKeysAcquisitionUrlTemplate: string;
+}
+
+export function mediaStreamingPolicyCommonEncryptionCencClearKeyEncryptionToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencClearKeyEncryptionOutputReference | MediaStreamingPolicyCommonEncryptionCencClearKeyEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    custom_keys_acquisition_url_template: cdktf.stringToTerraform(struct!.customKeysAcquisitionUrlTemplate),
+  }
+}
+
+export class MediaStreamingPolicyCommonEncryptionCencClearKeyEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MediaStreamingPolicyCommonEncryptionCencClearKeyEncryption | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._customKeysAcquisitionUrlTemplate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customKeysAcquisitionUrlTemplate = this._customKeysAcquisitionUrlTemplate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyCommonEncryptionCencClearKeyEncryption | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._customKeysAcquisitionUrlTemplate = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._customKeysAcquisitionUrlTemplate = value.customKeysAcquisitionUrlTemplate;
+    }
+  }
+
+  // custom_keys_acquisition_url_template - computed: false, optional: false, required: true
+  private _customKeysAcquisitionUrlTemplate?: string; 
+  public get customKeysAcquisitionUrlTemplate() {
+    return this.getStringAttribute('custom_keys_acquisition_url_template');
+  }
+  public set customKeysAcquisitionUrlTemplate(value: string) {
+    this._customKeysAcquisitionUrlTemplate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customKeysAcquisitionUrlTemplateInput() {
+    return this._customKeysAcquisitionUrlTemplate;
+  }
+}
+export interface MediaStreamingPolicyCommonEncryptionCencClearTrackCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#operation MediaStreamingPolicy#operation}
+  */
+  readonly operation: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#property MediaStreamingPolicy#property}
+  */
+  readonly property: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#value MediaStreamingPolicy#value}
+  */
+  readonly value: string;
+}
+
+export function mediaStreamingPolicyCommonEncryptionCencClearTrackConditionToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencClearTrackCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    operation: cdktf.stringToTerraform(struct!.operation),
+    property: cdktf.stringToTerraform(struct!.property),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export class MediaStreamingPolicyCommonEncryptionCencClearTrackConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaStreamingPolicyCommonEncryptionCencClearTrackCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._operation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operation = this._operation;
+    }
+    if (this._property !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.property = this._property;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyCommonEncryptionCencClearTrackCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._operation = undefined;
+      this._property = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._operation = value.operation;
+      this._property = value.property;
+      this._value = value.value;
+    }
+  }
+
+  // operation - computed: false, optional: false, required: true
+  private _operation?: string; 
+  public get operation() {
+    return this.getStringAttribute('operation');
+  }
+  public set operation(value: string) {
+    this._operation = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operationInput() {
+    return this._operation;
+  }
+
+  // property - computed: false, optional: false, required: true
+  private _property?: string; 
+  public get property() {
+    return this.getStringAttribute('property');
+  }
+  public set property(value: string) {
+    this._property = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertyInput() {
+    return this._property;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class MediaStreamingPolicyCommonEncryptionCencClearTrackConditionList extends cdktf.ComplexList {
+  public internalValue? : MediaStreamingPolicyCommonEncryptionCencClearTrackCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaStreamingPolicyCommonEncryptionCencClearTrackConditionOutputReference {
+    return new MediaStreamingPolicyCommonEncryptionCencClearTrackConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MediaStreamingPolicyCommonEncryptionCencClearTrack {
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#condition MediaStreamingPolicy#condition}
+  */
+  readonly condition: MediaStreamingPolicyCommonEncryptionCencClearTrackCondition[] | cdktf.IResolvable;
+}
+
+export function mediaStreamingPolicyCommonEncryptionCencClearTrackToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencClearTrack | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    condition: cdktf.listMapper(mediaStreamingPolicyCommonEncryptionCencClearTrackConditionToTerraform, true)(struct!.condition),
+  }
+}
+
+export class MediaStreamingPolicyCommonEncryptionCencClearTrackOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaStreamingPolicyCommonEncryptionCencClearTrack | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._condition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.condition = this._condition?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyCommonEncryptionCencClearTrack | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._condition.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._condition.internalValue = value.condition;
+    }
+  }
+
+  // condition - computed: false, optional: false, required: true
+  private _condition = new MediaStreamingPolicyCommonEncryptionCencClearTrackConditionList(this, "condition", true);
+  public get condition() {
+    return this._condition;
+  }
+  public putCondition(value: MediaStreamingPolicyCommonEncryptionCencClearTrackCondition[] | cdktf.IResolvable) {
+    this._condition.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition.internalValue;
+  }
+}
+
+export class MediaStreamingPolicyCommonEncryptionCencClearTrackList extends cdktf.ComplexList {
+  public internalValue? : MediaStreamingPolicyCommonEncryptionCencClearTrack[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaStreamingPolicyCommonEncryptionCencClearTrackOutputReference {
+    return new MediaStreamingPolicyCommonEncryptionCencClearTrackOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#operation MediaStreamingPolicy#operation}
+  */
+  readonly operation: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#property MediaStreamingPolicy#property}
+  */
+  readonly property: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#value MediaStreamingPolicy#value}
+  */
+  readonly value: string;
+}
+
+export function mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    operation: cdktf.stringToTerraform(struct!.operation),
+    property: cdktf.stringToTerraform(struct!.property),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export class MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._operation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operation = this._operation;
+    }
+    if (this._property !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.property = this._property;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._operation = undefined;
+      this._property = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._operation = value.operation;
+      this._property = value.property;
+      this._value = value.value;
+    }
+  }
+
+  // operation - computed: false, optional: false, required: true
+  private _operation?: string; 
+  public get operation() {
+    return this.getStringAttribute('operation');
+  }
+  public set operation(value: string) {
+    this._operation = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operationInput() {
+    return this._operation;
+  }
+
+  // property - computed: false, optional: false, required: true
+  private _property?: string; 
+  public get property() {
+    return this.getStringAttribute('property');
+  }
+  public set property(value: string) {
+    this._property = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertyInput() {
+    return this._property;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionList extends cdktf.ComplexList {
+  public internalValue? : MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionOutputReference {
+    return new MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrack {
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#condition MediaStreamingPolicy#condition}
+  */
+  readonly condition: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackCondition[] | cdktf.IResolvable;
+}
+
+export function mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrack | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    condition: cdktf.listMapper(mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionToTerraform, true)(struct!.condition),
+  }
+}
+
+export class MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrack | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._condition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.condition = this._condition?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrack | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._condition.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._condition.internalValue = value.condition;
+    }
+  }
+
+  // condition - computed: false, optional: false, required: true
+  private _condition = new MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionList(this, "condition", true);
+  public get condition() {
+    return this._condition;
+  }
+  public putCondition(value: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackCondition[] | cdktf.IResolvable) {
+    this._condition.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition.internalValue;
+  }
+}
+
+export class MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackList extends cdktf.ComplexList {
+  public internalValue? : MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrack[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackOutputReference {
+    return new MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMapping {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#label MediaStreamingPolicy#label}
+  */
+  readonly label?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#policy_name MediaStreamingPolicy#policy_name}
+  */
+  readonly policyName?: string;
+  /**
+  * track block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#track MediaStreamingPolicy#track}
+  */
+  readonly track: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrack[] | cdktf.IResolvable;
+}
+
+export function mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMapping | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    label: cdktf.stringToTerraform(struct!.label),
+    policy_name: cdktf.stringToTerraform(struct!.policyName),
+    track: cdktf.listMapper(mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackToTerraform, true)(struct!.track),
+  }
+}
+
+export class MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMapping | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._label !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.label = this._label;
+    }
+    if (this._policyName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.policyName = this._policyName;
+    }
+    if (this._track?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.track = this._track?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMapping | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._label = undefined;
+      this._policyName = undefined;
+      this._track.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._label = value.label;
+      this._policyName = value.policyName;
+      this._track.internalValue = value.track;
+    }
+  }
+
+  // label - computed: false, optional: true, required: false
+  private _label?: string; 
+  public get label() {
+    return this.getStringAttribute('label');
+  }
+  public set label(value: string) {
+    this._label = value;
+  }
+  public resetLabel() {
+    this._label = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelInput() {
+    return this._label;
+  }
+
+  // policy_name - computed: false, optional: true, required: false
+  private _policyName?: string; 
+  public get policyName() {
+    return this.getStringAttribute('policy_name');
+  }
+  public set policyName(value: string) {
+    this._policyName = value;
+  }
+  public resetPolicyName() {
+    this._policyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyNameInput() {
+    return this._policyName;
+  }
+
+  // track - computed: false, optional: false, required: true
+  private _track = new MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackList(this, "track", true);
+  public get track() {
+    return this._track;
+  }
+  public putTrack(value: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrack[] | cdktf.IResolvable) {
+    this._track.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trackInput() {
+    return this._track.internalValue;
+  }
+}
+
+export class MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingList extends cdktf.ComplexList {
+  public internalValue? : MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMapping[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingOutputReference {
+    return new MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface MediaStreamingPolicyCommonEncryptionCencDefaultContentKey {
@@ -846,6 +1631,24 @@ export interface MediaStreamingPolicyCommonEncryptionCenc {
   */
   readonly drmWidevineCustomLicenseAcquisitionUrlTemplate?: string;
   /**
+  * clear_key_encryption block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#clear_key_encryption MediaStreamingPolicy#clear_key_encryption}
+  */
+  readonly clearKeyEncryption?: MediaStreamingPolicyCommonEncryptionCencClearKeyEncryption;
+  /**
+  * clear_track block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#clear_track MediaStreamingPolicy#clear_track}
+  */
+  readonly clearTrack?: MediaStreamingPolicyCommonEncryptionCencClearTrack[] | cdktf.IResolvable;
+  /**
+  * content_key_to_track_mapping block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#content_key_to_track_mapping MediaStreamingPolicy#content_key_to_track_mapping}
+  */
+  readonly contentKeyToTrackMapping?: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMapping[] | cdktf.IResolvable;
+  /**
   * default_content_key block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#default_content_key MediaStreamingPolicy#default_content_key}
@@ -872,6 +1675,9 @@ export function mediaStreamingPolicyCommonEncryptionCencToTerraform(struct?: Med
   }
   return {
     drm_widevine_custom_license_acquisition_url_template: cdktf.stringToTerraform(struct!.drmWidevineCustomLicenseAcquisitionUrlTemplate),
+    clear_key_encryption: mediaStreamingPolicyCommonEncryptionCencClearKeyEncryptionToTerraform(struct!.clearKeyEncryption),
+    clear_track: cdktf.listMapper(mediaStreamingPolicyCommonEncryptionCencClearTrackToTerraform, true)(struct!.clearTrack),
+    content_key_to_track_mapping: cdktf.listMapper(mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingToTerraform, true)(struct!.contentKeyToTrackMapping),
     default_content_key: mediaStreamingPolicyCommonEncryptionCencDefaultContentKeyToTerraform(struct!.defaultContentKey),
     drm_playready: mediaStreamingPolicyCommonEncryptionCencDrmPlayreadyToTerraform(struct!.drmPlayready),
     enabled_protocols: mediaStreamingPolicyCommonEncryptionCencEnabledProtocolsToTerraform(struct!.enabledProtocols),
@@ -896,6 +1702,18 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.drmWidevineCustomLicenseAcquisitionUrlTemplate = this._drmWidevineCustomLicenseAcquisitionUrlTemplate;
     }
+    if (this._clearKeyEncryption?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clearKeyEncryption = this._clearKeyEncryption?.internalValue;
+    }
+    if (this._clearTrack?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clearTrack = this._clearTrack?.internalValue;
+    }
+    if (this._contentKeyToTrackMapping?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.contentKeyToTrackMapping = this._contentKeyToTrackMapping?.internalValue;
+    }
     if (this._defaultContentKey?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultContentKey = this._defaultContentKey?.internalValue;
@@ -915,6 +1733,9 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
     if (value === undefined) {
       this.isEmptyObject = false;
       this._drmWidevineCustomLicenseAcquisitionUrlTemplate = undefined;
+      this._clearKeyEncryption.internalValue = undefined;
+      this._clearTrack.internalValue = undefined;
+      this._contentKeyToTrackMapping.internalValue = undefined;
       this._defaultContentKey.internalValue = undefined;
       this._drmPlayready.internalValue = undefined;
       this._enabledProtocols.internalValue = undefined;
@@ -922,6 +1743,9 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._drmWidevineCustomLicenseAcquisitionUrlTemplate = value.drmWidevineCustomLicenseAcquisitionUrlTemplate;
+      this._clearKeyEncryption.internalValue = value.clearKeyEncryption;
+      this._clearTrack.internalValue = value.clearTrack;
+      this._contentKeyToTrackMapping.internalValue = value.contentKeyToTrackMapping;
       this._defaultContentKey.internalValue = value.defaultContentKey;
       this._drmPlayready.internalValue = value.drmPlayready;
       this._enabledProtocols.internalValue = value.enabledProtocols;
@@ -942,6 +1766,54 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
   // Temporarily expose input value. Use with caution.
   public get drmWidevineCustomLicenseAcquisitionUrlTemplateInput() {
     return this._drmWidevineCustomLicenseAcquisitionUrlTemplate;
+  }
+
+  // clear_key_encryption - computed: false, optional: true, required: false
+  private _clearKeyEncryption = new MediaStreamingPolicyCommonEncryptionCencClearKeyEncryptionOutputReference(this, "clear_key_encryption");
+  public get clearKeyEncryption() {
+    return this._clearKeyEncryption;
+  }
+  public putClearKeyEncryption(value: MediaStreamingPolicyCommonEncryptionCencClearKeyEncryption) {
+    this._clearKeyEncryption.internalValue = value;
+  }
+  public resetClearKeyEncryption() {
+    this._clearKeyEncryption.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clearKeyEncryptionInput() {
+    return this._clearKeyEncryption.internalValue;
+  }
+
+  // clear_track - computed: false, optional: true, required: false
+  private _clearTrack = new MediaStreamingPolicyCommonEncryptionCencClearTrackList(this, "clear_track", true);
+  public get clearTrack() {
+    return this._clearTrack;
+  }
+  public putClearTrack(value: MediaStreamingPolicyCommonEncryptionCencClearTrack[] | cdktf.IResolvable) {
+    this._clearTrack.internalValue = value;
+  }
+  public resetClearTrack() {
+    this._clearTrack.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clearTrackInput() {
+    return this._clearTrack.internalValue;
+  }
+
+  // content_key_to_track_mapping - computed: false, optional: true, required: false
+  private _contentKeyToTrackMapping = new MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingList(this, "content_key_to_track_mapping", true);
+  public get contentKeyToTrackMapping() {
+    return this._contentKeyToTrackMapping;
+  }
+  public putContentKeyToTrackMapping(value: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMapping[] | cdktf.IResolvable) {
+    this._contentKeyToTrackMapping.internalValue = value;
+  }
+  public resetContentKeyToTrackMapping() {
+    this._contentKeyToTrackMapping.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentKeyToTrackMappingInput() {
+    return this._contentKeyToTrackMapping.internalValue;
   }
 
   // default_content_key - computed: false, optional: true, required: false
@@ -982,6 +1854,367 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
     return this._enabledProtocols;
   }
   public putEnabledProtocols(value: MediaStreamingPolicyCommonEncryptionCencEnabledProtocols) {
+    this._enabledProtocols.internalValue = value;
+  }
+  public resetEnabledProtocols() {
+    this._enabledProtocols.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledProtocolsInput() {
+    return this._enabledProtocols.internalValue;
+  }
+}
+export interface MediaStreamingPolicyEnvelopeEncryptionDefaultContentKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#label MediaStreamingPolicy#label}
+  */
+  readonly label?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#policy_name MediaStreamingPolicy#policy_name}
+  */
+  readonly policyName?: string;
+}
+
+export function mediaStreamingPolicyEnvelopeEncryptionDefaultContentKeyToTerraform(struct?: MediaStreamingPolicyEnvelopeEncryptionDefaultContentKeyOutputReference | MediaStreamingPolicyEnvelopeEncryptionDefaultContentKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    label: cdktf.stringToTerraform(struct!.label),
+    policy_name: cdktf.stringToTerraform(struct!.policyName),
+  }
+}
+
+export class MediaStreamingPolicyEnvelopeEncryptionDefaultContentKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MediaStreamingPolicyEnvelopeEncryptionDefaultContentKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._label !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.label = this._label;
+    }
+    if (this._policyName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.policyName = this._policyName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyEnvelopeEncryptionDefaultContentKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._label = undefined;
+      this._policyName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._label = value.label;
+      this._policyName = value.policyName;
+    }
+  }
+
+  // label - computed: false, optional: true, required: false
+  private _label?: string; 
+  public get label() {
+    return this.getStringAttribute('label');
+  }
+  public set label(value: string) {
+    this._label = value;
+  }
+  public resetLabel() {
+    this._label = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelInput() {
+    return this._label;
+  }
+
+  // policy_name - computed: false, optional: true, required: false
+  private _policyName?: string; 
+  public get policyName() {
+    return this.getStringAttribute('policy_name');
+  }
+  public set policyName(value: string) {
+    this._policyName = value;
+  }
+  public resetPolicyName() {
+    this._policyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyNameInput() {
+    return this._policyName;
+  }
+}
+export interface MediaStreamingPolicyEnvelopeEncryptionEnabledProtocols {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#dash MediaStreamingPolicy#dash}
+  */
+  readonly dash?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#download MediaStreamingPolicy#download}
+  */
+  readonly download?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#hls MediaStreamingPolicy#hls}
+  */
+  readonly hls?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#smooth_streaming MediaStreamingPolicy#smooth_streaming}
+  */
+  readonly smoothStreaming?: boolean | cdktf.IResolvable;
+}
+
+export function mediaStreamingPolicyEnvelopeEncryptionEnabledProtocolsToTerraform(struct?: MediaStreamingPolicyEnvelopeEncryptionEnabledProtocolsOutputReference | MediaStreamingPolicyEnvelopeEncryptionEnabledProtocols): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    dash: cdktf.booleanToTerraform(struct!.dash),
+    download: cdktf.booleanToTerraform(struct!.download),
+    hls: cdktf.booleanToTerraform(struct!.hls),
+    smooth_streaming: cdktf.booleanToTerraform(struct!.smoothStreaming),
+  }
+}
+
+export class MediaStreamingPolicyEnvelopeEncryptionEnabledProtocolsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MediaStreamingPolicyEnvelopeEncryptionEnabledProtocols | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dash !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dash = this._dash;
+    }
+    if (this._download !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.download = this._download;
+    }
+    if (this._hls !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hls = this._hls;
+    }
+    if (this._smoothStreaming !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.smoothStreaming = this._smoothStreaming;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyEnvelopeEncryptionEnabledProtocols | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._dash = undefined;
+      this._download = undefined;
+      this._hls = undefined;
+      this._smoothStreaming = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._dash = value.dash;
+      this._download = value.download;
+      this._hls = value.hls;
+      this._smoothStreaming = value.smoothStreaming;
+    }
+  }
+
+  // dash - computed: false, optional: true, required: false
+  private _dash?: boolean | cdktf.IResolvable; 
+  public get dash() {
+    return this.getBooleanAttribute('dash');
+  }
+  public set dash(value: boolean | cdktf.IResolvable) {
+    this._dash = value;
+  }
+  public resetDash() {
+    this._dash = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dashInput() {
+    return this._dash;
+  }
+
+  // download - computed: false, optional: true, required: false
+  private _download?: boolean | cdktf.IResolvable; 
+  public get download() {
+    return this.getBooleanAttribute('download');
+  }
+  public set download(value: boolean | cdktf.IResolvable) {
+    this._download = value;
+  }
+  public resetDownload() {
+    this._download = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get downloadInput() {
+    return this._download;
+  }
+
+  // hls - computed: false, optional: true, required: false
+  private _hls?: boolean | cdktf.IResolvable; 
+  public get hls() {
+    return this.getBooleanAttribute('hls');
+  }
+  public set hls(value: boolean | cdktf.IResolvable) {
+    this._hls = value;
+  }
+  public resetHls() {
+    this._hls = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hlsInput() {
+    return this._hls;
+  }
+
+  // smooth_streaming - computed: false, optional: true, required: false
+  private _smoothStreaming?: boolean | cdktf.IResolvable; 
+  public get smoothStreaming() {
+    return this.getBooleanAttribute('smooth_streaming');
+  }
+  public set smoothStreaming(value: boolean | cdktf.IResolvable) {
+    this._smoothStreaming = value;
+  }
+  public resetSmoothStreaming() {
+    this._smoothStreaming = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get smoothStreamingInput() {
+    return this._smoothStreaming;
+  }
+}
+export interface MediaStreamingPolicyEnvelopeEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#custom_keys_acquisition_url_template MediaStreamingPolicy#custom_keys_acquisition_url_template}
+  */
+  readonly customKeysAcquisitionUrlTemplate?: string;
+  /**
+  * default_content_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#default_content_key MediaStreamingPolicy#default_content_key}
+  */
+  readonly defaultContentKey?: MediaStreamingPolicyEnvelopeEncryptionDefaultContentKey;
+  /**
+  * enabled_protocols block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#enabled_protocols MediaStreamingPolicy#enabled_protocols}
+  */
+  readonly enabledProtocols?: MediaStreamingPolicyEnvelopeEncryptionEnabledProtocols;
+}
+
+export function mediaStreamingPolicyEnvelopeEncryptionToTerraform(struct?: MediaStreamingPolicyEnvelopeEncryptionOutputReference | MediaStreamingPolicyEnvelopeEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    custom_keys_acquisition_url_template: cdktf.stringToTerraform(struct!.customKeysAcquisitionUrlTemplate),
+    default_content_key: mediaStreamingPolicyEnvelopeEncryptionDefaultContentKeyToTerraform(struct!.defaultContentKey),
+    enabled_protocols: mediaStreamingPolicyEnvelopeEncryptionEnabledProtocolsToTerraform(struct!.enabledProtocols),
+  }
+}
+
+export class MediaStreamingPolicyEnvelopeEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MediaStreamingPolicyEnvelopeEncryption | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._customKeysAcquisitionUrlTemplate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customKeysAcquisitionUrlTemplate = this._customKeysAcquisitionUrlTemplate;
+    }
+    if (this._defaultContentKey?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultContentKey = this._defaultContentKey?.internalValue;
+    }
+    if (this._enabledProtocols?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabledProtocols = this._enabledProtocols?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyEnvelopeEncryption | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._customKeysAcquisitionUrlTemplate = undefined;
+      this._defaultContentKey.internalValue = undefined;
+      this._enabledProtocols.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._customKeysAcquisitionUrlTemplate = value.customKeysAcquisitionUrlTemplate;
+      this._defaultContentKey.internalValue = value.defaultContentKey;
+      this._enabledProtocols.internalValue = value.enabledProtocols;
+    }
+  }
+
+  // custom_keys_acquisition_url_template - computed: false, optional: true, required: false
+  private _customKeysAcquisitionUrlTemplate?: string; 
+  public get customKeysAcquisitionUrlTemplate() {
+    return this.getStringAttribute('custom_keys_acquisition_url_template');
+  }
+  public set customKeysAcquisitionUrlTemplate(value: string) {
+    this._customKeysAcquisitionUrlTemplate = value;
+  }
+  public resetCustomKeysAcquisitionUrlTemplate() {
+    this._customKeysAcquisitionUrlTemplate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customKeysAcquisitionUrlTemplateInput() {
+    return this._customKeysAcquisitionUrlTemplate;
+  }
+
+  // default_content_key - computed: false, optional: true, required: false
+  private _defaultContentKey = new MediaStreamingPolicyEnvelopeEncryptionDefaultContentKeyOutputReference(this, "default_content_key");
+  public get defaultContentKey() {
+    return this._defaultContentKey;
+  }
+  public putDefaultContentKey(value: MediaStreamingPolicyEnvelopeEncryptionDefaultContentKey) {
+    this._defaultContentKey.internalValue = value;
+  }
+  public resetDefaultContentKey() {
+    this._defaultContentKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultContentKeyInput() {
+    return this._defaultContentKey.internalValue;
+  }
+
+  // enabled_protocols - computed: false, optional: true, required: false
+  private _enabledProtocols = new MediaStreamingPolicyEnvelopeEncryptionEnabledProtocolsOutputReference(this, "enabled_protocols");
+  public get enabledProtocols() {
+    return this._enabledProtocols;
+  }
+  public putEnabledProtocols(value: MediaStreamingPolicyEnvelopeEncryptionEnabledProtocols) {
     this._enabledProtocols.internalValue = value;
   }
   public resetEnabledProtocols() {
@@ -1294,7 +2527,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_streaming_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.45.0',
+        providerVersion: '3.46.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1312,6 +2545,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._commonEncryptionCbcs.internalValue = config.commonEncryptionCbcs;
     this._commonEncryptionCenc.internalValue = config.commonEncryptionCenc;
+    this._envelopeEncryption.internalValue = config.envelopeEncryption;
     this._noEncryptionEnabledProtocols.internalValue = config.noEncryptionEnabledProtocols;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -1423,6 +2657,22 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
     return this._commonEncryptionCenc.internalValue;
   }
 
+  // envelope_encryption - computed: false, optional: true, required: false
+  private _envelopeEncryption = new MediaStreamingPolicyEnvelopeEncryptionOutputReference(this, "envelope_encryption");
+  public get envelopeEncryption() {
+    return this._envelopeEncryption;
+  }
+  public putEnvelopeEncryption(value: MediaStreamingPolicyEnvelopeEncryption) {
+    this._envelopeEncryption.internalValue = value;
+  }
+  public resetEnvelopeEncryption() {
+    this._envelopeEncryption.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get envelopeEncryptionInput() {
+    return this._envelopeEncryption.internalValue;
+  }
+
   // no_encryption_enabled_protocols - computed: false, optional: true, required: false
   private _noEncryptionEnabledProtocols = new MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference(this, "no_encryption_enabled_protocols");
   public get noEncryptionEnabledProtocols() {
@@ -1468,6 +2718,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       common_encryption_cbcs: mediaStreamingPolicyCommonEncryptionCbcsToTerraform(this._commonEncryptionCbcs.internalValue),
       common_encryption_cenc: mediaStreamingPolicyCommonEncryptionCencToTerraform(this._commonEncryptionCenc.internalValue),
+      envelope_encryption: mediaStreamingPolicyEnvelopeEncryptionToTerraform(this._envelopeEncryption.internalValue),
       no_encryption_enabled_protocols: mediaStreamingPolicyNoEncryptionEnabledProtocolsToTerraform(this._noEncryptionEnabledProtocols.internalValue),
       timeouts: mediaStreamingPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -256,7 +256,7 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
       terraformResourceType: 'azurerm_data_factory_linked_service_data_lake_storage_gen2',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.45.0',
+        providerVersion: '3.46.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
