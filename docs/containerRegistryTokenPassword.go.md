@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/container_
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTokenPassword.ContainerRegistryTokenPassword.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytokenpassword"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytokenpassword"
 
 containerregistrytokenpassword.NewContainerRegistryTokenPassword(scope Construct, id *string, config ContainerRegistryTokenPasswordConfig) ContainerRegistryTokenPassword
 ```
@@ -326,7 +326,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.containerRegistryTokenPassword.ContainerRegistryTokenPassword.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytokenpassword"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytokenpassword"
 
 containerregistrytokenpassword.ContainerRegistryTokenPassword_IsConstruct(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.containerRegistryTokenPassword.ContainerRegistryTokenPassword.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytokenpassword"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytokenpassword"
 
 containerregistrytokenpassword.ContainerRegistryTokenPassword_IsTerraformElement(x interface{}) *bool
 ```
@@ -372,7 +372,7 @@ containerregistrytokenpassword.ContainerRegistryTokenPassword_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.containerRegistryTokenPassword.ContainerRegistryTokenPassword.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytokenpassword"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytokenpassword"
 
 containerregistrytokenpassword.ContainerRegistryTokenPassword_IsTerraformResource(x interface{}) *bool
 ```
@@ -681,7 +681,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTokenPassword.ContainerRegistryTokenPasswordConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytokenpassword"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytokenpassword"
 
 &containerregistrytokenpassword.ContainerRegistryTokenPasswordConfig {
 	Connection: interface{},
@@ -692,10 +692,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytoke
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	ContainerRegistryTokenId: *string,
-	Password1: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryTokenPassword.ContainerRegistryTokenPasswordPassword1,
+	Password1: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.containerRegistryTokenPassword.ContainerRegistryTokenPasswordPassword1,
 	Id: *string,
-	Password2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryTokenPassword.ContainerRegistryTokenPasswordPassword2,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryTokenPassword.ContainerRegistryTokenPasswordTimeouts,
+	Password2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.containerRegistryTokenPassword.ContainerRegistryTokenPasswordPassword2,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.containerRegistryTokenPassword.ContainerRegistryTokenPasswordTimeouts,
 }
 ```
 
@@ -862,7 +862,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTokenPassword.ContainerRegistryTokenPasswordPassword1.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytokenpassword"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytokenpassword"
 
 &containerregistrytokenpassword.ContainerRegistryTokenPasswordPassword1 {
 	Expiry: *string,
@@ -894,7 +894,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTokenPassword.ContainerRegistryTokenPasswordPassword2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytokenpassword"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytokenpassword"
 
 &containerregistrytokenpassword.ContainerRegistryTokenPasswordPassword2 {
 	Expiry: *string,
@@ -926,7 +926,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTokenPassword.ContainerRegistryTokenPasswordTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytokenpassword"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytokenpassword"
 
 &containerregistrytokenpassword.ContainerRegistryTokenPasswordTimeouts {
 	Create: *string,
@@ -1002,7 +1002,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTokenPassword.ContainerRegistryTokenPasswordPassword1OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytokenpassword"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytokenpassword"
 
 containerregistrytokenpassword.NewContainerRegistryTokenPasswordPassword1OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTokenPasswordPassword1OutputReference
 ```
@@ -1291,7 +1291,7 @@ func InternalValue() ContainerRegistryTokenPasswordPassword1
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTokenPassword.ContainerRegistryTokenPasswordPassword2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytokenpassword"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytokenpassword"
 
 containerregistrytokenpassword.NewContainerRegistryTokenPasswordPassword2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTokenPasswordPassword2OutputReference
 ```
@@ -1580,7 +1580,7 @@ func InternalValue() ContainerRegistryTokenPasswordPassword2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTokenPassword.ContainerRegistryTokenPasswordTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytokenpassword"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytokenpassword"
 
 containerregistrytokenpassword.NewContainerRegistryTokenPasswordTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTokenPasswordTimeoutsOutputReference
 ```

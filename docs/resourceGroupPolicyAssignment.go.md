@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/resource_g
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcegrouppolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/resourcegrouppolicyassignment"
 
 resourcegrouppolicyassignment.NewResourceGroupPolicyAssignment(scope Construct, id *string, config ResourceGroupPolicyAssignmentConfig) ResourceGroupPolicyAssignment
 ```
@@ -382,7 +382,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcegrouppolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/resourcegrouppolicyassignment"
 
 resourcegrouppolicyassignment.ResourceGroupPolicyAssignment_IsConstruct(x interface{}) *bool
 ```
@@ -414,7 +414,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcegrouppolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/resourcegrouppolicyassignment"
 
 resourcegrouppolicyassignment.ResourceGroupPolicyAssignment_IsTerraformElement(x interface{}) *bool
 ```
@@ -428,7 +428,7 @@ resourcegrouppolicyassignment.ResourceGroupPolicyAssignment_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcegrouppolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/resourcegrouppolicyassignment"
 
 resourcegrouppolicyassignment.ResourceGroupPolicyAssignment_IsTerraformResource(x interface{}) *bool
 ```
@@ -935,7 +935,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcegrouppolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/resourcegrouppolicyassignment"
 
 &resourcegrouppolicyassignment.ResourceGroupPolicyAssignmentConfig {
 	Connection: interface{},
@@ -952,13 +952,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcegrouppolicyas
 	DisplayName: *string,
 	Enforce: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignmentIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignmentIdentity,
 	Location: *string,
 	Metadata: *string,
 	NonComplianceMessage: interface{},
 	NotScopes: *[]*string,
 	Parameters: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignmentTimeouts,
 }
 ```
 
@@ -1242,7 +1242,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignmentIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcegrouppolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/resourcegrouppolicyassignment"
 
 &resourcegrouppolicyassignment.ResourceGroupPolicyAssignmentIdentity {
 	Type: *string,
@@ -1288,7 +1288,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignmentNonComplianceMessage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcegrouppolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/resourcegrouppolicyassignment"
 
 &resourcegrouppolicyassignment.ResourceGroupPolicyAssignmentNonComplianceMessage {
 	Content: *string,
@@ -1334,7 +1334,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcegrouppolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/resourcegrouppolicyassignment"
 
 &resourcegrouppolicyassignment.ResourceGroupPolicyAssignmentTimeouts {
 	Create: *string,
@@ -1410,7 +1410,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignmentIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcegrouppolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/resourcegrouppolicyassignment"
 
 resourcegrouppolicyassignment.NewResourceGroupPolicyAssignmentIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ResourceGroupPolicyAssignmentIdentityOutputReference
 ```
@@ -1732,7 +1732,7 @@ func InternalValue() ResourceGroupPolicyAssignmentIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignmentNonComplianceMessageList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcegrouppolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/resourcegrouppolicyassignment"
 
 resourcegrouppolicyassignment.NewResourceGroupPolicyAssignmentNonComplianceMessageList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ResourceGroupPolicyAssignmentNonComplianceMessageList
 ```
@@ -1875,7 +1875,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignmentNonComplianceMessageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcegrouppolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/resourcegrouppolicyassignment"
 
 resourcegrouppolicyassignment.NewResourceGroupPolicyAssignmentNonComplianceMessageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ResourceGroupPolicyAssignmentNonComplianceMessageOutputReference
 ```
@@ -2193,7 +2193,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupPolicyAssignment.ResourceGroupPolicyAssignmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcegrouppolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/resourcegrouppolicyassignment"
 
 resourcegrouppolicyassignment.NewResourceGroupPolicyAssignmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ResourceGroupPolicyAssignmentTimeoutsOutputReference
 ```
