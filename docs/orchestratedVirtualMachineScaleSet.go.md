@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrat
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSet(scope Construct, id *string, config OrchestratedVirtualMachineScaleSetConfig) OrchestratedVirtualMachineScaleSet
 ```
@@ -76,6 +76,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.putOsDisk">PutOsDisk</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.putOsProfile">PutOsProfile</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.putPlan">PutPlan</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.putPriorityMix">PutPriorityMix</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.putSourceImageReference">PutSourceImageReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.putTerminationNotification">PutTerminationNotification</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.putTimeouts">PutTimeouts</a></code> | *No description.* |
@@ -99,6 +100,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.resetOsProfile">ResetOsProfile</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.resetPlan">ResetPlan</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.resetPriority">ResetPriority</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.resetPriorityMix">ResetPriorityMix</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.resetProximityPlacementGroupId">ResetProximityPlacementGroupId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.resetSinglePlacementGroup">ResetSinglePlacementGroup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.resetSkuName">ResetSkuName</a></code> | *No description.* |
@@ -417,6 +419,18 @@ func PutPlan(value OrchestratedVirtualMachineScaleSetPlan)
 
 ---
 
+##### `PutPriorityMix` <a name="PutPriorityMix" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.putPriorityMix"></a>
+
+```go
+func PutPriorityMix(value OrchestratedVirtualMachineScaleSetPriorityMix)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.putPriorityMix.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMix">OrchestratedVirtualMachineScaleSetPriorityMix</a>
+
+---
+
 ##### `PutSourceImageReference` <a name="PutSourceImageReference" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.putSourceImageReference"></a>
 
 ```go
@@ -573,6 +587,12 @@ func ResetPlan()
 func ResetPriority()
 ```
 
+##### `ResetPriorityMix` <a name="ResetPriorityMix" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.resetPriorityMix"></a>
+
+```go
+func ResetPriorityMix()
+```
+
 ##### `ResetProximityPlacementGroupId` <a name="ResetProximityPlacementGroupId" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.resetProximityPlacementGroupId"></a>
 
 ```go
@@ -652,7 +672,7 @@ func ResetZones()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSet_IsConstruct(x interface{}) *bool
 ```
@@ -684,7 +704,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSet_IsTerraformElement(x interface{}) *bool
 ```
@@ -698,7 +718,7 @@ orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSet_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSet_IsTerraformResource(x interface{}) *bool
 ```
@@ -737,6 +757,7 @@ orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSet_IsTerrafor
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.osDisk">OsDisk</a></code> | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsDiskOutputReference">OrchestratedVirtualMachineScaleSetOsDiskOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.osProfile">OsProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileOutputReference">OrchestratedVirtualMachineScaleSetOsProfileOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.plan">Plan</a></code> | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPlanOutputReference">OrchestratedVirtualMachineScaleSetPlanOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.priorityMix">PriorityMix</a></code> | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference">OrchestratedVirtualMachineScaleSetPriorityMixOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.sourceImageReference">SourceImageReference</a></code> | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReference">OrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.terminationNotification">TerminationNotification</a></code> | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetTerminationNotificationOutputReference">OrchestratedVirtualMachineScaleSetTerminationNotificationOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetTimeoutsOutputReference">OrchestratedVirtualMachineScaleSetTimeoutsOutputReference</a></code> | *No description.* |
@@ -764,6 +785,7 @@ orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSet_IsTerrafor
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.planInput">PlanInput</a></code> | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPlan">OrchestratedVirtualMachineScaleSetPlan</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.platformFaultDomainCountInput">PlatformFaultDomainCountInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.priorityInput">PriorityInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.priorityMixInput">PriorityMixInput</a></code> | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMix">OrchestratedVirtualMachineScaleSetPriorityMix</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.proximityPlacementGroupIdInput">ProximityPlacementGroupIdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.resourceGroupNameInput">ResourceGroupNameInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.singlePlacementGroupInput">SinglePlacementGroupInput</a></code> | <code>interface{}</code> | *No description.* |
@@ -1043,6 +1065,16 @@ func Plan() OrchestratedVirtualMachineScaleSetPlanOutputReference
 
 ---
 
+##### `PriorityMix`<sup>Required</sup> <a name="PriorityMix" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.priorityMix"></a>
+
+```go
+func PriorityMix() OrchestratedVirtualMachineScaleSetPriorityMixOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference">OrchestratedVirtualMachineScaleSetPriorityMixOutputReference</a>
+
+---
+
 ##### `SourceImageReference`<sup>Required</sup> <a name="SourceImageReference" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.sourceImageReference"></a>
 
 ```go
@@ -1310,6 +1342,16 @@ func PriorityInput() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `PriorityMixInput`<sup>Optional</sup> <a name="PriorityMixInput" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSet.property.priorityMixInput"></a>
+
+```go
+func PriorityMixInput() OrchestratedVirtualMachineScaleSetPriorityMix
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMix">OrchestratedVirtualMachineScaleSetPriorityMix</a>
 
 ---
 
@@ -1678,7 +1720,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetAdditionalCapabilities.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetAdditionalCapabilities {
 	UltraSsdEnabled: interface{},
@@ -1710,7 +1752,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetAutomaticInstanceRepair.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetAutomaticInstanceRepair {
 	Enabled: interface{},
@@ -1756,7 +1798,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetBootDiagnostics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetBootDiagnostics {
 	StorageAccountUri: *string,
@@ -1788,7 +1830,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetConfig {
 	Connection: interface{},
@@ -1802,9 +1844,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtua
 	Name: *string,
 	PlatformFaultDomainCount: *f64,
 	ResourceGroupName: *string,
-	AdditionalCapabilities: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetAdditionalCapabilities,
-	AutomaticInstanceRepair: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetAutomaticInstanceRepair,
-	BootDiagnostics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetBootDiagnostics,
+	AdditionalCapabilities: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetAdditionalCapabilities,
+	AutomaticInstanceRepair: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetAutomaticInstanceRepair,
+	BootDiagnostics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetBootDiagnostics,
 	CapacityReservationGroupId: *string,
 	DataDisk: interface{},
 	EncryptionAtHostEnabled: interface{},
@@ -1813,23 +1855,24 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtua
 	ExtensionOperationsEnabled: interface{},
 	ExtensionsTimeBudget: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetIdentity,
 	Instances: *f64,
 	LicenseType: *string,
 	MaxBidPrice: *f64,
 	NetworkInterface: interface{},
-	OsDisk: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsDisk,
-	OsProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfile,
-	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPlan,
+	OsDisk: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsDisk,
+	OsProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfile,
+	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPlan,
 	Priority: *string,
+	PriorityMix: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMix,
 	ProximityPlacementGroupId: *string,
 	SinglePlacementGroup: interface{},
 	SkuName: *string,
 	SourceImageId: *string,
-	SourceImageReference: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetSourceImageReference,
+	SourceImageReference: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetSourceImageReference,
 	Tags: *map[string]*string,
-	TerminationNotification: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetTerminationNotification,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetTimeouts,
+	TerminationNotification: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetTerminationNotification,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetTimeouts,
 	UserDataBase64: *string,
 	ZoneBalance: interface{},
 	Zones: *[]*string,
@@ -1871,6 +1914,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtua
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetConfig.property.osProfile">OsProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfile">OrchestratedVirtualMachineScaleSetOsProfile</a></code> | os_profile block. |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetConfig.property.plan">Plan</a></code> | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPlan">OrchestratedVirtualMachineScaleSetPlan</a></code> | plan block. |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetConfig.property.priority">Priority</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#priority OrchestratedVirtualMachineScaleSet#priority}. |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetConfig.property.priorityMix">PriorityMix</a></code> | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMix">OrchestratedVirtualMachineScaleSetPriorityMix</a></code> | priority_mix block. |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetConfig.property.proximityPlacementGroupId">ProximityPlacementGroupId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#proximity_placement_group_id OrchestratedVirtualMachineScaleSet#proximity_placement_group_id}. |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetConfig.property.singlePlacementGroup">SinglePlacementGroup</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#single_placement_group OrchestratedVirtualMachineScaleSet#single_placement_group}. |
 | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetConfig.property.skuName">SkuName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#sku_name OrchestratedVirtualMachineScaleSet#sku_name}. |
@@ -2266,6 +2310,20 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ---
 
+##### `PriorityMix`<sup>Optional</sup> <a name="PriorityMix" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetConfig.property.priorityMix"></a>
+
+```go
+PriorityMix OrchestratedVirtualMachineScaleSetPriorityMix
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMix">OrchestratedVirtualMachineScaleSetPriorityMix</a>
+
+priority_mix block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#priority_mix OrchestratedVirtualMachineScaleSet#priority_mix}
+
+---
+
 ##### `ProximityPlacementGroupId`<sup>Optional</sup> <a name="ProximityPlacementGroupId" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetConfig.property.proximityPlacementGroupId"></a>
 
 ```go
@@ -2409,7 +2467,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetDataDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetDataDisk {
 	Caching: *string,
@@ -2553,7 +2611,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetExtension.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetExtension {
 	Name: *string,
@@ -2565,7 +2623,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtua
 	FailureSuppressionEnabled: interface{},
 	ForceExtensionExecutionOnChange: *string,
 	ProtectedSettings: *string,
-	ProtectedSettingsFromKeyVault: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault,
+	ProtectedSettingsFromKeyVault: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault,
 	Settings: *string,
 }
 ```
@@ -2727,7 +2785,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault {
 	SecretUrl: *string,
@@ -2773,7 +2831,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetIdentity {
 	IdentityIds: *[]*string,
@@ -2819,7 +2877,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetNetworkInterface.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetNetworkInterface {
 	IpConfiguration: interface{},
@@ -2937,7 +2995,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfiguration {
 	Name: *string,
@@ -3069,7 +3127,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress {
 	Name: *string,
@@ -3187,7 +3245,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag {
 	Tag: *string,
@@ -3233,12 +3291,12 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetOsDisk {
 	Caching: *string,
 	StorageAccountType: *string,
-	DiffDiskSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettings,
+	DiffDiskSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettings,
 	DiskEncryptionSetId: *string,
 	DiskSizeGb: *f64,
 	WriteAcceleratorEnabled: interface{},
@@ -3337,7 +3395,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettings {
 	Option: *string,
@@ -3383,12 +3441,12 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetOsProfile {
 	CustomData: *string,
-	LinuxConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfiguration,
-	WindowsConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfiguration,
+	LinuxConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfiguration,
+	WindowsConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfiguration,
 }
 ```
 
@@ -3447,7 +3505,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfiguration {
 	AdminUsername: *string,
@@ -3595,7 +3653,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKey {
 	PublicKey: *string,
@@ -3641,7 +3699,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecret {
 	Certificate: interface{},
@@ -3689,7 +3747,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificate {
 	Url: *string,
@@ -3721,7 +3779,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfiguration {
 	AdminPassword: *string,
@@ -3897,7 +3955,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecret {
 	Certificate: interface{},
@@ -3945,7 +4003,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificate {
 	Store: *string,
@@ -3991,7 +4049,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListener.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListener {
 	Protocol: *string,
@@ -4037,7 +4095,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetPlan {
 	Name: *string,
@@ -4092,12 +4150,58 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ---
 
+### OrchestratedVirtualMachineScaleSetPriorityMix <a name="OrchestratedVirtualMachineScaleSetPriorityMix" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMix"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMix.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
+
+&orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetPriorityMix {
+	BaseRegularCount: *f64,
+	RegularPercentageAboveBase: *f64,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMix.property.baseRegularCount">BaseRegularCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#base_regular_count OrchestratedVirtualMachineScaleSet#base_regular_count}. |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMix.property.regularPercentageAboveBase">RegularPercentageAboveBase</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#regular_percentage_above_base OrchestratedVirtualMachineScaleSet#regular_percentage_above_base}. |
+
+---
+
+##### `BaseRegularCount`<sup>Optional</sup> <a name="BaseRegularCount" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMix.property.baseRegularCount"></a>
+
+```go
+BaseRegularCount *f64
+```
+
+- *Type:* *f64
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#base_regular_count OrchestratedVirtualMachineScaleSet#base_regular_count}.
+
+---
+
+##### `RegularPercentageAboveBase`<sup>Optional</sup> <a name="RegularPercentageAboveBase" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMix.property.regularPercentageAboveBase"></a>
+
+```go
+RegularPercentageAboveBase *f64
+```
+
+- *Type:* *f64
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#regular_percentage_above_base OrchestratedVirtualMachineScaleSet#regular_percentage_above_base}.
+
+---
+
 ### OrchestratedVirtualMachineScaleSetSourceImageReference <a name="OrchestratedVirtualMachineScaleSetSourceImageReference" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetSourceImageReference"></a>
 
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetSourceImageReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetSourceImageReference {
 	Offer: *string,
@@ -4171,7 +4275,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetTerminationNotification.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetTerminationNotification {
 	Enabled: interface{},
@@ -4217,7 +4321,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 &orchestratedvirtualmachinescaleset.OrchestratedVirtualMachineScaleSetTimeouts {
 	Create: *string,
@@ -4293,7 +4397,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetAdditionalCapabilitiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetAdditionalCapabilitiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrchestratedVirtualMachineScaleSetAdditionalCapabilitiesOutputReference
 ```
@@ -4571,7 +4675,7 @@ func InternalValue() OrchestratedVirtualMachineScaleSetAdditionalCapabilities
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetAutomaticInstanceRepairOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetAutomaticInstanceRepairOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrchestratedVirtualMachineScaleSetAutomaticInstanceRepairOutputReference
 ```
@@ -4871,7 +4975,7 @@ func InternalValue() OrchestratedVirtualMachineScaleSetAutomaticInstanceRepair
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetBootDiagnosticsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetBootDiagnosticsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrchestratedVirtualMachineScaleSetBootDiagnosticsOutputReference
 ```
@@ -5149,7 +5253,7 @@ func InternalValue() OrchestratedVirtualMachineScaleSetBootDiagnostics
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetDataDiskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetDataDiskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OrchestratedVirtualMachineScaleSetDataDiskList
 ```
@@ -5292,7 +5396,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetDataDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetDataDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OrchestratedVirtualMachineScaleSetDataDiskOutputReference
 ```
@@ -5792,7 +5896,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetExtensionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetExtensionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OrchestratedVirtualMachineScaleSetExtensionList
 ```
@@ -5935,7 +6039,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetExtensionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetExtensionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OrchestratedVirtualMachineScaleSetExtensionOutputReference
 ```
@@ -6506,7 +6610,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVaultOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVaultOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrchestratedVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVaultOutputReference
 ```
@@ -6799,7 +6903,7 @@ func InternalValue() OrchestratedVirtualMachineScaleSetExtensionProtectedSetting
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrchestratedVirtualMachineScaleSetIdentityOutputReference
 ```
@@ -7092,7 +7196,7 @@ func InternalValue() OrchestratedVirtualMachineScaleSetIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationList
 ```
@@ -7235,7 +7339,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationOutputReference
 ```
@@ -7740,7 +7844,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagList
 ```
@@ -7883,7 +7987,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagOutputReference
 ```
@@ -8194,7 +8298,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressList
 ```
@@ -8337,7 +8441,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressOutputReference
 ```
@@ -8813,7 +8917,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetNetworkInterfaceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetNetworkInterfaceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OrchestratedVirtualMachineScaleSetNetworkInterfaceList
 ```
@@ -8956,7 +9060,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetNetworkInterfaceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetNetworkInterfaceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OrchestratedVirtualMachineScaleSetNetworkInterfaceOutputReference
 ```
@@ -9425,7 +9529,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference
 ```
@@ -9725,7 +9829,7 @@ func InternalValue() OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrchestratedVirtualMachineScaleSetOsDiskOutputReference
 ```
@@ -10147,7 +10251,7 @@ func InternalValue() OrchestratedVirtualMachineScaleSetOsDisk
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKeyList
 ```
@@ -10290,7 +10394,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKeyOutputReference
 ```
@@ -10601,7 +10705,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutputReference
 ```
@@ -11130,7 +11234,7 @@ func InternalValue() OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurati
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificateList
 ```
@@ -11273,7 +11377,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificateOutputReference
 ```
@@ -11562,7 +11666,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretList
 ```
@@ -11705,7 +11809,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretOutputReference
 ```
@@ -12029,7 +12133,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrchestratedVirtualMachineScaleSetOsProfileOutputReference
 ```
@@ -12391,7 +12495,7 @@ func InternalValue() OrchestratedVirtualMachineScaleSetOsProfile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutputReference
 ```
@@ -12971,7 +13075,7 @@ func InternalValue() OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigura
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificateList
 ```
@@ -13114,7 +13218,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificateOutputReference
 ```
@@ -13425,7 +13529,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretList
 ```
@@ -13568,7 +13672,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretOutputReference
 ```
@@ -13892,7 +13996,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListenerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListenerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListenerList
 ```
@@ -14035,7 +14139,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListenerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListenerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListenerOutputReference
 ```
@@ -14353,7 +14457,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPlanOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetPlanOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrchestratedVirtualMachineScaleSetPlanOutputReference
 ```
@@ -14663,12 +14767,319 @@ func InternalValue() OrchestratedVirtualMachineScaleSetPlan
 ---
 
 
+### OrchestratedVirtualMachineScaleSetPriorityMixOutputReference <a name="OrchestratedVirtualMachineScaleSetPriorityMixOutputReference" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
+
+orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetPriorityMixOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrchestratedVirtualMachineScaleSetPriorityMixOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.resetBaseRegularCount">ResetBaseRegularCount</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.resetRegularPercentageAboveBase">ResetRegularPercentageAboveBase</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetBaseRegularCount` <a name="ResetBaseRegularCount" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.resetBaseRegularCount"></a>
+
+```go
+func ResetBaseRegularCount()
+```
+
+##### `ResetRegularPercentageAboveBase` <a name="ResetRegularPercentageAboveBase" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.resetRegularPercentageAboveBase"></a>
+
+```go
+func ResetRegularPercentageAboveBase()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.property.baseRegularCountInput">BaseRegularCountInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.property.regularPercentageAboveBaseInput">RegularPercentageAboveBaseInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.property.baseRegularCount">BaseRegularCount</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.property.regularPercentageAboveBase">RegularPercentageAboveBase</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMix">OrchestratedVirtualMachineScaleSetPriorityMix</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `BaseRegularCountInput`<sup>Optional</sup> <a name="BaseRegularCountInput" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.property.baseRegularCountInput"></a>
+
+```go
+func BaseRegularCountInput() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `RegularPercentageAboveBaseInput`<sup>Optional</sup> <a name="RegularPercentageAboveBaseInput" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.property.regularPercentageAboveBaseInput"></a>
+
+```go
+func RegularPercentageAboveBaseInput() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `BaseRegularCount`<sup>Required</sup> <a name="BaseRegularCount" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.property.baseRegularCount"></a>
+
+```go
+func BaseRegularCount() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `RegularPercentageAboveBase`<sup>Required</sup> <a name="RegularPercentageAboveBase" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.property.regularPercentageAboveBase"></a>
+
+```go
+func RegularPercentageAboveBase() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMixOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() OrchestratedVirtualMachineScaleSetPriorityMix
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetPriorityMix">OrchestratedVirtualMachineScaleSetPriorityMix</a>
+
+---
+
+
 ### OrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReference <a name="OrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReference" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReference
 ```
@@ -15005,7 +15416,7 @@ func InternalValue() OrchestratedVirtualMachineScaleSetSourceImageReference
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetTerminationNotificationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetTerminationNotificationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrchestratedVirtualMachineScaleSetTerminationNotificationOutputReference
 ```
@@ -15305,7 +15716,7 @@ func InternalValue() OrchestratedVirtualMachineScaleSetTerminationNotification
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet.OrchestratedVirtualMachineScaleSetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/orchestratedvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orchestratedvirtualmachinescaleset"
 
 orchestratedvirtualmachinescaleset.NewOrchestratedVirtualMachineScaleSetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrchestratedVirtualMachineScaleSetTimeoutsOutputReference
 ```

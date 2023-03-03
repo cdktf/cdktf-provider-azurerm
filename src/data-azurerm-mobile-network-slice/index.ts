@@ -200,7 +200,7 @@ export class DataAzurermMobileNetworkSlice extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_mobile_network_slice',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.45.0',
+        providerVersion: '3.46.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

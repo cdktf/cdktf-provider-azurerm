@@ -551,6 +551,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 ```python
 def put_microsoft_peering_config(
   advertised_public_prefixes: typing.List[str],
+  advertised_communities: typing.List[str] = None,
   customer_asn: typing.Union[int, float] = None,
   routing_registry_name: str = None
 ) -> None
@@ -561,6 +562,14 @@ def put_microsoft_peering_config(
 - *Type:* typing.List[str]
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_public_prefixes ExpressRouteCircuitPeering#advertised_public_prefixes}.
+
+---
+
+###### `advertised_communities`<sup>Optional</sup> <a name="advertised_communities" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeering.putMicrosoftPeeringConfig.parameter.advertisedCommunities"></a>
+
+- *Type:* typing.List[str]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_communities ExpressRouteCircuitPeering#advertised_communities}.
 
 ---
 
@@ -1699,6 +1708,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 from cdktf_cdktf_provider_azurerm import express_route_circuit_peering
 
 expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering(
+  advertised_communities: typing.List[str] = None,
   advertised_public_prefixes: typing.List[str] = None,
   customer_asn: typing.Union[int, float] = None,
   routing_registry_name: str = None
@@ -1709,9 +1719,22 @@ expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering.property.advertisedCommunities">advertised_communities</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_communities ExpressRouteCircuitPeering#advertised_communities}. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering.property.advertisedPublicPrefixes">advertised_public_prefixes</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_public_prefixes ExpressRouteCircuitPeering#advertised_public_prefixes}. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering.property.customerAsn">customer_asn</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#customer_asn ExpressRouteCircuitPeering#customer_asn}. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering.property.routingRegistryName">routing_registry_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#routing_registry_name ExpressRouteCircuitPeering#routing_registry_name}. |
+
+---
+
+##### `advertised_communities`<sup>Optional</sup> <a name="advertised_communities" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering.property.advertisedCommunities"></a>
+
+```python
+advertised_communities: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_communities ExpressRouteCircuitPeering#advertised_communities}.
 
 ---
 
@@ -1760,6 +1783,7 @@ from cdktf_cdktf_provider_azurerm import express_route_circuit_peering
 
 expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig(
   advertised_public_prefixes: typing.List[str],
+  advertised_communities: typing.List[str] = None,
   customer_asn: typing.Union[int, float] = None,
   routing_registry_name: str = None
 )
@@ -1770,6 +1794,7 @@ expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig.property.advertisedPublicPrefixes">advertised_public_prefixes</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_public_prefixes ExpressRouteCircuitPeering#advertised_public_prefixes}. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig.property.advertisedCommunities">advertised_communities</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_communities ExpressRouteCircuitPeering#advertised_communities}. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig.property.customerAsn">customer_asn</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#customer_asn ExpressRouteCircuitPeering#customer_asn}. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig.property.routingRegistryName">routing_registry_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#routing_registry_name ExpressRouteCircuitPeering#routing_registry_name}. |
 
@@ -1784,6 +1809,18 @@ advertised_public_prefixes: typing.List[str]
 - *Type:* typing.List[str]
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_public_prefixes ExpressRouteCircuitPeering#advertised_public_prefixes}.
+
+---
+
+##### `advertised_communities`<sup>Optional</sup> <a name="advertised_communities" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig.property.advertisedCommunities"></a>
+
+```python
+advertised_communities: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_communities ExpressRouteCircuitPeering#advertised_communities}.
 
 ---
 
@@ -1940,6 +1977,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.resetAdvertisedCommunities">reset_advertised_communities</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.resetAdvertisedPublicPrefixes">reset_advertised_public_prefixes</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.resetCustomerAsn">reset_customer_asn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.resetRoutingRegistryName">reset_routing_registry_name</a></code> | *No description.* |
@@ -2118,6 +2156,12 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `reset_advertised_communities` <a name="reset_advertised_communities" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.resetAdvertisedCommunities"></a>
+
+```python
+def reset_advertised_communities() -> None
+```
+
 ##### `reset_advertised_public_prefixes` <a name="reset_advertised_public_prefixes" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.resetAdvertisedPublicPrefixes"></a>
 
 ```python
@@ -2143,9 +2187,11 @@ def reset_routing_registry_name() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.advertisedCommunitiesInput">advertised_communities_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.advertisedPublicPrefixesInput">advertised_public_prefixes_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.customerAsnInput">customer_asn_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.routingRegistryNameInput">routing_registry_name_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.advertisedCommunities">advertised_communities</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.advertisedPublicPrefixes">advertised_public_prefixes</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.customerAsn">customer_asn</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.routingRegistryName">routing_registry_name</a></code> | <code>str</code> | *No description.* |
@@ -2177,6 +2223,16 @@ fqn: str
 
 ---
 
+##### `advertised_communities_input`<sup>Optional</sup> <a name="advertised_communities_input" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.advertisedCommunitiesInput"></a>
+
+```python
+advertised_communities_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
 ##### `advertised_public_prefixes_input`<sup>Optional</sup> <a name="advertised_public_prefixes_input" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.advertisedPublicPrefixesInput"></a>
 
 ```python
@@ -2204,6 +2260,16 @@ routing_registry_name_input: str
 ```
 
 - *Type:* str
+
+---
+
+##### `advertised_communities`<sup>Required</sup> <a name="advertised_communities" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.advertisedCommunities"></a>
+
+```python
+advertised_communities: typing.List[str]
+```
+
+- *Type:* typing.List[str]
 
 ---
 
@@ -2484,11 +2550,20 @@ Returns a reversible string representation.
 
 ```python
 def put_microsoft_peering(
+  advertised_communities: typing.List[str] = None,
   advertised_public_prefixes: typing.List[str] = None,
   customer_asn: typing.Union[int, float] = None,
   routing_registry_name: str = None
 ) -> None
 ```
+
+###### `advertised_communities`<sup>Optional</sup> <a name="advertised_communities" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6OutputReference.putMicrosoftPeering.parameter.advertisedCommunities"></a>
+
+- *Type:* typing.List[str]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_communities ExpressRouteCircuitPeering#advertised_communities}.
+
+---
 
 ###### `advertised_public_prefixes`<sup>Optional</sup> <a name="advertised_public_prefixes" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6OutputReference.putMicrosoftPeering.parameter.advertisedPublicPrefixes"></a>
 
@@ -2741,6 +2816,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.resetAdvertisedCommunities">reset_advertised_communities</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.resetCustomerAsn">reset_customer_asn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.resetRoutingRegistryName">reset_routing_registry_name</a></code> | *No description.* |
 
@@ -2918,6 +2994,12 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `reset_advertised_communities` <a name="reset_advertised_communities" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.resetAdvertisedCommunities"></a>
+
+```python
+def reset_advertised_communities() -> None
+```
+
 ##### `reset_customer_asn` <a name="reset_customer_asn" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.resetCustomerAsn"></a>
 
 ```python
@@ -2937,9 +3019,11 @@ def reset_routing_registry_name() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.advertisedCommunitiesInput">advertised_communities_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.advertisedPublicPrefixesInput">advertised_public_prefixes_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.customerAsnInput">customer_asn_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.routingRegistryNameInput">routing_registry_name_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.advertisedCommunities">advertised_communities</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.advertisedPublicPrefixes">advertised_public_prefixes</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.customerAsn">customer_asn</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.routingRegistryName">routing_registry_name</a></code> | <code>str</code> | *No description.* |
@@ -2971,6 +3055,16 @@ fqn: str
 
 ---
 
+##### `advertised_communities_input`<sup>Optional</sup> <a name="advertised_communities_input" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.advertisedCommunitiesInput"></a>
+
+```python
+advertised_communities_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
 ##### `advertised_public_prefixes_input`<sup>Optional</sup> <a name="advertised_public_prefixes_input" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.advertisedPublicPrefixesInput"></a>
 
 ```python
@@ -2998,6 +3092,16 @@ routing_registry_name_input: str
 ```
 
 - *Type:* str
+
+---
+
+##### `advertised_communities`<sup>Required</sup> <a name="advertised_communities" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.advertisedCommunities"></a>
+
+```python
+advertised_communities: typing.List[str]
+```
+
+- *Type:* typing.List[str]
 
 ---
 

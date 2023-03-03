@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/express_ro
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeering.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
 
 expressroutecircuitpeering.NewExpressRouteCircuitPeering(scope Construct, id *string, config ExpressRouteCircuitPeeringConfig) ExpressRouteCircuitPeering
 ```
@@ -375,7 +375,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeering.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
 
 expressroutecircuitpeering.ExpressRouteCircuitPeering_IsConstruct(x interface{}) *bool
 ```
@@ -407,7 +407,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeering.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
 
 expressroutecircuitpeering.ExpressRouteCircuitPeering_IsTerraformElement(x interface{}) *bool
 ```
@@ -421,7 +421,7 @@ expressroutecircuitpeering.ExpressRouteCircuitPeering_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeering.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
 
 expressroutecircuitpeering.ExpressRouteCircuitPeering_IsTerraformResource(x interface{}) *bool
 ```
@@ -972,7 +972,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
 
 &expressroutecircuitpeering.ExpressRouteCircuitPeeringConfig {
 	Connection: interface{},
@@ -988,14 +988,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircui
 	VlanId: *f64,
 	Id: *string,
 	Ipv4Enabled: interface{},
-	Ipv6: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6,
-	MicrosoftPeeringConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig,
+	Ipv6: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6,
+	MicrosoftPeeringConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig,
 	PeerAsn: *f64,
 	PrimaryPeerAddressPrefix: *string,
 	RouteFilterId: *string,
 	SecondaryPeerAddressPrefix: *string,
 	SharedKey: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.expressRouteCircuitPeering.ExpressRouteCircuitPeeringTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringTimeouts,
 }
 ```
 
@@ -1279,13 +1279,13 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
 
 &expressroutecircuitpeering.ExpressRouteCircuitPeeringIpv6 {
 	PrimaryPeerAddressPrefix: *string,
 	SecondaryPeerAddressPrefix: *string,
 	Enabled: interface{},
-	MicrosoftPeering: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering,
+	MicrosoftPeering: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering,
 	RouteFilterId: *string,
 }
 ```
@@ -1369,9 +1369,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
 
 &expressroutecircuitpeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering {
+	AdvertisedCommunities: *[]*string,
 	AdvertisedPublicPrefixes: *[]*string,
 	CustomerAsn: *f64,
 	RoutingRegistryName: *string,
@@ -1382,9 +1383,22 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircui
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering.property.advertisedCommunities">AdvertisedCommunities</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_communities ExpressRouteCircuitPeering#advertised_communities}. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering.property.advertisedPublicPrefixes">AdvertisedPublicPrefixes</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_public_prefixes ExpressRouteCircuitPeering#advertised_public_prefixes}. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering.property.customerAsn">CustomerAsn</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#customer_asn ExpressRouteCircuitPeering#customer_asn}. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering.property.routingRegistryName">RoutingRegistryName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#routing_registry_name ExpressRouteCircuitPeering#routing_registry_name}. |
+
+---
+
+##### `AdvertisedCommunities`<sup>Optional</sup> <a name="AdvertisedCommunities" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering.property.advertisedCommunities"></a>
+
+```go
+AdvertisedCommunities *[]*string
+```
+
+- *Type:* *[]*string
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_communities ExpressRouteCircuitPeering#advertised_communities}.
 
 ---
 
@@ -1429,10 +1443,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
 
 &expressroutecircuitpeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig {
 	AdvertisedPublicPrefixes: *[]*string,
+	AdvertisedCommunities: *[]*string,
 	CustomerAsn: *f64,
 	RoutingRegistryName: *string,
 }
@@ -1443,6 +1458,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircui
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig.property.advertisedPublicPrefixes">AdvertisedPublicPrefixes</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_public_prefixes ExpressRouteCircuitPeering#advertised_public_prefixes}. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig.property.advertisedCommunities">AdvertisedCommunities</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_communities ExpressRouteCircuitPeering#advertised_communities}. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig.property.customerAsn">CustomerAsn</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#customer_asn ExpressRouteCircuitPeering#customer_asn}. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig.property.routingRegistryName">RoutingRegistryName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#routing_registry_name ExpressRouteCircuitPeering#routing_registry_name}. |
 
@@ -1457,6 +1473,18 @@ AdvertisedPublicPrefixes *[]*string
 - *Type:* *[]*string
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_public_prefixes ExpressRouteCircuitPeering#advertised_public_prefixes}.
+
+---
+
+##### `AdvertisedCommunities`<sup>Optional</sup> <a name="AdvertisedCommunities" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig.property.advertisedCommunities"></a>
+
+```go
+AdvertisedCommunities *[]*string
+```
+
+- *Type:* *[]*string
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_communities ExpressRouteCircuitPeering#advertised_communities}.
 
 ---
 
@@ -1489,7 +1517,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
 
 &expressroutecircuitpeering.ExpressRouteCircuitPeeringTimeouts {
 	Create: *string,
@@ -1565,7 +1593,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
 
 expressroutecircuitpeering.NewExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference
 ```
@@ -1610,6 +1638,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.resetAdvertisedCommunities">ResetAdvertisedCommunities</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.resetAdvertisedPublicPrefixes">ResetAdvertisedPublicPrefixes</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.resetCustomerAsn">ResetCustomerAsn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.resetRoutingRegistryName">ResetRoutingRegistryName</a></code> | *No description.* |
@@ -1766,6 +1795,12 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `ResetAdvertisedCommunities` <a name="ResetAdvertisedCommunities" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.resetAdvertisedCommunities"></a>
+
+```go
+func ResetAdvertisedCommunities()
+```
+
 ##### `ResetAdvertisedPublicPrefixes` <a name="ResetAdvertisedPublicPrefixes" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.resetAdvertisedPublicPrefixes"></a>
 
 ```go
@@ -1791,9 +1826,11 @@ func ResetRoutingRegistryName()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.advertisedCommunitiesInput">AdvertisedCommunitiesInput</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.advertisedPublicPrefixesInput">AdvertisedPublicPrefixesInput</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.customerAsnInput">CustomerAsnInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.routingRegistryNameInput">RoutingRegistryNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.advertisedCommunities">AdvertisedCommunities</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.advertisedPublicPrefixes">AdvertisedPublicPrefixes</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.customerAsn">CustomerAsn</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.routingRegistryName">RoutingRegistryName</a></code> | <code>*string</code> | *No description.* |
@@ -1825,6 +1862,16 @@ func Fqn() *string
 
 ---
 
+##### `AdvertisedCommunitiesInput`<sup>Optional</sup> <a name="AdvertisedCommunitiesInput" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.advertisedCommunitiesInput"></a>
+
+```go
+func AdvertisedCommunitiesInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
 ##### `AdvertisedPublicPrefixesInput`<sup>Optional</sup> <a name="AdvertisedPublicPrefixesInput" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.advertisedPublicPrefixesInput"></a>
 
 ```go
@@ -1852,6 +1899,16 @@ func RoutingRegistryNameInput() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `AdvertisedCommunities`<sup>Required</sup> <a name="AdvertisedCommunities" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.property.advertisedCommunities"></a>
+
+```go
+func AdvertisedCommunities() *[]*string
+```
+
+- *Type:* *[]*string
 
 ---
 
@@ -1901,7 +1958,7 @@ func InternalValue() ExpressRouteCircuitPeeringIpv6MicrosoftPeering
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
 
 expressroutecircuitpeering.NewExpressRouteCircuitPeeringIpv6OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ExpressRouteCircuitPeeringIpv6OutputReference
 ```
@@ -2294,7 +2351,7 @@ func InternalValue() ExpressRouteCircuitPeeringIpv6
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
 
 expressroutecircuitpeering.NewExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference
 ```
@@ -2339,6 +2396,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.resetAdvertisedCommunities">ResetAdvertisedCommunities</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.resetCustomerAsn">ResetCustomerAsn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.resetRoutingRegistryName">ResetRoutingRegistryName</a></code> | *No description.* |
 
@@ -2494,6 +2552,12 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `ResetAdvertisedCommunities` <a name="ResetAdvertisedCommunities" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.resetAdvertisedCommunities"></a>
+
+```go
+func ResetAdvertisedCommunities()
+```
+
 ##### `ResetCustomerAsn` <a name="ResetCustomerAsn" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.resetCustomerAsn"></a>
 
 ```go
@@ -2513,9 +2577,11 @@ func ResetRoutingRegistryName()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.advertisedCommunitiesInput">AdvertisedCommunitiesInput</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.advertisedPublicPrefixesInput">AdvertisedPublicPrefixesInput</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.customerAsnInput">CustomerAsnInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.routingRegistryNameInput">RoutingRegistryNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.advertisedCommunities">AdvertisedCommunities</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.advertisedPublicPrefixes">AdvertisedPublicPrefixes</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.customerAsn">CustomerAsn</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.routingRegistryName">RoutingRegistryName</a></code> | <code>*string</code> | *No description.* |
@@ -2547,6 +2613,16 @@ func Fqn() *string
 
 ---
 
+##### `AdvertisedCommunitiesInput`<sup>Optional</sup> <a name="AdvertisedCommunitiesInput" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.advertisedCommunitiesInput"></a>
+
+```go
+func AdvertisedCommunitiesInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
 ##### `AdvertisedPublicPrefixesInput`<sup>Optional</sup> <a name="AdvertisedPublicPrefixesInput" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.advertisedPublicPrefixesInput"></a>
 
 ```go
@@ -2574,6 +2650,16 @@ func RoutingRegistryNameInput() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `AdvertisedCommunities`<sup>Required</sup> <a name="AdvertisedCommunities" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.property.advertisedCommunities"></a>
+
+```go
+func AdvertisedCommunities() *[]*string
+```
+
+- *Type:* *[]*string
 
 ---
 
@@ -2623,7 +2709,7 @@ func InternalValue() ExpressRouteCircuitPeeringMicrosoftPeeringConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
 
 expressroutecircuitpeering.NewExpressRouteCircuitPeeringTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ExpressRouteCircuitPeeringTimeoutsOutputReference
 ```

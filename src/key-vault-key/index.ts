@@ -51,11 +51,230 @@ export interface KeyVaultKeyConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string };
   /**
+  * rotation_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_key#rotation_policy KeyVaultKey#rotation_policy}
+  */
+  readonly rotationPolicy?: KeyVaultKeyRotationPolicy;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_key#timeouts KeyVaultKey#timeouts}
   */
   readonly timeouts?: KeyVaultKeyTimeouts;
+}
+export interface KeyVaultKeyRotationPolicyAutomatic {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_key#time_after_creation KeyVaultKey#time_after_creation}
+  */
+  readonly timeAfterCreation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_key#time_before_expiry KeyVaultKey#time_before_expiry}
+  */
+  readonly timeBeforeExpiry?: string;
+}
+
+export function keyVaultKeyRotationPolicyAutomaticToTerraform(struct?: KeyVaultKeyRotationPolicyAutomaticOutputReference | KeyVaultKeyRotationPolicyAutomatic): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    time_after_creation: cdktf.stringToTerraform(struct!.timeAfterCreation),
+    time_before_expiry: cdktf.stringToTerraform(struct!.timeBeforeExpiry),
+  }
+}
+
+export class KeyVaultKeyRotationPolicyAutomaticOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KeyVaultKeyRotationPolicyAutomatic | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._timeAfterCreation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeAfterCreation = this._timeAfterCreation;
+    }
+    if (this._timeBeforeExpiry !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeBeforeExpiry = this._timeBeforeExpiry;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KeyVaultKeyRotationPolicyAutomatic | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._timeAfterCreation = undefined;
+      this._timeBeforeExpiry = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._timeAfterCreation = value.timeAfterCreation;
+      this._timeBeforeExpiry = value.timeBeforeExpiry;
+    }
+  }
+
+  // time_after_creation - computed: false, optional: true, required: false
+  private _timeAfterCreation?: string; 
+  public get timeAfterCreation() {
+    return this.getStringAttribute('time_after_creation');
+  }
+  public set timeAfterCreation(value: string) {
+    this._timeAfterCreation = value;
+  }
+  public resetTimeAfterCreation() {
+    this._timeAfterCreation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeAfterCreationInput() {
+    return this._timeAfterCreation;
+  }
+
+  // time_before_expiry - computed: false, optional: true, required: false
+  private _timeBeforeExpiry?: string; 
+  public get timeBeforeExpiry() {
+    return this.getStringAttribute('time_before_expiry');
+  }
+  public set timeBeforeExpiry(value: string) {
+    this._timeBeforeExpiry = value;
+  }
+  public resetTimeBeforeExpiry() {
+    this._timeBeforeExpiry = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeBeforeExpiryInput() {
+    return this._timeBeforeExpiry;
+  }
+}
+export interface KeyVaultKeyRotationPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_key#expire_after KeyVaultKey#expire_after}
+  */
+  readonly expireAfter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_key#notify_before_expiry KeyVaultKey#notify_before_expiry}
+  */
+  readonly notifyBeforeExpiry?: string;
+  /**
+  * automatic block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_key#automatic KeyVaultKey#automatic}
+  */
+  readonly automatic?: KeyVaultKeyRotationPolicyAutomatic;
+}
+
+export function keyVaultKeyRotationPolicyToTerraform(struct?: KeyVaultKeyRotationPolicyOutputReference | KeyVaultKeyRotationPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    expire_after: cdktf.stringToTerraform(struct!.expireAfter),
+    notify_before_expiry: cdktf.stringToTerraform(struct!.notifyBeforeExpiry),
+    automatic: keyVaultKeyRotationPolicyAutomaticToTerraform(struct!.automatic),
+  }
+}
+
+export class KeyVaultKeyRotationPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KeyVaultKeyRotationPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._expireAfter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.expireAfter = this._expireAfter;
+    }
+    if (this._notifyBeforeExpiry !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notifyBeforeExpiry = this._notifyBeforeExpiry;
+    }
+    if (this._automatic?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.automatic = this._automatic?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KeyVaultKeyRotationPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._expireAfter = undefined;
+      this._notifyBeforeExpiry = undefined;
+      this._automatic.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._expireAfter = value.expireAfter;
+      this._notifyBeforeExpiry = value.notifyBeforeExpiry;
+      this._automatic.internalValue = value.automatic;
+    }
+  }
+
+  // expire_after - computed: false, optional: true, required: false
+  private _expireAfter?: string; 
+  public get expireAfter() {
+    return this.getStringAttribute('expire_after');
+  }
+  public set expireAfter(value: string) {
+    this._expireAfter = value;
+  }
+  public resetExpireAfter() {
+    this._expireAfter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expireAfterInput() {
+    return this._expireAfter;
+  }
+
+  // notify_before_expiry - computed: false, optional: true, required: false
+  private _notifyBeforeExpiry?: string; 
+  public get notifyBeforeExpiry() {
+    return this.getStringAttribute('notify_before_expiry');
+  }
+  public set notifyBeforeExpiry(value: string) {
+    this._notifyBeforeExpiry = value;
+  }
+  public resetNotifyBeforeExpiry() {
+    this._notifyBeforeExpiry = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notifyBeforeExpiryInput() {
+    return this._notifyBeforeExpiry;
+  }
+
+  // automatic - computed: false, optional: true, required: false
+  private _automatic = new KeyVaultKeyRotationPolicyAutomaticOutputReference(this, "automatic");
+  public get automatic() {
+    return this._automatic;
+  }
+  public putAutomatic(value: KeyVaultKeyRotationPolicyAutomatic) {
+    this._automatic.internalValue = value;
+  }
+  public resetAutomatic() {
+    this._automatic.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automaticInput() {
+    return this._automatic.internalValue;
+  }
 }
 export interface KeyVaultKeyTimeouts {
   /**
@@ -240,7 +459,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_key_vault_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.45.0',
+        providerVersion: '3.46.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -261,6 +480,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
     this._name = config.name;
     this._notBeforeDate = config.notBeforeDate;
     this._tags = config.tags;
+    this._rotationPolicy.internalValue = config.rotationPolicy;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -466,6 +686,22 @@ export class KeyVaultKey extends cdktf.TerraformResource {
     return this.getStringAttribute('y');
   }
 
+  // rotation_policy - computed: false, optional: true, required: false
+  private _rotationPolicy = new KeyVaultKeyRotationPolicyOutputReference(this, "rotation_policy");
+  public get rotationPolicy() {
+    return this._rotationPolicy;
+  }
+  public putRotationPolicy(value: KeyVaultKeyRotationPolicy) {
+    this._rotationPolicy.internalValue = value;
+  }
+  public resetRotationPolicy() {
+    this._rotationPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rotationPolicyInput() {
+    return this._rotationPolicy.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new KeyVaultKeyTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -498,6 +734,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       not_before_date: cdktf.stringToTerraform(this._notBeforeDate),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      rotation_policy: keyVaultKeyRotationPolicyToTerraform(this._rotationPolicy.internalValue),
       timeouts: keyVaultKeyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

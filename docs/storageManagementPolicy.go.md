@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_ma
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicy(scope Construct, id *string, config StorageManagementPolicyConfig) StorageManagementPolicy
 ```
@@ -313,7 +313,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.StorageManagementPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -345,7 +345,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.StorageManagementPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -359,7 +359,7 @@ storagemanagementpolicy.StorageManagementPolicy_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.StorageManagementPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -646,7 +646,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyConfig {
 	Connection: interface{},
@@ -659,7 +659,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementp
 	StorageAccountId: *string,
 	Id: *string,
 	Rule: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.storageManagementPolicy.StorageManagementPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageManagementPolicy.StorageManagementPolicyTimeouts,
 }
 ```
 
@@ -811,12 +811,12 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyRule {
-	Actions: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.storageManagementPolicy.StorageManagementPolicyRuleActions,
+	Actions: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageManagementPolicy.StorageManagementPolicyRuleActions,
 	Enabled: interface{},
-	Filters: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.storageManagementPolicy.StorageManagementPolicyRuleFilters,
+	Filters: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageManagementPolicy.StorageManagementPolicyRuleFilters,
 	Name: *string,
 }
 ```
@@ -889,12 +889,12 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyRuleActions {
-	BaseBlob: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlob,
-	Snapshot: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.storageManagementPolicy.StorageManagementPolicyRuleActionsSnapshot,
-	Version: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.storageManagementPolicy.StorageManagementPolicyRuleActionsVersion,
+	BaseBlob: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlob,
+	Snapshot: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsSnapshot,
+	Version: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsVersion,
 }
 ```
 
@@ -955,9 +955,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlob.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyRuleActionsBaseBlob {
+	AutoTierToHotFromCoolEnabled: interface{},
 	DeleteAfterDaysSinceCreationGreaterThan: *f64,
 	DeleteAfterDaysSinceLastAccessTimeGreaterThan: *f64,
 	DeleteAfterDaysSinceModificationGreaterThan: *f64,
@@ -975,6 +976,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementp
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlob.property.autoTierToHotFromCoolEnabled">AutoTierToHotFromCoolEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#auto_tier_to_hot_from_cool_enabled StorageManagementPolicy#auto_tier_to_hot_from_cool_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlob.property.deleteAfterDaysSinceCreationGreaterThan">DeleteAfterDaysSinceCreationGreaterThan</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#delete_after_days_since_creation_greater_than StorageManagementPolicy#delete_after_days_since_creation_greater_than}. |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlob.property.deleteAfterDaysSinceLastAccessTimeGreaterThan">DeleteAfterDaysSinceLastAccessTimeGreaterThan</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#delete_after_days_since_last_access_time_greater_than StorageManagementPolicy#delete_after_days_since_last_access_time_greater_than}. |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlob.property.deleteAfterDaysSinceModificationGreaterThan">DeleteAfterDaysSinceModificationGreaterThan</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#delete_after_days_since_modification_greater_than StorageManagementPolicy#delete_after_days_since_modification_greater_than}. |
@@ -985,6 +987,18 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementp
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlob.property.tierToCoolAfterDaysSinceCreationGreaterThan">TierToCoolAfterDaysSinceCreationGreaterThan</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#tier_to_cool_after_days_since_creation_greater_than StorageManagementPolicy#tier_to_cool_after_days_since_creation_greater_than}. |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlob.property.tierToCoolAfterDaysSinceLastAccessTimeGreaterThan">TierToCoolAfterDaysSinceLastAccessTimeGreaterThan</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#tier_to_cool_after_days_since_last_access_time_greater_than StorageManagementPolicy#tier_to_cool_after_days_since_last_access_time_greater_than}. |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlob.property.tierToCoolAfterDaysSinceModificationGreaterThan">TierToCoolAfterDaysSinceModificationGreaterThan</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#tier_to_cool_after_days_since_modification_greater_than StorageManagementPolicy#tier_to_cool_after_days_since_modification_greater_than}. |
+
+---
+
+##### `AutoTierToHotFromCoolEnabled`<sup>Optional</sup> <a name="AutoTierToHotFromCoolEnabled" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlob.property.autoTierToHotFromCoolEnabled"></a>
+
+```go
+AutoTierToHotFromCoolEnabled interface{}
+```
+
+- *Type:* interface{}
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#auto_tier_to_hot_from_cool_enabled StorageManagementPolicy#auto_tier_to_hot_from_cool_enabled}.
 
 ---
 
@@ -1113,7 +1127,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsSnapshot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyRuleActionsSnapshot {
 	ChangeTierToArchiveAfterDaysSinceCreation: *f64,
@@ -1187,7 +1201,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsVersion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyRuleActionsVersion {
 	ChangeTierToArchiveAfterDaysSinceCreation: *f64,
@@ -1261,7 +1275,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleFilters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyRuleFilters {
 	BlobTypes: *[]*string,
@@ -1323,7 +1337,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleFiltersMatchBlobIndexTag.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyRuleFiltersMatchBlobIndexTag {
 	Name: *string,
@@ -1383,7 +1397,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyTimeouts {
 	Create: *string,
@@ -1459,7 +1473,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleActionsBaseBlobOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageManagementPolicyRuleActionsBaseBlobOutputReference
 ```
@@ -1504,6 +1518,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.resetAutoTierToHotFromCoolEnabled">ResetAutoTierToHotFromCoolEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.resetDeleteAfterDaysSinceCreationGreaterThan">ResetDeleteAfterDaysSinceCreationGreaterThan</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.resetDeleteAfterDaysSinceLastAccessTimeGreaterThan">ResetDeleteAfterDaysSinceLastAccessTimeGreaterThan</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.resetDeleteAfterDaysSinceModificationGreaterThan">ResetDeleteAfterDaysSinceModificationGreaterThan</a></code> | *No description.* |
@@ -1667,6 +1682,12 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `ResetAutoTierToHotFromCoolEnabled` <a name="ResetAutoTierToHotFromCoolEnabled" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.resetAutoTierToHotFromCoolEnabled"></a>
+
+```go
+func ResetAutoTierToHotFromCoolEnabled()
+```
+
 ##### `ResetDeleteAfterDaysSinceCreationGreaterThan` <a name="ResetDeleteAfterDaysSinceCreationGreaterThan" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.resetDeleteAfterDaysSinceCreationGreaterThan"></a>
 
 ```go
@@ -1734,6 +1755,7 @@ func ResetTierToCoolAfterDaysSinceModificationGreaterThan()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.property.autoTierToHotFromCoolEnabledInput">AutoTierToHotFromCoolEnabledInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.property.deleteAfterDaysSinceCreationGreaterThanInput">DeleteAfterDaysSinceCreationGreaterThanInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.property.deleteAfterDaysSinceLastAccessTimeGreaterThanInput">DeleteAfterDaysSinceLastAccessTimeGreaterThanInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.property.deleteAfterDaysSinceModificationGreaterThanInput">DeleteAfterDaysSinceModificationGreaterThanInput</a></code> | <code>*f64</code> | *No description.* |
@@ -1744,6 +1766,7 @@ func ResetTierToCoolAfterDaysSinceModificationGreaterThan()
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.property.tierToCoolAfterDaysSinceCreationGreaterThanInput">TierToCoolAfterDaysSinceCreationGreaterThanInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.property.tierToCoolAfterDaysSinceLastAccessTimeGreaterThanInput">TierToCoolAfterDaysSinceLastAccessTimeGreaterThanInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.property.tierToCoolAfterDaysSinceModificationGreaterThanInput">TierToCoolAfterDaysSinceModificationGreaterThanInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.property.autoTierToHotFromCoolEnabled">AutoTierToHotFromCoolEnabled</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.property.deleteAfterDaysSinceCreationGreaterThan">DeleteAfterDaysSinceCreationGreaterThan</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.property.deleteAfterDaysSinceLastAccessTimeGreaterThan">DeleteAfterDaysSinceLastAccessTimeGreaterThan</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.property.deleteAfterDaysSinceModificationGreaterThan">DeleteAfterDaysSinceModificationGreaterThan</a></code> | <code>*f64</code> | *No description.* |
@@ -1779,6 +1802,16 @@ func Fqn() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `AutoTierToHotFromCoolEnabledInput`<sup>Optional</sup> <a name="AutoTierToHotFromCoolEnabledInput" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.property.autoTierToHotFromCoolEnabledInput"></a>
+
+```go
+func AutoTierToHotFromCoolEnabledInput() interface{}
+```
+
+- *Type:* interface{}
 
 ---
 
@@ -1879,6 +1912,16 @@ func TierToCoolAfterDaysSinceModificationGreaterThanInput() *f64
 ```
 
 - *Type:* *f64
+
+---
+
+##### `AutoTierToHotFromCoolEnabled`<sup>Required</sup> <a name="AutoTierToHotFromCoolEnabled" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.property.autoTierToHotFromCoolEnabled"></a>
+
+```go
+func AutoTierToHotFromCoolEnabled() interface{}
+```
+
+- *Type:* interface{}
 
 ---
 
@@ -1998,7 +2041,7 @@ func InternalValue() StorageManagementPolicyRuleActionsBaseBlob
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleActionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageManagementPolicyRuleActionsOutputReference
 ```
@@ -2373,7 +2416,7 @@ func InternalValue() StorageManagementPolicyRuleActions
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsSnapshotOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleActionsSnapshotOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageManagementPolicyRuleActionsSnapshotOutputReference
 ```
@@ -2738,7 +2781,7 @@ func InternalValue() StorageManagementPolicyRuleActionsSnapshot
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsVersionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleActionsVersionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageManagementPolicyRuleActionsVersionOutputReference
 ```
@@ -3103,7 +3146,7 @@ func InternalValue() StorageManagementPolicyRuleActionsVersion
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleFiltersMatchBlobIndexTagList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleFiltersMatchBlobIndexTagList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageManagementPolicyRuleFiltersMatchBlobIndexTagList
 ```
@@ -3246,7 +3289,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleFiltersMatchBlobIndexTagOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleFiltersMatchBlobIndexTagOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageManagementPolicyRuleFiltersMatchBlobIndexTagOutputReference
 ```
@@ -3586,7 +3629,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleFiltersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleFiltersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageManagementPolicyRuleFiltersOutputReference
 ```
@@ -3928,7 +3971,7 @@ func InternalValue() StorageManagementPolicyRuleFilters
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageManagementPolicyRuleList
 ```
@@ -4071,7 +4114,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageManagementPolicyRuleOutputReference
 ```
@@ -4452,7 +4495,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageManagementPolicyTimeoutsOutputReference
 ```

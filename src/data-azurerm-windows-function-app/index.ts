@@ -639,6 +639,1046 @@ export class DataAzurermWindowsFunctionAppAuthSettingsList extends cdktf.Complex
     return new DataAzurermWindowsFunctionAppAuthSettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2 {
+}
+
+export function dataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2ToTerraform(struct?: DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // allowed_applications - computed: true, optional: false, required: false
+  public get allowedApplications() {
+    return this.getListAttribute('allowed_applications');
+  }
+
+  // allowed_audiences - computed: true, optional: false, required: false
+  public get allowedAudiences() {
+    return this.getListAttribute('allowed_audiences');
+  }
+
+  // allowed_groups - computed: true, optional: false, required: false
+  public get allowedGroups() {
+    return this.getListAttribute('allowed_groups');
+  }
+
+  // allowed_identities - computed: true, optional: false, required: false
+  public get allowedIdentities() {
+    return this.getListAttribute('allowed_identities');
+  }
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // client_secret_certificate_thumbprint - computed: true, optional: false, required: false
+  public get clientSecretCertificateThumbprint() {
+    return this.getStringAttribute('client_secret_certificate_thumbprint');
+  }
+
+  // client_secret_setting_name - computed: true, optional: false, required: false
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+
+  // jwt_allowed_client_applications - computed: true, optional: false, required: false
+  public get jwtAllowedClientApplications() {
+    return this.getListAttribute('jwt_allowed_client_applications');
+  }
+
+  // jwt_allowed_groups - computed: true, optional: false, required: false
+  public get jwtAllowedGroups() {
+    return this.getListAttribute('jwt_allowed_groups');
+  }
+
+  // login_parameters - computed: true, optional: false, required: false
+  private _loginParameters = new cdktf.StringMap(this, "login_parameters");
+  public get loginParameters() {
+    return this._loginParameters;
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2List extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference {
+    return new DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2 {
+}
+
+export function dataAzurermWindowsFunctionAppAuthSettingsV2AppleV2ToTerraform(struct?: DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // client_secret_setting_name - computed: true, optional: false, required: false
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+
+  // login_scopes - computed: true, optional: false, required: false
+  public get loginScopes() {
+    return this.getListAttribute('login_scopes');
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2List extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2OutputReference {
+    return new DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2OutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2 {
+}
+
+export function dataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2ToTerraform(struct?: DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2List extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference {
+    return new DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2 {
+}
+
+export function dataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2ToTerraform(struct?: DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // authorisation_endpoint - computed: true, optional: false, required: false
+  public get authorisationEndpoint() {
+    return this.getStringAttribute('authorisation_endpoint');
+  }
+
+  // certification_uri - computed: true, optional: false, required: false
+  public get certificationUri() {
+    return this.getStringAttribute('certification_uri');
+  }
+
+  // client_credential_method - computed: true, optional: false, required: false
+  public get clientCredentialMethod() {
+    return this.getStringAttribute('client_credential_method');
+  }
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // client_secret_setting_name - computed: true, optional: false, required: false
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+
+  // issuer_endpoint - computed: true, optional: false, required: false
+  public get issuerEndpoint() {
+    return this.getStringAttribute('issuer_endpoint');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // name_claim_type - computed: true, optional: false, required: false
+  public get nameClaimType() {
+    return this.getStringAttribute('name_claim_type');
+  }
+
+  // openid_configuration_endpoint - computed: true, optional: false, required: false
+  public get openidConfigurationEndpoint() {
+    return this.getStringAttribute('openid_configuration_endpoint');
+  }
+
+  // scopes - computed: true, optional: false, required: false
+  public get scopes() {
+    return this.getListAttribute('scopes');
+  }
+
+  // token_endpoint - computed: true, optional: false, required: false
+  public get tokenEndpoint() {
+    return this.getStringAttribute('token_endpoint');
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2List extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference {
+    return new DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2 {
+}
+
+export function dataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2ToTerraform(struct?: DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // app_id - computed: true, optional: false, required: false
+  public get appId() {
+    return this.getStringAttribute('app_id');
+  }
+
+  // app_secret_setting_name - computed: true, optional: false, required: false
+  public get appSecretSettingName() {
+    return this.getStringAttribute('app_secret_setting_name');
+  }
+
+  // graph_api_version - computed: true, optional: false, required: false
+  public get graphApiVersion() {
+    return this.getStringAttribute('graph_api_version');
+  }
+
+  // login_scopes - computed: true, optional: false, required: false
+  public get loginScopes() {
+    return this.getListAttribute('login_scopes');
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2List extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2OutputReference {
+    return new DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2OutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2 {
+}
+
+export function dataAzurermWindowsFunctionAppAuthSettingsV2GithubV2ToTerraform(struct?: DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // client_secret_setting_name - computed: true, optional: false, required: false
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+
+  // login_scopes - computed: true, optional: false, required: false
+  public get loginScopes() {
+    return this.getListAttribute('login_scopes');
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2List extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2OutputReference {
+    return new DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2OutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2 {
+}
+
+export function dataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2ToTerraform(struct?: DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // allowed_audiences - computed: true, optional: false, required: false
+  public get allowedAudiences() {
+    return this.getListAttribute('allowed_audiences');
+  }
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // client_secret_setting_name - computed: true, optional: false, required: false
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+
+  // login_scopes - computed: true, optional: false, required: false
+  public get loginScopes() {
+    return this.getListAttribute('login_scopes');
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2List extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2OutputReference {
+    return new DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2OutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermWindowsFunctionAppAuthSettingsV2Login {
+}
+
+export function dataAzurermWindowsFunctionAppAuthSettingsV2LoginToTerraform(struct?: DataAzurermWindowsFunctionAppAuthSettingsV2Login): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2LoginOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermWindowsFunctionAppAuthSettingsV2Login | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermWindowsFunctionAppAuthSettingsV2Login | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // allowed_external_redirect_urls - computed: true, optional: false, required: false
+  public get allowedExternalRedirectUrls() {
+    return this.getListAttribute('allowed_external_redirect_urls');
+  }
+
+  // cookie_expiration_convention - computed: true, optional: false, required: false
+  public get cookieExpirationConvention() {
+    return this.getStringAttribute('cookie_expiration_convention');
+  }
+
+  // cookie_expiration_time - computed: true, optional: false, required: false
+  public get cookieExpirationTime() {
+    return this.getStringAttribute('cookie_expiration_time');
+  }
+
+  // logout_endpoint - computed: true, optional: false, required: false
+  public get logoutEndpoint() {
+    return this.getStringAttribute('logout_endpoint');
+  }
+
+  // nonce_expiration_time - computed: true, optional: false, required: false
+  public get nonceExpirationTime() {
+    return this.getStringAttribute('nonce_expiration_time');
+  }
+
+  // preserve_url_fragments_for_logins - computed: true, optional: false, required: false
+  public get preserveUrlFragmentsForLogins() {
+    return this.getBooleanAttribute('preserve_url_fragments_for_logins');
+  }
+
+  // token_refresh_extension_time - computed: true, optional: false, required: false
+  public get tokenRefreshExtensionTime() {
+    return this.getNumberAttribute('token_refresh_extension_time');
+  }
+
+  // token_store_enabled - computed: true, optional: false, required: false
+  public get tokenStoreEnabled() {
+    return this.getBooleanAttribute('token_store_enabled');
+  }
+
+  // token_store_path - computed: true, optional: false, required: false
+  public get tokenStorePath() {
+    return this.getStringAttribute('token_store_path');
+  }
+
+  // token_store_sas_setting_name - computed: true, optional: false, required: false
+  public get tokenStoreSasSettingName() {
+    return this.getStringAttribute('token_store_sas_setting_name');
+  }
+
+  // validate_nonce - computed: true, optional: false, required: false
+  public get validateNonce() {
+    return this.getBooleanAttribute('validate_nonce');
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2LoginList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermWindowsFunctionAppAuthSettingsV2LoginOutputReference {
+    return new DataAzurermWindowsFunctionAppAuthSettingsV2LoginOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2 {
+}
+
+export function dataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2ToTerraform(struct?: DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // allowed_audiences - computed: true, optional: false, required: false
+  public get allowedAudiences() {
+    return this.getListAttribute('allowed_audiences');
+  }
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // client_secret_setting_name - computed: true, optional: false, required: false
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+
+  // login_scopes - computed: true, optional: false, required: false
+  public get loginScopes() {
+    return this.getListAttribute('login_scopes');
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2List extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference {
+    return new DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2 {
+}
+
+export function dataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2ToTerraform(struct?: DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // consumer_key - computed: true, optional: false, required: false
+  public get consumerKey() {
+    return this.getStringAttribute('consumer_key');
+  }
+
+  // consumer_secret_setting_name - computed: true, optional: false, required: false
+  public get consumerSecretSettingName() {
+    return this.getStringAttribute('consumer_secret_setting_name');
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2List extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2OutputReference {
+    return new DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2OutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermWindowsFunctionAppAuthSettingsV2 {
+}
+
+export function dataAzurermWindowsFunctionAppAuthSettingsV2ToTerraform(struct?: DataAzurermWindowsFunctionAppAuthSettingsV2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermWindowsFunctionAppAuthSettingsV2 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermWindowsFunctionAppAuthSettingsV2 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // active_directory_v2 - computed: true, optional: false, required: false
+  private _activeDirectoryV2 = new DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2List(this, "active_directory_v2", false);
+  public get activeDirectoryV2() {
+    return this._activeDirectoryV2;
+  }
+
+  // apple_v2 - computed: true, optional: false, required: false
+  private _appleV2 = new DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2List(this, "apple_v2", false);
+  public get appleV2() {
+    return this._appleV2;
+  }
+
+  // auth_enabled - computed: true, optional: false, required: false
+  public get authEnabled() {
+    return this.getBooleanAttribute('auth_enabled');
+  }
+
+  // azure_static_web_app_v2 - computed: true, optional: false, required: false
+  private _azureStaticWebAppV2 = new DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2List(this, "azure_static_web_app_v2", false);
+  public get azureStaticWebAppV2() {
+    return this._azureStaticWebAppV2;
+  }
+
+  // config_file_path - computed: true, optional: false, required: false
+  public get configFilePath() {
+    return this.getStringAttribute('config_file_path');
+  }
+
+  // custom_oidc_v2 - computed: true, optional: false, required: false
+  private _customOidcV2 = new DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2List(this, "custom_oidc_v2", false);
+  public get customOidcV2() {
+    return this._customOidcV2;
+  }
+
+  // default_provider - computed: true, optional: false, required: false
+  public get defaultProvider() {
+    return this.getStringAttribute('default_provider');
+  }
+
+  // excluded_paths - computed: true, optional: false, required: false
+  public get excludedPaths() {
+    return this.getListAttribute('excluded_paths');
+  }
+
+  // facebook_v2 - computed: true, optional: false, required: false
+  private _facebookV2 = new DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2List(this, "facebook_v2", false);
+  public get facebookV2() {
+    return this._facebookV2;
+  }
+
+  // forward_proxy_convention - computed: true, optional: false, required: false
+  public get forwardProxyConvention() {
+    return this.getStringAttribute('forward_proxy_convention');
+  }
+
+  // forward_proxy_custom_host_header_name - computed: true, optional: false, required: false
+  public get forwardProxyCustomHostHeaderName() {
+    return this.getStringAttribute('forward_proxy_custom_host_header_name');
+  }
+
+  // forward_proxy_custom_scheme_header_name - computed: true, optional: false, required: false
+  public get forwardProxyCustomSchemeHeaderName() {
+    return this.getStringAttribute('forward_proxy_custom_scheme_header_name');
+  }
+
+  // github_v2 - computed: true, optional: false, required: false
+  private _githubV2 = new DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2List(this, "github_v2", false);
+  public get githubV2() {
+    return this._githubV2;
+  }
+
+  // google_v2 - computed: true, optional: false, required: false
+  private _googleV2 = new DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2List(this, "google_v2", false);
+  public get googleV2() {
+    return this._googleV2;
+  }
+
+  // http_route_api_prefix - computed: true, optional: false, required: false
+  public get httpRouteApiPrefix() {
+    return this.getStringAttribute('http_route_api_prefix');
+  }
+
+  // login - computed: true, optional: false, required: false
+  private _login = new DataAzurermWindowsFunctionAppAuthSettingsV2LoginList(this, "login", false);
+  public get login() {
+    return this._login;
+  }
+
+  // microsoft_v2 - computed: true, optional: false, required: false
+  private _microsoftV2 = new DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2List(this, "microsoft_v2", false);
+  public get microsoftV2() {
+    return this._microsoftV2;
+  }
+
+  // require_authentication - computed: true, optional: false, required: false
+  public get requireAuthentication() {
+    return this.getBooleanAttribute('require_authentication');
+  }
+
+  // require_https - computed: true, optional: false, required: false
+  public get requireHttps() {
+    return this.getBooleanAttribute('require_https');
+  }
+
+  // runtime_version - computed: true, optional: false, required: false
+  public get runtimeVersion() {
+    return this.getStringAttribute('runtime_version');
+  }
+
+  // twitter_v2 - computed: true, optional: false, required: false
+  private _twitterV2 = new DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2List(this, "twitter_v2", false);
+  public get twitterV2() {
+    return this._twitterV2;
+  }
+
+  // unauthenticated_action - computed: true, optional: false, required: false
+  public get unauthenticatedAction() {
+    return this.getStringAttribute('unauthenticated_action');
+  }
+}
+
+export class DataAzurermWindowsFunctionAppAuthSettingsV2List extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermWindowsFunctionAppAuthSettingsV2OutputReference {
+    return new DataAzurermWindowsFunctionAppAuthSettingsV2OutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermWindowsFunctionAppBackupSchedule {
 }
 
@@ -2010,7 +3050,7 @@ export class DataAzurermWindowsFunctionApp extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_windows_function_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.45.0',
+        providerVersion: '3.46.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -2041,6 +3081,12 @@ export class DataAzurermWindowsFunctionApp extends cdktf.TerraformDataSource {
   private _authSettings = new DataAzurermWindowsFunctionAppAuthSettingsList(this, "auth_settings", false);
   public get authSettings() {
     return this._authSettings;
+  }
+
+  // auth_settings_v2 - computed: true, optional: false, required: false
+  private _authSettingsV2 = new DataAzurermWindowsFunctionAppAuthSettingsV2List(this, "auth_settings_v2", false);
+  public get authSettingsV2() {
+    return this._authSettingsV2;
   }
 
   // backup - computed: true, optional: false, required: false

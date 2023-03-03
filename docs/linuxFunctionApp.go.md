@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/linux_func
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionApp(scope Construct, id *string, config LinuxFunctionAppConfig) LinuxFunctionApp
 ```
@@ -67,6 +67,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putAuthSettings">PutAuthSettings</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putAuthSettingsV2">PutAuthSettingsV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putBackup">PutBackup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putConnectionString">PutConnectionString</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putIdentity">PutIdentity</a></code> | *No description.* |
@@ -76,6 +77,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.resetAppSettings">ResetAppSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.resetAuthSettings">ResetAuthSettings</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.resetAuthSettingsV2">ResetAuthSettingsV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.resetBackup">ResetBackup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.resetBuiltinLoggingEnabled">ResetBuiltinLoggingEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.resetClientCertificateEnabled">ResetClientCertificateEnabled</a></code> | *No description.* |
@@ -298,6 +300,18 @@ func PutAuthSettings(value LinuxFunctionAppAuthSettings)
 
 ---
 
+##### `PutAuthSettingsV2` <a name="PutAuthSettingsV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putAuthSettingsV2"></a>
+
+```go
+func PutAuthSettingsV2(value LinuxFunctionAppAuthSettingsV2)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putAuthSettingsV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2">LinuxFunctionAppAuthSettingsV2</a>
+
+---
+
 ##### `PutBackup` <a name="PutBackup" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putBackup"></a>
 
 ```go
@@ -392,6 +406,12 @@ func ResetAppSettings()
 
 ```go
 func ResetAuthSettings()
+```
+
+##### `ResetAuthSettingsV2` <a name="ResetAuthSettingsV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.resetAuthSettingsV2"></a>
+
+```go
+func ResetAuthSettingsV2()
 ```
 
 ##### `ResetBackup` <a name="ResetBackup" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.resetBackup"></a>
@@ -545,7 +565,7 @@ func ResetVirtualNetworkSubnetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.LinuxFunctionApp_IsConstruct(x interface{}) *bool
 ```
@@ -577,7 +597,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.LinuxFunctionApp_IsTerraformElement(x interface{}) *bool
 ```
@@ -591,7 +611,7 @@ linuxfunctionapp.LinuxFunctionApp_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.LinuxFunctionApp_IsTerraformResource(x interface{}) *bool
 ```
@@ -621,6 +641,7 @@ linuxfunctionapp.LinuxFunctionApp_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.authSettings">AuthSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference">LinuxFunctionAppAuthSettingsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.authSettingsV2">AuthSettingsV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference">LinuxFunctionAppAuthSettingsV2OutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.backup">Backup</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference">LinuxFunctionAppBackupOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.connectionString">ConnectionString</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionStringList">LinuxFunctionAppConnectionStringList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.customDomainVerificationId">CustomDomainVerificationId</a></code> | <code>*string</code> | *No description.* |
@@ -638,6 +659,7 @@ linuxfunctionapp.LinuxFunctionApp_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeoutsOutputReference">LinuxFunctionAppTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.appSettingsInput">AppSettingsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.authSettingsInput">AuthSettingsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings">LinuxFunctionAppAuthSettings</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.authSettingsV2Input">AuthSettingsV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2">LinuxFunctionAppAuthSettingsV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.backupInput">BackupInput</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackup">LinuxFunctionAppBackup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.builtinLoggingEnabledInput">BuiltinLoggingEnabledInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.clientCertificateEnabledInput">ClientCertificateEnabledInput</a></code> | <code>interface{}</code> | *No description.* |
@@ -843,6 +865,16 @@ func AuthSettings() LinuxFunctionAppAuthSettingsOutputReference
 
 ---
 
+##### `AuthSettingsV2`<sup>Required</sup> <a name="AuthSettingsV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.authSettingsV2"></a>
+
+```go
+func AuthSettingsV2() LinuxFunctionAppAuthSettingsV2OutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference">LinuxFunctionAppAuthSettingsV2OutputReference</a>
+
+---
+
 ##### `Backup`<sup>Required</sup> <a name="Backup" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.backup"></a>
 
 ```go
@@ -1010,6 +1042,16 @@ func AuthSettingsInput() LinuxFunctionAppAuthSettings
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings">LinuxFunctionAppAuthSettings</a>
+
+---
+
+##### `AuthSettingsV2Input`<sup>Optional</sup> <a name="AuthSettingsV2Input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.authSettingsV2Input"></a>
+
+```go
+func AuthSettingsV2Input() LinuxFunctionAppAuthSettingsV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2">LinuxFunctionAppAuthSettingsV2</a>
 
 ---
 
@@ -1538,23 +1580,23 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppAuthSettings {
 	Enabled: interface{},
-	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppAuthSettingsActiveDirectory,
+	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsActiveDirectory,
 	AdditionalLoginParameters: *map[string]*string,
 	AllowedExternalRedirectUrls: *[]*string,
 	DefaultProvider: *string,
-	Facebook: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppAuthSettingsFacebook,
-	Github: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppAuthSettingsGithub,
-	Google: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppAuthSettingsGoogle,
+	Facebook: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsFacebook,
+	Github: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsGithub,
+	Google: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsGoogle,
 	Issuer: *string,
-	Microsoft: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppAuthSettingsMicrosoft,
+	Microsoft: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsMicrosoft,
 	RuntimeVersion: *string,
 	TokenRefreshExtensionHours: *f64,
 	TokenStoreEnabled: interface{},
-	Twitter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppAuthSettingsTwitter,
+	Twitter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsTwitter,
 	UnauthenticatedClientAction: *string,
 }
 ```
@@ -1800,7 +1842,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsActiveDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppAuthSettingsActiveDirectory {
 	ClientId: *string,
@@ -1882,7 +1924,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsFacebook.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppAuthSettingsFacebook {
 	AppId: *string,
@@ -1964,7 +2006,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsGithub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppAuthSettingsGithub {
 	ClientId: *string,
@@ -2046,7 +2088,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsGoogle.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppAuthSettingsGoogle {
 	ClientId: *string,
@@ -2128,7 +2170,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsMicrosoft.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppAuthSettingsMicrosoft {
 	ClientId: *string,
@@ -2210,7 +2252,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsTwitter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppAuthSettingsTwitter {
 	ConsumerKey: *string,
@@ -2271,16 +2313,1342 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ---
 
+### LinuxFunctionAppAuthSettingsV2 <a name="LinuxFunctionAppAuthSettingsV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+&linuxfunctionapp.LinuxFunctionAppAuthSettingsV2 {
+	Login: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login,
+	ActiveDirectoryV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2,
+	AppleV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2,
+	AuthEnabled: interface{},
+	AzureStaticWebAppV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2,
+	ConfigFilePath: *string,
+	CustomOidcV2: interface{},
+	DefaultProvider: *string,
+	ExcludedPaths: *[]*string,
+	FacebookV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2,
+	ForwardProxyConvention: *string,
+	ForwardProxyCustomHostHeaderName: *string,
+	ForwardProxyCustomSchemeHeaderName: *string,
+	GithubV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2,
+	GoogleV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2,
+	HttpRouteApiPrefix: *string,
+	MicrosoftV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2,
+	RequireAuthentication: interface{},
+	RequireHttps: interface{},
+	RuntimeVersion: *string,
+	TwitterV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2,
+	UnauthenticatedAction: *string,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.login">Login</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login">LinuxFunctionAppAuthSettingsV2Login</a></code> | login block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.activeDirectoryV2">ActiveDirectoryV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2">LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2</a></code> | active_directory_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.appleV2">AppleV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2">LinuxFunctionAppAuthSettingsV2AppleV2</a></code> | apple_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.authEnabled">AuthEnabled</a></code> | <code>interface{}</code> | Should the AuthV2 Settings be enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.azureStaticWebAppV2">AzureStaticWebAppV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2">LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2</a></code> | azure_static_web_app_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.configFilePath">ConfigFilePath</a></code> | <code>*string</code> | The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.customOidcV2">CustomOidcV2</a></code> | <code>interface{}</code> | custom_oidc_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.defaultProvider">DefaultProvider</a></code> | <code>*string</code> | The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.excludedPaths">ExcludedPaths</a></code> | <code>*[]*string</code> | The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.facebookV2">FacebookV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2">LinuxFunctionAppAuthSettingsV2FacebookV2</a></code> | facebook_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.forwardProxyConvention">ForwardProxyConvention</a></code> | <code>*string</code> | The convention used to determine the url of the request made. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.forwardProxyCustomHostHeaderName">ForwardProxyCustomHostHeaderName</a></code> | <code>*string</code> | The name of the header containing the host of the request. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.forwardProxyCustomSchemeHeaderName">ForwardProxyCustomSchemeHeaderName</a></code> | <code>*string</code> | The name of the header containing the scheme of the request. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.githubV2">GithubV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2">LinuxFunctionAppAuthSettingsV2GithubV2</a></code> | github_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.googleV2">GoogleV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2">LinuxFunctionAppAuthSettingsV2GoogleV2</a></code> | google_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.httpRouteApiPrefix">HttpRouteApiPrefix</a></code> | <code>*string</code> | The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.microsoftV2">MicrosoftV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2">LinuxFunctionAppAuthSettingsV2MicrosoftV2</a></code> | microsoft_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.requireAuthentication">RequireAuthentication</a></code> | <code>interface{}</code> | Should the authentication flow be used for all requests. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.requireHttps">RequireHttps</a></code> | <code>interface{}</code> | Should HTTPS be required on connections? Defaults to true. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.runtimeVersion">RuntimeVersion</a></code> | <code>*string</code> | The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.twitterV2">TwitterV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2">LinuxFunctionAppAuthSettingsV2TwitterV2</a></code> | twitter_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.unauthenticatedAction">UnauthenticatedAction</a></code> | <code>*string</code> | The action to take for requests made without authentication. |
+
+---
+
+##### `Login`<sup>Required</sup> <a name="Login" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.login"></a>
+
+```go
+Login LinuxFunctionAppAuthSettingsV2Login
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login">LinuxFunctionAppAuthSettingsV2Login</a>
+
+login block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#login LinuxFunctionApp#login}
+
+---
+
+##### `ActiveDirectoryV2`<sup>Optional</sup> <a name="ActiveDirectoryV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.activeDirectoryV2"></a>
+
+```go
+ActiveDirectoryV2 LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2">LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2</a>
+
+active_directory_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#active_directory_v2 LinuxFunctionApp#active_directory_v2}
+
+---
+
+##### `AppleV2`<sup>Optional</sup> <a name="AppleV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.appleV2"></a>
+
+```go
+AppleV2 LinuxFunctionAppAuthSettingsV2AppleV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2">LinuxFunctionAppAuthSettingsV2AppleV2</a>
+
+apple_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#apple_v2 LinuxFunctionApp#apple_v2}
+
+---
+
+##### `AuthEnabled`<sup>Optional</sup> <a name="AuthEnabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.authEnabled"></a>
+
+```go
+AuthEnabled interface{}
+```
+
+- *Type:* interface{}
+
+Should the AuthV2 Settings be enabled. Defaults to `false`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#auth_enabled LinuxFunctionApp#auth_enabled}
+
+---
+
+##### `AzureStaticWebAppV2`<sup>Optional</sup> <a name="AzureStaticWebAppV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.azureStaticWebAppV2"></a>
+
+```go
+AzureStaticWebAppV2 LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2">LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2</a>
+
+azure_static_web_app_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#azure_static_web_app_v2 LinuxFunctionApp#azure_static_web_app_v2}
+
+---
+
+##### `ConfigFilePath`<sup>Optional</sup> <a name="ConfigFilePath" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.configFilePath"></a>
+
+```go
+ConfigFilePath *string
+```
+
+- *Type:* *string
+
+The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#config_file_path LinuxFunctionApp#config_file_path}
+
+---
+
+##### `CustomOidcV2`<sup>Optional</sup> <a name="CustomOidcV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.customOidcV2"></a>
+
+```go
+CustomOidcV2 interface{}
+```
+
+- *Type:* interface{}
+
+custom_oidc_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#custom_oidc_v2 LinuxFunctionApp#custom_oidc_v2}
+
+---
+
+##### `DefaultProvider`<sup>Optional</sup> <a name="DefaultProvider" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.defaultProvider"></a>
+
+```go
+DefaultProvider *string
+```
+
+- *Type:* *string
+
+The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#default_provider LinuxFunctionApp#default_provider}
+
+---
+
+##### `ExcludedPaths`<sup>Optional</sup> <a name="ExcludedPaths" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.excludedPaths"></a>
+
+```go
+ExcludedPaths *[]*string
+```
+
+- *Type:* *[]*string
+
+The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#excluded_paths LinuxFunctionApp#excluded_paths}
+
+---
+
+##### `FacebookV2`<sup>Optional</sup> <a name="FacebookV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.facebookV2"></a>
+
+```go
+FacebookV2 LinuxFunctionAppAuthSettingsV2FacebookV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2">LinuxFunctionAppAuthSettingsV2FacebookV2</a>
+
+facebook_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#facebook_v2 LinuxFunctionApp#facebook_v2}
+
+---
+
+##### `ForwardProxyConvention`<sup>Optional</sup> <a name="ForwardProxyConvention" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.forwardProxyConvention"></a>
+
+```go
+ForwardProxyConvention *string
+```
+
+- *Type:* *string
+
+The convention used to determine the url of the request made.
+
+Possible values include `ForwardProxyConventionNoProxy`, `ForwardProxyConventionStandard`, `ForwardProxyConventionCustom`. Defaults to `ForwardProxyConventionNoProxy`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#forward_proxy_convention LinuxFunctionApp#forward_proxy_convention}
+
+---
+
+##### `ForwardProxyCustomHostHeaderName`<sup>Optional</sup> <a name="ForwardProxyCustomHostHeaderName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.forwardProxyCustomHostHeaderName"></a>
+
+```go
+ForwardProxyCustomHostHeaderName *string
+```
+
+- *Type:* *string
+
+The name of the header containing the host of the request.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#forward_proxy_custom_host_header_name LinuxFunctionApp#forward_proxy_custom_host_header_name}
+
+---
+
+##### `ForwardProxyCustomSchemeHeaderName`<sup>Optional</sup> <a name="ForwardProxyCustomSchemeHeaderName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.forwardProxyCustomSchemeHeaderName"></a>
+
+```go
+ForwardProxyCustomSchemeHeaderName *string
+```
+
+- *Type:* *string
+
+The name of the header containing the scheme of the request.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#forward_proxy_custom_scheme_header_name LinuxFunctionApp#forward_proxy_custom_scheme_header_name}
+
+---
+
+##### `GithubV2`<sup>Optional</sup> <a name="GithubV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.githubV2"></a>
+
+```go
+GithubV2 LinuxFunctionAppAuthSettingsV2GithubV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2">LinuxFunctionAppAuthSettingsV2GithubV2</a>
+
+github_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#github_v2 LinuxFunctionApp#github_v2}
+
+---
+
+##### `GoogleV2`<sup>Optional</sup> <a name="GoogleV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.googleV2"></a>
+
+```go
+GoogleV2 LinuxFunctionAppAuthSettingsV2GoogleV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2">LinuxFunctionAppAuthSettingsV2GoogleV2</a>
+
+google_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#google_v2 LinuxFunctionApp#google_v2}
+
+---
+
+##### `HttpRouteApiPrefix`<sup>Optional</sup> <a name="HttpRouteApiPrefix" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.httpRouteApiPrefix"></a>
+
+```go
+HttpRouteApiPrefix *string
+```
+
+- *Type:* *string
+
+The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#http_route_api_prefix LinuxFunctionApp#http_route_api_prefix}
+
+---
+
+##### `MicrosoftV2`<sup>Optional</sup> <a name="MicrosoftV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.microsoftV2"></a>
+
+```go
+MicrosoftV2 LinuxFunctionAppAuthSettingsV2MicrosoftV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2">LinuxFunctionAppAuthSettingsV2MicrosoftV2</a>
+
+microsoft_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#microsoft_v2 LinuxFunctionApp#microsoft_v2}
+
+---
+
+##### `RequireAuthentication`<sup>Optional</sup> <a name="RequireAuthentication" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.requireAuthentication"></a>
+
+```go
+RequireAuthentication interface{}
+```
+
+- *Type:* interface{}
+
+Should the authentication flow be used for all requests.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#require_authentication LinuxFunctionApp#require_authentication}
+
+---
+
+##### `RequireHttps`<sup>Optional</sup> <a name="RequireHttps" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.requireHttps"></a>
+
+```go
+RequireHttps interface{}
+```
+
+- *Type:* interface{}
+
+Should HTTPS be required on connections? Defaults to true.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#require_https LinuxFunctionApp#require_https}
+
+---
+
+##### `RuntimeVersion`<sup>Optional</sup> <a name="RuntimeVersion" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.runtimeVersion"></a>
+
+```go
+RuntimeVersion *string
+```
+
+- *Type:* *string
+
+The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#runtime_version LinuxFunctionApp#runtime_version}
+
+---
+
+##### `TwitterV2`<sup>Optional</sup> <a name="TwitterV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.twitterV2"></a>
+
+```go
+TwitterV2 LinuxFunctionAppAuthSettingsV2TwitterV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2">LinuxFunctionAppAuthSettingsV2TwitterV2</a>
+
+twitter_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#twitter_v2 LinuxFunctionApp#twitter_v2}
+
+---
+
+##### `UnauthenticatedAction`<sup>Optional</sup> <a name="UnauthenticatedAction" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.unauthenticatedAction"></a>
+
+```go
+UnauthenticatedAction *string
+```
+
+- *Type:* *string
+
+The action to take for requests made without authentication.
+
+Possible values include `RedirectToLoginPage`, `AllowAnonymous`, `Return401`, and `Return403`. Defaults to `RedirectToLoginPage`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#unauthenticated_action LinuxFunctionApp#unauthenticated_action}
+
+---
+
+### LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2 <a name="LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+&linuxfunctionapp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2 {
+	ClientId: *string,
+	TenantAuthEndpoint: *string,
+	AllowedApplications: *[]*string,
+	AllowedAudiences: *[]*string,
+	AllowedGroups: *[]*string,
+	AllowedIdentities: *[]*string,
+	ClientSecretCertificateThumbprint: *string,
+	ClientSecretSettingName: *string,
+	JwtAllowedClientApplications: *[]*string,
+	JwtAllowedGroups: *[]*string,
+	LoginParameters: *map[string]*string,
+	WwwAuthenticationDisabled: interface{},
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.clientId">ClientId</a></code> | <code>*string</code> | The ID of the Client to use to authenticate with Azure Active Directory. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.tenantAuthEndpoint">TenantAuthEndpoint</a></code> | <code>*string</code> | The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedApplications">AllowedApplications</a></code> | <code>*[]*string</code> | The list of allowed Applications for the Default Authorisation Policy. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedAudiences">AllowedAudiences</a></code> | <code>*[]*string</code> | Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedGroups">AllowedGroups</a></code> | <code>*[]*string</code> | The list of allowed Group Names for the Default Authorisation Policy. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedIdentities">AllowedIdentities</a></code> | <code>*[]*string</code> | The list of allowed Identities for the Default Authorisation Policy. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.clientSecretCertificateThumbprint">ClientSecretCertificateThumbprint</a></code> | <code>*string</code> | The thumbprint of the certificate used for signing purposes. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>*string</code> | The App Setting name that contains the client secret of the Client. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedClientApplications">JwtAllowedClientApplications</a></code> | <code>*[]*string</code> | A list of Allowed Client Applications in the JWT Claim. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedGroups">JwtAllowedGroups</a></code> | <code>*[]*string</code> | A list of Allowed Groups in the JWT Claim. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.loginParameters">LoginParameters</a></code> | <code>*map[string]*string</code> | A map of key-value pairs to send to the Authorisation Endpoint when a user logs in. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.wwwAuthenticationDisabled">WwwAuthenticationDisabled</a></code> | <code>interface{}</code> | Should the www-authenticate provider should be omitted from the request? Defaults to `false`. |
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.clientId"></a>
+
+```go
+ClientId *string
+```
+
+- *Type:* *string
+
+The ID of the Client to use to authenticate with Azure Active Directory.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#client_id LinuxFunctionApp#client_id}
+
+---
+
+##### `TenantAuthEndpoint`<sup>Required</sup> <a name="TenantAuthEndpoint" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.tenantAuthEndpoint"></a>
+
+```go
+TenantAuthEndpoint *string
+```
+
+- *Type:* *string
+
+The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#tenant_auth_endpoint LinuxFunctionApp#tenant_auth_endpoint}
+
+---
+
+##### `AllowedApplications`<sup>Optional</sup> <a name="AllowedApplications" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedApplications"></a>
+
+```go
+AllowedApplications *[]*string
+```
+
+- *Type:* *[]*string
+
+The list of allowed Applications for the Default Authorisation Policy.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#allowed_applications LinuxFunctionApp#allowed_applications}
+
+---
+
+##### `AllowedAudiences`<sup>Optional</sup> <a name="AllowedAudiences" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedAudiences"></a>
+
+```go
+AllowedAudiences *[]*string
+```
+
+- *Type:* *[]*string
+
+Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#allowed_audiences LinuxFunctionApp#allowed_audiences}
+
+---
+
+##### `AllowedGroups`<sup>Optional</sup> <a name="AllowedGroups" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedGroups"></a>
+
+```go
+AllowedGroups *[]*string
+```
+
+- *Type:* *[]*string
+
+The list of allowed Group Names for the Default Authorisation Policy.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#allowed_groups LinuxFunctionApp#allowed_groups}
+
+---
+
+##### `AllowedIdentities`<sup>Optional</sup> <a name="AllowedIdentities" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.allowedIdentities"></a>
+
+```go
+AllowedIdentities *[]*string
+```
+
+- *Type:* *[]*string
+
+The list of allowed Identities for the Default Authorisation Policy.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#allowed_identities LinuxFunctionApp#allowed_identities}
+
+---
+
+##### `ClientSecretCertificateThumbprint`<sup>Optional</sup> <a name="ClientSecretCertificateThumbprint" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.clientSecretCertificateThumbprint"></a>
+
+```go
+ClientSecretCertificateThumbprint *string
+```
+
+- *Type:* *string
+
+The thumbprint of the certificate used for signing purposes.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#client_secret_certificate_thumbprint LinuxFunctionApp#client_secret_certificate_thumbprint}
+
+---
+
+##### `ClientSecretSettingName`<sup>Optional</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.clientSecretSettingName"></a>
+
+```go
+ClientSecretSettingName *string
+```
+
+- *Type:* *string
+
+The App Setting name that contains the client secret of the Client.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
+
+---
+
+##### `JwtAllowedClientApplications`<sup>Optional</sup> <a name="JwtAllowedClientApplications" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedClientApplications"></a>
+
+```go
+JwtAllowedClientApplications *[]*string
+```
+
+- *Type:* *[]*string
+
+A list of Allowed Client Applications in the JWT Claim.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#jwt_allowed_client_applications LinuxFunctionApp#jwt_allowed_client_applications}
+
+---
+
+##### `JwtAllowedGroups`<sup>Optional</sup> <a name="JwtAllowedGroups" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedGroups"></a>
+
+```go
+JwtAllowedGroups *[]*string
+```
+
+- *Type:* *[]*string
+
+A list of Allowed Groups in the JWT Claim.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#jwt_allowed_groups LinuxFunctionApp#jwt_allowed_groups}
+
+---
+
+##### `LoginParameters`<sup>Optional</sup> <a name="LoginParameters" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.loginParameters"></a>
+
+```go
+LoginParameters *map[string]*string
+```
+
+- *Type:* *map[string]*string
+
+A map of key-value pairs to send to the Authorisation Endpoint when a user logs in.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#login_parameters LinuxFunctionApp#login_parameters}
+
+---
+
+##### `WwwAuthenticationDisabled`<sup>Optional</sup> <a name="WwwAuthenticationDisabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.wwwAuthenticationDisabled"></a>
+
+```go
+WwwAuthenticationDisabled interface{}
+```
+
+- *Type:* interface{}
+
+Should the www-authenticate provider should be omitted from the request? Defaults to `false`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#www_authentication_disabled LinuxFunctionApp#www_authentication_disabled}
+
+---
+
+### LinuxFunctionAppAuthSettingsV2AppleV2 <a name="LinuxFunctionAppAuthSettingsV2AppleV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+&linuxfunctionapp.LinuxFunctionAppAuthSettingsV2AppleV2 {
+	ClientId: *string,
+	ClientSecretSettingName: *string,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2.property.clientId">ClientId</a></code> | <code>*string</code> | The OpenID Connect Client ID for the Apple web application. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>*string</code> | The app setting name that contains the `client_secret` value used for Apple Login. |
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2.property.clientId"></a>
+
+```go
+ClientId *string
+```
+
+- *Type:* *string
+
+The OpenID Connect Client ID for the Apple web application.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#client_id LinuxFunctionApp#client_id}
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2.property.clientSecretSettingName"></a>
+
+```go
+ClientSecretSettingName *string
+```
+
+- *Type:* *string
+
+The app setting name that contains the `client_secret` value used for Apple Login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
+
+---
+
+### LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2 <a name="LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+&linuxfunctionapp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2 {
+	ClientId: *string,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2.property.clientId">ClientId</a></code> | <code>*string</code> | The ID of the Client to use to authenticate with Azure Static Web App Authentication. |
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2.property.clientId"></a>
+
+```go
+ClientId *string
+```
+
+- *Type:* *string
+
+The ID of the Client to use to authenticate with Azure Static Web App Authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#client_id LinuxFunctionApp#client_id}
+
+---
+
+### LinuxFunctionAppAuthSettingsV2CustomOidcV2 <a name="LinuxFunctionAppAuthSettingsV2CustomOidcV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+&linuxfunctionapp.LinuxFunctionAppAuthSettingsV2CustomOidcV2 {
+	ClientId: *string,
+	Name: *string,
+	OpenidConfigurationEndpoint: *string,
+	NameClaimType: *string,
+	Scopes: *[]*string,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2.property.clientId">ClientId</a></code> | <code>*string</code> | The ID of the Client to use to authenticate with this Custom OIDC. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2.property.name">Name</a></code> | <code>*string</code> | The name of the Custom OIDC Authentication Provider. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2.property.openidConfigurationEndpoint">OpenidConfigurationEndpoint</a></code> | <code>*string</code> | The endpoint that contains all the configuration endpoints for this Custom OIDC provider. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2.property.nameClaimType">NameClaimType</a></code> | <code>*string</code> | The name of the claim that contains the users name. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2.property.scopes">Scopes</a></code> | <code>*[]*string</code> | The list of the scopes that should be requested while authenticating. |
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2.property.clientId"></a>
+
+```go
+ClientId *string
+```
+
+- *Type:* *string
+
+The ID of the Client to use to authenticate with this Custom OIDC.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#client_id LinuxFunctionApp#client_id}
+
+---
+
+##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2.property.name"></a>
+
+```go
+Name *string
+```
+
+- *Type:* *string
+
+The name of the Custom OIDC Authentication Provider.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#name LinuxFunctionApp#name}
+
+---
+
+##### `OpenidConfigurationEndpoint`<sup>Required</sup> <a name="OpenidConfigurationEndpoint" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2.property.openidConfigurationEndpoint"></a>
+
+```go
+OpenidConfigurationEndpoint *string
+```
+
+- *Type:* *string
+
+The endpoint that contains all the configuration endpoints for this Custom OIDC provider.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#openid_configuration_endpoint LinuxFunctionApp#openid_configuration_endpoint}
+
+---
+
+##### `NameClaimType`<sup>Optional</sup> <a name="NameClaimType" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2.property.nameClaimType"></a>
+
+```go
+NameClaimType *string
+```
+
+- *Type:* *string
+
+The name of the claim that contains the users name.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#name_claim_type LinuxFunctionApp#name_claim_type}
+
+---
+
+##### `Scopes`<sup>Optional</sup> <a name="Scopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2.property.scopes"></a>
+
+```go
+Scopes *[]*string
+```
+
+- *Type:* *[]*string
+
+The list of the scopes that should be requested while authenticating.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#scopes LinuxFunctionApp#scopes}
+
+---
+
+### LinuxFunctionAppAuthSettingsV2FacebookV2 <a name="LinuxFunctionAppAuthSettingsV2FacebookV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+&linuxfunctionapp.LinuxFunctionAppAuthSettingsV2FacebookV2 {
+	AppId: *string,
+	AppSecretSettingName: *string,
+	GraphApiVersion: *string,
+	LoginScopes: *[]*string,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2.property.appId">AppId</a></code> | <code>*string</code> | The App ID of the Facebook app used for login. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2.property.appSecretSettingName">AppSecretSettingName</a></code> | <code>*string</code> | The app setting name that contains the `app_secret` value used for Facebook Login. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2.property.graphApiVersion">GraphApiVersion</a></code> | <code>*string</code> | The version of the Facebook API to be used while logging in. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2.property.loginScopes">LoginScopes</a></code> | <code>*[]*string</code> | Specifies a list of scopes to be requested as part of Facebook Login authentication. |
+
+---
+
+##### `AppId`<sup>Required</sup> <a name="AppId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2.property.appId"></a>
+
+```go
+AppId *string
+```
+
+- *Type:* *string
+
+The App ID of the Facebook app used for login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#app_id LinuxFunctionApp#app_id}
+
+---
+
+##### `AppSecretSettingName`<sup>Required</sup> <a name="AppSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2.property.appSecretSettingName"></a>
+
+```go
+AppSecretSettingName *string
+```
+
+- *Type:* *string
+
+The app setting name that contains the `app_secret` value used for Facebook Login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#app_secret_setting_name LinuxFunctionApp#app_secret_setting_name}
+
+---
+
+##### `GraphApiVersion`<sup>Optional</sup> <a name="GraphApiVersion" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2.property.graphApiVersion"></a>
+
+```go
+GraphApiVersion *string
+```
+
+- *Type:* *string
+
+The version of the Facebook API to be used while logging in.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#graph_api_version LinuxFunctionApp#graph_api_version}
+
+---
+
+##### `LoginScopes`<sup>Optional</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2.property.loginScopes"></a>
+
+```go
+LoginScopes *[]*string
+```
+
+- *Type:* *[]*string
+
+Specifies a list of scopes to be requested as part of Facebook Login authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#login_scopes LinuxFunctionApp#login_scopes}
+
+---
+
+### LinuxFunctionAppAuthSettingsV2GithubV2 <a name="LinuxFunctionAppAuthSettingsV2GithubV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+&linuxfunctionapp.LinuxFunctionAppAuthSettingsV2GithubV2 {
+	ClientId: *string,
+	ClientSecretSettingName: *string,
+	LoginScopes: *[]*string,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2.property.clientId">ClientId</a></code> | <code>*string</code> | The ID of the GitHub app used for login. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>*string</code> | The app setting name that contains the `client_secret` value used for GitHub Login. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2.property.loginScopes">LoginScopes</a></code> | <code>*[]*string</code> | Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication. |
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2.property.clientId"></a>
+
+```go
+ClientId *string
+```
+
+- *Type:* *string
+
+The ID of the GitHub app used for login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#client_id LinuxFunctionApp#client_id}
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2.property.clientSecretSettingName"></a>
+
+```go
+ClientSecretSettingName *string
+```
+
+- *Type:* *string
+
+The app setting name that contains the `client_secret` value used for GitHub Login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
+
+---
+
+##### `LoginScopes`<sup>Optional</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2.property.loginScopes"></a>
+
+```go
+LoginScopes *[]*string
+```
+
+- *Type:* *[]*string
+
+Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#login_scopes LinuxFunctionApp#login_scopes}
+
+---
+
+### LinuxFunctionAppAuthSettingsV2GoogleV2 <a name="LinuxFunctionAppAuthSettingsV2GoogleV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+&linuxfunctionapp.LinuxFunctionAppAuthSettingsV2GoogleV2 {
+	ClientId: *string,
+	ClientSecretSettingName: *string,
+	AllowedAudiences: *[]*string,
+	LoginScopes: *[]*string,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2.property.clientId">ClientId</a></code> | <code>*string</code> | The OpenID Connect Client ID for the Google web application. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>*string</code> | The app setting name that contains the `client_secret` value used for Google Login. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2.property.allowedAudiences">AllowedAudiences</a></code> | <code>*[]*string</code> | Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2.property.loginScopes">LoginScopes</a></code> | <code>*[]*string</code> | Specifies a list of Login scopes that will be requested as part of Google Sign-In authentication. |
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2.property.clientId"></a>
+
+```go
+ClientId *string
+```
+
+- *Type:* *string
+
+The OpenID Connect Client ID for the Google web application.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#client_id LinuxFunctionApp#client_id}
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2.property.clientSecretSettingName"></a>
+
+```go
+ClientSecretSettingName *string
+```
+
+- *Type:* *string
+
+The app setting name that contains the `client_secret` value used for Google Login.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
+
+---
+
+##### `AllowedAudiences`<sup>Optional</sup> <a name="AllowedAudiences" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2.property.allowedAudiences"></a>
+
+```go
+AllowedAudiences *[]*string
+```
+
+- *Type:* *[]*string
+
+Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#allowed_audiences LinuxFunctionApp#allowed_audiences}
+
+---
+
+##### `LoginScopes`<sup>Optional</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2.property.loginScopes"></a>
+
+```go
+LoginScopes *[]*string
+```
+
+- *Type:* *[]*string
+
+Specifies a list of Login scopes that will be requested as part of Google Sign-In authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#login_scopes LinuxFunctionApp#login_scopes}
+
+---
+
+### LinuxFunctionAppAuthSettingsV2Login <a name="LinuxFunctionAppAuthSettingsV2Login" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+&linuxfunctionapp.LinuxFunctionAppAuthSettingsV2Login {
+	AllowedExternalRedirectUrls: *[]*string,
+	CookieExpirationConvention: *string,
+	CookieExpirationTime: *string,
+	LogoutEndpoint: *string,
+	NonceExpirationTime: *string,
+	PreserveUrlFragmentsForLogins: interface{},
+	TokenRefreshExtensionTime: *f64,
+	TokenStoreEnabled: interface{},
+	TokenStorePath: *string,
+	TokenStoreSasSettingName: *string,
+	ValidateNonce: interface{},
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.allowedExternalRedirectUrls">AllowedExternalRedirectUrls</a></code> | <code>*[]*string</code> | External URLs that can be redirected to as part of logging in or logging out of the app. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.cookieExpirationConvention">CookieExpirationConvention</a></code> | <code>*string</code> | The method by which cookies expire. Possible values include: `FixedTime`, and `IdentityProviderDerived`. Defaults to `FixedTime`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.cookieExpirationTime">CookieExpirationTime</a></code> | <code>*string</code> | The time after the request is made when the session cookie should expire. Defaults to `08:00:00`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.logoutEndpoint">LogoutEndpoint</a></code> | <code>*string</code> | The endpoint to which logout requests should be made. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.nonceExpirationTime">NonceExpirationTime</a></code> | <code>*string</code> | The time after the request is made when the nonce should expire. Defaults to `00:05:00`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.preserveUrlFragmentsForLogins">PreserveUrlFragmentsForLogins</a></code> | <code>interface{}</code> | Should the fragments from the request be preserved after the login request is made. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.tokenRefreshExtensionTime">TokenRefreshExtensionTime</a></code> | <code>*f64</code> | The number of hours after session token expiration that a session token can be used to call the token refresh API. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.tokenStoreEnabled">TokenStoreEnabled</a></code> | <code>interface{}</code> | Should the Token Store configuration Enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.tokenStorePath">TokenStorePath</a></code> | <code>*string</code> | The directory path in the App Filesystem in which the tokens will be stored. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.tokenStoreSasSettingName">TokenStoreSasSettingName</a></code> | <code>*string</code> | The name of the app setting which contains the SAS URL of the blob storage containing the tokens. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.validateNonce">ValidateNonce</a></code> | <code>interface{}</code> | Should the nonce be validated while completing the login flow. Defaults to `true`. |
+
+---
+
+##### `AllowedExternalRedirectUrls`<sup>Optional</sup> <a name="AllowedExternalRedirectUrls" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.allowedExternalRedirectUrls"></a>
+
+```go
+AllowedExternalRedirectUrls *[]*string
+```
+
+- *Type:* *[]*string
+
+External URLs that can be redirected to as part of logging in or logging out of the app.
+
+This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#allowed_external_redirect_urls LinuxFunctionApp#allowed_external_redirect_urls}
+
+---
+
+##### `CookieExpirationConvention`<sup>Optional</sup> <a name="CookieExpirationConvention" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.cookieExpirationConvention"></a>
+
+```go
+CookieExpirationConvention *string
+```
+
+- *Type:* *string
+
+The method by which cookies expire. Possible values include: `FixedTime`, and `IdentityProviderDerived`. Defaults to `FixedTime`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#cookie_expiration_convention LinuxFunctionApp#cookie_expiration_convention}
+
+---
+
+##### `CookieExpirationTime`<sup>Optional</sup> <a name="CookieExpirationTime" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.cookieExpirationTime"></a>
+
+```go
+CookieExpirationTime *string
+```
+
+- *Type:* *string
+
+The time after the request is made when the session cookie should expire. Defaults to `08:00:00`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#cookie_expiration_time LinuxFunctionApp#cookie_expiration_time}
+
+---
+
+##### `LogoutEndpoint`<sup>Optional</sup> <a name="LogoutEndpoint" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.logoutEndpoint"></a>
+
+```go
+LogoutEndpoint *string
+```
+
+- *Type:* *string
+
+The endpoint to which logout requests should be made.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#logout_endpoint LinuxFunctionApp#logout_endpoint}
+
+---
+
+##### `NonceExpirationTime`<sup>Optional</sup> <a name="NonceExpirationTime" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.nonceExpirationTime"></a>
+
+```go
+NonceExpirationTime *string
+```
+
+- *Type:* *string
+
+The time after the request is made when the nonce should expire. Defaults to `00:05:00`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#nonce_expiration_time LinuxFunctionApp#nonce_expiration_time}
+
+---
+
+##### `PreserveUrlFragmentsForLogins`<sup>Optional</sup> <a name="PreserveUrlFragmentsForLogins" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.preserveUrlFragmentsForLogins"></a>
+
+```go
+PreserveUrlFragmentsForLogins interface{}
+```
+
+- *Type:* interface{}
+
+Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#preserve_url_fragments_for_logins LinuxFunctionApp#preserve_url_fragments_for_logins}
+
+---
+
+##### `TokenRefreshExtensionTime`<sup>Optional</sup> <a name="TokenRefreshExtensionTime" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.tokenRefreshExtensionTime"></a>
+
+```go
+TokenRefreshExtensionTime *f64
+```
+
+- *Type:* *f64
+
+The number of hours after session token expiration that a session token can be used to call the token refresh API.
+
+Defaults to `72` hours.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#token_refresh_extension_time LinuxFunctionApp#token_refresh_extension_time}
+
+---
+
+##### `TokenStoreEnabled`<sup>Optional</sup> <a name="TokenStoreEnabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.tokenStoreEnabled"></a>
+
+```go
+TokenStoreEnabled interface{}
+```
+
+- *Type:* interface{}
+
+Should the Token Store configuration Enabled. Defaults to `false`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#token_store_enabled LinuxFunctionApp#token_store_enabled}
+
+---
+
+##### `TokenStorePath`<sup>Optional</sup> <a name="TokenStorePath" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.tokenStorePath"></a>
+
+```go
+TokenStorePath *string
+```
+
+- *Type:* *string
+
+The directory path in the App Filesystem in which the tokens will be stored.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#token_store_path LinuxFunctionApp#token_store_path}
+
+---
+
+##### `TokenStoreSasSettingName`<sup>Optional</sup> <a name="TokenStoreSasSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.tokenStoreSasSettingName"></a>
+
+```go
+TokenStoreSasSettingName *string
+```
+
+- *Type:* *string
+
+The name of the app setting which contains the SAS URL of the blob storage containing the tokens.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#token_store_sas_setting_name LinuxFunctionApp#token_store_sas_setting_name}
+
+---
+
+##### `ValidateNonce`<sup>Optional</sup> <a name="ValidateNonce" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.validateNonce"></a>
+
+```go
+ValidateNonce interface{}
+```
+
+- *Type:* interface{}
+
+Should the nonce be validated while completing the login flow. Defaults to `true`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#validate_nonce LinuxFunctionApp#validate_nonce}
+
+---
+
+### LinuxFunctionAppAuthSettingsV2MicrosoftV2 <a name="LinuxFunctionAppAuthSettingsV2MicrosoftV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+&linuxfunctionapp.LinuxFunctionAppAuthSettingsV2MicrosoftV2 {
+	ClientId: *string,
+	ClientSecretSettingName: *string,
+	AllowedAudiences: *[]*string,
+	LoginScopes: *[]*string,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2.property.clientId">ClientId</a></code> | <code>*string</code> | The OAuth 2.0 client ID that was created for the app used for authentication. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>*string</code> | The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2.property.allowedAudiences">AllowedAudiences</a></code> | <code>*[]*string</code> | Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2.property.loginScopes">LoginScopes</a></code> | <code>*[]*string</code> | The list of Login scopes that will be requested as part of Microsoft Account authentication. |
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2.property.clientId"></a>
+
+```go
+ClientId *string
+```
+
+- *Type:* *string
+
+The OAuth 2.0 client ID that was created for the app used for authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#client_id LinuxFunctionApp#client_id}
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2.property.clientSecretSettingName"></a>
+
+```go
+ClientSecretSettingName *string
+```
+
+- *Type:* *string
+
+The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
+
+---
+
+##### `AllowedAudiences`<sup>Optional</sup> <a name="AllowedAudiences" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2.property.allowedAudiences"></a>
+
+```go
+AllowedAudiences *[]*string
+```
+
+- *Type:* *[]*string
+
+Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#allowed_audiences LinuxFunctionApp#allowed_audiences}
+
+---
+
+##### `LoginScopes`<sup>Optional</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2.property.loginScopes"></a>
+
+```go
+LoginScopes *[]*string
+```
+
+- *Type:* *[]*string
+
+The list of Login scopes that will be requested as part of Microsoft Account authentication.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#login_scopes LinuxFunctionApp#login_scopes}
+
+---
+
+### LinuxFunctionAppAuthSettingsV2TwitterV2 <a name="LinuxFunctionAppAuthSettingsV2TwitterV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+&linuxfunctionapp.LinuxFunctionAppAuthSettingsV2TwitterV2 {
+	ConsumerKey: *string,
+	ConsumerSecretSettingName: *string,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2.property.consumerKey">ConsumerKey</a></code> | <code>*string</code> | The OAuth 1.0a consumer key of the Twitter application used for sign-in. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2.property.consumerSecretSettingName">ConsumerSecretSettingName</a></code> | <code>*string</code> | The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in. |
+
+---
+
+##### `ConsumerKey`<sup>Required</sup> <a name="ConsumerKey" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2.property.consumerKey"></a>
+
+```go
+ConsumerKey *string
+```
+
+- *Type:* *string
+
+The OAuth 1.0a consumer key of the Twitter application used for sign-in.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#consumer_key LinuxFunctionApp#consumer_key}
+
+---
+
+##### `ConsumerSecretSettingName`<sup>Required</sup> <a name="ConsumerSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2.property.consumerSecretSettingName"></a>
+
+```go
+ConsumerSecretSettingName *string
+```
+
+- *Type:* *string
+
+The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#consumer_secret_setting_name LinuxFunctionApp#consumer_secret_setting_name}
+
+---
+
 ### LinuxFunctionAppBackup <a name="LinuxFunctionAppBackup" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackup"></a>
 
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppBackup {
 	Name: *string,
-	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppBackupSchedule,
+	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppBackupSchedule,
 	StorageAccountUrl: *string,
 	Enabled: interface{},
 }
@@ -2358,7 +3726,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppBackupSchedule {
 	FrequencyInterval: *f64,
@@ -2456,7 +3824,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppConfig {
 	Connection: interface{},
@@ -2470,10 +3838,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
 	Name: *string,
 	ResourceGroupName: *string,
 	ServicePlanId: *string,
-	SiteConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppSiteConfig,
+	SiteConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig,
 	AppSettings: *map[string]*string,
-	AuthSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppAuthSettings,
-	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppBackup,
+	AuthSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings,
+	AuthSettingsV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2,
+	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppBackup,
 	BuiltinLoggingEnabled: interface{},
 	ClientCertificateEnabled: interface{},
 	ClientCertificateExclusionPaths: *string,
@@ -2485,16 +3854,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
 	FunctionsExtensionVersion: *string,
 	HttpsOnly: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppIdentity,
 	KeyVaultReferenceIdentityId: *string,
-	StickySettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppStickySettings,
+	StickySettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppStickySettings,
 	StorageAccount: interface{},
 	StorageAccountAccessKey: *string,
 	StorageAccountName: *string,
 	StorageKeyVaultSecretId: *string,
 	StorageUsesManagedIdentity: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts,
 	VirtualNetworkSubnetId: *string,
 }
 ```
@@ -2517,6 +3886,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.siteConfig">SiteConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig">LinuxFunctionAppSiteConfig</a></code> | site_config block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.appSettings">AppSettings</a></code> | <code>*map[string]*string</code> | A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.authSettings">AuthSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings">LinuxFunctionAppAuthSettings</a></code> | auth_settings block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.authSettingsV2">AuthSettingsV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2">LinuxFunctionAppAuthSettingsV2</a></code> | auth_settings_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.backup">Backup</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackup">LinuxFunctionAppBackup</a></code> | backup block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.builtinLoggingEnabled">BuiltinLoggingEnabled</a></code> | <code>interface{}</code> | Should built in logging be enabled. Configures `AzureWebJobsDashboard` app setting based on the configured storage setting. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.clientCertificateEnabled">ClientCertificateEnabled</a></code> | <code>interface{}</code> | Should the function app use Client Certificates. |
@@ -2704,6 +4074,20 @@ AuthSettings LinuxFunctionAppAuthSettings
 auth_settings block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#auth_settings LinuxFunctionApp#auth_settings}
+
+---
+
+##### `AuthSettingsV2`<sup>Optional</sup> <a name="AuthSettingsV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.authSettingsV2"></a>
+
+```go
+AuthSettingsV2 LinuxFunctionAppAuthSettingsV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2">LinuxFunctionAppAuthSettingsV2</a>
+
+auth_settings_v2 block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#auth_settings_v2 LinuxFunctionApp#auth_settings_v2}
 
 ---
 
@@ -3035,7 +4419,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppConnectionString {
 	Name: *string,
@@ -3101,7 +4485,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppIdentity {
 	Type: *string,
@@ -3147,7 +4531,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppSiteConfig {
 	AlwaysOn: interface{},
@@ -3156,12 +4540,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
 	AppCommandLine: *string,
 	ApplicationInsightsConnectionString: *string,
 	ApplicationInsightsKey: *string,
-	ApplicationStack: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack,
+	ApplicationStack: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack,
 	AppScaleLimit: *f64,
-	AppServiceLogs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppSiteConfigAppServiceLogs,
+	AppServiceLogs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigAppServiceLogs,
 	ContainerRegistryManagedIdentityClientId: *string,
 	ContainerRegistryUseManagedIdentity: interface{},
-	Cors: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppSiteConfigCors,
+	Cors: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCors,
 	DefaultDocuments: *[]*string,
 	ElasticInstanceMinimum: *f64,
 	FtpsState: *string,
@@ -3697,7 +5081,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppSiteConfigApplicationStack {
 	Docker: interface{},
@@ -3841,7 +5225,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppSiteConfigApplicationStackDocker {
 	ImageName: *string,
@@ -3939,7 +5323,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigAppServiceLogs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppSiteConfigAppServiceLogs {
 	DiskQuotaMb: *f64,
@@ -3989,7 +5373,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppSiteConfigCors {
 	AllowedOrigins: *[]*string,
@@ -4039,7 +5423,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppSiteConfigIpRestriction {
 	Action: *string,
@@ -4155,7 +5539,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppSiteConfigIpRestrictionHeaders {
 	XAzureFdid: *[]*string,
@@ -4229,7 +5613,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppSiteConfigScmIpRestriction {
 	Action: *string,
@@ -4345,7 +5729,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders {
 	XAzureFdid: *[]*string,
@@ -4419,7 +5803,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppSiteCredential {
 
@@ -4432,7 +5816,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStickySettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppStickySettings {
 	AppSettingNames: *[]*string,
@@ -4478,7 +5862,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppStorageAccount {
 	AccessKey: *string,
@@ -4580,7 +5964,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 &linuxfunctionapp.LinuxFunctionAppTimeouts {
 	Create: *string,
@@ -4656,7 +6040,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsActiveDirectoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppAuthSettingsActiveDirectoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsActiveDirectoryOutputReference
 ```
@@ -5014,7 +6398,7 @@ func InternalValue() LinuxFunctionAppAuthSettingsActiveDirectory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsFacebookOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppAuthSettingsFacebookOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsFacebookOutputReference
 ```
@@ -5372,7 +6756,7 @@ func InternalValue() LinuxFunctionAppAuthSettingsFacebook
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsGithubOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppAuthSettingsGithubOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsGithubOutputReference
 ```
@@ -5730,7 +7114,7 @@ func InternalValue() LinuxFunctionAppAuthSettingsGithub
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsGoogleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppAuthSettingsGoogleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsGoogleOutputReference
 ```
@@ -6088,7 +7472,7 @@ func InternalValue() LinuxFunctionAppAuthSettingsGoogle
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsMicrosoftOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppAuthSettingsMicrosoftOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsMicrosoftOutputReference
 ```
@@ -6446,7 +7830,7 @@ func InternalValue() LinuxFunctionAppAuthSettingsMicrosoft
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppAuthSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsOutputReference
 ```
@@ -7201,7 +8585,7 @@ func InternalValue() LinuxFunctionAppAuthSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsTwitterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppAuthSettingsTwitterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsTwitterOutputReference
 ```
@@ -7525,12 +8909,5016 @@ func InternalValue() LinuxFunctionAppAuthSettingsTwitter
 ---
 
 
+### LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference <a name="LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+linuxfunctionapp.NewLinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedApplications">ResetAllowedApplications</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedAudiences">ResetAllowedAudiences</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedGroups">ResetAllowedGroups</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedIdentities">ResetAllowedIdentities</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetClientSecretCertificateThumbprint">ResetClientSecretCertificateThumbprint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetClientSecretSettingName">ResetClientSecretSettingName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetJwtAllowedClientApplications">ResetJwtAllowedClientApplications</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetJwtAllowedGroups">ResetJwtAllowedGroups</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetLoginParameters">ResetLoginParameters</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetWwwAuthenticationDisabled">ResetWwwAuthenticationDisabled</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetAllowedApplications` <a name="ResetAllowedApplications" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedApplications"></a>
+
+```go
+func ResetAllowedApplications()
+```
+
+##### `ResetAllowedAudiences` <a name="ResetAllowedAudiences" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedAudiences"></a>
+
+```go
+func ResetAllowedAudiences()
+```
+
+##### `ResetAllowedGroups` <a name="ResetAllowedGroups" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedGroups"></a>
+
+```go
+func ResetAllowedGroups()
+```
+
+##### `ResetAllowedIdentities` <a name="ResetAllowedIdentities" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetAllowedIdentities"></a>
+
+```go
+func ResetAllowedIdentities()
+```
+
+##### `ResetClientSecretCertificateThumbprint` <a name="ResetClientSecretCertificateThumbprint" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetClientSecretCertificateThumbprint"></a>
+
+```go
+func ResetClientSecretCertificateThumbprint()
+```
+
+##### `ResetClientSecretSettingName` <a name="ResetClientSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetClientSecretSettingName"></a>
+
+```go
+func ResetClientSecretSettingName()
+```
+
+##### `ResetJwtAllowedClientApplications` <a name="ResetJwtAllowedClientApplications" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetJwtAllowedClientApplications"></a>
+
+```go
+func ResetJwtAllowedClientApplications()
+```
+
+##### `ResetJwtAllowedGroups` <a name="ResetJwtAllowedGroups" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetJwtAllowedGroups"></a>
+
+```go
+func ResetJwtAllowedGroups()
+```
+
+##### `ResetLoginParameters` <a name="ResetLoginParameters" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetLoginParameters"></a>
+
+```go
+func ResetLoginParameters()
+```
+
+##### `ResetWwwAuthenticationDisabled` <a name="ResetWwwAuthenticationDisabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.resetWwwAuthenticationDisabled"></a>
+
+```go
+func ResetWwwAuthenticationDisabled()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedApplicationsInput">AllowedApplicationsInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedAudiencesInput">AllowedAudiencesInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedGroupsInput">AllowedGroupsInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedIdentitiesInput">AllowedIdentitiesInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientIdInput">ClientIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretCertificateThumbprintInput">ClientSecretCertificateThumbprintInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretSettingNameInput">ClientSecretSettingNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedClientApplicationsInput">JwtAllowedClientApplicationsInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroupsInput">JwtAllowedGroupsInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParametersInput">LoginParametersInput</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpointInput">TenantAuthEndpointInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabledInput">WwwAuthenticationDisabledInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedApplications">AllowedApplications</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedAudiences">AllowedAudiences</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedGroups">AllowedGroups</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedIdentities">AllowedIdentities</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientId">ClientId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretCertificateThumbprint">ClientSecretCertificateThumbprint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedClientApplications">JwtAllowedClientApplications</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroups">JwtAllowedGroups</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParameters">LoginParameters</a></code> | <code>*map[string]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpoint">TenantAuthEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabled">WwwAuthenticationDisabled</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2">LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `AllowedApplicationsInput`<sup>Optional</sup> <a name="AllowedApplicationsInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedApplicationsInput"></a>
+
+```go
+func AllowedApplicationsInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `AllowedAudiencesInput`<sup>Optional</sup> <a name="AllowedAudiencesInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedAudiencesInput"></a>
+
+```go
+func AllowedAudiencesInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `AllowedGroupsInput`<sup>Optional</sup> <a name="AllowedGroupsInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedGroupsInput"></a>
+
+```go
+func AllowedGroupsInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `AllowedIdentitiesInput`<sup>Optional</sup> <a name="AllowedIdentitiesInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedIdentitiesInput"></a>
+
+```go
+func AllowedIdentitiesInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `ClientIdInput`<sup>Optional</sup> <a name="ClientIdInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientIdInput"></a>
+
+```go
+func ClientIdInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientSecretCertificateThumbprintInput`<sup>Optional</sup> <a name="ClientSecretCertificateThumbprintInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretCertificateThumbprintInput"></a>
+
+```go
+func ClientSecretCertificateThumbprintInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientSecretSettingNameInput`<sup>Optional</sup> <a name="ClientSecretSettingNameInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretSettingNameInput"></a>
+
+```go
+func ClientSecretSettingNameInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `JwtAllowedClientApplicationsInput`<sup>Optional</sup> <a name="JwtAllowedClientApplicationsInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedClientApplicationsInput"></a>
+
+```go
+func JwtAllowedClientApplicationsInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `JwtAllowedGroupsInput`<sup>Optional</sup> <a name="JwtAllowedGroupsInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroupsInput"></a>
+
+```go
+func JwtAllowedGroupsInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `LoginParametersInput`<sup>Optional</sup> <a name="LoginParametersInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParametersInput"></a>
+
+```go
+func LoginParametersInput() *map[string]*string
+```
+
+- *Type:* *map[string]*string
+
+---
+
+##### `TenantAuthEndpointInput`<sup>Optional</sup> <a name="TenantAuthEndpointInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpointInput"></a>
+
+```go
+func TenantAuthEndpointInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `WwwAuthenticationDisabledInput`<sup>Optional</sup> <a name="WwwAuthenticationDisabledInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabledInput"></a>
+
+```go
+func WwwAuthenticationDisabledInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `AllowedApplications`<sup>Required</sup> <a name="AllowedApplications" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedApplications"></a>
+
+```go
+func AllowedApplications() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `AllowedAudiences`<sup>Required</sup> <a name="AllowedAudiences" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedAudiences"></a>
+
+```go
+func AllowedAudiences() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `AllowedGroups`<sup>Required</sup> <a name="AllowedGroups" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedGroups"></a>
+
+```go
+func AllowedGroups() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `AllowedIdentities`<sup>Required</sup> <a name="AllowedIdentities" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedIdentities"></a>
+
+```go
+func AllowedIdentities() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientId"></a>
+
+```go
+func ClientId() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientSecretCertificateThumbprint`<sup>Required</sup> <a name="ClientSecretCertificateThumbprint" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretCertificateThumbprint"></a>
+
+```go
+func ClientSecretCertificateThumbprint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.clientSecretSettingName"></a>
+
+```go
+func ClientSecretSettingName() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `JwtAllowedClientApplications`<sup>Required</sup> <a name="JwtAllowedClientApplications" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedClientApplications"></a>
+
+```go
+func JwtAllowedClientApplications() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `JwtAllowedGroups`<sup>Required</sup> <a name="JwtAllowedGroups" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroups"></a>
+
+```go
+func JwtAllowedGroups() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `LoginParameters`<sup>Required</sup> <a name="LoginParameters" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParameters"></a>
+
+```go
+func LoginParameters() *map[string]*string
+```
+
+- *Type:* *map[string]*string
+
+---
+
+##### `TenantAuthEndpoint`<sup>Required</sup> <a name="TenantAuthEndpoint" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpoint"></a>
+
+```go
+func TenantAuthEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `WwwAuthenticationDisabled`<sup>Required</sup> <a name="WwwAuthenticationDisabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabled"></a>
+
+```go
+func WwwAuthenticationDisabled() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2">LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2</a>
+
+---
+
+
+### LinuxFunctionAppAuthSettingsV2AppleV2OutputReference <a name="LinuxFunctionAppAuthSettingsV2AppleV2OutputReference" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+linuxfunctionapp.NewLinuxFunctionAppAuthSettingsV2AppleV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsV2AppleV2OutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.loginScopes">LoginScopes</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientIdInput">ClientIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientSecretSettingNameInput">ClientSecretSettingNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientId">ClientId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2">LinuxFunctionAppAuthSettingsV2AppleV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LoginScopes`<sup>Required</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.loginScopes"></a>
+
+```go
+func LoginScopes() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `ClientIdInput`<sup>Optional</sup> <a name="ClientIdInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientIdInput"></a>
+
+```go
+func ClientIdInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientSecretSettingNameInput`<sup>Optional</sup> <a name="ClientSecretSettingNameInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientSecretSettingNameInput"></a>
+
+```go
+func ClientSecretSettingNameInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientId"></a>
+
+```go
+func ClientId() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.clientSecretSettingName"></a>
+
+```go
+func ClientSecretSettingName() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() LinuxFunctionAppAuthSettingsV2AppleV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2">LinuxFunctionAppAuthSettingsV2AppleV2</a>
+
+---
+
+
+### LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference <a name="LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+linuxfunctionapp.NewLinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.clientIdInput">ClientIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.clientId">ClientId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2">LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientIdInput`<sup>Optional</sup> <a name="ClientIdInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.clientIdInput"></a>
+
+```go
+func ClientIdInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.clientId"></a>
+
+```go
+func ClientId() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2">LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2</a>
+
+---
+
+
+### LinuxFunctionAppAuthSettingsV2CustomOidcV2List <a name="LinuxFunctionAppAuthSettingsV2CustomOidcV2List" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+linuxfunctionapp.NewLinuxFunctionAppAuthSettingsV2CustomOidcV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppAuthSettingsV2CustomOidcV2List
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* *bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.get">Get</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `Get` <a name="Get" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.get"></a>
+
+```go
+func Get(index *f64) LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.get.parameter.index"></a>
+
+- *Type:* *f64
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.property.internalValue"></a>
+
+```go
+func InternalValue() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+
+### LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference <a name="LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+linuxfunctionapp.NewLinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* *f64
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* *bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.resetNameClaimType">ResetNameClaimType</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.resetScopes">ResetScopes</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetNameClaimType` <a name="ResetNameClaimType" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.resetNameClaimType"></a>
+
+```go
+func ResetNameClaimType()
+```
+
+##### `ResetScopes` <a name="ResetScopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.resetScopes"></a>
+
+```go
+func ResetScopes()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.authorisationEndpoint">AuthorisationEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.certificationUri">CertificationUri</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientCredentialMethod">ClientCredentialMethod</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.issuerEndpoint">IssuerEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.tokenEndpoint">TokenEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientIdInput">ClientIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimTypeInput">NameClaimTypeInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpointInput">OpenidConfigurationEndpointInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.scopesInput">ScopesInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientId">ClientId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.name">Name</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimType">NameClaimType</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpoint">OpenidConfigurationEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.scopes">Scopes</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `AuthorisationEndpoint`<sup>Required</sup> <a name="AuthorisationEndpoint" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.authorisationEndpoint"></a>
+
+```go
+func AuthorisationEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `CertificationUri`<sup>Required</sup> <a name="CertificationUri" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.certificationUri"></a>
+
+```go
+func CertificationUri() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientCredentialMethod`<sup>Required</sup> <a name="ClientCredentialMethod" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientCredentialMethod"></a>
+
+```go
+func ClientCredentialMethod() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientSecretSettingName"></a>
+
+```go
+func ClientSecretSettingName() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `IssuerEndpoint`<sup>Required</sup> <a name="IssuerEndpoint" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.issuerEndpoint"></a>
+
+```go
+func IssuerEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `TokenEndpoint`<sup>Required</sup> <a name="TokenEndpoint" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.tokenEndpoint"></a>
+
+```go
+func TokenEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientIdInput`<sup>Optional</sup> <a name="ClientIdInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientIdInput"></a>
+
+```go
+func ClientIdInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `NameClaimTypeInput`<sup>Optional</sup> <a name="NameClaimTypeInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimTypeInput"></a>
+
+```go
+func NameClaimTypeInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `NameInput`<sup>Optional</sup> <a name="NameInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.nameInput"></a>
+
+```go
+func NameInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `OpenidConfigurationEndpointInput`<sup>Optional</sup> <a name="OpenidConfigurationEndpointInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpointInput"></a>
+
+```go
+func OpenidConfigurationEndpointInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ScopesInput`<sup>Optional</sup> <a name="ScopesInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.scopesInput"></a>
+
+```go
+func ScopesInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.clientId"></a>
+
+```go
+func ClientId() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.name"></a>
+
+```go
+func Name() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `NameClaimType`<sup>Required</sup> <a name="NameClaimType" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimType"></a>
+
+```go
+func NameClaimType() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `OpenidConfigurationEndpoint`<sup>Required</sup> <a name="OpenidConfigurationEndpoint" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpoint"></a>
+
+```go
+func OpenidConfigurationEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Scopes`<sup>Required</sup> <a name="Scopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.scopes"></a>
+
+```go
+func Scopes() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+
+### LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference <a name="LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+linuxfunctionapp.NewLinuxFunctionAppAuthSettingsV2FacebookV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.resetGraphApiVersion">ResetGraphApiVersion</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.resetLoginScopes">ResetLoginScopes</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetGraphApiVersion` <a name="ResetGraphApiVersion" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.resetGraphApiVersion"></a>
+
+```go
+func ResetGraphApiVersion()
+```
+
+##### `ResetLoginScopes` <a name="ResetLoginScopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.resetLoginScopes"></a>
+
+```go
+func ResetLoginScopes()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appIdInput">AppIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appSecretSettingNameInput">AppSecretSettingNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.graphApiVersionInput">GraphApiVersionInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.loginScopesInput">LoginScopesInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appId">AppId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appSecretSettingName">AppSecretSettingName</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.graphApiVersion">GraphApiVersion</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.loginScopes">LoginScopes</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2">LinuxFunctionAppAuthSettingsV2FacebookV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `AppIdInput`<sup>Optional</sup> <a name="AppIdInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appIdInput"></a>
+
+```go
+func AppIdInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `AppSecretSettingNameInput`<sup>Optional</sup> <a name="AppSecretSettingNameInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appSecretSettingNameInput"></a>
+
+```go
+func AppSecretSettingNameInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `GraphApiVersionInput`<sup>Optional</sup> <a name="GraphApiVersionInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.graphApiVersionInput"></a>
+
+```go
+func GraphApiVersionInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LoginScopesInput`<sup>Optional</sup> <a name="LoginScopesInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.loginScopesInput"></a>
+
+```go
+func LoginScopesInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `AppId`<sup>Required</sup> <a name="AppId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appId"></a>
+
+```go
+func AppId() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `AppSecretSettingName`<sup>Required</sup> <a name="AppSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.appSecretSettingName"></a>
+
+```go
+func AppSecretSettingName() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `GraphApiVersion`<sup>Required</sup> <a name="GraphApiVersion" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.graphApiVersion"></a>
+
+```go
+func GraphApiVersion() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LoginScopes`<sup>Required</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.loginScopes"></a>
+
+```go
+func LoginScopes() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() LinuxFunctionAppAuthSettingsV2FacebookV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2">LinuxFunctionAppAuthSettingsV2FacebookV2</a>
+
+---
+
+
+### LinuxFunctionAppAuthSettingsV2GithubV2OutputReference <a name="LinuxFunctionAppAuthSettingsV2GithubV2OutputReference" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+linuxfunctionapp.NewLinuxFunctionAppAuthSettingsV2GithubV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsV2GithubV2OutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.resetLoginScopes">ResetLoginScopes</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetLoginScopes` <a name="ResetLoginScopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.resetLoginScopes"></a>
+
+```go
+func ResetLoginScopes()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientIdInput">ClientIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientSecretSettingNameInput">ClientSecretSettingNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.loginScopesInput">LoginScopesInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientId">ClientId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.loginScopes">LoginScopes</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2">LinuxFunctionAppAuthSettingsV2GithubV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientIdInput`<sup>Optional</sup> <a name="ClientIdInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientIdInput"></a>
+
+```go
+func ClientIdInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientSecretSettingNameInput`<sup>Optional</sup> <a name="ClientSecretSettingNameInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientSecretSettingNameInput"></a>
+
+```go
+func ClientSecretSettingNameInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LoginScopesInput`<sup>Optional</sup> <a name="LoginScopesInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.loginScopesInput"></a>
+
+```go
+func LoginScopesInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientId"></a>
+
+```go
+func ClientId() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.clientSecretSettingName"></a>
+
+```go
+func ClientSecretSettingName() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LoginScopes`<sup>Required</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.loginScopes"></a>
+
+```go
+func LoginScopes() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() LinuxFunctionAppAuthSettingsV2GithubV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2">LinuxFunctionAppAuthSettingsV2GithubV2</a>
+
+---
+
+
+### LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference <a name="LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+linuxfunctionapp.NewLinuxFunctionAppAuthSettingsV2GoogleV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.resetAllowedAudiences">ResetAllowedAudiences</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.resetLoginScopes">ResetLoginScopes</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetAllowedAudiences` <a name="ResetAllowedAudiences" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.resetAllowedAudiences"></a>
+
+```go
+func ResetAllowedAudiences()
+```
+
+##### `ResetLoginScopes` <a name="ResetLoginScopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.resetLoginScopes"></a>
+
+```go
+func ResetLoginScopes()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.allowedAudiencesInput">AllowedAudiencesInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientIdInput">ClientIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientSecretSettingNameInput">ClientSecretSettingNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.loginScopesInput">LoginScopesInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.allowedAudiences">AllowedAudiences</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientId">ClientId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.loginScopes">LoginScopes</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2">LinuxFunctionAppAuthSettingsV2GoogleV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `AllowedAudiencesInput`<sup>Optional</sup> <a name="AllowedAudiencesInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.allowedAudiencesInput"></a>
+
+```go
+func AllowedAudiencesInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `ClientIdInput`<sup>Optional</sup> <a name="ClientIdInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientIdInput"></a>
+
+```go
+func ClientIdInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientSecretSettingNameInput`<sup>Optional</sup> <a name="ClientSecretSettingNameInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientSecretSettingNameInput"></a>
+
+```go
+func ClientSecretSettingNameInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LoginScopesInput`<sup>Optional</sup> <a name="LoginScopesInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.loginScopesInput"></a>
+
+```go
+func LoginScopesInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `AllowedAudiences`<sup>Required</sup> <a name="AllowedAudiences" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.allowedAudiences"></a>
+
+```go
+func AllowedAudiences() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientId"></a>
+
+```go
+func ClientId() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.clientSecretSettingName"></a>
+
+```go
+func ClientSecretSettingName() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LoginScopes`<sup>Required</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.loginScopes"></a>
+
+```go
+func LoginScopes() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() LinuxFunctionAppAuthSettingsV2GoogleV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2">LinuxFunctionAppAuthSettingsV2GoogleV2</a>
+
+---
+
+
+### LinuxFunctionAppAuthSettingsV2LoginOutputReference <a name="LinuxFunctionAppAuthSettingsV2LoginOutputReference" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+linuxfunctionapp.NewLinuxFunctionAppAuthSettingsV2LoginOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsV2LoginOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetAllowedExternalRedirectUrls">ResetAllowedExternalRedirectUrls</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetCookieExpirationConvention">ResetCookieExpirationConvention</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetCookieExpirationTime">ResetCookieExpirationTime</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetLogoutEndpoint">ResetLogoutEndpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetNonceExpirationTime">ResetNonceExpirationTime</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetPreserveUrlFragmentsForLogins">ResetPreserveUrlFragmentsForLogins</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetTokenRefreshExtensionTime">ResetTokenRefreshExtensionTime</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetTokenStoreEnabled">ResetTokenStoreEnabled</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetTokenStorePath">ResetTokenStorePath</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetTokenStoreSasSettingName">ResetTokenStoreSasSettingName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetValidateNonce">ResetValidateNonce</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetAllowedExternalRedirectUrls` <a name="ResetAllowedExternalRedirectUrls" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetAllowedExternalRedirectUrls"></a>
+
+```go
+func ResetAllowedExternalRedirectUrls()
+```
+
+##### `ResetCookieExpirationConvention` <a name="ResetCookieExpirationConvention" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetCookieExpirationConvention"></a>
+
+```go
+func ResetCookieExpirationConvention()
+```
+
+##### `ResetCookieExpirationTime` <a name="ResetCookieExpirationTime" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetCookieExpirationTime"></a>
+
+```go
+func ResetCookieExpirationTime()
+```
+
+##### `ResetLogoutEndpoint` <a name="ResetLogoutEndpoint" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetLogoutEndpoint"></a>
+
+```go
+func ResetLogoutEndpoint()
+```
+
+##### `ResetNonceExpirationTime` <a name="ResetNonceExpirationTime" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetNonceExpirationTime"></a>
+
+```go
+func ResetNonceExpirationTime()
+```
+
+##### `ResetPreserveUrlFragmentsForLogins` <a name="ResetPreserveUrlFragmentsForLogins" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetPreserveUrlFragmentsForLogins"></a>
+
+```go
+func ResetPreserveUrlFragmentsForLogins()
+```
+
+##### `ResetTokenRefreshExtensionTime` <a name="ResetTokenRefreshExtensionTime" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetTokenRefreshExtensionTime"></a>
+
+```go
+func ResetTokenRefreshExtensionTime()
+```
+
+##### `ResetTokenStoreEnabled` <a name="ResetTokenStoreEnabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetTokenStoreEnabled"></a>
+
+```go
+func ResetTokenStoreEnabled()
+```
+
+##### `ResetTokenStorePath` <a name="ResetTokenStorePath" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetTokenStorePath"></a>
+
+```go
+func ResetTokenStorePath()
+```
+
+##### `ResetTokenStoreSasSettingName` <a name="ResetTokenStoreSasSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetTokenStoreSasSettingName"></a>
+
+```go
+func ResetTokenStoreSasSettingName()
+```
+
+##### `ResetValidateNonce` <a name="ResetValidateNonce" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.resetValidateNonce"></a>
+
+```go
+func ResetValidateNonce()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.allowedExternalRedirectUrlsInput">AllowedExternalRedirectUrlsInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationConventionInput">CookieExpirationConventionInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationTimeInput">CookieExpirationTimeInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.logoutEndpointInput">LogoutEndpointInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.nonceExpirationTimeInput">NonceExpirationTimeInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLoginsInput">PreserveUrlFragmentsForLoginsInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTimeInput">TokenRefreshExtensionTimeInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabledInput">TokenStoreEnabledInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStorePathInput">TokenStorePathInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingNameInput">TokenStoreSasSettingNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.validateNonceInput">ValidateNonceInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.allowedExternalRedirectUrls">AllowedExternalRedirectUrls</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationConvention">CookieExpirationConvention</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationTime">CookieExpirationTime</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.logoutEndpoint">LogoutEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.nonceExpirationTime">NonceExpirationTime</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLogins">PreserveUrlFragmentsForLogins</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTime">TokenRefreshExtensionTime</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabled">TokenStoreEnabled</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStorePath">TokenStorePath</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingName">TokenStoreSasSettingName</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.validateNonce">ValidateNonce</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login">LinuxFunctionAppAuthSettingsV2Login</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `AllowedExternalRedirectUrlsInput`<sup>Optional</sup> <a name="AllowedExternalRedirectUrlsInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.allowedExternalRedirectUrlsInput"></a>
+
+```go
+func AllowedExternalRedirectUrlsInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `CookieExpirationConventionInput`<sup>Optional</sup> <a name="CookieExpirationConventionInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationConventionInput"></a>
+
+```go
+func CookieExpirationConventionInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `CookieExpirationTimeInput`<sup>Optional</sup> <a name="CookieExpirationTimeInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationTimeInput"></a>
+
+```go
+func CookieExpirationTimeInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LogoutEndpointInput`<sup>Optional</sup> <a name="LogoutEndpointInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.logoutEndpointInput"></a>
+
+```go
+func LogoutEndpointInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `NonceExpirationTimeInput`<sup>Optional</sup> <a name="NonceExpirationTimeInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.nonceExpirationTimeInput"></a>
+
+```go
+func NonceExpirationTimeInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PreserveUrlFragmentsForLoginsInput`<sup>Optional</sup> <a name="PreserveUrlFragmentsForLoginsInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLoginsInput"></a>
+
+```go
+func PreserveUrlFragmentsForLoginsInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `TokenRefreshExtensionTimeInput`<sup>Optional</sup> <a name="TokenRefreshExtensionTimeInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTimeInput"></a>
+
+```go
+func TokenRefreshExtensionTimeInput() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `TokenStoreEnabledInput`<sup>Optional</sup> <a name="TokenStoreEnabledInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabledInput"></a>
+
+```go
+func TokenStoreEnabledInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `TokenStorePathInput`<sup>Optional</sup> <a name="TokenStorePathInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStorePathInput"></a>
+
+```go
+func TokenStorePathInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `TokenStoreSasSettingNameInput`<sup>Optional</sup> <a name="TokenStoreSasSettingNameInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingNameInput"></a>
+
+```go
+func TokenStoreSasSettingNameInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ValidateNonceInput`<sup>Optional</sup> <a name="ValidateNonceInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.validateNonceInput"></a>
+
+```go
+func ValidateNonceInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `AllowedExternalRedirectUrls`<sup>Required</sup> <a name="AllowedExternalRedirectUrls" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.allowedExternalRedirectUrls"></a>
+
+```go
+func AllowedExternalRedirectUrls() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `CookieExpirationConvention`<sup>Required</sup> <a name="CookieExpirationConvention" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationConvention"></a>
+
+```go
+func CookieExpirationConvention() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `CookieExpirationTime`<sup>Required</sup> <a name="CookieExpirationTime" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationTime"></a>
+
+```go
+func CookieExpirationTime() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LogoutEndpoint`<sup>Required</sup> <a name="LogoutEndpoint" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.logoutEndpoint"></a>
+
+```go
+func LogoutEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `NonceExpirationTime`<sup>Required</sup> <a name="NonceExpirationTime" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.nonceExpirationTime"></a>
+
+```go
+func NonceExpirationTime() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PreserveUrlFragmentsForLogins`<sup>Required</sup> <a name="PreserveUrlFragmentsForLogins" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLogins"></a>
+
+```go
+func PreserveUrlFragmentsForLogins() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `TokenRefreshExtensionTime`<sup>Required</sup> <a name="TokenRefreshExtensionTime" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTime"></a>
+
+```go
+func TokenRefreshExtensionTime() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `TokenStoreEnabled`<sup>Required</sup> <a name="TokenStoreEnabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabled"></a>
+
+```go
+func TokenStoreEnabled() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `TokenStorePath`<sup>Required</sup> <a name="TokenStorePath" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStorePath"></a>
+
+```go
+func TokenStorePath() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `TokenStoreSasSettingName`<sup>Required</sup> <a name="TokenStoreSasSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingName"></a>
+
+```go
+func TokenStoreSasSettingName() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ValidateNonce`<sup>Required</sup> <a name="ValidateNonce" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.validateNonce"></a>
+
+```go
+func ValidateNonce() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() LinuxFunctionAppAuthSettingsV2Login
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login">LinuxFunctionAppAuthSettingsV2Login</a>
+
+---
+
+
+### LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference <a name="LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+linuxfunctionapp.NewLinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.resetAllowedAudiences">ResetAllowedAudiences</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.resetLoginScopes">ResetLoginScopes</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetAllowedAudiences` <a name="ResetAllowedAudiences" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.resetAllowedAudiences"></a>
+
+```go
+func ResetAllowedAudiences()
+```
+
+##### `ResetLoginScopes` <a name="ResetLoginScopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.resetLoginScopes"></a>
+
+```go
+func ResetLoginScopes()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.allowedAudiencesInput">AllowedAudiencesInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientIdInput">ClientIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientSecretSettingNameInput">ClientSecretSettingNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.loginScopesInput">LoginScopesInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.allowedAudiences">AllowedAudiences</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientId">ClientId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientSecretSettingName">ClientSecretSettingName</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.loginScopes">LoginScopes</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2">LinuxFunctionAppAuthSettingsV2MicrosoftV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `AllowedAudiencesInput`<sup>Optional</sup> <a name="AllowedAudiencesInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.allowedAudiencesInput"></a>
+
+```go
+func AllowedAudiencesInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `ClientIdInput`<sup>Optional</sup> <a name="ClientIdInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientIdInput"></a>
+
+```go
+func ClientIdInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientSecretSettingNameInput`<sup>Optional</sup> <a name="ClientSecretSettingNameInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientSecretSettingNameInput"></a>
+
+```go
+func ClientSecretSettingNameInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LoginScopesInput`<sup>Optional</sup> <a name="LoginScopesInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.loginScopesInput"></a>
+
+```go
+func LoginScopesInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `AllowedAudiences`<sup>Required</sup> <a name="AllowedAudiences" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.allowedAudiences"></a>
+
+```go
+func AllowedAudiences() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `ClientId`<sup>Required</sup> <a name="ClientId" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientId"></a>
+
+```go
+func ClientId() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientSecretSettingName`<sup>Required</sup> <a name="ClientSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.clientSecretSettingName"></a>
+
+```go
+func ClientSecretSettingName() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LoginScopes`<sup>Required</sup> <a name="LoginScopes" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.loginScopes"></a>
+
+```go
+func LoginScopes() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() LinuxFunctionAppAuthSettingsV2MicrosoftV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2">LinuxFunctionAppAuthSettingsV2MicrosoftV2</a>
+
+---
+
+
+### LinuxFunctionAppAuthSettingsV2OutputReference <a name="LinuxFunctionAppAuthSettingsV2OutputReference" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+linuxfunctionapp.NewLinuxFunctionAppAuthSettingsV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsV2OutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putActiveDirectoryV2">PutActiveDirectoryV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putAppleV2">PutAppleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putAzureStaticWebAppV2">PutAzureStaticWebAppV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putCustomOidcV2">PutCustomOidcV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putFacebookV2">PutFacebookV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putGithubV2">PutGithubV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putGoogleV2">PutGoogleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putLogin">PutLogin</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putMicrosoftV2">PutMicrosoftV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putTwitterV2">PutTwitterV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetActiveDirectoryV2">ResetActiveDirectoryV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetAppleV2">ResetAppleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetAuthEnabled">ResetAuthEnabled</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetAzureStaticWebAppV2">ResetAzureStaticWebAppV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetConfigFilePath">ResetConfigFilePath</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetCustomOidcV2">ResetCustomOidcV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetDefaultProvider">ResetDefaultProvider</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetExcludedPaths">ResetExcludedPaths</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetFacebookV2">ResetFacebookV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetForwardProxyConvention">ResetForwardProxyConvention</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetForwardProxyCustomHostHeaderName">ResetForwardProxyCustomHostHeaderName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetForwardProxyCustomSchemeHeaderName">ResetForwardProxyCustomSchemeHeaderName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetGithubV2">ResetGithubV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetGoogleV2">ResetGoogleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetHttpRouteApiPrefix">ResetHttpRouteApiPrefix</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetMicrosoftV2">ResetMicrosoftV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetRequireAuthentication">ResetRequireAuthentication</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetRequireHttps">ResetRequireHttps</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetRuntimeVersion">ResetRuntimeVersion</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetTwitterV2">ResetTwitterV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetUnauthenticatedAction">ResetUnauthenticatedAction</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `PutActiveDirectoryV2` <a name="PutActiveDirectoryV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putActiveDirectoryV2"></a>
+
+```go
+func PutActiveDirectoryV2(value LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putActiveDirectoryV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2">LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2</a>
+
+---
+
+##### `PutAppleV2` <a name="PutAppleV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putAppleV2"></a>
+
+```go
+func PutAppleV2(value LinuxFunctionAppAuthSettingsV2AppleV2)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putAppleV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2">LinuxFunctionAppAuthSettingsV2AppleV2</a>
+
+---
+
+##### `PutAzureStaticWebAppV2` <a name="PutAzureStaticWebAppV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putAzureStaticWebAppV2"></a>
+
+```go
+func PutAzureStaticWebAppV2(value LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putAzureStaticWebAppV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2">LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2</a>
+
+---
+
+##### `PutCustomOidcV2` <a name="PutCustomOidcV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putCustomOidcV2"></a>
+
+```go
+func PutCustomOidcV2(value interface{})
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putCustomOidcV2.parameter.value"></a>
+
+- *Type:* interface{}
+
+---
+
+##### `PutFacebookV2` <a name="PutFacebookV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putFacebookV2"></a>
+
+```go
+func PutFacebookV2(value LinuxFunctionAppAuthSettingsV2FacebookV2)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putFacebookV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2">LinuxFunctionAppAuthSettingsV2FacebookV2</a>
+
+---
+
+##### `PutGithubV2` <a name="PutGithubV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putGithubV2"></a>
+
+```go
+func PutGithubV2(value LinuxFunctionAppAuthSettingsV2GithubV2)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putGithubV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2">LinuxFunctionAppAuthSettingsV2GithubV2</a>
+
+---
+
+##### `PutGoogleV2` <a name="PutGoogleV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putGoogleV2"></a>
+
+```go
+func PutGoogleV2(value LinuxFunctionAppAuthSettingsV2GoogleV2)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putGoogleV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2">LinuxFunctionAppAuthSettingsV2GoogleV2</a>
+
+---
+
+##### `PutLogin` <a name="PutLogin" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putLogin"></a>
+
+```go
+func PutLogin(value LinuxFunctionAppAuthSettingsV2Login)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putLogin.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login">LinuxFunctionAppAuthSettingsV2Login</a>
+
+---
+
+##### `PutMicrosoftV2` <a name="PutMicrosoftV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putMicrosoftV2"></a>
+
+```go
+func PutMicrosoftV2(value LinuxFunctionAppAuthSettingsV2MicrosoftV2)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putMicrosoftV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2">LinuxFunctionAppAuthSettingsV2MicrosoftV2</a>
+
+---
+
+##### `PutTwitterV2` <a name="PutTwitterV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putTwitterV2"></a>
+
+```go
+func PutTwitterV2(value LinuxFunctionAppAuthSettingsV2TwitterV2)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putTwitterV2.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2">LinuxFunctionAppAuthSettingsV2TwitterV2</a>
+
+---
+
+##### `ResetActiveDirectoryV2` <a name="ResetActiveDirectoryV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetActiveDirectoryV2"></a>
+
+```go
+func ResetActiveDirectoryV2()
+```
+
+##### `ResetAppleV2` <a name="ResetAppleV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetAppleV2"></a>
+
+```go
+func ResetAppleV2()
+```
+
+##### `ResetAuthEnabled` <a name="ResetAuthEnabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetAuthEnabled"></a>
+
+```go
+func ResetAuthEnabled()
+```
+
+##### `ResetAzureStaticWebAppV2` <a name="ResetAzureStaticWebAppV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetAzureStaticWebAppV2"></a>
+
+```go
+func ResetAzureStaticWebAppV2()
+```
+
+##### `ResetConfigFilePath` <a name="ResetConfigFilePath" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetConfigFilePath"></a>
+
+```go
+func ResetConfigFilePath()
+```
+
+##### `ResetCustomOidcV2` <a name="ResetCustomOidcV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetCustomOidcV2"></a>
+
+```go
+func ResetCustomOidcV2()
+```
+
+##### `ResetDefaultProvider` <a name="ResetDefaultProvider" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetDefaultProvider"></a>
+
+```go
+func ResetDefaultProvider()
+```
+
+##### `ResetExcludedPaths` <a name="ResetExcludedPaths" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetExcludedPaths"></a>
+
+```go
+func ResetExcludedPaths()
+```
+
+##### `ResetFacebookV2` <a name="ResetFacebookV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetFacebookV2"></a>
+
+```go
+func ResetFacebookV2()
+```
+
+##### `ResetForwardProxyConvention` <a name="ResetForwardProxyConvention" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetForwardProxyConvention"></a>
+
+```go
+func ResetForwardProxyConvention()
+```
+
+##### `ResetForwardProxyCustomHostHeaderName` <a name="ResetForwardProxyCustomHostHeaderName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetForwardProxyCustomHostHeaderName"></a>
+
+```go
+func ResetForwardProxyCustomHostHeaderName()
+```
+
+##### `ResetForwardProxyCustomSchemeHeaderName` <a name="ResetForwardProxyCustomSchemeHeaderName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetForwardProxyCustomSchemeHeaderName"></a>
+
+```go
+func ResetForwardProxyCustomSchemeHeaderName()
+```
+
+##### `ResetGithubV2` <a name="ResetGithubV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetGithubV2"></a>
+
+```go
+func ResetGithubV2()
+```
+
+##### `ResetGoogleV2` <a name="ResetGoogleV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetGoogleV2"></a>
+
+```go
+func ResetGoogleV2()
+```
+
+##### `ResetHttpRouteApiPrefix` <a name="ResetHttpRouteApiPrefix" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetHttpRouteApiPrefix"></a>
+
+```go
+func ResetHttpRouteApiPrefix()
+```
+
+##### `ResetMicrosoftV2` <a name="ResetMicrosoftV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetMicrosoftV2"></a>
+
+```go
+func ResetMicrosoftV2()
+```
+
+##### `ResetRequireAuthentication` <a name="ResetRequireAuthentication" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetRequireAuthentication"></a>
+
+```go
+func ResetRequireAuthentication()
+```
+
+##### `ResetRequireHttps` <a name="ResetRequireHttps" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetRequireHttps"></a>
+
+```go
+func ResetRequireHttps()
+```
+
+##### `ResetRuntimeVersion` <a name="ResetRuntimeVersion" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetRuntimeVersion"></a>
+
+```go
+func ResetRuntimeVersion()
+```
+
+##### `ResetTwitterV2` <a name="ResetTwitterV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetTwitterV2"></a>
+
+```go
+func ResetTwitterV2()
+```
+
+##### `ResetUnauthenticatedAction` <a name="ResetUnauthenticatedAction" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.resetUnauthenticatedAction"></a>
+
+```go
+func ResetUnauthenticatedAction()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.activeDirectoryV2">ActiveDirectoryV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference">LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.appleV2">AppleV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference">LinuxFunctionAppAuthSettingsV2AppleV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.azureStaticWebAppV2">AzureStaticWebAppV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference">LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.customOidcV2">CustomOidcV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List">LinuxFunctionAppAuthSettingsV2CustomOidcV2List</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.facebookV2">FacebookV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference">LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.githubV2">GithubV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference">LinuxFunctionAppAuthSettingsV2GithubV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.googleV2">GoogleV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference">LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.login">Login</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference">LinuxFunctionAppAuthSettingsV2LoginOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.microsoftV2">MicrosoftV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference">LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.twitterV2">TwitterV2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference">LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.activeDirectoryV2Input">ActiveDirectoryV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2">LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.appleV2Input">AppleV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2">LinuxFunctionAppAuthSettingsV2AppleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.authEnabledInput">AuthEnabledInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.azureStaticWebAppV2Input">AzureStaticWebAppV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2">LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.configFilePathInput">ConfigFilePathInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.customOidcV2Input">CustomOidcV2Input</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.defaultProviderInput">DefaultProviderInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.excludedPathsInput">ExcludedPathsInput</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.facebookV2Input">FacebookV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2">LinuxFunctionAppAuthSettingsV2FacebookV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.forwardProxyConventionInput">ForwardProxyConventionInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomHostHeaderNameInput">ForwardProxyCustomHostHeaderNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomSchemeHeaderNameInput">ForwardProxyCustomSchemeHeaderNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.githubV2Input">GithubV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2">LinuxFunctionAppAuthSettingsV2GithubV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.googleV2Input">GoogleV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2">LinuxFunctionAppAuthSettingsV2GoogleV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.httpRouteApiPrefixInput">HttpRouteApiPrefixInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.loginInput">LoginInput</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login">LinuxFunctionAppAuthSettingsV2Login</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.microsoftV2Input">MicrosoftV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2">LinuxFunctionAppAuthSettingsV2MicrosoftV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireAuthenticationInput">RequireAuthenticationInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireHttpsInput">RequireHttpsInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.runtimeVersionInput">RuntimeVersionInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.twitterV2Input">TwitterV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2">LinuxFunctionAppAuthSettingsV2TwitterV2</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.unauthenticatedActionInput">UnauthenticatedActionInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.authEnabled">AuthEnabled</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.configFilePath">ConfigFilePath</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.defaultProvider">DefaultProvider</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.excludedPaths">ExcludedPaths</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.forwardProxyConvention">ForwardProxyConvention</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomHostHeaderName">ForwardProxyCustomHostHeaderName</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomSchemeHeaderName">ForwardProxyCustomSchemeHeaderName</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.httpRouteApiPrefix">HttpRouteApiPrefix</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireAuthentication">RequireAuthentication</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireHttps">RequireHttps</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.runtimeVersion">RuntimeVersion</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.unauthenticatedAction">UnauthenticatedAction</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2">LinuxFunctionAppAuthSettingsV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ActiveDirectoryV2`<sup>Required</sup> <a name="ActiveDirectoryV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.activeDirectoryV2"></a>
+
+```go
+func ActiveDirectoryV2() LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference">LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference</a>
+
+---
+
+##### `AppleV2`<sup>Required</sup> <a name="AppleV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.appleV2"></a>
+
+```go
+func AppleV2() LinuxFunctionAppAuthSettingsV2AppleV2OutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2OutputReference">LinuxFunctionAppAuthSettingsV2AppleV2OutputReference</a>
+
+---
+
+##### `AzureStaticWebAppV2`<sup>Required</sup> <a name="AzureStaticWebAppV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.azureStaticWebAppV2"></a>
+
+```go
+func AzureStaticWebAppV2() LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference">LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference</a>
+
+---
+
+##### `CustomOidcV2`<sup>Required</sup> <a name="CustomOidcV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.customOidcV2"></a>
+
+```go
+func CustomOidcV2() LinuxFunctionAppAuthSettingsV2CustomOidcV2List
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List">LinuxFunctionAppAuthSettingsV2CustomOidcV2List</a>
+
+---
+
+##### `FacebookV2`<sup>Required</sup> <a name="FacebookV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.facebookV2"></a>
+
+```go
+func FacebookV2() LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference">LinuxFunctionAppAuthSettingsV2FacebookV2OutputReference</a>
+
+---
+
+##### `GithubV2`<sup>Required</sup> <a name="GithubV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.githubV2"></a>
+
+```go
+func GithubV2() LinuxFunctionAppAuthSettingsV2GithubV2OutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2OutputReference">LinuxFunctionAppAuthSettingsV2GithubV2OutputReference</a>
+
+---
+
+##### `GoogleV2`<sup>Required</sup> <a name="GoogleV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.googleV2"></a>
+
+```go
+func GoogleV2() LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference">LinuxFunctionAppAuthSettingsV2GoogleV2OutputReference</a>
+
+---
+
+##### `Login`<sup>Required</sup> <a name="Login" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.login"></a>
+
+```go
+func Login() LinuxFunctionAppAuthSettingsV2LoginOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference">LinuxFunctionAppAuthSettingsV2LoginOutputReference</a>
+
+---
+
+##### `MicrosoftV2`<sup>Required</sup> <a name="MicrosoftV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.microsoftV2"></a>
+
+```go
+func MicrosoftV2() LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference">LinuxFunctionAppAuthSettingsV2MicrosoftV2OutputReference</a>
+
+---
+
+##### `TwitterV2`<sup>Required</sup> <a name="TwitterV2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.twitterV2"></a>
+
+```go
+func TwitterV2() LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference">LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference</a>
+
+---
+
+##### `ActiveDirectoryV2Input`<sup>Optional</sup> <a name="ActiveDirectoryV2Input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.activeDirectoryV2Input"></a>
+
+```go
+func ActiveDirectoryV2Input() LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2">LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2</a>
+
+---
+
+##### `AppleV2Input`<sup>Optional</sup> <a name="AppleV2Input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.appleV2Input"></a>
+
+```go
+func AppleV2Input() LinuxFunctionAppAuthSettingsV2AppleV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2">LinuxFunctionAppAuthSettingsV2AppleV2</a>
+
+---
+
+##### `AuthEnabledInput`<sup>Optional</sup> <a name="AuthEnabledInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.authEnabledInput"></a>
+
+```go
+func AuthEnabledInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `AzureStaticWebAppV2Input`<sup>Optional</sup> <a name="AzureStaticWebAppV2Input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.azureStaticWebAppV2Input"></a>
+
+```go
+func AzureStaticWebAppV2Input() LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2">LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2</a>
+
+---
+
+##### `ConfigFilePathInput`<sup>Optional</sup> <a name="ConfigFilePathInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.configFilePathInput"></a>
+
+```go
+func ConfigFilePathInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `CustomOidcV2Input`<sup>Optional</sup> <a name="CustomOidcV2Input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.customOidcV2Input"></a>
+
+```go
+func CustomOidcV2Input() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `DefaultProviderInput`<sup>Optional</sup> <a name="DefaultProviderInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.defaultProviderInput"></a>
+
+```go
+func DefaultProviderInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ExcludedPathsInput`<sup>Optional</sup> <a name="ExcludedPathsInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.excludedPathsInput"></a>
+
+```go
+func ExcludedPathsInput() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `FacebookV2Input`<sup>Optional</sup> <a name="FacebookV2Input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.facebookV2Input"></a>
+
+```go
+func FacebookV2Input() LinuxFunctionAppAuthSettingsV2FacebookV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2">LinuxFunctionAppAuthSettingsV2FacebookV2</a>
+
+---
+
+##### `ForwardProxyConventionInput`<sup>Optional</sup> <a name="ForwardProxyConventionInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.forwardProxyConventionInput"></a>
+
+```go
+func ForwardProxyConventionInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ForwardProxyCustomHostHeaderNameInput`<sup>Optional</sup> <a name="ForwardProxyCustomHostHeaderNameInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomHostHeaderNameInput"></a>
+
+```go
+func ForwardProxyCustomHostHeaderNameInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ForwardProxyCustomSchemeHeaderNameInput`<sup>Optional</sup> <a name="ForwardProxyCustomSchemeHeaderNameInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomSchemeHeaderNameInput"></a>
+
+```go
+func ForwardProxyCustomSchemeHeaderNameInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `GithubV2Input`<sup>Optional</sup> <a name="GithubV2Input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.githubV2Input"></a>
+
+```go
+func GithubV2Input() LinuxFunctionAppAuthSettingsV2GithubV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GithubV2">LinuxFunctionAppAuthSettingsV2GithubV2</a>
+
+---
+
+##### `GoogleV2Input`<sup>Optional</sup> <a name="GoogleV2Input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.googleV2Input"></a>
+
+```go
+func GoogleV2Input() LinuxFunctionAppAuthSettingsV2GoogleV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2">LinuxFunctionAppAuthSettingsV2GoogleV2</a>
+
+---
+
+##### `HttpRouteApiPrefixInput`<sup>Optional</sup> <a name="HttpRouteApiPrefixInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.httpRouteApiPrefixInput"></a>
+
+```go
+func HttpRouteApiPrefixInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LoginInput`<sup>Optional</sup> <a name="LoginInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.loginInput"></a>
+
+```go
+func LoginInput() LinuxFunctionAppAuthSettingsV2Login
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login">LinuxFunctionAppAuthSettingsV2Login</a>
+
+---
+
+##### `MicrosoftV2Input`<sup>Optional</sup> <a name="MicrosoftV2Input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.microsoftV2Input"></a>
+
+```go
+func MicrosoftV2Input() LinuxFunctionAppAuthSettingsV2MicrosoftV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2">LinuxFunctionAppAuthSettingsV2MicrosoftV2</a>
+
+---
+
+##### `RequireAuthenticationInput`<sup>Optional</sup> <a name="RequireAuthenticationInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireAuthenticationInput"></a>
+
+```go
+func RequireAuthenticationInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `RequireHttpsInput`<sup>Optional</sup> <a name="RequireHttpsInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireHttpsInput"></a>
+
+```go
+func RequireHttpsInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `RuntimeVersionInput`<sup>Optional</sup> <a name="RuntimeVersionInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.runtimeVersionInput"></a>
+
+```go
+func RuntimeVersionInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `TwitterV2Input`<sup>Optional</sup> <a name="TwitterV2Input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.twitterV2Input"></a>
+
+```go
+func TwitterV2Input() LinuxFunctionAppAuthSettingsV2TwitterV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2">LinuxFunctionAppAuthSettingsV2TwitterV2</a>
+
+---
+
+##### `UnauthenticatedActionInput`<sup>Optional</sup> <a name="UnauthenticatedActionInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.unauthenticatedActionInput"></a>
+
+```go
+func UnauthenticatedActionInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `AuthEnabled`<sup>Required</sup> <a name="AuthEnabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.authEnabled"></a>
+
+```go
+func AuthEnabled() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `ConfigFilePath`<sup>Required</sup> <a name="ConfigFilePath" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.configFilePath"></a>
+
+```go
+func ConfigFilePath() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `DefaultProvider`<sup>Required</sup> <a name="DefaultProvider" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.defaultProvider"></a>
+
+```go
+func DefaultProvider() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ExcludedPaths`<sup>Required</sup> <a name="ExcludedPaths" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.excludedPaths"></a>
+
+```go
+func ExcludedPaths() *[]*string
+```
+
+- *Type:* *[]*string
+
+---
+
+##### `ForwardProxyConvention`<sup>Required</sup> <a name="ForwardProxyConvention" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.forwardProxyConvention"></a>
+
+```go
+func ForwardProxyConvention() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ForwardProxyCustomHostHeaderName`<sup>Required</sup> <a name="ForwardProxyCustomHostHeaderName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomHostHeaderName"></a>
+
+```go
+func ForwardProxyCustomHostHeaderName() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ForwardProxyCustomSchemeHeaderName`<sup>Required</sup> <a name="ForwardProxyCustomSchemeHeaderName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomSchemeHeaderName"></a>
+
+```go
+func ForwardProxyCustomSchemeHeaderName() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `HttpRouteApiPrefix`<sup>Required</sup> <a name="HttpRouteApiPrefix" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.httpRouteApiPrefix"></a>
+
+```go
+func HttpRouteApiPrefix() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `RequireAuthentication`<sup>Required</sup> <a name="RequireAuthentication" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireAuthentication"></a>
+
+```go
+func RequireAuthentication() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `RequireHttps`<sup>Required</sup> <a name="RequireHttps" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireHttps"></a>
+
+```go
+func RequireHttps() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `RuntimeVersion`<sup>Required</sup> <a name="RuntimeVersion" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.runtimeVersion"></a>
+
+```go
+func RuntimeVersion() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `UnauthenticatedAction`<sup>Required</sup> <a name="UnauthenticatedAction" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.unauthenticatedAction"></a>
+
+```go
+func UnauthenticatedAction() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() LinuxFunctionAppAuthSettingsV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2">LinuxFunctionAppAuthSettingsV2</a>
+
+---
+
+
+### LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference <a name="LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
+
+linuxfunctionapp.NewLinuxFunctionAppAuthSettingsV2TwitterV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerKeyInput">ConsumerKeyInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerSecretSettingNameInput">ConsumerSecretSettingNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerKey">ConsumerKey</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerSecretSettingName">ConsumerSecretSettingName</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2">LinuxFunctionAppAuthSettingsV2TwitterV2</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ConsumerKeyInput`<sup>Optional</sup> <a name="ConsumerKeyInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerKeyInput"></a>
+
+```go
+func ConsumerKeyInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ConsumerSecretSettingNameInput`<sup>Optional</sup> <a name="ConsumerSecretSettingNameInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerSecretSettingNameInput"></a>
+
+```go
+func ConsumerSecretSettingNameInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ConsumerKey`<sup>Required</sup> <a name="ConsumerKey" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerKey"></a>
+
+```go
+func ConsumerKey() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ConsumerSecretSettingName`<sup>Required</sup> <a name="ConsumerSecretSettingName" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.property.consumerSecretSettingName"></a>
+
+```go
+func ConsumerSecretSettingName() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() LinuxFunctionAppAuthSettingsV2TwitterV2
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2">LinuxFunctionAppAuthSettingsV2TwitterV2</a>
+
+---
+
+
 ### LinuxFunctionAppBackupOutputReference <a name="LinuxFunctionAppBackupOutputReference" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppBackupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppBackupOutputReference
 ```
@@ -7887,7 +14275,7 @@ func InternalValue() LinuxFunctionAppBackup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppBackupScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppBackupScheduleOutputReference
 ```
@@ -8278,7 +14666,7 @@ func InternalValue() LinuxFunctionAppBackupSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionStringList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppConnectionStringList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppConnectionStringList
 ```
@@ -8421,7 +14809,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionStringOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppConnectionStringOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppConnectionStringOutputReference
 ```
@@ -8754,7 +15142,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppIdentityOutputReference
 ```
@@ -9076,7 +15464,7 @@ func InternalValue() LinuxFunctionAppIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDockerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteConfigApplicationStackDockerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppSiteConfigApplicationStackDockerList
 ```
@@ -9219,7 +15607,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDockerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteConfigApplicationStackDockerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppSiteConfigApplicationStackDockerOutputReference
 ```
@@ -9610,7 +15998,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteConfigApplicationStackOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSiteConfigApplicationStackOutputReference
 ```
@@ -10104,7 +16492,7 @@ func InternalValue() LinuxFunctionAppSiteConfigApplicationStack
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigAppServiceLogsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteConfigAppServiceLogsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSiteConfigAppServiceLogsOutputReference
 ```
@@ -10411,7 +16799,7 @@ func InternalValue() LinuxFunctionAppSiteConfigAppServiceLogs
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteConfigCorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSiteConfigCorsOutputReference
 ```
@@ -10711,7 +17099,7 @@ func InternalValue() LinuxFunctionAppSiteConfigCors
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteConfigIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppSiteConfigIpRestrictionHeadersList
 ```
@@ -10854,7 +17242,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteConfigIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppSiteConfigIpRestrictionHeadersOutputReference
 ```
@@ -11237,7 +17625,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteConfigIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppSiteConfigIpRestrictionList
 ```
@@ -11380,7 +17768,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteConfigIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppSiteConfigIpRestrictionOutputReference
 ```
@@ -11863,7 +18251,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppSiteConfigOutputReference
 ```
@@ -13167,7 +19555,7 @@ func InternalValue() LinuxFunctionAppSiteConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteConfigScmIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppSiteConfigScmIpRestrictionHeadersList
 ```
@@ -13310,7 +19698,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteConfigScmIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppSiteConfigScmIpRestrictionHeadersOutputReference
 ```
@@ -13693,7 +20081,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteConfigScmIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppSiteConfigScmIpRestrictionList
 ```
@@ -13836,7 +20224,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteConfigScmIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference
 ```
@@ -14319,7 +20707,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteCredentialList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteCredentialList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppSiteCredentialList
 ```
@@ -14451,7 +20839,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppSiteCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppSiteCredentialOutputReference
 ```
@@ -14740,7 +21128,7 @@ func InternalValue() LinuxFunctionAppSiteCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStickySettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppStickySettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppStickySettingsOutputReference
 ```
@@ -15047,7 +21435,7 @@ func InternalValue() LinuxFunctionAppStickySettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppStorageAccountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxFunctionAppStorageAccountList
 ```
@@ -15190,7 +21578,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppStorageAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxFunctionAppStorageAccountOutputReference
 ```
@@ -15596,7 +21984,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxfunctionapp"
 
 linuxfunctionapp.NewLinuxFunctionAppTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxFunctionAppTimeoutsOutputReference
 ```

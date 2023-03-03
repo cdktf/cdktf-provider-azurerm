@@ -41,6 +41,12 @@ export interface SpringCloudConnectionConfig extends cdktf.TerraformMetaArgument
   */
   readonly authentication: SpringCloudConnectionAuthentication;
   /**
+  * secret_store block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_connection#secret_store SpringCloudConnection#secret_store}
+  */
+  readonly secretStore?: SpringCloudConnectionSecretStore;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_connection#timeouts SpringCloudConnection#timeouts}
@@ -271,6 +277,68 @@ export class SpringCloudConnectionAuthenticationOutputReference extends cdktf.Co
     return this._type;
   }
 }
+export interface SpringCloudConnectionSecretStore {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_connection#key_vault_id SpringCloudConnection#key_vault_id}
+  */
+  readonly keyVaultId: string;
+}
+
+export function springCloudConnectionSecretStoreToTerraform(struct?: SpringCloudConnectionSecretStoreOutputReference | SpringCloudConnectionSecretStore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
+  }
+}
+
+export class SpringCloudConnectionSecretStoreOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SpringCloudConnectionSecretStore | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyVaultId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultId = this._keyVaultId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudConnectionSecretStore | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._keyVaultId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._keyVaultId = value.keyVaultId;
+    }
+  }
+
+  // key_vault_id - computed: false, optional: false, required: true
+  private _keyVaultId?: string; 
+  public get keyVaultId() {
+    return this.getStringAttribute('key_vault_id');
+  }
+  public set keyVaultId(value: string) {
+    this._keyVaultId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId;
+  }
+}
 export interface SpringCloudConnectionTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_connection#create SpringCloudConnection#create}
@@ -454,7 +522,7 @@ export class SpringCloudConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.45.0',
+        providerVersion: '3.46.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -472,6 +540,7 @@ export class SpringCloudConnection extends cdktf.TerraformResource {
     this._targetResourceId = config.targetResourceId;
     this._vnetSolution = config.vnetSolution;
     this._authentication.internalValue = config.authentication;
+    this._secretStore.internalValue = config.secretStore;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -579,6 +648,22 @@ export class SpringCloudConnection extends cdktf.TerraformResource {
     return this._authentication.internalValue;
   }
 
+  // secret_store - computed: false, optional: true, required: false
+  private _secretStore = new SpringCloudConnectionSecretStoreOutputReference(this, "secret_store");
+  public get secretStore() {
+    return this._secretStore;
+  }
+  public putSecretStore(value: SpringCloudConnectionSecretStore) {
+    this._secretStore.internalValue = value;
+  }
+  public resetSecretStore() {
+    this._secretStore.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretStoreInput() {
+    return this._secretStore.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new SpringCloudConnectionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -608,6 +693,7 @@ export class SpringCloudConnection extends cdktf.TerraformResource {
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
       vnet_solution: cdktf.stringToTerraform(this._vnetSolution),
       authentication: springCloudConnectionAuthenticationToTerraform(this._authentication.internalValue),
+      secret_store: springCloudConnectionSecretStoreToTerraform(this._secretStore.internalValue),
       timeouts: springCloudConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

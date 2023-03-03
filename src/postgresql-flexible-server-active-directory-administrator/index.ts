@@ -228,7 +228,7 @@ export class PostgresqlFlexibleServerActiveDirectoryAdministrator extends cdktf.
       terraformResourceType: 'azurerm_postgresql_flexible_server_active_directory_administrator',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.45.0',
+        providerVersion: '3.46.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

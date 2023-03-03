@@ -681,7 +681,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_trigger_schedule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.45.0',
+        providerVersion: '3.46.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

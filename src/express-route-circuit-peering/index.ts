@@ -75,6 +75,10 @@ export interface ExpressRouteCircuitPeeringConfig extends cdktf.TerraformMetaArg
 }
 export interface ExpressRouteCircuitPeeringIpv6MicrosoftPeering {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_communities ExpressRouteCircuitPeering#advertised_communities}
+  */
+  readonly advertisedCommunities?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_public_prefixes ExpressRouteCircuitPeering#advertised_public_prefixes}
   */
   readonly advertisedPublicPrefixes?: string[];
@@ -94,6 +98,7 @@ export function expressRouteCircuitPeeringIpv6MicrosoftPeeringToTerraform(struct
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    advertised_communities: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.advertisedCommunities),
     advertised_public_prefixes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.advertisedPublicPrefixes),
     customer_asn: cdktf.numberToTerraform(struct!.customerAsn),
     routing_registry_name: cdktf.stringToTerraform(struct!.routingRegistryName),
@@ -114,6 +119,10 @@ export class ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference exten
   public get internalValue(): ExpressRouteCircuitPeeringIpv6MicrosoftPeering | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._advertisedCommunities !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.advertisedCommunities = this._advertisedCommunities;
+    }
     if (this._advertisedPublicPrefixes !== undefined) {
       hasAnyValues = true;
       internalValueResult.advertisedPublicPrefixes = this._advertisedPublicPrefixes;
@@ -132,16 +141,34 @@ export class ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference exten
   public set internalValue(value: ExpressRouteCircuitPeeringIpv6MicrosoftPeering | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._advertisedCommunities = undefined;
       this._advertisedPublicPrefixes = undefined;
       this._customerAsn = undefined;
       this._routingRegistryName = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._advertisedCommunities = value.advertisedCommunities;
       this._advertisedPublicPrefixes = value.advertisedPublicPrefixes;
       this._customerAsn = value.customerAsn;
       this._routingRegistryName = value.routingRegistryName;
     }
+  }
+
+  // advertised_communities - computed: false, optional: true, required: false
+  private _advertisedCommunities?: string[]; 
+  public get advertisedCommunities() {
+    return this.getListAttribute('advertised_communities');
+  }
+  public set advertisedCommunities(value: string[]) {
+    this._advertisedCommunities = value;
+  }
+  public resetAdvertisedCommunities() {
+    this._advertisedCommunities = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advertisedCommunitiesInput() {
+    return this._advertisedCommunities;
   }
 
   // advertised_public_prefixes - computed: false, optional: true, required: false
@@ -363,6 +390,10 @@ export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.Complex
 }
 export interface ExpressRouteCircuitPeeringMicrosoftPeeringConfig {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_communities ExpressRouteCircuitPeering#advertised_communities}
+  */
+  readonly advertisedCommunities?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_public_prefixes ExpressRouteCircuitPeering#advertised_public_prefixes}
   */
   readonly advertisedPublicPrefixes: string[];
@@ -382,6 +413,7 @@ export function expressRouteCircuitPeeringMicrosoftPeeringConfigToTerraform(stru
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    advertised_communities: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.advertisedCommunities),
     advertised_public_prefixes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.advertisedPublicPrefixes),
     customer_asn: cdktf.numberToTerraform(struct!.customerAsn),
     routing_registry_name: cdktf.stringToTerraform(struct!.routingRegistryName),
@@ -402,6 +434,10 @@ export class ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference ext
   public get internalValue(): ExpressRouteCircuitPeeringMicrosoftPeeringConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._advertisedCommunities !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.advertisedCommunities = this._advertisedCommunities;
+    }
     if (this._advertisedPublicPrefixes !== undefined) {
       hasAnyValues = true;
       internalValueResult.advertisedPublicPrefixes = this._advertisedPublicPrefixes;
@@ -420,16 +456,34 @@ export class ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference ext
   public set internalValue(value: ExpressRouteCircuitPeeringMicrosoftPeeringConfig | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._advertisedCommunities = undefined;
       this._advertisedPublicPrefixes = undefined;
       this._customerAsn = undefined;
       this._routingRegistryName = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._advertisedCommunities = value.advertisedCommunities;
       this._advertisedPublicPrefixes = value.advertisedPublicPrefixes;
       this._customerAsn = value.customerAsn;
       this._routingRegistryName = value.routingRegistryName;
     }
+  }
+
+  // advertised_communities - computed: false, optional: true, required: false
+  private _advertisedCommunities?: string[]; 
+  public get advertisedCommunities() {
+    return this.getListAttribute('advertised_communities');
+  }
+  public set advertisedCommunities(value: string[]) {
+    this._advertisedCommunities = value;
+  }
+  public resetAdvertisedCommunities() {
+    this._advertisedCommunities = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advertisedCommunitiesInput() {
+    return this._advertisedCommunities;
   }
 
   // advertised_public_prefixes - computed: false, optional: false, required: true
@@ -660,7 +714,7 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_express_route_circuit_peering',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.45.0',
+        providerVersion: '3.46.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
