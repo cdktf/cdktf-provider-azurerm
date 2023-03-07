@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/route_filt
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.routeFilter.RouteFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/routefilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routefilter"
 
 routefilter.NewRouteFilter(scope Construct, id *string, config RouteFilterConfig) RouteFilter
 ```
@@ -320,7 +320,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.routeFilter.RouteFilter.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/routefilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routefilter"
 
 routefilter.RouteFilter_IsConstruct(x interface{}) *bool
 ```
@@ -352,7 +352,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.routeFilter.RouteFilter.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/routefilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routefilter"
 
 routefilter.RouteFilter_IsTerraformElement(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ routefilter.RouteFilter_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.routeFilter.RouteFilter.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/routefilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routefilter"
 
 routefilter.RouteFilter_IsTerraformResource(x interface{}) *bool
 ```
@@ -719,7 +719,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.routeFilter.RouteFilterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/routefilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routefilter"
 
 &routefilter.RouteFilterConfig {
 	Connection: interface{},
@@ -735,7 +735,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/routefilter"
 	Id: *string,
 	Rule: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.routeFilter.RouteFilterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.routeFilter.RouteFilterTimeouts,
 }
 ```
 
@@ -924,7 +924,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.routeFilter.RouteFilterRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/routefilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routefilter"
 
 &routefilter.RouteFilterRule {
 	Access: *string,
@@ -998,7 +998,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.routeFilter.RouteFilterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/routefilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routefilter"
 
 &routefilter.RouteFilterTimeouts {
 	Create: *string,
@@ -1074,7 +1074,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.routeFilter.RouteFilterRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/routefilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routefilter"
 
 routefilter.NewRouteFilterRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) RouteFilterRuleList
 ```
@@ -1217,7 +1217,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.routeFilter.RouteFilterRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/routefilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routefilter"
 
 routefilter.NewRouteFilterRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) RouteFilterRuleOutputReference
 ```
@@ -1600,7 +1600,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.routeFilter.RouteFilterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/routefilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routefilter"
 
 routefilter.NewRouteFilterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RouteFilterTimeoutsOutputReference
 ```
