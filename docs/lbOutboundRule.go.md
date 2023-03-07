@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outboun
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lbOutboundRule.LbOutboundRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lboutboundrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lboutboundrule"
 
 lboutboundrule.NewLbOutboundRule(scope Construct, id *string, config LbOutboundRuleConfig) LbOutboundRule
 ```
@@ -334,7 +334,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.lbOutboundRule.LbOutboundRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lboutboundrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lboutboundrule"
 
 lboutboundrule.LbOutboundRule_IsConstruct(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.lbOutboundRule.LbOutboundRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lboutboundrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lboutboundrule"
 
 lboutboundrule.LbOutboundRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -380,7 +380,7 @@ lboutboundrule.LbOutboundRule_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.lbOutboundRule.LbOutboundRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lboutboundrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lboutboundrule"
 
 lboutboundrule.LbOutboundRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -799,7 +799,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lbOutboundRule.LbOutboundRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lboutboundrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lboutboundrule"
 
 &lboutboundrule.LbOutboundRuleConfig {
 	Connection: interface{},
@@ -818,7 +818,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lboutboundrule"
 	FrontendIpConfiguration: interface{},
 	Id: *string,
 	IdleTimeoutInMinutes: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.lbOutboundRule.LbOutboundRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.lbOutboundRule.LbOutboundRuleTimeouts,
 }
 ```
 
@@ -1048,7 +1048,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lbOutboundRule.LbOutboundRuleFrontendIpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lboutboundrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lboutboundrule"
 
 &lboutboundrule.LbOutboundRuleFrontendIpConfiguration {
 	Name: *string,
@@ -1080,7 +1080,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lbOutboundRule.LbOutboundRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lboutboundrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lboutboundrule"
 
 &lboutboundrule.LbOutboundRuleTimeouts {
 	Create: *string,
@@ -1156,7 +1156,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lbOutboundRule.LbOutboundRuleFrontendIpConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lboutboundrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lboutboundrule"
 
 lboutboundrule.NewLbOutboundRuleFrontendIpConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LbOutboundRuleFrontendIpConfigurationList
 ```
@@ -1299,7 +1299,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lbOutboundRule.LbOutboundRuleFrontendIpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lboutboundrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lboutboundrule"
 
 lboutboundrule.NewLbOutboundRuleFrontendIpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LbOutboundRuleFrontendIpConfigurationOutputReference
 ```
@@ -1599,7 +1599,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lbOutboundRule.LbOutboundRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lboutboundrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lboutboundrule"
 
 lboutboundrule.NewLbOutboundRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LbOutboundRuleTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_g
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraph.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.NewCosmosdbGremlinGraph(scope Construct, id *string, config CosmosdbGremlinGraphConfig) CosmosdbGremlinGraph
 ```
@@ -394,7 +394,7 @@ func ResetUniqueKey()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraph.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.CosmosdbGremlinGraph_IsConstruct(x interface{}) *bool
 ```
@@ -426,7 +426,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraph.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.CosmosdbGremlinGraph_IsTerraformElement(x interface{}) *bool
 ```
@@ -440,7 +440,7 @@ cosmosdbgremlingraph.CosmosdbGremlinGraph_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraph.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.CosmosdbGremlinGraph_IsTerraformResource(x interface{}) *bool
 ```
@@ -947,7 +947,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphAutoscaleSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 &cosmosdbgremlingraph.CosmosdbGremlinGraphAutoscaleSettings {
 	MaxThroughput: *f64,
@@ -979,7 +979,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 &cosmosdbgremlingraph.CosmosdbGremlinGraphConfig {
 	Connection: interface{},
@@ -994,14 +994,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
 	Name: *string,
 	PartitionKeyPath: *string,
 	ResourceGroupName: *string,
-	AutoscaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphAutoscaleSettings,
-	ConflictResolutionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphConflictResolutionPolicy,
+	AutoscaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.cosmosdbGremlinGraph.CosmosdbGremlinGraphAutoscaleSettings,
+	ConflictResolutionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.cosmosdbGremlinGraph.CosmosdbGremlinGraphConflictResolutionPolicy,
 	DefaultTtl: *f64,
 	Id: *string,
-	IndexPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphIndexPolicy,
+	IndexPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.cosmosdbGremlinGraph.CosmosdbGremlinGraphIndexPolicy,
 	PartitionKeyVersion: *f64,
 	Throughput: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.cosmosdbGremlinGraph.CosmosdbGremlinGraphTimeouts,
 	UniqueKey: interface{},
 }
 ```
@@ -1290,7 +1290,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphConflictResolutionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 &cosmosdbgremlingraph.CosmosdbGremlinGraphConflictResolutionPolicy {
 	Mode: *string,
@@ -1350,7 +1350,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphIndexPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 &cosmosdbgremlingraph.CosmosdbGremlinGraphIndexPolicy {
 	IndexingMode: *string,
@@ -1456,7 +1456,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphIndexPolicyCompositeIndex.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 &cosmosdbgremlingraph.CosmosdbGremlinGraphIndexPolicyCompositeIndex {
 	Index: interface{},
@@ -1490,7 +1490,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 &cosmosdbgremlingraph.CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex {
 	Order: *string,
@@ -1536,7 +1536,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphIndexPolicySpatialIndex.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 &cosmosdbgremlingraph.CosmosdbGremlinGraphIndexPolicySpatialIndex {
 	Path: *string,
@@ -1568,7 +1568,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 &cosmosdbgremlingraph.CosmosdbGremlinGraphTimeouts {
 	Create: *string,
@@ -1642,7 +1642,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphUniqueKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 &cosmosdbgremlingraph.CosmosdbGremlinGraphUniqueKey {
 	Paths: *[]*string,
@@ -1676,7 +1676,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphAutoscaleSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.NewCosmosdbGremlinGraphAutoscaleSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbGremlinGraphAutoscaleSettingsOutputReference
 ```
@@ -1954,7 +1954,7 @@ func InternalValue() CosmosdbGremlinGraphAutoscaleSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphConflictResolutionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.NewCosmosdbGremlinGraphConflictResolutionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbGremlinGraphConflictResolutionPolicyOutputReference
 ```
@@ -2283,7 +2283,7 @@ func InternalValue() CosmosdbGremlinGraphConflictResolutionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphIndexPolicyCompositeIndexIndexList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.NewCosmosdbGremlinGraphIndexPolicyCompositeIndexIndexList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CosmosdbGremlinGraphIndexPolicyCompositeIndexIndexList
 ```
@@ -2426,7 +2426,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphIndexPolicyCompositeIndexIndexOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.NewCosmosdbGremlinGraphIndexPolicyCompositeIndexIndexOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CosmosdbGremlinGraphIndexPolicyCompositeIndexIndexOutputReference
 ```
@@ -2737,7 +2737,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphIndexPolicyCompositeIndexList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.NewCosmosdbGremlinGraphIndexPolicyCompositeIndexList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CosmosdbGremlinGraphIndexPolicyCompositeIndexList
 ```
@@ -2880,7 +2880,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphIndexPolicyCompositeIndexOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.NewCosmosdbGremlinGraphIndexPolicyCompositeIndexOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CosmosdbGremlinGraphIndexPolicyCompositeIndexOutputReference
 ```
@@ -3182,7 +3182,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphIndexPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.NewCosmosdbGremlinGraphIndexPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbGremlinGraphIndexPolicyOutputReference
 ```
@@ -3624,7 +3624,7 @@ func InternalValue() CosmosdbGremlinGraphIndexPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphIndexPolicySpatialIndexList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.NewCosmosdbGremlinGraphIndexPolicySpatialIndexList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CosmosdbGremlinGraphIndexPolicySpatialIndexList
 ```
@@ -3767,7 +3767,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphIndexPolicySpatialIndexOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.NewCosmosdbGremlinGraphIndexPolicySpatialIndexOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CosmosdbGremlinGraphIndexPolicySpatialIndexOutputReference
 ```
@@ -4067,7 +4067,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.NewCosmosdbGremlinGraphTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbGremlinGraphTimeoutsOutputReference
 ```
@@ -4432,7 +4432,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphUniqueKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.NewCosmosdbGremlinGraphUniqueKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CosmosdbGremlinGraphUniqueKeyList
 ```
@@ -4575,7 +4575,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinGraph.CosmosdbGremlinGraphUniqueKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlingraph"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbgremlingraph"
 
 cosmosdbgremlingraph.NewCosmosdbGremlinGraphUniqueKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CosmosdbGremlinGraphUniqueKeyOutputReference
 ```

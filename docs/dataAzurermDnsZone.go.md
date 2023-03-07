@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone a
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDnsZone.DataAzurermDnsZone.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdnszone"
 
 dataazurermdnszone.NewDataAzurermDnsZone(scope Construct, id *string, config DataAzurermDnsZoneConfig) DataAzurermDnsZone
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermDnsZone.DataAzurermDnsZone.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdnszone"
 
 dataazurermdnszone.DataAzurermDnsZone_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermDnsZone.DataAzurermDnsZone.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdnszone"
 
 dataazurermdnszone.DataAzurermDnsZone_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ dataazurermdnszone.DataAzurermDnsZone_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermDnsZone.DataAzurermDnsZone.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdnszone"
 
 dataazurermdnszone.DataAzurermDnsZone_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -655,7 +655,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDnsZone.DataAzurermDnsZoneConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdnszone"
 
 &dataazurermdnszone.DataAzurermDnsZoneConfig {
 	Connection: interface{},
@@ -668,7 +668,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnszone"
 	Name: *string,
 	Id: *string,
 	ResourceGroupName: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermDnsZone.DataAzurermDnsZoneTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermDnsZone.DataAzurermDnsZoneTimeouts,
 }
 ```
 
@@ -818,7 +818,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDnsZone.DataAzurermDnsZoneTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdnszone"
 
 &dataazurermdnszone.DataAzurermDnsZoneTimeouts {
 	Read: *string,
@@ -852,7 +852,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDnsZone.DataAzurermDnsZoneTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdnszone"
 
 dataazurermdnszone.NewDataAzurermDnsZoneTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDnsZoneTimeoutsOutputReference
 ```

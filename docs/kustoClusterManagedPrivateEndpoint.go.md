@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_clus
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoClusterManagedPrivateEndpoint.KustoClusterManagedPrivateEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoclustermanagedprivateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/kustoclustermanagedprivateendpoint"
 
 kustoclustermanagedprivateendpoint.NewKustoClusterManagedPrivateEndpoint(scope Construct, id *string, config KustoClusterManagedPrivateEndpointConfig) KustoClusterManagedPrivateEndpoint
 ```
@@ -307,7 +307,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.kustoClusterManagedPrivateEndpoint.KustoClusterManagedPrivateEndpoint.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoclustermanagedprivateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/kustoclustermanagedprivateendpoint"
 
 kustoclustermanagedprivateendpoint.KustoClusterManagedPrivateEndpoint_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.kustoClusterManagedPrivateEndpoint.KustoClusterManagedPrivateEndpoint.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoclustermanagedprivateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/kustoclustermanagedprivateendpoint"
 
 kustoclustermanagedprivateendpoint.KustoClusterManagedPrivateEndpoint_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ kustoclustermanagedprivateendpoint.KustoClusterManagedPrivateEndpoint_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.kustoClusterManagedPrivateEndpoint.KustoClusterManagedPrivateEndpoint.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoclustermanagedprivateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/kustoclustermanagedprivateendpoint"
 
 kustoclustermanagedprivateendpoint.KustoClusterManagedPrivateEndpoint_IsTerraformResource(x interface{}) *bool
 ```
@@ -750,7 +750,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoClusterManagedPrivateEndpoint.KustoClusterManagedPrivateEndpointConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoclustermanagedprivateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/kustoclustermanagedprivateendpoint"
 
 &kustoclustermanagedprivateendpoint.KustoClusterManagedPrivateEndpointConfig {
 	Connection: interface{},
@@ -768,7 +768,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoclustermanagedpr
 	Id: *string,
 	PrivateLinkResourceRegion: *string,
 	RequestMessage: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.kustoClusterManagedPrivateEndpoint.KustoClusterManagedPrivateEndpointTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.kustoClusterManagedPrivateEndpoint.KustoClusterManagedPrivateEndpointTimeouts,
 }
 ```
 
@@ -983,7 +983,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoClusterManagedPrivateEndpoint.KustoClusterManagedPrivateEndpointTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoclustermanagedprivateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/kustoclustermanagedprivateendpoint"
 
 &kustoclustermanagedprivateendpoint.KustoClusterManagedPrivateEndpointTimeouts {
 	Create: *string,
@@ -1059,7 +1059,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoClusterManagedPrivateEndpoint.KustoClusterManagedPrivateEndpointTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoclustermanagedprivateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/kustoclustermanagedprivateendpoint"
 
 kustoclustermanagedprivateendpoint.NewKustoClusterManagedPrivateEndpointTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KustoClusterManagedPrivateEndpointTimeoutsOutputReference
 ```
