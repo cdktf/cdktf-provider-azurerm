@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/consumptio
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscription.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.NewConsumptionBudgetSubscription(scope Construct, id *string, config ConsumptionBudgetSubscriptionConfig) ConsumptionBudgetSubscription
 ```
@@ -353,7 +353,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscription.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.ConsumptionBudgetSubscription_IsConstruct(x interface{}) *bool
 ```
@@ -385,7 +385,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscription.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.ConsumptionBudgetSubscription_IsTerraformElement(x interface{}) *bool
 ```
@@ -399,7 +399,7 @@ consumptionbudgetsubscription.ConsumptionBudgetSubscription_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscription.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.ConsumptionBudgetSubscription_IsTerraformResource(x interface{}) *bool
 ```
@@ -818,7 +818,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 &consumptionbudgetsubscription.ConsumptionBudgetSubscriptionConfig {
 	Connection: interface{},
@@ -832,12 +832,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubs
 	Name: *string,
 	Notification: interface{},
 	SubscriptionId: *string,
-	TimePeriod: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionTimePeriod,
+	TimePeriod: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionTimePeriod,
 	Etag: *string,
-	Filter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilter,
+	Filter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilter,
 	Id: *string,
 	TimeGrain: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionTimeouts,
 }
 ```
 
@@ -1071,11 +1071,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 &consumptionbudgetsubscription.ConsumptionBudgetSubscriptionFilter {
 	Dimension: interface{},
-	Not: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterNot,
+	Not: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterNot,
 	Tag: interface{},
 }
 ```
@@ -1137,7 +1137,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterDimension.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 &consumptionbudgetsubscription.ConsumptionBudgetSubscriptionFilterDimension {
 	Name: *string,
@@ -1197,11 +1197,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterNot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 &consumptionbudgetsubscription.ConsumptionBudgetSubscriptionFilterNot {
-	Dimension: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterNotDimension,
-	Tag: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterNotTag,
+	Dimension: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterNotDimension,
+	Tag: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterNotTag,
 }
 ```
 
@@ -1247,7 +1247,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterNotDimension.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 &consumptionbudgetsubscription.ConsumptionBudgetSubscriptionFilterNotDimension {
 	Name: *string,
@@ -1307,7 +1307,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterNotTag.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 &consumptionbudgetsubscription.ConsumptionBudgetSubscriptionFilterNotTag {
 	Name: *string,
@@ -1367,7 +1367,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterTag.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 &consumptionbudgetsubscription.ConsumptionBudgetSubscriptionFilterTag {
 	Name: *string,
@@ -1427,7 +1427,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionNotification.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 &consumptionbudgetsubscription.ConsumptionBudgetSubscriptionNotification {
 	Operator: *string,
@@ -1543,7 +1543,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 &consumptionbudgetsubscription.ConsumptionBudgetSubscriptionTimeouts {
 	Create: *string,
@@ -1617,7 +1617,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionTimePeriod.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 &consumptionbudgetsubscription.ConsumptionBudgetSubscriptionTimePeriod {
 	StartDate: *string,
@@ -1665,7 +1665,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterDimensionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.NewConsumptionBudgetSubscriptionFilterDimensionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ConsumptionBudgetSubscriptionFilterDimensionList
 ```
@@ -1808,7 +1808,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterDimensionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.NewConsumptionBudgetSubscriptionFilterDimensionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ConsumptionBudgetSubscriptionFilterDimensionOutputReference
 ```
@@ -2148,7 +2148,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.NewConsumptionBudgetSubscriptionFilterNotDimensionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference
 ```
@@ -2470,7 +2470,7 @@ func InternalValue() ConsumptionBudgetSubscriptionFilterNotDimension
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterNotOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.NewConsumptionBudgetSubscriptionFilterNotOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ConsumptionBudgetSubscriptionFilterNotOutputReference
 ```
@@ -2803,7 +2803,7 @@ func InternalValue() ConsumptionBudgetSubscriptionFilterNot
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterNotTagOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.NewConsumptionBudgetSubscriptionFilterNotTagOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ConsumptionBudgetSubscriptionFilterNotTagOutputReference
 ```
@@ -3125,7 +3125,7 @@ func InternalValue() ConsumptionBudgetSubscriptionFilterNotTag
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.NewConsumptionBudgetSubscriptionFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ConsumptionBudgetSubscriptionFilterOutputReference
 ```
@@ -3500,7 +3500,7 @@ func InternalValue() ConsumptionBudgetSubscriptionFilter
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterTagList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.NewConsumptionBudgetSubscriptionFilterTagList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ConsumptionBudgetSubscriptionFilterTagList
 ```
@@ -3643,7 +3643,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionFilterTagOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.NewConsumptionBudgetSubscriptionFilterTagOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ConsumptionBudgetSubscriptionFilterTagOutputReference
 ```
@@ -3983,7 +3983,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionNotificationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.NewConsumptionBudgetSubscriptionNotificationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ConsumptionBudgetSubscriptionNotificationList
 ```
@@ -4126,7 +4126,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionNotificationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.NewConsumptionBudgetSubscriptionNotificationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ConsumptionBudgetSubscriptionNotificationOutputReference
 ```
@@ -4582,7 +4582,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.NewConsumptionBudgetSubscriptionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ConsumptionBudgetSubscriptionTimeoutsOutputReference
 ```
@@ -4947,7 +4947,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetSubscription.ConsumptionBudgetSubscriptionTimePeriodOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/consumptionbudgetsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/consumptionbudgetsubscription"
 
 consumptionbudgetsubscription.NewConsumptionBudgetSubscriptionTimePeriodOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ConsumptionBudgetSubscriptionTimePeriodOutputReference
 ```

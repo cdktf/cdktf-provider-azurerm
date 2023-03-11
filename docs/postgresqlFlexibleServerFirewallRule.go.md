@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.postgresqlFlexibleServerFirewallRule.PostgresqlFlexibleServerFirewallRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/postgresqlflexibleserverfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqlflexibleserverfirewallrule"
 
 postgresqlflexibleserverfirewallrule.NewPostgresqlFlexibleServerFirewallRule(scope Construct, id *string, config PostgresqlFlexibleServerFirewallRuleConfig) PostgresqlFlexibleServerFirewallRule
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.postgresqlFlexibleServerFirewallRule.PostgresqlFlexibleServerFirewallRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/postgresqlflexibleserverfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqlflexibleserverfirewallrule"
 
 postgresqlflexibleserverfirewallrule.PostgresqlFlexibleServerFirewallRule_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.postgresqlFlexibleServerFirewallRule.PostgresqlFlexibleServerFirewallRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/postgresqlflexibleserverfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqlflexibleserverfirewallrule"
 
 postgresqlflexibleserverfirewallrule.PostgresqlFlexibleServerFirewallRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ postgresqlflexibleserverfirewallrule.PostgresqlFlexibleServerFirewallRule_IsTerr
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.postgresqlFlexibleServerFirewallRule.PostgresqlFlexibleServerFirewallRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/postgresqlflexibleserverfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqlflexibleserverfirewallrule"
 
 postgresqlflexibleserverfirewallrule.PostgresqlFlexibleServerFirewallRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -670,7 +670,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.postgresqlFlexibleServerFirewallRule.PostgresqlFlexibleServerFirewallRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/postgresqlflexibleserverfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqlflexibleserverfirewallrule"
 
 &postgresqlflexibleserverfirewallrule.PostgresqlFlexibleServerFirewallRuleConfig {
 	Connection: interface{},
@@ -685,7 +685,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/postgresqlflexibleser
 	ServerId: *string,
 	StartIpAddress: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.postgresqlFlexibleServerFirewallRule.PostgresqlFlexibleServerFirewallRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.postgresqlFlexibleServerFirewallRule.PostgresqlFlexibleServerFirewallRuleTimeouts,
 }
 ```
 
@@ -861,7 +861,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.postgresqlFlexibleServerFirewallRule.PostgresqlFlexibleServerFirewallRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/postgresqlflexibleserverfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqlflexibleserverfirewallrule"
 
 &postgresqlflexibleserverfirewallrule.PostgresqlFlexibleServerFirewallRuleTimeouts {
 	Create: *string,
@@ -937,7 +937,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.postgresqlFlexibleServerFirewallRule.PostgresqlFlexibleServerFirewallRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/postgresqlflexibleserverfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqlflexibleserverfirewallrule"
 
 postgresqlflexibleserverfirewallrule.NewPostgresqlFlexibleServerFirewallRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PostgresqlFlexibleServerFirewallRuleTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/container_
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryToken.ContainerRegistryToken.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytoken"
 
 containerregistrytoken.NewContainerRegistryToken(scope Construct, id *string, config ContainerRegistryTokenConfig) ContainerRegistryToken
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.containerRegistryToken.ContainerRegistryToken.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytoken"
 
 containerregistrytoken.ContainerRegistryToken_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.containerRegistryToken.ContainerRegistryToken.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytoken"
 
 containerregistrytoken.ContainerRegistryToken_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ containerregistrytoken.ContainerRegistryToken_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.containerRegistryToken.ContainerRegistryToken.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytoken"
 
 containerregistrytoken.ContainerRegistryToken_IsTerraformResource(x interface{}) *bool
 ```
@@ -699,7 +699,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryToken.ContainerRegistryTokenConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytoken"
 
 &containerregistrytoken.ContainerRegistryTokenConfig {
 	Connection: interface{},
@@ -715,7 +715,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytoke
 	ScopeMapId: *string,
 	Enabled: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryToken.ContainerRegistryTokenTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.containerRegistryToken.ContainerRegistryTokenTimeouts,
 }
 ```
 
@@ -904,7 +904,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryToken.ContainerRegistryTokenTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytoken"
 
 &containerregistrytoken.ContainerRegistryTokenTimeouts {
 	Create: *string,
@@ -980,7 +980,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryToken.ContainerRegistryTokenTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/containerregistrytoken"
 
 containerregistrytoken.NewContainerRegistryTokenTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTokenTimeoutsOutputReference
 ```
