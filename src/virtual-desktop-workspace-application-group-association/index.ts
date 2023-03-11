@@ -212,7 +212,7 @@ export class VirtualDesktopWorkspaceApplicationGroupAssociation extends cdktf.Te
       terraformResourceType: 'azurerm_virtual_desktop_workspace_application_group_association',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.46.0',
+        providerVersion: '3.47.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

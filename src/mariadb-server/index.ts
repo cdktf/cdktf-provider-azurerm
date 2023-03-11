@@ -71,6 +71,10 @@ export interface MariadbServerConfig extends cdktf.TerraformMetaArguments {
   */
   readonly sslEnforcementEnabled: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#ssl_minimal_tls_version_enforced MariadbServer#ssl_minimal_tls_version_enforced}
+  */
+  readonly sslMinimalTlsVersionEnforced?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#storage_mb MariadbServer#storage_mb}
   */
   readonly storageMb?: number;
@@ -272,7 +276,7 @@ export class MariadbServer extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mariadb_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.46.0',
+        providerVersion: '3.47.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -298,6 +302,7 @@ export class MariadbServer extends cdktf.TerraformResource {
     this._restorePointInTime = config.restorePointInTime;
     this._skuName = config.skuName;
     this._sslEnforcementEnabled = config.sslEnforcementEnabled;
+    this._sslMinimalTlsVersionEnforced = config.sslMinimalTlsVersionEnforced;
     this._storageMb = config.storageMb;
     this._tags = config.tags;
     this._version = config.version;
@@ -538,6 +543,22 @@ export class MariadbServer extends cdktf.TerraformResource {
     return this._sslEnforcementEnabled;
   }
 
+  // ssl_minimal_tls_version_enforced - computed: false, optional: true, required: false
+  private _sslMinimalTlsVersionEnforced?: string; 
+  public get sslMinimalTlsVersionEnforced() {
+    return this.getStringAttribute('ssl_minimal_tls_version_enforced');
+  }
+  public set sslMinimalTlsVersionEnforced(value: string) {
+    this._sslMinimalTlsVersionEnforced = value;
+  }
+  public resetSslMinimalTlsVersionEnforced() {
+    this._sslMinimalTlsVersionEnforced = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslMinimalTlsVersionEnforcedInput() {
+    return this._sslMinimalTlsVersionEnforced;
+  }
+
   // storage_mb - computed: true, optional: true, required: false
   private _storageMb?: number; 
   public get storageMb() {
@@ -620,6 +641,7 @@ export class MariadbServer extends cdktf.TerraformResource {
       restore_point_in_time: cdktf.stringToTerraform(this._restorePointInTime),
       sku_name: cdktf.stringToTerraform(this._skuName),
       ssl_enforcement_enabled: cdktf.booleanToTerraform(this._sslEnforcementEnabled),
+      ssl_minimal_tls_version_enforced: cdktf.stringToTerraform(this._sslMinimalTlsVersionEnforced),
       storage_mb: cdktf.numberToTerraform(this._storageMb),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),

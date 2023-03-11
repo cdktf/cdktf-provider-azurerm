@@ -189,7 +189,7 @@ export class SentinelDataConnectorAzureSecurityCenter extends cdktf.TerraformRes
       terraformResourceType: 'azurerm_sentinel_data_connector_azure_security_center',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.46.0',
+        providerVersion: '3.47.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -1866,7 +1866,7 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.46.0',
+        providerVersion: '3.47.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -2052,6 +2052,11 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   // node_resource_group - computed: true, optional: false, required: false
   public get nodeResourceGroup() {
     return this.getStringAttribute('node_resource_group');
+  }
+
+  // node_resource_group_id - computed: true, optional: false, required: false
+  public get nodeResourceGroupId() {
+    return this.getStringAttribute('node_resource_group_id');
   }
 
   // oidc_issuer_enabled - computed: true, optional: false, required: false

@@ -236,7 +236,7 @@ export class DataAzurermSubscriptions extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_subscriptions',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.46.0',
+        providerVersion: '3.47.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

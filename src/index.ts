@@ -730,6 +730,7 @@ export * as sentinelDataConnectorOfficePowerBi from './sentinel-data-connector-o
 export * as sentinelDataConnectorThreatIntelligence from './sentinel-data-connector-threat-intelligence';
 export * as sentinelDataConnectorThreatIntelligenceTaxii from './sentinel-data-connector-threat-intelligence-taxii';
 export * as sentinelLogAnalyticsWorkspaceOnboarding from './sentinel-log-analytics-workspace-onboarding';
+export * as sentinelMetadata from './sentinel-metadata';
 export * as sentinelWatchlist from './sentinel-watchlist';
 export * as sentinelWatchlistItem from './sentinel-watchlist-item';
 export * as serviceFabricCluster from './service-fabric-cluster';

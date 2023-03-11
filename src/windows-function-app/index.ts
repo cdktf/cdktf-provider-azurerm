@@ -5619,7 +5619,7 @@ export interface WindowsFunctionAppSiteConfigApplicationStack {
   */
   readonly javaVersion?: string;
   /**
-  * The version of Node to use. Possible values include `12`, and `14`
+  * The version of Node to use. Possible values include `12`, `14`, `16` and `18`
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#node_version WindowsFunctionApp#node_version}
   */
@@ -7350,7 +7350,7 @@ export class WindowsFunctionApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_function_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.46.0',
+        providerVersion: '3.47.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

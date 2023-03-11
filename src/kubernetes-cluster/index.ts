@@ -3006,6 +3006,10 @@ export interface KubernetesClusterDefaultNodePool {
   */
   readonly tags?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#temporary_name_for_rotation KubernetesCluster#temporary_name_for_rotation}
+  */
+  readonly temporaryNameForRotation?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#type KubernetesCluster#type}
   */
   readonly type?: string;
@@ -3087,6 +3091,7 @@ export function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesC
     proximity_placement_group_id: cdktf.stringToTerraform(struct!.proximityPlacementGroupId),
     scale_down_mode: cdktf.stringToTerraform(struct!.scaleDownMode),
     tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.tags),
+    temporary_name_for_rotation: cdktf.stringToTerraform(struct!.temporaryNameForRotation),
     type: cdktf.stringToTerraform(struct!.type),
     ultra_ssd_enabled: cdktf.booleanToTerraform(struct!.ultraSsdEnabled),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
@@ -3218,6 +3223,10 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
     }
+    if (this._temporaryNameForRotation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.temporaryNameForRotation = this._temporaryNameForRotation;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
@@ -3290,6 +3299,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       this._proximityPlacementGroupId = undefined;
       this._scaleDownMode = undefined;
       this._tags = undefined;
+      this._temporaryNameForRotation = undefined;
       this._type = undefined;
       this._ultraSsdEnabled = undefined;
       this._vmSize = undefined;
@@ -3329,6 +3339,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       this._proximityPlacementGroupId = value.proximityPlacementGroupId;
       this._scaleDownMode = value.scaleDownMode;
       this._tags = value.tags;
+      this._temporaryNameForRotation = value.temporaryNameForRotation;
       this._type = value.type;
       this._ultraSsdEnabled = value.ultraSsdEnabled;
       this._vmSize = value.vmSize;
@@ -3753,6 +3764,22 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
     return this._tags;
+  }
+
+  // temporary_name_for_rotation - computed: false, optional: true, required: false
+  private _temporaryNameForRotation?: string; 
+  public get temporaryNameForRotation() {
+    return this.getStringAttribute('temporary_name_for_rotation');
+  }
+  public set temporaryNameForRotation(value: string) {
+    this._temporaryNameForRotation = value;
+  }
+  public resetTemporaryNameForRotation() {
+    this._temporaryNameForRotation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get temporaryNameForRotationInput() {
+    return this._temporaryNameForRotation;
   }
 
   // type - computed: false, optional: true, required: false
@@ -6256,6 +6283,10 @@ export interface KubernetesClusterOmsAgent {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#msi_auth_for_monitoring_enabled KubernetesCluster#msi_auth_for_monitoring_enabled}
+  */
+  readonly msiAuthForMonitoringEnabled?: boolean | cdktf.IResolvable;
 }
 
 export function kubernetesClusterOmsAgentToTerraform(struct?: KubernetesClusterOmsAgentOutputReference | KubernetesClusterOmsAgent): any {
@@ -6265,6 +6296,7 @@ export function kubernetesClusterOmsAgentToTerraform(struct?: KubernetesClusterO
   }
   return {
     log_analytics_workspace_id: cdktf.stringToTerraform(struct!.logAnalyticsWorkspaceId),
+    msi_auth_for_monitoring_enabled: cdktf.booleanToTerraform(struct!.msiAuthForMonitoringEnabled),
   }
 }
 
@@ -6286,6 +6318,10 @@ export class KubernetesClusterOmsAgentOutputReference extends cdktf.ComplexObjec
       hasAnyValues = true;
       internalValueResult.logAnalyticsWorkspaceId = this._logAnalyticsWorkspaceId;
     }
+    if (this._msiAuthForMonitoringEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.msiAuthForMonitoringEnabled = this._msiAuthForMonitoringEnabled;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -6293,10 +6329,12 @@ export class KubernetesClusterOmsAgentOutputReference extends cdktf.ComplexObjec
     if (value === undefined) {
       this.isEmptyObject = false;
       this._logAnalyticsWorkspaceId = undefined;
+      this._msiAuthForMonitoringEnabled = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._logAnalyticsWorkspaceId = value.logAnalyticsWorkspaceId;
+      this._msiAuthForMonitoringEnabled = value.msiAuthForMonitoringEnabled;
     }
   }
 
@@ -6311,6 +6349,22 @@ export class KubernetesClusterOmsAgentOutputReference extends cdktf.ComplexObjec
   // Temporarily expose input value. Use with caution.
   public get logAnalyticsWorkspaceIdInput() {
     return this._logAnalyticsWorkspaceId;
+  }
+
+  // msi_auth_for_monitoring_enabled - computed: false, optional: true, required: false
+  private _msiAuthForMonitoringEnabled?: boolean | cdktf.IResolvable; 
+  public get msiAuthForMonitoringEnabled() {
+    return this.getBooleanAttribute('msi_auth_for_monitoring_enabled');
+  }
+  public set msiAuthForMonitoringEnabled(value: boolean | cdktf.IResolvable) {
+    this._msiAuthForMonitoringEnabled = value;
+  }
+  public resetMsiAuthForMonitoringEnabled() {
+    this._msiAuthForMonitoringEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get msiAuthForMonitoringEnabledInput() {
+    return this._msiAuthForMonitoringEnabled;
   }
 
   // oms_agent_identity - computed: true, optional: false, required: false
@@ -7032,6 +7086,10 @@ export interface KubernetesClusterWorkloadAutoscalerProfile {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#keda_enabled KubernetesCluster#keda_enabled}
   */
   readonly kedaEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#vertical_pod_autoscaler_enabled KubernetesCluster#vertical_pod_autoscaler_enabled}
+  */
+  readonly verticalPodAutoscalerEnabled?: boolean | cdktf.IResolvable;
 }
 
 export function kubernetesClusterWorkloadAutoscalerProfileToTerraform(struct?: KubernetesClusterWorkloadAutoscalerProfileOutputReference | KubernetesClusterWorkloadAutoscalerProfile): any {
@@ -7041,6 +7099,7 @@ export function kubernetesClusterWorkloadAutoscalerProfileToTerraform(struct?: K
   }
   return {
     keda_enabled: cdktf.booleanToTerraform(struct!.kedaEnabled),
+    vertical_pod_autoscaler_enabled: cdktf.booleanToTerraform(struct!.verticalPodAutoscalerEnabled),
   }
 }
 
@@ -7062,6 +7121,10 @@ export class KubernetesClusterWorkloadAutoscalerProfileOutputReference extends c
       hasAnyValues = true;
       internalValueResult.kedaEnabled = this._kedaEnabled;
     }
+    if (this._verticalPodAutoscalerEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.verticalPodAutoscalerEnabled = this._verticalPodAutoscalerEnabled;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -7069,10 +7132,12 @@ export class KubernetesClusterWorkloadAutoscalerProfileOutputReference extends c
     if (value === undefined) {
       this.isEmptyObject = false;
       this._kedaEnabled = undefined;
+      this._verticalPodAutoscalerEnabled = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._kedaEnabled = value.kedaEnabled;
+      this._verticalPodAutoscalerEnabled = value.verticalPodAutoscalerEnabled;
     }
   }
 
@@ -7090,6 +7155,32 @@ export class KubernetesClusterWorkloadAutoscalerProfileOutputReference extends c
   // Temporarily expose input value. Use with caution.
   public get kedaEnabledInput() {
     return this._kedaEnabled;
+  }
+
+  // vertical_pod_autoscaler_controlled_values - computed: true, optional: false, required: false
+  public get verticalPodAutoscalerControlledValues() {
+    return this.getStringAttribute('vertical_pod_autoscaler_controlled_values');
+  }
+
+  // vertical_pod_autoscaler_enabled - computed: false, optional: true, required: false
+  private _verticalPodAutoscalerEnabled?: boolean | cdktf.IResolvable; 
+  public get verticalPodAutoscalerEnabled() {
+    return this.getBooleanAttribute('vertical_pod_autoscaler_enabled');
+  }
+  public set verticalPodAutoscalerEnabled(value: boolean | cdktf.IResolvable) {
+    this._verticalPodAutoscalerEnabled = value;
+  }
+  public resetVerticalPodAutoscalerEnabled() {
+    this._verticalPodAutoscalerEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get verticalPodAutoscalerEnabledInput() {
+    return this._verticalPodAutoscalerEnabled;
+  }
+
+  // vertical_pod_autoscaler_update_mode - computed: true, optional: false, required: false
+  public get verticalPodAutoscalerUpdateMode() {
+    return this.getStringAttribute('vertical_pod_autoscaler_update_mode');
   }
 }
 
@@ -7119,7 +7210,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.46.0',
+        providerVersion: '3.47.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -7485,6 +7576,11 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nodeResourceGroupInput() {
     return this._nodeResourceGroup;
+  }
+
+  // node_resource_group_id - computed: true, optional: false, required: false
+  public get nodeResourceGroupId() {
+    return this.getStringAttribute('node_resource_group_id');
   }
 
   // oidc_issuer_enabled - computed: false, optional: true, required: false

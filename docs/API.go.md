@@ -1041,6 +1041,7 @@ The following submodules are available:
 - [sentinelDataConnectorThreatIntelligence](./sentinelDataConnectorThreatIntelligence.go.md)
 - [sentinelDataConnectorThreatIntelligenceTaxii](./sentinelDataConnectorThreatIntelligenceTaxii.go.md)
 - [sentinelLogAnalyticsWorkspaceOnboarding](./sentinelLogAnalyticsWorkspaceOnboarding.go.md)
+- [sentinelMetadata](./sentinelMetadata.go.md)
 - [sentinelWatchlist](./sentinelWatchlist.go.md)
 - [sentinelWatchlistItem](./sentinelWatchlistItem.go.md)
 - [serviceFabricCluster](./serviceFabricCluster.go.md)
