@@ -193,7 +193,7 @@ export class SynapseRoleAssignment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_synapse_role_assignment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.46.0',
+        providerVersion: '3.47.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

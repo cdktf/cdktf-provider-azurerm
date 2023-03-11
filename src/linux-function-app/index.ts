@@ -5825,7 +5825,7 @@ export interface LinuxFunctionAppSiteConfigApplicationStack {
   */
   readonly javaVersion?: string;
   /**
-  * The version of Node to use. Possible values include `12`, and `14`
+  * The version of Node to use. Possible values include `12`, `14`, `16` and `18`
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#node_version LinuxFunctionApp#node_version}
   */
@@ -5837,7 +5837,7 @@ export interface LinuxFunctionAppSiteConfigApplicationStack {
   */
   readonly powershellCoreVersion?: string;
   /**
-  * The version of Python to use. Possible values include `3.9`, `3.8`, and `3.7`.
+  * The version of Python to use. Possible values include `3.10`, `3.9`, `3.8`, and `3.7`.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#python_version LinuxFunctionApp#python_version}
   */
@@ -7670,7 +7670,7 @@ export class LinuxFunctionApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_function_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.46.0',
+        providerVersion: '3.47.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

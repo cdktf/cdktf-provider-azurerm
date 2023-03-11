@@ -371,6 +371,7 @@ dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.isTerraformDataSou
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.defaultPrimaryKey">defaultPrimaryKey</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.defaultSecondaryConnectionString">defaultSecondaryConnectionString</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.defaultSecondaryKey">defaultSecondaryKey</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.endpoint">endpoint</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.location">location</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.sku">sku</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.tags">tags</a></code> | <code>cdktf.StringMap</code> | *No description.* |
@@ -552,6 +553,16 @@ public readonly defaultSecondaryConnectionString: string;
 
 ```typescript
 public readonly defaultSecondaryKey: string;
+```
+
+- *Type:* string
+
+---
+
+##### `endpoint`<sup>Required</sup> <a name="endpoint" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.endpoint"></a>
+
+```typescript
+public readonly endpoint: string;
 ```
 
 - *Type:* string

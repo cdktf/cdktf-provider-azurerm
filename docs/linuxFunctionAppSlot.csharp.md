@@ -5029,9 +5029,9 @@ new LinuxFunctionAppSlotSiteConfigApplicationStack {
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.docker">Docker</a></code> | <code>object</code> | docker block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.dotnetVersion">DotnetVersion</a></code> | <code>string</code> | The version of .Net. Possible values are `3.1`, `6.0` and `7.0`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.javaVersion">JavaVersion</a></code> | <code>string</code> | The version of Java to use. Possible values are `8`, `11`, and `17`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.nodeVersion">NodeVersion</a></code> | <code>string</code> | The version of Node to use. Possible values include `12`, and `14`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.nodeVersion">NodeVersion</a></code> | <code>string</code> | The version of Node to use. Possible values include `12`, `14`, `16` and `18`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.powershellCoreVersion">PowershellCoreVersion</a></code> | <code>string</code> | The version of PowerShell Core to use. Possibles values are `7`, and `7.2`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.pythonVersion">PythonVersion</a></code> | <code>string</code> | The version of Python to use. Possible values include `3.9`, `3.8`, and `3.7`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.pythonVersion">PythonVersion</a></code> | <code>string</code> | The version of Python to use. Possible values include `3.10`, `3.9`, `3.8`, and `3.7`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.useCustomRuntime">UseCustomRuntime</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#use_custom_runtime LinuxFunctionAppSlot#use_custom_runtime}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.useDotnetIsolatedRuntime">UseDotnetIsolatedRuntime</a></code> | <code>object</code> | Should the DotNet process use an isolated runtime. Defaults to `false`. |
 
@@ -5087,7 +5087,7 @@ public string NodeVersion { get; set; }
 
 - *Type:* string
 
-The version of Node to use. Possible values include `12`, and `14`.
+The version of Node to use. Possible values include `12`, `14`, `16` and `18`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#node_version LinuxFunctionAppSlot#node_version}
 
@@ -5115,7 +5115,7 @@ public string PythonVersion { get; set; }
 
 - *Type:* string
 
-The version of Python to use. Possible values include `3.9`, `3.8`, and `3.7`.
+The version of Python to use. Possible values include `3.10`, `3.9`, `3.8`, and `3.7`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#python_version LinuxFunctionAppSlot#python_version}
 

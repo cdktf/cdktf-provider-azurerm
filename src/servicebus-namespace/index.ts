@@ -468,7 +468,7 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_servicebus_namespace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.46.0',
+        providerVersion: '3.47.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -533,6 +533,11 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
   // default_secondary_key - computed: true, optional: false, required: false
   public get defaultSecondaryKey() {
     return this.getStringAttribute('default_secondary_key');
+  }
+
+  // endpoint - computed: true, optional: false, required: false
+  public get endpoint() {
+    return this.getStringAttribute('endpoint');
   }
 
   // id - computed: true, optional: true, required: false

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_ma
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkManagerNetworkGroup.NetworkManagerNetworkGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/networkmanagernetworkgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagernetworkgroup"
 
 networkmanagernetworkgroup.NewNetworkManagerNetworkGroup(scope Construct, id *string, config NetworkManagerNetworkGroupConfig) NetworkManagerNetworkGroup
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.networkManagerNetworkGroup.NetworkManagerNetworkGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/networkmanagernetworkgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagernetworkgroup"
 
 networkmanagernetworkgroup.NetworkManagerNetworkGroup_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.networkManagerNetworkGroup.NetworkManagerNetworkGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/networkmanagernetworkgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagernetworkgroup"
 
 networkmanagernetworkgroup.NetworkManagerNetworkGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ networkmanagernetworkgroup.NetworkManagerNetworkGroup_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.networkManagerNetworkGroup.NetworkManagerNetworkGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/networkmanagernetworkgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagernetworkgroup"
 
 networkmanagernetworkgroup.NetworkManagerNetworkGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -655,7 +655,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkManagerNetworkGroup.NetworkManagerNetworkGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/networkmanagernetworkgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagernetworkgroup"
 
 &networkmanagernetworkgroup.NetworkManagerNetworkGroupConfig {
 	Connection: interface{},
@@ -669,7 +669,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/networkmanagernetw
 	NetworkManagerId: *string,
 	Description: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.networkManagerNetworkGroup.NetworkManagerNetworkGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkManagerNetworkGroup.NetworkManagerNetworkGroupTimeouts,
 }
 ```
 
@@ -832,7 +832,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkManagerNetworkGroup.NetworkManagerNetworkGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/networkmanagernetworkgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagernetworkgroup"
 
 &networkmanagernetworkgroup.NetworkManagerNetworkGroupTimeouts {
 	Create: *string,
@@ -908,7 +908,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkManagerNetworkGroup.NetworkManagerNetworkGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/networkmanagernetworkgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagernetworkgroup"
 
 networkmanagernetworkgroup.NewNetworkManagerNetworkGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkManagerNetworkGroupTimeoutsOutputReference
 ```

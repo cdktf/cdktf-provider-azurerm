@@ -33,6 +33,7 @@ monitorActionGroup.MonitorActionGroup(
   event_hub_receiver: typing.Union[IResolvable, typing.List[MonitorActionGroupEventHubReceiver]] = None,
   id: str = None,
   itsm_receiver: typing.Union[IResolvable, typing.List[MonitorActionGroupItsmReceiver]] = None,
+  location: str = None,
   logic_app_receiver: typing.Union[IResolvable, typing.List[MonitorActionGroupLogicAppReceiver]] = None,
   sms_receiver: typing.Union[IResolvable, typing.List[MonitorActionGroupSmsReceiver]] = None,
   tags: typing.Mapping[str] = None,
@@ -65,6 +66,7 @@ monitorActionGroup.MonitorActionGroup(
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.Initializer.parameter.eventHubReceiver">event_hub_receiver</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupEventHubReceiver">MonitorActionGroupEventHubReceiver</a>]]</code> | event_hub_receiver block. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#id MonitorActionGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.Initializer.parameter.itsmReceiver">itsm_receiver</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupItsmReceiver">MonitorActionGroupItsmReceiver</a>]]</code> | itsm_receiver block. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#location MonitorActionGroup#location}. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.Initializer.parameter.logicAppReceiver">logic_app_receiver</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupLogicAppReceiver">MonitorActionGroupLogicAppReceiver</a>]]</code> | logic_app_receiver block. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.Initializer.parameter.smsReceiver">sms_receiver</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupSmsReceiver">MonitorActionGroupSmsReceiver</a>]]</code> | sms_receiver block. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#tags MonitorActionGroup#tags}. |
@@ -247,6 +249,14 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ---
 
+##### `location`<sup>Optional</sup> <a name="location" id="@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.Initializer.parameter.location"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#location MonitorActionGroup#location}.
+
+---
+
 ##### `logic_app_receiver`<sup>Optional</sup> <a name="logic_app_receiver" id="@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.Initializer.parameter.logicAppReceiver"></a>
 
 - *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupLogicAppReceiver">MonitorActionGroupLogicAppReceiver</a>]]
@@ -346,6 +356,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.resetEventHubReceiver">reset_event_hub_receiver</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.resetId">reset_id</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.resetItsmReceiver">reset_itsm_receiver</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.resetLocation">reset_location</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.resetLogicAppReceiver">reset_logic_app_receiver</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.resetSmsReceiver">reset_sms_receiver</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.resetTags">reset_tags</a></code> | *No description.* |
@@ -815,6 +826,12 @@ def reset_id() -> None
 def reset_itsm_receiver() -> None
 ```
 
+##### `reset_location` <a name="reset_location" id="@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.resetLocation"></a>
+
+```python
+def reset_location() -> None
+```
+
 ##### `reset_logic_app_receiver` <a name="reset_logic_app_receiver" id="@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.resetLogicAppReceiver"></a>
 
 ```python
@@ -966,6 +983,7 @@ monitorActionGroup.MonitorActionGroup.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.eventHubReceiverInput">event_hub_receiver_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupEventHubReceiver">MonitorActionGroupEventHubReceiver</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.itsmReceiverInput">itsm_receiver_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupItsmReceiver">MonitorActionGroupItsmReceiver</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.logicAppReceiverInput">logic_app_receiver_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupLogicAppReceiver">MonitorActionGroupLogicAppReceiver</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
@@ -977,6 +995,7 @@ monitorActionGroup.MonitorActionGroup.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.webhookReceiverInput">webhook_receiver_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupWebhookReceiver">MonitorActionGroupWebhookReceiver</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.location">location</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.shortName">short_name</a></code> | <code>str</code> | *No description.* |
@@ -1336,6 +1355,16 @@ itsm_receiver_input: typing.Union[IResolvable, typing.List[MonitorActionGroupIts
 
 ---
 
+##### `location_input`<sup>Optional</sup> <a name="location_input" id="@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.locationInput"></a>
+
+```python
+location_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `logic_app_receiver_input`<sup>Optional</sup> <a name="logic_app_receiver_input" id="@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.logicAppReceiverInput"></a>
 
 ```python
@@ -1440,6 +1469,16 @@ enabled: typing.Union[bool, IResolvable]
 
 ```python
 id: str
+```
+
+- *Type:* str
+
+---
+
+##### `location`<sup>Required</sup> <a name="location" id="@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroup.property.location"></a>
+
+```python
+location: str
 ```
 
 - *Type:* str
@@ -1843,6 +1882,7 @@ monitorActionGroup.MonitorActionGroupConfig(
   event_hub_receiver: typing.Union[IResolvable, typing.List[MonitorActionGroupEventHubReceiver]] = None,
   id: str = None,
   itsm_receiver: typing.Union[IResolvable, typing.List[MonitorActionGroupItsmReceiver]] = None,
+  location: str = None,
   logic_app_receiver: typing.Union[IResolvable, typing.List[MonitorActionGroupLogicAppReceiver]] = None,
   sms_receiver: typing.Union[IResolvable, typing.List[MonitorActionGroupSmsReceiver]] = None,
   tags: typing.Mapping[str] = None,
@@ -1875,6 +1915,7 @@ monitorActionGroup.MonitorActionGroupConfig(
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupConfig.property.eventHubReceiver">event_hub_receiver</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupEventHubReceiver">MonitorActionGroupEventHubReceiver</a>]]</code> | event_hub_receiver block. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#id MonitorActionGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupConfig.property.itsmReceiver">itsm_receiver</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupItsmReceiver">MonitorActionGroupItsmReceiver</a>]]</code> | itsm_receiver block. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#location MonitorActionGroup#location}. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupConfig.property.logicAppReceiver">logic_app_receiver</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupLogicAppReceiver">MonitorActionGroupLogicAppReceiver</a>]]</code> | logic_app_receiver block. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupConfig.property.smsReceiver">sms_receiver</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupSmsReceiver">MonitorActionGroupSmsReceiver</a>]]</code> | sms_receiver block. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#tags MonitorActionGroup#tags}. |
@@ -2112,6 +2153,18 @@ itsm_receiver: typing.Union[IResolvable, typing.List[MonitorActionGroupItsmRecei
 itsm_receiver block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#itsm_receiver MonitorActionGroup#itsm_receiver}
+
+---
+
+##### `location`<sup>Optional</sup> <a name="location" id="@cdktf/provider-azurerm.monitorActionGroup.MonitorActionGroupConfig.property.location"></a>
+
+```python
+location: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#location MonitorActionGroup#location}.
 
 ---
 

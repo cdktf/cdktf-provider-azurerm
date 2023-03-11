@@ -5815,7 +5815,7 @@ export interface LinuxFunctionAppSlotSiteConfigApplicationStack {
   */
   readonly javaVersion?: string;
   /**
-  * The version of Node to use. Possible values include `12`, and `14`
+  * The version of Node to use. Possible values include `12`, `14`, `16` and `18`
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#node_version LinuxFunctionAppSlot#node_version}
   */
@@ -5827,7 +5827,7 @@ export interface LinuxFunctionAppSlotSiteConfigApplicationStack {
   */
   readonly powershellCoreVersion?: string;
   /**
-  * The version of Python to use. Possible values include `3.9`, `3.8`, and `3.7`.
+  * The version of Python to use. Possible values include `3.10`, `3.9`, `3.8`, and `3.7`.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#python_version LinuxFunctionAppSlot#python_version}
   */
@@ -6849,7 +6849,7 @@ export class LinuxFunctionAppSlotSiteConfigOutputReference extends cdktf.Complex
     return this._ftpsState;
   }
 
-  // health_check_eviction_time_in_min - computed: true, optional: true, required: false
+  // health_check_eviction_time_in_min - computed: false, optional: true, required: false
   private _healthCheckEvictionTimeInMin?: number; 
   public get healthCheckEvictionTimeInMin() {
     return this.getNumberAttribute('health_check_eviction_time_in_min');
@@ -7595,7 +7595,7 @@ export class LinuxFunctionAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_function_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.46.0',
+        providerVersion: '3.47.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridDomainTopic.EventgridDomainTopic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/eventgriddomaintopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgriddomaintopic"
 
 eventgriddomaintopic.NewEventgridDomainTopic(scope Construct, id *string, config EventgridDomainTopicConfig) EventgridDomainTopic
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.eventgridDomainTopic.EventgridDomainTopic.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/eventgriddomaintopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgriddomaintopic"
 
 eventgriddomaintopic.EventgridDomainTopic_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.eventgridDomainTopic.EventgridDomainTopic.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/eventgriddomaintopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgriddomaintopic"
 
 eventgriddomaintopic.EventgridDomainTopic_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ eventgriddomaintopic.EventgridDomainTopic_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.eventgridDomainTopic.EventgridDomainTopic.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/eventgriddomaintopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgriddomaintopic"
 
 eventgriddomaintopic.EventgridDomainTopic_IsTerraformResource(x interface{}) *bool
 ```
@@ -648,7 +648,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridDomainTopic.EventgridDomainTopicConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/eventgriddomaintopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgriddomaintopic"
 
 &eventgriddomaintopic.EventgridDomainTopicConfig {
 	Connection: interface{},
@@ -662,7 +662,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/eventgriddomaintop
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.eventgridDomainTopic.EventgridDomainTopicTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventgridDomainTopic.EventgridDomainTopicTimeouts,
 }
 ```
 
@@ -825,7 +825,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridDomainTopic.EventgridDomainTopicTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/eventgriddomaintopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgriddomaintopic"
 
 &eventgriddomaintopic.EventgridDomainTopicTimeouts {
 	Create: *string,
@@ -887,7 +887,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridDomainTopic.EventgridDomainTopicTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/eventgriddomaintopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgriddomaintopic"
 
 eventgriddomaintopic.NewEventgridDomainTopicTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventgridDomainTopicTimeoutsOutputReference
 ```

@@ -5532,7 +5532,7 @@ WindowsFunctionAppSiteConfigApplicationStack.builder()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppSiteConfigApplicationStack.property.dotnetVersion">dotnetVersion</a></code> | <code>java.lang.String</code> | The version of .Net. Possible values are `v3.0`, `v4.0`, `v6.0` and `v7.0`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppSiteConfigApplicationStack.property.javaVersion">javaVersion</a></code> | <code>java.lang.String</code> | The version of Java to use. Possible values are `1.8`, `11` and `17`. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppSiteConfigApplicationStack.property.nodeVersion">nodeVersion</a></code> | <code>java.lang.String</code> | The version of Node to use. Possible values include `12`, and `14`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppSiteConfigApplicationStack.property.nodeVersion">nodeVersion</a></code> | <code>java.lang.String</code> | The version of Node to use. Possible values include `12`, `14`, `16` and `18`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppSiteConfigApplicationStack.property.powershellCoreVersion">powershellCoreVersion</a></code> | <code>java.lang.String</code> | The PowerShell Core version to use. Possible values are `7`, and `7.2`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppSiteConfigApplicationStack.property.useCustomRuntime">useCustomRuntime</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Does the Function App use a custom Application Stack? |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppSiteConfigApplicationStack.property.useDotnetIsolatedRuntime">useDotnetIsolatedRuntime</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Should the DotNet process use an isolated runtime. Defaults to `false`. |
@@ -5575,7 +5575,7 @@ public java.lang.String getNodeVersion();
 
 - *Type:* java.lang.String
 
-The version of Node to use. Possible values include `12`, and `14`.
+The version of Node to use. Possible values include `12`, `14`, `16` and `18`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#node_version WindowsFunctionApp#node_version}
 

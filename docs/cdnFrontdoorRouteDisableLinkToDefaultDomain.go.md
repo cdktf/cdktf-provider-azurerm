@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_frontd
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorRouteDisableLinkToDefaultDomain.CdnFrontdoorRouteDisableLinkToDefaultDomain.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorroutedisablelinktodefaultdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorroutedisablelinktodefaultdomain"
 
 cdnfrontdoorroutedisablelinktodefaultdomain.NewCdnFrontdoorRouteDisableLinkToDefaultDomain(scope Construct, id *string, config CdnFrontdoorRouteDisableLinkToDefaultDomainConfig) CdnFrontdoorRouteDisableLinkToDefaultDomain
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cdnFrontdoorRouteDisableLinkToDefaultDomain.CdnFrontdoorRouteDisableLinkToDefaultDomain.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorroutedisablelinktodefaultdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorroutedisablelinktodefaultdomain"
 
 cdnfrontdoorroutedisablelinktodefaultdomain.CdnFrontdoorRouteDisableLinkToDefaultDomain_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cdnFrontdoorRouteDisableLinkToDefaultDomain.CdnFrontdoorRouteDisableLinkToDefaultDomain.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorroutedisablelinktodefaultdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorroutedisablelinktodefaultdomain"
 
 cdnfrontdoorroutedisablelinktodefaultdomain.CdnFrontdoorRouteDisableLinkToDefaultDomain_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ cdnfrontdoorroutedisablelinktodefaultdomain.CdnFrontdoorRouteDisableLinkToDefaul
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cdnFrontdoorRouteDisableLinkToDefaultDomain.CdnFrontdoorRouteDisableLinkToDefaultDomain.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorroutedisablelinktodefaultdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorroutedisablelinktodefaultdomain"
 
 cdnfrontdoorroutedisablelinktodefaultdomain.CdnFrontdoorRouteDisableLinkToDefaultDomain_IsTerraformResource(x interface{}) *bool
 ```
@@ -626,7 +626,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorRouteDisableLinkToDefaultDomain.CdnFrontdoorRouteDisableLinkToDefaultDomainConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorroutedisablelinktodefaultdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorroutedisablelinktodefaultdomain"
 
 &cdnfrontdoorroutedisablelinktodefaultdomain.CdnFrontdoorRouteDisableLinkToDefaultDomainConfig {
 	Connection: interface{},
@@ -639,7 +639,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorrouted
 	CdnFrontdoorCustomDomainIds: *[]*string,
 	CdnFrontdoorRouteId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.cdnFrontdoorRouteDisableLinkToDefaultDomain.CdnFrontdoorRouteDisableLinkToDefaultDomainTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnFrontdoorRouteDisableLinkToDefaultDomain.CdnFrontdoorRouteDisableLinkToDefaultDomainTimeouts,
 }
 ```
 
@@ -789,7 +789,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorRouteDisableLinkToDefaultDomain.CdnFrontdoorRouteDisableLinkToDefaultDomainTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorroutedisablelinktodefaultdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorroutedisablelinktodefaultdomain"
 
 &cdnfrontdoorroutedisablelinktodefaultdomain.CdnFrontdoorRouteDisableLinkToDefaultDomainTimeouts {
 	Create: *string,
@@ -865,7 +865,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorRouteDisableLinkToDefaultDomain.CdnFrontdoorRouteDisableLinkToDefaultDomainTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorroutedisablelinktodefaultdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorroutedisablelinktodefaultdomain"
 
 cdnfrontdoorroutedisablelinktodefaultdomain.NewCdnFrontdoorRouteDisableLinkToDefaultDomainTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnFrontdoorRouteDisableLinkToDefaultDomainTimeoutsOutputReference
 ```

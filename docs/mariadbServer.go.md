@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_se
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mariadbserver"
 
 mariadbserver.NewMariadbServer(scope Construct, id *string, config MariadbServerConfig) MariadbServer
 ```
@@ -77,6 +77,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetPublicNetworkAccessEnabled">ResetPublicNetworkAccessEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetRestorePointInTime">ResetRestorePointInTime</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetSslMinimalTlsVersionEnforced">ResetSslMinimalTlsVersionEnforced</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetStorageMb">ResetStorageMb</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetTags">ResetTags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
@@ -339,6 +340,12 @@ func ResetPublicNetworkAccessEnabled()
 func ResetRestorePointInTime()
 ```
 
+##### `ResetSslMinimalTlsVersionEnforced` <a name="ResetSslMinimalTlsVersionEnforced" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetSslMinimalTlsVersionEnforced"></a>
+
+```go
+func ResetSslMinimalTlsVersionEnforced()
+```
+
 ##### `ResetStorageMb` <a name="ResetStorageMb" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetStorageMb"></a>
 
 ```go
@@ -370,7 +377,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mariadbserver"
 
 mariadbserver.MariadbServer_IsConstruct(x interface{}) *bool
 ```
@@ -402,7 +409,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mariadbserver"
 
 mariadbserver.MariadbServer_IsTerraformElement(x interface{}) *bool
 ```
@@ -416,7 +423,7 @@ mariadbserver.MariadbServer_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mariadbserver"
 
 mariadbserver.MariadbServer_IsTerraformResource(x interface{}) *bool
 ```
@@ -462,6 +469,7 @@ mariadbserver.MariadbServer_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.restorePointInTimeInput">RestorePointInTimeInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.skuNameInput">SkuNameInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.sslEnforcementEnabledInput">SslEnforcementEnabledInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.sslMinimalTlsVersionEnforcedInput">SslMinimalTlsVersionEnforcedInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.storageMbInput">StorageMbInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.tagsInput">TagsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
@@ -481,6 +489,7 @@ mariadbserver.MariadbServer_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.restorePointInTime">RestorePointInTime</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.skuName">SkuName</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.sslEnforcementEnabled">SslEnforcementEnabled</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.sslMinimalTlsVersionEnforced">SslMinimalTlsVersionEnforced</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.storageMb">StorageMb</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.tags">Tags</a></code> | <code>*map[string]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.version">Version</a></code> | <code>*string</code> | *No description.* |
@@ -799,6 +808,16 @@ func SslEnforcementEnabledInput() interface{}
 
 ---
 
+##### `SslMinimalTlsVersionEnforcedInput`<sup>Optional</sup> <a name="SslMinimalTlsVersionEnforcedInput" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.sslMinimalTlsVersionEnforcedInput"></a>
+
+```go
+func SslMinimalTlsVersionEnforcedInput() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `StorageMbInput`<sup>Optional</sup> <a name="StorageMbInput" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.storageMbInput"></a>
 
 ```go
@@ -989,6 +1008,16 @@ func SslEnforcementEnabled() interface{}
 
 ---
 
+##### `SslMinimalTlsVersionEnforced`<sup>Required</sup> <a name="SslMinimalTlsVersionEnforced" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.sslMinimalTlsVersionEnforced"></a>
+
+```go
+func SslMinimalTlsVersionEnforced() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `StorageMb`<sup>Required</sup> <a name="StorageMb" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.storageMb"></a>
 
 ```go
@@ -1044,7 +1073,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mariadbserver"
 
 &mariadbserver.MariadbServerConfig {
 	Connection: interface{},
@@ -1070,9 +1099,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
 	Id: *string,
 	PublicNetworkAccessEnabled: interface{},
 	RestorePointInTime: *string,
+	SslMinimalTlsVersionEnforced: *string,
 	StorageMb: *f64,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.mariadbServer.MariadbServerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mariadbServer.MariadbServerTimeouts,
 }
 ```
 
@@ -1103,6 +1133,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#id MariadbServer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#public_network_access_enabled MariadbServer#public_network_access_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.restorePointInTime">RestorePointInTime</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#restore_point_in_time MariadbServer#restore_point_in_time}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.sslMinimalTlsVersionEnforced">SslMinimalTlsVersionEnforced</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#ssl_minimal_tls_version_enforced MariadbServer#ssl_minimal_tls_version_enforced}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.storageMb">StorageMb</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#storage_mb MariadbServer#storage_mb}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#tags MariadbServer#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerTimeouts">MariadbServerTimeouts</a></code> | timeouts block. |
@@ -1374,6 +1405,18 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ---
 
+##### `SslMinimalTlsVersionEnforced`<sup>Optional</sup> <a name="SslMinimalTlsVersionEnforced" id="@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.sslMinimalTlsVersionEnforced"></a>
+
+```go
+SslMinimalTlsVersionEnforced *string
+```
+
+- *Type:* *string
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#ssl_minimal_tls_version_enforced MariadbServer#ssl_minimal_tls_version_enforced}.
+
+---
+
 ##### `StorageMb`<sup>Optional</sup> <a name="StorageMb" id="@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.storageMb"></a>
 
 ```go
@@ -1417,7 +1460,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mariadbServer.MariadbServerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mariadbserver"
 
 &mariadbserver.MariadbServerTimeouts {
 	Create: *string,
@@ -1493,7 +1536,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mariadbServer.MariadbServerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mariadbserver"
 
 mariadbserver.NewMariadbServerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MariadbServerTimeoutsOutputReference
 ```

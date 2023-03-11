@@ -1019,6 +1019,7 @@ kubernetesCluster.KubernetesCluster.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.microsoftDefender">microsoftDefender</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMicrosoftDefenderOutputReference">KubernetesClusterMicrosoftDefenderOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.monitorMetrics">monitorMetrics</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMonitorMetricsOutputReference">KubernetesClusterMonitorMetricsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.networkProfile">networkProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileOutputReference">KubernetesClusterNetworkProfileOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.nodeResourceGroupId">nodeResourceGroupId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.oidcIssuerUrl">oidcIssuerUrl</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.omsAgent">omsAgent</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference">KubernetesClusterOmsAgentOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.portalFqdn">portalFqdn</a></code> | <code>string</code> | *No description.* |
@@ -1483,6 +1484,16 @@ public readonly networkProfile: KubernetesClusterNetworkProfileOutputReference;
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileOutputReference">KubernetesClusterNetworkProfileOutputReference</a>
+
+---
+
+##### `nodeResourceGroupId`<sup>Required</sup> <a name="nodeResourceGroupId" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.nodeResourceGroupId"></a>
+
+```typescript
+public readonly nodeResourceGroupId: string;
+```
+
+- *Type:* string
 
 ---
 
@@ -3777,6 +3788,7 @@ const kubernetesClusterDefaultNodePool: kubernetesCluster.KubernetesClusterDefau
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.proximityPlacementGroupId">proximityPlacementGroupId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#proximity_placement_group_id KubernetesCluster#proximity_placement_group_id}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.scaleDownMode">scaleDownMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#scale_down_mode KubernetesCluster#scale_down_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#tags KubernetesCluster#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.temporaryNameForRotation">temporaryNameForRotation</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#temporary_name_for_rotation KubernetesCluster#temporary_name_for_rotation}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#type KubernetesCluster#type}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.ultraSsdEnabled">ultraSsdEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#ultra_ssd_enabled KubernetesCluster#ultra_ssd_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.upgradeSettings">upgradeSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolUpgradeSettings">KubernetesClusterDefaultNodePoolUpgradeSettings</a></code> | upgrade_settings block. |
@@ -4149,6 +4161,18 @@ public readonly tags: {[ key: string ]: string};
 - *Type:* {[ key: string ]: string}
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#tags KubernetesCluster#tags}.
+
+---
+
+##### `temporaryNameForRotation`<sup>Optional</sup> <a name="temporaryNameForRotation" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.temporaryNameForRotation"></a>
+
+```typescript
+public readonly temporaryNameForRotation: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#temporary_name_for_rotation KubernetesCluster#temporary_name_for_rotation}.
 
 ---
 
@@ -5928,6 +5952,7 @@ const kubernetesClusterOmsAgent: kubernetesCluster.KubernetesClusterOmsAgent = {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent.property.logAnalyticsWorkspaceId">logAnalyticsWorkspaceId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent.property.msiAuthForMonitoringEnabled">msiAuthForMonitoringEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#msi_auth_for_monitoring_enabled KubernetesCluster#msi_auth_for_monitoring_enabled}. |
 
 ---
 
@@ -5940,6 +5965,18 @@ public readonly logAnalyticsWorkspaceId: string;
 - *Type:* string
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}.
+
+---
+
+##### `msiAuthForMonitoringEnabled`<sup>Optional</sup> <a name="msiAuthForMonitoringEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent.property.msiAuthForMonitoringEnabled"></a>
+
+```typescript
+public readonly msiAuthForMonitoringEnabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#msi_auth_for_monitoring_enabled KubernetesCluster#msi_auth_for_monitoring_enabled}.
 
 ---
 
@@ -6307,6 +6344,7 @@ const kubernetesClusterWorkloadAutoscalerProfile: kubernetesCluster.KubernetesCl
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.kedaEnabled">kedaEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#keda_enabled KubernetesCluster#keda_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.verticalPodAutoscalerEnabled">verticalPodAutoscalerEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#vertical_pod_autoscaler_enabled KubernetesCluster#vertical_pod_autoscaler_enabled}. |
 
 ---
 
@@ -6319,6 +6357,18 @@ public readonly kedaEnabled: boolean | IResolvable;
 - *Type:* boolean | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#keda_enabled KubernetesCluster#keda_enabled}.
+
+---
+
+##### `verticalPodAutoscalerEnabled`<sup>Optional</sup> <a name="verticalPodAutoscalerEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.verticalPodAutoscalerEnabled"></a>
+
+```typescript
+public readonly verticalPodAutoscalerEnabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#vertical_pod_autoscaler_enabled KubernetesCluster#vertical_pod_autoscaler_enabled}.
 
 ---
 
@@ -11206,6 +11256,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetProximityPlacementGroupId">resetProximityPlacementGroupId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetScaleDownMode">resetScaleDownMode</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetTags">resetTags</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetTemporaryNameForRotation">resetTemporaryNameForRotation</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetType">resetType</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetUltraSsdEnabled">resetUltraSsdEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetUpgradeSettings">resetUpgradeSettings</a></code> | *No description.* |
@@ -11581,6 +11632,12 @@ public resetScaleDownMode(): void
 public resetTags(): void
 ```
 
+##### `resetTemporaryNameForRotation` <a name="resetTemporaryNameForRotation" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetTemporaryNameForRotation"></a>
+
+```typescript
+public resetTemporaryNameForRotation(): void
+```
+
 ##### `resetType` <a name="resetType" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetType"></a>
 
 ```typescript
@@ -11657,6 +11714,7 @@ public resetZones(): void
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.proximityPlacementGroupIdInput">proximityPlacementGroupIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.scaleDownModeInput">scaleDownModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.temporaryNameForRotationInput">temporaryNameForRotationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.typeInput">typeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.ultraSsdEnabledInput">ultraSsdEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.upgradeSettingsInput">upgradeSettingsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolUpgradeSettings">KubernetesClusterDefaultNodePoolUpgradeSettings</a></code> | *No description.* |
@@ -11690,6 +11748,7 @@ public resetZones(): void
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.proximityPlacementGroupId">proximityPlacementGroupId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.scaleDownMode">scaleDownMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.temporaryNameForRotation">temporaryNameForRotation</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.type">type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.ultraSsdEnabled">ultraSsdEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.vmSize">vmSize</a></code> | <code>string</code> | *No description.* |
@@ -12054,6 +12113,16 @@ public readonly tagsInput: {[ key: string ]: string};
 
 ---
 
+##### `temporaryNameForRotationInput`<sup>Optional</sup> <a name="temporaryNameForRotationInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.temporaryNameForRotationInput"></a>
+
+```typescript
+public readonly temporaryNameForRotationInput: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `typeInput`<sup>Optional</sup> <a name="typeInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.typeInput"></a>
 
 ```typescript
@@ -12381,6 +12450,16 @@ public readonly tags: {[ key: string ]: string};
 ```
 
 - *Type:* {[ key: string ]: string}
+
+---
+
+##### `temporaryNameForRotation`<sup>Required</sup> <a name="temporaryNameForRotation" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.temporaryNameForRotation"></a>
+
+```typescript
+public readonly temporaryNameForRotation: string;
+```
+
+- *Type:* string
 
 ---
 
@@ -20910,6 +20989,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.resetMsiAuthForMonitoringEnabled">resetMsiAuthForMonitoringEnabled</a></code> | *No description.* |
 
 ---
 
@@ -21063,6 +21143,12 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `resetMsiAuthForMonitoringEnabled` <a name="resetMsiAuthForMonitoringEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.resetMsiAuthForMonitoringEnabled"></a>
+
+```typescript
+public resetMsiAuthForMonitoringEnabled(): void
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -21072,7 +21158,9 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.omsAgentIdentity">omsAgentIdentity</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOmsAgentIdentityList">KubernetesClusterOmsAgentOmsAgentIdentityList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.logAnalyticsWorkspaceIdInput">logAnalyticsWorkspaceIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.msiAuthForMonitoringEnabledInput">msiAuthForMonitoringEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.logAnalyticsWorkspaceId">logAnalyticsWorkspaceId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.msiAuthForMonitoringEnabled">msiAuthForMonitoringEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent">KubernetesClusterOmsAgent</a></code> | *No description.* |
 
 ---
@@ -21121,6 +21209,16 @@ public readonly logAnalyticsWorkspaceIdInput: string;
 
 ---
 
+##### `msiAuthForMonitoringEnabledInput`<sup>Optional</sup> <a name="msiAuthForMonitoringEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.msiAuthForMonitoringEnabledInput"></a>
+
+```typescript
+public readonly msiAuthForMonitoringEnabledInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
 ##### `logAnalyticsWorkspaceId`<sup>Required</sup> <a name="logAnalyticsWorkspaceId" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.logAnalyticsWorkspaceId"></a>
 
 ```typescript
@@ -21128,6 +21226,16 @@ public readonly logAnalyticsWorkspaceId: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `msiAuthForMonitoringEnabled`<sup>Required</sup> <a name="msiAuthForMonitoringEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.msiAuthForMonitoringEnabled"></a>
+
+```typescript
+public readonly msiAuthForMonitoringEnabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
 
 ---
 
@@ -23180,6 +23288,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.resetKedaEnabled">resetKedaEnabled</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.resetVerticalPodAutoscalerEnabled">resetVerticalPodAutoscalerEnabled</a></code> | *No description.* |
 
 ---
 
@@ -23339,6 +23448,12 @@ Returns a reversible string representation.
 public resetKedaEnabled(): void
 ```
 
+##### `resetVerticalPodAutoscalerEnabled` <a name="resetVerticalPodAutoscalerEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.resetVerticalPodAutoscalerEnabled"></a>
+
+```typescript
+public resetVerticalPodAutoscalerEnabled(): void
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -23346,8 +23461,12 @@ public resetKedaEnabled(): void
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerControlledValues">verticalPodAutoscalerControlledValues</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerUpdateMode">verticalPodAutoscalerUpdateMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.kedaEnabledInput">kedaEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerEnabledInput">verticalPodAutoscalerEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.kedaEnabled">kedaEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerEnabled">verticalPodAutoscalerEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile">KubernetesClusterWorkloadAutoscalerProfile</a></code> | *No description.* |
 
 ---
@@ -23376,6 +23495,26 @@ public readonly fqn: string;
 
 ---
 
+##### `verticalPodAutoscalerControlledValues`<sup>Required</sup> <a name="verticalPodAutoscalerControlledValues" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerControlledValues"></a>
+
+```typescript
+public readonly verticalPodAutoscalerControlledValues: string;
+```
+
+- *Type:* string
+
+---
+
+##### `verticalPodAutoscalerUpdateMode`<sup>Required</sup> <a name="verticalPodAutoscalerUpdateMode" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerUpdateMode"></a>
+
+```typescript
+public readonly verticalPodAutoscalerUpdateMode: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `kedaEnabledInput`<sup>Optional</sup> <a name="kedaEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.kedaEnabledInput"></a>
 
 ```typescript
@@ -23386,10 +23525,30 @@ public readonly kedaEnabledInput: boolean | IResolvable;
 
 ---
 
+##### `verticalPodAutoscalerEnabledInput`<sup>Optional</sup> <a name="verticalPodAutoscalerEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerEnabledInput"></a>
+
+```typescript
+public readonly verticalPodAutoscalerEnabledInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
 ##### `kedaEnabled`<sup>Required</sup> <a name="kedaEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.kedaEnabled"></a>
 
 ```typescript
 public readonly kedaEnabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `verticalPodAutoscalerEnabled`<sup>Required</sup> <a name="verticalPodAutoscalerEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerEnabled"></a>
+
+```typescript
+public readonly verticalPodAutoscalerEnabled: boolean | IResolvable;
 ```
 
 - *Type:* boolean | cdktf.IResolvable

@@ -39,6 +39,10 @@ export interface VirtualNetworkPeeringConfig extends cdktf.TerraformMetaArgument
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_peering#triggers VirtualNetworkPeering#triggers}
+  */
+  readonly triggers?: { [key: string]: string };
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_peering#use_remote_gateways VirtualNetworkPeering#use_remote_gateways}
   */
   readonly useRemoteGateways?: boolean | cdktf.IResolvable;
@@ -236,7 +240,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_network_peering',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.46.0',
+        providerVersion: '3.47.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -254,6 +258,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
     this._name = config.name;
     this._remoteVirtualNetworkId = config.remoteVirtualNetworkId;
     this._resourceGroupName = config.resourceGroupName;
+    this._triggers = config.triggers;
     this._useRemoteGateways = config.useRemoteGateways;
     this._virtualNetworkName = config.virtualNetworkName;
     this._timeouts.internalValue = config.timeouts;
@@ -366,6 +371,22 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
+  // triggers - computed: false, optional: true, required: false
+  private _triggers?: { [key: string]: string }; 
+  public get triggers() {
+    return this.getStringMapAttribute('triggers');
+  }
+  public set triggers(value: { [key: string]: string }) {
+    this._triggers = value;
+  }
+  public resetTriggers() {
+    this._triggers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get triggersInput() {
+    return this._triggers;
+  }
+
   // use_remote_gateways - computed: true, optional: true, required: false
   private _useRemoteGateways?: boolean | cdktf.IResolvable; 
   public get useRemoteGateways() {
@@ -424,6 +445,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       remote_virtual_network_id: cdktf.stringToTerraform(this._remoteVirtualNetworkId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      triggers: cdktf.hashMapper(cdktf.stringToTerraform)(this._triggers),
       use_remote_gateways: cdktf.booleanToTerraform(this._useRemoteGateways),
       virtual_network_name: cdktf.stringToTerraform(this._virtualNetworkName),
       timeouts: virtualNetworkPeeringTimeoutsToTerraform(this._timeouts.internalValue),

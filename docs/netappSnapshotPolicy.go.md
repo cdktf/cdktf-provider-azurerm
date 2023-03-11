@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_sna
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappSnapshotPolicy.NetappSnapshotPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappsnapshotpolicy"
 
 netappsnapshotpolicy.NewNetappSnapshotPolicy(scope Construct, id *string, config NetappSnapshotPolicyConfig) NetappSnapshotPolicy
 ```
@@ -380,7 +380,7 @@ func ResetWeeklySchedule()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.netappSnapshotPolicy.NetappSnapshotPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappsnapshotpolicy"
 
 netappsnapshotpolicy.NetappSnapshotPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -412,7 +412,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.netappSnapshotPolicy.NetappSnapshotPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappsnapshotpolicy"
 
 netappsnapshotpolicy.NetappSnapshotPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -426,7 +426,7 @@ netappsnapshotpolicy.NetappSnapshotPolicy_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.netappSnapshotPolicy.NetappSnapshotPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappsnapshotpolicy"
 
 netappsnapshotpolicy.NetappSnapshotPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -889,7 +889,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappSnapshotPolicy.NetappSnapshotPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappsnapshotpolicy"
 
 &netappsnapshotpolicy.NetappSnapshotPolicyConfig {
 	Connection: interface{},
@@ -904,13 +904,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpoli
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	DailySchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.netappSnapshotPolicy.NetappSnapshotPolicyDailySchedule,
-	HourlySchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.netappSnapshotPolicy.NetappSnapshotPolicyHourlySchedule,
+	DailySchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.netappSnapshotPolicy.NetappSnapshotPolicyDailySchedule,
+	HourlySchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.netappSnapshotPolicy.NetappSnapshotPolicyHourlySchedule,
 	Id: *string,
-	MonthlySchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.netappSnapshotPolicy.NetappSnapshotPolicyMonthlySchedule,
+	MonthlySchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.netappSnapshotPolicy.NetappSnapshotPolicyMonthlySchedule,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.netappSnapshotPolicy.NetappSnapshotPolicyTimeouts,
-	WeeklySchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.netappSnapshotPolicy.NetappSnapshotPolicyWeeklySchedule,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.netappSnapshotPolicy.NetappSnapshotPolicyTimeouts,
+	WeeklySchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.netappSnapshotPolicy.NetappSnapshotPolicyWeeklySchedule,
 }
 ```
 
@@ -1172,7 +1172,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappSnapshotPolicy.NetappSnapshotPolicyDailySchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappsnapshotpolicy"
 
 &netappsnapshotpolicy.NetappSnapshotPolicyDailySchedule {
 	Hour: *f64,
@@ -1232,7 +1232,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappSnapshotPolicy.NetappSnapshotPolicyHourlySchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappsnapshotpolicy"
 
 &netappsnapshotpolicy.NetappSnapshotPolicyHourlySchedule {
 	Minute: *f64,
@@ -1278,7 +1278,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappSnapshotPolicy.NetappSnapshotPolicyMonthlySchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappsnapshotpolicy"
 
 &netappsnapshotpolicy.NetappSnapshotPolicyMonthlySchedule {
 	DaysOfMonth: *[]*f64,
@@ -1352,7 +1352,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappSnapshotPolicy.NetappSnapshotPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappsnapshotpolicy"
 
 &netappsnapshotpolicy.NetappSnapshotPolicyTimeouts {
 	Create: *string,
@@ -1426,7 +1426,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappSnapshotPolicy.NetappSnapshotPolicyWeeklySchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappsnapshotpolicy"
 
 &netappsnapshotpolicy.NetappSnapshotPolicyWeeklySchedule {
 	DaysOfWeek: *[]*string,
@@ -1502,7 +1502,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappSnapshotPolicy.NetappSnapshotPolicyDailyScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappsnapshotpolicy"
 
 netappsnapshotpolicy.NewNetappSnapshotPolicyDailyScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappSnapshotPolicyDailyScheduleOutputReference
 ```
@@ -1817,7 +1817,7 @@ func InternalValue() NetappSnapshotPolicyDailySchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappSnapshotPolicy.NetappSnapshotPolicyHourlyScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappsnapshotpolicy"
 
 netappsnapshotpolicy.NewNetappSnapshotPolicyHourlyScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappSnapshotPolicyHourlyScheduleOutputReference
 ```
@@ -2110,7 +2110,7 @@ func InternalValue() NetappSnapshotPolicyHourlySchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappSnapshotPolicy.NetappSnapshotPolicyMonthlyScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappsnapshotpolicy"
 
 netappsnapshotpolicy.NewNetappSnapshotPolicyMonthlyScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappSnapshotPolicyMonthlyScheduleOutputReference
 ```
@@ -2447,7 +2447,7 @@ func InternalValue() NetappSnapshotPolicyMonthlySchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappSnapshotPolicy.NetappSnapshotPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappsnapshotpolicy"
 
 netappsnapshotpolicy.NewNetappSnapshotPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappSnapshotPolicyTimeoutsOutputReference
 ```
@@ -2812,7 +2812,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappSnapshotPolicy.NetappSnapshotPolicyWeeklyScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netappsnapshotpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappsnapshotpolicy"
 
 netappsnapshotpolicy.NewNetappSnapshotPolicyWeeklyScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappSnapshotPolicyWeeklyScheduleOutputReference
 ```

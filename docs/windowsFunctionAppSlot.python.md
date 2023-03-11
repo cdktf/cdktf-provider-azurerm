@@ -6265,7 +6265,7 @@ windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigApplicationStack(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigApplicationStack.property.dotnetVersion">dotnet_version</a></code> | <code>str</code> | The version of .Net. Possible values are `v3.0`, `v4.0`, `v6.0` and `v7.0`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigApplicationStack.property.javaVersion">java_version</a></code> | <code>str</code> | The version of Java to use. Possible values are `1.8`, `11` and `17`. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigApplicationStack.property.nodeVersion">node_version</a></code> | <code>str</code> | The version of Node to use. Possible values include `12`, and `14`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigApplicationStack.property.nodeVersion">node_version</a></code> | <code>str</code> | The version of Node to use. Possible values include `12`, `14`, `16` and `18`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigApplicationStack.property.powershellCoreVersion">powershell_core_version</a></code> | <code>str</code> | The PowerShell Core version to use. Possible values are `7`, and `7.2`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigApplicationStack.property.useCustomRuntime">use_custom_runtime</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Does the Function App use a custom Application Stack? |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigApplicationStack.property.useDotnetIsolatedRuntime">use_dotnet_isolated_runtime</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the DotNet process use an isolated runtime. Defaults to `false`. |
@@ -6308,7 +6308,7 @@ node_version: str
 
 - *Type:* str
 
-The version of Node to use. Possible values include `12`, and `14`.
+The version of Node to use. Possible values include `12`, `14`, `16` and `18`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#node_version WindowsFunctionAppSlot#node_version}
 
@@ -20357,7 +20357,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-The version of Node to use. Possible values include `12`, and `14`.
+The version of Node to use. Possible values include `12`, `14`, `16` and `18`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#node_version WindowsFunctionAppSlot#node_version}
 

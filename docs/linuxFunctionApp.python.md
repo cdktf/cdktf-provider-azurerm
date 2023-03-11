@@ -6421,9 +6421,9 @@ linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack(
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.docker">docker</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]]</code> | docker block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.dotnetVersion">dotnet_version</a></code> | <code>str</code> | The version of .Net. Possible values are `3.1`, `6.0` and `7.0`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.javaVersion">java_version</a></code> | <code>str</code> | The version of Java to use. Possible values are `8`, `11`, and `17`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.nodeVersion">node_version</a></code> | <code>str</code> | The version of Node to use. Possible values include `12`, and `14`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.nodeVersion">node_version</a></code> | <code>str</code> | The version of Node to use. Possible values include `12`, `14`, `16` and `18`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.powershellCoreVersion">powershell_core_version</a></code> | <code>str</code> | The version of PowerShell Core to use. Possibles values are `7`, and `7.2`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.pythonVersion">python_version</a></code> | <code>str</code> | The version of Python to use. Possible values include `3.9`, `3.8`, and `3.7`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.pythonVersion">python_version</a></code> | <code>str</code> | The version of Python to use. Possible values include `3.10`, `3.9`, `3.8`, and `3.7`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.useCustomRuntime">use_custom_runtime</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#use_custom_runtime LinuxFunctionApp#use_custom_runtime}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.useDotnetIsolatedRuntime">use_dotnet_isolated_runtime</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the DotNet process use an isolated runtime. Defaults to `false`. |
 
@@ -6479,7 +6479,7 @@ node_version: str
 
 - *Type:* str
 
-The version of Node to use. Possible values include `12`, and `14`.
+The version of Node to use. Possible values include `12`, `14`, `16` and `18`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#node_version LinuxFunctionApp#node_version}
 
@@ -6507,7 +6507,7 @@ python_version: str
 
 - *Type:* str
 
-The version of Python to use. Possible values include `3.9`, `3.8`, and `3.7`.
+The version of Python to use. Possible values include `3.10`, `3.9`, `3.8`, and `3.7`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#python_version LinuxFunctionApp#python_version}
 
@@ -21339,7 +21339,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-The version of Node to use. Possible values include `12`, and `14`.
+The version of Node to use. Possible values include `12`, `14`, `16` and `18`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#node_version LinuxFunctionApp#node_version}
 
@@ -21359,7 +21359,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-The version of Python to use. Possible values include `3.9`, `3.8`, and `3.7`.
+The version of Python to use. Possible values include `3.10`, `3.9`, `3.8`, and `3.7`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#python_version LinuxFunctionApp#python_version}
 

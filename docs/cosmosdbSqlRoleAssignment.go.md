@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_s
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbsqlroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlroleassignment"
 
 cosmosdbsqlroleassignment.NewCosmosdbSqlRoleAssignment(scope Construct, id *string, config CosmosdbSqlRoleAssignmentConfig) CosmosdbSqlRoleAssignment
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbsqlroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlroleassignment"
 
 cosmosdbsqlroleassignment.CosmosdbSqlRoleAssignment_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbsqlroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlroleassignment"
 
 cosmosdbsqlroleassignment.CosmosdbSqlRoleAssignment_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ cosmosdbsqlroleassignment.CosmosdbSqlRoleAssignment_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbsqlroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlroleassignment"
 
 cosmosdbsqlroleassignment.CosmosdbSqlRoleAssignment_IsTerraformResource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbsqlroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlroleassignment"
 
 &cosmosdbsqlroleassignment.CosmosdbSqlRoleAssignmentConfig {
 	Connection: interface{},
@@ -738,7 +738,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbsqlroleass
 	Scope: *string,
 	Id: *string,
 	Name: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeouts,
 }
 ```
 
@@ -940,7 +940,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbsqlroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlroleassignment"
 
 &cosmosdbsqlroleassignment.CosmosdbSqlRoleAssignmentTimeouts {
 	Create: *string,
@@ -1016,7 +1016,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbsqlroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlroleassignment"
 
 cosmosdbsqlroleassignment.NewCosmosdbSqlRoleAssignmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbSqlRoleAssignmentTimeoutsOutputReference
 ```

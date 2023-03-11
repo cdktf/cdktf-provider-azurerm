@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/policy_def
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.policyDefinition.PolicyDefinition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/policydefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/policydefinition"
 
 policydefinition.NewPolicyDefinition(scope Construct, id *string, config PolicyDefinitionConfig) PolicyDefinition
 ```
@@ -328,7 +328,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.policyDefinition.PolicyDefinition.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/policydefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/policydefinition"
 
 policydefinition.PolicyDefinition_IsConstruct(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.policyDefinition.PolicyDefinition.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/policydefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/policydefinition"
 
 policydefinition.PolicyDefinition_IsTerraformElement(x interface{}) *bool
 ```
@@ -374,7 +374,7 @@ policydefinition.PolicyDefinition_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.policyDefinition.PolicyDefinition.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/policydefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/policydefinition"
 
 policydefinition.PolicyDefinition_IsTerraformResource(x interface{}) *bool
 ```
@@ -826,7 +826,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.policyDefinition.PolicyDefinitionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/policydefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/policydefinition"
 
 &policydefinition.PolicyDefinitionConfig {
 	Connection: interface{},
@@ -846,7 +846,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/policydefinition"
 	Metadata: *string,
 	Parameters: *string,
 	PolicyRule: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.policyDefinition.PolicyDefinitionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.policyDefinition.PolicyDefinitionTimeouts,
 }
 ```
 
@@ -1087,7 +1087,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.policyDefinition.PolicyDefinitionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/policydefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/policydefinition"
 
 &policydefinition.PolicyDefinitionTimeouts {
 	Create: *string,
@@ -1163,7 +1163,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.policyDefinition.PolicyDefinitionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/policydefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/policydefinition"
 
 policydefinition.NewPolicyDefinitionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PolicyDefinitionTimeoutsOutputReference
 ```

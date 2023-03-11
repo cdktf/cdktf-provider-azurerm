@@ -1019,6 +1019,7 @@ KubernetesCluster.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.microsoftDefender">MicrosoftDefender</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMicrosoftDefenderOutputReference">KubernetesClusterMicrosoftDefenderOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.monitorMetrics">MonitorMetrics</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMonitorMetricsOutputReference">KubernetesClusterMonitorMetricsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.networkProfile">NetworkProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileOutputReference">KubernetesClusterNetworkProfileOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.nodeResourceGroupId">NodeResourceGroupId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.oidcIssuerUrl">OidcIssuerUrl</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.omsAgent">OmsAgent</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference">KubernetesClusterOmsAgentOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.portalFqdn">PortalFqdn</a></code> | <code>string</code> | *No description.* |
@@ -1483,6 +1484,16 @@ public KubernetesClusterNetworkProfileOutputReference NetworkProfile { get; }
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileOutputReference">KubernetesClusterNetworkProfileOutputReference</a>
+
+---
+
+##### `NodeResourceGroupId`<sup>Required</sup> <a name="NodeResourceGroupId" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.nodeResourceGroupId"></a>
+
+```csharp
+public string NodeResourceGroupId { get; }
+```
+
+- *Type:* string
 
 ---
 
@@ -3868,6 +3879,7 @@ new KubernetesClusterDefaultNodePool {
     string ProximityPlacementGroupId = null,
     string ScaleDownMode = null,
     System.Collections.Generic.IDictionary<string, string> Tags = null,
+    string TemporaryNameForRotation = null,
     string Type = null,
     object UltraSsdEnabled = null,
     KubernetesClusterDefaultNodePoolUpgradeSettings UpgradeSettings = null,
@@ -3911,6 +3923,7 @@ new KubernetesClusterDefaultNodePool {
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.proximityPlacementGroupId">ProximityPlacementGroupId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#proximity_placement_group_id KubernetesCluster#proximity_placement_group_id}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.scaleDownMode">ScaleDownMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#scale_down_mode KubernetesCluster#scale_down_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#tags KubernetesCluster#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.temporaryNameForRotation">TemporaryNameForRotation</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#temporary_name_for_rotation KubernetesCluster#temporary_name_for_rotation}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#type KubernetesCluster#type}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.ultraSsdEnabled">UltraSsdEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#ultra_ssd_enabled KubernetesCluster#ultra_ssd_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.upgradeSettings">UpgradeSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolUpgradeSettings">KubernetesClusterDefaultNodePoolUpgradeSettings</a></code> | upgrade_settings block. |
@@ -4283,6 +4296,18 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#tags KubernetesCluster#tags}.
+
+---
+
+##### `TemporaryNameForRotation`<sup>Optional</sup> <a name="TemporaryNameForRotation" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.temporaryNameForRotation"></a>
+
+```csharp
+public string TemporaryNameForRotation { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#temporary_name_for_rotation KubernetesCluster#temporary_name_for_rotation}.
 
 ---
 
@@ -6182,7 +6207,8 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new KubernetesClusterOmsAgent {
-    string LogAnalyticsWorkspaceId
+    string LogAnalyticsWorkspaceId,
+    object MsiAuthForMonitoringEnabled = null
 };
 ```
 
@@ -6191,6 +6217,7 @@ new KubernetesClusterOmsAgent {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent.property.logAnalyticsWorkspaceId">LogAnalyticsWorkspaceId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent.property.msiAuthForMonitoringEnabled">MsiAuthForMonitoringEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#msi_auth_for_monitoring_enabled KubernetesCluster#msi_auth_for_monitoring_enabled}. |
 
 ---
 
@@ -6203,6 +6230,18 @@ public string LogAnalyticsWorkspaceId { get; set; }
 - *Type:* string
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}.
+
+---
+
+##### `MsiAuthForMonitoringEnabled`<sup>Optional</sup> <a name="MsiAuthForMonitoringEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent.property.msiAuthForMonitoringEnabled"></a>
+
+```csharp
+public object MsiAuthForMonitoringEnabled { get; set; }
+```
+
+- *Type:* object
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#msi_auth_for_monitoring_enabled KubernetesCluster#msi_auth_for_monitoring_enabled}.
 
 ---
 
@@ -6589,7 +6628,8 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new KubernetesClusterWorkloadAutoscalerProfile {
-    object KedaEnabled = null
+    object KedaEnabled = null,
+    object VerticalPodAutoscalerEnabled = null
 };
 ```
 
@@ -6598,6 +6638,7 @@ new KubernetesClusterWorkloadAutoscalerProfile {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.kedaEnabled">KedaEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#keda_enabled KubernetesCluster#keda_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.verticalPodAutoscalerEnabled">VerticalPodAutoscalerEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#vertical_pod_autoscaler_enabled KubernetesCluster#vertical_pod_autoscaler_enabled}. |
 
 ---
 
@@ -6610,6 +6651,18 @@ public object KedaEnabled { get; set; }
 - *Type:* object
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#keda_enabled KubernetesCluster#keda_enabled}.
+
+---
+
+##### `VerticalPodAutoscalerEnabled`<sup>Optional</sup> <a name="VerticalPodAutoscalerEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.verticalPodAutoscalerEnabled"></a>
+
+```csharp
+public object VerticalPodAutoscalerEnabled { get; set; }
+```
+
+- *Type:* object
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#vertical_pod_autoscaler_enabled KubernetesCluster#vertical_pod_autoscaler_enabled}.
 
 ---
 
@@ -11497,6 +11550,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetProximityPlacementGroupId">ResetProximityPlacementGroupId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetScaleDownMode">ResetScaleDownMode</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetTags">ResetTags</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetTemporaryNameForRotation">ResetTemporaryNameForRotation</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetType">ResetType</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetUltraSsdEnabled">ResetUltraSsdEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetUpgradeSettings">ResetUpgradeSettings</a></code> | *No description.* |
@@ -11872,6 +11926,12 @@ private void ResetScaleDownMode()
 private void ResetTags()
 ```
 
+##### `ResetTemporaryNameForRotation` <a name="ResetTemporaryNameForRotation" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetTemporaryNameForRotation"></a>
+
+```csharp
+private void ResetTemporaryNameForRotation()
+```
+
 ##### `ResetType` <a name="ResetType" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.resetType"></a>
 
 ```csharp
@@ -11948,6 +12008,7 @@ private void ResetZones()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.proximityPlacementGroupIdInput">ProximityPlacementGroupIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.scaleDownModeInput">ScaleDownModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.tagsInput">TagsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.temporaryNameForRotationInput">TemporaryNameForRotationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.typeInput">TypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.ultraSsdEnabledInput">UltraSsdEnabledInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.upgradeSettingsInput">UpgradeSettingsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolUpgradeSettings">KubernetesClusterDefaultNodePoolUpgradeSettings</a></code> | *No description.* |
@@ -11981,6 +12042,7 @@ private void ResetZones()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.proximityPlacementGroupId">ProximityPlacementGroupId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.scaleDownMode">ScaleDownMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.temporaryNameForRotation">TemporaryNameForRotation</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.type">Type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.ultraSsdEnabled">UltraSsdEnabled</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.vmSize">VmSize</a></code> | <code>string</code> | *No description.* |
@@ -12345,6 +12407,16 @@ public System.Collections.Generic.IDictionary<string, string> TagsInput { get; }
 
 ---
 
+##### `TemporaryNameForRotationInput`<sup>Optional</sup> <a name="TemporaryNameForRotationInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.temporaryNameForRotationInput"></a>
+
+```csharp
+public string TemporaryNameForRotationInput { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `TypeInput`<sup>Optional</sup> <a name="TypeInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.typeInput"></a>
 
 ```csharp
@@ -12672,6 +12744,16 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; }
 ```
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
+
+---
+
+##### `TemporaryNameForRotation`<sup>Required</sup> <a name="TemporaryNameForRotation" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.temporaryNameForRotation"></a>
+
+```csharp
+public string TemporaryNameForRotation { get; }
+```
+
+- *Type:* string
 
 ---
 
@@ -21201,6 +21283,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.resetMsiAuthForMonitoringEnabled">ResetMsiAuthForMonitoringEnabled</a></code> | *No description.* |
 
 ---
 
@@ -21354,6 +21437,12 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `ResetMsiAuthForMonitoringEnabled` <a name="ResetMsiAuthForMonitoringEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.resetMsiAuthForMonitoringEnabled"></a>
+
+```csharp
+private void ResetMsiAuthForMonitoringEnabled()
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -21363,7 +21452,9 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.omsAgentIdentity">OmsAgentIdentity</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOmsAgentIdentityList">KubernetesClusterOmsAgentOmsAgentIdentityList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.logAnalyticsWorkspaceIdInput">LogAnalyticsWorkspaceIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.msiAuthForMonitoringEnabledInput">MsiAuthForMonitoringEnabledInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.logAnalyticsWorkspaceId">LogAnalyticsWorkspaceId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.msiAuthForMonitoringEnabled">MsiAuthForMonitoringEnabled</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent">KubernetesClusterOmsAgent</a></code> | *No description.* |
 
 ---
@@ -21412,6 +21503,16 @@ public string LogAnalyticsWorkspaceIdInput { get; }
 
 ---
 
+##### `MsiAuthForMonitoringEnabledInput`<sup>Optional</sup> <a name="MsiAuthForMonitoringEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.msiAuthForMonitoringEnabledInput"></a>
+
+```csharp
+public object MsiAuthForMonitoringEnabledInput { get; }
+```
+
+- *Type:* object
+
+---
+
 ##### `LogAnalyticsWorkspaceId`<sup>Required</sup> <a name="LogAnalyticsWorkspaceId" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.logAnalyticsWorkspaceId"></a>
 
 ```csharp
@@ -21419,6 +21520,16 @@ public string LogAnalyticsWorkspaceId { get; }
 ```
 
 - *Type:* string
+
+---
+
+##### `MsiAuthForMonitoringEnabled`<sup>Required</sup> <a name="MsiAuthForMonitoringEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.msiAuthForMonitoringEnabled"></a>
+
+```csharp
+public object MsiAuthForMonitoringEnabled { get; }
+```
+
+- *Type:* object
 
 ---
 
@@ -23471,6 +23582,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.resetKedaEnabled">ResetKedaEnabled</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.resetVerticalPodAutoscalerEnabled">ResetVerticalPodAutoscalerEnabled</a></code> | *No description.* |
 
 ---
 
@@ -23630,6 +23742,12 @@ Returns a reversible string representation.
 private void ResetKedaEnabled()
 ```
 
+##### `ResetVerticalPodAutoscalerEnabled` <a name="ResetVerticalPodAutoscalerEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.resetVerticalPodAutoscalerEnabled"></a>
+
+```csharp
+private void ResetVerticalPodAutoscalerEnabled()
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -23637,8 +23755,12 @@ private void ResetKedaEnabled()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerControlledValues">VerticalPodAutoscalerControlledValues</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerUpdateMode">VerticalPodAutoscalerUpdateMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.kedaEnabledInput">KedaEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerEnabledInput">VerticalPodAutoscalerEnabledInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.kedaEnabled">KedaEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerEnabled">VerticalPodAutoscalerEnabled</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile">KubernetesClusterWorkloadAutoscalerProfile</a></code> | *No description.* |
 
 ---
@@ -23667,6 +23789,26 @@ public string Fqn { get; }
 
 ---
 
+##### `VerticalPodAutoscalerControlledValues`<sup>Required</sup> <a name="VerticalPodAutoscalerControlledValues" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerControlledValues"></a>
+
+```csharp
+public string VerticalPodAutoscalerControlledValues { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `VerticalPodAutoscalerUpdateMode`<sup>Required</sup> <a name="VerticalPodAutoscalerUpdateMode" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerUpdateMode"></a>
+
+```csharp
+public string VerticalPodAutoscalerUpdateMode { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `KedaEnabledInput`<sup>Optional</sup> <a name="KedaEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.kedaEnabledInput"></a>
 
 ```csharp
@@ -23677,10 +23819,30 @@ public object KedaEnabledInput { get; }
 
 ---
 
+##### `VerticalPodAutoscalerEnabledInput`<sup>Optional</sup> <a name="VerticalPodAutoscalerEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerEnabledInput"></a>
+
+```csharp
+public object VerticalPodAutoscalerEnabledInput { get; }
+```
+
+- *Type:* object
+
+---
+
 ##### `KedaEnabled`<sup>Required</sup> <a name="KedaEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.kedaEnabled"></a>
 
 ```csharp
 public object KedaEnabled { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `VerticalPodAutoscalerEnabled`<sup>Required</sup> <a name="VerticalPodAutoscalerEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerEnabled"></a>
+
+```csharp
+public object VerticalPodAutoscalerEnabled { get; }
 ```
 
 - *Type:* object

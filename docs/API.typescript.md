@@ -1041,6 +1041,7 @@ The following submodules are available:
 - [sentinelDataConnectorThreatIntelligence](./sentinelDataConnectorThreatIntelligence.typescript.md)
 - [sentinelDataConnectorThreatIntelligenceTaxii](./sentinelDataConnectorThreatIntelligenceTaxii.typescript.md)
 - [sentinelLogAnalyticsWorkspaceOnboarding](./sentinelLogAnalyticsWorkspaceOnboarding.typescript.md)
+- [sentinelMetadata](./sentinelMetadata.typescript.md)
 - [sentinelWatchlist](./sentinelWatchlist.typescript.md)
 - [sentinelWatchlistItem](./sentinelWatchlistItem.typescript.md)
 - [serviceFabricCluster](./serviceFabricCluster.typescript.md)

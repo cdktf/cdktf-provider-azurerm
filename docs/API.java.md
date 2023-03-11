@@ -1041,6 +1041,7 @@ The following submodules are available:
 - [sentinelDataConnectorThreatIntelligence](./sentinelDataConnectorThreatIntelligence.java.md)
 - [sentinelDataConnectorThreatIntelligenceTaxii](./sentinelDataConnectorThreatIntelligenceTaxii.java.md)
 - [sentinelLogAnalyticsWorkspaceOnboarding](./sentinelLogAnalyticsWorkspaceOnboarding.java.md)
+- [sentinelMetadata](./sentinelMetadata.java.md)
 - [sentinelWatchlist](./sentinelWatchlist.java.md)
 - [sentinelWatchlistItem](./sentinelWatchlistItem.java.md)
 - [serviceFabricCluster](./serviceFabricCluster.java.md)

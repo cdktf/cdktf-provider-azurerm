@@ -42,6 +42,7 @@ MariadbServer.Builder.create(Construct scope, java.lang.String id)
 //  .publicNetworkAccessEnabled(java.lang.Boolean)
 //  .publicNetworkAccessEnabled(IResolvable)
 //  .restorePointInTime(java.lang.String)
+//  .sslMinimalTlsVersionEnforced(java.lang.String)
 //  .storageMb(java.lang.Number)
 //  .tags(java.util.Map<java.lang.String, java.lang.String>)
 //  .timeouts(MariadbServerTimeouts)
@@ -75,6 +76,7 @@ MariadbServer.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#id MariadbServer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.Initializer.parameter.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#public_network_access_enabled MariadbServer#public_network_access_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.Initializer.parameter.restorePointInTime">restorePointInTime</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#restore_point_in_time MariadbServer#restore_point_in_time}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.Initializer.parameter.sslMinimalTlsVersionEnforced">sslMinimalTlsVersionEnforced</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#ssl_minimal_tls_version_enforced MariadbServer#ssl_minimal_tls_version_enforced}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.Initializer.parameter.storageMb">storageMb</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#storage_mb MariadbServer#storage_mb}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#tags MariadbServer#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerTimeouts">MariadbServerTimeouts</a></code> | timeouts block. |
@@ -272,6 +274,14 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ---
 
+##### `sslMinimalTlsVersionEnforced`<sup>Optional</sup> <a name="sslMinimalTlsVersionEnforced" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.Initializer.parameter.sslMinimalTlsVersionEnforced"></a>
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#ssl_minimal_tls_version_enforced MariadbServer#ssl_minimal_tls_version_enforced}.
+
+---
+
 ##### `storageMb`<sup>Optional</sup> <a name="storageMb" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.Initializer.parameter.storageMb"></a>
 
 - *Type:* java.lang.Number
@@ -329,6 +339,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetId">resetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetPublicNetworkAccessEnabled">resetPublicNetworkAccessEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetRestorePointInTime">resetRestorePointInTime</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetSslMinimalTlsVersionEnforced">resetSslMinimalTlsVersionEnforced</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetStorageMb">resetStorageMb</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetTags">resetTags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetTimeouts">resetTimeouts</a></code> | *No description.* |
@@ -591,6 +602,12 @@ public void resetPublicNetworkAccessEnabled()
 public void resetRestorePointInTime()
 ```
 
+##### `resetSslMinimalTlsVersionEnforced` <a name="resetSslMinimalTlsVersionEnforced" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetSslMinimalTlsVersionEnforced"></a>
+
+```java
+public void resetSslMinimalTlsVersionEnforced()
+```
+
 ##### `resetStorageMb` <a name="resetStorageMb" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.resetStorageMb"></a>
 
 ```java
@@ -714,6 +731,7 @@ MariadbServer.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.restorePointInTimeInput">restorePointInTimeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.skuNameInput">skuNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.sslEnforcementEnabledInput">sslEnforcementEnabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.sslMinimalTlsVersionEnforcedInput">sslMinimalTlsVersionEnforcedInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.storageMbInput">storageMbInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.tagsInput">tagsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerTimeouts">MariadbServerTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
@@ -733,6 +751,7 @@ MariadbServer.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.restorePointInTime">restorePointInTime</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.skuName">skuName</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.sslEnforcementEnabled">sslEnforcementEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.sslMinimalTlsVersionEnforced">sslMinimalTlsVersionEnforced</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.storageMb">storageMb</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.version">version</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -1051,6 +1070,16 @@ public java.lang.Object getSslEnforcementEnabledInput();
 
 ---
 
+##### `sslMinimalTlsVersionEnforcedInput`<sup>Optional</sup> <a name="sslMinimalTlsVersionEnforcedInput" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.sslMinimalTlsVersionEnforcedInput"></a>
+
+```java
+public java.lang.String getSslMinimalTlsVersionEnforcedInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `storageMbInput`<sup>Optional</sup> <a name="storageMbInput" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.storageMbInput"></a>
 
 ```java
@@ -1241,6 +1270,16 @@ public java.lang.Object getSslEnforcementEnabled();
 
 ---
 
+##### `sslMinimalTlsVersionEnforced`<sup>Required</sup> <a name="sslMinimalTlsVersionEnforced" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.sslMinimalTlsVersionEnforced"></a>
+
+```java
+public java.lang.String getSslMinimalTlsVersionEnforced();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `storageMb`<sup>Required</sup> <a name="storageMb" id="@cdktf/provider-azurerm.mariadbServer.MariadbServer.property.storageMb"></a>
 
 ```java
@@ -1329,6 +1368,7 @@ MariadbServerConfig.builder()
 //  .publicNetworkAccessEnabled(java.lang.Boolean)
 //  .publicNetworkAccessEnabled(IResolvable)
 //  .restorePointInTime(java.lang.String)
+//  .sslMinimalTlsVersionEnforced(java.lang.String)
 //  .storageMb(java.lang.Number)
 //  .tags(java.util.Map<java.lang.String, java.lang.String>)
 //  .timeouts(MariadbServerTimeouts)
@@ -1362,6 +1402,7 @@ MariadbServerConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#id MariadbServer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#public_network_access_enabled MariadbServer#public_network_access_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.restorePointInTime">restorePointInTime</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#restore_point_in_time MariadbServer#restore_point_in_time}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.sslMinimalTlsVersionEnforced">sslMinimalTlsVersionEnforced</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#ssl_minimal_tls_version_enforced MariadbServer#ssl_minimal_tls_version_enforced}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.storageMb">storageMb</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#storage_mb MariadbServer#storage_mb}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#tags MariadbServer#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mariadbServer.MariadbServerTimeouts">MariadbServerTimeouts</a></code> | timeouts block. |
@@ -1630,6 +1671,18 @@ public java.lang.String getRestorePointInTime();
 - *Type:* java.lang.String
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#restore_point_in_time MariadbServer#restore_point_in_time}.
+
+---
+
+##### `sslMinimalTlsVersionEnforced`<sup>Optional</sup> <a name="sslMinimalTlsVersionEnforced" id="@cdktf/provider-azurerm.mariadbServer.MariadbServerConfig.property.sslMinimalTlsVersionEnforced"></a>
+
+```java
+public java.lang.String getSslMinimalTlsVersionEnforced();
+```
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#ssl_minimal_tls_version_enforced MariadbServer#ssl_minimal_tls_version_enforced}.
 
 ---
 

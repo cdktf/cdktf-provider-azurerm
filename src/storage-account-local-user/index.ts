@@ -674,7 +674,7 @@ export class StorageAccountLocalUser extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_account_local_user',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.46.0',
+        providerVersion: '3.47.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

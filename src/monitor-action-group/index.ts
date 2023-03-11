@@ -19,6 +19,10 @@ export interface MonitorActionGroupConfig extends cdktf.TerraformMetaArguments {
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#location MonitorActionGroup#location}
+  */
+  readonly location?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#name MonitorActionGroup#name}
   */
   readonly name: string;
@@ -2321,7 +2325,7 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_action_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.46.0',
+        providerVersion: '3.47.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -2334,6 +2338,7 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
     });
     this._enabled = config.enabled;
     this._id = config.id;
+    this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._shortName = config.shortName;
@@ -2386,6 +2391,22 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // location - computed: false, optional: true, required: false
+  private _location?: string; 
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -2643,6 +2664,7 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
     return {
       enabled: cdktf.booleanToTerraform(this._enabled),
       id: cdktf.stringToTerraform(this._id),
+      location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       short_name: cdktf.stringToTerraform(this._shortName),

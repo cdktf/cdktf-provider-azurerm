@@ -135,7 +135,7 @@ export class DataAzurermMarketplaceAgreement extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_marketplace_agreement',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.46.0',
+        providerVersion: '3.47.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

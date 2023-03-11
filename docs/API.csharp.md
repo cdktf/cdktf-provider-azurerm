@@ -1041,6 +1041,7 @@ The following submodules are available:
 - [sentinelDataConnectorThreatIntelligence](./sentinelDataConnectorThreatIntelligence.csharp.md)
 - [sentinelDataConnectorThreatIntelligenceTaxii](./sentinelDataConnectorThreatIntelligenceTaxii.csharp.md)
 - [sentinelLogAnalyticsWorkspaceOnboarding](./sentinelLogAnalyticsWorkspaceOnboarding.csharp.md)
+- [sentinelMetadata](./sentinelMetadata.csharp.md)
 - [sentinelWatchlist](./sentinelWatchlist.csharp.md)
 - [sentinelWatchlistItem](./sentinelWatchlistItem.csharp.md)
 - [serviceFabricCluster](./serviceFabricCluster.csharp.md)

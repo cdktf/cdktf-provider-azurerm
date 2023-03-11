@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/static_sit
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.staticSite.StaticSite.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/staticsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsite"
 
 staticsite.NewStaticSite(scope Construct, id *string, config StaticSiteConfig) StaticSite
 ```
@@ -334,7 +334,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.staticSite.StaticSite.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/staticsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsite"
 
 staticsite.StaticSite_IsConstruct(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.staticSite.StaticSite.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/staticsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsite"
 
 staticsite.StaticSite_IsTerraformElement(x interface{}) *bool
 ```
@@ -380,7 +380,7 @@ staticsite.StaticSite_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.staticSite.StaticSite.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/staticsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsite"
 
 staticsite.StaticSite_IsTerraformResource(x interface{}) *bool
 ```
@@ -799,7 +799,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.staticSite.StaticSiteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/staticsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsite"
 
 &staticsite.StaticSiteConfig {
 	Connection: interface{},
@@ -813,11 +813,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/staticsite"
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.staticSite.StaticSiteIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.staticSite.StaticSiteIdentity,
 	SkuSize: *string,
 	SkuTier: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.staticSite.StaticSiteTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.staticSite.StaticSiteTimeouts,
 }
 ```
 
@@ -1034,7 +1034,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.staticSite.StaticSiteIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/staticsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsite"
 
 &staticsite.StaticSiteIdentity {
 	Type: *string,
@@ -1080,7 +1080,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.staticSite.StaticSiteTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/staticsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsite"
 
 &staticsite.StaticSiteTimeouts {
 	Create: *string,
@@ -1156,7 +1156,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.staticSite.StaticSiteIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/staticsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsite"
 
 staticsite.NewStaticSiteIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StaticSiteIdentityOutputReference
 ```
@@ -1478,7 +1478,7 @@ func InternalValue() StaticSiteIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.staticSite.StaticSiteTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/staticsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsite"
 
 staticsite.NewStaticSiteTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StaticSiteTimeoutsOutputReference
 ```
