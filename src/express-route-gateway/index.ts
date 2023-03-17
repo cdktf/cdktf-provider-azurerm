@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface ExpressRouteGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_gateway#allow_non_virtual_wan_traffic ExpressRouteGateway#allow_non_virtual_wan_traffic}
+  */
+  readonly allowNonVirtualWanTraffic?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_gateway#id ExpressRouteGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -228,7 +232,7 @@ export class ExpressRouteGateway extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_express_route_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.47.0',
+        providerVersion: '3.48.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -239,6 +243,7 @@ export class ExpressRouteGateway extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._allowNonVirtualWanTraffic = config.allowNonVirtualWanTraffic;
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
@@ -252,6 +257,22 @@ export class ExpressRouteGateway extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // allow_non_virtual_wan_traffic - computed: false, optional: true, required: false
+  private _allowNonVirtualWanTraffic?: boolean | cdktf.IResolvable; 
+  public get allowNonVirtualWanTraffic() {
+    return this.getBooleanAttribute('allow_non_virtual_wan_traffic');
+  }
+  public set allowNonVirtualWanTraffic(value: boolean | cdktf.IResolvable) {
+    this._allowNonVirtualWanTraffic = value;
+  }
+  public resetAllowNonVirtualWanTraffic() {
+    this._allowNonVirtualWanTraffic = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowNonVirtualWanTrafficInput() {
+    return this._allowNonVirtualWanTraffic;
+  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -372,6 +393,7 @@ export class ExpressRouteGateway extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      allow_non_virtual_wan_traffic: cdktf.booleanToTerraform(this._allowNonVirtualWanTraffic),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
