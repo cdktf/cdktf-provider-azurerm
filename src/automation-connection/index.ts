@@ -228,7 +228,7 @@ export class AutomationConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_automation_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.47.0',
+        providerVersion: '3.48.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

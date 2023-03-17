@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/source_con
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sourceControlToken.SourceControlToken.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/sourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sourcecontroltoken"
 
 sourcecontroltoken.NewSourceControlToken(scope Construct, id *string, config SourceControlTokenConfig) SourceControlToken
 ```
@@ -300,7 +300,7 @@ func ResetTokenSecret()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sourceControlToken.SourceControlToken.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/sourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sourcecontroltoken"
 
 sourcecontroltoken.SourceControlToken_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sourceControlToken.SourceControlToken.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/sourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sourcecontroltoken"
 
 sourcecontroltoken.SourceControlToken_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ sourcecontroltoken.SourceControlToken_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sourceControlToken.SourceControlToken.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/sourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sourcecontroltoken"
 
 sourcecontroltoken.SourceControlToken_IsTerraformResource(x interface{}) *bool
 ```
@@ -655,7 +655,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/sourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sourcecontroltoken"
 
 &sourcecontroltoken.SourceControlTokenConfig {
 	Connection: interface{},
@@ -668,7 +668,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/sourcecontroltoken
 	Token: *string,
 	Type: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.sourceControlToken.SourceControlTokenTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sourceControlToken.SourceControlTokenTimeouts,
 	TokenSecret: *string,
 }
 ```
@@ -832,7 +832,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/sourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sourcecontroltoken"
 
 &sourcecontroltoken.SourceControlTokenTimeouts {
 	Create: *string,
@@ -908,7 +908,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/sourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sourcecontroltoken"
 
 sourcecontroltoken.NewSourceControlTokenTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SourceControlTokenTimeoutsOutputReference
 ```

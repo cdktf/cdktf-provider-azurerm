@@ -197,7 +197,7 @@ export class StorageSyncCloudEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_sync_cloud_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.47.0',
+        providerVersion: '3.48.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -224,7 +224,7 @@ export class BotChannelMsTeams extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_bot_channel_ms_teams',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.47.0',
+        providerVersion: '3.48.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
