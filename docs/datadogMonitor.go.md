@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/datadog_mo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.datadogMonitor.DatadogMonitor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datadogmonitor"
 
 datadogmonitor.NewDatadogMonitor(scope Construct, id *string, config DatadogMonitorConfig) DatadogMonitor
 ```
@@ -353,7 +353,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.datadogMonitor.DatadogMonitor.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datadogmonitor"
 
 datadogmonitor.DatadogMonitor_IsConstruct(x interface{}) *bool
 ```
@@ -385,7 +385,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.datadogMonitor.DatadogMonitor.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datadogmonitor"
 
 datadogmonitor.DatadogMonitor_IsTerraformElement(x interface{}) *bool
 ```
@@ -399,7 +399,7 @@ datadogmonitor.DatadogMonitor_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.datadogMonitor.DatadogMonitor.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datadogmonitor"
 
 datadogmonitor.DatadogMonitor_IsTerraformResource(x interface{}) *bool
 ```
@@ -851,7 +851,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.datadogMonitor.DatadogMonitorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datadogmonitor"
 
 &datadogmonitor.DatadogMonitorConfig {
 	Connection: interface{},
@@ -861,17 +861,17 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitor"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	DatadogOrganization: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.datadogMonitor.DatadogMonitorDatadogOrganization,
+	DatadogOrganization: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.datadogMonitor.DatadogMonitorDatadogOrganization,
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
 	SkuName: *string,
-	User: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.datadogMonitor.DatadogMonitorUser,
+	User: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.datadogMonitor.DatadogMonitorUser,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.datadogMonitor.DatadogMonitorIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.datadogMonitor.DatadogMonitorIdentity,
 	MonitoringEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.datadogMonitor.DatadogMonitorTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.datadogMonitor.DatadogMonitorTimeouts,
 }
 ```
 
@@ -1118,7 +1118,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.datadogMonitor.DatadogMonitorDatadogOrganization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datadogmonitor"
 
 &datadogmonitor.DatadogMonitorDatadogOrganization {
 	ApiKey: *string,
@@ -1220,7 +1220,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.datadogMonitor.DatadogMonitorIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datadogmonitor"
 
 &datadogmonitor.DatadogMonitorIdentity {
 	Type: *string,
@@ -1252,7 +1252,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.datadogMonitor.DatadogMonitorTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datadogmonitor"
 
 &datadogmonitor.DatadogMonitorTimeouts {
 	Create: *string,
@@ -1326,7 +1326,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.datadogMonitor.DatadogMonitorUser.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datadogmonitor"
 
 &datadogmonitor.DatadogMonitorUser {
 	Email: *string,
@@ -1388,7 +1388,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.datadogMonitor.DatadogMonitorDatadogOrganizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datadogmonitor"
 
 datadogmonitor.NewDatadogMonitorDatadogOrganizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DatadogMonitorDatadogOrganizationOutputReference
 ```
@@ -1819,7 +1819,7 @@ func InternalValue() DatadogMonitorDatadogOrganization
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.datadogMonitor.DatadogMonitorIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datadogmonitor"
 
 datadogmonitor.NewDatadogMonitorIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DatadogMonitorIdentityOutputReference
 ```
@@ -2112,7 +2112,7 @@ func InternalValue() DatadogMonitorIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.datadogMonitor.DatadogMonitorTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datadogmonitor"
 
 datadogmonitor.NewDatadogMonitorTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DatadogMonitorTimeoutsOutputReference
 ```
@@ -2477,7 +2477,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.datadogMonitor.DatadogMonitorUserOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datadogmonitor"
 
 datadogmonitor.NewDatadogMonitorUserOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DatadogMonitorUserOutputReference
 ```

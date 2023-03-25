@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gatewa
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 vpngatewayconnection.NewVpnGatewayConnection(scope Construct, id *string, config VpnGatewayConnectionConfig) VpnGatewayConnection
 ```
@@ -353,7 +353,7 @@ func ResetTrafficSelectorPolicy()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 vpngatewayconnection.VpnGatewayConnection_IsConstruct(x interface{}) *bool
 ```
@@ -385,7 +385,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 vpngatewayconnection.VpnGatewayConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -399,7 +399,7 @@ vpngatewayconnection.VpnGatewayConnection_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 vpngatewayconnection.VpnGatewayConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -796,7 +796,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 &vpngatewayconnection.VpnGatewayConnectionConfig {
 	Connection: interface{},
@@ -812,8 +812,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
 	VpnLink: interface{},
 	Id: *string,
 	InternetSecurityEnabled: interface{},
-	Routing: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.vpnGatewayConnection.VpnGatewayConnectionRouting,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.vpnGatewayConnection.VpnGatewayConnectionTimeouts,
+	Routing: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.vpnGatewayConnection.VpnGatewayConnectionRouting,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.vpnGatewayConnection.VpnGatewayConnectionTimeouts,
 	TrafficSelectorPolicy: interface{},
 }
 ```
@@ -1035,13 +1035,13 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionRouting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 &vpngatewayconnection.VpnGatewayConnectionRouting {
 	AssociatedRouteTable: *string,
 	InboundRouteMapId: *string,
 	OutboundRouteMapId: *string,
-	PropagatedRouteTable: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.vpnGatewayConnection.VpnGatewayConnectionRoutingPropagatedRouteTable,
+	PropagatedRouteTable: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.vpnGatewayConnection.VpnGatewayConnectionRoutingPropagatedRouteTable,
 }
 ```
 
@@ -1111,7 +1111,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionRoutingPropagatedRouteTable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 &vpngatewayconnection.VpnGatewayConnectionRoutingPropagatedRouteTable {
 	RouteTableIds: *[]*string,
@@ -1157,7 +1157,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 &vpngatewayconnection.VpnGatewayConnectionTimeouts {
 	Create: *string,
@@ -1231,7 +1231,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionTrafficSelectorPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 &vpngatewayconnection.VpnGatewayConnectionTrafficSelectorPolicy {
 	LocalAddressRanges: *[]*string,
@@ -1277,7 +1277,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionVpnLink.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 &vpngatewayconnection.VpnGatewayConnectionVpnLink {
 	Name: *string,
@@ -1509,7 +1509,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionVpnLinkCustomBgpAddress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 &vpngatewayconnection.VpnGatewayConnectionVpnLinkCustomBgpAddress {
 	IpAddress: *string,
@@ -1555,7 +1555,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionVpnLinkIpsecPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 &vpngatewayconnection.VpnGatewayConnectionVpnLinkIpsecPolicy {
 	DhGroup: *string,
@@ -1687,7 +1687,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionRoutingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 vpngatewayconnection.NewVpnGatewayConnectionRoutingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpnGatewayConnectionRoutingOutputReference
 ```
@@ -2058,7 +2058,7 @@ func InternalValue() VpnGatewayConnectionRouting
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionRoutingPropagatedRouteTableOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 vpngatewayconnection.NewVpnGatewayConnectionRoutingPropagatedRouteTableOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpnGatewayConnectionRoutingPropagatedRouteTableOutputReference
 ```
@@ -2358,7 +2358,7 @@ func InternalValue() VpnGatewayConnectionRoutingPropagatedRouteTable
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 vpngatewayconnection.NewVpnGatewayConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpnGatewayConnectionTimeoutsOutputReference
 ```
@@ -2723,7 +2723,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionTrafficSelectorPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 vpngatewayconnection.NewVpnGatewayConnectionTrafficSelectorPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VpnGatewayConnectionTrafficSelectorPolicyList
 ```
@@ -2866,7 +2866,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionTrafficSelectorPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 vpngatewayconnection.NewVpnGatewayConnectionTrafficSelectorPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VpnGatewayConnectionTrafficSelectorPolicyOutputReference
 ```
@@ -3177,7 +3177,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionVpnLinkCustomBgpAddressList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 vpngatewayconnection.NewVpnGatewayConnectionVpnLinkCustomBgpAddressList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VpnGatewayConnectionVpnLinkCustomBgpAddressList
 ```
@@ -3320,7 +3320,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionVpnLinkCustomBgpAddressOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 vpngatewayconnection.NewVpnGatewayConnectionVpnLinkCustomBgpAddressOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VpnGatewayConnectionVpnLinkCustomBgpAddressOutputReference
 ```
@@ -3631,7 +3631,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionVpnLinkIpsecPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 vpngatewayconnection.NewVpnGatewayConnectionVpnLinkIpsecPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VpnGatewayConnectionVpnLinkIpsecPolicyList
 ```
@@ -3774,7 +3774,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionVpnLinkIpsecPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 vpngatewayconnection.NewVpnGatewayConnectionVpnLinkIpsecPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VpnGatewayConnectionVpnLinkIpsecPolicyOutputReference
 ```
@@ -4217,7 +4217,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionVpnLinkList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 vpngatewayconnection.NewVpnGatewayConnectionVpnLinkList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VpnGatewayConnectionVpnLinkList
 ```
@@ -4360,7 +4360,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnGatewayConnection.VpnGatewayConnectionVpnLinkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpngatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vpngatewayconnection"
 
 vpngatewayconnection.NewVpnGatewayConnectionVpnLinkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VpnGatewayConnectionVpnLinkOutputReference
 ```

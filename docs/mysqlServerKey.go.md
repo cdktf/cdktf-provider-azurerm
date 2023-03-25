@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_serv
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlserverkey"
 
 mysqlserverkey.NewMysqlServerKey(scope Construct, id *string, config MysqlServerKeyConfig) MysqlServerKey
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlserverkey"
 
 mysqlserverkey.MysqlServerKey_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlserverkey"
 
 mysqlserverkey.MysqlServerKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ mysqlserverkey.MysqlServerKey_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlserverkey"
 
 mysqlserverkey.MysqlServerKey_IsTerraformResource(x interface{}) *bool
 ```
@@ -626,7 +626,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlserverkey"
 
 &mysqlserverkey.MysqlServerKeyConfig {
 	Connection: interface{},
@@ -639,7 +639,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
 	KeyVaultKeyId: *string,
 	ServerId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mysqlServerKey.MysqlServerKeyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.mysqlServerKey.MysqlServerKeyTimeouts,
 }
 ```
 
@@ -789,7 +789,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlserverkey"
 
 &mysqlserverkey.MysqlServerKeyTimeouts {
 	Create: *string,
@@ -865,7 +865,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mysqlserverkey"
 
 mysqlserverkey.NewMysqlServerKeyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MysqlServerKeyTimeoutsOutputReference
 ```

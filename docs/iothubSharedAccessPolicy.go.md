@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_sha
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubSharedAccessPolicy.IothubSharedAccessPolicyA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubsharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/iothubsharedaccesspolicy"
 
 iothubsharedaccesspolicy.NewIothubSharedAccessPolicyA(scope Construct, id *string, config IothubSharedAccessPolicyAConfig) IothubSharedAccessPolicyA
 ```
@@ -321,7 +321,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.iothubSharedAccessPolicy.IothubSharedAccessPolicyA.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubsharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/iothubsharedaccesspolicy"
 
 iothubsharedaccesspolicy.IothubSharedAccessPolicyA_IsConstruct(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.iothubSharedAccessPolicy.IothubSharedAccessPolicyA.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubsharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/iothubsharedaccesspolicy"
 
 iothubsharedaccesspolicy.IothubSharedAccessPolicyA_IsTerraformElement(x interface{}) *bool
 ```
@@ -367,7 +367,7 @@ iothubsharedaccesspolicy.IothubSharedAccessPolicyA_IsTerraformElement(x interfac
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.iothubSharedAccessPolicy.IothubSharedAccessPolicyA.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubsharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/iothubsharedaccesspolicy"
 
 iothubsharedaccesspolicy.IothubSharedAccessPolicyA_IsTerraformResource(x interface{}) *bool
 ```
@@ -808,7 +808,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubSharedAccessPolicy.IothubSharedAccessPolicyAConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubsharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/iothubsharedaccesspolicy"
 
 &iothubsharedaccesspolicy.IothubSharedAccessPolicyAConfig {
 	Connection: interface{},
@@ -826,7 +826,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubsharedaccesspol
 	RegistryRead: interface{},
 	RegistryWrite: interface{},
 	ServiceConnect: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.iothubSharedAccessPolicy.IothubSharedAccessPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.iothubSharedAccessPolicy.IothubSharedAccessPolicyTimeouts,
 }
 ```
 
@@ -1041,7 +1041,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubSharedAccessPolicy.IothubSharedAccessPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubsharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/iothubsharedaccesspolicy"
 
 &iothubsharedaccesspolicy.IothubSharedAccessPolicyTimeouts {
 	Create: *string,
@@ -1117,7 +1117,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubSharedAccessPolicy.IothubSharedAccessPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubsharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/iothubsharedaccesspolicy"
 
 iothubsharedaccesspolicy.NewIothubSharedAccessPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubSharedAccessPolicyTimeoutsOutputReference
 ```

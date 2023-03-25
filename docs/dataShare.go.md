@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_share
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataShare.DataShare.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datashare"
 
 datashare.NewDataShare(scope Construct, id *string, config DataShareConfig) DataShare
 ```
@@ -327,7 +327,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataShare.DataShare.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datashare"
 
 datashare.DataShare_IsConstruct(x interface{}) *bool
 ```
@@ -359,7 +359,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataShare.DataShare.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datashare"
 
 datashare.DataShare_IsTerraformElement(x interface{}) *bool
 ```
@@ -373,7 +373,7 @@ datashare.DataShare_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataShare.DataShare.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datashare"
 
 datashare.DataShare_IsTerraformResource(x interface{}) *bool
 ```
@@ -748,7 +748,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataShare.DataShareConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datashare"
 
 &datashare.DataShareConfig {
 	Connection: interface{},
@@ -763,9 +763,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datashare"
 	Name: *string,
 	Description: *string,
 	Id: *string,
-	SnapshotSchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataShare.DataShareSnapshotSchedule,
+	SnapshotSchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataShare.DataShareSnapshotSchedule,
 	Terms: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataShare.DataShareTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataShare.DataShareTimeouts,
 }
 ```
 
@@ -969,7 +969,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataShare.DataShareSnapshotSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datashare"
 
 &datashare.DataShareSnapshotSchedule {
 	Name: *string,
@@ -1029,7 +1029,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataShare.DataShareTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datashare"
 
 &datashare.DataShareTimeouts {
 	Create: *string,
@@ -1105,7 +1105,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataShare.DataShareSnapshotScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datashare"
 
 datashare.NewDataShareSnapshotScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataShareSnapshotScheduleOutputReference
 ```
@@ -1420,7 +1420,7 @@ func InternalValue() DataShareSnapshotSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataShare.DataShareTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datashare"
 
 datashare.NewDataShareTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataShareTimeoutsOutputReference
 ```
