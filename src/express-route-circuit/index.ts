@@ -12,6 +12,10 @@ export interface ExpressRouteCircuitConfig extends cdktf.TerraformMetaArguments 
   */
   readonly allowClassicOperations?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit#authorization_key ExpressRouteCircuit#authorization_key}
+  */
+  readonly authorizationKey?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit#bandwidth_in_gbps ExpressRouteCircuit#bandwidth_in_gbps}
   */
   readonly bandwidthInGbps?: number;
@@ -336,7 +340,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_express_route_circuit',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -348,6 +352,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._allowClassicOperations = config.allowClassicOperations;
+    this._authorizationKey = config.authorizationKey;
     this._bandwidthInGbps = config.bandwidthInGbps;
     this._bandwidthInMbps = config.bandwidthInMbps;
     this._expressRoutePortId = config.expressRoutePortId;
@@ -380,6 +385,22 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get allowClassicOperationsInput() {
     return this._allowClassicOperations;
+  }
+
+  // authorization_key - computed: false, optional: true, required: false
+  private _authorizationKey?: string; 
+  public get authorizationKey() {
+    return this.getStringAttribute('authorization_key');
+  }
+  public set authorizationKey(value: string) {
+    this._authorizationKey = value;
+  }
+  public resetAuthorizationKey() {
+    this._authorizationKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authorizationKeyInput() {
+    return this._authorizationKey;
   }
 
   // bandwidth_in_gbps - computed: false, optional: true, required: false
@@ -579,6 +600,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allow_classic_operations: cdktf.booleanToTerraform(this._allowClassicOperations),
+      authorization_key: cdktf.stringToTerraform(this._authorizationKey),
       bandwidth_in_gbps: cdktf.numberToTerraform(this._bandwidthInGbps),
       bandwidth_in_mbps: cdktf.numberToTerraform(this._bandwidthInMbps),
       express_route_port_id: cdktf.stringToTerraform(this._expressRoutePortId),

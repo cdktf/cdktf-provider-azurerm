@@ -684,7 +684,7 @@ export class KustoCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kusto_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -845,7 +845,7 @@ export class KustoCluster extends cdktf.TerraformResource {
   // language_extensions - computed: false, optional: true, required: false
   private _languageExtensions?: string[]; 
   public get languageExtensions() {
-    return this.getListAttribute('language_extensions');
+    return cdktf.Fn.tolist(this.getListAttribute('language_extensions'));
   }
   public set languageExtensions(value: string[]) {
     this._languageExtensions = value;

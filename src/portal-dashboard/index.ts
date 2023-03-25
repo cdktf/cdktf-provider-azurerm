@@ -10,7 +10,7 @@ export interface PortalDashboardConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}
   */
-  readonly dashboardProperties?: string;
+  readonly dashboardProperties: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#id PortalDashboard#id}
   *
@@ -224,7 +224,7 @@ export class PortalDashboard extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_portal_dashboard',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -248,16 +248,13 @@ export class PortalDashboard extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // dashboard_properties - computed: true, optional: true, required: false
+  // dashboard_properties - computed: false, optional: false, required: true
   private _dashboardProperties?: string; 
   public get dashboardProperties() {
     return this.getStringAttribute('dashboard_properties');
   }
   public set dashboardProperties(value: string) {
     this._dashboardProperties = value;
-  }
-  public resetDashboardProperties() {
-    this._dashboardProperties = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dashboardPropertiesInput() {

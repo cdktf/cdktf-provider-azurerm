@@ -368,7 +368,7 @@ export class FunctionAppFunction extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_function_app_function',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

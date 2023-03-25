@@ -22,10 +22,10 @@ PortalDashboard.Builder.create(Construct scope, java.lang.String id)
 //  .provisioners(java.util.List<FileProvisioner)
 //  .provisioners(LocalExecProvisioner)
 //  .provisioners(RemoteExecProvisioner>)
+    .dashboardProperties(java.lang.String)
     .location(java.lang.String)
     .name(java.lang.String)
     .resourceGroupName(java.lang.String)
-//  .dashboardProperties(java.lang.String)
 //  .id(java.lang.String)
 //  .tags(java.util.Map<java.lang.String, java.lang.String>)
 //  .timeouts(PortalDashboardTimeouts)
@@ -43,10 +43,10 @@ PortalDashboard.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.dashboardProperties">dashboardProperties</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#location PortalDashboard#location}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#name PortalDashboard#name}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#resource_group_name PortalDashboard#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.dashboardProperties">dashboardProperties</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#id PortalDashboard#id}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#tags PortalDashboard#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardTimeouts">PortalDashboardTimeouts</a></code> | timeouts block. |
@@ -113,6 +113,14 @@ Must be unique amongst siblings in the same scope
 
 ---
 
+##### `dashboardProperties`<sup>Required</sup> <a name="dashboardProperties" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.dashboardProperties"></a>
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}.
+
+---
+
 ##### `location`<sup>Required</sup> <a name="location" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.location"></a>
 
 - *Type:* java.lang.String
@@ -134,14 +142,6 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 - *Type:* java.lang.String
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#resource_group_name PortalDashboard#resource_group_name}.
-
----
-
-##### `dashboardProperties`<sup>Optional</sup> <a name="dashboardProperties" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.dashboardProperties"></a>
-
-- *Type:* java.lang.String
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}.
 
 ---
 
@@ -195,7 +195,6 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.putTimeouts">putTimeouts</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetDashboardProperties">resetDashboardProperties</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetId">resetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetTags">resetTags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetTimeouts">resetTimeouts</a></code> | *No description.* |
@@ -397,12 +396,6 @@ public void putTimeouts(PortalDashboardTimeouts value)
 - *Type:* <a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardTimeouts">PortalDashboardTimeouts</a>
 
 ---
-
-##### `resetDashboardProperties` <a name="resetDashboardProperties" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetDashboardProperties"></a>
-
-```java
-public void resetDashboardProperties()
-```
 
 ##### `resetId` <a name="resetId" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetId"></a>
 
@@ -847,10 +840,10 @@ PortalDashboardConfig.builder()
 //  .provisioners(java.util.List<FileProvisioner)
 //  .provisioners(LocalExecProvisioner)
 //  .provisioners(RemoteExecProvisioner>)
+    .dashboardProperties(java.lang.String)
     .location(java.lang.String)
     .name(java.lang.String)
     .resourceGroupName(java.lang.String)
-//  .dashboardProperties(java.lang.String)
 //  .id(java.lang.String)
 //  .tags(java.util.Map<java.lang.String, java.lang.String>)
 //  .timeouts(PortalDashboardTimeouts)
@@ -868,10 +861,10 @@ PortalDashboardConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.dashboardProperties">dashboardProperties</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#location PortalDashboard#location}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#name PortalDashboard#name}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#resource_group_name PortalDashboard#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.dashboardProperties">dashboardProperties</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#id PortalDashboard#id}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#tags PortalDashboard#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardTimeouts">PortalDashboardTimeouts</a></code> | timeouts block. |
@@ -948,6 +941,18 @@ public java.lang.Object getProvisioners();
 
 ---
 
+##### `dashboardProperties`<sup>Required</sup> <a name="dashboardProperties" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.dashboardProperties"></a>
+
+```java
+public java.lang.String getDashboardProperties();
+```
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}.
+
+---
+
 ##### `location`<sup>Required</sup> <a name="location" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.location"></a>
 
 ```java
@@ -981,18 +986,6 @@ public java.lang.String getResourceGroupName();
 - *Type:* java.lang.String
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#resource_group_name PortalDashboard#resource_group_name}.
-
----
-
-##### `dashboardProperties`<sup>Optional</sup> <a name="dashboardProperties" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.dashboardProperties"></a>
-
-```java
-public java.lang.String getDashboardProperties();
-```
-
-- *Type:* java.lang.String
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}.
 
 ---
 

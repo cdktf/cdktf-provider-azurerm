@@ -1447,7 +1447,9 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction">WindowsFunctionAppSlotSiteConfigIpRestriction</a>]]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_restriction WindowsFunctionAppSlot#ip_restriction}.
+ip_restriction block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_restriction WindowsFunctionAppSlot#ip_restriction}
 
 ---
 
@@ -1527,7 +1529,9 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction">WindowsFunctionAppSlotSiteConfigScmIpRestriction</a>]]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#scm_ip_restriction WindowsFunctionAppSlot#scm_ip_restriction}.
+scm_ip_restriction block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#scm_ip_restriction WindowsFunctionAppSlot#scm_ip_restriction}
 
 ---
 
@@ -5774,7 +5778,7 @@ windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig(
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.healthCheckEvictionTimeInMin">health_check_eviction_time_in_min</a></code> | <code>typing.Union[int, float]</code> | The amount of time in minutes that a node is unhealthy before being removed from the load balancer. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.healthCheckPath">health_check_path</a></code> | <code>str</code> | The path to be checked for this function app health. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.http2Enabled">http2_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Specifies if the http2 protocol should be enabled. Defaults to `false`. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.ipRestriction">ip_restriction</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction">WindowsFunctionAppSlotSiteConfigIpRestriction</a>]]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_restriction WindowsFunctionAppSlot#ip_restriction}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.ipRestriction">ip_restriction</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction">WindowsFunctionAppSlotSiteConfigIpRestriction</a>]]</code> | ip_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.loadBalancingMode">load_balancing_mode</a></code> | <code>str</code> | The Site load balancing mode. Possible values include: `WeightedRoundRobin`, `LeastRequests`, `LeastResponseTime`, `WeightedTotalTraffic`, `RequestHash`, `PerSiteRoundRobin`. Defaults to `LeastRequests` if omitted. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.managedPipelineMode">managed_pipeline_mode</a></code> | <code>str</code> | The Managed Pipeline mode. Possible values include: `Integrated`, `Classic`. Defaults to `Integrated`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.minimumTlsVersion">minimum_tls_version</a></code> | <code>str</code> | The configures the minimum version of TLS required for SSL requests. |
@@ -5782,7 +5786,7 @@ windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig(
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.remoteDebuggingEnabled">remote_debugging_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should Remote Debugging be enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.remoteDebuggingVersion">remote_debugging_version</a></code> | <code>str</code> | The Remote Debugging Version. Possible values include `VS2017`, `VS2019`, and `VS2022`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.runtimeScaleMonitoringEnabled">runtime_scale_monitoring_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should Functions Runtime Scale Monitoring be enabled. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.scmIpRestriction">scm_ip_restriction</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction">WindowsFunctionAppSlotSiteConfigScmIpRestriction</a>]]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#scm_ip_restriction WindowsFunctionAppSlot#scm_ip_restriction}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.scmIpRestriction">scm_ip_restriction</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction">WindowsFunctionAppSlotSiteConfigScmIpRestriction</a>]]</code> | scm_ip_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.scmMinimumTlsVersion">scm_minimum_tls_version</a></code> | <code>str</code> | Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.scmUseMainIpRestriction">scm_use_main_ip_restriction</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Windows Function App `ip_restriction` configuration be used for the SCM also. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.use32BitWorker">use32_bit_worker</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Windows Web App use a 32-bit worker. |
@@ -6042,7 +6046,9 @@ ip_restriction: typing.Union[IResolvable, typing.List[WindowsFunctionAppSlotSite
 
 - *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction">WindowsFunctionAppSlotSiteConfigIpRestriction</a>]]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_restriction WindowsFunctionAppSlot#ip_restriction}.
+ip_restriction block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_restriction WindowsFunctionAppSlot#ip_restriction}
 
 ---
 
@@ -6154,7 +6160,9 @@ scm_ip_restriction: typing.Union[IResolvable, typing.List[WindowsFunctionAppSlot
 
 - *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction">WindowsFunctionAppSlotSiteConfigScmIpRestriction</a>]]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#scm_ip_restriction WindowsFunctionAppSlot#scm_ip_restriction}.
+scm_ip_restriction block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#scm_ip_restriction WindowsFunctionAppSlot#scm_ip_restriction}
 
 ---
 
@@ -6414,7 +6422,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 from cdktf_cdktf_provider_azurerm import windows_function_app_slot
 
 windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCors(
-  allowed_origins: typing.List[str],
+  allowed_origins: typing.List[str] = None,
   support_credentials: typing.Union[bool, IResolvable] = None
 )
 ```
@@ -6428,7 +6436,7 @@ windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCors(
 
 ---
 
-##### `allowed_origins`<sup>Required</sup> <a name="allowed_origins" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCors.property.allowedOrigins"></a>
+##### `allowed_origins`<sup>Optional</sup> <a name="allowed_origins" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCors.property.allowedOrigins"></a>
 
 ```python
 allowed_origins: typing.List[str]
@@ -6478,13 +6486,13 @@ windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.action">action</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#action WindowsFunctionAppSlot#action}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.action">action</a></code> | <code>str</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.headers">headers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionHeaders">WindowsFunctionAppSlotSiteConfigIpRestrictionHeaders</a>]]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#headers WindowsFunctionAppSlot#headers}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.ipAddress">ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_address WindowsFunctionAppSlot#ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#name WindowsFunctionAppSlot#name}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#priority WindowsFunctionAppSlot#priority}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.serviceTag">service_tag</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#service_tag WindowsFunctionAppSlot#service_tag}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#virtual_network_subnet_id WindowsFunctionAppSlot#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.ipAddress">ip_address</a></code> | <code>str</code> | The CIDR notation of the IP or IP Range to match. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.name">name</a></code> | <code>str</code> | The name which should be used for this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | The priority value of this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.serviceTag">service_tag</a></code> | <code>str</code> | The Service Tag used for this IP Restriction. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | The Virtual Network Subnet ID used for this IP Restriction. |
 
 ---
 
@@ -6496,7 +6504,9 @@ action: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#action WindowsFunctionAppSlot#action}.
+The action to take. Possible values are `Allow` or `Deny`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#action WindowsFunctionAppSlot#action}
 
 ---
 
@@ -6520,7 +6530,11 @@ ip_address: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_address WindowsFunctionAppSlot#ip_address}.
+The CIDR notation of the IP or IP Range to match.
+
+For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_address WindowsFunctionAppSlot#ip_address}
 
 ---
 
@@ -6532,7 +6546,9 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#name WindowsFunctionAppSlot#name}.
+The name which should be used for this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#name WindowsFunctionAppSlot#name}
 
 ---
 
@@ -6544,7 +6560,9 @@ priority: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#priority WindowsFunctionAppSlot#priority}.
+The priority value of this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#priority WindowsFunctionAppSlot#priority}
 
 ---
 
@@ -6556,7 +6574,9 @@ service_tag: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#service_tag WindowsFunctionAppSlot#service_tag}.
+The Service Tag used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#service_tag WindowsFunctionAppSlot#service_tag}
 
 ---
 
@@ -6568,7 +6588,9 @@ virtual_network_subnet_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#virtual_network_subnet_id WindowsFunctionAppSlot#virtual_network_subnet_id}.
+The Virtual Network Subnet ID used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#virtual_network_subnet_id WindowsFunctionAppSlot#virtual_network_subnet_id}
 
 ---
 
@@ -6668,13 +6690,13 @@ windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.action">action</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#action WindowsFunctionAppSlot#action}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.action">action</a></code> | <code>str</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.headers">headers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeaders">WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeaders</a>]]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#headers WindowsFunctionAppSlot#headers}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.ipAddress">ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_address WindowsFunctionAppSlot#ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#name WindowsFunctionAppSlot#name}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#priority WindowsFunctionAppSlot#priority}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.serviceTag">service_tag</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#service_tag WindowsFunctionAppSlot#service_tag}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#virtual_network_subnet_id WindowsFunctionAppSlot#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.ipAddress">ip_address</a></code> | <code>str</code> | The CIDR notation of the IP or IP Range to match. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.name">name</a></code> | <code>str</code> | The name which should be used for this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | The priority value of this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.serviceTag">service_tag</a></code> | <code>str</code> | The Service Tag used for this IP Restriction. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | The Virtual Network Subnet ID used for this IP Restriction. |
 
 ---
 
@@ -6686,7 +6708,9 @@ action: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#action WindowsFunctionAppSlot#action}.
+The action to take. Possible values are `Allow` or `Deny`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#action WindowsFunctionAppSlot#action}
 
 ---
 
@@ -6710,7 +6734,11 @@ ip_address: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_address WindowsFunctionAppSlot#ip_address}.
+The CIDR notation of the IP or IP Range to match.
+
+For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_address WindowsFunctionAppSlot#ip_address}
 
 ---
 
@@ -6722,7 +6750,9 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#name WindowsFunctionAppSlot#name}.
+The name which should be used for this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#name WindowsFunctionAppSlot#name}
 
 ---
 
@@ -6734,7 +6764,9 @@ priority: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#priority WindowsFunctionAppSlot#priority}.
+The priority value of this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#priority WindowsFunctionAppSlot#priority}
 
 ---
 
@@ -6746,7 +6778,9 @@ service_tag: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#service_tag WindowsFunctionAppSlot#service_tag}.
+The Service Tag used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#service_tag WindowsFunctionAppSlot#service_tag}
 
 ---
 
@@ -6758,7 +6792,9 @@ virtual_network_subnet_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#virtual_network_subnet_id WindowsFunctionAppSlot#virtual_network_subnet_id}.
+The Virtual Network Subnet ID used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#virtual_network_subnet_id WindowsFunctionAppSlot#virtual_network_subnet_id}
 
 ---
 
@@ -18559,6 +18595,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCorsOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCorsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCorsOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCorsOutputReference.resetAllowedOrigins">reset_allowed_origins</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCorsOutputReference.resetSupportCredentials">reset_support_credentials</a></code> | *No description.* |
 
 ---
@@ -18734,6 +18771,12 @@ def to_string() -> str
 Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
+
+##### `reset_allowed_origins` <a name="reset_allowed_origins" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCorsOutputReference.resetAllowedOrigins"></a>
+
+```python
+def reset_allowed_origins() -> None
+```
 
 ##### `reset_support_credentials` <a name="reset_support_credentials" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCorsOutputReference.resetSupportCredentials"></a>
 
@@ -20426,12 +20469,12 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ```python
 def put_cors(
-  allowed_origins: typing.List[str],
+  allowed_origins: typing.List[str] = None,
   support_credentials: typing.Union[bool, IResolvable] = None
 ) -> None
 ```
 
-###### `allowed_origins`<sup>Required</sup> <a name="allowed_origins" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigOutputReference.putCors.parameter.allowedOrigins"></a>
+###### `allowed_origins`<sup>Optional</sup> <a name="allowed_origins" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigOutputReference.putCors.parameter.allowedOrigins"></a>
 
 - *Type:* typing.List[str]
 

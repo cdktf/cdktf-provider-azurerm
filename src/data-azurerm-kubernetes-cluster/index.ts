@@ -1527,6 +1527,11 @@ export class DataAzurermKubernetesClusterOmsAgentOutputReference extends cdktf.C
     return this.getStringAttribute('log_analytics_workspace_id');
   }
 
+  // msi_auth_for_monitoring_enabled - computed: true, optional: false, required: false
+  public get msiAuthForMonitoringEnabled() {
+    return this.getBooleanAttribute('msi_auth_for_monitoring_enabled');
+  }
+
   // oms_agent_identity - computed: true, optional: false, required: false
   private _omsAgentIdentity = new DataAzurermKubernetesClusterOmsAgentOmsAgentIdentityList(this, "oms_agent_identity", false);
   public get omsAgentIdentity() {
@@ -1866,7 +1871,7 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

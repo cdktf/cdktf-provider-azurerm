@@ -12,6 +12,10 @@ export interface VirtualHubConfig extends cdktf.TerraformMetaArguments {
   */
   readonly addressPrefix?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#hub_routing_preference VirtualHub#hub_routing_preference}
+  */
+  readonly hubRoutingPreference?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#id VirtualHub#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -356,7 +360,7 @@ export class VirtualHub extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_hub',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -368,6 +372,7 @@ export class VirtualHub extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._addressPrefix = config.addressPrefix;
+    this._hubRoutingPreference = config.hubRoutingPreference;
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
@@ -402,6 +407,22 @@ export class VirtualHub extends cdktf.TerraformResource {
   // default_route_table_id - computed: true, optional: false, required: false
   public get defaultRouteTableId() {
     return this.getStringAttribute('default_route_table_id');
+  }
+
+  // hub_routing_preference - computed: false, optional: true, required: false
+  private _hubRoutingPreference?: string; 
+  public get hubRoutingPreference() {
+    return this.getStringAttribute('hub_routing_preference');
+  }
+  public set hubRoutingPreference(value: string) {
+    this._hubRoutingPreference = value;
+  }
+  public resetHubRoutingPreference() {
+    this._hubRoutingPreference = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hubRoutingPreferenceInput() {
+    return this._hubRoutingPreference;
   }
 
   // id - computed: true, optional: true, required: false
@@ -556,6 +577,7 @@ export class VirtualHub extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       address_prefix: cdktf.stringToTerraform(this._addressPrefix),
+      hub_routing_preference: cdktf.stringToTerraform(this._hubRoutingPreference),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

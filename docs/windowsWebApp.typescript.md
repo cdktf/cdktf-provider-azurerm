@@ -4452,14 +4452,14 @@ const windowsWebAppSiteConfig: windowsWebApp.WindowsWebAppSiteConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.healthCheckEvictionTimeInMin">healthCheckEvictionTimeInMin</a></code> | <code>number</code> | The amount of time in minutes that a node is unhealthy before being removed from the load balancer. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.healthCheckPath">healthCheckPath</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#health_check_path WindowsWebApp#health_check_path}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.http2Enabled">http2Enabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#http2_enabled WindowsWebApp#http2_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.ipRestriction">ipRestriction</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction">WindowsWebAppSiteConfigIpRestriction</a>[]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ip_restriction WindowsWebApp#ip_restriction}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.ipRestriction">ipRestriction</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction">WindowsWebAppSiteConfigIpRestriction</a>[]</code> | ip_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.loadBalancingMode">loadBalancingMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#load_balancing_mode WindowsWebApp#load_balancing_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.localMysqlEnabled">localMysqlEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#local_mysql_enabled WindowsWebApp#local_mysql_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.managedPipelineMode">managedPipelineMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#managed_pipeline_mode WindowsWebApp#managed_pipeline_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.minimumTlsVersion">minimumTlsVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#minimum_tls_version WindowsWebApp#minimum_tls_version}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.remoteDebuggingEnabled">remoteDebuggingEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#remote_debugging_enabled WindowsWebApp#remote_debugging_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.remoteDebuggingVersion">remoteDebuggingVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#remote_debugging_version WindowsWebApp#remote_debugging_version}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.scmIpRestriction">scmIpRestriction</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction">WindowsWebAppSiteConfigScmIpRestriction</a>[]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#scm_ip_restriction WindowsWebApp#scm_ip_restriction}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.scmIpRestriction">scmIpRestriction</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction">WindowsWebAppSiteConfigScmIpRestriction</a>[]</code> | scm_ip_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.scmMinimumTlsVersion">scmMinimumTlsVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#scm_minimum_tls_version WindowsWebApp#scm_minimum_tls_version}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.scmUseMainIpRestriction">scmUseMainIpRestriction</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#scm_use_main_ip_restriction WindowsWebApp#scm_use_main_ip_restriction}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.use32BitWorker">use32BitWorker</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#use_32_bit_worker WindowsWebApp#use_32_bit_worker}. |
@@ -4668,7 +4668,9 @@ public readonly ipRestriction: IResolvable | WindowsWebAppSiteConfigIpRestrictio
 
 - *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction">WindowsWebAppSiteConfigIpRestriction</a>[]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ip_restriction WindowsWebApp#ip_restriction}.
+ip_restriction block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ip_restriction WindowsWebApp#ip_restriction}
 
 ---
 
@@ -4752,7 +4754,9 @@ public readonly scmIpRestriction: IResolvable | WindowsWebAppSiteConfigScmIpRest
 
 - *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction">WindowsWebAppSiteConfigScmIpRestriction</a>[]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#scm_ip_restriction WindowsWebApp#scm_ip_restriction}.
+scm_ip_restriction block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#scm_ip_restriction WindowsWebApp#scm_ip_restriction}
 
 ---
 
@@ -5509,7 +5513,7 @@ const windowsWebAppSiteConfigCors: windowsWebApp.WindowsWebAppSiteConfigCors = {
 
 ---
 
-##### `allowedOrigins`<sup>Required</sup> <a name="allowedOrigins" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigCors.property.allowedOrigins"></a>
+##### `allowedOrigins`<sup>Optional</sup> <a name="allowedOrigins" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigCors.property.allowedOrigins"></a>
 
 ```typescript
 public readonly allowedOrigins: string[];
@@ -5551,13 +5555,13 @@ const windowsWebAppSiteConfigIpRestriction: windowsWebApp.WindowsWebAppSiteConfi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.action">action</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#action WindowsWebApp#action}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.action">action</a></code> | <code>string</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.headers">headers</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders">WindowsWebAppSiteConfigIpRestrictionHeaders</a>[]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#headers WindowsWebApp#headers}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.ipAddress">ipAddress</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ip_address WindowsWebApp#ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.priority">priority</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#priority WindowsWebApp#priority}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.serviceTag">serviceTag</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#service_tag WindowsWebApp#service_tag}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.ipAddress">ipAddress</a></code> | <code>string</code> | The CIDR notation of the IP or IP Range to match. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.name">name</a></code> | <code>string</code> | The name which should be used for this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.priority">priority</a></code> | <code>number</code> | The priority value of this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.serviceTag">serviceTag</a></code> | <code>string</code> | The Service Tag used for this IP Restriction. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>string</code> | The Virtual Network Subnet ID used for this IP Restriction. |
 
 ---
 
@@ -5569,7 +5573,9 @@ public readonly action: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#action WindowsWebApp#action}.
+The action to take. Possible values are `Allow` or `Deny`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#action WindowsWebApp#action}
 
 ---
 
@@ -5593,7 +5599,11 @@ public readonly ipAddress: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ip_address WindowsWebApp#ip_address}.
+The CIDR notation of the IP or IP Range to match.
+
+For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ip_address WindowsWebApp#ip_address}
 
 ---
 
@@ -5605,7 +5615,9 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}.
+The name which should be used for this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}
 
 ---
 
@@ -5617,7 +5629,9 @@ public readonly priority: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#priority WindowsWebApp#priority}.
+The priority value of this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#priority WindowsWebApp#priority}
 
 ---
 
@@ -5629,7 +5643,9 @@ public readonly serviceTag: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#service_tag WindowsWebApp#service_tag}.
+The Service Tag used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#service_tag WindowsWebApp#service_tag}
 
 ---
 
@@ -5641,7 +5657,9 @@ public readonly virtualNetworkSubnetId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}.
+The Virtual Network Subnet ID used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}
 
 ---
 
@@ -5728,13 +5746,13 @@ const windowsWebAppSiteConfigScmIpRestriction: windowsWebApp.WindowsWebAppSiteCo
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.action">action</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#action WindowsWebApp#action}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.action">action</a></code> | <code>string</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.headers">headers</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders">WindowsWebAppSiteConfigScmIpRestrictionHeaders</a>[]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#headers WindowsWebApp#headers}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.ipAddress">ipAddress</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ip_address WindowsWebApp#ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.priority">priority</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#priority WindowsWebApp#priority}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.serviceTag">serviceTag</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#service_tag WindowsWebApp#service_tag}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.ipAddress">ipAddress</a></code> | <code>string</code> | The CIDR notation of the IP or IP Range to match. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.name">name</a></code> | <code>string</code> | The name which should be used for this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.priority">priority</a></code> | <code>number</code> | The priority value of this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.serviceTag">serviceTag</a></code> | <code>string</code> | The Service Tag used for this IP Restriction. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>string</code> | The Virtual Network Subnet ID used for this IP Restriction. |
 
 ---
 
@@ -5746,7 +5764,9 @@ public readonly action: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#action WindowsWebApp#action}.
+The action to take. Possible values are `Allow` or `Deny`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#action WindowsWebApp#action}
 
 ---
 
@@ -5770,7 +5790,11 @@ public readonly ipAddress: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ip_address WindowsWebApp#ip_address}.
+The CIDR notation of the IP or IP Range to match.
+
+For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ip_address WindowsWebApp#ip_address}
 
 ---
 
@@ -5782,7 +5806,9 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}.
+The name which should be used for this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}
 
 ---
 
@@ -5794,7 +5820,9 @@ public readonly priority: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#priority WindowsWebApp#priority}.
+The priority value of this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#priority WindowsWebApp#priority}
 
 ---
 
@@ -5806,7 +5834,9 @@ public readonly serviceTag: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#service_tag WindowsWebApp#service_tag}.
+The Service Tag used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#service_tag WindowsWebApp#service_tag}
 
 ---
 
@@ -5818,7 +5848,9 @@ public readonly virtualNetworkSubnetId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}.
+The Virtual Network Subnet ID used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}
 
 ---
 
@@ -20893,6 +20925,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigCorsOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigCorsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigCorsOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigCorsOutputReference.resetAllowedOrigins">resetAllowedOrigins</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigCorsOutputReference.resetSupportCredentials">resetSupportCredentials</a></code> | *No description.* |
 
 ---
@@ -21046,6 +21079,12 @@ public toString(): string
 Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
+
+##### `resetAllowedOrigins` <a name="resetAllowedOrigins" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigCorsOutputReference.resetAllowedOrigins"></a>
+
+```typescript
+public resetAllowedOrigins(): void
+```
 
 ##### `resetSupportCredentials` <a name="resetSupportCredentials" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigCorsOutputReference.resetSupportCredentials"></a>
 

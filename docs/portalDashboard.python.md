@@ -21,10 +21,10 @@ portalDashboard.PortalDashboard(
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
   provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  dashboard_properties: str,
   location: str,
   name: str,
   resource_group_name: str,
-  dashboard_properties: str = None,
   id: str = None,
   tags: typing.Mapping[str] = None,
   timeouts: PortalDashboardTimeouts = None
@@ -42,10 +42,10 @@ portalDashboard.PortalDashboard(
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.dashboardProperties">dashboard_properties</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#location PortalDashboard#location}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#name PortalDashboard#name}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#resource_group_name PortalDashboard#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.dashboardProperties">dashboard_properties</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#id PortalDashboard#id}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#tags PortalDashboard#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardTimeouts">PortalDashboardTimeouts</a></code> | timeouts block. |
@@ -112,6 +112,14 @@ Must be unique amongst siblings in the same scope
 
 ---
 
+##### `dashboard_properties`<sup>Required</sup> <a name="dashboard_properties" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.dashboardProperties"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}.
+
+---
+
 ##### `location`<sup>Required</sup> <a name="location" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.location"></a>
 
 - *Type:* str
@@ -133,14 +141,6 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 - *Type:* str
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#resource_group_name PortalDashboard#resource_group_name}.
-
----
-
-##### `dashboard_properties`<sup>Optional</sup> <a name="dashboard_properties" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboard.Initializer.parameter.dashboardProperties"></a>
-
-- *Type:* str
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}.
 
 ---
 
@@ -194,7 +194,6 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.putTimeouts">put_timeouts</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetDashboardProperties">reset_dashboard_properties</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetId">reset_id</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetTags">reset_tags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetTimeouts">reset_timeouts</a></code> | *No description.* |
@@ -452,12 +451,6 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#update PortalDashboard#update}.
 
 ---
-
-##### `reset_dashboard_properties` <a name="reset_dashboard_properties" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetDashboardProperties"></a>
-
-```python
-def reset_dashboard_properties() -> None
-```
 
 ##### `reset_id` <a name="reset_id" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetId"></a>
 
@@ -905,10 +898,10 @@ portalDashboard.PortalDashboardConfig(
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
   provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  dashboard_properties: str,
   location: str,
   name: str,
   resource_group_name: str,
-  dashboard_properties: str = None,
   id: str = None,
   tags: typing.Mapping[str] = None,
   timeouts: PortalDashboardTimeouts = None
@@ -926,10 +919,10 @@ portalDashboard.PortalDashboardConfig(
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.dashboardProperties">dashboard_properties</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#location PortalDashboard#location}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#name PortalDashboard#name}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#resource_group_name PortalDashboard#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.dashboardProperties">dashboard_properties</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#id PortalDashboard#id}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#tags PortalDashboard#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardTimeouts">PortalDashboardTimeouts</a></code> | timeouts block. |
@@ -1006,6 +999,18 @@ provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, Re
 
 ---
 
+##### `dashboard_properties`<sup>Required</sup> <a name="dashboard_properties" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.dashboardProperties"></a>
+
+```python
+dashboard_properties: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}.
+
+---
+
 ##### `location`<sup>Required</sup> <a name="location" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.location"></a>
 
 ```python
@@ -1039,18 +1044,6 @@ resource_group_name: str
 - *Type:* str
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#resource_group_name PortalDashboard#resource_group_name}.
-
----
-
-##### `dashboard_properties`<sup>Optional</sup> <a name="dashboard_properties" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.dashboardProperties"></a>
-
-```python
-dashboard_properties: str
-```
-
-- *Type:* str
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}.
 
 ---
 

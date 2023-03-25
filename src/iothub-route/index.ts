@@ -232,7 +232,7 @@ export class IothubRouteA extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_iothub_route',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

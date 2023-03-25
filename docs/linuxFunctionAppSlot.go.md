@@ -4507,7 +4507,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappsl
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.healthCheckEvictionTimeInMin">HealthCheckEvictionTimeInMin</a></code> | <code>*f64</code> | The amount of time in minutes that a node is unhealthy before being removed from the load balancer. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.healthCheckPath">HealthCheckPath</a></code> | <code>*string</code> | The path to be checked for this function app health. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.http2Enabled">Http2Enabled</a></code> | <code>interface{}</code> | Specifies if the http2 protocol should be enabled. Defaults to `false`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.ipRestriction">IpRestriction</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#ip_restriction LinuxFunctionAppSlot#ip_restriction}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.ipRestriction">IpRestriction</a></code> | <code>interface{}</code> | ip_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.loadBalancingMode">LoadBalancingMode</a></code> | <code>*string</code> | The Site load balancing mode. Possible values include: `WeightedRoundRobin`, `LeastRequests`, `LeastResponseTime`, `WeightedTotalTraffic`, `RequestHash`, `PerSiteRoundRobin`. Defaults to `LeastRequests` if omitted. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.managedPipelineMode">ManagedPipelineMode</a></code> | <code>*string</code> | The Managed Pipeline mode. Possible values include: `Integrated`, `Classic`. Defaults to `Integrated`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.minimumTlsVersion">MinimumTlsVersion</a></code> | <code>*string</code> | The configures the minimum version of TLS required for SSL requests. |
@@ -4515,7 +4515,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappsl
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.remoteDebuggingEnabled">RemoteDebuggingEnabled</a></code> | <code>interface{}</code> | Should Remote Debugging be enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.remoteDebuggingVersion">RemoteDebuggingVersion</a></code> | <code>*string</code> | The Remote Debugging Version. Possible values include `VS2017`, `VS2019`, and `VS2022`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.runtimeScaleMonitoringEnabled">RuntimeScaleMonitoringEnabled</a></code> | <code>interface{}</code> | Should Functions Runtime Scale Monitoring be enabled. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.scmIpRestriction">ScmIpRestriction</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#scm_ip_restriction LinuxFunctionAppSlot#scm_ip_restriction}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.scmIpRestriction">ScmIpRestriction</a></code> | <code>interface{}</code> | scm_ip_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.scmMinimumTlsVersion">ScmMinimumTlsVersion</a></code> | <code>*string</code> | Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.scmUseMainIpRestriction">ScmUseMainIpRestriction</a></code> | <code>interface{}</code> | Should the Linux Function App `ip_restriction` configuration be used for the SCM also. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.use32BitWorker">Use32BitWorker</a></code> | <code>interface{}</code> | Should the Linux Web App use a 32-bit worker. |
@@ -4803,7 +4803,9 @@ IpRestriction interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#ip_restriction LinuxFunctionAppSlot#ip_restriction}.
+ip_restriction block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#ip_restriction LinuxFunctionAppSlot#ip_restriction}
 
 ---
 
@@ -4915,7 +4917,9 @@ ScmIpRestriction interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#scm_ip_restriction LinuxFunctionAppSlot#scm_ip_restriction}.
+scm_ip_restriction block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#scm_ip_restriction LinuxFunctionAppSlot#scm_ip_restriction}
 
 ---
 
@@ -5317,7 +5321,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappsl
 
 ---
 
-##### `AllowedOrigins`<sup>Required</sup> <a name="AllowedOrigins" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigCors.property.allowedOrigins"></a>
+##### `AllowedOrigins`<sup>Optional</sup> <a name="AllowedOrigins" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigCors.property.allowedOrigins"></a>
 
 ```go
 AllowedOrigins *[]*string
@@ -5367,13 +5371,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappsl
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#action LinuxFunctionAppSlot#action}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.action">Action</a></code> | <code>*string</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.headers">Headers</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#headers LinuxFunctionAppSlot#headers}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.ipAddress">IpAddress</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#ip_address LinuxFunctionAppSlot#ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#name LinuxFunctionAppSlot#name}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.priority">Priority</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#priority LinuxFunctionAppSlot#priority}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.serviceTag">ServiceTag</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#service_tag LinuxFunctionAppSlot#service_tag}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.virtualNetworkSubnetId">VirtualNetworkSubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.ipAddress">IpAddress</a></code> | <code>*string</code> | The CIDR notation of the IP or IP Range to match. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.name">Name</a></code> | <code>*string</code> | The name which should be used for this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.priority">Priority</a></code> | <code>*f64</code> | The priority value of this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.serviceTag">ServiceTag</a></code> | <code>*string</code> | The Service Tag used for this IP Restriction. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.virtualNetworkSubnetId">VirtualNetworkSubnetId</a></code> | <code>*string</code> | The Virtual Network Subnet ID used for this IP Restriction. |
 
 ---
 
@@ -5385,7 +5389,9 @@ Action *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#action LinuxFunctionAppSlot#action}.
+The action to take. Possible values are `Allow` or `Deny`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#action LinuxFunctionAppSlot#action}
 
 ---
 
@@ -5409,7 +5415,11 @@ IpAddress *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#ip_address LinuxFunctionAppSlot#ip_address}.
+The CIDR notation of the IP or IP Range to match.
+
+For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#ip_address LinuxFunctionAppSlot#ip_address}
 
 ---
 
@@ -5421,7 +5431,9 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#name LinuxFunctionAppSlot#name}.
+The name which should be used for this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#name LinuxFunctionAppSlot#name}
 
 ---
 
@@ -5433,7 +5445,9 @@ Priority *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#priority LinuxFunctionAppSlot#priority}.
+The priority value of this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#priority LinuxFunctionAppSlot#priority}
 
 ---
 
@@ -5445,7 +5459,9 @@ ServiceTag *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#service_tag LinuxFunctionAppSlot#service_tag}.
+The Service Tag used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#service_tag LinuxFunctionAppSlot#service_tag}
 
 ---
 
@@ -5457,7 +5473,9 @@ VirtualNetworkSubnetId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}.
+The Virtual Network Subnet ID used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}
 
 ---
 
@@ -5557,13 +5575,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionappsl
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#action LinuxFunctionAppSlot#action}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.action">Action</a></code> | <code>*string</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.headers">Headers</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#headers LinuxFunctionAppSlot#headers}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.ipAddress">IpAddress</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#ip_address LinuxFunctionAppSlot#ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#name LinuxFunctionAppSlot#name}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.priority">Priority</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#priority LinuxFunctionAppSlot#priority}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.serviceTag">ServiceTag</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#service_tag LinuxFunctionAppSlot#service_tag}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.virtualNetworkSubnetId">VirtualNetworkSubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.ipAddress">IpAddress</a></code> | <code>*string</code> | The CIDR notation of the IP or IP Range to match. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.name">Name</a></code> | <code>*string</code> | The name which should be used for this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.priority">Priority</a></code> | <code>*f64</code> | The priority value of this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.serviceTag">ServiceTag</a></code> | <code>*string</code> | The Service Tag used for this IP Restriction. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.virtualNetworkSubnetId">VirtualNetworkSubnetId</a></code> | <code>*string</code> | The Virtual Network Subnet ID used for this IP Restriction. |
 
 ---
 
@@ -5575,7 +5593,9 @@ Action *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#action LinuxFunctionAppSlot#action}.
+The action to take. Possible values are `Allow` or `Deny`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#action LinuxFunctionAppSlot#action}
 
 ---
 
@@ -5599,7 +5619,11 @@ IpAddress *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#ip_address LinuxFunctionAppSlot#ip_address}.
+The CIDR notation of the IP or IP Range to match.
+
+For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#ip_address LinuxFunctionAppSlot#ip_address}
 
 ---
 
@@ -5611,7 +5635,9 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#name LinuxFunctionAppSlot#name}.
+The name which should be used for this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#name LinuxFunctionAppSlot#name}
 
 ---
 
@@ -5623,7 +5649,9 @@ Priority *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#priority LinuxFunctionAppSlot#priority}.
+The priority value of this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#priority LinuxFunctionAppSlot#priority}
 
 ---
 
@@ -5635,7 +5663,9 @@ ServiceTag *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#service_tag LinuxFunctionAppSlot#service_tag}.
+The Service Tag used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#service_tag LinuxFunctionAppSlot#service_tag}
 
 ---
 
@@ -5647,7 +5677,9 @@ VirtualNetworkSubnetId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}.
+The Virtual Network Subnet ID used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}
 
 ---
 
@@ -16725,6 +16757,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigCorsOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigCorsOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigCorsOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigCorsOutputReference.resetAllowedOrigins">ResetAllowedOrigins</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigCorsOutputReference.resetSupportCredentials">ResetSupportCredentials</a></code> | *No description.* |
 
 ---
@@ -16878,6 +16911,12 @@ func ToString() *string
 Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
+
+##### `ResetAllowedOrigins` <a name="ResetAllowedOrigins" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigCorsOutputReference.resetAllowedOrigins"></a>
+
+```go
+func ResetAllowedOrigins()
+```
 
 ##### `ResetSupportCredentials` <a name="ResetSupportCredentials" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigCorsOutputReference.resetSupportCredentials"></a>
 

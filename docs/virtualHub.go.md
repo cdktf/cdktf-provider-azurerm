@@ -69,6 +69,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.putRoute">PutRoute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.resetAddressPrefix">ResetAddressPrefix</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.resetHubRoutingPreference">ResetHubRoutingPreference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.resetRoute">ResetRoute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.resetSku">ResetSku</a></code> | *No description.* |
@@ -292,6 +293,12 @@ func PutTimeouts(value VirtualHubTimeouts)
 func ResetAddressPrefix()
 ```
 
+##### `ResetHubRoutingPreference` <a name="ResetHubRoutingPreference" id="@cdktf/provider-azurerm.virtualHub.VirtualHub.resetHubRoutingPreference"></a>
+
+```go
+func ResetHubRoutingPreference()
+```
+
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-azurerm.virtualHub.VirtualHub.resetId"></a>
 
 ```go
@@ -422,6 +429,7 @@ virtualhub.VirtualHub_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.property.virtualRouterAsn">VirtualRouterAsn</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.property.virtualRouterIps">VirtualRouterIps</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.property.addressPrefixInput">AddressPrefixInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.property.hubRoutingPreferenceInput">HubRoutingPreferenceInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.property.locationInput">LocationInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
@@ -432,6 +440,7 @@ virtualhub.VirtualHub_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.property.virtualWanIdInput">VirtualWanIdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.property.addressPrefix">AddressPrefix</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.property.hubRoutingPreference">HubRoutingPreference</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.property.id">Id</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.property.location">Location</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHub.property.name">Name</a></code> | <code>*string</code> | *No description.* |
@@ -644,6 +653,16 @@ func AddressPrefixInput() *string
 
 ---
 
+##### `HubRoutingPreferenceInput`<sup>Optional</sup> <a name="HubRoutingPreferenceInput" id="@cdktf/provider-azurerm.virtualHub.VirtualHub.property.hubRoutingPreferenceInput"></a>
+
+```go
+func HubRoutingPreferenceInput() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `IdInput`<sup>Optional</sup> <a name="IdInput" id="@cdktf/provider-azurerm.virtualHub.VirtualHub.property.idInput"></a>
 
 ```go
@@ -738,6 +757,16 @@ func VirtualWanIdInput() *string
 
 ```go
 func AddressPrefix() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `HubRoutingPreference`<sup>Required</sup> <a name="HubRoutingPreference" id="@cdktf/provider-azurerm.virtualHub.VirtualHub.property.hubRoutingPreference"></a>
+
+```go
+func HubRoutingPreference() *string
 ```
 
 - *Type:* *string
@@ -853,6 +882,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualhub"
 	Name: *string,
 	ResourceGroupName: *string,
 	AddressPrefix: *string,
+	HubRoutingPreference: *string,
 	Id: *string,
 	Route: interface{},
 	Sku: *string,
@@ -877,6 +907,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualhub"
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHubConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#name VirtualHub#name}. |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHubConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#resource_group_name VirtualHub#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHubConfig.property.addressPrefix">AddressPrefix</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#address_prefix VirtualHub#address_prefix}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHubConfig.property.hubRoutingPreference">HubRoutingPreference</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#hub_routing_preference VirtualHub#hub_routing_preference}. |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHubConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#id VirtualHub#id}. |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHubConfig.property.route">Route</a></code> | <code>interface{}</code> | route block. |
 | <code><a href="#@cdktf/provider-azurerm.virtualHub.VirtualHubConfig.property.sku">Sku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#sku VirtualHub#sku}. |
@@ -1001,6 +1032,18 @@ AddressPrefix *string
 - *Type:* *string
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#address_prefix VirtualHub#address_prefix}.
+
+---
+
+##### `HubRoutingPreference`<sup>Optional</sup> <a name="HubRoutingPreference" id="@cdktf/provider-azurerm.virtualHub.VirtualHubConfig.property.hubRoutingPreference"></a>
+
+```go
+HubRoutingPreference *string
+```
+
+- *Type:* *string
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#hub_routing_preference VirtualHub#hub_routing_preference}.
 
 ---
 

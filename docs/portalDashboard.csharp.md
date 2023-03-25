@@ -67,7 +67,6 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.putTimeouts">PutTimeouts</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetDashboardProperties">ResetDashboardProperties</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetTags">ResetTags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
@@ -269,12 +268,6 @@ private void PutTimeouts(PortalDashboardTimeouts Value)
 - *Type:* <a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardTimeouts">PortalDashboardTimeouts</a>
 
 ---
-
-##### `ResetDashboardProperties` <a name="ResetDashboardProperties" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetDashboardProperties"></a>
-
-```csharp
-private void ResetDashboardProperties()
-```
 
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboard.resetId"></a>
 
@@ -716,10 +709,10 @@ new PortalDashboardConfig {
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
     object[] Provisioners = null,
+    string DashboardProperties,
     string Location,
     string Name,
     string ResourceGroupName,
-    string DashboardProperties = null,
     string Id = null,
     System.Collections.Generic.IDictionary<string, string> Tags = null,
     PortalDashboardTimeouts Timeouts = null
@@ -737,10 +730,10 @@ new PortalDashboardConfig {
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.dashboardProperties">DashboardProperties</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#location PortalDashboard#location}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#name PortalDashboard#name}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#resource_group_name PortalDashboard#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.dashboardProperties">DashboardProperties</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#id PortalDashboard#id}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#tags PortalDashboard#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.portalDashboard.PortalDashboardTimeouts">PortalDashboardTimeouts</a></code> | timeouts block. |
@@ -817,6 +810,18 @@ public object[] Provisioners { get; set; }
 
 ---
 
+##### `DashboardProperties`<sup>Required</sup> <a name="DashboardProperties" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.dashboardProperties"></a>
+
+```csharp
+public string DashboardProperties { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}.
+
+---
+
 ##### `Location`<sup>Required</sup> <a name="Location" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.location"></a>
 
 ```csharp
@@ -850,18 +855,6 @@ public string ResourceGroupName { get; set; }
 - *Type:* string
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#resource_group_name PortalDashboard#resource_group_name}.
-
----
-
-##### `DashboardProperties`<sup>Optional</sup> <a name="DashboardProperties" id="@cdktf/provider-azurerm.portalDashboard.PortalDashboardConfig.property.dashboardProperties"></a>
-
-```csharp
-public string DashboardProperties { get; set; }
-```
-
-- *Type:* string
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_dashboard#dashboard_properties PortalDashboard#dashboard_properties}.
 
 ---
 

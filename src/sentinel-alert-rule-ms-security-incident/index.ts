@@ -244,7 +244,7 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
       terraformResourceType: 'azurerm_sentinel_alert_rule_ms_security_incident',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
