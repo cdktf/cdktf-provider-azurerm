@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hu
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualHubRouteTableRoute.VirtualHubRouteTableRouteA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualhubroutetableroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualhubroutetableroute"
 
 virtualhubroutetableroute.NewVirtualHubRouteTableRouteA(scope Construct, id *string, config VirtualHubRouteTableRouteAConfig) VirtualHubRouteTableRouteA
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.virtualHubRouteTableRoute.VirtualHubRouteTableRouteA.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualhubroutetableroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualhubroutetableroute"
 
 virtualhubroutetableroute.VirtualHubRouteTableRouteA_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.virtualHubRouteTableRoute.VirtualHubRouteTableRouteA.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualhubroutetableroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualhubroutetableroute"
 
 virtualhubroutetableroute.VirtualHubRouteTableRouteA_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ virtualhubroutetableroute.VirtualHubRouteTableRouteA_IsTerraformElement(x interf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.virtualHubRouteTableRoute.VirtualHubRouteTableRouteA.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualhubroutetableroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualhubroutetableroute"
 
 virtualhubroutetableroute.VirtualHubRouteTableRouteA_IsTerraformResource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualHubRouteTableRoute.VirtualHubRouteTableRouteAConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualhubroutetableroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualhubroutetableroute"
 
 &virtualhubroutetableroute.VirtualHubRouteTableRouteAConfig {
 	Connection: interface{},
@@ -738,7 +738,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualhubroutetab
 	RouteTableId: *string,
 	Id: *string,
 	NextHopType: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.virtualHubRouteTableRoute.VirtualHubRouteTableRouteTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualHubRouteTableRoute.VirtualHubRouteTableRouteTimeouts,
 }
 ```
 
@@ -940,7 +940,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualHubRouteTableRoute.VirtualHubRouteTableRouteTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualhubroutetableroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualhubroutetableroute"
 
 &virtualhubroutetableroute.VirtualHubRouteTableRouteTimeouts {
 	Create: *string,
@@ -1016,7 +1016,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualHubRouteTableRoute.VirtualHubRouteTableRouteTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualhubroutetableroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualhubroutetableroute"
 
 virtualhubroutetableroute.NewVirtualHubRouteTableRouteTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualHubRouteTableRouteTimeoutsOutputReference
 ```

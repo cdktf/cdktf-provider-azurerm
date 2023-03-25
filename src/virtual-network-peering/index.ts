@@ -240,7 +240,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_network_peering',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -268,7 +268,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // allow_forwarded_traffic - computed: true, optional: true, required: false
+  // allow_forwarded_traffic - computed: false, optional: true, required: false
   private _allowForwardedTraffic?: boolean | cdktf.IResolvable; 
   public get allowForwardedTraffic() {
     return this.getBooleanAttribute('allow_forwarded_traffic');
@@ -284,7 +284,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
     return this._allowForwardedTraffic;
   }
 
-  // allow_gateway_transit - computed: true, optional: true, required: false
+  // allow_gateway_transit - computed: false, optional: true, required: false
   private _allowGatewayTransit?: boolean | cdktf.IResolvable; 
   public get allowGatewayTransit() {
     return this.getBooleanAttribute('allow_gateway_transit');
@@ -387,7 +387,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
     return this._triggers;
   }
 
-  // use_remote_gateways - computed: true, optional: true, required: false
+  // use_remote_gateways - computed: false, optional: true, required: false
   private _useRemoteGateways?: boolean | cdktf.IResolvable; 
   public get useRemoteGateways() {
     return this.getBooleanAttribute('use_remote_gateways');

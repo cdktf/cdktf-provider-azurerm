@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/redis_cach
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermRedisCache.DataAzurermRedisCache.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermrediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrediscache"
 
 dataazurermrediscache.NewDataAzurermRedisCache(scope Construct, id *string, config DataAzurermRedisCacheConfig) DataAzurermRedisCache
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermRedisCache.DataAzurermRedisCache.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermrediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrediscache"
 
 dataazurermrediscache.DataAzurermRedisCache_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermRedisCache.DataAzurermRedisCache.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermrediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrediscache"
 
 dataazurermrediscache.DataAzurermRedisCache_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermrediscache.DataAzurermRedisCache_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermRedisCache.DataAzurermRedisCache.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermrediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrediscache"
 
 dataazurermrediscache.DataAzurermRedisCache_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -824,7 +824,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermRedisCache.DataAzurermRedisCacheConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermrediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrediscache"
 
 &dataazurermrediscache.DataAzurermRedisCacheConfig {
 	Connection: interface{},
@@ -837,7 +837,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermredisca
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermRedisCache.DataAzurermRedisCacheTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermRedisCache.DataAzurermRedisCacheTimeouts,
 }
 ```
 
@@ -987,7 +987,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermRedisCache.DataAzurermRedisCachePatchSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermrediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrediscache"
 
 &dataazurermrediscache.DataAzurermRedisCachePatchSchedule {
 
@@ -1000,7 +1000,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermredisca
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermRedisCache.DataAzurermRedisCacheRedisConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermrediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrediscache"
 
 &dataazurermrediscache.DataAzurermRedisCacheRedisConfiguration {
 
@@ -1013,7 +1013,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermredisca
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermRedisCache.DataAzurermRedisCacheTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermrediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrediscache"
 
 &dataazurermrediscache.DataAzurermRedisCacheTimeouts {
 	Read: *string,
@@ -1047,7 +1047,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermRedisCache.DataAzurermRedisCachePatchScheduleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermrediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrediscache"
 
 dataazurermrediscache.NewDataAzurermRedisCachePatchScheduleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermRedisCachePatchScheduleList
 ```
@@ -1179,7 +1179,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermRedisCache.DataAzurermRedisCachePatchScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermrediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrediscache"
 
 dataazurermrediscache.NewDataAzurermRedisCachePatchScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermRedisCachePatchScheduleOutputReference
 ```
@@ -1479,7 +1479,7 @@ func InternalValue() DataAzurermRedisCachePatchSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermRedisCache.DataAzurermRedisCacheRedisConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermrediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrediscache"
 
 dataazurermrediscache.NewDataAzurermRedisCacheRedisConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermRedisCacheRedisConfigurationList
 ```
@@ -1611,7 +1611,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermRedisCache.DataAzurermRedisCacheRedisConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermrediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrediscache"
 
 dataazurermrediscache.NewDataAzurermRedisCacheRedisConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermRedisCacheRedisConfigurationOutputReference
 ```
@@ -2032,7 +2032,7 @@ func InternalValue() DataAzurermRedisCacheRedisConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermRedisCache.DataAzurermRedisCacheTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermrediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrediscache"
 
 dataazurermrediscache.NewDataAzurermRedisCacheTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermRedisCacheTimeoutsOutputReference
 ```

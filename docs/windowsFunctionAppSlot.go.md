@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/windows_fu
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlot(scope Construct, id *string, config WindowsFunctionAppSlotConfig) WindowsFunctionAppSlot
 ```
@@ -552,7 +552,7 @@ func ResetVirtualNetworkSubnetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlot.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.WindowsFunctionAppSlot_IsConstruct(x interface{}) *bool
 ```
@@ -584,7 +584,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlot.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.WindowsFunctionAppSlot_IsTerraformElement(x interface{}) *bool
 ```
@@ -598,7 +598,7 @@ windowsfunctionappslot.WindowsFunctionAppSlot_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlot.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.WindowsFunctionAppSlot_IsTerraformResource(x interface{}) *bool
 ```
@@ -1523,23 +1523,23 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettings {
 	Enabled: interface{},
-	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsActiveDirectory,
+	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsActiveDirectory,
 	AdditionalLoginParameters: *map[string]*string,
 	AllowedExternalRedirectUrls: *[]*string,
 	DefaultProvider: *string,
-	Facebook: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsFacebook,
-	Github: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsGithub,
-	Google: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsGoogle,
+	Facebook: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsFacebook,
+	Github: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsGithub,
+	Google: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsGoogle,
 	Issuer: *string,
-	Microsoft: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsMicrosoft,
+	Microsoft: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsMicrosoft,
 	RuntimeVersion: *string,
 	TokenRefreshExtensionHours: *f64,
 	TokenStoreEnabled: interface{},
-	Twitter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsTwitter,
+	Twitter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsTwitter,
 	UnauthenticatedClientAction: *string,
 }
 ```
@@ -1785,7 +1785,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsActiveDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsActiveDirectory {
 	ClientId: *string,
@@ -1867,7 +1867,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsFacebook.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsFacebook {
 	AppId: *string,
@@ -1949,7 +1949,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsGithub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsGithub {
 	ClientId: *string,
@@ -2031,7 +2031,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsGoogle.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsGoogle {
 	ClientId: *string,
@@ -2113,7 +2113,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsMicrosoft.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsMicrosoft {
 	ClientId: *string,
@@ -2195,7 +2195,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsTwitter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsTwitter {
 	ConsumerKey: *string,
@@ -2261,30 +2261,30 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsV2 {
-	Login: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2Login,
-	ActiveDirectoryV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2,
-	AppleV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2AppleV2,
+	Login: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2Login,
+	ActiveDirectoryV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2,
+	AppleV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2AppleV2,
 	AuthEnabled: interface{},
-	AzureStaticWebAppV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2,
+	AzureStaticWebAppV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2,
 	ConfigFilePath: *string,
 	CustomOidcV2: interface{},
 	DefaultProvider: *string,
 	ExcludedPaths: *[]*string,
-	FacebookV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2FacebookV2,
+	FacebookV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2FacebookV2,
 	ForwardProxyConvention: *string,
 	ForwardProxyCustomHostHeaderName: *string,
 	ForwardProxyCustomSchemeHeaderName: *string,
-	GithubV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2GithubV2,
-	GoogleV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2GoogleV2,
+	GithubV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2GithubV2,
+	GoogleV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2GoogleV2,
 	HttpRouteApiPrefix: *string,
-	MicrosoftV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2,
+	MicrosoftV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2,
 	RequireAuthentication: interface{},
 	RequireHttps: interface{},
 	RuntimeVersion: *string,
-	TwitterV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2TwitterV2,
+	TwitterV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2TwitterV2,
 	UnauthenticatedAction: *string,
 }
 ```
@@ -2635,7 +2635,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2 {
 	ClientId: *string,
@@ -2845,7 +2845,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2AppleV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsV2AppleV2 {
 	ClientId: *string,
@@ -2895,7 +2895,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2 {
 	ClientId: *string,
@@ -2929,7 +2929,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2 {
 	ClientId: *string,
@@ -3027,7 +3027,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2FacebookV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsV2FacebookV2 {
 	AppId: *string,
@@ -3109,7 +3109,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2GithubV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsV2GithubV2 {
 	ClientId: *string,
@@ -3175,7 +3175,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2GoogleV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsV2GoogleV2 {
 	ClientId: *string,
@@ -3257,7 +3257,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2Login.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsV2Login {
 	AllowedExternalRedirectUrls: *[]*string,
@@ -3455,7 +3455,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2 {
 	ClientId: *string,
@@ -3537,7 +3537,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2TwitterV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotAuthSettingsV2TwitterV2 {
 	ConsumerKey: *string,
@@ -3587,11 +3587,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotBackup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotBackup {
 	Name: *string,
-	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotBackupSchedule,
+	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotBackupSchedule,
 	StorageAccountUrl: *string,
 	Enabled: interface{},
 }
@@ -3669,7 +3669,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotBackupSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotBackupSchedule {
 	FrequencyInterval: *f64,
@@ -3767,7 +3767,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotConfig {
 	Connection: interface{},
@@ -3779,11 +3779,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionapp
 	Provisioners: *[]interface{},
 	FunctionAppId: *string,
 	Name: *string,
-	SiteConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig,
+	SiteConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig,
 	AppSettings: *map[string]*string,
-	AuthSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettings,
-	AuthSettingsV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2,
-	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotBackup,
+	AuthSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettings,
+	AuthSettingsV2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2,
+	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotBackup,
 	BuiltinLoggingEnabled: interface{},
 	ClientCertificateEnabled: interface{},
 	ClientCertificateExclusionPaths: *string,
@@ -3795,7 +3795,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionapp
 	FunctionsExtensionVersion: *string,
 	HttpsOnly: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotIdentity,
 	KeyVaultReferenceIdentityId: *string,
 	ServicePlanId: *string,
 	StorageAccount: interface{},
@@ -3804,7 +3804,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionapp
 	StorageKeyVaultSecretId: *string,
 	StorageUsesManagedIdentity: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeouts,
 	VirtualNetworkSubnetId: *string,
 }
 ```
@@ -4332,7 +4332,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotConnectionString.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotConnectionString {
 	Name: *string,
@@ -4398,7 +4398,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotIdentity {
 	Type: *string,
@@ -4444,7 +4444,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotSiteConfig {
 	AlwaysOn: interface{},
@@ -4453,11 +4453,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionapp
 	AppCommandLine: *string,
 	ApplicationInsightsConnectionString: *string,
 	ApplicationInsightsKey: *string,
-	ApplicationStack: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigApplicationStack,
+	ApplicationStack: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigApplicationStack,
 	AppScaleLimit: *f64,
-	AppServiceLogs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigAppServiceLogs,
+	AppServiceLogs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigAppServiceLogs,
 	AutoSwapSlotName: *string,
-	Cors: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCors,
+	Cors: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCors,
 	DefaultDocuments: *[]*string,
 	ElasticInstanceMinimum: *f64,
 	FtpsState: *string,
@@ -4503,7 +4503,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionapp
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.healthCheckEvictionTimeInMin">HealthCheckEvictionTimeInMin</a></code> | <code>*f64</code> | The amount of time in minutes that a node is unhealthy before being removed from the load balancer. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.healthCheckPath">HealthCheckPath</a></code> | <code>*string</code> | The path to be checked for this function app health. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.http2Enabled">Http2Enabled</a></code> | <code>interface{}</code> | Specifies if the http2 protocol should be enabled. Defaults to `false`. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.ipRestriction">IpRestriction</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_restriction WindowsFunctionAppSlot#ip_restriction}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.ipRestriction">IpRestriction</a></code> | <code>interface{}</code> | ip_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.loadBalancingMode">LoadBalancingMode</a></code> | <code>*string</code> | The Site load balancing mode. Possible values include: `WeightedRoundRobin`, `LeastRequests`, `LeastResponseTime`, `WeightedTotalTraffic`, `RequestHash`, `PerSiteRoundRobin`. Defaults to `LeastRequests` if omitted. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.managedPipelineMode">ManagedPipelineMode</a></code> | <code>*string</code> | The Managed Pipeline mode. Possible values include: `Integrated`, `Classic`. Defaults to `Integrated`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.minimumTlsVersion">MinimumTlsVersion</a></code> | <code>*string</code> | The configures the minimum version of TLS required for SSL requests. |
@@ -4511,7 +4511,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionapp
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.remoteDebuggingEnabled">RemoteDebuggingEnabled</a></code> | <code>interface{}</code> | Should Remote Debugging be enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.remoteDebuggingVersion">RemoteDebuggingVersion</a></code> | <code>*string</code> | The Remote Debugging Version. Possible values include `VS2017`, `VS2019`, and `VS2022`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.runtimeScaleMonitoringEnabled">RuntimeScaleMonitoringEnabled</a></code> | <code>interface{}</code> | Should Functions Runtime Scale Monitoring be enabled. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.scmIpRestriction">ScmIpRestriction</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#scm_ip_restriction WindowsFunctionAppSlot#scm_ip_restriction}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.scmIpRestriction">ScmIpRestriction</a></code> | <code>interface{}</code> | scm_ip_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.scmMinimumTlsVersion">ScmMinimumTlsVersion</a></code> | <code>*string</code> | Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.scmUseMainIpRestriction">ScmUseMainIpRestriction</a></code> | <code>interface{}</code> | Should the Windows Function App `ip_restriction` configuration be used for the SCM also. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfig.property.use32BitWorker">Use32BitWorker</a></code> | <code>interface{}</code> | Should the Windows Web App use a 32-bit worker. |
@@ -4771,7 +4771,9 @@ IpRestriction interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_restriction WindowsFunctionAppSlot#ip_restriction}.
+ip_restriction block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_restriction WindowsFunctionAppSlot#ip_restriction}
 
 ---
 
@@ -4883,7 +4885,9 @@ ScmIpRestriction interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#scm_ip_restriction WindowsFunctionAppSlot#scm_ip_restriction}.
+scm_ip_restriction block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#scm_ip_restriction WindowsFunctionAppSlot#scm_ip_restriction}
 
 ---
 
@@ -4976,7 +4980,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigApplicationStack.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotSiteConfigApplicationStack {
 	DotnetVersion: *string,
@@ -5090,7 +5094,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigAppServiceLogs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotSiteConfigAppServiceLogs {
 	DiskQuotaMb: *f64,
@@ -5140,7 +5144,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotSiteConfigCors {
 	AllowedOrigins: *[]*string,
@@ -5157,7 +5161,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionapp
 
 ---
 
-##### `AllowedOrigins`<sup>Required</sup> <a name="AllowedOrigins" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCors.property.allowedOrigins"></a>
+##### `AllowedOrigins`<sup>Optional</sup> <a name="AllowedOrigins" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCors.property.allowedOrigins"></a>
 
 ```go
 AllowedOrigins *[]*string
@@ -5190,7 +5194,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotSiteConfigIpRestriction {
 	Action: *string,
@@ -5207,13 +5211,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionapp
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#action WindowsFunctionAppSlot#action}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.action">Action</a></code> | <code>*string</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.headers">Headers</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#headers WindowsFunctionAppSlot#headers}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.ipAddress">IpAddress</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_address WindowsFunctionAppSlot#ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#name WindowsFunctionAppSlot#name}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.priority">Priority</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#priority WindowsFunctionAppSlot#priority}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.serviceTag">ServiceTag</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#service_tag WindowsFunctionAppSlot#service_tag}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.virtualNetworkSubnetId">VirtualNetworkSubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#virtual_network_subnet_id WindowsFunctionAppSlot#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.ipAddress">IpAddress</a></code> | <code>*string</code> | The CIDR notation of the IP or IP Range to match. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.name">Name</a></code> | <code>*string</code> | The name which should be used for this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.priority">Priority</a></code> | <code>*f64</code> | The priority value of this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.serviceTag">ServiceTag</a></code> | <code>*string</code> | The Service Tag used for this IP Restriction. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction.property.virtualNetworkSubnetId">VirtualNetworkSubnetId</a></code> | <code>*string</code> | The Virtual Network Subnet ID used for this IP Restriction. |
 
 ---
 
@@ -5225,7 +5229,9 @@ Action *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#action WindowsFunctionAppSlot#action}.
+The action to take. Possible values are `Allow` or `Deny`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#action WindowsFunctionAppSlot#action}
 
 ---
 
@@ -5249,7 +5255,11 @@ IpAddress *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_address WindowsFunctionAppSlot#ip_address}.
+The CIDR notation of the IP or IP Range to match.
+
+For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_address WindowsFunctionAppSlot#ip_address}
 
 ---
 
@@ -5261,7 +5271,9 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#name WindowsFunctionAppSlot#name}.
+The name which should be used for this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#name WindowsFunctionAppSlot#name}
 
 ---
 
@@ -5273,7 +5285,9 @@ Priority *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#priority WindowsFunctionAppSlot#priority}.
+The priority value of this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#priority WindowsFunctionAppSlot#priority}
 
 ---
 
@@ -5285,7 +5299,9 @@ ServiceTag *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#service_tag WindowsFunctionAppSlot#service_tag}.
+The Service Tag used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#service_tag WindowsFunctionAppSlot#service_tag}
 
 ---
 
@@ -5297,7 +5313,9 @@ VirtualNetworkSubnetId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#virtual_network_subnet_id WindowsFunctionAppSlot#virtual_network_subnet_id}.
+The Virtual Network Subnet ID used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#virtual_network_subnet_id WindowsFunctionAppSlot#virtual_network_subnet_id}
 
 ---
 
@@ -5306,7 +5324,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotSiteConfigIpRestrictionHeaders {
 	XAzureFdid: *[]*string,
@@ -5380,7 +5398,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotSiteConfigScmIpRestriction {
 	Action: *string,
@@ -5397,13 +5415,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionapp
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#action WindowsFunctionAppSlot#action}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.action">Action</a></code> | <code>*string</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.headers">Headers</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#headers WindowsFunctionAppSlot#headers}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.ipAddress">IpAddress</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_address WindowsFunctionAppSlot#ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#name WindowsFunctionAppSlot#name}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.priority">Priority</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#priority WindowsFunctionAppSlot#priority}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.serviceTag">ServiceTag</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#service_tag WindowsFunctionAppSlot#service_tag}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.virtualNetworkSubnetId">VirtualNetworkSubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#virtual_network_subnet_id WindowsFunctionAppSlot#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.ipAddress">IpAddress</a></code> | <code>*string</code> | The CIDR notation of the IP or IP Range to match. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.name">Name</a></code> | <code>*string</code> | The name which should be used for this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.priority">Priority</a></code> | <code>*f64</code> | The priority value of this `ip_restriction`. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.serviceTag">ServiceTag</a></code> | <code>*string</code> | The Service Tag used for this IP Restriction. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction.property.virtualNetworkSubnetId">VirtualNetworkSubnetId</a></code> | <code>*string</code> | The Virtual Network Subnet ID used for this IP Restriction. |
 
 ---
 
@@ -5415,7 +5433,9 @@ Action *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#action WindowsFunctionAppSlot#action}.
+The action to take. Possible values are `Allow` or `Deny`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#action WindowsFunctionAppSlot#action}
 
 ---
 
@@ -5439,7 +5459,11 @@ IpAddress *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_address WindowsFunctionAppSlot#ip_address}.
+The CIDR notation of the IP or IP Range to match.
+
+For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#ip_address WindowsFunctionAppSlot#ip_address}
 
 ---
 
@@ -5451,7 +5475,9 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#name WindowsFunctionAppSlot#name}.
+The name which should be used for this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#name WindowsFunctionAppSlot#name}
 
 ---
 
@@ -5463,7 +5489,9 @@ Priority *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#priority WindowsFunctionAppSlot#priority}.
+The priority value of this `ip_restriction`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#priority WindowsFunctionAppSlot#priority}
 
 ---
 
@@ -5475,7 +5503,9 @@ ServiceTag *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#service_tag WindowsFunctionAppSlot#service_tag}.
+The Service Tag used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#service_tag WindowsFunctionAppSlot#service_tag}
 
 ---
 
@@ -5487,7 +5517,9 @@ VirtualNetworkSubnetId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#virtual_network_subnet_id WindowsFunctionAppSlot#virtual_network_subnet_id}.
+The Virtual Network Subnet ID used for this IP Restriction.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app_slot#virtual_network_subnet_id WindowsFunctionAppSlot#virtual_network_subnet_id}
 
 ---
 
@@ -5496,7 +5528,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeaders {
 	XAzureFdid: *[]*string,
@@ -5570,7 +5602,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotSiteCredential {
 
@@ -5583,7 +5615,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionapp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotStorageAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotStorageAccount {
 	AccessKey: *string,
@@ -5685,7 +5717,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 &windowsfunctionappslot.WindowsFunctionAppSlotTimeouts {
 	Create: *string,
@@ -5761,7 +5793,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsActiveDirectoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsActiveDirectoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsActiveDirectoryOutputReference
 ```
@@ -6119,7 +6151,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsActiveDirectory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsFacebookOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsFacebookOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsFacebookOutputReference
 ```
@@ -6477,7 +6509,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsFacebook
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsGithubOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsGithubOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsGithubOutputReference
 ```
@@ -6835,7 +6867,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsGithub
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsGoogleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsGoogleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsGoogleOutputReference
 ```
@@ -7193,7 +7225,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsGoogle
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsMicrosoftOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsMicrosoftOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsMicrosoftOutputReference
 ```
@@ -7551,7 +7583,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsMicrosoft
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsOutputReference
 ```
@@ -8306,7 +8338,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsTwitterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsTwitterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsTwitterOutputReference
 ```
@@ -8635,7 +8667,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsTwitter
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2OutputReference
 ```
@@ -9218,7 +9250,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsV2ActiveDirectoryV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2AppleV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsV2AppleV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsV2AppleV2OutputReference
 ```
@@ -9522,7 +9554,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsV2AppleV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2OutputReference
 ```
@@ -9793,7 +9825,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsV2CustomOidcV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2List
 ```
@@ -9936,7 +9968,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsV2CustomOidcV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2OutputReference
 ```
@@ -10393,7 +10425,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2FacebookV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsV2FacebookV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsV2FacebookV2OutputReference
 ```
@@ -10744,7 +10776,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsV2FacebookV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2GithubV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsV2GithubV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsV2GithubV2OutputReference
 ```
@@ -11066,7 +11098,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsV2GithubV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2GoogleV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsV2GoogleV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsV2GoogleV2OutputReference
 ```
@@ -11417,7 +11449,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsV2GoogleV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2LoginOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsV2LoginOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsV2LoginOutputReference
 ```
@@ -11985,7 +12017,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsV2Login
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsV2MicrosoftV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2OutputReference
 ```
@@ -12336,7 +12368,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsV2MicrosoftV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsV2OutputReference
 ```
@@ -13346,7 +13378,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2TwitterV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotAuthSettingsV2TwitterV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotAuthSettingsV2TwitterV2OutputReference
 ```
@@ -13639,7 +13671,7 @@ func InternalValue() WindowsFunctionAppSlotAuthSettingsV2TwitterV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotBackupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotBackupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotBackupOutputReference
 ```
@@ -13996,7 +14028,7 @@ func InternalValue() WindowsFunctionAppSlotBackup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotBackupScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotBackupScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotBackupScheduleOutputReference
 ```
@@ -14387,7 +14419,7 @@ func InternalValue() WindowsFunctionAppSlotBackupSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotConnectionStringList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotConnectionStringList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsFunctionAppSlotConnectionStringList
 ```
@@ -14530,7 +14562,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotConnectionStringOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotConnectionStringOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsFunctionAppSlotConnectionStringOutputReference
 ```
@@ -14863,7 +14895,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotIdentityOutputReference
 ```
@@ -15185,7 +15217,7 @@ func InternalValue() WindowsFunctionAppSlotIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigApplicationStackOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotSiteConfigApplicationStackOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotSiteConfigApplicationStackOutputReference
 ```
@@ -15608,7 +15640,7 @@ func InternalValue() WindowsFunctionAppSlotSiteConfigApplicationStack
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigAppServiceLogsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotSiteConfigAppServiceLogsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotSiteConfigAppServiceLogsOutputReference
 ```
@@ -15915,7 +15947,7 @@ func InternalValue() WindowsFunctionAppSlotSiteConfigAppServiceLogs
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotSiteConfigCorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotSiteConfigCorsOutputReference
 ```
@@ -15960,6 +15992,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCorsOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCorsOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCorsOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCorsOutputReference.resetAllowedOrigins">ResetAllowedOrigins</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCorsOutputReference.resetSupportCredentials">ResetSupportCredentials</a></code> | *No description.* |
 
 ---
@@ -16114,6 +16147,12 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `ResetAllowedOrigins` <a name="ResetAllowedOrigins" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCorsOutputReference.resetAllowedOrigins"></a>
+
+```go
+func ResetAllowedOrigins()
+```
+
 ##### `ResetSupportCredentials` <a name="ResetSupportCredentials" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigCorsOutputReference.resetSupportCredentials"></a>
 
 ```go
@@ -16215,7 +16254,7 @@ func InternalValue() WindowsFunctionAppSlotSiteConfigCors
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotSiteConfigIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsFunctionAppSlotSiteConfigIpRestrictionHeadersList
 ```
@@ -16358,7 +16397,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotSiteConfigIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsFunctionAppSlotSiteConfigIpRestrictionHeadersOutputReference
 ```
@@ -16741,7 +16780,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotSiteConfigIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsFunctionAppSlotSiteConfigIpRestrictionList
 ```
@@ -16884,7 +16923,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotSiteConfigIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsFunctionAppSlotSiteConfigIpRestrictionOutputReference
 ```
@@ -17367,7 +17406,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotSiteConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotSiteConfigOutputReference
 ```
@@ -18642,7 +18681,7 @@ func InternalValue() WindowsFunctionAppSlotSiteConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotSiteConfigScmIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeadersList
 ```
@@ -18785,7 +18824,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotSiteConfigScmIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeadersOutputReference
 ```
@@ -19168,7 +19207,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotSiteConfigScmIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsFunctionAppSlotSiteConfigScmIpRestrictionList
 ```
@@ -19311,7 +19350,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotSiteConfigScmIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsFunctionAppSlotSiteConfigScmIpRestrictionOutputReference
 ```
@@ -19794,7 +19833,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteCredentialList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotSiteCredentialList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsFunctionAppSlotSiteCredentialList
 ```
@@ -19926,7 +19965,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotSiteCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsFunctionAppSlotSiteCredentialOutputReference
 ```
@@ -20215,7 +20254,7 @@ func InternalValue() WindowsFunctionAppSlotSiteCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotStorageAccountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotStorageAccountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsFunctionAppSlotStorageAccountList
 ```
@@ -20358,7 +20397,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotStorageAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotStorageAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsFunctionAppSlotStorageAccountOutputReference
 ```
@@ -20764,7 +20803,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/windowsfunctionappslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsfunctionappslot"
 
 windowsfunctionappslot.NewWindowsFunctionAppSlotTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsFunctionAppSlotTimeoutsOutputReference
 ```

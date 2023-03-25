@@ -5199,880 +5199,6 @@ export class WindowsWebAppSlotLogsOutputReference extends cdktf.ComplexObject {
     return this._httpLogs.internalValue;
   }
 }
-export interface WindowsWebAppSlotSiteConfigIpRestrictionHeaders {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_azure_fdid WindowsWebAppSlot#x_azure_fdid}
-  */
-  readonly xAzureFdid?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_fd_health_probe WindowsWebAppSlot#x_fd_health_probe}
-  */
-  readonly xFdHealthProbe?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_forwarded_for WindowsWebAppSlot#x_forwarded_for}
-  */
-  readonly xForwardedFor?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_forwarded_host WindowsWebAppSlot#x_forwarded_host}
-  */
-  readonly xForwardedHost?: string[];
-}
-
-export function windowsWebAppSlotSiteConfigIpRestrictionHeadersToTerraform(struct?: WindowsWebAppSlotSiteConfigIpRestrictionHeaders | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
-    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
-    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
-    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
-  }
-}
-
-export class WindowsWebAppSlotSiteConfigIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): WindowsWebAppSlotSiteConfigIpRestrictionHeaders | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._xAzureFdid !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xAzureFdid = this._xAzureFdid;
-    }
-    if (this._xFdHealthProbe !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xFdHealthProbe = this._xFdHealthProbe;
-    }
-    if (this._xForwardedFor !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xForwardedFor = this._xForwardedFor;
-    }
-    if (this._xForwardedHost !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xForwardedHost = this._xForwardedHost;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: WindowsWebAppSlotSiteConfigIpRestrictionHeaders | cdktf.IResolvable | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._xAzureFdid = undefined;
-      this._xFdHealthProbe = undefined;
-      this._xForwardedFor = undefined;
-      this._xForwardedHost = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._xAzureFdid = value.xAzureFdid;
-      this._xFdHealthProbe = value.xFdHealthProbe;
-      this._xForwardedFor = value.xForwardedFor;
-      this._xForwardedHost = value.xForwardedHost;
-    }
-  }
-
-  // x_azure_fdid - computed: true, optional: true, required: false
-  private _xAzureFdid?: string[]; 
-  public get xAzureFdid() {
-    return this.getListAttribute('x_azure_fdid');
-  }
-  public set xAzureFdid(value: string[]) {
-    this._xAzureFdid = value;
-  }
-  public resetXAzureFdid() {
-    this._xAzureFdid = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xAzureFdidInput() {
-    return this._xAzureFdid;
-  }
-
-  // x_fd_health_probe - computed: true, optional: true, required: false
-  private _xFdHealthProbe?: string[]; 
-  public get xFdHealthProbe() {
-    return this.getListAttribute('x_fd_health_probe');
-  }
-  public set xFdHealthProbe(value: string[]) {
-    this._xFdHealthProbe = value;
-  }
-  public resetXFdHealthProbe() {
-    this._xFdHealthProbe = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xFdHealthProbeInput() {
-    return this._xFdHealthProbe;
-  }
-
-  // x_forwarded_for - computed: true, optional: true, required: false
-  private _xForwardedFor?: string[]; 
-  public get xForwardedFor() {
-    return this.getListAttribute('x_forwarded_for');
-  }
-  public set xForwardedFor(value: string[]) {
-    this._xForwardedFor = value;
-  }
-  public resetXForwardedFor() {
-    this._xForwardedFor = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xForwardedForInput() {
-    return this._xForwardedFor;
-  }
-
-  // x_forwarded_host - computed: true, optional: true, required: false
-  private _xForwardedHost?: string[]; 
-  public get xForwardedHost() {
-    return this.getListAttribute('x_forwarded_host');
-  }
-  public set xForwardedHost(value: string[]) {
-    this._xForwardedHost = value;
-  }
-  public resetXForwardedHost() {
-    this._xForwardedHost = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xForwardedHostInput() {
-    return this._xForwardedHost;
-  }
-}
-
-export class WindowsWebAppSlotSiteConfigIpRestrictionHeadersList extends cdktf.ComplexList {
-  public internalValue? : WindowsWebAppSlotSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): WindowsWebAppSlotSiteConfigIpRestrictionHeadersOutputReference {
-    return new WindowsWebAppSlotSiteConfigIpRestrictionHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface WindowsWebAppSlotSiteConfigIpRestriction {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#action WindowsWebAppSlot#action}
-  */
-  readonly action?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#headers WindowsWebAppSlot#headers}
-  */
-  readonly headers?: WindowsWebAppSlotSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#ip_address WindowsWebAppSlot#ip_address}
-  */
-  readonly ipAddress?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#name WindowsWebAppSlot#name}
-  */
-  readonly name?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#priority WindowsWebAppSlot#priority}
-  */
-  readonly priority?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#service_tag WindowsWebAppSlot#service_tag}
-  */
-  readonly serviceTag?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#virtual_network_subnet_id WindowsWebAppSlot#virtual_network_subnet_id}
-  */
-  readonly virtualNetworkSubnetId?: string;
-}
-
-export function windowsWebAppSlotSiteConfigIpRestrictionToTerraform(struct?: WindowsWebAppSlotSiteConfigIpRestriction | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    action: cdktf.stringToTerraform(struct!.action),
-    headers: cdktf.listMapper(windowsWebAppSlotSiteConfigIpRestrictionHeadersToTerraform, false)(struct!.headers),
-    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
-    name: cdktf.stringToTerraform(struct!.name),
-    priority: cdktf.numberToTerraform(struct!.priority),
-    service_tag: cdktf.stringToTerraform(struct!.serviceTag),
-    virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
-  }
-}
-
-export class WindowsWebAppSlotSiteConfigIpRestrictionOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): WindowsWebAppSlotSiteConfigIpRestriction | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._action !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.action = this._action;
-    }
-    if (this._headers?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.headers = this._headers?.internalValue;
-    }
-    if (this._ipAddress !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.ipAddress = this._ipAddress;
-    }
-    if (this._name !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.name = this._name;
-    }
-    if (this._priority !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.priority = this._priority;
-    }
-    if (this._serviceTag !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.serviceTag = this._serviceTag;
-    }
-    if (this._virtualNetworkSubnetId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.virtualNetworkSubnetId = this._virtualNetworkSubnetId;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: WindowsWebAppSlotSiteConfigIpRestriction | cdktf.IResolvable | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._action = undefined;
-      this._headers.internalValue = undefined;
-      this._ipAddress = undefined;
-      this._name = undefined;
-      this._priority = undefined;
-      this._serviceTag = undefined;
-      this._virtualNetworkSubnetId = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._action = value.action;
-      this._headers.internalValue = value.headers;
-      this._ipAddress = value.ipAddress;
-      this._name = value.name;
-      this._priority = value.priority;
-      this._serviceTag = value.serviceTag;
-      this._virtualNetworkSubnetId = value.virtualNetworkSubnetId;
-    }
-  }
-
-  // action - computed: true, optional: true, required: false
-  private _action?: string; 
-  public get action() {
-    return this.getStringAttribute('action');
-  }
-  public set action(value: string) {
-    this._action = value;
-  }
-  public resetAction() {
-    this._action = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get actionInput() {
-    return this._action;
-  }
-
-  // headers - computed: true, optional: true, required: false
-  private _headers = new WindowsWebAppSlotSiteConfigIpRestrictionHeadersList(this, "headers", false);
-  public get headers() {
-    return this._headers;
-  }
-  public putHeaders(value: WindowsWebAppSlotSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable) {
-    this._headers.internalValue = value;
-  }
-  public resetHeaders() {
-    this._headers.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get headersInput() {
-    return this._headers.internalValue;
-  }
-
-  // ip_address - computed: true, optional: true, required: false
-  private _ipAddress?: string; 
-  public get ipAddress() {
-    return this.getStringAttribute('ip_address');
-  }
-  public set ipAddress(value: string) {
-    this._ipAddress = value;
-  }
-  public resetIpAddress() {
-    this._ipAddress = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get ipAddressInput() {
-    return this._ipAddress;
-  }
-
-  // name - computed: true, optional: true, required: false
-  private _name?: string; 
-  public get name() {
-    return this.getStringAttribute('name');
-  }
-  public set name(value: string) {
-    this._name = value;
-  }
-  public resetName() {
-    this._name = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get nameInput() {
-    return this._name;
-  }
-
-  // priority - computed: true, optional: true, required: false
-  private _priority?: number; 
-  public get priority() {
-    return this.getNumberAttribute('priority');
-  }
-  public set priority(value: number) {
-    this._priority = value;
-  }
-  public resetPriority() {
-    this._priority = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get priorityInput() {
-    return this._priority;
-  }
-
-  // service_tag - computed: true, optional: true, required: false
-  private _serviceTag?: string; 
-  public get serviceTag() {
-    return this.getStringAttribute('service_tag');
-  }
-  public set serviceTag(value: string) {
-    this._serviceTag = value;
-  }
-  public resetServiceTag() {
-    this._serviceTag = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get serviceTagInput() {
-    return this._serviceTag;
-  }
-
-  // virtual_network_subnet_id - computed: true, optional: true, required: false
-  private _virtualNetworkSubnetId?: string; 
-  public get virtualNetworkSubnetId() {
-    return this.getStringAttribute('virtual_network_subnet_id');
-  }
-  public set virtualNetworkSubnetId(value: string) {
-    this._virtualNetworkSubnetId = value;
-  }
-  public resetVirtualNetworkSubnetId() {
-    this._virtualNetworkSubnetId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get virtualNetworkSubnetIdInput() {
-    return this._virtualNetworkSubnetId;
-  }
-}
-
-export class WindowsWebAppSlotSiteConfigIpRestrictionList extends cdktf.ComplexList {
-  public internalValue? : WindowsWebAppSlotSiteConfigIpRestriction[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): WindowsWebAppSlotSiteConfigIpRestrictionOutputReference {
-    return new WindowsWebAppSlotSiteConfigIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_azure_fdid WindowsWebAppSlot#x_azure_fdid}
-  */
-  readonly xAzureFdid?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_fd_health_probe WindowsWebAppSlot#x_fd_health_probe}
-  */
-  readonly xFdHealthProbe?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_forwarded_for WindowsWebAppSlot#x_forwarded_for}
-  */
-  readonly xForwardedFor?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_forwarded_host WindowsWebAppSlot#x_forwarded_host}
-  */
-  readonly xForwardedHost?: string[];
-}
-
-export function windowsWebAppSlotSiteConfigScmIpRestrictionHeadersToTerraform(struct?: WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
-    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
-    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
-    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
-  }
-}
-
-export class WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._xAzureFdid !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xAzureFdid = this._xAzureFdid;
-    }
-    if (this._xFdHealthProbe !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xFdHealthProbe = this._xFdHealthProbe;
-    }
-    if (this._xForwardedFor !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xForwardedFor = this._xForwardedFor;
-    }
-    if (this._xForwardedHost !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xForwardedHost = this._xForwardedHost;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._xAzureFdid = undefined;
-      this._xFdHealthProbe = undefined;
-      this._xForwardedFor = undefined;
-      this._xForwardedHost = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._xAzureFdid = value.xAzureFdid;
-      this._xFdHealthProbe = value.xFdHealthProbe;
-      this._xForwardedFor = value.xForwardedFor;
-      this._xForwardedHost = value.xForwardedHost;
-    }
-  }
-
-  // x_azure_fdid - computed: true, optional: true, required: false
-  private _xAzureFdid?: string[]; 
-  public get xAzureFdid() {
-    return this.getListAttribute('x_azure_fdid');
-  }
-  public set xAzureFdid(value: string[]) {
-    this._xAzureFdid = value;
-  }
-  public resetXAzureFdid() {
-    this._xAzureFdid = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xAzureFdidInput() {
-    return this._xAzureFdid;
-  }
-
-  // x_fd_health_probe - computed: true, optional: true, required: false
-  private _xFdHealthProbe?: string[]; 
-  public get xFdHealthProbe() {
-    return this.getListAttribute('x_fd_health_probe');
-  }
-  public set xFdHealthProbe(value: string[]) {
-    this._xFdHealthProbe = value;
-  }
-  public resetXFdHealthProbe() {
-    this._xFdHealthProbe = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xFdHealthProbeInput() {
-    return this._xFdHealthProbe;
-  }
-
-  // x_forwarded_for - computed: true, optional: true, required: false
-  private _xForwardedFor?: string[]; 
-  public get xForwardedFor() {
-    return this.getListAttribute('x_forwarded_for');
-  }
-  public set xForwardedFor(value: string[]) {
-    this._xForwardedFor = value;
-  }
-  public resetXForwardedFor() {
-    this._xForwardedFor = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xForwardedForInput() {
-    return this._xForwardedFor;
-  }
-
-  // x_forwarded_host - computed: true, optional: true, required: false
-  private _xForwardedHost?: string[]; 
-  public get xForwardedHost() {
-    return this.getListAttribute('x_forwarded_host');
-  }
-  public set xForwardedHost(value: string[]) {
-    this._xForwardedHost = value;
-  }
-  public resetXForwardedHost() {
-    this._xForwardedHost = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xForwardedHostInput() {
-    return this._xForwardedHost;
-  }
-}
-
-export class WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersList extends cdktf.ComplexList {
-  public internalValue? : WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference {
-    return new WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface WindowsWebAppSlotSiteConfigScmIpRestriction {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#action WindowsWebAppSlot#action}
-  */
-  readonly action?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#headers WindowsWebAppSlot#headers}
-  */
-  readonly headers?: WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#ip_address WindowsWebAppSlot#ip_address}
-  */
-  readonly ipAddress?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#name WindowsWebAppSlot#name}
-  */
-  readonly name?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#priority WindowsWebAppSlot#priority}
-  */
-  readonly priority?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#service_tag WindowsWebAppSlot#service_tag}
-  */
-  readonly serviceTag?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#virtual_network_subnet_id WindowsWebAppSlot#virtual_network_subnet_id}
-  */
-  readonly virtualNetworkSubnetId?: string;
-}
-
-export function windowsWebAppSlotSiteConfigScmIpRestrictionToTerraform(struct?: WindowsWebAppSlotSiteConfigScmIpRestriction | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    action: cdktf.stringToTerraform(struct!.action),
-    headers: cdktf.listMapper(windowsWebAppSlotSiteConfigScmIpRestrictionHeadersToTerraform, false)(struct!.headers),
-    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
-    name: cdktf.stringToTerraform(struct!.name),
-    priority: cdktf.numberToTerraform(struct!.priority),
-    service_tag: cdktf.stringToTerraform(struct!.serviceTag),
-    virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
-  }
-}
-
-export class WindowsWebAppSlotSiteConfigScmIpRestrictionOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): WindowsWebAppSlotSiteConfigScmIpRestriction | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._action !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.action = this._action;
-    }
-    if (this._headers?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.headers = this._headers?.internalValue;
-    }
-    if (this._ipAddress !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.ipAddress = this._ipAddress;
-    }
-    if (this._name !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.name = this._name;
-    }
-    if (this._priority !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.priority = this._priority;
-    }
-    if (this._serviceTag !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.serviceTag = this._serviceTag;
-    }
-    if (this._virtualNetworkSubnetId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.virtualNetworkSubnetId = this._virtualNetworkSubnetId;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: WindowsWebAppSlotSiteConfigScmIpRestriction | cdktf.IResolvable | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._action = undefined;
-      this._headers.internalValue = undefined;
-      this._ipAddress = undefined;
-      this._name = undefined;
-      this._priority = undefined;
-      this._serviceTag = undefined;
-      this._virtualNetworkSubnetId = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._action = value.action;
-      this._headers.internalValue = value.headers;
-      this._ipAddress = value.ipAddress;
-      this._name = value.name;
-      this._priority = value.priority;
-      this._serviceTag = value.serviceTag;
-      this._virtualNetworkSubnetId = value.virtualNetworkSubnetId;
-    }
-  }
-
-  // action - computed: true, optional: true, required: false
-  private _action?: string; 
-  public get action() {
-    return this.getStringAttribute('action');
-  }
-  public set action(value: string) {
-    this._action = value;
-  }
-  public resetAction() {
-    this._action = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get actionInput() {
-    return this._action;
-  }
-
-  // headers - computed: true, optional: true, required: false
-  private _headers = new WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersList(this, "headers", false);
-  public get headers() {
-    return this._headers;
-  }
-  public putHeaders(value: WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable) {
-    this._headers.internalValue = value;
-  }
-  public resetHeaders() {
-    this._headers.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get headersInput() {
-    return this._headers.internalValue;
-  }
-
-  // ip_address - computed: true, optional: true, required: false
-  private _ipAddress?: string; 
-  public get ipAddress() {
-    return this.getStringAttribute('ip_address');
-  }
-  public set ipAddress(value: string) {
-    this._ipAddress = value;
-  }
-  public resetIpAddress() {
-    this._ipAddress = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get ipAddressInput() {
-    return this._ipAddress;
-  }
-
-  // name - computed: true, optional: true, required: false
-  private _name?: string; 
-  public get name() {
-    return this.getStringAttribute('name');
-  }
-  public set name(value: string) {
-    this._name = value;
-  }
-  public resetName() {
-    this._name = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get nameInput() {
-    return this._name;
-  }
-
-  // priority - computed: true, optional: true, required: false
-  private _priority?: number; 
-  public get priority() {
-    return this.getNumberAttribute('priority');
-  }
-  public set priority(value: number) {
-    this._priority = value;
-  }
-  public resetPriority() {
-    this._priority = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get priorityInput() {
-    return this._priority;
-  }
-
-  // service_tag - computed: true, optional: true, required: false
-  private _serviceTag?: string; 
-  public get serviceTag() {
-    return this.getStringAttribute('service_tag');
-  }
-  public set serviceTag(value: string) {
-    this._serviceTag = value;
-  }
-  public resetServiceTag() {
-    this._serviceTag = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get serviceTagInput() {
-    return this._serviceTag;
-  }
-
-  // virtual_network_subnet_id - computed: true, optional: true, required: false
-  private _virtualNetworkSubnetId?: string; 
-  public get virtualNetworkSubnetId() {
-    return this.getStringAttribute('virtual_network_subnet_id');
-  }
-  public set virtualNetworkSubnetId(value: string) {
-    this._virtualNetworkSubnetId = value;
-  }
-  public resetVirtualNetworkSubnetId() {
-    this._virtualNetworkSubnetId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get virtualNetworkSubnetIdInput() {
-    return this._virtualNetworkSubnetId;
-  }
-}
-
-export class WindowsWebAppSlotSiteConfigScmIpRestrictionList extends cdktf.ComplexList {
-  public internalValue? : WindowsWebAppSlotSiteConfigScmIpRestriction[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): WindowsWebAppSlotSiteConfigScmIpRestrictionOutputReference {
-    return new WindowsWebAppSlotSiteConfigScmIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
 export interface WindowsWebAppSlotSiteConfigApplicationStack {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#current_stack WindowsWebAppSlot#current_stack}
@@ -7421,7 +6547,7 @@ export interface WindowsWebAppSlotSiteConfigCors {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#allowed_origins WindowsWebAppSlot#allowed_origins}
   */
-  readonly allowedOrigins: string[];
+  readonly allowedOrigins?: string[];
   /**
   * Are credentials allowed in CORS requests? Defaults to `false`.
   * 
@@ -7479,13 +6605,16 @@ export class WindowsWebAppSlotSiteConfigCorsOutputReference extends cdktf.Comple
     }
   }
 
-  // allowed_origins - computed: false, optional: false, required: true
+  // allowed_origins - computed: false, optional: true, required: false
   private _allowedOrigins?: string[]; 
   public get allowedOrigins() {
     return cdktf.Fn.tolist(this.getListAttribute('allowed_origins'));
   }
   public set allowedOrigins(value: string[]) {
     this._allowedOrigins = value;
+  }
+  public resetAllowedOrigins() {
+    this._allowedOrigins = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get allowedOriginsInput() {
@@ -7506,6 +6635,904 @@ export class WindowsWebAppSlotSiteConfigCorsOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get supportCredentialsInput() {
     return this._supportCredentials;
+  }
+}
+export interface WindowsWebAppSlotSiteConfigIpRestrictionHeaders {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_azure_fdid WindowsWebAppSlot#x_azure_fdid}
+  */
+  readonly xAzureFdid?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_fd_health_probe WindowsWebAppSlot#x_fd_health_probe}
+  */
+  readonly xFdHealthProbe?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_forwarded_for WindowsWebAppSlot#x_forwarded_for}
+  */
+  readonly xForwardedFor?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_forwarded_host WindowsWebAppSlot#x_forwarded_host}
+  */
+  readonly xForwardedHost?: string[];
+}
+
+export function windowsWebAppSlotSiteConfigIpRestrictionHeadersToTerraform(struct?: WindowsWebAppSlotSiteConfigIpRestrictionHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
+  }
+}
+
+export class WindowsWebAppSlotSiteConfigIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): WindowsWebAppSlotSiteConfigIpRestrictionHeaders | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._xAzureFdid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xAzureFdid = this._xAzureFdid;
+    }
+    if (this._xFdHealthProbe !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xFdHealthProbe = this._xFdHealthProbe;
+    }
+    if (this._xForwardedFor !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedFor = this._xForwardedFor;
+    }
+    if (this._xForwardedHost !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedHost = this._xForwardedHost;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsWebAppSlotSiteConfigIpRestrictionHeaders | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = undefined;
+      this._xFdHealthProbe = undefined;
+      this._xForwardedFor = undefined;
+      this._xForwardedHost = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = value.xAzureFdid;
+      this._xFdHealthProbe = value.xFdHealthProbe;
+      this._xForwardedFor = value.xForwardedFor;
+      this._xForwardedHost = value.xForwardedHost;
+    }
+  }
+
+  // x_azure_fdid - computed: false, optional: true, required: false
+  private _xAzureFdid?: string[]; 
+  public get xAzureFdid() {
+    return this.getListAttribute('x_azure_fdid');
+  }
+  public set xAzureFdid(value: string[]) {
+    this._xAzureFdid = value;
+  }
+  public resetXAzureFdid() {
+    this._xAzureFdid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xAzureFdidInput() {
+    return this._xAzureFdid;
+  }
+
+  // x_fd_health_probe - computed: false, optional: true, required: false
+  private _xFdHealthProbe?: string[]; 
+  public get xFdHealthProbe() {
+    return this.getListAttribute('x_fd_health_probe');
+  }
+  public set xFdHealthProbe(value: string[]) {
+    this._xFdHealthProbe = value;
+  }
+  public resetXFdHealthProbe() {
+    this._xFdHealthProbe = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xFdHealthProbeInput() {
+    return this._xFdHealthProbe;
+  }
+
+  // x_forwarded_for - computed: false, optional: true, required: false
+  private _xForwardedFor?: string[]; 
+  public get xForwardedFor() {
+    return this.getListAttribute('x_forwarded_for');
+  }
+  public set xForwardedFor(value: string[]) {
+    this._xForwardedFor = value;
+  }
+  public resetXForwardedFor() {
+    this._xForwardedFor = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedForInput() {
+    return this._xForwardedFor;
+  }
+
+  // x_forwarded_host - computed: false, optional: true, required: false
+  private _xForwardedHost?: string[]; 
+  public get xForwardedHost() {
+    return this.getListAttribute('x_forwarded_host');
+  }
+  public set xForwardedHost(value: string[]) {
+    this._xForwardedHost = value;
+  }
+  public resetXForwardedHost() {
+    this._xForwardedHost = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedHostInput() {
+    return this._xForwardedHost;
+  }
+}
+
+export class WindowsWebAppSlotSiteConfigIpRestrictionHeadersList extends cdktf.ComplexList {
+  public internalValue? : WindowsWebAppSlotSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): WindowsWebAppSlotSiteConfigIpRestrictionHeadersOutputReference {
+    return new WindowsWebAppSlotSiteConfigIpRestrictionHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface WindowsWebAppSlotSiteConfigIpRestriction {
+  /**
+  * The action to take. Possible values are `Allow` or `Deny`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#action WindowsWebAppSlot#action}
+  */
+  readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#headers WindowsWebAppSlot#headers}
+  */
+  readonly headers?: WindowsWebAppSlotSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable;
+  /**
+  * The CIDR notation of the IP or IP Range to match. For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#ip_address WindowsWebAppSlot#ip_address}
+  */
+  readonly ipAddress?: string;
+  /**
+  * The name which should be used for this `ip_restriction`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#name WindowsWebAppSlot#name}
+  */
+  readonly name?: string;
+  /**
+  * The priority value of this `ip_restriction`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#priority WindowsWebAppSlot#priority}
+  */
+  readonly priority?: number;
+  /**
+  * The Service Tag used for this IP Restriction.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#service_tag WindowsWebAppSlot#service_tag}
+  */
+  readonly serviceTag?: string;
+  /**
+  * The Virtual Network Subnet ID used for this IP Restriction.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#virtual_network_subnet_id WindowsWebAppSlot#virtual_network_subnet_id}
+  */
+  readonly virtualNetworkSubnetId?: string;
+}
+
+export function windowsWebAppSlotSiteConfigIpRestrictionToTerraform(struct?: WindowsWebAppSlotSiteConfigIpRestriction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    headers: cdktf.listMapper(windowsWebAppSlotSiteConfigIpRestrictionHeadersToTerraform, false)(struct!.headers),
+    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
+    name: cdktf.stringToTerraform(struct!.name),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    service_tag: cdktf.stringToTerraform(struct!.serviceTag),
+    virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
+  }
+}
+
+export class WindowsWebAppSlotSiteConfigIpRestrictionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): WindowsWebAppSlotSiteConfigIpRestriction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._headers?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headers = this._headers?.internalValue;
+    }
+    if (this._ipAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._serviceTag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceTag = this._serviceTag;
+    }
+    if (this._virtualNetworkSubnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkSubnetId = this._virtualNetworkSubnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsWebAppSlotSiteConfigIpRestriction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._headers.internalValue = undefined;
+      this._ipAddress = undefined;
+      this._name = undefined;
+      this._priority = undefined;
+      this._serviceTag = undefined;
+      this._virtualNetworkSubnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._headers.internalValue = value.headers;
+      this._ipAddress = value.ipAddress;
+      this._name = value.name;
+      this._priority = value.priority;
+      this._serviceTag = value.serviceTag;
+      this._virtualNetworkSubnetId = value.virtualNetworkSubnetId;
+    }
+  }
+
+  // action - computed: false, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // headers - computed: false, optional: true, required: false
+  private _headers = new WindowsWebAppSlotSiteConfigIpRestrictionHeadersList(this, "headers", false);
+  public get headers() {
+    return this._headers;
+  }
+  public putHeaders(value: WindowsWebAppSlotSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable) {
+    this._headers.internalValue = value;
+  }
+  public resetHeaders() {
+    this._headers.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headersInput() {
+    return this._headers.internalValue;
+  }
+
+  // ip_address - computed: false, optional: true, required: false
+  private _ipAddress?: string; 
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+  public set ipAddress(value: string) {
+    this._ipAddress = value;
+  }
+  public resetIpAddress() {
+    this._ipAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: false, optional: true, required: false
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // service_tag - computed: false, optional: true, required: false
+  private _serviceTag?: string; 
+  public get serviceTag() {
+    return this.getStringAttribute('service_tag');
+  }
+  public set serviceTag(value: string) {
+    this._serviceTag = value;
+  }
+  public resetServiceTag() {
+    this._serviceTag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceTagInput() {
+    return this._serviceTag;
+  }
+
+  // virtual_network_subnet_id - computed: false, optional: true, required: false
+  private _virtualNetworkSubnetId?: string; 
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+  public set virtualNetworkSubnetId(value: string) {
+    this._virtualNetworkSubnetId = value;
+  }
+  public resetVirtualNetworkSubnetId() {
+    this._virtualNetworkSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdInput() {
+    return this._virtualNetworkSubnetId;
+  }
+}
+
+export class WindowsWebAppSlotSiteConfigIpRestrictionList extends cdktf.ComplexList {
+  public internalValue? : WindowsWebAppSlotSiteConfigIpRestriction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): WindowsWebAppSlotSiteConfigIpRestrictionOutputReference {
+    return new WindowsWebAppSlotSiteConfigIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_azure_fdid WindowsWebAppSlot#x_azure_fdid}
+  */
+  readonly xAzureFdid?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_fd_health_probe WindowsWebAppSlot#x_fd_health_probe}
+  */
+  readonly xFdHealthProbe?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_forwarded_for WindowsWebAppSlot#x_forwarded_for}
+  */
+  readonly xForwardedFor?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#x_forwarded_host WindowsWebAppSlot#x_forwarded_host}
+  */
+  readonly xForwardedHost?: string[];
+}
+
+export function windowsWebAppSlotSiteConfigScmIpRestrictionHeadersToTerraform(struct?: WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
+  }
+}
+
+export class WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._xAzureFdid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xAzureFdid = this._xAzureFdid;
+    }
+    if (this._xFdHealthProbe !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xFdHealthProbe = this._xFdHealthProbe;
+    }
+    if (this._xForwardedFor !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedFor = this._xForwardedFor;
+    }
+    if (this._xForwardedHost !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedHost = this._xForwardedHost;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = undefined;
+      this._xFdHealthProbe = undefined;
+      this._xForwardedFor = undefined;
+      this._xForwardedHost = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = value.xAzureFdid;
+      this._xFdHealthProbe = value.xFdHealthProbe;
+      this._xForwardedFor = value.xForwardedFor;
+      this._xForwardedHost = value.xForwardedHost;
+    }
+  }
+
+  // x_azure_fdid - computed: false, optional: true, required: false
+  private _xAzureFdid?: string[]; 
+  public get xAzureFdid() {
+    return this.getListAttribute('x_azure_fdid');
+  }
+  public set xAzureFdid(value: string[]) {
+    this._xAzureFdid = value;
+  }
+  public resetXAzureFdid() {
+    this._xAzureFdid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xAzureFdidInput() {
+    return this._xAzureFdid;
+  }
+
+  // x_fd_health_probe - computed: false, optional: true, required: false
+  private _xFdHealthProbe?: string[]; 
+  public get xFdHealthProbe() {
+    return this.getListAttribute('x_fd_health_probe');
+  }
+  public set xFdHealthProbe(value: string[]) {
+    this._xFdHealthProbe = value;
+  }
+  public resetXFdHealthProbe() {
+    this._xFdHealthProbe = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xFdHealthProbeInput() {
+    return this._xFdHealthProbe;
+  }
+
+  // x_forwarded_for - computed: false, optional: true, required: false
+  private _xForwardedFor?: string[]; 
+  public get xForwardedFor() {
+    return this.getListAttribute('x_forwarded_for');
+  }
+  public set xForwardedFor(value: string[]) {
+    this._xForwardedFor = value;
+  }
+  public resetXForwardedFor() {
+    this._xForwardedFor = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedForInput() {
+    return this._xForwardedFor;
+  }
+
+  // x_forwarded_host - computed: false, optional: true, required: false
+  private _xForwardedHost?: string[]; 
+  public get xForwardedHost() {
+    return this.getListAttribute('x_forwarded_host');
+  }
+  public set xForwardedHost(value: string[]) {
+    this._xForwardedHost = value;
+  }
+  public resetXForwardedHost() {
+    this._xForwardedHost = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedHostInput() {
+    return this._xForwardedHost;
+  }
+}
+
+export class WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersList extends cdktf.ComplexList {
+  public internalValue? : WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference {
+    return new WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface WindowsWebAppSlotSiteConfigScmIpRestriction {
+  /**
+  * The action to take. Possible values are `Allow` or `Deny`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#action WindowsWebAppSlot#action}
+  */
+  readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#headers WindowsWebAppSlot#headers}
+  */
+  readonly headers?: WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable;
+  /**
+  * The CIDR notation of the IP or IP Range to match. For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#ip_address WindowsWebAppSlot#ip_address}
+  */
+  readonly ipAddress?: string;
+  /**
+  * The name which should be used for this `ip_restriction`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#name WindowsWebAppSlot#name}
+  */
+  readonly name?: string;
+  /**
+  * The priority value of this `ip_restriction`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#priority WindowsWebAppSlot#priority}
+  */
+  readonly priority?: number;
+  /**
+  * The Service Tag used for this IP Restriction.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#service_tag WindowsWebAppSlot#service_tag}
+  */
+  readonly serviceTag?: string;
+  /**
+  * The Virtual Network Subnet ID used for this IP Restriction.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#virtual_network_subnet_id WindowsWebAppSlot#virtual_network_subnet_id}
+  */
+  readonly virtualNetworkSubnetId?: string;
+}
+
+export function windowsWebAppSlotSiteConfigScmIpRestrictionToTerraform(struct?: WindowsWebAppSlotSiteConfigScmIpRestriction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    headers: cdktf.listMapper(windowsWebAppSlotSiteConfigScmIpRestrictionHeadersToTerraform, false)(struct!.headers),
+    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
+    name: cdktf.stringToTerraform(struct!.name),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    service_tag: cdktf.stringToTerraform(struct!.serviceTag),
+    virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
+  }
+}
+
+export class WindowsWebAppSlotSiteConfigScmIpRestrictionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): WindowsWebAppSlotSiteConfigScmIpRestriction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._headers?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headers = this._headers?.internalValue;
+    }
+    if (this._ipAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._serviceTag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceTag = this._serviceTag;
+    }
+    if (this._virtualNetworkSubnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkSubnetId = this._virtualNetworkSubnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsWebAppSlotSiteConfigScmIpRestriction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._headers.internalValue = undefined;
+      this._ipAddress = undefined;
+      this._name = undefined;
+      this._priority = undefined;
+      this._serviceTag = undefined;
+      this._virtualNetworkSubnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._headers.internalValue = value.headers;
+      this._ipAddress = value.ipAddress;
+      this._name = value.name;
+      this._priority = value.priority;
+      this._serviceTag = value.serviceTag;
+      this._virtualNetworkSubnetId = value.virtualNetworkSubnetId;
+    }
+  }
+
+  // action - computed: false, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // headers - computed: false, optional: true, required: false
+  private _headers = new WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersList(this, "headers", false);
+  public get headers() {
+    return this._headers;
+  }
+  public putHeaders(value: WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable) {
+    this._headers.internalValue = value;
+  }
+  public resetHeaders() {
+    this._headers.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headersInput() {
+    return this._headers.internalValue;
+  }
+
+  // ip_address - computed: false, optional: true, required: false
+  private _ipAddress?: string; 
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+  public set ipAddress(value: string) {
+    this._ipAddress = value;
+  }
+  public resetIpAddress() {
+    this._ipAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: false, optional: true, required: false
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // service_tag - computed: false, optional: true, required: false
+  private _serviceTag?: string; 
+  public get serviceTag() {
+    return this.getStringAttribute('service_tag');
+  }
+  public set serviceTag(value: string) {
+    this._serviceTag = value;
+  }
+  public resetServiceTag() {
+    this._serviceTag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceTagInput() {
+    return this._serviceTag;
+  }
+
+  // virtual_network_subnet_id - computed: false, optional: true, required: false
+  private _virtualNetworkSubnetId?: string; 
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+  public set virtualNetworkSubnetId(value: string) {
+    this._virtualNetworkSubnetId = value;
+  }
+  public resetVirtualNetworkSubnetId() {
+    this._virtualNetworkSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdInput() {
+    return this._virtualNetworkSubnetId;
+  }
+}
+
+export class WindowsWebAppSlotSiteConfigScmIpRestrictionList extends cdktf.ComplexList {
+  public internalValue? : WindowsWebAppSlotSiteConfigScmIpRestriction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): WindowsWebAppSlotSiteConfigScmIpRestrictionOutputReference {
+    return new WindowsWebAppSlotSiteConfigScmIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface WindowsWebAppSlotSiteConfigVirtualApplicationVirtualDirectory {
@@ -7859,10 +7886,6 @@ export interface WindowsWebAppSlotSiteConfig {
   */
   readonly http2Enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#ip_restriction WindowsWebAppSlot#ip_restriction}
-  */
-  readonly ipRestriction?: WindowsWebAppSlotSiteConfigIpRestriction[] | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#load_balancing_mode WindowsWebAppSlot#load_balancing_mode}
   */
   readonly loadBalancingMode?: string;
@@ -7886,10 +7909,6 @@ export interface WindowsWebAppSlotSiteConfig {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#remote_debugging_version WindowsWebAppSlot#remote_debugging_version}
   */
   readonly remoteDebuggingVersion?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#scm_ip_restriction WindowsWebAppSlot#scm_ip_restriction}
-  */
-  readonly scmIpRestriction?: WindowsWebAppSlotSiteConfigScmIpRestriction[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#scm_minimum_tls_version WindowsWebAppSlot#scm_minimum_tls_version}
   */
@@ -7935,6 +7954,18 @@ export interface WindowsWebAppSlotSiteConfig {
   */
   readonly cors?: WindowsWebAppSlotSiteConfigCors;
   /**
+  * ip_restriction block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#ip_restriction WindowsWebAppSlot#ip_restriction}
+  */
+  readonly ipRestriction?: WindowsWebAppSlotSiteConfigIpRestriction[] | cdktf.IResolvable;
+  /**
+  * scm_ip_restriction block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#scm_ip_restriction WindowsWebAppSlot#scm_ip_restriction}
+  */
+  readonly scmIpRestriction?: WindowsWebAppSlotSiteConfigScmIpRestriction[] | cdktf.IResolvable;
+  /**
   * virtual_application block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#virtual_application WindowsWebAppSlot#virtual_application}
@@ -7961,14 +7992,12 @@ export function windowsWebAppSlotSiteConfigToTerraform(struct?: WindowsWebAppSlo
     health_check_eviction_time_in_min: cdktf.numberToTerraform(struct!.healthCheckEvictionTimeInMin),
     health_check_path: cdktf.stringToTerraform(struct!.healthCheckPath),
     http2_enabled: cdktf.booleanToTerraform(struct!.http2Enabled),
-    ip_restriction: cdktf.listMapper(windowsWebAppSlotSiteConfigIpRestrictionToTerraform, false)(struct!.ipRestriction),
     load_balancing_mode: cdktf.stringToTerraform(struct!.loadBalancingMode),
     local_mysql_enabled: cdktf.booleanToTerraform(struct!.localMysqlEnabled),
     managed_pipeline_mode: cdktf.stringToTerraform(struct!.managedPipelineMode),
     minimum_tls_version: cdktf.stringToTerraform(struct!.minimumTlsVersion),
     remote_debugging_enabled: cdktf.booleanToTerraform(struct!.remoteDebuggingEnabled),
     remote_debugging_version: cdktf.stringToTerraform(struct!.remoteDebuggingVersion),
-    scm_ip_restriction: cdktf.listMapper(windowsWebAppSlotSiteConfigScmIpRestrictionToTerraform, false)(struct!.scmIpRestriction),
     scm_minimum_tls_version: cdktf.stringToTerraform(struct!.scmMinimumTlsVersion),
     scm_use_main_ip_restriction: cdktf.booleanToTerraform(struct!.scmUseMainIpRestriction),
     use_32_bit_worker: cdktf.booleanToTerraform(struct!.use32BitWorker),
@@ -7978,6 +8007,8 @@ export function windowsWebAppSlotSiteConfigToTerraform(struct?: WindowsWebAppSlo
     application_stack: windowsWebAppSlotSiteConfigApplicationStackToTerraform(struct!.applicationStack),
     auto_heal_setting: windowsWebAppSlotSiteConfigAutoHealSettingToTerraform(struct!.autoHealSetting),
     cors: windowsWebAppSlotSiteConfigCorsToTerraform(struct!.cors),
+    ip_restriction: cdktf.listMapper(windowsWebAppSlotSiteConfigIpRestrictionToTerraform, true)(struct!.ipRestriction),
+    scm_ip_restriction: cdktf.listMapper(windowsWebAppSlotSiteConfigScmIpRestrictionToTerraform, true)(struct!.scmIpRestriction),
     virtual_application: cdktf.listMapper(windowsWebAppSlotSiteConfigVirtualApplicationToTerraform, true)(struct!.virtualApplication),
   }
 }
@@ -8048,10 +8079,6 @@ export class WindowsWebAppSlotSiteConfigOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.http2Enabled = this._http2Enabled;
     }
-    if (this._ipRestriction?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.ipRestriction = this._ipRestriction?.internalValue;
-    }
     if (this._loadBalancingMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.loadBalancingMode = this._loadBalancingMode;
@@ -8075,10 +8102,6 @@ export class WindowsWebAppSlotSiteConfigOutputReference extends cdktf.ComplexObj
     if (this._remoteDebuggingVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.remoteDebuggingVersion = this._remoteDebuggingVersion;
-    }
-    if (this._scmIpRestriction?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.scmIpRestriction = this._scmIpRestriction?.internalValue;
     }
     if (this._scmMinimumTlsVersion !== undefined) {
       hasAnyValues = true;
@@ -8116,6 +8139,14 @@ export class WindowsWebAppSlotSiteConfigOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.cors = this._cors?.internalValue;
     }
+    if (this._ipRestriction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipRestriction = this._ipRestriction?.internalValue;
+    }
+    if (this._scmIpRestriction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scmIpRestriction = this._scmIpRestriction?.internalValue;
+    }
     if (this._virtualApplication?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualApplication = this._virtualApplication?.internalValue;
@@ -8139,14 +8170,12 @@ export class WindowsWebAppSlotSiteConfigOutputReference extends cdktf.ComplexObj
       this._healthCheckEvictionTimeInMin = undefined;
       this._healthCheckPath = undefined;
       this._http2Enabled = undefined;
-      this._ipRestriction.internalValue = undefined;
       this._loadBalancingMode = undefined;
       this._localMysqlEnabled = undefined;
       this._managedPipelineMode = undefined;
       this._minimumTlsVersion = undefined;
       this._remoteDebuggingEnabled = undefined;
       this._remoteDebuggingVersion = undefined;
-      this._scmIpRestriction.internalValue = undefined;
       this._scmMinimumTlsVersion = undefined;
       this._scmUseMainIpRestriction = undefined;
       this._use32BitWorker = undefined;
@@ -8156,6 +8185,8 @@ export class WindowsWebAppSlotSiteConfigOutputReference extends cdktf.ComplexObj
       this._applicationStack.internalValue = undefined;
       this._autoHealSetting.internalValue = undefined;
       this._cors.internalValue = undefined;
+      this._ipRestriction.internalValue = undefined;
+      this._scmIpRestriction.internalValue = undefined;
       this._virtualApplication.internalValue = undefined;
     }
     else {
@@ -8173,14 +8204,12 @@ export class WindowsWebAppSlotSiteConfigOutputReference extends cdktf.ComplexObj
       this._healthCheckEvictionTimeInMin = value.healthCheckEvictionTimeInMin;
       this._healthCheckPath = value.healthCheckPath;
       this._http2Enabled = value.http2Enabled;
-      this._ipRestriction.internalValue = value.ipRestriction;
       this._loadBalancingMode = value.loadBalancingMode;
       this._localMysqlEnabled = value.localMysqlEnabled;
       this._managedPipelineMode = value.managedPipelineMode;
       this._minimumTlsVersion = value.minimumTlsVersion;
       this._remoteDebuggingEnabled = value.remoteDebuggingEnabled;
       this._remoteDebuggingVersion = value.remoteDebuggingVersion;
-      this._scmIpRestriction.internalValue = value.scmIpRestriction;
       this._scmMinimumTlsVersion = value.scmMinimumTlsVersion;
       this._scmUseMainIpRestriction = value.scmUseMainIpRestriction;
       this._use32BitWorker = value.use32BitWorker;
@@ -8190,6 +8219,8 @@ export class WindowsWebAppSlotSiteConfigOutputReference extends cdktf.ComplexObj
       this._applicationStack.internalValue = value.applicationStack;
       this._autoHealSetting.internalValue = value.autoHealSetting;
       this._cors.internalValue = value.cors;
+      this._ipRestriction.internalValue = value.ipRestriction;
+      this._scmIpRestriction.internalValue = value.scmIpRestriction;
       this._virtualApplication.internalValue = value.virtualApplication;
     }
   }
@@ -8407,22 +8438,6 @@ export class WindowsWebAppSlotSiteConfigOutputReference extends cdktf.ComplexObj
     return this._http2Enabled;
   }
 
-  // ip_restriction - computed: true, optional: true, required: false
-  private _ipRestriction = new WindowsWebAppSlotSiteConfigIpRestrictionList(this, "ip_restriction", false);
-  public get ipRestriction() {
-    return this._ipRestriction;
-  }
-  public putIpRestriction(value: WindowsWebAppSlotSiteConfigIpRestriction[] | cdktf.IResolvable) {
-    this._ipRestriction.internalValue = value;
-  }
-  public resetIpRestriction() {
-    this._ipRestriction.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get ipRestrictionInput() {
-    return this._ipRestriction.internalValue;
-  }
-
   // load_balancing_mode - computed: false, optional: true, required: false
   private _loadBalancingMode?: string; 
   public get loadBalancingMode() {
@@ -8517,22 +8532,6 @@ export class WindowsWebAppSlotSiteConfigOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get remoteDebuggingVersionInput() {
     return this._remoteDebuggingVersion;
-  }
-
-  // scm_ip_restriction - computed: true, optional: true, required: false
-  private _scmIpRestriction = new WindowsWebAppSlotSiteConfigScmIpRestrictionList(this, "scm_ip_restriction", false);
-  public get scmIpRestriction() {
-    return this._scmIpRestriction;
-  }
-  public putScmIpRestriction(value: WindowsWebAppSlotSiteConfigScmIpRestriction[] | cdktf.IResolvable) {
-    this._scmIpRestriction.internalValue = value;
-  }
-  public resetScmIpRestriction() {
-    this._scmIpRestriction.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get scmIpRestrictionInput() {
-    return this._scmIpRestriction.internalValue;
   }
 
   // scm_minimum_tls_version - computed: false, optional: true, required: false
@@ -8687,6 +8686,38 @@ export class WindowsWebAppSlotSiteConfigOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get corsInput() {
     return this._cors.internalValue;
+  }
+
+  // ip_restriction - computed: false, optional: true, required: false
+  private _ipRestriction = new WindowsWebAppSlotSiteConfigIpRestrictionList(this, "ip_restriction", false);
+  public get ipRestriction() {
+    return this._ipRestriction;
+  }
+  public putIpRestriction(value: WindowsWebAppSlotSiteConfigIpRestriction[] | cdktf.IResolvable) {
+    this._ipRestriction.internalValue = value;
+  }
+  public resetIpRestriction() {
+    this._ipRestriction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRestrictionInput() {
+    return this._ipRestriction.internalValue;
+  }
+
+  // scm_ip_restriction - computed: false, optional: true, required: false
+  private _scmIpRestriction = new WindowsWebAppSlotSiteConfigScmIpRestrictionList(this, "scm_ip_restriction", false);
+  public get scmIpRestriction() {
+    return this._scmIpRestriction;
+  }
+  public putScmIpRestriction(value: WindowsWebAppSlotSiteConfigScmIpRestriction[] | cdktf.IResolvable) {
+    this._scmIpRestriction.internalValue = value;
+  }
+  public resetScmIpRestriction() {
+    this._scmIpRestriction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scmIpRestrictionInput() {
+    return this._scmIpRestriction.internalValue;
   }
 
   // virtual_application - computed: false, optional: true, required: false
@@ -9105,7 +9136,7 @@ export class WindowsWebAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_web_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

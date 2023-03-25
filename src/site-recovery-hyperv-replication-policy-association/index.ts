@@ -189,7 +189,7 @@ export class SiteRecoveryHypervReplicationPolicyAssociation extends cdktf.Terraf
       terraformResourceType: 'azurerm_site_recovery_hyperv_replication_policy_association',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

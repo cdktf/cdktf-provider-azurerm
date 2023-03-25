@@ -131,7 +131,7 @@ export class DataAzurermSignalrService extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_signalr_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -151,6 +151,11 @@ export class DataAzurermSignalrService extends cdktf.TerraformDataSource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // aad_auth_enabled - computed: true, optional: false, required: false
+  public get aadAuthEnabled() {
+    return this.getBooleanAttribute('aad_auth_enabled');
+  }
 
   // hostname - computed: true, optional: false, required: false
   public get hostname() {
@@ -176,6 +181,11 @@ export class DataAzurermSignalrService extends cdktf.TerraformDataSource {
   // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
+  }
+
+  // local_auth_enabled - computed: true, optional: false, required: false
+  public get localAuthEnabled() {
+    return this.getBooleanAttribute('local_auth_enabled');
   }
 
   // location - computed: true, optional: false, required: false
@@ -204,6 +214,11 @@ export class DataAzurermSignalrService extends cdktf.TerraformDataSource {
   // primary_connection_string - computed: true, optional: false, required: false
   public get primaryConnectionString() {
     return this.getStringAttribute('primary_connection_string');
+  }
+
+  // public_network_access_enabled - computed: true, optional: false, required: false
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
 
   // public_port - computed: true, optional: false, required: false
@@ -239,10 +254,20 @@ export class DataAzurermSignalrService extends cdktf.TerraformDataSource {
     return this.getNumberAttribute('server_port');
   }
 
+  // serverless_connection_timeout_in_seconds - computed: true, optional: false, required: false
+  public get serverlessConnectionTimeoutInSeconds() {
+    return this.getNumberAttribute('serverless_connection_timeout_in_seconds');
+  }
+
   // tags - computed: true, optional: false, required: false
   private _tags = new cdktf.StringMap(this, "tags");
   public get tags() {
     return this._tags;
+  }
+
+  // tls_client_cert_enabled - computed: true, optional: false, required: false
+  public get tlsClientCertEnabled() {
+    return this.getBooleanAttribute('tls_client_cert_enabled');
   }
 
   // timeouts - computed: false, optional: true, required: false

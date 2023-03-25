@@ -213,7 +213,7 @@ export class AutomationAccountEncryptionOutputReference extends cdktf.ComplexObj
     }
   }
 
-  // key_source - computed: true, optional: true, required: false
+  // key_source - computed: false, optional: true, required: false
   private _keySource?: string; 
   public get keySource() {
     return this.getStringAttribute('key_source');
@@ -560,7 +560,7 @@ export class AutomationAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_automation_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -21,11 +21,15 @@ export interface SentinelLogAnalyticsWorkspaceOnboardingConfig extends cdktf.Ter
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_log_analytics_workspace_onboarding#resource_group_name SentinelLogAnalyticsWorkspaceOnboarding#resource_group_name}
   */
-  readonly resourceGroupName: string;
+  readonly resourceGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_log_analytics_workspace_onboarding#workspace_id SentinelLogAnalyticsWorkspaceOnboarding#workspace_id}
+  */
+  readonly workspaceId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_log_analytics_workspace_onboarding#workspace_name SentinelLogAnalyticsWorkspaceOnboarding#workspace_name}
   */
-  readonly workspaceName: string;
+  readonly workspaceName?: string;
   /**
   * timeouts block
   * 
@@ -182,14 +186,14 @@ export class SentinelLogAnalyticsWorkspaceOnboarding extends cdktf.TerraformReso
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options SentinelLogAnalyticsWorkspaceOnboardingConfig
+  * @param options SentinelLogAnalyticsWorkspaceOnboardingConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: SentinelLogAnalyticsWorkspaceOnboardingConfig) {
+  public constructor(scope: Construct, id: string, config: SentinelLogAnalyticsWorkspaceOnboardingConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_log_analytics_workspace_onboarding',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -203,6 +207,7 @@ export class SentinelLogAnalyticsWorkspaceOnboarding extends cdktf.TerraformReso
     this._customerManagedKeyEnabled = config.customerManagedKeyEnabled;
     this._id = config.id;
     this._resourceGroupName = config.resourceGroupName;
+    this._workspaceId = config.workspaceId;
     this._workspaceName = config.workspaceName;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -243,7 +248,7 @@ export class SentinelLogAnalyticsWorkspaceOnboarding extends cdktf.TerraformReso
     return this._id;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
+  // resource_group_name - computed: true, optional: true, required: false
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
@@ -251,18 +256,40 @@ export class SentinelLogAnalyticsWorkspaceOnboarding extends cdktf.TerraformReso
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  public resetResourceGroupName() {
+    this._resourceGroupName = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName;
   }
 
-  // workspace_name - computed: false, optional: false, required: true
+  // workspace_id - computed: true, optional: true, required: false
+  private _workspaceId?: string; 
+  public get workspaceId() {
+    return this.getStringAttribute('workspace_id');
+  }
+  public set workspaceId(value: string) {
+    this._workspaceId = value;
+  }
+  public resetWorkspaceId() {
+    this._workspaceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workspaceIdInput() {
+    return this._workspaceId;
+  }
+
+  // workspace_name - computed: true, optional: true, required: false
   private _workspaceName?: string; 
   public get workspaceName() {
     return this.getStringAttribute('workspace_name');
   }
   public set workspaceName(value: string) {
     this._workspaceName = value;
+  }
+  public resetWorkspaceName() {
+    this._workspaceName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get workspaceNameInput() {
@@ -294,6 +321,7 @@ export class SentinelLogAnalyticsWorkspaceOnboarding extends cdktf.TerraformReso
       customer_managed_key_enabled: cdktf.booleanToTerraform(this._customerManagedKeyEnabled),
       id: cdktf.stringToTerraform(this._id),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      workspace_id: cdktf.stringToTerraform(this._workspaceId),
       workspace_name: cdktf.stringToTerraform(this._workspaceName),
       timeouts: sentinelLogAnalyticsWorkspaceOnboardingTimeoutsToTerraform(this._timeouts.internalValue),
     };

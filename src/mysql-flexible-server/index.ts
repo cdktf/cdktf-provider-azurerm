@@ -121,6 +121,14 @@ export interface MysqlFlexibleServerConfig extends cdktf.TerraformMetaArguments 
 }
 export interface MysqlFlexibleServerCustomerManagedKey {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server#geo_backup_key_vault_key_id MysqlFlexibleServer#geo_backup_key_vault_key_id}
+  */
+  readonly geoBackupKeyVaultKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server#geo_backup_user_assigned_identity_id MysqlFlexibleServer#geo_backup_user_assigned_identity_id}
+  */
+  readonly geoBackupUserAssignedIdentityId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server#key_vault_key_id MysqlFlexibleServer#key_vault_key_id}
   */
   readonly keyVaultKeyId?: string;
@@ -136,6 +144,8 @@ export function mysqlFlexibleServerCustomerManagedKeyToTerraform(struct?: MysqlF
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    geo_backup_key_vault_key_id: cdktf.stringToTerraform(struct!.geoBackupKeyVaultKeyId),
+    geo_backup_user_assigned_identity_id: cdktf.stringToTerraform(struct!.geoBackupUserAssignedIdentityId),
     key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
     primary_user_assigned_identity_id: cdktf.stringToTerraform(struct!.primaryUserAssignedIdentityId),
   }
@@ -155,6 +165,14 @@ export class MysqlFlexibleServerCustomerManagedKeyOutputReference extends cdktf.
   public get internalValue(): MysqlFlexibleServerCustomerManagedKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._geoBackupKeyVaultKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.geoBackupKeyVaultKeyId = this._geoBackupKeyVaultKeyId;
+    }
+    if (this._geoBackupUserAssignedIdentityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.geoBackupUserAssignedIdentityId = this._geoBackupUserAssignedIdentityId;
+    }
     if (this._keyVaultKeyId !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyVaultKeyId = this._keyVaultKeyId;
@@ -169,14 +187,50 @@ export class MysqlFlexibleServerCustomerManagedKeyOutputReference extends cdktf.
   public set internalValue(value: MysqlFlexibleServerCustomerManagedKey | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._geoBackupKeyVaultKeyId = undefined;
+      this._geoBackupUserAssignedIdentityId = undefined;
       this._keyVaultKeyId = undefined;
       this._primaryUserAssignedIdentityId = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._geoBackupKeyVaultKeyId = value.geoBackupKeyVaultKeyId;
+      this._geoBackupUserAssignedIdentityId = value.geoBackupUserAssignedIdentityId;
       this._keyVaultKeyId = value.keyVaultKeyId;
       this._primaryUserAssignedIdentityId = value.primaryUserAssignedIdentityId;
     }
+  }
+
+  // geo_backup_key_vault_key_id - computed: false, optional: true, required: false
+  private _geoBackupKeyVaultKeyId?: string; 
+  public get geoBackupKeyVaultKeyId() {
+    return this.getStringAttribute('geo_backup_key_vault_key_id');
+  }
+  public set geoBackupKeyVaultKeyId(value: string) {
+    this._geoBackupKeyVaultKeyId = value;
+  }
+  public resetGeoBackupKeyVaultKeyId() {
+    this._geoBackupKeyVaultKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get geoBackupKeyVaultKeyIdInput() {
+    return this._geoBackupKeyVaultKeyId;
+  }
+
+  // geo_backup_user_assigned_identity_id - computed: false, optional: true, required: false
+  private _geoBackupUserAssignedIdentityId?: string; 
+  public get geoBackupUserAssignedIdentityId() {
+    return this.getStringAttribute('geo_backup_user_assigned_identity_id');
+  }
+  public set geoBackupUserAssignedIdentityId(value: string) {
+    this._geoBackupUserAssignedIdentityId = value;
+  }
+  public resetGeoBackupUserAssignedIdentityId() {
+    this._geoBackupUserAssignedIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get geoBackupUserAssignedIdentityIdInput() {
+    return this._geoBackupUserAssignedIdentityId;
   }
 
   // key_vault_key_id - computed: false, optional: true, required: false
@@ -820,7 +874,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mysql_flexible_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#aad_auth_enabled SignalrService#aad_auth_enabled}
+  */
+  readonly aadAuthEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#connectivity_logs_enabled SignalrService#connectivity_logs_enabled}
   */
   readonly connectivityLogsEnabled?: boolean | cdktf.IResolvable;
@@ -23,6 +27,10 @@ export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly liveTraceEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#local_auth_enabled SignalrService#local_auth_enabled}
+  */
+  readonly localAuthEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#location SignalrService#location}
   */
   readonly location: string;
@@ -35,9 +43,17 @@ export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#public_network_access_enabled SignalrService#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#resource_group_name SignalrService#resource_group_name}
   */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#serverless_connection_timeout_in_seconds SignalrService#serverless_connection_timeout_in_seconds}
+  */
+  readonly serverlessConnectionTimeoutInSeconds?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#service_mode SignalrService#service_mode}
   */
@@ -47,11 +63,21 @@ export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#tls_client_cert_enabled SignalrService#tls_client_cert_enabled}
+  */
+  readonly tlsClientCertEnabled?: boolean | cdktf.IResolvable;
+  /**
   * cors block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#cors SignalrService#cors}
   */
   readonly cors?: SignalrServiceCors[] | cdktf.IResolvable;
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#identity SignalrService#identity}
+  */
+  readonly identity?: SignalrServiceIdentity;
   /**
   * live_trace block
   * 
@@ -169,6 +195,105 @@ export class SignalrServiceCorsList extends cdktf.ComplexList {
   */
   public get(index: number): SignalrServiceCorsOutputReference {
     return new SignalrServiceCorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SignalrServiceIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#identity_ids SignalrService#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#type SignalrService#type}
+  */
+  readonly type: string;
+}
+
+export function signalrServiceIdentityToTerraform(struct?: SignalrServiceIdentityOutputReference | SignalrServiceIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class SignalrServiceIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SignalrServiceIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SignalrServiceIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
   }
 }
 export interface SignalrServiceLiveTrace {
@@ -752,7 +877,7 @@ export class SignalrService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_signalr_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -763,16 +888,22 @@ export class SignalrService extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._aadAuthEnabled = config.aadAuthEnabled;
     this._connectivityLogsEnabled = config.connectivityLogsEnabled;
     this._id = config.id;
     this._liveTraceEnabled = config.liveTraceEnabled;
+    this._localAuthEnabled = config.localAuthEnabled;
     this._location = config.location;
     this._messagingLogsEnabled = config.messagingLogsEnabled;
     this._name = config.name;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
+    this._serverlessConnectionTimeoutInSeconds = config.serverlessConnectionTimeoutInSeconds;
     this._serviceMode = config.serviceMode;
     this._tags = config.tags;
+    this._tlsClientCertEnabled = config.tlsClientCertEnabled;
     this._cors.internalValue = config.cors;
+    this._identity.internalValue = config.identity;
     this._liveTrace.internalValue = config.liveTrace;
     this._sku.internalValue = config.sku;
     this._timeouts.internalValue = config.timeouts;
@@ -782,6 +913,22 @@ export class SignalrService extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // aad_auth_enabled - computed: false, optional: true, required: false
+  private _aadAuthEnabled?: boolean | cdktf.IResolvable; 
+  public get aadAuthEnabled() {
+    return this.getBooleanAttribute('aad_auth_enabled');
+  }
+  public set aadAuthEnabled(value: boolean | cdktf.IResolvable) {
+    this._aadAuthEnabled = value;
+  }
+  public resetAadAuthEnabled() {
+    this._aadAuthEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aadAuthEnabledInput() {
+    return this._aadAuthEnabled;
+  }
 
   // connectivity_logs_enabled - computed: false, optional: true, required: false
   private _connectivityLogsEnabled?: boolean | cdktf.IResolvable; 
@@ -841,6 +988,22 @@ export class SignalrService extends cdktf.TerraformResource {
     return this._liveTraceEnabled;
   }
 
+  // local_auth_enabled - computed: false, optional: true, required: false
+  private _localAuthEnabled?: boolean | cdktf.IResolvable; 
+  public get localAuthEnabled() {
+    return this.getBooleanAttribute('local_auth_enabled');
+  }
+  public set localAuthEnabled(value: boolean | cdktf.IResolvable) {
+    this._localAuthEnabled = value;
+  }
+  public resetLocalAuthEnabled() {
+    this._localAuthEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAuthEnabledInput() {
+    return this._localAuthEnabled;
+  }
+
   // location - computed: false, optional: false, required: true
   private _location?: string; 
   public get location() {
@@ -893,6 +1056,22 @@ export class SignalrService extends cdktf.TerraformResource {
     return this.getStringAttribute('primary_connection_string');
   }
 
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
+  }
+
   // public_port - computed: true, optional: false, required: false
   public get publicPort() {
     return this.getNumberAttribute('public_port');
@@ -924,6 +1103,22 @@ export class SignalrService extends cdktf.TerraformResource {
   // server_port - computed: true, optional: false, required: false
   public get serverPort() {
     return this.getNumberAttribute('server_port');
+  }
+
+  // serverless_connection_timeout_in_seconds - computed: false, optional: true, required: false
+  private _serverlessConnectionTimeoutInSeconds?: number; 
+  public get serverlessConnectionTimeoutInSeconds() {
+    return this.getNumberAttribute('serverless_connection_timeout_in_seconds');
+  }
+  public set serverlessConnectionTimeoutInSeconds(value: number) {
+    this._serverlessConnectionTimeoutInSeconds = value;
+  }
+  public resetServerlessConnectionTimeoutInSeconds() {
+    this._serverlessConnectionTimeoutInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverlessConnectionTimeoutInSecondsInput() {
+    return this._serverlessConnectionTimeoutInSeconds;
   }
 
   // service_mode - computed: false, optional: true, required: false
@@ -958,6 +1153,22 @@ export class SignalrService extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // tls_client_cert_enabled - computed: false, optional: true, required: false
+  private _tlsClientCertEnabled?: boolean | cdktf.IResolvable; 
+  public get tlsClientCertEnabled() {
+    return this.getBooleanAttribute('tls_client_cert_enabled');
+  }
+  public set tlsClientCertEnabled(value: boolean | cdktf.IResolvable) {
+    this._tlsClientCertEnabled = value;
+  }
+  public resetTlsClientCertEnabled() {
+    this._tlsClientCertEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tlsClientCertEnabledInput() {
+    return this._tlsClientCertEnabled;
+  }
+
   // cors - computed: false, optional: true, required: false
   private _cors = new SignalrServiceCorsList(this, "cors", false);
   public get cors() {
@@ -972,6 +1183,22 @@ export class SignalrService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get corsInput() {
     return this._cors.internalValue;
+  }
+
+  // identity - computed: false, optional: true, required: false
+  private _identity = new SignalrServiceIdentityOutputReference(this, "identity");
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: SignalrServiceIdentity) {
+    this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
   }
 
   // live_trace - computed: false, optional: true, required: false
@@ -1041,16 +1268,22 @@ export class SignalrService extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      aad_auth_enabled: cdktf.booleanToTerraform(this._aadAuthEnabled),
       connectivity_logs_enabled: cdktf.booleanToTerraform(this._connectivityLogsEnabled),
       id: cdktf.stringToTerraform(this._id),
       live_trace_enabled: cdktf.booleanToTerraform(this._liveTraceEnabled),
+      local_auth_enabled: cdktf.booleanToTerraform(this._localAuthEnabled),
       location: cdktf.stringToTerraform(this._location),
       messaging_logs_enabled: cdktf.booleanToTerraform(this._messagingLogsEnabled),
       name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      serverless_connection_timeout_in_seconds: cdktf.numberToTerraform(this._serverlessConnectionTimeoutInSeconds),
       service_mode: cdktf.stringToTerraform(this._serviceMode),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      tls_client_cert_enabled: cdktf.booleanToTerraform(this._tlsClientCertEnabled),
       cors: cdktf.listMapper(signalrServiceCorsToTerraform, true)(this._cors.internalValue),
+      identity: signalrServiceIdentityToTerraform(this._identity.internalValue),
       live_trace: signalrServiceLiveTraceToTerraform(this._liveTrace.internalValue),
       sku: signalrServiceSkuToTerraform(this._sku.internalValue),
       timeouts: signalrServiceTimeoutsToTerraform(this._timeouts.internalValue),

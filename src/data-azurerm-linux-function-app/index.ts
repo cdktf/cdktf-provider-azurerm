@@ -730,9 +730,14 @@ export class DataAzurermLinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputRef
     return this._loginParameters;
   }
 
-  // tenant_id - computed: true, optional: false, required: false
-  public get tenantId() {
-    return this.getStringAttribute('tenant_id');
+  // tenant_auth_endpoint - computed: true, optional: false, required: false
+  public get tenantAuthEndpoint() {
+    return this.getStringAttribute('tenant_auth_endpoint');
+  }
+
+  // www_authentication_disabled - computed: true, optional: false, required: false
+  public get wwwAuthenticationDisabled() {
+    return this.getBooleanAttribute('www_authentication_disabled');
   }
 }
 
@@ -3155,7 +3160,7 @@ export class DataAzurermLinuxFunctionApp extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_linux_function_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

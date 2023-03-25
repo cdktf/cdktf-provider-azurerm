@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_pr
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorPrivateLinkScopedService.MonitorPrivateLinkScopedService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/monitorprivatelinkscopedservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorprivatelinkscopedservice"
 
 monitorprivatelinkscopedservice.NewMonitorPrivateLinkScopedService(scope Construct, id *string, config MonitorPrivateLinkScopedServiceConfig) MonitorPrivateLinkScopedService
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.monitorPrivateLinkScopedService.MonitorPrivateLinkScopedService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/monitorprivatelinkscopedservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorprivatelinkscopedservice"
 
 monitorprivatelinkscopedservice.MonitorPrivateLinkScopedService_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.monitorPrivateLinkScopedService.MonitorPrivateLinkScopedService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/monitorprivatelinkscopedservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorprivatelinkscopedservice"
 
 monitorprivatelinkscopedservice.MonitorPrivateLinkScopedService_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ monitorprivatelinkscopedservice.MonitorPrivateLinkScopedService_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.monitorPrivateLinkScopedService.MonitorPrivateLinkScopedService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/monitorprivatelinkscopedservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorprivatelinkscopedservice"
 
 monitorprivatelinkscopedservice.MonitorPrivateLinkScopedService_IsTerraformResource(x interface{}) *bool
 ```
@@ -670,7 +670,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorPrivateLinkScopedService.MonitorPrivateLinkScopedServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/monitorprivatelinkscopedservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorprivatelinkscopedservice"
 
 &monitorprivatelinkscopedservice.MonitorPrivateLinkScopedServiceConfig {
 	Connection: interface{},
@@ -685,7 +685,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/monitorprivatelink
 	ResourceGroupName: *string,
 	ScopeName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.monitorPrivateLinkScopedService.MonitorPrivateLinkScopedServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorPrivateLinkScopedService.MonitorPrivateLinkScopedServiceTimeouts,
 }
 ```
 
@@ -861,7 +861,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorPrivateLinkScopedService.MonitorPrivateLinkScopedServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/monitorprivatelinkscopedservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorprivatelinkscopedservice"
 
 &monitorprivatelinkscopedservice.MonitorPrivateLinkScopedServiceTimeouts {
 	Create: *string,
@@ -937,7 +937,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorPrivateLinkScopedService.MonitorPrivateLinkScopedServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/monitorprivatelinkscopedservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorprivatelinkscopedservice"
 
 monitorprivatelinkscopedservice.NewMonitorPrivateLinkScopedServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorPrivateLinkScopedServiceTimeoutsOutputReference
 ```

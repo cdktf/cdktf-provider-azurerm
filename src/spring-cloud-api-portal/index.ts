@@ -380,7 +380,7 @@ export class SpringCloudApiPortal extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_api_portal',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

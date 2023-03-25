@@ -67,6 +67,18 @@ export interface ResourcePolicyAssignmentConfig extends cdktf.TerraformMetaArgum
   */
   readonly nonComplianceMessage?: ResourcePolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable;
   /**
+  * overrides block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#overrides ResourcePolicyAssignment#overrides}
+  */
+  readonly overrides?: ResourcePolicyAssignmentOverrides[] | cdktf.IResolvable;
+  /**
+  * resource_selectors block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#resource_selectors ResourcePolicyAssignment#resource_selectors}
+  */
+  readonly resourceSelectors?: ResourcePolicyAssignmentResourceSelectors[] | cdktf.IResolvable;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#timeouts ResourcePolicyAssignment#timeouts}
@@ -293,6 +305,529 @@ export class ResourcePolicyAssignmentNonComplianceMessageList extends cdktf.Comp
     return new ResourcePolicyAssignmentNonComplianceMessageOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ResourcePolicyAssignmentOverridesSelectors {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#in ResourcePolicyAssignment#in}
+  */
+  readonly in?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#not_in ResourcePolicyAssignment#not_in}
+  */
+  readonly notIn?: string[];
+}
+
+export function resourcePolicyAssignmentOverridesSelectorsToTerraform(struct?: ResourcePolicyAssignmentOverridesSelectors | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    in: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.in),
+    not_in: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.notIn),
+  }
+}
+
+export class ResourcePolicyAssignmentOverridesSelectorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ResourcePolicyAssignmentOverridesSelectors | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._in !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.in = this._in;
+    }
+    if (this._notIn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notIn = this._notIn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ResourcePolicyAssignmentOverridesSelectors | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._in = undefined;
+      this._notIn = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._in = value.in;
+      this._notIn = value.notIn;
+    }
+  }
+
+  // in - computed: false, optional: true, required: false
+  private _in?: string[]; 
+  public get in() {
+    return this.getListAttribute('in');
+  }
+  public set in(value: string[]) {
+    this._in = value;
+  }
+  public resetIn() {
+    this._in = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inInput() {
+    return this._in;
+  }
+
+  // kind - computed: true, optional: false, required: false
+  public get kind() {
+    return this.getStringAttribute('kind');
+  }
+
+  // not_in - computed: false, optional: true, required: false
+  private _notIn?: string[]; 
+  public get notIn() {
+    return this.getListAttribute('not_in');
+  }
+  public set notIn(value: string[]) {
+    this._notIn = value;
+  }
+  public resetNotIn() {
+    this._notIn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notInInput() {
+    return this._notIn;
+  }
+}
+
+export class ResourcePolicyAssignmentOverridesSelectorsList extends cdktf.ComplexList {
+  public internalValue? : ResourcePolicyAssignmentOverridesSelectors[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ResourcePolicyAssignmentOverridesSelectorsOutputReference {
+    return new ResourcePolicyAssignmentOverridesSelectorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ResourcePolicyAssignmentOverrides {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#value ResourcePolicyAssignment#value}
+  */
+  readonly value: string;
+  /**
+  * selectors block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#selectors ResourcePolicyAssignment#selectors}
+  */
+  readonly selectors?: ResourcePolicyAssignmentOverridesSelectors[] | cdktf.IResolvable;
+}
+
+export function resourcePolicyAssignmentOverridesToTerraform(struct?: ResourcePolicyAssignmentOverrides | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    value: cdktf.stringToTerraform(struct!.value),
+    selectors: cdktf.listMapper(resourcePolicyAssignmentOverridesSelectorsToTerraform, true)(struct!.selectors),
+  }
+}
+
+export class ResourcePolicyAssignmentOverridesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ResourcePolicyAssignmentOverrides | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    if (this._selectors?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.selectors = this._selectors?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ResourcePolicyAssignmentOverrides | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._value = undefined;
+      this._selectors.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._value = value.value;
+      this._selectors.internalValue = value.selectors;
+    }
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+
+  // selectors - computed: false, optional: true, required: false
+  private _selectors = new ResourcePolicyAssignmentOverridesSelectorsList(this, "selectors", false);
+  public get selectors() {
+    return this._selectors;
+  }
+  public putSelectors(value: ResourcePolicyAssignmentOverridesSelectors[] | cdktf.IResolvable) {
+    this._selectors.internalValue = value;
+  }
+  public resetSelectors() {
+    this._selectors.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selectorsInput() {
+    return this._selectors.internalValue;
+  }
+}
+
+export class ResourcePolicyAssignmentOverridesList extends cdktf.ComplexList {
+  public internalValue? : ResourcePolicyAssignmentOverrides[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ResourcePolicyAssignmentOverridesOutputReference {
+    return new ResourcePolicyAssignmentOverridesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ResourcePolicyAssignmentResourceSelectorsSelectors {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#in ResourcePolicyAssignment#in}
+  */
+  readonly in?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#kind ResourcePolicyAssignment#kind}
+  */
+  readonly kind: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#not_in ResourcePolicyAssignment#not_in}
+  */
+  readonly notIn?: string[];
+}
+
+export function resourcePolicyAssignmentResourceSelectorsSelectorsToTerraform(struct?: ResourcePolicyAssignmentResourceSelectorsSelectors | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    in: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.in),
+    kind: cdktf.stringToTerraform(struct!.kind),
+    not_in: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.notIn),
+  }
+}
+
+export class ResourcePolicyAssignmentResourceSelectorsSelectorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ResourcePolicyAssignmentResourceSelectorsSelectors | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._in !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.in = this._in;
+    }
+    if (this._kind !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kind = this._kind;
+    }
+    if (this._notIn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notIn = this._notIn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ResourcePolicyAssignmentResourceSelectorsSelectors | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._in = undefined;
+      this._kind = undefined;
+      this._notIn = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._in = value.in;
+      this._kind = value.kind;
+      this._notIn = value.notIn;
+    }
+  }
+
+  // in - computed: false, optional: true, required: false
+  private _in?: string[]; 
+  public get in() {
+    return this.getListAttribute('in');
+  }
+  public set in(value: string[]) {
+    this._in = value;
+  }
+  public resetIn() {
+    this._in = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inInput() {
+    return this._in;
+  }
+
+  // kind - computed: false, optional: false, required: true
+  private _kind?: string; 
+  public get kind() {
+    return this.getStringAttribute('kind');
+  }
+  public set kind(value: string) {
+    this._kind = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kindInput() {
+    return this._kind;
+  }
+
+  // not_in - computed: false, optional: true, required: false
+  private _notIn?: string[]; 
+  public get notIn() {
+    return this.getListAttribute('not_in');
+  }
+  public set notIn(value: string[]) {
+    this._notIn = value;
+  }
+  public resetNotIn() {
+    this._notIn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notInInput() {
+    return this._notIn;
+  }
+}
+
+export class ResourcePolicyAssignmentResourceSelectorsSelectorsList extends cdktf.ComplexList {
+  public internalValue? : ResourcePolicyAssignmentResourceSelectorsSelectors[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ResourcePolicyAssignmentResourceSelectorsSelectorsOutputReference {
+    return new ResourcePolicyAssignmentResourceSelectorsSelectorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ResourcePolicyAssignmentResourceSelectors {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#name ResourcePolicyAssignment#name}
+  */
+  readonly name?: string;
+  /**
+  * selectors block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#selectors ResourcePolicyAssignment#selectors}
+  */
+  readonly selectors: ResourcePolicyAssignmentResourceSelectorsSelectors[] | cdktf.IResolvable;
+}
+
+export function resourcePolicyAssignmentResourceSelectorsToTerraform(struct?: ResourcePolicyAssignmentResourceSelectors | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    selectors: cdktf.listMapper(resourcePolicyAssignmentResourceSelectorsSelectorsToTerraform, true)(struct!.selectors),
+  }
+}
+
+export class ResourcePolicyAssignmentResourceSelectorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ResourcePolicyAssignmentResourceSelectors | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._selectors?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.selectors = this._selectors?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ResourcePolicyAssignmentResourceSelectors | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._selectors.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._selectors.internalValue = value.selectors;
+    }
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // selectors - computed: false, optional: false, required: true
+  private _selectors = new ResourcePolicyAssignmentResourceSelectorsSelectorsList(this, "selectors", false);
+  public get selectors() {
+    return this._selectors;
+  }
+  public putSelectors(value: ResourcePolicyAssignmentResourceSelectorsSelectors[] | cdktf.IResolvable) {
+    this._selectors.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selectorsInput() {
+    return this._selectors.internalValue;
+  }
+}
+
+export class ResourcePolicyAssignmentResourceSelectorsList extends cdktf.ComplexList {
+  public internalValue? : ResourcePolicyAssignmentResourceSelectors[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ResourcePolicyAssignmentResourceSelectorsOutputReference {
+    return new ResourcePolicyAssignmentResourceSelectorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ResourcePolicyAssignmentTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#create ResourcePolicyAssignment#create}
@@ -476,7 +1011,7 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_resource_policy_assignment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.48.0',
+        providerVersion: '3.49.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -500,6 +1035,8 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
     this._resourceId = config.resourceId;
     this._identity.internalValue = config.identity;
     this._nonComplianceMessage.internalValue = config.nonComplianceMessage;
+    this._overrides.internalValue = config.overrides;
+    this._resourceSelectors.internalValue = config.resourceSelectors;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -706,6 +1243,38 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
     return this._nonComplianceMessage.internalValue;
   }
 
+  // overrides - computed: false, optional: true, required: false
+  private _overrides = new ResourcePolicyAssignmentOverridesList(this, "overrides", false);
+  public get overrides() {
+    return this._overrides;
+  }
+  public putOverrides(value: ResourcePolicyAssignmentOverrides[] | cdktf.IResolvable) {
+    this._overrides.internalValue = value;
+  }
+  public resetOverrides() {
+    this._overrides.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get overridesInput() {
+    return this._overrides.internalValue;
+  }
+
+  // resource_selectors - computed: false, optional: true, required: false
+  private _resourceSelectors = new ResourcePolicyAssignmentResourceSelectorsList(this, "resource_selectors", false);
+  public get resourceSelectors() {
+    return this._resourceSelectors;
+  }
+  public putResourceSelectors(value: ResourcePolicyAssignmentResourceSelectors[] | cdktf.IResolvable) {
+    this._resourceSelectors.internalValue = value;
+  }
+  public resetResourceSelectors() {
+    this._resourceSelectors.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceSelectorsInput() {
+    return this._resourceSelectors.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ResourcePolicyAssignmentTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -741,6 +1310,8 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
       resource_id: cdktf.stringToTerraform(this._resourceId),
       identity: resourcePolicyAssignmentIdentityToTerraform(this._identity.internalValue),
       non_compliance_message: cdktf.listMapper(resourcePolicyAssignmentNonComplianceMessageToTerraform, true)(this._nonComplianceMessage.internalValue),
+      overrides: cdktf.listMapper(resourcePolicyAssignmentOverridesToTerraform, true)(this._overrides.internalValue),
+      resource_selectors: cdktf.listMapper(resourcePolicyAssignmentResourceSelectorsToTerraform, true)(this._resourceSelectors.internalValue),
       timeouts: resourcePolicyAssignmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
