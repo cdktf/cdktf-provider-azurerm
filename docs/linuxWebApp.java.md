@@ -93,7 +93,7 @@ LinuxWebApp.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#tags LinuxWebApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeouts">LinuxWebAppTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.Initializer.parameter.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#virtual_network_subnet_id LinuxWebApp#virtual_network_subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.Initializer.parameter.zipDeployFile">zipDeployFile</a></code> | <code>java.lang.String</code> | The local path and filename of the Zip packaged application to deploy to this Windows Web App. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.Initializer.parameter.zipDeployFile">zipDeployFile</a></code> | <code>java.lang.String</code> | The local path and filename of the Zip packaged application to deploy to this Linux Web App. |
 
 ---
 
@@ -386,9 +386,9 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-The local path and filename of the Zip packaged application to deploy to this Windows Web App.
+The local path and filename of the Zip packaged application to deploy to this Linux Web App.
 
-**Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` on the App in `app_settings`.
+**Note:** Using this value requires either `WEBSITE_RUN_FROM_PACKAGE=1` or `SCM_DO_BUILD_DURING_DEPLOYMENT=true` to be set on the App in `app_settings`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#zip_deploy_file LinuxWebApp#zip_deploy_file}
 
@@ -4136,7 +4136,7 @@ LinuxWebAppConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#tags LinuxWebApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeouts">LinuxWebAppTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConfig.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#virtual_network_subnet_id LinuxWebApp#virtual_network_subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConfig.property.zipDeployFile">zipDeployFile</a></code> | <code>java.lang.String</code> | The local path and filename of the Zip packaged application to deploy to this Windows Web App. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConfig.property.zipDeployFile">zipDeployFile</a></code> | <code>java.lang.String</code> | The local path and filename of the Zip packaged application to deploy to this Linux Web App. |
 
 ---
 
@@ -4543,9 +4543,9 @@ public java.lang.String getZipDeployFile();
 
 - *Type:* java.lang.String
 
-The local path and filename of the Zip packaged application to deploy to this Windows Web App.
+The local path and filename of the Zip packaged application to deploy to this Linux Web App.
 
-**Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` on the App in `app_settings`.
+**Note:** Using this value requires either `WEBSITE_RUN_FROM_PACKAGE=1` or `SCM_DO_BUILD_DURING_DEPLOYMENT=true` to be set on the App in `app_settings`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app#zip_deploy_file LinuxWebApp#zip_deploy_file}
 

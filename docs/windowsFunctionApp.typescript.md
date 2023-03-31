@@ -101,6 +101,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetTags">resetTags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetTimeouts">resetTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetVirtualNetworkSubnetId">resetVirtualNetworkSubnetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetZipDeployFile">resetZipDeployFile</a></code> | *No description.* |
 
 ---
 
@@ -552,6 +553,12 @@ public resetTimeouts(): void
 public resetVirtualNetworkSubnetId(): void
 ```
 
+##### `resetZipDeployFile` <a name="resetZipDeployFile" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetZipDeployFile"></a>
+
+```typescript
+public resetZipDeployFile(): void
+```
+
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
 | **Name** | **Description** |
@@ -688,6 +695,7 @@ windowsFunctionApp.WindowsFunctionApp.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppTimeouts">WindowsFunctionAppTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.virtualNetworkSubnetIdInput">virtualNetworkSubnetIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.zipDeployFileInput">zipDeployFileInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.appSettings">appSettings</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.builtinLoggingEnabled">builtinLoggingEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.clientCertificateEnabled">clientCertificateEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
@@ -710,6 +718,7 @@ windowsFunctionApp.WindowsFunctionApp.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.storageUsesManagedIdentity">storageUsesManagedIdentity</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.zipDeployFile">zipDeployFile</a></code> | <code>string</code> | *No description.* |
 
 ---
 
@@ -1335,6 +1344,16 @@ public readonly virtualNetworkSubnetIdInput: string;
 
 ---
 
+##### `zipDeployFileInput`<sup>Optional</sup> <a name="zipDeployFileInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.zipDeployFileInput"></a>
+
+```typescript
+public readonly zipDeployFileInput: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `appSettings`<sup>Required</sup> <a name="appSettings" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.appSettings"></a>
 
 ```typescript
@@ -1549,6 +1568,16 @@ public readonly tags: {[ key: string ]: string};
 
 ```typescript
 public readonly virtualNetworkSubnetId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `zipDeployFile`<sup>Required</sup> <a name="zipDeployFile" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.zipDeployFile"></a>
+
+```typescript
+public readonly zipDeployFile: string;
 ```
 
 - *Type:* string
@@ -3734,6 +3763,7 @@ const windowsFunctionAppConfig: windowsFunctionApp.WindowsFunctionAppConfig = { 
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#tags WindowsFunctionApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppTimeouts">WindowsFunctionAppTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#virtual_network_subnet_id WindowsFunctionApp#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.zipDeployFile">zipDeployFile</a></code> | <code>string</code> | The local path and filename of the Zip packaged application to deploy to this Windows Function App. |
 
 ---
 
@@ -4235,6 +4265,22 @@ public readonly virtualNetworkSubnetId: string;
 - *Type:* string
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#virtual_network_subnet_id WindowsFunctionApp#virtual_network_subnet_id}.
+
+---
+
+##### `zipDeployFile`<sup>Optional</sup> <a name="zipDeployFile" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.zipDeployFile"></a>
+
+```typescript
+public readonly zipDeployFile: string;
+```
+
+- *Type:* string
+
+The local path and filename of the Zip packaged application to deploy to this Windows Function App.
+
+**Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` to be set on the App in `app_settings`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#zip_deploy_file WindowsFunctionApp#zip_deploy_file}
 
 ---
 

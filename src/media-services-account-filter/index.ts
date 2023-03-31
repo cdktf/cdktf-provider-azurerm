@@ -667,7 +667,7 @@ export class MediaServicesAccountFilter extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_services_account_filter',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.49.0',
+        providerVersion: '3.50.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

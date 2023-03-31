@@ -61,6 +61,7 @@ WindowsFunctionApp.Builder.create(Construct scope, java.lang.String id)
 //  .tags(java.util.Map<java.lang.String, java.lang.String>)
 //  .timeouts(WindowsFunctionAppTimeouts)
 //  .virtualNetworkSubnetId(java.lang.String)
+//  .zipDeployFile(java.lang.String)
     .build();
 ```
 
@@ -106,6 +107,7 @@ WindowsFunctionApp.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#tags WindowsFunctionApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppTimeouts">WindowsFunctionAppTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.Initializer.parameter.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#virtual_network_subnet_id WindowsFunctionApp#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.Initializer.parameter.zipDeployFile">zipDeployFile</a></code> | <code>java.lang.String</code> | The local path and filename of the Zip packaged application to deploy to this Windows Function App. |
 
 ---
 
@@ -476,6 +478,18 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ---
 
+##### `zipDeployFile`<sup>Optional</sup> <a name="zipDeployFile" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.Initializer.parameter.zipDeployFile"></a>
+
+- *Type:* java.lang.String
+
+The local path and filename of the Zip packaged application to deploy to this Windows Function App.
+
+**Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` to be set on the App in `app_settings`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#zip_deploy_file WindowsFunctionApp#zip_deploy_file}
+
+---
+
 #### Methods <a name="Methods" id="Methods"></a>
 
 | **Name** | **Description** |
@@ -531,6 +545,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetTags">resetTags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetTimeouts">resetTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetVirtualNetworkSubnetId">resetVirtualNetworkSubnetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetZipDeployFile">resetZipDeployFile</a></code> | *No description.* |
 
 ---
 
@@ -982,6 +997,12 @@ public void resetTimeouts()
 public void resetVirtualNetworkSubnetId()
 ```
 
+##### `resetZipDeployFile` <a name="resetZipDeployFile" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.resetZipDeployFile"></a>
+
+```java
+public void resetZipDeployFile()
+```
+
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
 | **Name** | **Description** |
@@ -1118,6 +1139,7 @@ WindowsFunctionApp.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.tagsInput">tagsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppTimeouts">WindowsFunctionAppTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.virtualNetworkSubnetIdInput">virtualNetworkSubnetIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.zipDeployFileInput">zipDeployFileInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.appSettings">appSettings</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.builtinLoggingEnabled">builtinLoggingEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.clientCertificateEnabled">clientCertificateEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
@@ -1140,6 +1162,7 @@ WindowsFunctionApp.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.storageUsesManagedIdentity">storageUsesManagedIdentity</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.zipDeployFile">zipDeployFile</a></code> | <code>java.lang.String</code> | *No description.* |
 
 ---
 
@@ -1765,6 +1788,16 @@ public java.lang.String getVirtualNetworkSubnetIdInput();
 
 ---
 
+##### `zipDeployFileInput`<sup>Optional</sup> <a name="zipDeployFileInput" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.zipDeployFileInput"></a>
+
+```java
+public java.lang.String getZipDeployFileInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `appSettings`<sup>Required</sup> <a name="appSettings" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.appSettings"></a>
 
 ```java
@@ -1979,6 +2012,16 @@ public java.util.Map<java.lang.String, java.lang.String> getTags();
 
 ```java
 public java.lang.String getVirtualNetworkSubnetId();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `zipDeployFile`<sup>Required</sup> <a name="zipDeployFile" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionApp.property.zipDeployFile"></a>
+
+```java
+public java.lang.String getZipDeployFile();
 ```
 
 - *Type:* java.lang.String
@@ -4318,6 +4361,7 @@ WindowsFunctionAppConfig.builder()
 //  .tags(java.util.Map<java.lang.String, java.lang.String>)
 //  .timeouts(WindowsFunctionAppTimeouts)
 //  .virtualNetworkSubnetId(java.lang.String)
+//  .zipDeployFile(java.lang.String)
     .build();
 ```
 
@@ -4363,6 +4407,7 @@ WindowsFunctionAppConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#tags WindowsFunctionApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppTimeouts">WindowsFunctionAppTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#virtual_network_subnet_id WindowsFunctionApp#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.zipDeployFile">zipDeployFile</a></code> | <code>java.lang.String</code> | The local path and filename of the Zip packaged application to deploy to this Windows Function App. |
 
 ---
 
@@ -4864,6 +4909,22 @@ public java.lang.String getVirtualNetworkSubnetId();
 - *Type:* java.lang.String
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#virtual_network_subnet_id WindowsFunctionApp#virtual_network_subnet_id}.
+
+---
+
+##### `zipDeployFile`<sup>Optional</sup> <a name="zipDeployFile" id="@cdktf/provider-azurerm.windowsFunctionApp.WindowsFunctionAppConfig.property.zipDeployFile"></a>
+
+```java
+public java.lang.String getZipDeployFile();
+```
+
+- *Type:* java.lang.String
+
+The local path and filename of the Zip packaged application to deploy to this Windows Function App.
+
+**Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` to be set on the App in `app_settings`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#zip_deploy_file WindowsFunctionApp#zip_deploy_file}
 
 ---
 

@@ -101,6 +101,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.resetTags">ResetTags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.resetVirtualNetworkSubnetId">ResetVirtualNetworkSubnetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.resetZipDeployFile">ResetZipDeployFile</a></code> | *No description.* |
 
 ---
 
@@ -552,6 +553,12 @@ func ResetTimeouts()
 func ResetVirtualNetworkSubnetId()
 ```
 
+##### `ResetZipDeployFile` <a name="ResetZipDeployFile" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.resetZipDeployFile"></a>
+
+```go
+func ResetZipDeployFile()
+```
+
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
 | **Name** | **Description** |
@@ -688,6 +695,7 @@ linuxfunctionapp.LinuxFunctionApp_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.tagsInput">TagsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.virtualNetworkSubnetIdInput">VirtualNetworkSubnetIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.zipDeployFileInput">ZipDeployFileInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.appSettings">AppSettings</a></code> | <code>*map[string]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.builtinLoggingEnabled">BuiltinLoggingEnabled</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.clientCertificateEnabled">ClientCertificateEnabled</a></code> | <code>interface{}</code> | *No description.* |
@@ -710,6 +718,7 @@ linuxfunctionapp.LinuxFunctionApp_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageUsesManagedIdentity">StorageUsesManagedIdentity</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.tags">Tags</a></code> | <code>*map[string]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.virtualNetworkSubnetId">VirtualNetworkSubnetId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.zipDeployFile">ZipDeployFile</a></code> | <code>*string</code> | *No description.* |
 
 ---
 
@@ -1335,6 +1344,16 @@ func VirtualNetworkSubnetIdInput() *string
 
 ---
 
+##### `ZipDeployFileInput`<sup>Optional</sup> <a name="ZipDeployFileInput" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.zipDeployFileInput"></a>
+
+```go
+func ZipDeployFileInput() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `AppSettings`<sup>Required</sup> <a name="AppSettings" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.appSettings"></a>
 
 ```go
@@ -1549,6 +1568,16 @@ func Tags() *map[string]*string
 
 ```go
 func VirtualNetworkSubnetId() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ZipDeployFile`<sup>Required</sup> <a name="ZipDeployFile" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.zipDeployFile"></a>
+
+```go
+func ZipDeployFile() *string
 ```
 
 - *Type:* *string
@@ -3865,6 +3894,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
 	Tags: *map[string]*string,
 	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.linuxFunctionApp.LinuxFunctionAppTimeouts,
 	VirtualNetworkSubnetId: *string,
+	ZipDeployFile: *string,
 }
 ```
 
@@ -3910,6 +3940,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/linuxfunctionapp"
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#tags LinuxFunctionApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts">LinuxFunctionAppTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.virtualNetworkSubnetId">VirtualNetworkSubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#virtual_network_subnet_id LinuxFunctionApp#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.zipDeployFile">ZipDeployFile</a></code> | <code>*string</code> | The local path and filename of the Zip packaged application to deploy to this Linux Function App. |
 
 ---
 
@@ -4411,6 +4442,22 @@ VirtualNetworkSubnetId *string
 - *Type:* *string
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#virtual_network_subnet_id LinuxFunctionApp#virtual_network_subnet_id}.
+
+---
+
+##### `ZipDeployFile`<sup>Optional</sup> <a name="ZipDeployFile" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.zipDeployFile"></a>
+
+```go
+ZipDeployFile *string
+```
+
+- *Type:* *string
+
+The local path and filename of the Zip packaged application to deploy to this Linux Function App.
+
+**Note:** Using this value requires either `WEBSITE_RUN_FROM_PACKAGE=1` or `SCM_DO_BUILD_DURING_DEPLOYMENT=true` to be set on the App in `app_settings`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app#zip_deploy_file LinuxFunctionApp#zip_deploy_file}
 
 ---
 

@@ -454,7 +454,7 @@ export class DataAzurermMobileNetworkSimPolicy extends cdktf.TerraformDataSource
       terraformResourceType: 'azurerm_mobile_network_sim_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.49.0',
+        providerVersion: '3.50.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

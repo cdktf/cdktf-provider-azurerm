@@ -220,7 +220,7 @@ export class NetworkManagerManagementGroupConnection extends cdktf.TerraformReso
       terraformResourceType: 'azurerm_network_manager_management_group_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.49.0',
+        providerVersion: '3.50.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

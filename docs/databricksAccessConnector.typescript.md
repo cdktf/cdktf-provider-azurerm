@@ -921,6 +921,7 @@ const databricksAccessConnectorIdentity: databricksAccessConnector.DatabricksAcc
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentity.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_access_connector#type DatabricksAccessConnector#type}. |
+| <code><a href="#@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentity.property.identityIds">identityIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_access_connector#identity_ids DatabricksAccessConnector#identity_ids}. |
 
 ---
 
@@ -933,6 +934,18 @@ public readonly type: string;
 - *Type:* string
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_access_connector#type DatabricksAccessConnector#type}.
+
+---
+
+##### `identityIds`<sup>Optional</sup> <a name="identityIds" id="@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentity.property.identityIds"></a>
+
+```typescript
+public readonly identityIds: string[];
+```
+
+- *Type:* string[]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_access_connector#identity_ids DatabricksAccessConnector#identity_ids}.
 
 ---
 
@@ -1057,6 +1070,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.resetIdentityIds">resetIdentityIds</a></code> | *No description.* |
 
 ---
 
@@ -1210,6 +1224,12 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `resetIdentityIds` <a name="resetIdentityIds" id="@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.resetIdentityIds"></a>
+
+```typescript
+public resetIdentityIds(): void
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -1219,7 +1239,9 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.property.principalId">principalId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.property.tenantId">tenantId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.property.identityIdsInput">identityIdsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.property.typeInput">typeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.property.identityIds">identityIds</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.property.type">type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentity">DatabricksAccessConnectorIdentity</a></code> | *No description.* |
 
@@ -1269,6 +1291,16 @@ public readonly tenantId: string;
 
 ---
 
+##### `identityIdsInput`<sup>Optional</sup> <a name="identityIdsInput" id="@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.property.identityIdsInput"></a>
+
+```typescript
+public readonly identityIdsInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
 ##### `typeInput`<sup>Optional</sup> <a name="typeInput" id="@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.property.typeInput"></a>
 
 ```typescript
@@ -1276,6 +1308,16 @@ public readonly typeInput: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `identityIds`<sup>Required</sup> <a name="identityIds" id="@cdktf/provider-azurerm.databricksAccessConnector.DatabricksAccessConnectorIdentityOutputReference.property.identityIds"></a>
+
+```typescript
+public readonly identityIds: string[];
+```
+
+- *Type:* string[]
 
 ---
 

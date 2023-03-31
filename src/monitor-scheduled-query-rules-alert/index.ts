@@ -369,7 +369,7 @@ export interface MonitorScheduledQueryRulesAlertTriggerMetricTrigger {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_alert#metric_column MonitorScheduledQueryRulesAlert#metric_column}
   */
-  readonly metricColumn: string;
+  readonly metricColumn?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_alert#metric_trigger_type MonitorScheduledQueryRulesAlert#metric_trigger_type}
   */
@@ -447,13 +447,16 @@ export class MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference 
     }
   }
 
-  // metric_column - computed: false, optional: false, required: true
+  // metric_column - computed: false, optional: true, required: false
   private _metricColumn?: string; 
   public get metricColumn() {
     return this.getStringAttribute('metric_column');
   }
   public set metricColumn(value: string) {
     this._metricColumn = value;
+  }
+  public resetMetricColumn() {
+    this._metricColumn = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get metricColumnInput() {
@@ -641,7 +644,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_scheduled_query_rules_alert',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.49.0',
+        providerVersion: '3.50.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

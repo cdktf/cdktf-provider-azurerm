@@ -220,7 +220,7 @@ export class NetworkManagerSecurityAdminConfiguration extends cdktf.TerraformRes
       terraformResourceType: 'azurerm_network_manager_security_admin_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.49.0',
+        providerVersion: '3.50.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

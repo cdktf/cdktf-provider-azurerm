@@ -368,7 +368,7 @@ export class VpnServerConfigurationPolicyGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_vpn_server_configuration_policy_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.49.0',
+        providerVersion: '3.50.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

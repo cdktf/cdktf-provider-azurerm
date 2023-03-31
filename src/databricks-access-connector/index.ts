@@ -45,6 +45,10 @@ export interface DatabricksAccessConnectorConfig extends cdktf.TerraformMetaArgu
 }
 export interface DatabricksAccessConnectorIdentity {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_access_connector#identity_ids DatabricksAccessConnector#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_access_connector#type DatabricksAccessConnector#type}
   */
   readonly type: string;
@@ -56,6 +60,7 @@ export function databricksAccessConnectorIdentityToTerraform(struct?: Databricks
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -74,6 +79,10 @@ export class DatabricksAccessConnectorIdentityOutputReference extends cdktf.Comp
   public get internalValue(): DatabricksAccessConnectorIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
@@ -84,12 +93,30 @@ export class DatabricksAccessConnectorIdentityOutputReference extends cdktf.Comp
   public set internalValue(value: DatabricksAccessConnectorIdentity | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._identityIds = undefined;
       this._type = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
       this._type = value.type;
     }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
   }
 
   // principal_id - computed: true, optional: false, required: false
@@ -298,7 +325,7 @@ export class DatabricksAccessConnector extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_databricks_access_connector',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.49.0',
+        providerVersion: '3.50.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
