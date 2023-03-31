@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elas
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMssqlElasticpool.DataAzurermMssqlElasticpool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlelasticpool"
 
 dataazurermmssqlelasticpool.NewDataAzurermMssqlElasticpool(scope Construct, id *string, config DataAzurermMssqlElasticpoolConfig) DataAzurermMssqlElasticpool
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMssqlElasticpool.DataAzurermMssqlElasticpool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlelasticpool"
 
 dataazurermmssqlelasticpool.DataAzurermMssqlElasticpool_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMssqlElasticpool.DataAzurermMssqlElasticpool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlelasticpool"
 
 dataazurermmssqlelasticpool.DataAzurermMssqlElasticpool_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermmssqlelasticpool.DataAzurermMssqlElasticpool_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMssqlElasticpool.DataAzurermMssqlElasticpool.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlelasticpool"
 
 dataazurermmssqlelasticpool.DataAzurermMssqlElasticpool_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -725,7 +725,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMssqlElasticpool.DataAzurermMssqlElasticpoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlelasticpool"
 
 &dataazurermmssqlelasticpool.DataAzurermMssqlElasticpoolConfig {
 	Connection: interface{},
@@ -739,7 +739,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmssqlel
 	ResourceGroupName: *string,
 	ServerName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermMssqlElasticpool.DataAzurermMssqlElasticpoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermMssqlElasticpool.DataAzurermMssqlElasticpoolTimeouts,
 }
 ```
 
@@ -902,7 +902,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMssqlElasticpool.DataAzurermMssqlElasticpoolSku.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlelasticpool"
 
 &dataazurermmssqlelasticpool.DataAzurermMssqlElasticpoolSku {
 
@@ -915,7 +915,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmssqlel
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMssqlElasticpool.DataAzurermMssqlElasticpoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlelasticpool"
 
 &dataazurermmssqlelasticpool.DataAzurermMssqlElasticpoolTimeouts {
 	Read: *string,
@@ -949,7 +949,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMssqlElasticpool.DataAzurermMssqlElasticpoolSkuList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlelasticpool"
 
 dataazurermmssqlelasticpool.NewDataAzurermMssqlElasticpoolSkuList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMssqlElasticpoolSkuList
 ```
@@ -1081,7 +1081,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMssqlElasticpool.DataAzurermMssqlElasticpoolSkuOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlelasticpool"
 
 dataazurermmssqlelasticpool.NewDataAzurermMssqlElasticpoolSkuOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMssqlElasticpoolSkuOutputReference
 ```
@@ -1392,7 +1392,7 @@ func InternalValue() DataAzurermMssqlElasticpoolSku
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMssqlElasticpool.DataAzurermMssqlElasticpoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlelasticpool"
 
 dataazurermmssqlelasticpool.NewDataAzurermMssqlElasticpoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMssqlElasticpoolTimeoutsOutputReference
 ```

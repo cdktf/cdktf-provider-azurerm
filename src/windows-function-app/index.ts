@@ -133,6 +133,12 @@ export interface WindowsFunctionAppConfig extends cdktf.TerraformMetaArguments {
   */
   readonly virtualNetworkSubnetId?: string;
   /**
+  * The local path and filename of the Zip packaged application to deploy to this Windows Function App. **Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` to be set on the App in `app_settings`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#zip_deploy_file WindowsFunctionApp#zip_deploy_file}
+  */
+  readonly zipDeployFile?: string;
+  /**
   * auth_settings block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_function_app#auth_settings WindowsFunctionApp#auth_settings}
@@ -7381,7 +7387,7 @@ export class WindowsFunctionApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_function_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.49.0',
+        providerVersion: '3.50.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -7414,6 +7420,7 @@ export class WindowsFunctionApp extends cdktf.TerraformResource {
     this._storageUsesManagedIdentity = config.storageUsesManagedIdentity;
     this._tags = config.tags;
     this._virtualNetworkSubnetId = config.virtualNetworkSubnetId;
+    this._zipDeployFile = config.zipDeployFile;
     this._authSettings.internalValue = config.authSettings;
     this._authSettingsV2.internalValue = config.authSettingsV2;
     this._backup.internalValue = config.backup;
@@ -7810,6 +7817,22 @@ export class WindowsFunctionApp extends cdktf.TerraformResource {
     return this._virtualNetworkSubnetId;
   }
 
+  // zip_deploy_file - computed: true, optional: true, required: false
+  private _zipDeployFile?: string; 
+  public get zipDeployFile() {
+    return this.getStringAttribute('zip_deploy_file');
+  }
+  public set zipDeployFile(value: string) {
+    this._zipDeployFile = value;
+  }
+  public resetZipDeployFile() {
+    this._zipDeployFile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zipDeployFileInput() {
+    return this._zipDeployFile;
+  }
+
   // auth_settings - computed: false, optional: true, required: false
   private _authSettings = new WindowsFunctionAppAuthSettingsOutputReference(this, "auth_settings");
   public get authSettings() {
@@ -7979,6 +8002,7 @@ export class WindowsFunctionApp extends cdktf.TerraformResource {
       storage_uses_managed_identity: cdktf.booleanToTerraform(this._storageUsesManagedIdentity),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_network_subnet_id: cdktf.stringToTerraform(this._virtualNetworkSubnetId),
+      zip_deploy_file: cdktf.stringToTerraform(this._zipDeployFile),
       auth_settings: windowsFunctionAppAuthSettingsToTerraform(this._authSettings.internalValue),
       auth_settings_v2: windowsFunctionAppAuthSettingsV2ToTerraform(this._authSettingsV2.internalValue),
       backup: windowsFunctionAppBackupToTerraform(this._backup.internalValue),

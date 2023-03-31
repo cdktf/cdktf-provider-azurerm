@@ -180,7 +180,7 @@ export interface WebApplicationFirewallPolicyCustomRulesMatchConditions {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#match_values WebApplicationFirewallPolicy#match_values}
   */
-  readonly matchValues: string[];
+  readonly matchValues?: string[];
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#negation_condition WebApplicationFirewallPolicy#negation_condition}
   */
@@ -283,13 +283,16 @@ export class WebApplicationFirewallPolicyCustomRulesMatchConditionsOutputReferen
     }
   }
 
-  // match_values - computed: false, optional: false, required: true
+  // match_values - computed: false, optional: true, required: false
   private _matchValues?: string[]; 
   public get matchValues() {
     return this.getListAttribute('match_values');
   }
   public set matchValues(value: string[]) {
     this._matchValues = value;
+  }
+  public resetMatchValues() {
+    this._matchValues = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get matchValuesInput() {
@@ -1882,7 +1885,7 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_web_application_firewall_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.49.0',
+        providerVersion: '3.50.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

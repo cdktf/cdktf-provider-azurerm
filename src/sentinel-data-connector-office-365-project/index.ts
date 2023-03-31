@@ -189,7 +189,7 @@ export class SentinelDataConnectorOffice365Project extends cdktf.TerraformResour
       terraformResourceType: 'azurerm_sentinel_data_connector_office_365_project',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.49.0',
+        providerVersion: '3.50.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

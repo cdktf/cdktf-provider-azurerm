@@ -684,7 +684,7 @@ export class DataAzurermMobileNetworkService extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_mobile_network_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.49.0',
+        providerVersion: '3.50.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

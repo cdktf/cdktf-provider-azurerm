@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_clo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudaccelerator"
 
 springcloudaccelerator.NewSpringCloudAccelerator(scope Construct, id *string, config SpringCloudAcceleratorConfig) SpringCloudAccelerator
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudaccelerator"
 
 springcloudaccelerator.SpringCloudAccelerator_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudaccelerator"
 
 springcloudaccelerator.SpringCloudAccelerator_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ springcloudaccelerator.SpringCloudAccelerator_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudaccelerator"
 
 springcloudaccelerator.SpringCloudAccelerator_IsTerraformResource(x interface{}) *bool
 ```
@@ -626,7 +626,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudaccelerator"
 
 &springcloudaccelerator.SpringCloudAcceleratorConfig {
 	Connection: interface{},
@@ -639,7 +639,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudacceler
 	Name: *string,
 	SpringCloudServiceId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.springCloudAccelerator.SpringCloudAcceleratorTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts,
 }
 ```
 
@@ -789,7 +789,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudaccelerator"
 
 &springcloudaccelerator.SpringCloudAcceleratorTimeouts {
 	Create: *string,
@@ -851,7 +851,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudaccelerator"
 
 springcloudaccelerator.NewSpringCloudAcceleratorTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudAcceleratorTimeoutsOutputReference
 ```

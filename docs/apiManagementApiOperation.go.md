@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_manage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperation(scope Construct, id *string, config ApiManagementApiOperationConfig) ApiManagementApiOperation
 ```
@@ -360,7 +360,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.ApiManagementApiOperation_IsConstruct(x interface{}) *bool
 ```
@@ -392,7 +392,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.ApiManagementApiOperation_IsTerraformElement(x interface{}) *bool
 ```
@@ -406,7 +406,7 @@ apimanagementapioperation.ApiManagementApiOperation_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.ApiManagementApiOperation_IsTerraformResource(x interface{}) *bool
 ```
@@ -891,7 +891,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationConfig {
 	Connection: interface{},
@@ -910,10 +910,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapiop
 	UrlTemplate: *string,
 	Description: *string,
 	Id: *string,
-	Request: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.apiManagementApiOperation.ApiManagementApiOperationRequest,
+	Request: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementApiOperation.ApiManagementApiOperationRequest,
 	Response: interface{},
 	TemplateParameter: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.apiManagementApiOperation.ApiManagementApiOperationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementApiOperation.ApiManagementApiOperationTimeouts,
 }
 ```
 
@@ -1186,7 +1186,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequest.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationRequest {
 	Description: *string,
@@ -1266,7 +1266,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationRequestHeader {
 	Name: *string,
@@ -1412,7 +1412,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestHeaderExample.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationRequestHeaderExample {
 	Name: *string,
@@ -1500,7 +1500,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestQueryParameter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationRequestQueryParameter {
 	Name: *string,
@@ -1646,7 +1646,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestQueryParameterExample.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationRequestQueryParameterExample {
 	Name: *string,
@@ -1734,7 +1734,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestRepresentation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationRequestRepresentation {
 	ContentType: *string,
@@ -1826,7 +1826,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestRepresentationExample.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationRequestRepresentationExample {
 	Name: *string,
@@ -1914,7 +1914,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestRepresentationFormParameter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationRequestRepresentationFormParameter {
 	Name: *string,
@@ -2060,7 +2060,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestRepresentationFormParameterExample.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationRequestRepresentationFormParameterExample {
 	Name: *string,
@@ -2148,7 +2148,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponse.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationResponse {
 	StatusCode: *f64,
@@ -2226,7 +2226,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationResponseHeader {
 	Name: *string,
@@ -2372,7 +2372,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseHeaderExample.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationResponseHeaderExample {
 	Name: *string,
@@ -2460,7 +2460,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseRepresentation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationResponseRepresentation {
 	ContentType: *string,
@@ -2552,7 +2552,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseRepresentationExample.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationResponseRepresentationExample {
 	Name: *string,
@@ -2640,7 +2640,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseRepresentationFormParameter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationResponseRepresentationFormParameter {
 	Name: *string,
@@ -2786,7 +2786,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseRepresentationFormParameterExample.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationResponseRepresentationFormParameterExample {
 	Name: *string,
@@ -2874,7 +2874,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationTemplateParameter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationTemplateParameter {
 	Name: *string,
@@ -3020,7 +3020,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationTemplateParameterExample.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationTemplateParameterExample {
 	Name: *string,
@@ -3108,7 +3108,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 &apimanagementapioperation.ApiManagementApiOperationTimeouts {
 	Create: *string,
@@ -3184,7 +3184,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestHeaderExampleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestHeaderExampleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationRequestHeaderExampleList
 ```
@@ -3327,7 +3327,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestHeaderExampleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestHeaderExampleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationRequestHeaderExampleOutputReference
 ```
@@ -3732,7 +3732,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationRequestHeaderList
 ```
@@ -3875,7 +3875,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationRequestHeaderOutputReference
 ```
@@ -4395,7 +4395,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementApiOperationRequestOutputReference
 ```
@@ -4799,7 +4799,7 @@ func InternalValue() ApiManagementApiOperationRequest
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestQueryParameterExampleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestQueryParameterExampleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationRequestQueryParameterExampleList
 ```
@@ -4942,7 +4942,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestQueryParameterExampleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestQueryParameterExampleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationRequestQueryParameterExampleOutputReference
 ```
@@ -5347,7 +5347,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestQueryParameterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestQueryParameterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationRequestQueryParameterList
 ```
@@ -5490,7 +5490,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestQueryParameterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestQueryParameterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationRequestQueryParameterOutputReference
 ```
@@ -6010,7 +6010,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestRepresentationExampleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestRepresentationExampleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationRequestRepresentationExampleList
 ```
@@ -6153,7 +6153,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestRepresentationExampleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestRepresentationExampleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationRequestRepresentationExampleOutputReference
 ```
@@ -6558,7 +6558,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestRepresentationFormParameterExampleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestRepresentationFormParameterExampleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationRequestRepresentationFormParameterExampleList
 ```
@@ -6701,7 +6701,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestRepresentationFormParameterExampleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestRepresentationFormParameterExampleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationRequestRepresentationFormParameterExampleOutputReference
 ```
@@ -7106,7 +7106,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestRepresentationFormParameterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestRepresentationFormParameterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationRequestRepresentationFormParameterList
 ```
@@ -7249,7 +7249,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestRepresentationFormParameterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestRepresentationFormParameterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationRequestRepresentationFormParameterOutputReference
 ```
@@ -7769,7 +7769,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestRepresentationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestRepresentationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationRequestRepresentationList
 ```
@@ -7912,7 +7912,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationRequestRepresentationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationRequestRepresentationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationRequestRepresentationOutputReference
 ```
@@ -8343,7 +8343,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseHeaderExampleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationResponseHeaderExampleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationResponseHeaderExampleList
 ```
@@ -8486,7 +8486,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseHeaderExampleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationResponseHeaderExampleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationResponseHeaderExampleOutputReference
 ```
@@ -8891,7 +8891,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationResponseHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationResponseHeaderList
 ```
@@ -9034,7 +9034,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationResponseHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationResponseHeaderOutputReference
 ```
@@ -9554,7 +9554,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationResponseList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationResponseList
 ```
@@ -9697,7 +9697,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationResponseOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationResponseOutputReference
 ```
@@ -10099,7 +10099,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseRepresentationExampleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationResponseRepresentationExampleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationResponseRepresentationExampleList
 ```
@@ -10242,7 +10242,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseRepresentationExampleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationResponseRepresentationExampleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationResponseRepresentationExampleOutputReference
 ```
@@ -10647,7 +10647,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseRepresentationFormParameterExampleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationResponseRepresentationFormParameterExampleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationResponseRepresentationFormParameterExampleList
 ```
@@ -10790,7 +10790,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseRepresentationFormParameterExampleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationResponseRepresentationFormParameterExampleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationResponseRepresentationFormParameterExampleOutputReference
 ```
@@ -11195,7 +11195,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseRepresentationFormParameterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationResponseRepresentationFormParameterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationResponseRepresentationFormParameterList
 ```
@@ -11338,7 +11338,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseRepresentationFormParameterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationResponseRepresentationFormParameterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationResponseRepresentationFormParameterOutputReference
 ```
@@ -11858,7 +11858,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseRepresentationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationResponseRepresentationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationResponseRepresentationList
 ```
@@ -12001,7 +12001,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationResponseRepresentationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationResponseRepresentationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationResponseRepresentationOutputReference
 ```
@@ -12432,7 +12432,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationTemplateParameterExampleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationTemplateParameterExampleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationTemplateParameterExampleList
 ```
@@ -12575,7 +12575,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationTemplateParameterExampleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationTemplateParameterExampleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationTemplateParameterExampleOutputReference
 ```
@@ -12980,7 +12980,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationTemplateParameterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationTemplateParameterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementApiOperationTemplateParameterList
 ```
@@ -13123,7 +13123,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationTemplateParameterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationTemplateParameterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementApiOperationTemplateParameterOutputReference
 ```
@@ -13643,7 +13643,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiOperation.ApiManagementApiOperationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/apimanagementapioperation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapioperation"
 
 apimanagementapioperation.NewApiManagementApiOperationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementApiOperationTimeoutsOutputReference
 ```

@@ -37,7 +37,7 @@ export interface MssqlVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#sql_license_type MssqlVirtualMachine#sql_license_type}
   */
-  readonly sqlLicenseType: string;
+  readonly sqlLicenseType?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#tags MssqlVirtualMachine#tags}
   */
@@ -1978,7 +1978,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_virtual_machine',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.49.0',
+        providerVersion: '3.50.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -2107,13 +2107,16 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
     return this._sqlConnectivityUpdateUsername;
   }
 
-  // sql_license_type - computed: false, optional: false, required: true
+  // sql_license_type - computed: false, optional: true, required: false
   private _sqlLicenseType?: string; 
   public get sqlLicenseType() {
     return this.getStringAttribute('sql_license_type');
   }
   public set sqlLicenseType(value: string) {
     this._sqlLicenseType = value;
+  }
+  public resetSqlLicenseType() {
+    this._sqlLicenseType = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sqlLicenseTypeInput() {

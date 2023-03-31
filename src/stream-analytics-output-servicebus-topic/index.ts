@@ -393,7 +393,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
       terraformResourceType: 'azurerm_stream_analytics_output_servicebus_topic',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.49.0',
+        providerVersion: '3.50.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
