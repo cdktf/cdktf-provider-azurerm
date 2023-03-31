@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/backup_pol
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkload.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 backuppolicyvmworkload.NewBackupPolicyVmWorkload(scope Construct, id *string, config BackupPolicyVmWorkloadConfig) BackupPolicyVmWorkload
 ```
@@ -319,7 +319,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkload.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 backuppolicyvmworkload.BackupPolicyVmWorkload_IsConstruct(x interface{}) *bool
 ```
@@ -351,7 +351,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkload.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 backuppolicyvmworkload.BackupPolicyVmWorkload_IsTerraformElement(x interface{}) *bool
 ```
@@ -365,7 +365,7 @@ backuppolicyvmworkload.BackupPolicyVmWorkload_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkload.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 backuppolicyvmworkload.BackupPolicyVmWorkload_IsTerraformResource(x interface{}) *bool
 ```
@@ -740,7 +740,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 &backuppolicyvmworkload.BackupPolicyVmWorkloadConfig {
 	Connection: interface{},
@@ -754,10 +754,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkloa
 	ProtectionPolicy: interface{},
 	RecoveryVaultName: *string,
 	ResourceGroupName: *string,
-	Settings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadSettings,
+	Settings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.backupPolicyVmWorkload.BackupPolicyVmWorkloadSettings,
 	WorkloadType: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.backupPolicyVmWorkload.BackupPolicyVmWorkloadTimeouts,
 }
 ```
 
@@ -963,16 +963,16 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 &backuppolicyvmworkload.BackupPolicyVmWorkloadProtectionPolicy {
-	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyBackup,
+	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyBackup,
 	PolicyType: *string,
-	RetentionDaily: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionDaily,
-	RetentionMonthly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionMonthly,
-	RetentionWeekly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionWeekly,
-	RetentionYearly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionYearly,
-	SimpleRetention: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicySimpleRetention,
+	RetentionDaily: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionDaily,
+	RetentionMonthly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionMonthly,
+	RetentionWeekly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionWeekly,
+	RetentionYearly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionYearly,
+	SimpleRetention: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicySimpleRetention,
 }
 ```
 
@@ -1091,7 +1091,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyBackup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 &backuppolicyvmworkload.BackupPolicyVmWorkloadProtectionPolicyBackup {
 	Frequency: *string,
@@ -1165,7 +1165,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionDaily.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 &backuppolicyvmworkload.BackupPolicyVmWorkloadProtectionPolicyRetentionDaily {
 	Count: *f64,
@@ -1197,7 +1197,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionMonthly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 &backuppolicyvmworkload.BackupPolicyVmWorkloadProtectionPolicyRetentionMonthly {
 	Count: *f64,
@@ -1285,7 +1285,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionWeekly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 &backuppolicyvmworkload.BackupPolicyVmWorkloadProtectionPolicyRetentionWeekly {
 	Count: *f64,
@@ -1331,7 +1331,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionYearly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 &backuppolicyvmworkload.BackupPolicyVmWorkloadProtectionPolicyRetentionYearly {
 	Count: *f64,
@@ -1433,7 +1433,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicySimpleRetention.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 &backuppolicyvmworkload.BackupPolicyVmWorkloadProtectionPolicySimpleRetention {
 	Count: *f64,
@@ -1465,7 +1465,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 &backuppolicyvmworkload.BackupPolicyVmWorkloadSettings {
 	TimeZone: *string,
@@ -1511,7 +1511,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 &backuppolicyvmworkload.BackupPolicyVmWorkloadTimeouts {
 	Create: *string,
@@ -1587,7 +1587,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyBackupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 backuppolicyvmworkload.NewBackupPolicyVmWorkloadProtectionPolicyBackupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyVmWorkloadProtectionPolicyBackupOutputReference
 ```
@@ -1952,7 +1952,7 @@ func InternalValue() BackupPolicyVmWorkloadProtectionPolicyBackup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 backuppolicyvmworkload.NewBackupPolicyVmWorkloadProtectionPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BackupPolicyVmWorkloadProtectionPolicyList
 ```
@@ -2095,7 +2095,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 backuppolicyvmworkload.NewBackupPolicyVmWorkloadProtectionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BackupPolicyVmWorkloadProtectionPolicyOutputReference
 ```
@@ -2629,7 +2629,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionDailyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 backuppolicyvmworkload.NewBackupPolicyVmWorkloadProtectionPolicyRetentionDailyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyVmWorkloadProtectionPolicyRetentionDailyOutputReference
 ```
@@ -2900,7 +2900,7 @@ func InternalValue() BackupPolicyVmWorkloadProtectionPolicyRetentionDaily
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionMonthlyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 backuppolicyvmworkload.NewBackupPolicyVmWorkloadProtectionPolicyRetentionMonthlyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyVmWorkloadProtectionPolicyRetentionMonthlyOutputReference
 ```
@@ -3280,7 +3280,7 @@ func InternalValue() BackupPolicyVmWorkloadProtectionPolicyRetentionMonthly
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionWeeklyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 backuppolicyvmworkload.NewBackupPolicyVmWorkloadProtectionPolicyRetentionWeeklyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyVmWorkloadProtectionPolicyRetentionWeeklyOutputReference
 ```
@@ -3573,7 +3573,7 @@ func InternalValue() BackupPolicyVmWorkloadProtectionPolicyRetentionWeekly
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicyRetentionYearlyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 backuppolicyvmworkload.NewBackupPolicyVmWorkloadProtectionPolicyRetentionYearlyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyVmWorkloadProtectionPolicyRetentionYearlyOutputReference
 ```
@@ -3975,7 +3975,7 @@ func InternalValue() BackupPolicyVmWorkloadProtectionPolicyRetentionYearly
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadProtectionPolicySimpleRetentionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 backuppolicyvmworkload.NewBackupPolicyVmWorkloadProtectionPolicySimpleRetentionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyVmWorkloadProtectionPolicySimpleRetentionOutputReference
 ```
@@ -4246,7 +4246,7 @@ func InternalValue() BackupPolicyVmWorkloadProtectionPolicySimpleRetention
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 backuppolicyvmworkload.NewBackupPolicyVmWorkloadSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyVmWorkloadSettingsOutputReference
 ```
@@ -4546,7 +4546,7 @@ func InternalValue() BackupPolicyVmWorkloadSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVmWorkload.BackupPolicyVmWorkloadTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvmworkload"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/backuppolicyvmworkload"
 
 backuppolicyvmworkload.NewBackupPolicyVmWorkloadTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyVmWorkloadTimeoutsOutputReference
 ```

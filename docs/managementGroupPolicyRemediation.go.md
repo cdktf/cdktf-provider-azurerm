@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/management
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.managementGroupPolicyRemediation.ManagementGroupPolicyRemediation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managementgrouppolicyremediation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/managementgrouppolicyremediation"
 
 managementgrouppolicyremediation.NewManagementGroupPolicyRemediation(scope Construct, id *string, config ManagementGroupPolicyRemediationConfig) ManagementGroupPolicyRemediation
 ```
@@ -342,7 +342,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.managementGroupPolicyRemediation.ManagementGroupPolicyRemediation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managementgrouppolicyremediation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/managementgrouppolicyremediation"
 
 managementgrouppolicyremediation.ManagementGroupPolicyRemediation_IsConstruct(x interface{}) *bool
 ```
@@ -374,7 +374,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.managementGroupPolicyRemediation.ManagementGroupPolicyRemediation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managementgrouppolicyremediation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/managementgrouppolicyremediation"
 
 managementgrouppolicyremediation.ManagementGroupPolicyRemediation_IsTerraformElement(x interface{}) *bool
 ```
@@ -388,7 +388,7 @@ managementgrouppolicyremediation.ManagementGroupPolicyRemediation_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.managementGroupPolicyRemediation.ManagementGroupPolicyRemediation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managementgrouppolicyremediation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/managementgrouppolicyremediation"
 
 managementgrouppolicyremediation.ManagementGroupPolicyRemediation_IsTerraformResource(x interface{}) *bool
 ```
@@ -851,7 +851,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.managementGroupPolicyRemediation.ManagementGroupPolicyRemediationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managementgrouppolicyremediation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/managementgrouppolicyremediation"
 
 &managementgrouppolicyremediation.ManagementGroupPolicyRemediationConfig {
 	Connection: interface{},
@@ -872,7 +872,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managementgrouppolicy
 	PolicyDefinitionReferenceId: *string,
 	ResourceCount: *f64,
 	ResourceDiscoveryMode: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.managementGroupPolicyRemediation.ManagementGroupPolicyRemediationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.managementGroupPolicyRemediation.ManagementGroupPolicyRemediationTimeouts,
 }
 ```
 
@@ -1126,7 +1126,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.managementGroupPolicyRemediation.ManagementGroupPolicyRemediationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managementgrouppolicyremediation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/managementgrouppolicyremediation"
 
 &managementgrouppolicyremediation.ManagementGroupPolicyRemediationTimeouts {
 	Create: *string,
@@ -1202,7 +1202,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.managementGroupPolicyRemediation.ManagementGroupPolicyRemediationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managementgrouppolicyremediation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/managementgrouppolicyremediation"
 
 managementgrouppolicyremediation.NewManagementGroupPolicyRemediationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ManagementGroupPolicyRemediationTimeoutsOutputReference
 ```

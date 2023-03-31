@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_servic
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/appservicesourcecontroltoken"
 
 appservicesourcecontroltoken.NewAppServiceSourceControlToken(scope Construct, id *string, config AppServiceSourceControlTokenConfig) AppServiceSourceControlToken
 ```
@@ -300,7 +300,7 @@ func ResetTokenSecret()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/appservicesourcecontroltoken"
 
 appservicesourcecontroltoken.AppServiceSourceControlToken_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/appservicesourcecontroltoken"
 
 appservicesourcecontroltoken.AppServiceSourceControlToken_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ appservicesourcecontroltoken.AppServiceSourceControlToken_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/appservicesourcecontroltoken"
 
 appservicesourcecontroltoken.AppServiceSourceControlToken_IsTerraformResource(x interface{}) *bool
 ```
@@ -655,7 +655,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/appservicesourcecontroltoken"
 
 &appservicesourcecontroltoken.AppServiceSourceControlTokenConfig {
 	Connection: interface{},
@@ -668,7 +668,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontr
 	Token: *string,
 	Type: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts,
 	TokenSecret: *string,
 }
 ```
@@ -832,7 +832,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/appservicesourcecontroltoken"
 
 &appservicesourcecontroltoken.AppServiceSourceControlTokenTimeouts {
 	Create: *string,
@@ -908,7 +908,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/appservicesourcecontroltoken"
 
 appservicesourcecontroltoken.NewAppServiceSourceControlTokenTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceSourceControlTokenTimeoutsOutputReference
 ```

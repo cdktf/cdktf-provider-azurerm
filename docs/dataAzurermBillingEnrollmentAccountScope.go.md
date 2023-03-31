@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/billing_en
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBillingEnrollmentAccountScope.DataAzurermBillingEnrollmentAccountScope.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbillingenrollmentaccountscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermbillingenrollmentaccountscope"
 
 dataazurermbillingenrollmentaccountscope.NewDataAzurermBillingEnrollmentAccountScope(scope Construct, id *string, config DataAzurermBillingEnrollmentAccountScopeConfig) DataAzurermBillingEnrollmentAccountScope
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermBillingEnrollmentAccountScope.DataAzurermBillingEnrollmentAccountScope.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbillingenrollmentaccountscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermbillingenrollmentaccountscope"
 
 dataazurermbillingenrollmentaccountscope.DataAzurermBillingEnrollmentAccountScope_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermBillingEnrollmentAccountScope.DataAzurermBillingEnrollmentAccountScope.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbillingenrollmentaccountscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermbillingenrollmentaccountscope"
 
 dataazurermbillingenrollmentaccountscope.DataAzurermBillingEnrollmentAccountScope_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermbillingenrollmentaccountscope.DataAzurermBillingEnrollmentAccountScop
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermBillingEnrollmentAccountScope.DataAzurermBillingEnrollmentAccountScope.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbillingenrollmentaccountscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermbillingenrollmentaccountscope"
 
 dataazurermbillingenrollmentaccountscope.DataAzurermBillingEnrollmentAccountScope_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -604,7 +604,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBillingEnrollmentAccountScope.DataAzurermBillingEnrollmentAccountScopeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbillingenrollmentaccountscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermbillingenrollmentaccountscope"
 
 &dataazurermbillingenrollmentaccountscope.DataAzurermBillingEnrollmentAccountScopeConfig {
 	Connection: interface{},
@@ -617,7 +617,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbillingenr
 	BillingAccountName: *string,
 	EnrollmentAccountName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermBillingEnrollmentAccountScope.DataAzurermBillingEnrollmentAccountScopeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermBillingEnrollmentAccountScope.DataAzurermBillingEnrollmentAccountScopeTimeouts,
 }
 ```
 
@@ -767,7 +767,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBillingEnrollmentAccountScope.DataAzurermBillingEnrollmentAccountScopeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbillingenrollmentaccountscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermbillingenrollmentaccountscope"
 
 &dataazurermbillingenrollmentaccountscope.DataAzurermBillingEnrollmentAccountScopeTimeouts {
 	Read: *string,
@@ -801,7 +801,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBillingEnrollmentAccountScope.DataAzurermBillingEnrollmentAccountScopeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbillingenrollmentaccountscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermbillingenrollmentaccountscope"
 
 dataazurermbillingenrollmentaccountscope.NewDataAzurermBillingEnrollmentAccountScopeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermBillingEnrollmentAccountScopeTimeoutsOutputReference
 ```
