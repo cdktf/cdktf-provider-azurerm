@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationVariableDatetime.AutomationVariableDatetime.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariabledatetime"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledatetime"
 
 automationvariabledatetime.NewAutomationVariableDatetime(scope Construct, id *string, config AutomationVariableDatetimeConfig) AutomationVariableDatetime
 ```
@@ -314,7 +314,7 @@ func ResetValue()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationVariableDatetime.AutomationVariableDatetime.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariabledatetime"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledatetime"
 
 automationvariabledatetime.AutomationVariableDatetime_IsConstruct(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationVariableDatetime.AutomationVariableDatetime.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariabledatetime"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledatetime"
 
 automationvariabledatetime.AutomationVariableDatetime_IsTerraformElement(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ automationvariabledatetime.AutomationVariableDatetime_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationVariableDatetime.AutomationVariableDatetime.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariabledatetime"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledatetime"
 
 automationvariabledatetime.AutomationVariableDatetime_IsTerraformResource(x interface{}) *bool
 ```
@@ -735,7 +735,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationVariableDatetime.AutomationVariableDatetimeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariabledatetime"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledatetime"
 
 &automationvariabledatetime.AutomationVariableDatetimeConfig {
 	Connection: interface{},
@@ -751,7 +751,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariable
 	Description: *string,
 	Encrypted: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.automationVariableDatetime.AutomationVariableDatetimeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationVariableDatetime.AutomationVariableDatetimeTimeouts,
 	Value: *string,
 }
 ```
@@ -954,7 +954,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationVariableDatetime.AutomationVariableDatetimeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariabledatetime"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledatetime"
 
 &automationvariabledatetime.AutomationVariableDatetimeTimeouts {
 	Create: *string,
@@ -1030,7 +1030,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationVariableDatetime.AutomationVariableDatetimeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariabledatetime"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledatetime"
 
 automationvariabledatetime.NewAutomationVariableDatetimeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationVariableDatetimeTimeoutsOutputReference
 ```

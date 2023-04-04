@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_l
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDevTestLab.DataAzurermDevTestLab.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdevtestlab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestlab"
 
 dataazurermdevtestlab.NewDataAzurermDevTestLab(scope Construct, id *string, config DataAzurermDevTestLabConfig) DataAzurermDevTestLab
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermDevTestLab.DataAzurermDevTestLab.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdevtestlab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestlab"
 
 dataazurermdevtestlab.DataAzurermDevTestLab_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermDevTestLab.DataAzurermDevTestLab.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdevtestlab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestlab"
 
 dataazurermdevtestlab.DataAzurermDevTestLab_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermdevtestlab.DataAzurermDevTestLab_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermDevTestLab.DataAzurermDevTestLab.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdevtestlab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestlab"
 
 dataazurermdevtestlab.DataAzurermDevTestLab_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -703,7 +703,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDevTestLab.DataAzurermDevTestLabConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdevtestlab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestlab"
 
 &dataazurermdevtestlab.DataAzurermDevTestLabConfig {
 	Connection: interface{},
@@ -716,7 +716,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdevtest
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermDevTestLab.DataAzurermDevTestLabTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermDevTestLab.DataAzurermDevTestLabTimeouts,
 }
 ```
 
@@ -866,7 +866,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDevTestLab.DataAzurermDevTestLabTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdevtestlab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestlab"
 
 &dataazurermdevtestlab.DataAzurermDevTestLabTimeouts {
 	Read: *string,
@@ -900,7 +900,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDevTestLab.DataAzurermDevTestLabTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdevtestlab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestlab"
 
 dataazurermdevtestlab.NewDataAzurermDevTestLabTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDevTestLabTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/public_ip 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpublicip"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicip"
 
 dataazurermpublicip.NewDataAzurermPublicIp(scope Construct, id *string, config DataAzurermPublicIpConfig) DataAzurermPublicIp
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpublicip"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicip"
 
 dataazurermpublicip.DataAzurermPublicIp_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpublicip"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicip"
 
 dataazurermpublicip.DataAzurermPublicIp_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermpublicip.DataAzurermPublicIp_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIp.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpublicip"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicip"
 
 dataazurermpublicip.DataAzurermPublicIp_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -758,7 +758,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpublicip"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicip"
 
 &dataazurermpublicip.DataAzurermPublicIpConfig {
 	Connection: interface{},
@@ -771,7 +771,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpublici
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermPublicIp.DataAzurermPublicIpTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeouts,
 }
 ```
 
@@ -921,7 +921,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpublicip"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicip"
 
 &dataazurermpublicip.DataAzurermPublicIpTimeouts {
 	Read: *string,
@@ -955,7 +955,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpublicip"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicip"
 
 dataazurermpublicip.NewDataAzurermPublicIpTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermPublicIpTimeoutsOutputReference
 ```
