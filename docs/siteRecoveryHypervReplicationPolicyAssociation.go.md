@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/site_recov
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryHypervReplicationPolicyAssociation.SiteRecoveryHypervReplicationPolicyAssociation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryhypervreplicationpolicyassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryhypervreplicationpolicyassociation"
 
 siterecoveryhypervreplicationpolicyassociation.NewSiteRecoveryHypervReplicationPolicyAssociation(scope Construct, id *string, config SiteRecoveryHypervReplicationPolicyAssociationConfig) SiteRecoveryHypervReplicationPolicyAssociation
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.siteRecoveryHypervReplicationPolicyAssociation.SiteRecoveryHypervReplicationPolicyAssociation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryhypervreplicationpolicyassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryhypervreplicationpolicyassociation"
 
 siterecoveryhypervreplicationpolicyassociation.SiteRecoveryHypervReplicationPolicyAssociation_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.siteRecoveryHypervReplicationPolicyAssociation.SiteRecoveryHypervReplicationPolicyAssociation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryhypervreplicationpolicyassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryhypervreplicationpolicyassociation"
 
 siterecoveryhypervreplicationpolicyassociation.SiteRecoveryHypervReplicationPolicyAssociation_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ siterecoveryhypervreplicationpolicyassociation.SiteRecoveryHypervReplicationPoli
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.siteRecoveryHypervReplicationPolicyAssociation.SiteRecoveryHypervReplicationPolicyAssociation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryhypervreplicationpolicyassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryhypervreplicationpolicyassociation"
 
 siterecoveryhypervreplicationpolicyassociation.SiteRecoveryHypervReplicationPolicyAssociation_IsTerraformResource(x interface{}) *bool
 ```
@@ -648,7 +648,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.siteRecoveryHypervReplicationPolicyAssociation.SiteRecoveryHypervReplicationPolicyAssociationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryhypervreplicationpolicyassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryhypervreplicationpolicyassociation"
 
 &siterecoveryhypervreplicationpolicyassociation.SiteRecoveryHypervReplicationPolicyAssociationConfig {
 	Connection: interface{},
@@ -662,7 +662,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryhypervrep
 	Name: *string,
 	PolicyId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.siteRecoveryHypervReplicationPolicyAssociation.SiteRecoveryHypervReplicationPolicyAssociationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.siteRecoveryHypervReplicationPolicyAssociation.SiteRecoveryHypervReplicationPolicyAssociationTimeouts,
 }
 ```
 
@@ -825,7 +825,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.siteRecoveryHypervReplicationPolicyAssociation.SiteRecoveryHypervReplicationPolicyAssociationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryhypervreplicationpolicyassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryhypervreplicationpolicyassociation"
 
 &siterecoveryhypervreplicationpolicyassociation.SiteRecoveryHypervReplicationPolicyAssociationTimeouts {
 	Create: *string,
@@ -887,7 +887,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryHypervReplicationPolicyAssociation.SiteRecoveryHypervReplicationPolicyAssociationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryhypervreplicationpolicyassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryhypervreplicationpolicyassociation"
 
 siterecoveryhypervreplicationpolicyassociation.NewSiteRecoveryHypervReplicationPolicyAssociationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SiteRecoveryHypervReplicationPolicyAssociationTimeoutsOutputReference
 ```
