@@ -1429,7 +1429,7 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_key_vault_certificate',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.50.0',
+        providerVersion: '3.51.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

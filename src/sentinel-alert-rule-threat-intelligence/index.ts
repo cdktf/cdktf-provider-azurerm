@@ -220,7 +220,7 @@ export class SentinelAlertRuleThreatIntelligence extends cdktf.TerraformResource
       terraformResourceType: 'azurerm_sentinel_alert_rule_threat_intelligence',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.50.0',
+        providerVersion: '3.51.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

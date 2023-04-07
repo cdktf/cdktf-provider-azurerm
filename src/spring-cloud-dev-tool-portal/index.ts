@@ -376,7 +376,7 @@ export class SpringCloudDevToolPortal extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_dev_tool_portal',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.50.0',
+        providerVersion: '3.51.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

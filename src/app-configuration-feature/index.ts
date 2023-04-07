@@ -31,6 +31,10 @@ export interface AppConfigurationFeatureConfig extends cdktf.TerraformMetaArgume
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#key AppConfigurationFeature#key}
+  */
+  readonly key?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#label AppConfigurationFeature#label}
   */
   readonly label?: string;
@@ -644,7 +648,7 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_configuration_feature',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.50.0',
+        providerVersion: '3.51.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -660,6 +664,7 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
     this._enabled = config.enabled;
     this._etag = config.etag;
     this._id = config.id;
+    this._key = config.key;
     this._label = config.label;
     this._locked = config.locked;
     this._name = config.name;
@@ -749,6 +754,22 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // key - computed: true, optional: true, required: false
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  public resetKey() {
+    this._key = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
   }
 
   // label - computed: false, optional: true, required: false
@@ -887,6 +908,7 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
       enabled: cdktf.booleanToTerraform(this._enabled),
       etag: cdktf.stringToTerraform(this._etag),
       id: cdktf.stringToTerraform(this._id),
+      key: cdktf.stringToTerraform(this._key),
       label: cdktf.stringToTerraform(this._label),
       locked: cdktf.booleanToTerraform(this._locked),
       name: cdktf.stringToTerraform(this._name),

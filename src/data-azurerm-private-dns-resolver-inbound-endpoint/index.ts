@@ -205,7 +205,7 @@ export class DataAzurermPrivateDnsResolverInboundEndpoint extends cdktf.Terrafor
       terraformResourceType: 'azurerm_private_dns_resolver_inbound_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.50.0',
+        providerVersion: '3.51.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

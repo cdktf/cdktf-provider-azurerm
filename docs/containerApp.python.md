@@ -501,7 +501,7 @@ def interpolation_for_attribute(
 ```python
 def put_dapr(
   app_id: str,
-  app_port: typing.Union[int, float],
+  app_port: typing.Union[int, float] = None,
   app_protocol: str = None
 ) -> None
 ```
@@ -516,7 +516,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ---
 
-###### `app_port`<sup>Required</sup> <a name="app_port" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putDapr.parameter.appPort"></a>
+###### `app_port`<sup>Optional</sup> <a name="app_port" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putDapr.parameter.appPort"></a>
 
 - *Type:* typing.Union[int, float]
 
@@ -1731,7 +1731,7 @@ from cdktf_cdktf_provider_azurerm import container_app
 
 containerApp.ContainerAppDapr(
   app_id: str,
-  app_port: typing.Union[int, float],
+  app_port: typing.Union[int, float] = None,
   app_protocol: str = None
 )
 ```
@@ -1760,7 +1760,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ---
 
-##### `app_port`<sup>Required</sup> <a name="app_port" id="@cdktf/provider-azurerm.containerApp.ContainerAppDapr.property.appPort"></a>
+##### `app_port`<sup>Optional</sup> <a name="app_port" id="@cdktf/provider-azurerm.containerApp.ContainerAppDapr.property.appPort"></a>
 
 ```python
 app_port: typing.Union[int, float]
@@ -3477,6 +3477,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.resetAppPort">reset_app_port</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.resetAppProtocol">reset_app_protocol</a></code> | *No description.* |
 
 ---
@@ -3652,6 +3653,12 @@ def to_string() -> str
 Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
+
+##### `reset_app_port` <a name="reset_app_port" id="@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.resetAppPort"></a>
+
+```python
+def reset_app_port() -> None
+```
 
 ##### `reset_app_protocol` <a name="reset_app_protocol" id="@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.resetAppProtocol"></a>
 

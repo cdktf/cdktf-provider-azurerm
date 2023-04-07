@@ -1312,7 +1312,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ---
 
-##### `appPort`<sup>Required</sup> <a name="appPort" id="@cdktf/provider-azurerm.containerApp.ContainerAppDapr.property.appPort"></a>
+##### `appPort`<sup>Optional</sup> <a name="appPort" id="@cdktf/provider-azurerm.containerApp.ContainerAppDapr.property.appPort"></a>
 
 ```typescript
 public readonly appPort: number;
@@ -2927,6 +2927,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.resetAppPort">resetAppPort</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.resetAppProtocol">resetAppProtocol</a></code> | *No description.* |
 
 ---
@@ -3080,6 +3081,12 @@ public toString(): string
 Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
+
+##### `resetAppPort` <a name="resetAppPort" id="@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.resetAppPort"></a>
+
+```typescript
+public resetAppPort(): void
+```
 
 ##### `resetAppProtocol` <a name="resetAppProtocol" id="@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.resetAppProtocol"></a>
 

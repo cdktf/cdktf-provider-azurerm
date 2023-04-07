@@ -1308,7 +1308,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new ContainerAppDapr {
     string AppId,
-    double AppPort,
+    double AppPort = null,
     string AppProtocol = null
 };
 ```
@@ -1337,7 +1337,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ---
 
-##### `AppPort`<sup>Required</sup> <a name="AppPort" id="@cdktf/provider-azurerm.containerApp.ContainerAppDapr.property.appPort"></a>
+##### `AppPort`<sup>Optional</sup> <a name="AppPort" id="@cdktf/provider-azurerm.containerApp.ContainerAppDapr.property.appPort"></a>
 
 ```csharp
 public double AppPort { get; set; }
@@ -3051,6 +3051,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.resetAppPort">ResetAppPort</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.resetAppProtocol">ResetAppProtocol</a></code> | *No description.* |
 
 ---
@@ -3204,6 +3205,12 @@ private string ToString()
 Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
+
+##### `ResetAppPort` <a name="ResetAppPort" id="@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.resetAppPort"></a>
+
+```csharp
+private void ResetAppPort()
+```
 
 ##### `ResetAppProtocol` <a name="ResetAppProtocol" id="@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.resetAppProtocol"></a>
 

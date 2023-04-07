@@ -232,7 +232,7 @@ export class TenantTemplateDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_tenant_template_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.50.0',
+        providerVersion: '3.51.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
