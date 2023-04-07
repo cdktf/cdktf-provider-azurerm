@@ -23,6 +23,10 @@ export interface SnapshotConfig extends cdktf.TerraformMetaArguments {
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#incremental_enabled Snapshot#incremental_enabled}
+  */
+  readonly incrementalEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#location Snapshot#location}
   */
   readonly location: string;
@@ -541,7 +545,7 @@ export class Snapshot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_snapshot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.50.0',
+        providerVersion: '3.51.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -555,6 +559,7 @@ export class Snapshot extends cdktf.TerraformResource {
     this._createOption = config.createOption;
     this._diskSizeGb = config.diskSizeGb;
     this._id = config.id;
+    this._incrementalEnabled = config.incrementalEnabled;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -613,6 +618,22 @@ export class Snapshot extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // incremental_enabled - computed: false, optional: true, required: false
+  private _incrementalEnabled?: boolean | cdktf.IResolvable; 
+  public get incrementalEnabled() {
+    return this.getBooleanAttribute('incremental_enabled');
+  }
+  public set incrementalEnabled(value: boolean | cdktf.IResolvable) {
+    this._incrementalEnabled = value;
+  }
+  public resetIncrementalEnabled() {
+    this._incrementalEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get incrementalEnabledInput() {
+    return this._incrementalEnabled;
   }
 
   // location - computed: false, optional: false, required: true
@@ -764,6 +785,7 @@ export class Snapshot extends cdktf.TerraformResource {
       create_option: cdktf.stringToTerraform(this._createOption),
       disk_size_gb: cdktf.numberToTerraform(this._diskSizeGb),
       id: cdktf.stringToTerraform(this._id),
+      incremental_enabled: cdktf.booleanToTerraform(this._incrementalEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

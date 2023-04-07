@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_servic
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironmentV3.DataAzurermAppServiceEnvironmentV3.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserviceenvironmentv3"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceenvironmentv3"
 
 dataazurermappserviceenvironmentv3.NewDataAzurermAppServiceEnvironmentV3(scope Construct, id *string, config DataAzurermAppServiceEnvironmentV3Config) DataAzurermAppServiceEnvironmentV3
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironmentV3.DataAzurermAppServiceEnvironmentV3.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserviceenvironmentv3"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceenvironmentv3"
 
 dataazurermappserviceenvironmentv3.DataAzurermAppServiceEnvironmentV3_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironmentV3.DataAzurermAppServiceEnvironmentV3.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserviceenvironmentv3"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceenvironmentv3"
 
 dataazurermappserviceenvironmentv3.DataAzurermAppServiceEnvironmentV3_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermappserviceenvironmentv3.DataAzurermAppServiceEnvironmentV3_IsTerrafor
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironmentV3.DataAzurermAppServiceEnvironmentV3.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserviceenvironmentv3"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceenvironmentv3"
 
 dataazurermappserviceenvironmentv3.DataAzurermAppServiceEnvironmentV3_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -780,7 +780,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironmentV3.DataAzurermAppServiceEnvironmentV3ClusterSetting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserviceenvironmentv3"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceenvironmentv3"
 
 &dataazurermappserviceenvironmentv3.DataAzurermAppServiceEnvironmentV3ClusterSetting {
 
@@ -793,7 +793,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserv
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironmentV3.DataAzurermAppServiceEnvironmentV3Config.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserviceenvironmentv3"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceenvironmentv3"
 
 &dataazurermappserviceenvironmentv3.DataAzurermAppServiceEnvironmentV3Config {
 	Connection: interface{},
@@ -806,7 +806,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserv
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermAppServiceEnvironmentV3.DataAzurermAppServiceEnvironmentV3Timeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermAppServiceEnvironmentV3.DataAzurermAppServiceEnvironmentV3Timeouts,
 }
 ```
 
@@ -956,7 +956,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironmentV3.DataAzurermAppServiceEnvironmentV3InboundNetworkDependencies.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserviceenvironmentv3"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceenvironmentv3"
 
 &dataazurermappserviceenvironmentv3.DataAzurermAppServiceEnvironmentV3InboundNetworkDependencies {
 
@@ -969,7 +969,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserv
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironmentV3.DataAzurermAppServiceEnvironmentV3Timeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserviceenvironmentv3"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceenvironmentv3"
 
 &dataazurermappserviceenvironmentv3.DataAzurermAppServiceEnvironmentV3Timeouts {
 	Read: *string,
@@ -1003,7 +1003,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironmentV3.DataAzurermAppServiceEnvironmentV3ClusterSettingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserviceenvironmentv3"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceenvironmentv3"
 
 dataazurermappserviceenvironmentv3.NewDataAzurermAppServiceEnvironmentV3ClusterSettingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppServiceEnvironmentV3ClusterSettingList
 ```
@@ -1135,7 +1135,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironmentV3.DataAzurermAppServiceEnvironmentV3ClusterSettingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserviceenvironmentv3"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceenvironmentv3"
 
 dataazurermappserviceenvironmentv3.NewDataAzurermAppServiceEnvironmentV3ClusterSettingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppServiceEnvironmentV3ClusterSettingOutputReference
 ```
@@ -1424,7 +1424,7 @@ func InternalValue() DataAzurermAppServiceEnvironmentV3ClusterSetting
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironmentV3.DataAzurermAppServiceEnvironmentV3InboundNetworkDependenciesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserviceenvironmentv3"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceenvironmentv3"
 
 dataazurermappserviceenvironmentv3.NewDataAzurermAppServiceEnvironmentV3InboundNetworkDependenciesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppServiceEnvironmentV3InboundNetworkDependenciesList
 ```
@@ -1556,7 +1556,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironmentV3.DataAzurermAppServiceEnvironmentV3InboundNetworkDependenciesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserviceenvironmentv3"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceenvironmentv3"
 
 dataazurermappserviceenvironmentv3.NewDataAzurermAppServiceEnvironmentV3InboundNetworkDependenciesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppServiceEnvironmentV3InboundNetworkDependenciesOutputReference
 ```
@@ -1856,7 +1856,7 @@ func InternalValue() DataAzurermAppServiceEnvironmentV3InboundNetworkDependencie
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironmentV3.DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserviceenvironmentv3"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceenvironmentv3"
 
 dataazurermappserviceenvironmentv3.NewDataAzurermAppServiceEnvironmentV3TimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference
 ```

@@ -228,7 +228,7 @@ export class HealthcareMedtechServiceFhirDestination extends cdktf.TerraformReso
       terraformResourceType: 'azurerm_healthcare_medtech_service_fhir_destination',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.50.0',
+        providerVersion: '3.51.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

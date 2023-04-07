@@ -33,6 +33,12 @@ export interface WebPubsubHubConfig extends cdktf.TerraformMetaArguments {
   */
   readonly eventHandler?: WebPubsubHubEventHandler[] | cdktf.IResolvable;
   /**
+  * event_listener block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_pubsub_hub#event_listener WebPubsubHub#event_listener}
+  */
+  readonly eventListener?: WebPubsubHubEventListener[] | cdktf.IResolvable;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_pubsub_hub#timeouts WebPubsubHub#timeouts}
@@ -278,6 +284,178 @@ export class WebPubsubHubEventHandlerList extends cdktf.ComplexList {
     return new WebPubsubHubEventHandlerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface WebPubsubHubEventListener {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_pubsub_hub#eventhub_name WebPubsubHub#eventhub_name}
+  */
+  readonly eventhubName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_pubsub_hub#eventhub_namespace_name WebPubsubHub#eventhub_namespace_name}
+  */
+  readonly eventhubNamespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_pubsub_hub#system_event_name_filter WebPubsubHub#system_event_name_filter}
+  */
+  readonly systemEventNameFilter?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_pubsub_hub#user_event_name_filter WebPubsubHub#user_event_name_filter}
+  */
+  readonly userEventNameFilter?: string[];
+}
+
+export function webPubsubHubEventListenerToTerraform(struct?: WebPubsubHubEventListener | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    eventhub_name: cdktf.stringToTerraform(struct!.eventhubName),
+    eventhub_namespace_name: cdktf.stringToTerraform(struct!.eventhubNamespaceName),
+    system_event_name_filter: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.systemEventNameFilter),
+    user_event_name_filter: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.userEventNameFilter),
+  }
+}
+
+export class WebPubsubHubEventListenerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): WebPubsubHubEventListener | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._eventhubName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.eventhubName = this._eventhubName;
+    }
+    if (this._eventhubNamespaceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.eventhubNamespaceName = this._eventhubNamespaceName;
+    }
+    if (this._systemEventNameFilter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.systemEventNameFilter = this._systemEventNameFilter;
+    }
+    if (this._userEventNameFilter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userEventNameFilter = this._userEventNameFilter;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WebPubsubHubEventListener | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._eventhubName = undefined;
+      this._eventhubNamespaceName = undefined;
+      this._systemEventNameFilter = undefined;
+      this._userEventNameFilter = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._eventhubName = value.eventhubName;
+      this._eventhubNamespaceName = value.eventhubNamespaceName;
+      this._systemEventNameFilter = value.systemEventNameFilter;
+      this._userEventNameFilter = value.userEventNameFilter;
+    }
+  }
+
+  // eventhub_name - computed: false, optional: false, required: true
+  private _eventhubName?: string; 
+  public get eventhubName() {
+    return this.getStringAttribute('eventhub_name');
+  }
+  public set eventhubName(value: string) {
+    this._eventhubName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventhubNameInput() {
+    return this._eventhubName;
+  }
+
+  // eventhub_namespace_name - computed: false, optional: false, required: true
+  private _eventhubNamespaceName?: string; 
+  public get eventhubNamespaceName() {
+    return this.getStringAttribute('eventhub_namespace_name');
+  }
+  public set eventhubNamespaceName(value: string) {
+    this._eventhubNamespaceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventhubNamespaceNameInput() {
+    return this._eventhubNamespaceName;
+  }
+
+  // system_event_name_filter - computed: false, optional: true, required: false
+  private _systemEventNameFilter?: string[]; 
+  public get systemEventNameFilter() {
+    return this.getListAttribute('system_event_name_filter');
+  }
+  public set systemEventNameFilter(value: string[]) {
+    this._systemEventNameFilter = value;
+  }
+  public resetSystemEventNameFilter() {
+    this._systemEventNameFilter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get systemEventNameFilterInput() {
+    return this._systemEventNameFilter;
+  }
+
+  // user_event_name_filter - computed: false, optional: true, required: false
+  private _userEventNameFilter?: string[]; 
+  public get userEventNameFilter() {
+    return this.getListAttribute('user_event_name_filter');
+  }
+  public set userEventNameFilter(value: string[]) {
+    this._userEventNameFilter = value;
+  }
+  public resetUserEventNameFilter() {
+    this._userEventNameFilter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userEventNameFilterInput() {
+    return this._userEventNameFilter;
+  }
+}
+
+export class WebPubsubHubEventListenerList extends cdktf.ComplexList {
+  public internalValue? : WebPubsubHubEventListener[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): WebPubsubHubEventListenerOutputReference {
+    return new WebPubsubHubEventListenerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface WebPubsubHubTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_pubsub_hub#create WebPubsubHub#create}
@@ -461,7 +639,7 @@ export class WebPubsubHub extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_web_pubsub_hub',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.50.0',
+        providerVersion: '3.51.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -477,6 +655,7 @@ export class WebPubsubHub extends cdktf.TerraformResource {
     this._name = config.name;
     this._webPubsubId = config.webPubsubId;
     this._eventHandler.internalValue = config.eventHandler;
+    this._eventListener.internalValue = config.eventListener;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -558,6 +737,22 @@ export class WebPubsubHub extends cdktf.TerraformResource {
     return this._eventHandler.internalValue;
   }
 
+  // event_listener - computed: false, optional: true, required: false
+  private _eventListener = new WebPubsubHubEventListenerList(this, "event_listener", false);
+  public get eventListener() {
+    return this._eventListener;
+  }
+  public putEventListener(value: WebPubsubHubEventListener[] | cdktf.IResolvable) {
+    this._eventListener.internalValue = value;
+  }
+  public resetEventListener() {
+    this._eventListener.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventListenerInput() {
+    return this._eventListener.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new WebPubsubHubTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -585,6 +780,7 @@ export class WebPubsubHub extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       web_pubsub_id: cdktf.stringToTerraform(this._webPubsubId),
       event_handler: cdktf.listMapper(webPubsubHubEventHandlerToTerraform, true)(this._eventHandler.internalValue),
+      event_listener: cdktf.listMapper(webPubsubHubEventListenerToTerraform, true)(this._eventListener.internalValue),
       timeouts: webPubsubHubTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

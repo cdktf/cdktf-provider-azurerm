@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_ma
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachineScaleSetExtension.VirtualMachineScaleSetExtensionA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualmachinescalesetextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetextension"
 
 virtualmachinescalesetextension.NewVirtualMachineScaleSetExtensionA(scope Construct, id *string, config VirtualMachineScaleSetExtensionAConfig) VirtualMachineScaleSetExtensionA
 ```
@@ -362,7 +362,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.virtualMachineScaleSetExtension.VirtualMachineScaleSetExtensionA.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualmachinescalesetextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetextension"
 
 virtualmachinescalesetextension.VirtualMachineScaleSetExtensionA_IsConstruct(x interface{}) *bool
 ```
@@ -394,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.virtualMachineScaleSetExtension.VirtualMachineScaleSetExtensionA.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualmachinescalesetextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetextension"
 
 virtualmachinescalesetextension.VirtualMachineScaleSetExtensionA_IsTerraformElement(x interface{}) *bool
 ```
@@ -408,7 +408,7 @@ virtualmachinescalesetextension.VirtualMachineScaleSetExtensionA_IsTerraformElem
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.virtualMachineScaleSetExtension.VirtualMachineScaleSetExtensionA.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualmachinescalesetextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetextension"
 
 virtualmachinescalesetextension.VirtualMachineScaleSetExtensionA_IsTerraformResource(x interface{}) *bool
 ```
@@ -937,7 +937,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualMachineScaleSetExtension.VirtualMachineScaleSetExtensionAConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualmachinescalesetextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetextension"
 
 &virtualmachinescalesetextension.VirtualMachineScaleSetExtensionAConfig {
 	Connection: interface{},
@@ -958,10 +958,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualmachinescal
 	ForceUpdateTag: *string,
 	Id: *string,
 	ProtectedSettings: *string,
-	ProtectedSettingsFromKeyVault: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.virtualMachineScaleSetExtension.VirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault,
+	ProtectedSettingsFromKeyVault: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualMachineScaleSetExtension.VirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault,
 	ProvisionAfterExtensions: *[]*string,
 	Settings: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.virtualMachineScaleSetExtension.VirtualMachineScaleSetExtensionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualMachineScaleSetExtension.VirtualMachineScaleSetExtensionTimeouts,
 }
 ```
 
@@ -1256,7 +1256,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualMachineScaleSetExtension.VirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualmachinescalesetextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetextension"
 
 &virtualmachinescalesetextension.VirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault {
 	SecretUrl: *string,
@@ -1302,7 +1302,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualMachineScaleSetExtension.VirtualMachineScaleSetExtensionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualmachinescalesetextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetextension"
 
 &virtualmachinescalesetextension.VirtualMachineScaleSetExtensionTimeouts {
 	Create: *string,
@@ -1378,7 +1378,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachineScaleSetExtension.VirtualMachineScaleSetExtensionProtectedSettingsFromKeyVaultOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualmachinescalesetextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetextension"
 
 virtualmachinescalesetextension.NewVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVaultOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualMachineScaleSetExtensionProtectedSettingsFromKeyVaultOutputReference
 ```
@@ -1671,7 +1671,7 @@ func InternalValue() VirtualMachineScaleSetExtensionProtectedSettingsFromKeyVaul
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachineScaleSetExtension.VirtualMachineScaleSetExtensionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/virtualmachinescalesetextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetextension"
 
 virtualmachinescalesetextension.NewVirtualMachineScaleSetExtensionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualMachineScaleSetExtensionTimeoutsOutputReference
 ```

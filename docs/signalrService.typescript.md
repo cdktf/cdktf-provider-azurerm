@@ -75,6 +75,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.resetAadAuthEnabled">resetAadAuthEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.resetConnectivityLogsEnabled">resetConnectivityLogsEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.resetCors">resetCors</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.resetHttpRequestLogsEnabled">resetHttpRequestLogsEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.resetId">resetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.resetIdentity">resetIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.resetLiveTrace">resetLiveTrace</a></code> | *No description.* |
@@ -365,6 +366,12 @@ public resetConnectivityLogsEnabled(): void
 public resetCors(): void
 ```
 
+##### `resetHttpRequestLogsEnabled` <a name="resetHttpRequestLogsEnabled" id="@cdktf/provider-azurerm.signalrService.SignalrService.resetHttpRequestLogsEnabled"></a>
+
+```typescript
+public resetHttpRequestLogsEnabled(): void
+```
+
 ##### `resetId` <a name="resetId" id="@cdktf/provider-azurerm.signalrService.SignalrService.resetId"></a>
 
 ```typescript
@@ -548,6 +555,7 @@ signalrService.SignalrService.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.aadAuthEnabledInput">aadAuthEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.connectivityLogsEnabledInput">connectivityLogsEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.corsInput">corsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceCors">SignalrServiceCors</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.httpRequestLogsEnabledInput">httpRequestLogsEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.identityInput">identityInput</a></code> | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceIdentity">SignalrServiceIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.liveTraceEnabledInput">liveTraceEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
@@ -567,6 +575,7 @@ signalrService.SignalrService.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.upstreamEndpointInput">upstreamEndpointInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceUpstreamEndpoint">SignalrServiceUpstreamEndpoint</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.aadAuthEnabled">aadAuthEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.connectivityLogsEnabled">connectivityLogsEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.httpRequestLogsEnabled">httpRequestLogsEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.liveTraceEnabled">liveTraceEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.localAuthEnabled">localAuthEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
@@ -894,6 +903,16 @@ public readonly corsInput: IResolvable | SignalrServiceCors[];
 
 ---
 
+##### `httpRequestLogsEnabledInput`<sup>Optional</sup> <a name="httpRequestLogsEnabledInput" id="@cdktf/provider-azurerm.signalrService.SignalrService.property.httpRequestLogsEnabledInput"></a>
+
+```typescript
+public readonly httpRequestLogsEnabledInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
 ##### `identityInput`<sup>Optional</sup> <a name="identityInput" id="@cdktf/provider-azurerm.signalrService.SignalrService.property.identityInput"></a>
 
 ```typescript
@@ -1084,6 +1103,16 @@ public readonly connectivityLogsEnabled: boolean | IResolvable;
 
 ---
 
+##### `httpRequestLogsEnabled`<sup>Required</sup> <a name="httpRequestLogsEnabled" id="@cdktf/provider-azurerm.signalrService.SignalrService.property.httpRequestLogsEnabled"></a>
+
+```typescript
+public readonly httpRequestLogsEnabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
 ##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.signalrService.SignalrService.property.id"></a>
 
 ```typescript
@@ -1252,6 +1281,7 @@ const signalrServiceConfig: signalrService.SignalrServiceConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.aadAuthEnabled">aadAuthEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#aad_auth_enabled SignalrService#aad_auth_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.connectivityLogsEnabled">connectivityLogsEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#connectivity_logs_enabled SignalrService#connectivity_logs_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.cors">cors</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceCors">SignalrServiceCors</a>[]</code> | cors block. |
+| <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.httpRequestLogsEnabled">httpRequestLogsEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#http_request_logs_enabled SignalrService#http_request_logs_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#id SignalrService#id}. |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceIdentity">SignalrServiceIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.liveTrace">liveTrace</a></code> | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceLiveTrace">SignalrServiceLiveTrace</a></code> | live_trace block. |
@@ -1423,6 +1453,18 @@ public readonly cors: IResolvable | SignalrServiceCors[];
 cors block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#cors SignalrService#cors}
+
+---
+
+##### `httpRequestLogsEnabled`<sup>Optional</sup> <a name="httpRequestLogsEnabled" id="@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.httpRequestLogsEnabled"></a>
+
+```typescript
+public readonly httpRequestLogsEnabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#http_request_logs_enabled SignalrService#http_request_logs_enabled}.
 
 ---
 

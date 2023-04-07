@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationCredential.AutomationCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationcredential"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationcredential"
 
 automationcredential.NewAutomationCredential(scope Construct, id *string, config AutomationCredentialConfig) AutomationCredential
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationCredential.AutomationCredential.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationcredential"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationcredential"
 
 automationcredential.AutomationCredential_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationCredential.AutomationCredential.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationcredential"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationcredential"
 
 automationcredential.AutomationCredential_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ automationcredential.AutomationCredential_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationCredential.AutomationCredential.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationcredential"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationcredential"
 
 automationcredential.AutomationCredential_IsTerraformResource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationCredential.AutomationCredentialConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationcredential"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationcredential"
 
 &automationcredential.AutomationCredentialConfig {
 	Connection: interface{},
@@ -738,7 +738,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationcredenti
 	Username: *string,
 	Description: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.automationCredential.AutomationCredentialTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationCredential.AutomationCredentialTimeouts,
 }
 ```
 
@@ -940,7 +940,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationCredential.AutomationCredentialTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationcredential"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationcredential"
 
 &automationcredential.AutomationCredentialTimeouts {
 	Create: *string,
@@ -1016,7 +1016,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationCredential.AutomationCredentialTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationcredential"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationcredential"
 
 automationcredential.NewAutomationCredentialTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationCredentialTimeoutsOutputReference
 ```

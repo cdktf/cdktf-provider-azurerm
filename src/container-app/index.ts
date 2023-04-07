@@ -93,7 +93,7 @@ export interface ContainerAppDapr {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_app#app_port ContainerApp#app_port}
   */
-  readonly appPort: number;
+  readonly appPort?: number;
   /**
   * The protocol for the app. Possible values include `http` and `grpc`. Defaults to `http`.
   * 
@@ -171,13 +171,16 @@ export class ContainerAppDaprOutputReference extends cdktf.ComplexObject {
     return this._appId;
   }
 
-  // app_port - computed: false, optional: false, required: true
+  // app_port - computed: false, optional: true, required: false
   private _appPort?: number; 
   public get appPort() {
     return this.getNumberAttribute('app_port');
   }
   public set appPort(value: number) {
     this._appPort = value;
+  }
+  public resetAppPort() {
+    this._appPort = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get appPortInput() {
@@ -3612,7 +3615,7 @@ export class ContainerApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.50.0',
+        providerVersion: '3.51.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

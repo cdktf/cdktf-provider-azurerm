@@ -71,6 +71,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.resetDiskSizeGb">resetDiskSizeGb</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.resetEncryptionSettings">resetEncryptionSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.resetId">resetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.resetIncrementalEnabled">resetIncrementalEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.resetSourceResourceId">resetSourceResourceId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.resetSourceUri">resetSourceUri</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.resetStorageAccountId">resetStorageAccountId</a></code> | *No description.* |
@@ -305,6 +306,12 @@ public resetEncryptionSettings(): void
 public resetId(): void
 ```
 
+##### `resetIncrementalEnabled` <a name="resetIncrementalEnabled" id="@cdktf/provider-azurerm.snapshot.Snapshot.resetIncrementalEnabled"></a>
+
+```typescript
+public resetIncrementalEnabled(): void
+```
+
 ##### `resetSourceResourceId` <a name="resetSourceResourceId" id="@cdktf/provider-azurerm.snapshot.Snapshot.resetSourceResourceId"></a>
 
 ```typescript
@@ -430,6 +437,7 @@ snapshot.Snapshot.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.diskSizeGbInput">diskSizeGbInput</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.encryptionSettingsInput">encryptionSettingsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotEncryptionSettings">SnapshotEncryptionSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.incrementalEnabledInput">incrementalEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.locationInput">locationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
@@ -441,6 +449,7 @@ snapshot.Snapshot.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.createOption">createOption</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.diskSizeGb">diskSizeGb</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.incrementalEnabled">incrementalEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.location">location</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
@@ -663,6 +672,16 @@ public readonly idInput: string;
 
 ---
 
+##### `incrementalEnabledInput`<sup>Optional</sup> <a name="incrementalEnabledInput" id="@cdktf/provider-azurerm.snapshot.Snapshot.property.incrementalEnabledInput"></a>
+
+```typescript
+public readonly incrementalEnabledInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
 ##### `locationInput`<sup>Optional</sup> <a name="locationInput" id="@cdktf/provider-azurerm.snapshot.Snapshot.property.locationInput"></a>
 
 ```typescript
@@ -770,6 +789,16 @@ public readonly id: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `incrementalEnabled`<sup>Required</sup> <a name="incrementalEnabled" id="@cdktf/provider-azurerm.snapshot.Snapshot.property.incrementalEnabled"></a>
+
+```typescript
+public readonly incrementalEnabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
 
 ---
 
@@ -891,6 +920,7 @@ const snapshotConfig: snapshot.SnapshotConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.diskSizeGb">diskSizeGb</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#disk_size_gb Snapshot#disk_size_gb}. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.encryptionSettings">encryptionSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotEncryptionSettings">SnapshotEncryptionSettings</a></code> | encryption_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#id Snapshot#id}. |
+| <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.incrementalEnabled">incrementalEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#incremental_enabled Snapshot#incremental_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.sourceResourceId">sourceResourceId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#source_resource_id Snapshot#source_resource_id}. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.sourceUri">sourceUri</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#source_uri Snapshot#source_uri}. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.storageAccountId">storageAccountId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#storage_account_id Snapshot#storage_account_id}. |
@@ -1055,6 +1085,18 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `incrementalEnabled`<sup>Optional</sup> <a name="incrementalEnabled" id="@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.incrementalEnabled"></a>
+
+```typescript
+public readonly incrementalEnabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#incremental_enabled Snapshot#incremental_enabled}.
 
 ---
 

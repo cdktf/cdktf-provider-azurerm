@@ -209,7 +209,7 @@ export class DataAzurermDnsCaaRecord extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_dns_caa_record',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.50.0',
+        providerVersion: '3.51.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

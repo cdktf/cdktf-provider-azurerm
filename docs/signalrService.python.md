@@ -28,6 +28,7 @@ signalrService.SignalrService(
   aad_auth_enabled: typing.Union[bool, IResolvable] = None,
   connectivity_logs_enabled: typing.Union[bool, IResolvable] = None,
   cors: typing.Union[IResolvable, typing.List[SignalrServiceCors]] = None,
+  http_request_logs_enabled: typing.Union[bool, IResolvable] = None,
   id: str = None,
   identity: SignalrServiceIdentity = None,
   live_trace: SignalrServiceLiveTrace = None,
@@ -62,6 +63,7 @@ signalrService.SignalrService(
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.Initializer.parameter.aadAuthEnabled">aad_auth_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#aad_auth_enabled SignalrService#aad_auth_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.Initializer.parameter.connectivityLogsEnabled">connectivity_logs_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#connectivity_logs_enabled SignalrService#connectivity_logs_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.Initializer.parameter.cors">cors</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceCors">SignalrServiceCors</a>]]</code> | cors block. |
+| <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.Initializer.parameter.httpRequestLogsEnabled">http_request_logs_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#http_request_logs_enabled SignalrService#http_request_logs_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#id SignalrService#id}. |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.Initializer.parameter.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceIdentity">SignalrServiceIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.Initializer.parameter.liveTrace">live_trace</a></code> | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceLiveTrace">SignalrServiceLiveTrace</a></code> | live_trace block. |
@@ -195,6 +197,14 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 cors block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#cors SignalrService#cors}
+
+---
+
+##### `http_request_logs_enabled`<sup>Optional</sup> <a name="http_request_logs_enabled" id="@cdktf/provider-azurerm.signalrService.SignalrService.Initializer.parameter.httpRequestLogsEnabled"></a>
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#http_request_logs_enabled SignalrService#http_request_logs_enabled}.
 
 ---
 
@@ -342,6 +352,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.resetAadAuthEnabled">reset_aad_auth_enabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.resetConnectivityLogsEnabled">reset_connectivity_logs_enabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.resetCors">reset_cors</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.resetHttpRequestLogsEnabled">reset_http_request_logs_enabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.resetId">reset_id</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.resetIdentity">reset_identity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.resetLiveTrace">reset_live_trace</a></code> | *No description.* |
@@ -749,6 +760,12 @@ def reset_connectivity_logs_enabled() -> None
 def reset_cors() -> None
 ```
 
+##### `reset_http_request_logs_enabled` <a name="reset_http_request_logs_enabled" id="@cdktf/provider-azurerm.signalrService.SignalrService.resetHttpRequestLogsEnabled"></a>
+
+```python
+def reset_http_request_logs_enabled() -> None
+```
+
 ##### `reset_id` <a name="reset_id" id="@cdktf/provider-azurerm.signalrService.SignalrService.resetId"></a>
 
 ```python
@@ -938,6 +955,7 @@ signalrService.SignalrService.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.aadAuthEnabledInput">aad_auth_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.connectivityLogsEnabledInput">connectivity_logs_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.corsInput">cors_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceCors">SignalrServiceCors</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.httpRequestLogsEnabledInput">http_request_logs_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.identityInput">identity_input</a></code> | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceIdentity">SignalrServiceIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.liveTraceEnabledInput">live_trace_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
@@ -957,6 +975,7 @@ signalrService.SignalrService.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.upstreamEndpointInput">upstream_endpoint_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceUpstreamEndpoint">SignalrServiceUpstreamEndpoint</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.aadAuthEnabled">aad_auth_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.connectivityLogsEnabled">connectivity_logs_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.httpRequestLogsEnabled">http_request_logs_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.liveTraceEnabled">live_trace_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrService.property.localAuthEnabled">local_auth_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
@@ -1284,6 +1303,16 @@ cors_input: typing.Union[IResolvable, typing.List[SignalrServiceCors]]
 
 ---
 
+##### `http_request_logs_enabled_input`<sup>Optional</sup> <a name="http_request_logs_enabled_input" id="@cdktf/provider-azurerm.signalrService.SignalrService.property.httpRequestLogsEnabledInput"></a>
+
+```python
+http_request_logs_enabled_input: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+---
+
 ##### `identity_input`<sup>Optional</sup> <a name="identity_input" id="@cdktf/provider-azurerm.signalrService.SignalrService.property.identityInput"></a>
 
 ```python
@@ -1474,6 +1503,16 @@ connectivity_logs_enabled: typing.Union[bool, IResolvable]
 
 ---
 
+##### `http_request_logs_enabled`<sup>Required</sup> <a name="http_request_logs_enabled" id="@cdktf/provider-azurerm.signalrService.SignalrService.property.httpRequestLogsEnabled"></a>
+
+```python
+http_request_logs_enabled: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+---
+
 ##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.signalrService.SignalrService.property.id"></a>
 
 ```python
@@ -1636,6 +1675,7 @@ signalrService.SignalrServiceConfig(
   aad_auth_enabled: typing.Union[bool, IResolvable] = None,
   connectivity_logs_enabled: typing.Union[bool, IResolvable] = None,
   cors: typing.Union[IResolvable, typing.List[SignalrServiceCors]] = None,
+  http_request_logs_enabled: typing.Union[bool, IResolvable] = None,
   id: str = None,
   identity: SignalrServiceIdentity = None,
   live_trace: SignalrServiceLiveTrace = None,
@@ -1670,6 +1710,7 @@ signalrService.SignalrServiceConfig(
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.aadAuthEnabled">aad_auth_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#aad_auth_enabled SignalrService#aad_auth_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.connectivityLogsEnabled">connectivity_logs_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#connectivity_logs_enabled SignalrService#connectivity_logs_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.cors">cors</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceCors">SignalrServiceCors</a>]]</code> | cors block. |
+| <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.httpRequestLogsEnabled">http_request_logs_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#http_request_logs_enabled SignalrService#http_request_logs_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#id SignalrService#id}. |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceIdentity">SignalrServiceIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.liveTrace">live_trace</a></code> | <code><a href="#@cdktf/provider-azurerm.signalrService.SignalrServiceLiveTrace">SignalrServiceLiveTrace</a></code> | live_trace block. |
@@ -1841,6 +1882,18 @@ cors: typing.Union[IResolvable, typing.List[SignalrServiceCors]]
 cors block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#cors SignalrService#cors}
+
+---
+
+##### `http_request_logs_enabled`<sup>Optional</sup> <a name="http_request_logs_enabled" id="@cdktf/provider-azurerm.signalrService.SignalrServiceConfig.property.httpRequestLogsEnabled"></a>
+
+```python
+http_request_logs_enabled: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#http_request_logs_enabled SignalrService#http_request_logs_enabled}.
 
 ---
 

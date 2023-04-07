@@ -16,6 +16,10 @@ export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly connectivityLogsEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#http_request_logs_enabled SignalrService#http_request_logs_enabled}
+  */
+  readonly httpRequestLogsEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#id SignalrService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -877,7 +881,7 @@ export class SignalrService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_signalr_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.50.0',
+        providerVersion: '3.51.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -890,6 +894,7 @@ export class SignalrService extends cdktf.TerraformResource {
     });
     this._aadAuthEnabled = config.aadAuthEnabled;
     this._connectivityLogsEnabled = config.connectivityLogsEnabled;
+    this._httpRequestLogsEnabled = config.httpRequestLogsEnabled;
     this._id = config.id;
     this._liveTraceEnabled = config.liveTraceEnabled;
     this._localAuthEnabled = config.localAuthEnabled;
@@ -949,6 +954,22 @@ export class SignalrService extends cdktf.TerraformResource {
   // hostname - computed: true, optional: false, required: false
   public get hostname() {
     return this.getStringAttribute('hostname');
+  }
+
+  // http_request_logs_enabled - computed: false, optional: true, required: false
+  private _httpRequestLogsEnabled?: boolean | cdktf.IResolvable; 
+  public get httpRequestLogsEnabled() {
+    return this.getBooleanAttribute('http_request_logs_enabled');
+  }
+  public set httpRequestLogsEnabled(value: boolean | cdktf.IResolvable) {
+    this._httpRequestLogsEnabled = value;
+  }
+  public resetHttpRequestLogsEnabled() {
+    this._httpRequestLogsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpRequestLogsEnabledInput() {
+    return this._httpRequestLogsEnabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1270,6 +1291,7 @@ export class SignalrService extends cdktf.TerraformResource {
     return {
       aad_auth_enabled: cdktf.booleanToTerraform(this._aadAuthEnabled),
       connectivity_logs_enabled: cdktf.booleanToTerraform(this._connectivityLogsEnabled),
+      http_request_logs_enabled: cdktf.booleanToTerraform(this._httpRequestLogsEnabled),
       id: cdktf.stringToTerraform(this._id),
       live_trace_enabled: cdktf.booleanToTerraform(this._liveTraceEnabled),
       local_auth_enabled: cdktf.booleanToTerraform(this._localAuthEnabled),

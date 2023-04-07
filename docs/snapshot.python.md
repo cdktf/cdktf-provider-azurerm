@@ -28,6 +28,7 @@ snapshot.Snapshot(
   disk_size_gb: typing.Union[int, float] = None,
   encryption_settings: SnapshotEncryptionSettings = None,
   id: str = None,
+  incremental_enabled: typing.Union[bool, IResolvable] = None,
   source_resource_id: str = None,
   source_uri: str = None,
   storage_account_id: str = None,
@@ -54,6 +55,7 @@ snapshot.Snapshot(
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.Initializer.parameter.diskSizeGb">disk_size_gb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#disk_size_gb Snapshot#disk_size_gb}. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.Initializer.parameter.encryptionSettings">encryption_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotEncryptionSettings">SnapshotEncryptionSettings</a></code> | encryption_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#id Snapshot#id}. |
+| <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.Initializer.parameter.incrementalEnabled">incremental_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#incremental_enabled Snapshot#incremental_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.Initializer.parameter.sourceResourceId">source_resource_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#source_resource_id Snapshot#source_resource_id}. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.Initializer.parameter.sourceUri">source_uri</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#source_uri Snapshot#source_uri}. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.Initializer.parameter.storageAccountId">storage_account_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#storage_account_id Snapshot#storage_account_id}. |
@@ -183,6 +185,14 @@ If you experience problems setting this value it might not be settable. Please t
 
 ---
 
+##### `incremental_enabled`<sup>Optional</sup> <a name="incremental_enabled" id="@cdktf/provider-azurerm.snapshot.Snapshot.Initializer.parameter.incrementalEnabled"></a>
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#incremental_enabled Snapshot#incremental_enabled}.
+
+---
+
 ##### `source_resource_id`<sup>Optional</sup> <a name="source_resource_id" id="@cdktf/provider-azurerm.snapshot.Snapshot.Initializer.parameter.sourceResourceId"></a>
 
 - *Type:* str
@@ -250,6 +260,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.resetDiskSizeGb">reset_disk_size_gb</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.resetEncryptionSettings">reset_encryption_settings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.resetId">reset_id</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.resetIncrementalEnabled">reset_incremental_enabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.resetSourceResourceId">reset_source_resource_id</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.resetSourceUri">reset_source_uri</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.resetStorageAccountId">reset_storage_account_id</a></code> | *No description.* |
@@ -566,6 +577,12 @@ def reset_encryption_settings() -> None
 def reset_id() -> None
 ```
 
+##### `reset_incremental_enabled` <a name="reset_incremental_enabled" id="@cdktf/provider-azurerm.snapshot.Snapshot.resetIncrementalEnabled"></a>
+
+```python
+def reset_incremental_enabled() -> None
+```
+
 ##### `reset_source_resource_id` <a name="reset_source_resource_id" id="@cdktf/provider-azurerm.snapshot.Snapshot.resetSourceResourceId"></a>
 
 ```python
@@ -697,6 +714,7 @@ snapshot.Snapshot.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.diskSizeGbInput">disk_size_gb_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.encryptionSettingsInput">encryption_settings_input</a></code> | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotEncryptionSettings">SnapshotEncryptionSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.incrementalEnabledInput">incremental_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
@@ -708,6 +726,7 @@ snapshot.Snapshot.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.createOption">create_option</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.diskSizeGb">disk_size_gb</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.incrementalEnabled">incremental_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.location">location</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | *No description.* |
@@ -930,6 +949,16 @@ id_input: str
 
 ---
 
+##### `incremental_enabled_input`<sup>Optional</sup> <a name="incremental_enabled_input" id="@cdktf/provider-azurerm.snapshot.Snapshot.property.incrementalEnabledInput"></a>
+
+```python
+incremental_enabled_input: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+---
+
 ##### `location_input`<sup>Optional</sup> <a name="location_input" id="@cdktf/provider-azurerm.snapshot.Snapshot.property.locationInput"></a>
 
 ```python
@@ -1037,6 +1066,16 @@ id: str
 ```
 
 - *Type:* str
+
+---
+
+##### `incremental_enabled`<sup>Required</sup> <a name="incremental_enabled" id="@cdktf/provider-azurerm.snapshot.Snapshot.property.incrementalEnabled"></a>
+
+```python
+incremental_enabled: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
 
 ---
 
@@ -1152,6 +1191,7 @@ snapshot.SnapshotConfig(
   disk_size_gb: typing.Union[int, float] = None,
   encryption_settings: SnapshotEncryptionSettings = None,
   id: str = None,
+  incremental_enabled: typing.Union[bool, IResolvable] = None,
   source_resource_id: str = None,
   source_uri: str = None,
   storage_account_id: str = None,
@@ -1178,6 +1218,7 @@ snapshot.SnapshotConfig(
 | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.diskSizeGb">disk_size_gb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#disk_size_gb Snapshot#disk_size_gb}. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.encryptionSettings">encryption_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotEncryptionSettings">SnapshotEncryptionSettings</a></code> | encryption_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#id Snapshot#id}. |
+| <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.incrementalEnabled">incremental_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#incremental_enabled Snapshot#incremental_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.sourceResourceId">source_resource_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#source_resource_id Snapshot#source_resource_id}. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.sourceUri">source_uri</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#source_uri Snapshot#source_uri}. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.storageAccountId">storage_account_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#storage_account_id Snapshot#storage_account_id}. |
@@ -1342,6 +1383,18 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `incremental_enabled`<sup>Optional</sup> <a name="incremental_enabled" id="@cdktf/provider-azurerm.snapshot.SnapshotConfig.property.incrementalEnabled"></a>
+
+```python
+incremental_enabled: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#incremental_enabled Snapshot#incremental_enabled}.
 
 ---
 

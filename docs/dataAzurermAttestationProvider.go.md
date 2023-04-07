@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/attestatio
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAttestationProvider.DataAzurermAttestationProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermattestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermattestationprovider"
 
 dataazurermattestationprovider.NewDataAzurermAttestationProvider(scope Construct, id *string, config DataAzurermAttestationProviderConfig) DataAzurermAttestationProvider
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermAttestationProvider.DataAzurermAttestationProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermattestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermattestationprovider"
 
 dataazurermattestationprovider.DataAzurermAttestationProvider_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermAttestationProvider.DataAzurermAttestationProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermattestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermattestationprovider"
 
 dataazurermattestationprovider.DataAzurermAttestationProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermattestationprovider.DataAzurermAttestationProvider_IsTerraformElement
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermAttestationProvider.DataAzurermAttestationProvider.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermattestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermattestationprovider"
 
 dataazurermattestationprovider.DataAzurermAttestationProvider_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -648,7 +648,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAttestationProvider.DataAzurermAttestationProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermattestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermattestationprovider"
 
 &dataazurermattestationprovider.DataAzurermAttestationProviderConfig {
 	Connection: interface{},
@@ -661,7 +661,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermattesta
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermAttestationProvider.DataAzurermAttestationProviderTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermAttestationProvider.DataAzurermAttestationProviderTimeouts,
 }
 ```
 
@@ -811,7 +811,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAttestationProvider.DataAzurermAttestationProviderTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermattestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermattestationprovider"
 
 &dataazurermattestationprovider.DataAzurermAttestationProviderTimeouts {
 	Read: *string,
@@ -845,7 +845,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAttestationProvider.DataAzurermAttestationProviderTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermattestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermattestationprovider"
 
 dataazurermattestationprovider.NewDataAzurermAttestationProviderTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermAttestationProviderTimeoutsOutputReference
 ```

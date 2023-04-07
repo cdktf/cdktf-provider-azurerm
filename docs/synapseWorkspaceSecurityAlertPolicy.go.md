@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_wo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseWorkspaceSecurityAlertPolicy.SynapseWorkspaceSecurityAlertPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapseworkspacesecurityalertpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspacesecurityalertpolicy"
 
 synapseworkspacesecurityalertpolicy.NewSynapseWorkspaceSecurityAlertPolicy(scope Construct, id *string, config SynapseWorkspaceSecurityAlertPolicyConfig) SynapseWorkspaceSecurityAlertPolicy
 ```
@@ -335,7 +335,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.synapseWorkspaceSecurityAlertPolicy.SynapseWorkspaceSecurityAlertPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapseworkspacesecurityalertpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspacesecurityalertpolicy"
 
 synapseworkspacesecurityalertpolicy.SynapseWorkspaceSecurityAlertPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -367,7 +367,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.synapseWorkspaceSecurityAlertPolicy.SynapseWorkspaceSecurityAlertPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapseworkspacesecurityalertpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspacesecurityalertpolicy"
 
 synapseworkspacesecurityalertpolicy.SynapseWorkspaceSecurityAlertPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -381,7 +381,7 @@ synapseworkspacesecurityalertpolicy.SynapseWorkspaceSecurityAlertPolicy_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.synapseWorkspaceSecurityAlertPolicy.SynapseWorkspaceSecurityAlertPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapseworkspacesecurityalertpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspacesecurityalertpolicy"
 
 synapseworkspacesecurityalertpolicy.SynapseWorkspaceSecurityAlertPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -800,7 +800,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseWorkspaceSecurityAlertPolicy.SynapseWorkspaceSecurityAlertPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapseworkspacesecurityalertpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspacesecurityalertpolicy"
 
 &synapseworkspacesecurityalertpolicy.SynapseWorkspaceSecurityAlertPolicyConfig {
 	Connection: interface{},
@@ -819,7 +819,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapseworkspacese
 	RetentionDays: *f64,
 	StorageAccountAccessKey: *string,
 	StorageEndpoint: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.synapseWorkspaceSecurityAlertPolicy.SynapseWorkspaceSecurityAlertPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.synapseWorkspaceSecurityAlertPolicy.SynapseWorkspaceSecurityAlertPolicyTimeouts,
 }
 ```
 
@@ -1047,7 +1047,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseWorkspaceSecurityAlertPolicy.SynapseWorkspaceSecurityAlertPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapseworkspacesecurityalertpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspacesecurityalertpolicy"
 
 &synapseworkspacesecurityalertpolicy.SynapseWorkspaceSecurityAlertPolicyTimeouts {
 	Create: *string,
@@ -1123,7 +1123,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseWorkspaceSecurityAlertPolicy.SynapseWorkspaceSecurityAlertPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapseworkspacesecurityalertpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspacesecurityalertpolicy"
 
 synapseworkspacesecurityalertpolicy.NewSynapseWorkspaceSecurityAlertPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SynapseWorkspaceSecurityAlertPolicyTimeoutsOutputReference
 ```

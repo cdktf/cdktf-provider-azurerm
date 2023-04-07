@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_ac
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccountNetworkRules.StorageAccountNetworkRulesA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storageaccountnetworkrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountnetworkrules"
 
 storageaccountnetworkrules.NewStorageAccountNetworkRulesA(scope Construct, id *string, config StorageAccountNetworkRulesAConfig) StorageAccountNetworkRulesA
 ```
@@ -334,7 +334,7 @@ func ResetVirtualNetworkSubnetIds()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageAccountNetworkRules.StorageAccountNetworkRulesA.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storageaccountnetworkrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountnetworkrules"
 
 storageaccountnetworkrules.StorageAccountNetworkRulesA_IsConstruct(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageAccountNetworkRules.StorageAccountNetworkRulesA.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storageaccountnetworkrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountnetworkrules"
 
 storageaccountnetworkrules.StorageAccountNetworkRulesA_IsTerraformElement(x interface{}) *bool
 ```
@@ -380,7 +380,7 @@ storageaccountnetworkrules.StorageAccountNetworkRulesA_IsTerraformElement(x inte
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageAccountNetworkRules.StorageAccountNetworkRulesA.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storageaccountnetworkrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountnetworkrules"
 
 storageaccountnetworkrules.StorageAccountNetworkRulesA_IsTerraformResource(x interface{}) *bool
 ```
@@ -755,7 +755,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccountNetworkRules.StorageAccountNetworkRulesAConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storageaccountnetworkrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountnetworkrules"
 
 &storageaccountnetworkrules.StorageAccountNetworkRulesAConfig {
 	Connection: interface{},
@@ -771,7 +771,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storageaccountnetw
 	Id: *string,
 	IpRules: *[]*string,
 	PrivateLinkAccess: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.storageAccountNetworkRules.StorageAccountNetworkRulesTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccountNetworkRules.StorageAccountNetworkRulesTimeouts,
 	VirtualNetworkSubnetIds: *[]*string,
 }
 ```
@@ -976,7 +976,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccountNetworkRules.StorageAccountNetworkRulesPrivateLinkAccessA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storageaccountnetworkrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountnetworkrules"
 
 &storageaccountnetworkrules.StorageAccountNetworkRulesPrivateLinkAccessA {
 	EndpointResourceId: *string,
@@ -1022,7 +1022,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccountNetworkRules.StorageAccountNetworkRulesTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storageaccountnetworkrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountnetworkrules"
 
 &storageaccountnetworkrules.StorageAccountNetworkRulesTimeouts {
 	Create: *string,
@@ -1098,7 +1098,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccountNetworkRules.StorageAccountNetworkRulesPrivateLinkAccessAList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storageaccountnetworkrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountnetworkrules"
 
 storageaccountnetworkrules.NewStorageAccountNetworkRulesPrivateLinkAccessAList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageAccountNetworkRulesPrivateLinkAccessAList
 ```
@@ -1241,7 +1241,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccountNetworkRules.StorageAccountNetworkRulesPrivateLinkAccessAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storageaccountnetworkrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountnetworkrules"
 
 storageaccountnetworkrules.NewStorageAccountNetworkRulesPrivateLinkAccessAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageAccountNetworkRulesPrivateLinkAccessAOutputReference
 ```
@@ -1559,7 +1559,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccountNetworkRules.StorageAccountNetworkRulesTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storageaccountnetworkrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountnetworkrules"
 
 storageaccountnetworkrules.NewStorageAccountNetworkRulesTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountNetworkRulesTimeoutsOutputReference
 ```
