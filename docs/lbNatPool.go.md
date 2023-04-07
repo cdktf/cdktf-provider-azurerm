@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_poo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lbNatPool.LbNatPool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbnatpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lbnatpool"
 
 lbnatpool.NewLbNatPool(scope Construct, id *string, config LbNatPoolConfig) LbNatPool
 ```
@@ -314,7 +314,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.lbNatPool.LbNatPool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbnatpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lbnatpool"
 
 lbnatpool.LbNatPool_IsConstruct(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.lbNatPool.LbNatPool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbnatpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lbnatpool"
 
 lbnatpool.LbNatPool_IsTerraformElement(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ lbnatpool.LbNatPool_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.lbNatPool.LbNatPool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbnatpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lbnatpool"
 
 lbnatpool.LbNatPool_IsTerraformResource(x interface{}) *bool
 ```
@@ -856,7 +856,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lbNatPool.LbNatPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbnatpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lbnatpool"
 
 &lbnatpool.LbNatPoolConfig {
 	Connection: interface{},
@@ -878,7 +878,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbnatpool"
 	Id: *string,
 	IdleTimeoutInMinutes: *f64,
 	TcpResetEnabled: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.lbNatPool.LbNatPoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.lbNatPool.LbNatPoolTimeouts,
 }
 ```
 
@@ -1145,7 +1145,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lbNatPool.LbNatPoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbnatpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lbnatpool"
 
 &lbnatpool.LbNatPoolTimeouts {
 	Create: *string,
@@ -1221,7 +1221,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lbNatPool.LbNatPoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbnatpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lbnatpool"
 
 lbnatpool.NewLbNatPoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LbNatPoolTimeoutsOutputReference
 ```

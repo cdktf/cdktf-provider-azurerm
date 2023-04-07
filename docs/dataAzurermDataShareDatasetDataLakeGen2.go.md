@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_share
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDataShareDatasetDataLakeGen2.DataAzurermDataShareDatasetDataLakeGen2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatasharedatasetdatalakegen2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdatasharedatasetdatalakegen2"
 
 dataazurermdatasharedatasetdatalakegen2.NewDataAzurermDataShareDatasetDataLakeGen2(scope Construct, id *string, config DataAzurermDataShareDatasetDataLakeGen2Config) DataAzurermDataShareDatasetDataLakeGen2
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermDataShareDatasetDataLakeGen2.DataAzurermDataShareDatasetDataLakeGen2.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatasharedatasetdatalakegen2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdatasharedatasetdatalakegen2"
 
 dataazurermdatasharedatasetdatalakegen2.DataAzurermDataShareDatasetDataLakeGen2_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermDataShareDatasetDataLakeGen2.DataAzurermDataShareDatasetDataLakeGen2.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatasharedatasetdatalakegen2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdatasharedatasetdatalakegen2"
 
 dataazurermdatasharedatasetdatalakegen2.DataAzurermDataShareDatasetDataLakeGen2_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermdatasharedatasetdatalakegen2.DataAzurermDataShareDatasetDataLakeGen2_
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermDataShareDatasetDataLakeGen2.DataAzurermDataShareDatasetDataLakeGen2.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatasharedatasetdatalakegen2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdatasharedatasetdatalakegen2"
 
 dataazurermdatasharedatasetdatalakegen2.DataAzurermDataShareDatasetDataLakeGen2_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -659,7 +659,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDataShareDatasetDataLakeGen2.DataAzurermDataShareDatasetDataLakeGen2Config.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatasharedatasetdatalakegen2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdatasharedatasetdatalakegen2"
 
 &dataazurermdatasharedatasetdatalakegen2.DataAzurermDataShareDatasetDataLakeGen2Config {
 	Connection: interface{},
@@ -672,7 +672,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatashared
 	Name: *string,
 	ShareId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermDataShareDatasetDataLakeGen2.DataAzurermDataShareDatasetDataLakeGen2Timeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermDataShareDatasetDataLakeGen2.DataAzurermDataShareDatasetDataLakeGen2Timeouts,
 }
 ```
 
@@ -822,7 +822,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDataShareDatasetDataLakeGen2.DataAzurermDataShareDatasetDataLakeGen2Timeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatasharedatasetdatalakegen2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdatasharedatasetdatalakegen2"
 
 &dataazurermdatasharedatasetdatalakegen2.DataAzurermDataShareDatasetDataLakeGen2Timeouts {
 	Read: *string,
@@ -856,7 +856,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDataShareDatasetDataLakeGen2.DataAzurermDataShareDatasetDataLakeGen2TimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatasharedatasetdatalakegen2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdatasharedatasetdatalakegen2"
 
 dataazurermdatasharedatasetdatalakegen2.NewDataAzurermDataShareDatasetDataLakeGen2TimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDataShareDatasetDataLakeGen2TimeoutsOutputReference
 ```

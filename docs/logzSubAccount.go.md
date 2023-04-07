@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logz_sub_a
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzsubaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logzsubaccount"
 
 logzsubaccount.NewLogzSubAccount(scope Construct, id *string, config LogzSubAccountConfig) LogzSubAccount
 ```
@@ -320,7 +320,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzsubaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logzsubaccount"
 
 logzsubaccount.LogzSubAccount_IsConstruct(x interface{}) *bool
 ```
@@ -352,7 +352,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzsubaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logzsubaccount"
 
 logzsubaccount.LogzSubAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ logzsubaccount.LogzSubAccount_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzsubaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logzsubaccount"
 
 logzsubaccount.LogzSubAccount_IsTerraformResource(x interface{}) *bool
 ```
@@ -719,7 +719,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzsubaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logzsubaccount"
 
 &logzsubaccount.LogzSubAccountConfig {
 	Connection: interface{},
@@ -731,11 +731,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzsubaccount"
 	Provisioners: *[]interface{},
 	LogzMonitorId: *string,
 	Name: *string,
-	User: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logzSubAccount.LogzSubAccountUser,
+	User: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.logzSubAccount.LogzSubAccountUser,
 	Enabled: interface{},
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logzSubAccount.LogzSubAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.logzSubAccount.LogzSubAccountTimeouts,
 }
 ```
 
@@ -926,7 +926,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzsubaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logzsubaccount"
 
 &logzsubaccount.LogzSubAccountTimeouts {
 	Create: *string,
@@ -1000,7 +1000,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountUser.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzsubaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logzsubaccount"
 
 &logzsubaccount.LogzSubAccountUser {
 	Email: *string,
@@ -1076,7 +1076,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzsubaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logzsubaccount"
 
 logzsubaccount.NewLogzSubAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogzSubAccountTimeoutsOutputReference
 ```
@@ -1441,7 +1441,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountUserOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzsubaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logzsubaccount"
 
 logzsubaccount.NewLogzSubAccountUserOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogzSubAccountUserOutputReference
 ```
