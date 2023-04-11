@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/nat_gatewa
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNatGateway.DataAzurermNatGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnatgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermnatgateway"
 
 dataazurermnatgateway.NewDataAzurermNatGateway(scope Construct, id *string, config DataAzurermNatGatewayConfig) DataAzurermNatGateway
 ```
@@ -307,7 +307,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermNatGateway.DataAzurermNatGateway.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnatgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermnatgateway"
 
 dataazurermnatgateway.DataAzurermNatGateway_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermNatGateway.DataAzurermNatGateway.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnatgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermnatgateway"
 
 dataazurermnatgateway.DataAzurermNatGateway_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ dataazurermnatgateway.DataAzurermNatGateway_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermNatGateway.DataAzurermNatGateway.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnatgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermnatgateway"
 
 dataazurermnatgateway.DataAzurermNatGateway_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -728,7 +728,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNatGateway.DataAzurermNatGatewayConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnatgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermnatgateway"
 
 &dataazurermnatgateway.DataAzurermNatGatewayConfig {
 	Connection: interface{},
@@ -743,7 +743,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnatgate
 	Id: *string,
 	PublicIpAddressIds: *[]*string,
 	PublicIpPrefixIds: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermNatGateway.DataAzurermNatGatewayTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermNatGateway.DataAzurermNatGatewayTimeouts,
 }
 ```
 
@@ -919,7 +919,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNatGateway.DataAzurermNatGatewayTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnatgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermnatgateway"
 
 &dataazurermnatgateway.DataAzurermNatGatewayTimeouts {
 	Read: *string,
@@ -953,7 +953,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNatGateway.DataAzurermNatGatewayTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnatgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermnatgateway"
 
 dataazurermnatgateway.NewDataAzurermNatGatewayTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermNatGatewayTimeoutsOutputReference
 ```

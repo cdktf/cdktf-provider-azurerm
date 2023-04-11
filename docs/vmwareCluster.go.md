@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_clu
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vmwareCluster.VmwareCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vmwarecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/vmwarecluster"
 
 vmwarecluster.NewVmwareCluster(scope Construct, id *string, config VmwareClusterConfig) VmwareCluster
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.vmwareCluster.VmwareCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vmwarecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/vmwarecluster"
 
 vmwarecluster.VmwareCluster_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.vmwareCluster.VmwareCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vmwarecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/vmwarecluster"
 
 vmwarecluster.VmwareCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ vmwarecluster.VmwareCluster_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.vmwareCluster.VmwareCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vmwarecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/vmwarecluster"
 
 vmwarecluster.VmwareCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -692,7 +692,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vmwareCluster.VmwareClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vmwarecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/vmwarecluster"
 
 &vmwarecluster.VmwareClusterConfig {
 	Connection: interface{},
@@ -707,7 +707,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vmwarecluster"
 	SkuName: *string,
 	VmwareCloudId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.vmwareCluster.VmwareClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.vmwareCluster.VmwareClusterTimeouts,
 }
 ```
 
@@ -883,7 +883,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vmwareCluster.VmwareClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vmwarecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/vmwarecluster"
 
 &vmwarecluster.VmwareClusterTimeouts {
 	Create: *string,
@@ -959,7 +959,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vmwareCluster.VmwareClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/vmwarecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/vmwarecluster"
 
 vmwarecluster.NewVmwareClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareClusterTimeoutsOutputReference
 ```

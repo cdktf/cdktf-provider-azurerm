@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_end
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/iothubendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/iothubendpointeventhub"
 
 iothubendpointeventhub.NewIothubEndpointEventhub(scope Construct, id *string, config IothubEndpointEventhubConfig) IothubEndpointEventhub
 ```
@@ -328,7 +328,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhub.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/iothubendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/iothubendpointeventhub"
 
 iothubendpointeventhub.IothubEndpointEventhub_IsConstruct(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhub.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/iothubendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/iothubendpointeventhub"
 
 iothubendpointeventhub.IothubEndpointEventhub_IsTerraformElement(x interface{}) *bool
 ```
@@ -374,7 +374,7 @@ iothubendpointeventhub.IothubEndpointEventhub_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhub.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/iothubendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/iothubendpointeventhub"
 
 iothubendpointeventhub.IothubEndpointEventhub_IsTerraformResource(x interface{}) *bool
 ```
@@ -793,7 +793,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/iothubendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/iothubendpointeventhub"
 
 &iothubendpointeventhub.IothubEndpointEventhubConfig {
 	Connection: interface{},
@@ -812,7 +812,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/iothubendpointeven
 	EntityPath: *string,
 	Id: *string,
 	IdentityId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.iothubEndpointEventhub.IothubEndpointEventhubTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.iothubEndpointEventhub.IothubEndpointEventhubTimeouts,
 }
 ```
 
@@ -1040,7 +1040,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/iothubendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/iothubendpointeventhub"
 
 &iothubendpointeventhub.IothubEndpointEventhubTimeouts {
 	Create: *string,
@@ -1116,7 +1116,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/iothubendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/iothubendpointeventhub"
 
 iothubendpointeventhub.NewIothubEndpointEventhubTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubEndpointEventhubTimeoutsOutputReference
 ```

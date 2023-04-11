@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationAccount.AutomationAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationaccount"
 
 automationaccount.NewAutomationAccount(scope Construct, id *string, config AutomationAccountConfig) AutomationAccount
 ```
@@ -354,7 +354,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationAccount.AutomationAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationaccount"
 
 automationaccount.AutomationAccount_IsConstruct(x interface{}) *bool
 ```
@@ -386,7 +386,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationAccount.AutomationAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationaccount"
 
 automationaccount.AutomationAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -400,7 +400,7 @@ automationaccount.AutomationAccount_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationAccount.AutomationAccount.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationaccount"
 
 automationaccount.AutomationAccount_IsTerraformResource(x interface{}) *bool
 ```
@@ -896,7 +896,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationAccount.AutomationAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationaccount"
 
 &automationaccount.AutomationAccountConfig {
 	Connection: interface{},
@@ -912,11 +912,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
 	SkuName: *string,
 	Encryption: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.automationAccount.AutomationAccountIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.automationAccount.AutomationAccountIdentity,
 	LocalAuthenticationEnabled: interface{},
 	PublicNetworkAccessEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.automationAccount.AutomationAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.automationAccount.AutomationAccountTimeouts,
 }
 ```
 
@@ -1161,7 +1161,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationAccount.AutomationAccountEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationaccount"
 
 &automationaccount.AutomationAccountEncryption {
 	KeyVaultKeyId: *string,
@@ -1221,7 +1221,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationAccount.AutomationAccountIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationaccount"
 
 &automationaccount.AutomationAccountIdentity {
 	Type: *string,
@@ -1267,7 +1267,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationAccount.AutomationAccountPrivateEndpointConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationaccount"
 
 &automationaccount.AutomationAccountPrivateEndpointConnection {
 
@@ -1280,7 +1280,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationAccount.AutomationAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationaccount"
 
 &automationaccount.AutomationAccountTimeouts {
 	Create: *string,
@@ -1356,7 +1356,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationAccount.AutomationAccountEncryptionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationaccount"
 
 automationaccount.NewAutomationAccountEncryptionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AutomationAccountEncryptionList
 ```
@@ -1499,7 +1499,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationAccount.AutomationAccountEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationaccount"
 
 automationaccount.NewAutomationAccountEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AutomationAccountEncryptionOutputReference
 ```
@@ -1846,7 +1846,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationAccount.AutomationAccountIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationaccount"
 
 automationaccount.NewAutomationAccountIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationAccountIdentityOutputReference
 ```
@@ -2168,7 +2168,7 @@ func InternalValue() AutomationAccountIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationAccount.AutomationAccountPrivateEndpointConnectionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationaccount"
 
 automationaccount.NewAutomationAccountPrivateEndpointConnectionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AutomationAccountPrivateEndpointConnectionList
 ```
@@ -2300,7 +2300,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationAccount.AutomationAccountPrivateEndpointConnectionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationaccount"
 
 automationaccount.NewAutomationAccountPrivateEndpointConnectionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AutomationAccountPrivateEndpointConnectionOutputReference
 ```
@@ -2589,7 +2589,7 @@ func InternalValue() AutomationAccountPrivateEndpointConnection
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationAccount.AutomationAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationaccount"
 
 automationaccount.NewAutomationAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationAccountTimeoutsOutputReference
 ```

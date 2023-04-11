@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/database_m
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/databasemigrationproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/databasemigrationproject"
 
 databasemigrationproject.NewDatabaseMigrationProject(scope Construct, id *string, config DatabaseMigrationProjectConfig) DatabaseMigrationProject
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProject.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/databasemigrationproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/databasemigrationproject"
 
 databasemigrationproject.DatabaseMigrationProject_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProject.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/databasemigrationproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/databasemigrationproject"
 
 databasemigrationproject.DatabaseMigrationProject_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ databasemigrationproject.DatabaseMigrationProject_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProject.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/databasemigrationproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/databasemigrationproject"
 
 databasemigrationproject.DatabaseMigrationProject_IsTerraformResource(x interface{}) *bool
 ```
@@ -743,7 +743,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/databasemigrationproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/databasemigrationproject"
 
 &databasemigrationproject.DatabaseMigrationProjectConfig {
 	Connection: interface{},
@@ -761,7 +761,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/databasemigrationp
 	TargetPlatform: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.databaseMigrationProject.DatabaseMigrationProjectTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.databaseMigrationProject.DatabaseMigrationProjectTimeouts,
 }
 ```
 
@@ -976,7 +976,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/databasemigrationproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/databasemigrationproject"
 
 &databasemigrationproject.DatabaseMigrationProjectTimeouts {
 	Create: *string,
@@ -1052,7 +1052,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/databasemigrationproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/databasemigrationproject"
 
 databasemigrationproject.NewDatabaseMigrationProjectTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DatabaseMigrationProjectTimeoutsOutputReference
 ```

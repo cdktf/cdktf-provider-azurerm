@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/private_dn
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsResolverDnsForwardingRuleset.DataAzurermPrivateDnsResolverDnsForwardingRuleset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermprivatednsresolverdnsforwardingruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermprivatednsresolverdnsforwardingruleset"
 
 dataazurermprivatednsresolverdnsforwardingruleset.NewDataAzurermPrivateDnsResolverDnsForwardingRuleset(scope Construct, id *string, config DataAzurermPrivateDnsResolverDnsForwardingRulesetConfig) DataAzurermPrivateDnsResolverDnsForwardingRuleset
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsResolverDnsForwardingRuleset.DataAzurermPrivateDnsResolverDnsForwardingRuleset.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermprivatednsresolverdnsforwardingruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermprivatednsresolverdnsforwardingruleset"
 
 dataazurermprivatednsresolverdnsforwardingruleset.DataAzurermPrivateDnsResolverDnsForwardingRuleset_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsResolverDnsForwardingRuleset.DataAzurermPrivateDnsResolverDnsForwardingRuleset.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermprivatednsresolverdnsforwardingruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermprivatednsresolverdnsforwardingruleset"
 
 dataazurermprivatednsresolverdnsforwardingruleset.DataAzurermPrivateDnsResolverDnsForwardingRuleset_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermprivatednsresolverdnsforwardingruleset.DataAzurermPrivateDnsResolverD
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsResolverDnsForwardingRuleset.DataAzurermPrivateDnsResolverDnsForwardingRuleset.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermprivatednsresolverdnsforwardingruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermprivatednsresolverdnsforwardingruleset"
 
 dataazurermprivatednsresolverdnsforwardingruleset.DataAzurermPrivateDnsResolverDnsForwardingRuleset_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -637,7 +637,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsResolverDnsForwardingRuleset.DataAzurermPrivateDnsResolverDnsForwardingRulesetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermprivatednsresolverdnsforwardingruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermprivatednsresolverdnsforwardingruleset"
 
 &dataazurermprivatednsresolverdnsforwardingruleset.DataAzurermPrivateDnsResolverDnsForwardingRulesetConfig {
 	Connection: interface{},
@@ -650,7 +650,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermprivate
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermPrivateDnsResolverDnsForwardingRuleset.DataAzurermPrivateDnsResolverDnsForwardingRulesetTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermPrivateDnsResolverDnsForwardingRuleset.DataAzurermPrivateDnsResolverDnsForwardingRulesetTimeouts,
 }
 ```
 
@@ -800,7 +800,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsResolverDnsForwardingRuleset.DataAzurermPrivateDnsResolverDnsForwardingRulesetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermprivatednsresolverdnsforwardingruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermprivatednsresolverdnsforwardingruleset"
 
 &dataazurermprivatednsresolverdnsforwardingruleset.DataAzurermPrivateDnsResolverDnsForwardingRulesetTimeouts {
 	Read: *string,
@@ -834,7 +834,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsResolverDnsForwardingRuleset.DataAzurermPrivateDnsResolverDnsForwardingRulesetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermprivatednsresolverdnsforwardingruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermprivatednsresolverdnsforwardingruleset"
 
 dataazurermprivatednsresolverdnsforwardingruleset.NewDataAzurermPrivateDnsResolverDnsForwardingRulesetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermPrivateDnsResolverDnsForwardingRulesetTimeoutsOutputReference
 ```

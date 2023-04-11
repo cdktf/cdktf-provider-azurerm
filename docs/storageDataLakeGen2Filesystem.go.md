@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_da
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageDataLakeGen2Filesystem.StorageDataLakeGen2Filesystem.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagedatalakegen2filesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagedatalakegen2filesystem"
 
 storagedatalakegen2filesystem.NewStorageDataLakeGen2Filesystem(scope Construct, id *string, config StorageDataLakeGen2FilesystemConfig) StorageDataLakeGen2Filesystem
 ```
@@ -334,7 +334,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageDataLakeGen2Filesystem.StorageDataLakeGen2Filesystem.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagedatalakegen2filesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagedatalakegen2filesystem"
 
 storagedatalakegen2filesystem.StorageDataLakeGen2Filesystem_IsConstruct(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageDataLakeGen2Filesystem.StorageDataLakeGen2Filesystem.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagedatalakegen2filesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagedatalakegen2filesystem"
 
 storagedatalakegen2filesystem.StorageDataLakeGen2Filesystem_IsTerraformElement(x interface{}) *bool
 ```
@@ -380,7 +380,7 @@ storagedatalakegen2filesystem.StorageDataLakeGen2Filesystem_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageDataLakeGen2Filesystem.StorageDataLakeGen2Filesystem.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagedatalakegen2filesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagedatalakegen2filesystem"
 
 storagedatalakegen2filesystem.StorageDataLakeGen2Filesystem_IsTerraformResource(x interface{}) *bool
 ```
@@ -755,7 +755,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageDataLakeGen2Filesystem.StorageDataLakeGen2FilesystemAce.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagedatalakegen2filesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagedatalakegen2filesystem"
 
 &storagedatalakegen2filesystem.StorageDataLakeGen2FilesystemAce {
 	Permissions: *string,
@@ -832,7 +832,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageDataLakeGen2Filesystem.StorageDataLakeGen2FilesystemConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagedatalakegen2filesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagedatalakegen2filesystem"
 
 &storagedatalakegen2filesystem.StorageDataLakeGen2FilesystemConfig {
 	Connection: interface{},
@@ -849,7 +849,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagedatalakegen
 	Id: *string,
 	Owner: *string,
 	Properties: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.storageDataLakeGen2Filesystem.StorageDataLakeGen2FilesystemTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.storageDataLakeGen2Filesystem.StorageDataLakeGen2FilesystemTimeouts,
 }
 ```
 
@@ -1053,7 +1053,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageDataLakeGen2Filesystem.StorageDataLakeGen2FilesystemTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagedatalakegen2filesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagedatalakegen2filesystem"
 
 &storagedatalakegen2filesystem.StorageDataLakeGen2FilesystemTimeouts {
 	Create: *string,
@@ -1129,7 +1129,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageDataLakeGen2Filesystem.StorageDataLakeGen2FilesystemAceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagedatalakegen2filesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagedatalakegen2filesystem"
 
 storagedatalakegen2filesystem.NewStorageDataLakeGen2FilesystemAceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageDataLakeGen2FilesystemAceList
 ```
@@ -1272,7 +1272,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageDataLakeGen2Filesystem.StorageDataLakeGen2FilesystemAceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagedatalakegen2filesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagedatalakegen2filesystem"
 
 storagedatalakegen2filesystem.NewStorageDataLakeGen2FilesystemAceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageDataLakeGen2FilesystemAceOutputReference
 ```
@@ -1641,7 +1641,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageDataLakeGen2Filesystem.StorageDataLakeGen2FilesystemTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagedatalakegen2filesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagedatalakegen2filesystem"
 
 storagedatalakegen2filesystem.NewStorageDataLakeGen2FilesystemTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageDataLakeGen2FilesystemTimeoutsOutputReference
 ```

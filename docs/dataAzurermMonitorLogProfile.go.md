@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_lo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorLogProfile.DataAzurermMonitorLogProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmonitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmonitorlogprofile"
 
 dataazurermmonitorlogprofile.NewDataAzurermMonitorLogProfile(scope Construct, id *string, config DataAzurermMonitorLogProfileConfig) DataAzurermMonitorLogProfile
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMonitorLogProfile.DataAzurermMonitorLogProfile.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmonitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmonitorlogprofile"
 
 dataazurermmonitorlogprofile.DataAzurermMonitorLogProfile_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMonitorLogProfile.DataAzurermMonitorLogProfile.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmonitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmonitorlogprofile"
 
 dataazurermmonitorlogprofile.DataAzurermMonitorLogProfile_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermmonitorlogprofile.DataAzurermMonitorLogProfile_IsTerraformElement(x i
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMonitorLogProfile.DataAzurermMonitorLogProfile.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmonitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmonitorlogprofile"
 
 dataazurermmonitorlogprofile.DataAzurermMonitorLogProfile_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -637,7 +637,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorLogProfile.DataAzurermMonitorLogProfileConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmonitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmonitorlogprofile"
 
 &dataazurermmonitorlogprofile.DataAzurermMonitorLogProfileConfig {
 	Connection: interface{},
@@ -649,7 +649,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmonitor
 	Provisioners: *[]interface{},
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermMonitorLogProfile.DataAzurermMonitorLogProfileTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermMonitorLogProfile.DataAzurermMonitorLogProfileTimeouts,
 }
 ```
 
@@ -786,7 +786,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorLogProfile.DataAzurermMonitorLogProfileRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmonitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmonitorlogprofile"
 
 &dataazurermmonitorlogprofile.DataAzurermMonitorLogProfileRetentionPolicy {
 
@@ -799,7 +799,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmonitor
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorLogProfile.DataAzurermMonitorLogProfileTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmonitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmonitorlogprofile"
 
 &dataazurermmonitorlogprofile.DataAzurermMonitorLogProfileTimeouts {
 	Read: *string,
@@ -833,7 +833,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorLogProfile.DataAzurermMonitorLogProfileRetentionPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmonitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmonitorlogprofile"
 
 dataazurermmonitorlogprofile.NewDataAzurermMonitorLogProfileRetentionPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorLogProfileRetentionPolicyList
 ```
@@ -965,7 +965,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorLogProfile.DataAzurermMonitorLogProfileRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmonitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmonitorlogprofile"
 
 dataazurermmonitorlogprofile.NewDataAzurermMonitorLogProfileRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorLogProfileRetentionPolicyOutputReference
 ```
@@ -1254,7 +1254,7 @@ func InternalValue() DataAzurermMonitorLogProfileRetentionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorLogProfile.DataAzurermMonitorLogProfileTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermmonitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmonitorlogprofile"
 
 dataazurermmonitorlogprofile.NewDataAzurermMonitorLogProfileTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMonitorLogProfileTimeoutsOutputReference
 ```

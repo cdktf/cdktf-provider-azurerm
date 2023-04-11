@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/site_recov
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 siterecoveryreplicationrecoveryplan.NewSiteRecoveryReplicationRecoveryPlan(scope Construct, id *string, config SiteRecoveryReplicationRecoveryPlanConfig) SiteRecoveryReplicationRecoveryPlan
 ```
@@ -313,7 +313,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlan.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 siterecoveryreplicationrecoveryplan.SiteRecoveryReplicationRecoveryPlan_IsConstruct(x interface{}) *bool
 ```
@@ -345,7 +345,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlan.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 siterecoveryreplicationrecoveryplan.SiteRecoveryReplicationRecoveryPlan_IsTerraformElement(x interface{}) *bool
 ```
@@ -359,7 +359,7 @@ siterecoveryreplicationrecoveryplan.SiteRecoveryReplicationRecoveryPlan_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlan.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 siterecoveryreplicationrecoveryplan.SiteRecoveryReplicationRecoveryPlan_IsTerraformResource(x interface{}) *bool
 ```
@@ -712,7 +712,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlanConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 &siterecoveryreplicationrecoveryplan.SiteRecoveryReplicationRecoveryPlanConfig {
 	Connection: interface{},
@@ -728,7 +728,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplic
 	TargetRecoveryFabricId: *string,
 	Id: *string,
 	RecoveryGroup: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlanTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlanTimeouts,
 }
 ```
 
@@ -919,7 +919,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlanRecoveryGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 &siterecoveryreplicationrecoveryplan.SiteRecoveryReplicationRecoveryPlanRecoveryGroup {
 	Type: *string,
@@ -997,7 +997,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlanRecoveryGroupPostAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 &siterecoveryreplicationrecoveryplan.SiteRecoveryReplicationRecoveryPlanRecoveryGroupPostAction {
 	FailOverDirections: *[]*string,
@@ -1127,7 +1127,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlanRecoveryGroupPreAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 &siterecoveryreplicationrecoveryplan.SiteRecoveryReplicationRecoveryPlanRecoveryGroupPreAction {
 	FailOverDirections: *[]*string,
@@ -1257,7 +1257,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlanTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 &siterecoveryreplicationrecoveryplan.SiteRecoveryReplicationRecoveryPlanTimeouts {
 	Create: *string,
@@ -1333,7 +1333,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlanRecoveryGroupList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 siterecoveryreplicationrecoveryplan.NewSiteRecoveryReplicationRecoveryPlanRecoveryGroupList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SiteRecoveryReplicationRecoveryPlanRecoveryGroupList
 ```
@@ -1476,7 +1476,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlanRecoveryGroupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 siterecoveryreplicationrecoveryplan.NewSiteRecoveryReplicationRecoveryPlanRecoveryGroupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SiteRecoveryReplicationRecoveryPlanRecoveryGroupOutputReference
 ```
@@ -1878,7 +1878,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlanRecoveryGroupPostActionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 siterecoveryreplicationrecoveryplan.NewSiteRecoveryReplicationRecoveryPlanRecoveryGroupPostActionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SiteRecoveryReplicationRecoveryPlanRecoveryGroupPostActionList
 ```
@@ -2021,7 +2021,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlanRecoveryGroupPostActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 siterecoveryreplicationrecoveryplan.NewSiteRecoveryReplicationRecoveryPlanRecoveryGroupPostActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SiteRecoveryReplicationRecoveryPlanRecoveryGroupPostActionOutputReference
 ```
@@ -2492,7 +2492,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlanRecoveryGroupPreActionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 siterecoveryreplicationrecoveryplan.NewSiteRecoveryReplicationRecoveryPlanRecoveryGroupPreActionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SiteRecoveryReplicationRecoveryPlanRecoveryGroupPreActionList
 ```
@@ -2635,7 +2635,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlanRecoveryGroupPreActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 siterecoveryreplicationrecoveryplan.NewSiteRecoveryReplicationRecoveryPlanRecoveryGroupPreActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SiteRecoveryReplicationRecoveryPlanRecoveryGroupPreActionOutputReference
 ```
@@ -3106,7 +3106,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryReplicationRecoveryPlan.SiteRecoveryReplicationRecoveryPlanTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryreplicationrecoveryplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryreplicationrecoveryplan"
 
 siterecoveryreplicationrecoveryplan.NewSiteRecoveryReplicationRecoveryPlanTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SiteRecoveryReplicationRecoveryPlanTimeoutsOutputReference
 ```

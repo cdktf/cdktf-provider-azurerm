@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_en
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageEncryptionScope.DataAzurermStorageEncryptionScope.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermstorageencryptionscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstorageencryptionscope"
 
 dataazurermstorageencryptionscope.NewDataAzurermStorageEncryptionScope(scope Construct, id *string, config DataAzurermStorageEncryptionScopeConfig) DataAzurermStorageEncryptionScope
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermStorageEncryptionScope.DataAzurermStorageEncryptionScope.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermstorageencryptionscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstorageencryptionscope"
 
 dataazurermstorageencryptionscope.DataAzurermStorageEncryptionScope_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermStorageEncryptionScope.DataAzurermStorageEncryptionScope.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermstorageencryptionscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstorageencryptionscope"
 
 dataazurermstorageencryptionscope.DataAzurermStorageEncryptionScope_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermstorageencryptionscope.DataAzurermStorageEncryptionScope_IsTerraformE
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermStorageEncryptionScope.DataAzurermStorageEncryptionScope.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermstorageencryptionscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstorageencryptionscope"
 
 dataazurermstorageencryptionscope.DataAzurermStorageEncryptionScope_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -626,7 +626,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStorageEncryptionScope.DataAzurermStorageEncryptionScopeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermstorageencryptionscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstorageencryptionscope"
 
 &dataazurermstorageencryptionscope.DataAzurermStorageEncryptionScopeConfig {
 	Connection: interface{},
@@ -639,7 +639,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermstorage
 	Name: *string,
 	StorageAccountId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermStorageEncryptionScope.DataAzurermStorageEncryptionScopeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermStorageEncryptionScope.DataAzurermStorageEncryptionScopeTimeouts,
 }
 ```
 
@@ -789,7 +789,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStorageEncryptionScope.DataAzurermStorageEncryptionScopeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermstorageencryptionscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstorageencryptionscope"
 
 &dataazurermstorageencryptionscope.DataAzurermStorageEncryptionScopeTimeouts {
 	Read: *string,
@@ -823,7 +823,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageEncryptionScope.DataAzurermStorageEncryptionScopeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermstorageencryptionscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstorageencryptionscope"
 
 dataazurermstorageencryptionscope.NewDataAzurermStorageEncryptionScopeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermStorageEncryptionScopeTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/site_recov
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryProtectionContainerMapping.SiteRecoveryProtectionContainerMapping.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryprotectioncontainermapping"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryprotectioncontainermapping"
 
 siterecoveryprotectioncontainermapping.NewSiteRecoveryProtectionContainerMapping(scope Construct, id *string, config SiteRecoveryProtectionContainerMappingConfig) SiteRecoveryProtectionContainerMapping
 ```
@@ -313,7 +313,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.siteRecoveryProtectionContainerMapping.SiteRecoveryProtectionContainerMapping.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryprotectioncontainermapping"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryprotectioncontainermapping"
 
 siterecoveryprotectioncontainermapping.SiteRecoveryProtectionContainerMapping_IsConstruct(x interface{}) *bool
 ```
@@ -345,7 +345,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.siteRecoveryProtectionContainerMapping.SiteRecoveryProtectionContainerMapping.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryprotectioncontainermapping"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryprotectioncontainermapping"
 
 siterecoveryprotectioncontainermapping.SiteRecoveryProtectionContainerMapping_IsTerraformElement(x interface{}) *bool
 ```
@@ -359,7 +359,7 @@ siterecoveryprotectioncontainermapping.SiteRecoveryProtectionContainerMapping_Is
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.siteRecoveryProtectionContainerMapping.SiteRecoveryProtectionContainerMapping.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryprotectioncontainermapping"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryprotectioncontainermapping"
 
 siterecoveryprotectioncontainermapping.SiteRecoveryProtectionContainerMapping_IsTerraformResource(x interface{}) *bool
 ```
@@ -778,7 +778,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.siteRecoveryProtectionContainerMapping.SiteRecoveryProtectionContainerMappingAutomaticUpdate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryprotectioncontainermapping"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryprotectioncontainermapping"
 
 &siterecoveryprotectioncontainermapping.SiteRecoveryProtectionContainerMappingAutomaticUpdate {
 	AutomationAccountId: *string,
@@ -824,7 +824,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.siteRecoveryProtectionContainerMapping.SiteRecoveryProtectionContainerMappingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryprotectioncontainermapping"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryprotectioncontainermapping"
 
 &siterecoveryprotectioncontainermapping.SiteRecoveryProtectionContainerMappingConfig {
 	Connection: interface{},
@@ -841,9 +841,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryprotec
 	RecoveryTargetProtectionContainerId: *string,
 	RecoveryVaultName: *string,
 	ResourceGroupName: *string,
-	AutomaticUpdate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.siteRecoveryProtectionContainerMapping.SiteRecoveryProtectionContainerMappingAutomaticUpdate,
+	AutomaticUpdate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.siteRecoveryProtectionContainerMapping.SiteRecoveryProtectionContainerMappingAutomaticUpdate,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.siteRecoveryProtectionContainerMapping.SiteRecoveryProtectionContainerMappingTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.siteRecoveryProtectionContainerMapping.SiteRecoveryProtectionContainerMappingTimeouts,
 }
 ```
 
@@ -1073,7 +1073,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.siteRecoveryProtectionContainerMapping.SiteRecoveryProtectionContainerMappingTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryprotectioncontainermapping"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryprotectioncontainermapping"
 
 &siterecoveryprotectioncontainermapping.SiteRecoveryProtectionContainerMappingTimeouts {
 	Create: *string,
@@ -1149,7 +1149,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryProtectionContainerMapping.SiteRecoveryProtectionContainerMappingAutomaticUpdateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryprotectioncontainermapping"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryprotectioncontainermapping"
 
 siterecoveryprotectioncontainermapping.NewSiteRecoveryProtectionContainerMappingAutomaticUpdateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SiteRecoveryProtectionContainerMappingAutomaticUpdateOutputReference
 ```
@@ -1456,7 +1456,7 @@ func InternalValue() SiteRecoveryProtectionContainerMappingAutomaticUpdate
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryProtectionContainerMapping.SiteRecoveryProtectionContainerMappingTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/siterecoveryprotectioncontainermapping"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/siterecoveryprotectioncontainermapping"
 
 siterecoveryprotectioncontainermapping.NewSiteRecoveryProtectionContainerMappingTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SiteRecoveryProtectionContainerMappingTimeoutsOutputReference
 ```

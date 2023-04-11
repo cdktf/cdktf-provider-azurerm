@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationModule.AutomationModule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationmodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationmodule"
 
 automationmodule.NewAutomationModule(scope Construct, id *string, config AutomationModuleConfig) AutomationModule
 ```
@@ -306,7 +306,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationModule.AutomationModule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationmodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationmodule"
 
 automationmodule.AutomationModule_IsConstruct(x interface{}) *bool
 ```
@@ -338,7 +338,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationModule.AutomationModule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationmodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationmodule"
 
 automationmodule.AutomationModule_IsTerraformElement(x interface{}) *bool
 ```
@@ -352,7 +352,7 @@ automationmodule.AutomationModule_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationModule.AutomationModule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationmodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationmodule"
 
 automationmodule.AutomationModule_IsTerraformResource(x interface{}) *bool
 ```
@@ -683,7 +683,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationModule.AutomationModuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationmodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationmodule"
 
 &automationmodule.AutomationModuleConfig {
 	Connection: interface{},
@@ -694,11 +694,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationmodule"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	AutomationAccountName: *string,
-	ModuleLink: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.automationModule.AutomationModuleModuleLink,
+	ModuleLink: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.automationModule.AutomationModuleModuleLink,
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.automationModule.AutomationModuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.automationModule.AutomationModuleTimeouts,
 }
 ```
 
@@ -876,11 +876,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationModule.AutomationModuleModuleLink.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationmodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationmodule"
 
 &automationmodule.AutomationModuleModuleLink {
 	Uri: *string,
-	Hash: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.automationModule.AutomationModuleModuleLinkHash,
+	Hash: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.automationModule.AutomationModuleModuleLinkHash,
 }
 ```
 
@@ -924,7 +924,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationModule.AutomationModuleModuleLinkHash.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationmodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationmodule"
 
 &automationmodule.AutomationModuleModuleLinkHash {
 	Algorithm: *string,
@@ -970,7 +970,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationModule.AutomationModuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationmodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationmodule"
 
 &automationmodule.AutomationModuleTimeouts {
 	Create: *string,
@@ -1046,7 +1046,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationModule.AutomationModuleModuleLinkHashOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationmodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationmodule"
 
 automationmodule.NewAutomationModuleModuleLinkHashOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationModuleModuleLinkHashOutputReference
 ```
@@ -1339,7 +1339,7 @@ func InternalValue() AutomationModuleModuleLinkHash
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationModule.AutomationModuleModuleLinkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationmodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationmodule"
 
 automationmodule.NewAutomationModuleModuleLinkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationModuleModuleLinkOutputReference
 ```
@@ -1652,7 +1652,7 @@ func InternalValue() AutomationModuleModuleLink
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationModule.AutomationModuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationmodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationmodule"
 
 automationmodule.NewAutomationModuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationModuleTimeoutsOutputReference
 ```

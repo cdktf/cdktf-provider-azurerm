@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/network_wa
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetworkWatcher.DataAzurermNetworkWatcher.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnetworkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermnetworkwatcher"
 
 dataazurermnetworkwatcher.NewDataAzurermNetworkWatcher(scope Construct, id *string, config DataAzurermNetworkWatcherConfig) DataAzurermNetworkWatcher
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermNetworkWatcher.DataAzurermNetworkWatcher.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnetworkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermnetworkwatcher"
 
 dataazurermnetworkwatcher.DataAzurermNetworkWatcher_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermNetworkWatcher.DataAzurermNetworkWatcher.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnetworkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermnetworkwatcher"
 
 dataazurermnetworkwatcher.DataAzurermNetworkWatcher_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermnetworkwatcher.DataAzurermNetworkWatcher_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermNetworkWatcher.DataAzurermNetworkWatcher.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnetworkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermnetworkwatcher"
 
 dataazurermnetworkwatcher.DataAzurermNetworkWatcher_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -626,7 +626,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetworkWatcher.DataAzurermNetworkWatcherConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnetworkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermnetworkwatcher"
 
 &dataazurermnetworkwatcher.DataAzurermNetworkWatcherConfig {
 	Connection: interface{},
@@ -639,7 +639,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnetwork
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermNetworkWatcher.DataAzurermNetworkWatcherTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermNetworkWatcher.DataAzurermNetworkWatcherTimeouts,
 }
 ```
 
@@ -789,7 +789,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetworkWatcher.DataAzurermNetworkWatcherTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnetworkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermnetworkwatcher"
 
 &dataazurermnetworkwatcher.DataAzurermNetworkWatcherTimeouts {
 	Read: *string,
@@ -823,7 +823,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetworkWatcher.DataAzurermNetworkWatcherTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermnetworkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermnetworkwatcher"
 
 dataazurermnetworkwatcher.NewDataAzurermNetworkWatcherTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermNetworkWatcherTimeoutsOutputReference
 ```

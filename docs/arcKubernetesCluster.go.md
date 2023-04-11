@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/arc_kubern
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.arcKubernetesCluster.ArcKubernetesCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/arckubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/arckubernetescluster"
 
 arckubernetescluster.NewArcKubernetesCluster(scope Construct, id *string, config ArcKubernetesClusterConfig) ArcKubernetesCluster
 ```
@@ -313,7 +313,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.arcKubernetesCluster.ArcKubernetesCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/arckubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/arckubernetescluster"
 
 arckubernetescluster.ArcKubernetesCluster_IsConstruct(x interface{}) *bool
 ```
@@ -345,7 +345,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.arcKubernetesCluster.ArcKubernetesCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/arckubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/arckubernetescluster"
 
 arckubernetescluster.ArcKubernetesCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -359,7 +359,7 @@ arckubernetescluster.ArcKubernetesCluster_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.arcKubernetesCluster.ArcKubernetesCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/arckubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/arckubernetescluster"
 
 arckubernetescluster.ArcKubernetesCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -811,7 +811,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.arcKubernetesCluster.ArcKubernetesClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/arckubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/arckubernetescluster"
 
 &arckubernetescluster.ArcKubernetesClusterConfig {
 	Connection: interface{},
@@ -822,13 +822,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/arckubernetesclust
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	AgentPublicKeyCertificate: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.arcKubernetesCluster.ArcKubernetesClusterIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.arcKubernetesCluster.ArcKubernetesClusterIdentity,
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.arcKubernetesCluster.ArcKubernetesClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.arcKubernetesCluster.ArcKubernetesClusterTimeouts,
 }
 ```
 
@@ -1032,7 +1032,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.arcKubernetesCluster.ArcKubernetesClusterIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/arckubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/arckubernetescluster"
 
 &arckubernetescluster.ArcKubernetesClusterIdentity {
 	Type: *string,
@@ -1064,7 +1064,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.arcKubernetesCluster.ArcKubernetesClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/arckubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/arckubernetescluster"
 
 &arckubernetescluster.ArcKubernetesClusterTimeouts {
 	Create: *string,
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.arcKubernetesCluster.ArcKubernetesClusterIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/arckubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/arckubernetescluster"
 
 arckubernetescluster.NewArcKubernetesClusterIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ArcKubernetesClusterIdentityOutputReference
 ```
@@ -1433,7 +1433,7 @@ func InternalValue() ArcKubernetesClusterIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.arcKubernetesCluster.ArcKubernetesClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/arckubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/arckubernetescluster"
 
 arckubernetescluster.NewArcKubernetesClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ArcKubernetesClusterTimeoutsOutputReference
 ```

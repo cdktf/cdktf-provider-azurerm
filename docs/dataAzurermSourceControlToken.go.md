@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/source_con
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlToken.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermsourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsourcecontroltoken"
 
 dataazurermsourcecontroltoken.NewDataAzurermSourceControlToken(scope Construct, id *string, config DataAzurermSourceControlTokenConfig) DataAzurermSourceControlToken
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlToken.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermsourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsourcecontroltoken"
 
 dataazurermsourcecontroltoken.DataAzurermSourceControlToken_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlToken.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermsourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsourcecontroltoken"
 
 dataazurermsourcecontroltoken.DataAzurermSourceControlToken_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermsourcecontroltoken.DataAzurermSourceControlToken_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlToken.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermsourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsourcecontroltoken"
 
 dataazurermsourcecontroltoken.DataAzurermSourceControlToken_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -604,7 +604,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlTokenConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermsourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsourcecontroltoken"
 
 &dataazurermsourcecontroltoken.DataAzurermSourceControlTokenConfig {
 	Connection: interface{},
@@ -616,7 +616,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermsourcec
 	Provisioners: *[]interface{},
 	Type: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermSourceControlToken.DataAzurermSourceControlTokenTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermSourceControlToken.DataAzurermSourceControlTokenTimeouts,
 }
 ```
 
@@ -753,7 +753,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlTokenTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermsourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsourcecontroltoken"
 
 &dataazurermsourcecontroltoken.DataAzurermSourceControlTokenTimeouts {
 	Read: *string,
@@ -787,7 +787,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlTokenTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermsourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsourcecontroltoken"
 
 dataazurermsourcecontroltoken.NewDataAzurermSourceControlTokenTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermSourceControlTokenTimeoutsOutputReference
 ```

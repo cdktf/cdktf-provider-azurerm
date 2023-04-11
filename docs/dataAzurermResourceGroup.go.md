@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/resource_g
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermresourcegroup"
 
 dataazurermresourcegroup.NewDataAzurermResourceGroup(scope Construct, id *string, config DataAzurermResourceGroupConfig) DataAzurermResourceGroup
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermresourcegroup"
 
 dataazurermresourcegroup.DataAzurermResourceGroup_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermresourcegroup"
 
 dataazurermresourcegroup.DataAzurermResourceGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermresourcegroup.DataAzurermResourceGroup_IsTerraformElement(x interface
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermresourcegroup"
 
 dataazurermresourcegroup.DataAzurermResourceGroup_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -604,7 +604,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermresourcegroup"
 
 &dataazurermresourcegroup.DataAzurermResourceGroupConfig {
 	Connection: interface{},
@@ -616,7 +616,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermresourc
 	Provisioners: *[]interface{},
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts,
 }
 ```
 
@@ -753,7 +753,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermresourcegroup"
 
 &dataazurermresourcegroup.DataAzurermResourceGroupTimeouts {
 	Read: *string,
@@ -787,7 +787,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermresourcegroup"
 
 dataazurermresourcegroup.NewDataAzurermResourceGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermResourceGroupTimeoutsOutputReference
 ```

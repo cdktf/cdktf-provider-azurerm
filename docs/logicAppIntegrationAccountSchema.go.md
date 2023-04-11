@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppIntegrationAccountSchema.LogicAppIntegrationAccountSchema.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logicappintegrationaccountschema"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicappintegrationaccountschema"
 
 logicappintegrationaccountschema.NewLogicAppIntegrationAccountSchema(scope Construct, id *string, config LogicAppIntegrationAccountSchemaConfig) LogicAppIntegrationAccountSchema
 ```
@@ -307,7 +307,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logicAppIntegrationAccountSchema.LogicAppIntegrationAccountSchema.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logicappintegrationaccountschema"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicappintegrationaccountschema"
 
 logicappintegrationaccountschema.LogicAppIntegrationAccountSchema_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logicAppIntegrationAccountSchema.LogicAppIntegrationAccountSchema.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logicappintegrationaccountschema"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicappintegrationaccountschema"
 
 logicappintegrationaccountschema.LogicAppIntegrationAccountSchema_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ logicappintegrationaccountschema.LogicAppIntegrationAccountSchema_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logicAppIntegrationAccountSchema.LogicAppIntegrationAccountSchema.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logicappintegrationaccountschema"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicappintegrationaccountschema"
 
 logicappintegrationaccountschema.LogicAppIntegrationAccountSchema_IsTerraformResource(x interface{}) *bool
 ```
@@ -728,7 +728,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppIntegrationAccountSchema.LogicAppIntegrationAccountSchemaConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logicappintegrationaccountschema"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicappintegrationaccountschema"
 
 &logicappintegrationaccountschema.LogicAppIntegrationAccountSchemaConfig {
 	Connection: interface{},
@@ -745,7 +745,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logicappintegratio
 	FileName: *string,
 	Id: *string,
 	Metadata: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.logicAppIntegrationAccountSchema.LogicAppIntegrationAccountSchemaTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.logicAppIntegrationAccountSchema.LogicAppIntegrationAccountSchemaTimeouts,
 }
 ```
 
@@ -947,7 +947,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppIntegrationAccountSchema.LogicAppIntegrationAccountSchemaTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logicappintegrationaccountschema"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicappintegrationaccountschema"
 
 &logicappintegrationaccountschema.LogicAppIntegrationAccountSchemaTimeouts {
 	Create: *string,
@@ -1023,7 +1023,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppIntegrationAccountSchema.LogicAppIntegrationAccountSchemaTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/logicappintegrationaccountschema"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicappintegrationaccountschema"
 
 logicappintegrationaccountschema.NewLogicAppIntegrationAccountSchemaTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogicAppIntegrationAccountSchemaTimeoutsOutputReference
 ```

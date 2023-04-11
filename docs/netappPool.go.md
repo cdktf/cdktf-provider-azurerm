@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_poo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappPool.NetappPool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netapppool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/netapppool"
 
 netapppool.NewNetappPool(scope Construct, id *string, config NetappPoolConfig) NetappPool
 ```
@@ -307,7 +307,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.netappPool.NetappPool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netapppool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/netapppool"
 
 netapppool.NetappPool_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.netappPool.NetappPool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netapppool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/netapppool"
 
 netapppool.NetappPool_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ netapppool.NetappPool_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.netappPool.NetappPool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netapppool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/netapppool"
 
 netapppool.NetappPool_IsTerraformResource(x interface{}) *bool
 ```
@@ -772,7 +772,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappPool.NetappPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netapppool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/netapppool"
 
 &netapppool.NetappPoolConfig {
 	Connection: interface{},
@@ -791,7 +791,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netapppool"
 	Id: *string,
 	QosType: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.netappPool.NetappPoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.netappPool.NetappPoolTimeouts,
 }
 ```
 
@@ -1019,7 +1019,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappPool.NetappPoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netapppool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/netapppool"
 
 &netapppool.NetappPoolTimeouts {
 	Create: *string,
@@ -1095,7 +1095,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappPool.NetappPoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/netapppool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/netapppool"
 
 netapppool.NewNetappPoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappPoolTimeoutsOutputReference
 ```

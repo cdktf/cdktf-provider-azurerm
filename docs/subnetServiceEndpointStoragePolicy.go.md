@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_ser
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subnetServiceEndpointStoragePolicy.SubnetServiceEndpointStoragePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subnetserviceendpointstoragepolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subnetserviceendpointstoragepolicy"
 
 subnetserviceendpointstoragepolicy.NewSubnetServiceEndpointStoragePolicy(scope Construct, id *string, config SubnetServiceEndpointStoragePolicyConfig) SubnetServiceEndpointStoragePolicy
 ```
@@ -320,7 +320,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.subnetServiceEndpointStoragePolicy.SubnetServiceEndpointStoragePolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subnetserviceendpointstoragepolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subnetserviceendpointstoragepolicy"
 
 subnetserviceendpointstoragepolicy.SubnetServiceEndpointStoragePolicy_IsConstruct(x interface{}) *bool
 ```
@@ -352,7 +352,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.subnetServiceEndpointStoragePolicy.SubnetServiceEndpointStoragePolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subnetserviceendpointstoragepolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subnetserviceendpointstoragepolicy"
 
 subnetserviceendpointstoragepolicy.SubnetServiceEndpointStoragePolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ subnetserviceendpointstoragepolicy.SubnetServiceEndpointStoragePolicy_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.subnetServiceEndpointStoragePolicy.SubnetServiceEndpointStoragePolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subnetserviceendpointstoragepolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subnetserviceendpointstoragepolicy"
 
 subnetserviceendpointstoragepolicy.SubnetServiceEndpointStoragePolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -719,7 +719,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subnetServiceEndpointStoragePolicy.SubnetServiceEndpointStoragePolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subnetserviceendpointstoragepolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subnetserviceendpointstoragepolicy"
 
 &subnetserviceendpointstoragepolicy.SubnetServiceEndpointStoragePolicyConfig {
 	Connection: interface{},
@@ -732,10 +732,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subnetserviceendpo
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	Definition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.subnetServiceEndpointStoragePolicy.SubnetServiceEndpointStoragePolicyDefinition,
+	Definition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.subnetServiceEndpointStoragePolicy.SubnetServiceEndpointStoragePolicyDefinition,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.subnetServiceEndpointStoragePolicy.SubnetServiceEndpointStoragePolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.subnetServiceEndpointStoragePolicy.SubnetServiceEndpointStoragePolicyTimeouts,
 }
 ```
 
@@ -926,7 +926,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subnetServiceEndpointStoragePolicy.SubnetServiceEndpointStoragePolicyDefinition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subnetserviceendpointstoragepolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subnetserviceendpointstoragepolicy"
 
 &subnetserviceendpointstoragepolicy.SubnetServiceEndpointStoragePolicyDefinition {
 	Name: *string,
@@ -986,7 +986,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subnetServiceEndpointStoragePolicy.SubnetServiceEndpointStoragePolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subnetserviceendpointstoragepolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subnetserviceendpointstoragepolicy"
 
 &subnetserviceendpointstoragepolicy.SubnetServiceEndpointStoragePolicyTimeouts {
 	Create: *string,
@@ -1062,7 +1062,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subnetServiceEndpointStoragePolicy.SubnetServiceEndpointStoragePolicyDefinitionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subnetserviceendpointstoragepolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subnetserviceendpointstoragepolicy"
 
 subnetserviceendpointstoragepolicy.NewSubnetServiceEndpointStoragePolicyDefinitionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SubnetServiceEndpointStoragePolicyDefinitionOutputReference
 ```
@@ -1384,7 +1384,7 @@ func InternalValue() SubnetServiceEndpointStoragePolicyDefinition
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subnetServiceEndpointStoragePolicy.SubnetServiceEndpointStoragePolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subnetserviceendpointstoragepolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subnetserviceendpointstoragepolicy"
 
 subnetserviceendpointstoragepolicy.NewSubnetServiceEndpointStoragePolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SubnetServiceEndpointStoragePolicyTimeoutsOutputReference
 ```

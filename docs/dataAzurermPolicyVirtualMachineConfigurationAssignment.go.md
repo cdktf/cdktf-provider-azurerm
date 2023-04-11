@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/policy_vir
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPolicyVirtualMachineConfigurationAssignment.DataAzurermPolicyVirtualMachineConfigurationAssignment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpolicyvirtualmachineconfigurationassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermpolicyvirtualmachineconfigurationassignment"
 
 dataazurermpolicyvirtualmachineconfigurationassignment.NewDataAzurermPolicyVirtualMachineConfigurationAssignment(scope Construct, id *string, config DataAzurermPolicyVirtualMachineConfigurationAssignmentConfig) DataAzurermPolicyVirtualMachineConfigurationAssignment
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermPolicyVirtualMachineConfigurationAssignment.DataAzurermPolicyVirtualMachineConfigurationAssignment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpolicyvirtualmachineconfigurationassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermpolicyvirtualmachineconfigurationassignment"
 
 dataazurermpolicyvirtualmachineconfigurationassignment.DataAzurermPolicyVirtualMachineConfigurationAssignment_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermPolicyVirtualMachineConfigurationAssignment.DataAzurermPolicyVirtualMachineConfigurationAssignment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpolicyvirtualmachineconfigurationassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermpolicyvirtualmachineconfigurationassignment"
 
 dataazurermpolicyvirtualmachineconfigurationassignment.DataAzurermPolicyVirtualMachineConfigurationAssignment_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermpolicyvirtualmachineconfigurationassignment.DataAzurermPolicyVirtualM
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermPolicyVirtualMachineConfigurationAssignment.DataAzurermPolicyVirtualMachineConfigurationAssignment.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpolicyvirtualmachineconfigurationassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermpolicyvirtualmachineconfigurationassignment"
 
 dataazurermpolicyvirtualmachineconfigurationassignment.DataAzurermPolicyVirtualMachineConfigurationAssignment_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -692,7 +692,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPolicyVirtualMachineConfigurationAssignment.DataAzurermPolicyVirtualMachineConfigurationAssignmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpolicyvirtualmachineconfigurationassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermpolicyvirtualmachineconfigurationassignment"
 
 &dataazurermpolicyvirtualmachineconfigurationassignment.DataAzurermPolicyVirtualMachineConfigurationAssignmentConfig {
 	Connection: interface{},
@@ -706,7 +706,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpolicyv
 	ResourceGroupName: *string,
 	VirtualMachineName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermPolicyVirtualMachineConfigurationAssignment.DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermPolicyVirtualMachineConfigurationAssignment.DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeouts,
 }
 ```
 
@@ -869,7 +869,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPolicyVirtualMachineConfigurationAssignment.DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpolicyvirtualmachineconfigurationassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermpolicyvirtualmachineconfigurationassignment"
 
 &dataazurermpolicyvirtualmachineconfigurationassignment.DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeouts {
 	Read: *string,
@@ -903,7 +903,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPolicyVirtualMachineConfigurationAssignment.DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermpolicyvirtualmachineconfigurationassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermpolicyvirtualmachineconfigurationassignment"
 
 dataazurermpolicyvirtualmachineconfigurationassignment.NewDataAzurermPolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference
 ```

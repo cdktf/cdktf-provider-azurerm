@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/user_assig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.userAssignedIdentity.UserAssignedIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/userassignedidentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/userassignedidentity"
 
 userassignedidentity.NewUserAssignedIdentity(scope Construct, id *string, config UserAssignedIdentityConfig) UserAssignedIdentity
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.userAssignedIdentity.UserAssignedIdentity.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/userassignedidentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/userassignedidentity"
 
 userassignedidentity.UserAssignedIdentity_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.userAssignedIdentity.UserAssignedIdentity.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/userassignedidentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/userassignedidentity"
 
 userassignedidentity.UserAssignedIdentity_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ userassignedidentity.UserAssignedIdentity_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.userAssignedIdentity.UserAssignedIdentity.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/userassignedidentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/userassignedidentity"
 
 userassignedidentity.UserAssignedIdentity_IsTerraformResource(x interface{}) *bool
 ```
@@ -710,7 +710,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.userAssignedIdentity.UserAssignedIdentityConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/userassignedidentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/userassignedidentity"
 
 &userassignedidentity.UserAssignedIdentityConfig {
 	Connection: interface{},
@@ -725,7 +725,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/userassignedidenti
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.userAssignedIdentity.UserAssignedIdentityTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.userAssignedIdentity.UserAssignedIdentityTimeouts,
 }
 ```
 
@@ -901,7 +901,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.userAssignedIdentity.UserAssignedIdentityTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/userassignedidentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/userassignedidentity"
 
 &userassignedidentity.UserAssignedIdentityTimeouts {
 	Create: *string,
@@ -977,7 +977,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.userAssignedIdentity.UserAssignedIdentityTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/userassignedidentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/userassignedidentity"
 
 userassignedidentity.NewUserAssignedIdentityTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) UserAssignedIdentityTimeoutsOutputReference
 ```

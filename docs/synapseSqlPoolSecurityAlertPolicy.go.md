@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sq
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseSqlPoolSecurityAlertPolicy.SynapseSqlPoolSecurityAlertPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapsesqlpoolsecurityalertpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/synapsesqlpoolsecurityalertpolicy"
 
 synapsesqlpoolsecurityalertpolicy.NewSynapseSqlPoolSecurityAlertPolicy(scope Construct, id *string, config SynapseSqlPoolSecurityAlertPolicyConfig) SynapseSqlPoolSecurityAlertPolicy
 ```
@@ -335,7 +335,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.synapseSqlPoolSecurityAlertPolicy.SynapseSqlPoolSecurityAlertPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapsesqlpoolsecurityalertpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/synapsesqlpoolsecurityalertpolicy"
 
 synapsesqlpoolsecurityalertpolicy.SynapseSqlPoolSecurityAlertPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -367,7 +367,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.synapseSqlPoolSecurityAlertPolicy.SynapseSqlPoolSecurityAlertPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapsesqlpoolsecurityalertpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/synapsesqlpoolsecurityalertpolicy"
 
 synapsesqlpoolsecurityalertpolicy.SynapseSqlPoolSecurityAlertPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -381,7 +381,7 @@ synapsesqlpoolsecurityalertpolicy.SynapseSqlPoolSecurityAlertPolicy_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.synapseSqlPoolSecurityAlertPolicy.SynapseSqlPoolSecurityAlertPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapsesqlpoolsecurityalertpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/synapsesqlpoolsecurityalertpolicy"
 
 synapsesqlpoolsecurityalertpolicy.SynapseSqlPoolSecurityAlertPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -800,7 +800,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseSqlPoolSecurityAlertPolicy.SynapseSqlPoolSecurityAlertPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapsesqlpoolsecurityalertpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/synapsesqlpoolsecurityalertpolicy"
 
 &synapsesqlpoolsecurityalertpolicy.SynapseSqlPoolSecurityAlertPolicyConfig {
 	Connection: interface{},
@@ -819,7 +819,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapsesqlpoolsecu
 	RetentionDays: *f64,
 	StorageAccountAccessKey: *string,
 	StorageEndpoint: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.synapseSqlPoolSecurityAlertPolicy.SynapseSqlPoolSecurityAlertPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.synapseSqlPoolSecurityAlertPolicy.SynapseSqlPoolSecurityAlertPolicyTimeouts,
 }
 ```
 
@@ -1047,7 +1047,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseSqlPoolSecurityAlertPolicy.SynapseSqlPoolSecurityAlertPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapsesqlpoolsecurityalertpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/synapsesqlpoolsecurityalertpolicy"
 
 &synapsesqlpoolsecurityalertpolicy.SynapseSqlPoolSecurityAlertPolicyTimeouts {
 	Create: *string,
@@ -1123,7 +1123,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseSqlPoolSecurityAlertPolicy.SynapseSqlPoolSecurityAlertPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/synapsesqlpoolsecurityalertpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/synapsesqlpoolsecurityalertpolicy"
 
 synapsesqlpoolsecurityalertpolicy.NewSynapseSqlPoolSecurityAlertPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SynapseSqlPoolSecurityAlertPolicyTimeoutsOutputReference
 ```

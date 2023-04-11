@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.postgresqlDatabase.PostgresqlDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/postgresqldatabase"
 
 postgresqldatabase.NewPostgresqlDatabase(scope Construct, id *string, config PostgresqlDatabaseConfig) PostgresqlDatabase
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.postgresqlDatabase.PostgresqlDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/postgresqldatabase"
 
 postgresqldatabase.PostgresqlDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.postgresqlDatabase.PostgresqlDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/postgresqldatabase"
 
 postgresqldatabase.PostgresqlDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ postgresqldatabase.PostgresqlDatabase_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.postgresqlDatabase.PostgresqlDatabase.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/postgresqldatabase"
 
 postgresqldatabase.PostgresqlDatabase_IsTerraformResource(x interface{}) *bool
 ```
@@ -692,7 +692,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.postgresqlDatabase.PostgresqlDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/postgresqldatabase"
 
 &postgresqldatabase.PostgresqlDatabaseConfig {
 	Connection: interface{},
@@ -708,7 +708,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqldatabase
 	ResourceGroupName: *string,
 	ServerName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.postgresqlDatabase.PostgresqlDatabaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.postgresqlDatabase.PostgresqlDatabaseTimeouts,
 }
 ```
 
@@ -897,7 +897,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.postgresqlDatabase.PostgresqlDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/postgresqldatabase"
 
 &postgresqldatabase.PostgresqlDatabaseTimeouts {
 	Create: *string,
@@ -973,7 +973,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.postgresqlDatabase.PostgresqlDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/postgresqldatabase"
 
 postgresqldatabase.NewPostgresqlDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PostgresqlDatabaseTimeoutsOutputReference
 ```

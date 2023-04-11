@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_config
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKey.DataAzurermAppConfigurationKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappconfigurationkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappconfigurationkey"
 
 dataazurermappconfigurationkey.NewDataAzurermAppConfigurationKey(scope Construct, id *string, config DataAzurermAppConfigurationKeyConfig) DataAzurermAppConfigurationKey
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKey.DataAzurermAppConfigurationKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappconfigurationkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappconfigurationkey"
 
 dataazurermappconfigurationkey.DataAzurermAppConfigurationKey_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKey.DataAzurermAppConfigurationKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappconfigurationkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappconfigurationkey"
 
 dataazurermappconfigurationkey.DataAzurermAppConfigurationKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ dataazurermappconfigurationkey.DataAzurermAppConfigurationKey_IsTerraformElement
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKey.DataAzurermAppConfigurationKey.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappconfigurationkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappconfigurationkey"
 
 dataazurermappconfigurationkey.DataAzurermAppConfigurationKey_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -710,7 +710,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKey.DataAzurermAppConfigurationKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappconfigurationkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappconfigurationkey"
 
 &dataazurermappconfigurationkey.DataAzurermAppConfigurationKeyConfig {
 	Connection: interface{},
@@ -724,7 +724,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappconf
 	Key: *string,
 	Id: *string,
 	Label: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermAppConfigurationKey.DataAzurermAppConfigurationKeyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermAppConfigurationKey.DataAzurermAppConfigurationKeyTimeouts,
 }
 ```
 
@@ -887,7 +887,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKey.DataAzurermAppConfigurationKeyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappconfigurationkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappconfigurationkey"
 
 &dataazurermappconfigurationkey.DataAzurermAppConfigurationKeyTimeouts {
 	Read: *string,
@@ -921,7 +921,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKey.DataAzurermAppConfigurationKeyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappconfigurationkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappconfigurationkey"
 
 dataazurermappconfigurationkey.NewDataAzurermAppConfigurationKeyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermAppConfigurationKeyTimeoutsOutputReference
 ```

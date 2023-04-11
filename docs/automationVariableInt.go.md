@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationVariableInt.AutomationVariableInt.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariableint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationvariableint"
 
 automationvariableint.NewAutomationVariableInt(scope Construct, id *string, config AutomationVariableIntConfig) AutomationVariableInt
 ```
@@ -314,7 +314,7 @@ func ResetValue()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationVariableInt.AutomationVariableInt.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariableint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationvariableint"
 
 automationvariableint.AutomationVariableInt_IsConstruct(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationVariableInt.AutomationVariableInt.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariableint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationvariableint"
 
 automationvariableint.AutomationVariableInt_IsTerraformElement(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ automationvariableint.AutomationVariableInt_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationVariableInt.AutomationVariableInt.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariableint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationvariableint"
 
 automationvariableint.AutomationVariableInt_IsTerraformResource(x interface{}) *bool
 ```
@@ -735,7 +735,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationVariableInt.AutomationVariableIntConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariableint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationvariableint"
 
 &automationvariableint.AutomationVariableIntConfig {
 	Connection: interface{},
@@ -751,7 +751,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariable
 	Description: *string,
 	Encrypted: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.automationVariableInt.AutomationVariableIntTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.automationVariableInt.AutomationVariableIntTimeouts,
 	Value: *f64,
 }
 ```
@@ -954,7 +954,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationVariableInt.AutomationVariableIntTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariableint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationvariableint"
 
 &automationvariableint.AutomationVariableIntTimeouts {
 	Create: *string,
@@ -1030,7 +1030,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationVariableInt.AutomationVariableIntTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/automationvariableint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationvariableint"
 
 automationvariableint.NewAutomationVariableIntTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationVariableIntTimeoutsOutputReference
 ```

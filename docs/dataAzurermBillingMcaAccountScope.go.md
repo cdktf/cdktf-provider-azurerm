@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mc
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBillingMcaAccountScope.DataAzurermBillingMcaAccountScope.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermbillingmcaaccountscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermbillingmcaaccountscope"
 
 dataazurermbillingmcaaccountscope.NewDataAzurermBillingMcaAccountScope(scope Construct, id *string, config DataAzurermBillingMcaAccountScopeConfig) DataAzurermBillingMcaAccountScope
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermBillingMcaAccountScope.DataAzurermBillingMcaAccountScope.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermbillingmcaaccountscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermbillingmcaaccountscope"
 
 dataazurermbillingmcaaccountscope.DataAzurermBillingMcaAccountScope_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermBillingMcaAccountScope.DataAzurermBillingMcaAccountScope.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermbillingmcaaccountscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermbillingmcaaccountscope"
 
 dataazurermbillingmcaaccountscope.DataAzurermBillingMcaAccountScope_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermbillingmcaaccountscope.DataAzurermBillingMcaAccountScope_IsTerraformE
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermBillingMcaAccountScope.DataAzurermBillingMcaAccountScope.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermbillingmcaaccountscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermbillingmcaaccountscope"
 
 dataazurermbillingmcaaccountscope.DataAzurermBillingMcaAccountScope_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -626,7 +626,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBillingMcaAccountScope.DataAzurermBillingMcaAccountScopeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermbillingmcaaccountscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermbillingmcaaccountscope"
 
 &dataazurermbillingmcaaccountscope.DataAzurermBillingMcaAccountScopeConfig {
 	Connection: interface{},
@@ -640,7 +640,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermbilling
 	BillingProfileName: *string,
 	InvoiceSectionName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermBillingMcaAccountScope.DataAzurermBillingMcaAccountScopeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermBillingMcaAccountScope.DataAzurermBillingMcaAccountScopeTimeouts,
 }
 ```
 
@@ -803,7 +803,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBillingMcaAccountScope.DataAzurermBillingMcaAccountScopeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermbillingmcaaccountscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermbillingmcaaccountscope"
 
 &dataazurermbillingmcaaccountscope.DataAzurermBillingMcaAccountScopeTimeouts {
 	Read: *string,
@@ -837,7 +837,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBillingMcaAccountScope.DataAzurermBillingMcaAccountScopeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermbillingmcaaccountscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermbillingmcaaccountscope"
 
 dataazurermbillingmcaaccountscope.NewDataAzurermBillingMcaAccountScopeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermBillingMcaAccountScopeTimeoutsOutputReference
 ```

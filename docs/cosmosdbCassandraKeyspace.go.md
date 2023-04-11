@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_c
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraKeyspace.CosmosdbCassandraKeyspace.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbcassandrakeyspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cosmosdbcassandrakeyspace"
 
 cosmosdbcassandrakeyspace.NewCosmosdbCassandraKeyspace(scope Construct, id *string, config CosmosdbCassandraKeyspaceConfig) CosmosdbCassandraKeyspace
 ```
@@ -320,7 +320,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cosmosdbCassandraKeyspace.CosmosdbCassandraKeyspace.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbcassandrakeyspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cosmosdbcassandrakeyspace"
 
 cosmosdbcassandrakeyspace.CosmosdbCassandraKeyspace_IsConstruct(x interface{}) *bool
 ```
@@ -352,7 +352,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cosmosdbCassandraKeyspace.CosmosdbCassandraKeyspace.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbcassandrakeyspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cosmosdbcassandrakeyspace"
 
 cosmosdbcassandrakeyspace.CosmosdbCassandraKeyspace_IsTerraformElement(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ cosmosdbcassandrakeyspace.CosmosdbCassandraKeyspace_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cosmosdbCassandraKeyspace.CosmosdbCassandraKeyspace.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbcassandrakeyspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cosmosdbcassandrakeyspace"
 
 cosmosdbcassandrakeyspace.CosmosdbCassandraKeyspace_IsTerraformResource(x interface{}) *bool
 ```
@@ -719,7 +719,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbCassandraKeyspace.CosmosdbCassandraKeyspaceAutoscaleSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbcassandrakeyspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cosmosdbcassandrakeyspace"
 
 &cosmosdbcassandrakeyspace.CosmosdbCassandraKeyspaceAutoscaleSettings {
 	MaxThroughput: *f64,
@@ -751,7 +751,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbCassandraKeyspace.CosmosdbCassandraKeyspaceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbcassandrakeyspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cosmosdbcassandrakeyspace"
 
 &cosmosdbcassandrakeyspace.CosmosdbCassandraKeyspaceConfig {
 	Connection: interface{},
@@ -764,10 +764,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbcassandrak
 	AccountName: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	AutoscaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.cosmosdbCassandraKeyspace.CosmosdbCassandraKeyspaceAutoscaleSettings,
+	AutoscaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.cosmosdbCassandraKeyspace.CosmosdbCassandraKeyspaceAutoscaleSettings,
 	Id: *string,
 	Throughput: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.cosmosdbCassandraKeyspace.CosmosdbCassandraKeyspaceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.cosmosdbCassandraKeyspace.CosmosdbCassandraKeyspaceTimeouts,
 }
 ```
 
@@ -958,7 +958,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbCassandraKeyspace.CosmosdbCassandraKeyspaceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbcassandrakeyspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cosmosdbcassandrakeyspace"
 
 &cosmosdbcassandrakeyspace.CosmosdbCassandraKeyspaceTimeouts {
 	Create: *string,
@@ -1034,7 +1034,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraKeyspace.CosmosdbCassandraKeyspaceAutoscaleSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbcassandrakeyspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cosmosdbcassandrakeyspace"
 
 cosmosdbcassandrakeyspace.NewCosmosdbCassandraKeyspaceAutoscaleSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbCassandraKeyspaceAutoscaleSettingsOutputReference
 ```
@@ -1312,7 +1312,7 @@ func InternalValue() CosmosdbCassandraKeyspaceAutoscaleSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraKeyspace.CosmosdbCassandraKeyspaceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cosmosdbcassandrakeyspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cosmosdbcassandrakeyspace"
 
 cosmosdbcassandrakeyspace.NewCosmosdbCassandraKeyspaceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbCassandraKeyspaceTimeoutsOutputReference
 ```

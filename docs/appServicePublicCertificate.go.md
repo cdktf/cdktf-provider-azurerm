@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_servic
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServicePublicCertificate.AppServicePublicCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/appservicepubliccertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/appservicepubliccertificate"
 
 appservicepubliccertificate.NewAppServicePublicCertificate(scope Construct, id *string, config AppServicePublicCertificateConfig) AppServicePublicCertificate
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.appServicePublicCertificate.AppServicePublicCertificate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/appservicepubliccertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/appservicepubliccertificate"
 
 appservicepubliccertificate.AppServicePublicCertificate_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.appServicePublicCertificate.AppServicePublicCertificate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/appservicepubliccertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/appservicepubliccertificate"
 
 appservicepubliccertificate.AppServicePublicCertificate_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ appservicepubliccertificate.AppServicePublicCertificate_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.appServicePublicCertificate.AppServicePublicCertificate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/appservicepubliccertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/appservicepubliccertificate"
 
 appservicepubliccertificate.AppServicePublicCertificate_IsTerraformResource(x interface{}) *bool
 ```
@@ -703,7 +703,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServicePublicCertificate.AppServicePublicCertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/appservicepubliccertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/appservicepubliccertificate"
 
 &appservicepubliccertificate.AppServicePublicCertificateConfig {
 	Connection: interface{},
@@ -719,7 +719,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/appservicepublicce
 	CertificateName: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.appServicePublicCertificate.AppServicePublicCertificateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.appServicePublicCertificate.AppServicePublicCertificateTimeouts,
 }
 ```
 
@@ -908,7 +908,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServicePublicCertificate.AppServicePublicCertificateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/appservicepubliccertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/appservicepubliccertificate"
 
 &appservicepubliccertificate.AppServicePublicCertificateTimeouts {
 	Create: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServicePublicCertificate.AppServicePublicCertificateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/appservicepubliccertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/appservicepubliccertificate"
 
 appservicepubliccertificate.NewAppServicePublicCertificateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServicePublicCertificateTimeoutsOutputReference
 ```

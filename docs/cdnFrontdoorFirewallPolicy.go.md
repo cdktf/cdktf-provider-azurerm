@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_frontd
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicy(scope Construct, id *string, config CdnFrontdoorFirewallPolicyConfig) CdnFrontdoorFirewallPolicy
 ```
@@ -368,7 +368,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.CdnFrontdoorFirewallPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -400,7 +400,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.CdnFrontdoorFirewallPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -414,7 +414,7 @@ cdnfrontdoorfirewallpolicy.CdnFrontdoorFirewallPolicy_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.CdnFrontdoorFirewallPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -910,7 +910,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 &cdnfrontdoorfirewallpolicy.CdnFrontdoorFirewallPolicyConfig {
 	Connection: interface{},
@@ -932,7 +932,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewa
 	ManagedRule: interface{},
 	RedirectUrl: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyTimeouts,
 }
 ```
 
@@ -1203,7 +1203,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyCustomRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 &cdnfrontdoorfirewallpolicy.CdnFrontdoorFirewallPolicyCustomRule {
 	Action: *string,
@@ -1335,7 +1335,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyCustomRuleMatchCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 &cdnfrontdoorfirewallpolicy.CdnFrontdoorFirewallPolicyCustomRuleMatchCondition {
 	MatchValues: *[]*string,
@@ -1437,7 +1437,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 &cdnfrontdoorfirewallpolicy.CdnFrontdoorFirewallPolicyManagedRule {
 	Action: *string,
@@ -1529,7 +1529,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleExclusion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 &cdnfrontdoorfirewallpolicy.CdnFrontdoorFirewallPolicyManagedRuleExclusion {
 	MatchVariable: *string,
@@ -1589,7 +1589,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleOverride.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 &cdnfrontdoorfirewallpolicy.CdnFrontdoorFirewallPolicyManagedRuleOverride {
 	RuleGroupName: *string,
@@ -1653,7 +1653,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleOverrideExclusion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 &cdnfrontdoorfirewallpolicy.CdnFrontdoorFirewallPolicyManagedRuleOverrideExclusion {
 	MatchVariable: *string,
@@ -1713,7 +1713,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleOverrideRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 &cdnfrontdoorfirewallpolicy.CdnFrontdoorFirewallPolicyManagedRuleOverrideRule {
 	Action: *string,
@@ -1789,7 +1789,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 &cdnfrontdoorfirewallpolicy.CdnFrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion {
 	MatchVariable: *string,
@@ -1849,7 +1849,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 &cdnfrontdoorfirewallpolicy.CdnFrontdoorFirewallPolicyTimeouts {
 	Create: *string,
@@ -1925,7 +1925,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyCustomRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyCustomRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnFrontdoorFirewallPolicyCustomRuleList
 ```
@@ -2068,7 +2068,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyCustomRuleMatchConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyCustomRuleMatchConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnFrontdoorFirewallPolicyCustomRuleMatchConditionList
 ```
@@ -2211,7 +2211,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyCustomRuleMatchConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyCustomRuleMatchConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnFrontdoorFirewallPolicyCustomRuleMatchConditionOutputReference
 ```
@@ -2631,7 +2631,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyCustomRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyCustomRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnFrontdoorFirewallPolicyCustomRuleOutputReference
 ```
@@ -3122,7 +3122,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleExclusionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyManagedRuleExclusionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnFrontdoorFirewallPolicyManagedRuleExclusionList
 ```
@@ -3265,7 +3265,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleExclusionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyManagedRuleExclusionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnFrontdoorFirewallPolicyManagedRuleExclusionOutputReference
 ```
@@ -3598,7 +3598,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyManagedRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnFrontdoorFirewallPolicyManagedRuleList
 ```
@@ -3741,7 +3741,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyManagedRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnFrontdoorFirewallPolicyManagedRuleOutputReference
 ```
@@ -4158,7 +4158,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleOverrideExclusionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyManagedRuleOverrideExclusionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnFrontdoorFirewallPolicyManagedRuleOverrideExclusionList
 ```
@@ -4301,7 +4301,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleOverrideExclusionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyManagedRuleOverrideExclusionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnFrontdoorFirewallPolicyManagedRuleOverrideExclusionOutputReference
 ```
@@ -4634,7 +4634,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleOverrideList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyManagedRuleOverrideList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnFrontdoorFirewallPolicyManagedRuleOverrideList
 ```
@@ -4777,7 +4777,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleOverrideOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyManagedRuleOverrideOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnFrontdoorFirewallPolicyManagedRuleOverrideOutputReference
 ```
@@ -5150,7 +5150,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleOverrideRuleExclusionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyManagedRuleOverrideRuleExclusionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnFrontdoorFirewallPolicyManagedRuleOverrideRuleExclusionList
 ```
@@ -5293,7 +5293,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleOverrideRuleExclusionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyManagedRuleOverrideRuleExclusionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnFrontdoorFirewallPolicyManagedRuleOverrideRuleExclusionOutputReference
 ```
@@ -5626,7 +5626,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleOverrideRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyManagedRuleOverrideRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnFrontdoorFirewallPolicyManagedRuleOverrideRuleList
 ```
@@ -5769,7 +5769,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyManagedRuleOverrideRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyManagedRuleOverrideRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnFrontdoorFirewallPolicyManagedRuleOverrideRuleOutputReference
 ```
@@ -6151,7 +6151,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy.CdnFrontdoorFirewallPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/cdnfrontdoorfirewallpolicy"
 
 cdnfrontdoorfirewallpolicy.NewCdnFrontdoorFirewallPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnFrontdoorFirewallPolicyTimeoutsOutputReference
 ```

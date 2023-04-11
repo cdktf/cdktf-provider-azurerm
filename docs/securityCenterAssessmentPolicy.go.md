@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_c
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.securityCenterAssessmentPolicy.SecurityCenterAssessmentPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/securitycenterassessmentpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/securitycenterassessmentpolicy"
 
 securitycenterassessmentpolicy.NewSecurityCenterAssessmentPolicy(scope Construct, id *string, config SecurityCenterAssessmentPolicyConfig) SecurityCenterAssessmentPolicy
 ```
@@ -335,7 +335,7 @@ func ResetUserImpact()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.securityCenterAssessmentPolicy.SecurityCenterAssessmentPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/securitycenterassessmentpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/securitycenterassessmentpolicy"
 
 securitycenterassessmentpolicy.SecurityCenterAssessmentPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -367,7 +367,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.securityCenterAssessmentPolicy.SecurityCenterAssessmentPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/securitycenterassessmentpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/securitycenterassessmentpolicy"
 
 securitycenterassessmentpolicy.SecurityCenterAssessmentPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -381,7 +381,7 @@ securitycenterassessmentpolicy.SecurityCenterAssessmentPolicy_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.securityCenterAssessmentPolicy.SecurityCenterAssessmentPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/securitycenterassessmentpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/securitycenterassessmentpolicy"
 
 securitycenterassessmentpolicy.SecurityCenterAssessmentPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -811,7 +811,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.securityCenterAssessmentPolicy.SecurityCenterAssessmentPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/securitycenterassessmentpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/securitycenterassessmentpolicy"
 
 &securitycenterassessmentpolicy.SecurityCenterAssessmentPolicyConfig {
 	Connection: interface{},
@@ -829,7 +829,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/securitycenterasse
 	RemediationDescription: *string,
 	Severity: *string,
 	Threats: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.securityCenterAssessmentPolicy.SecurityCenterAssessmentPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.securityCenterAssessmentPolicy.SecurityCenterAssessmentPolicyTimeouts,
 	UserImpact: *string,
 }
 ```
@@ -1058,7 +1058,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.securityCenterAssessmentPolicy.SecurityCenterAssessmentPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/securitycenterassessmentpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/securitycenterassessmentpolicy"
 
 &securitycenterassessmentpolicy.SecurityCenterAssessmentPolicyTimeouts {
 	Create: *string,
@@ -1134,7 +1134,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.securityCenterAssessmentPolicy.SecurityCenterAssessmentPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/securitycenterassessmentpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/securitycenterassessmentpolicy"
 
 securitycenterassessmentpolicy.NewSecurityCenterAssessmentPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SecurityCenterAssessmentPolicyTimeoutsOutputReference
 ```

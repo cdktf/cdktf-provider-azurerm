@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_servic
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappservicecertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappservicecertificate"
 
 dataazurermappservicecertificate.NewDataAzurermAppServiceCertificate(scope Construct, id *string, config DataAzurermAppServiceCertificateConfig) DataAzurermAppServiceCertificate
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappservicecertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappservicecertificate"
 
 dataazurermappservicecertificate.DataAzurermAppServiceCertificate_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappservicecertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappservicecertificate"
 
 dataazurermappservicecertificate.DataAzurermAppServiceCertificate_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ dataazurermappservicecertificate.DataAzurermAppServiceCertificate_IsTerraformEle
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificate.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappservicecertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappservicecertificate"
 
 dataazurermappservicecertificate.DataAzurermAppServiceCertificate_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappservicecertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappservicecertificate"
 
 &dataazurermappservicecertificate.DataAzurermAppServiceCertificateConfig {
 	Connection: interface{},
@@ -735,7 +735,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappserv
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeouts,
 }
 ```
 
@@ -898,7 +898,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappservicecertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappservicecertificate"
 
 &dataazurermappservicecertificate.DataAzurermAppServiceCertificateTimeouts {
 	Read: *string,
@@ -932,7 +932,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermappservicecertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappservicecertificate"
 
 dataazurermappservicecertificate.NewDataAzurermAppServiceCertificateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermAppServiceCertificateTimeoutsOutputReference
 ```

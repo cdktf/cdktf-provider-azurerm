@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_clo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudAppCosmosdbAssociation.SpringCloudAppCosmosdbAssociation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudappcosmosdbassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/springcloudappcosmosdbassociation"
 
 springcloudappcosmosdbassociation.NewSpringCloudAppCosmosdbAssociation(scope Construct, id *string, config SpringCloudAppCosmosdbAssociationConfig) SpringCloudAppCosmosdbAssociation
 ```
@@ -328,7 +328,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.springCloudAppCosmosdbAssociation.SpringCloudAppCosmosdbAssociation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudappcosmosdbassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/springcloudappcosmosdbassociation"
 
 springcloudappcosmosdbassociation.SpringCloudAppCosmosdbAssociation_IsConstruct(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.springCloudAppCosmosdbAssociation.SpringCloudAppCosmosdbAssociation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudappcosmosdbassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/springcloudappcosmosdbassociation"
 
 springcloudappcosmosdbassociation.SpringCloudAppCosmosdbAssociation_IsTerraformElement(x interface{}) *bool
 ```
@@ -374,7 +374,7 @@ springcloudappcosmosdbassociation.SpringCloudAppCosmosdbAssociation_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.springCloudAppCosmosdbAssociation.SpringCloudAppCosmosdbAssociation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudappcosmosdbassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/springcloudappcosmosdbassociation"
 
 springcloudappcosmosdbassociation.SpringCloudAppCosmosdbAssociation_IsTerraformResource(x interface{}) *bool
 ```
@@ -837,7 +837,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudAppCosmosdbAssociation.SpringCloudAppCosmosdbAssociationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudappcosmosdbassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/springcloudappcosmosdbassociation"
 
 &springcloudappcosmosdbassociation.SpringCloudAppCosmosdbAssociationConfig {
 	Connection: interface{},
@@ -858,7 +858,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudappcosm
 	CosmosdbMongoDatabaseName: *string,
 	CosmosdbSqlDatabaseName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.springCloudAppCosmosdbAssociation.SpringCloudAppCosmosdbAssociationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.springCloudAppCosmosdbAssociation.SpringCloudAppCosmosdbAssociationTimeouts,
 }
 ```
 
@@ -1112,7 +1112,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudAppCosmosdbAssociation.SpringCloudAppCosmosdbAssociationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudappcosmosdbassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/springcloudappcosmosdbassociation"
 
 &springcloudappcosmosdbassociation.SpringCloudAppCosmosdbAssociationTimeouts {
 	Create: *string,
@@ -1188,7 +1188,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudAppCosmosdbAssociation.SpringCloudAppCosmosdbAssociationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/springcloudappcosmosdbassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/springcloudappcosmosdbassociation"
 
 springcloudappcosmosdbassociation.NewSpringCloudAppCosmosdbAssociationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudAppCosmosdbAssociationTimeoutsOutputReference
 ```

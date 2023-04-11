@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_asse
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mediaasset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mediaasset"
 
 mediaasset.NewMediaAsset(scope Construct, id *string, config MediaAssetConfig) MediaAsset
 ```
@@ -321,7 +321,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mediaAsset.MediaAsset.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mediaasset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mediaasset"
 
 mediaasset.MediaAsset_IsConstruct(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mediaAsset.MediaAsset.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mediaasset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mediaasset"
 
 mediaasset.MediaAsset_IsTerraformElement(x interface{}) *bool
 ```
@@ -367,7 +367,7 @@ mediaasset.MediaAsset_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mediaAsset.MediaAsset.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mediaasset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mediaasset"
 
 mediaasset.MediaAsset_IsTerraformResource(x interface{}) *bool
 ```
@@ -764,7 +764,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mediaasset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mediaasset"
 
 &mediaasset.MediaAssetConfig {
 	Connection: interface{},
@@ -782,7 +782,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mediaasset"
 	Description: *string,
 	Id: *string,
 	StorageAccountName: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.mediaAsset.MediaAssetTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.mediaAsset.MediaAssetTimeouts,
 }
 ```
 
@@ -997,7 +997,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaAsset.MediaAssetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mediaasset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mediaasset"
 
 &mediaasset.MediaAssetTimeouts {
 	Create: *string,
@@ -1073,7 +1073,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaAsset.MediaAssetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/mediaasset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mediaasset"
 
 mediaasset.NewMediaAssetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaAssetTimeoutsOutputReference
 ```

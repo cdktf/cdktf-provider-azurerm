@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccount.KeyVaultManagedStorageAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/keyvaultmanagedstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/keyvaultmanagedstorageaccount"
 
 keyvaultmanagedstorageaccount.NewKeyVaultManagedStorageAccount(scope Construct, id *string, config KeyVaultManagedStorageAccountConfig) KeyVaultManagedStorageAccount
 ```
@@ -314,7 +314,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccount.KeyVaultManagedStorageAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/keyvaultmanagedstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/keyvaultmanagedstorageaccount"
 
 keyvaultmanagedstorageaccount.KeyVaultManagedStorageAccount_IsConstruct(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccount.KeyVaultManagedStorageAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/keyvaultmanagedstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/keyvaultmanagedstorageaccount"
 
 keyvaultmanagedstorageaccount.KeyVaultManagedStorageAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ keyvaultmanagedstorageaccount.KeyVaultManagedStorageAccount_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccount.KeyVaultManagedStorageAccount.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/keyvaultmanagedstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/keyvaultmanagedstorageaccount"
 
 keyvaultmanagedstorageaccount.KeyVaultManagedStorageAccount_IsTerraformResource(x interface{}) *bool
 ```
@@ -757,7 +757,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccount.KeyVaultManagedStorageAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/keyvaultmanagedstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/keyvaultmanagedstorageaccount"
 
 &keyvaultmanagedstorageaccount.KeyVaultManagedStorageAccountConfig {
 	Connection: interface{},
@@ -775,7 +775,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/keyvaultmanagedsto
 	RegenerateKeyAutomatically: interface{},
 	RegenerationPeriod: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.keyVaultManagedStorageAccount.KeyVaultManagedStorageAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.keyVaultManagedStorageAccount.KeyVaultManagedStorageAccountTimeouts,
 }
 ```
 
@@ -990,7 +990,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccount.KeyVaultManagedStorageAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/keyvaultmanagedstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/keyvaultmanagedstorageaccount"
 
 &keyvaultmanagedstorageaccount.KeyVaultManagedStorageAccountTimeouts {
 	Create: *string,
@@ -1066,7 +1066,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccount.KeyVaultManagedStorageAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/keyvaultmanagedstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/keyvaultmanagedstorageaccount"
 
 keyvaultmanagedstorageaccount.NewKeyVaultManagedStorageAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KeyVaultManagedStorageAccountTimeoutsOutputReference
 ```

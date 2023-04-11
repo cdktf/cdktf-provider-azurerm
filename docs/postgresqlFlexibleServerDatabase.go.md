@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqlflexibleserverdatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/postgresqlflexibleserverdatabase"
 
 postgresqlflexibleserverdatabase.NewPostgresqlFlexibleServerDatabase(scope Construct, id *string, config PostgresqlFlexibleServerDatabaseConfig) PostgresqlFlexibleServerDatabase
 ```
@@ -307,7 +307,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqlflexibleserverdatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/postgresqlflexibleserverdatabase"
 
 postgresqlflexibleserverdatabase.PostgresqlFlexibleServerDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqlflexibleserverdatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/postgresqlflexibleserverdatabase"
 
 postgresqlflexibleserverdatabase.PostgresqlFlexibleServerDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ postgresqlflexibleserverdatabase.PostgresqlFlexibleServerDatabase_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabase.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqlflexibleserverdatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/postgresqlflexibleserverdatabase"
 
 postgresqlflexibleserverdatabase.PostgresqlFlexibleServerDatabase_IsTerraformResource(x interface{}) *bool
 ```
@@ -684,7 +684,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqlflexibleserverdatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/postgresqlflexibleserverdatabase"
 
 &postgresqlflexibleserverdatabase.PostgresqlFlexibleServerDatabaseConfig {
 	Connection: interface{},
@@ -699,7 +699,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqlflexible
 	Charset: *string,
 	Collation: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseTimeouts,
 }
 ```
 
@@ -875,7 +875,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqlflexibleserverdatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/postgresqlflexibleserverdatabase"
 
 &postgresqlflexibleserverdatabase.PostgresqlFlexibleServerDatabaseTimeouts {
 	Create: *string,
@@ -937,7 +937,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/postgresqlflexibleserverdatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/postgresqlflexibleserverdatabase"
 
 postgresqlflexibleserverdatabase.NewPostgresqlFlexibleServerDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PostgresqlFlexibleServerDatabaseTimeoutsOutputReference
 ```

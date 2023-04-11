@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_facto
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datafactorylinkedserviceazuresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuresqldatabase"
 
 datafactorylinkedserviceazuresqldatabase.NewDataFactoryLinkedServiceAzureSqlDatabase(scope Construct, id *string, config DataFactoryLinkedServiceAzureSqlDatabaseConfig) DataFactoryLinkedServiceAzureSqlDatabase
 ```
@@ -403,7 +403,7 @@ func ResetUseManagedIdentity()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datafactorylinkedserviceazuresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuresqldatabase"
 
 datafactorylinkedserviceazuresqldatabase.DataFactoryLinkedServiceAzureSqlDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -435,7 +435,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datafactorylinkedserviceazuresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuresqldatabase"
 
 datafactorylinkedserviceazuresqldatabase.DataFactoryLinkedServiceAzureSqlDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -449,7 +449,7 @@ datafactorylinkedserviceazuresqldatabase.DataFactoryLinkedServiceAzureSqlDatabas
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabase.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datafactorylinkedserviceazuresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuresqldatabase"
 
 datafactorylinkedserviceazuresqldatabase.DataFactoryLinkedServiceAzureSqlDatabase_IsTerraformResource(x interface{}) *bool
 ```
@@ -1000,7 +1000,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datafactorylinkedserviceazuresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuresqldatabase"
 
 &datafactorylinkedserviceazuresqldatabase.DataFactoryLinkedServiceAzureSqlDatabaseConfig {
 	Connection: interface{},
@@ -1018,13 +1018,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datafactorylinkeds
 	Description: *string,
 	Id: *string,
 	IntegrationRuntimeName: *string,
-	KeyVaultConnectionString: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionString,
-	KeyVaultPassword: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPassword,
+	KeyVaultConnectionString: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionString,
+	KeyVaultPassword: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPassword,
 	Parameters: *map[string]*string,
 	ServicePrincipalId: *string,
 	ServicePrincipalKey: *string,
 	TenantId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabaseTimeouts,
 	UseManagedIdentity: interface{},
 }
 ```
@@ -1335,7 +1335,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionString.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datafactorylinkedserviceazuresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuresqldatabase"
 
 &datafactorylinkedserviceazuresqldatabase.DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionString {
 	LinkedServiceName: *string,
@@ -1381,7 +1381,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPassword.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datafactorylinkedserviceazuresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuresqldatabase"
 
 &datafactorylinkedserviceazuresqldatabase.DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPassword {
 	LinkedServiceName: *string,
@@ -1427,7 +1427,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datafactorylinkedserviceazuresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuresqldatabase"
 
 &datafactorylinkedserviceazuresqldatabase.DataFactoryLinkedServiceAzureSqlDatabaseTimeouts {
 	Create: *string,
@@ -1503,7 +1503,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionStringOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datafactorylinkedserviceazuresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuresqldatabase"
 
 datafactorylinkedserviceazuresqldatabase.NewDataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionStringOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionStringOutputReference
 ```
@@ -1796,7 +1796,7 @@ func InternalValue() DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionS
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPasswordOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datafactorylinkedserviceazuresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuresqldatabase"
 
 datafactorylinkedserviceazuresqldatabase.NewDataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPasswordOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPasswordOutputReference
 ```
@@ -2089,7 +2089,7 @@ func InternalValue() DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPassword
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureSqlDatabase.DataFactoryLinkedServiceAzureSqlDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/datafactorylinkedserviceazuresqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuresqldatabase"
 
 datafactorylinkedserviceazuresqldatabase.NewDataFactoryLinkedServiceAzureSqlDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceAzureSqlDatabaseTimeoutsOutputReference
 ```

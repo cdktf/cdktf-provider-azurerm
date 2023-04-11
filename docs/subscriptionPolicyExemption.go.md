@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subscripti
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subscriptionpolicyexemption"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subscriptionpolicyexemption"
 
 subscriptionpolicyexemption.NewSubscriptionPolicyExemption(scope Construct, id *string, config SubscriptionPolicyExemptionConfig) SubscriptionPolicyExemption
 ```
@@ -328,7 +328,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemption.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subscriptionpolicyexemption"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subscriptionpolicyexemption"
 
 subscriptionpolicyexemption.SubscriptionPolicyExemption_IsConstruct(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemption.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subscriptionpolicyexemption"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subscriptionpolicyexemption"
 
 subscriptionpolicyexemption.SubscriptionPolicyExemption_IsTerraformElement(x interface{}) *bool
 ```
@@ -374,7 +374,7 @@ subscriptionpolicyexemption.SubscriptionPolicyExemption_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemption.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subscriptionpolicyexemption"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subscriptionpolicyexemption"
 
 subscriptionpolicyexemption.SubscriptionPolicyExemption_IsTerraformResource(x interface{}) *bool
 ```
@@ -815,7 +815,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subscriptionpolicyexemption"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subscriptionpolicyexemption"
 
 &subscriptionpolicyexemption.SubscriptionPolicyExemptionConfig {
 	Connection: interface{},
@@ -835,7 +835,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subscriptionpolicy
 	Id: *string,
 	Metadata: *string,
 	PolicyDefinitionReferenceIds: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.subscriptionPolicyExemption.SubscriptionPolicyExemptionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.subscriptionPolicyExemption.SubscriptionPolicyExemptionTimeouts,
 }
 ```
 
@@ -1076,7 +1076,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subscriptionpolicyexemption"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subscriptionpolicyexemption"
 
 &subscriptionpolicyexemption.SubscriptionPolicyExemptionTimeouts {
 	Create: *string,
@@ -1152,7 +1152,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/subscriptionpolicyexemption"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subscriptionpolicyexemption"
 
 subscriptionpolicyexemption.NewSubscriptionPolicyExemptionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SubscriptionPolicyExemptionTimeoutsOutputReference
 ```
