@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe a
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lbProbe.LbProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lbprobe"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbprobe"
 
 lbprobe.NewLbProbe(scope Construct, id *string, config LbProbeConfig) LbProbe
 ```
@@ -328,7 +328,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.lbProbe.LbProbe.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lbprobe"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbprobe"
 
 lbprobe.LbProbe_IsConstruct(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.lbProbe.LbProbe.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lbprobe"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbprobe"
 
 lbprobe.LbProbe_IsTerraformElement(x interface{}) *bool
 ```
@@ -374,7 +374,7 @@ lbprobe.LbProbe_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.lbProbe.LbProbe.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lbprobe"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbprobe"
 
 lbprobe.LbProbe_IsTerraformResource(x interface{}) *bool
 ```
@@ -804,7 +804,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lbProbe.LbProbeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lbprobe"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbprobe"
 
 &lbprobe.LbProbeConfig {
 	Connection: interface{},
@@ -823,7 +823,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lbprobe"
 	ProbeThreshold: *f64,
 	Protocol: *string,
 	RequestPath: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.lbProbe.LbProbeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.lbProbe.LbProbeTimeouts,
 }
 ```
 
@@ -1051,7 +1051,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lbProbe.LbProbeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lbprobe"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbprobe"
 
 &lbprobe.LbProbeTimeouts {
 	Create: *string,
@@ -1127,7 +1127,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lbProbe.LbProbeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/lbprobe"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbprobe"
 
 lbprobe.NewLbProbeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LbProbeTimeoutsOutputReference
 ```

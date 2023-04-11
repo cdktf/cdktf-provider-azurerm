@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/databox_ed
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDataboxEdgeDevice.DataAzurermDataboxEdgeDevice.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdataboxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdataboxedgedevice"
 
 dataazurermdataboxedgedevice.NewDataAzurermDataboxEdgeDevice(scope Construct, id *string, config DataAzurermDataboxEdgeDeviceConfig) DataAzurermDataboxEdgeDevice
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermDataboxEdgeDevice.DataAzurermDataboxEdgeDevice.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdataboxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdataboxedgedevice"
 
 dataazurermdataboxedgedevice.DataAzurermDataboxEdgeDevice_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermDataboxEdgeDevice.DataAzurermDataboxEdgeDevice.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdataboxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdataboxedgedevice"
 
 dataazurermdataboxedgedevice.DataAzurermDataboxEdgeDevice_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermdataboxedgedevice.DataAzurermDataboxEdgeDevice_IsTerraformElement(x i
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermDataboxEdgeDevice.DataAzurermDataboxEdgeDevice.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdataboxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdataboxedgedevice"
 
 dataazurermdataboxedgedevice.DataAzurermDataboxEdgeDevice_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -648,7 +648,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDataboxEdgeDevice.DataAzurermDataboxEdgeDeviceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdataboxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdataboxedgedevice"
 
 &dataazurermdataboxedgedevice.DataAzurermDataboxEdgeDeviceConfig {
 	Connection: interface{},
@@ -661,7 +661,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdatabox
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermDataboxEdgeDevice.DataAzurermDataboxEdgeDeviceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermDataboxEdgeDevice.DataAzurermDataboxEdgeDeviceTimeouts,
 }
 ```
 
@@ -811,7 +811,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDataboxEdgeDevice.DataAzurermDataboxEdgeDeviceDeviceProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdataboxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdataboxedgedevice"
 
 &dataazurermdataboxedgedevice.DataAzurermDataboxEdgeDeviceDeviceProperties {
 
@@ -824,7 +824,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdatabox
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDataboxEdgeDevice.DataAzurermDataboxEdgeDeviceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdataboxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdataboxedgedevice"
 
 &dataazurermdataboxedgedevice.DataAzurermDataboxEdgeDeviceTimeouts {
 	Read: *string,
@@ -858,7 +858,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDataboxEdgeDevice.DataAzurermDataboxEdgeDeviceDevicePropertiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdataboxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdataboxedgedevice"
 
 dataazurermdataboxedgedevice.NewDataAzurermDataboxEdgeDeviceDevicePropertiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermDataboxEdgeDeviceDevicePropertiesList
 ```
@@ -990,7 +990,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDataboxEdgeDevice.DataAzurermDataboxEdgeDeviceDevicePropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdataboxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdataboxedgedevice"
 
 dataazurermdataboxedgedevice.NewDataAzurermDataboxEdgeDeviceDevicePropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermDataboxEdgeDeviceDevicePropertiesOutputReference
 ```
@@ -1378,7 +1378,7 @@ func InternalValue() DataAzurermDataboxEdgeDeviceDeviceProperties
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDataboxEdgeDevice.DataAzurermDataboxEdgeDeviceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermdataboxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdataboxedgedevice"
 
 dataazurermdataboxedgedevice.NewDataAzurermDataboxEdgeDeviceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDataboxEdgeDeviceTimeoutsOutputReference
 ```

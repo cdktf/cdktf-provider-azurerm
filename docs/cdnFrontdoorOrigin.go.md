@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_frontd
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorOrigin.CdnFrontdoorOrigin.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoororigin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoororigin"
 
 cdnfrontdoororigin.NewCdnFrontdoorOrigin(scope Construct, id *string, config CdnFrontdoorOriginConfig) CdnFrontdoorOrigin
 ```
@@ -362,7 +362,7 @@ func ResetWeight()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cdnFrontdoorOrigin.CdnFrontdoorOrigin.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoororigin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoororigin"
 
 cdnfrontdoororigin.CdnFrontdoorOrigin_IsConstruct(x interface{}) *bool
 ```
@@ -394,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cdnFrontdoorOrigin.CdnFrontdoorOrigin.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoororigin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoororigin"
 
 cdnfrontdoororigin.CdnFrontdoorOrigin_IsTerraformElement(x interface{}) *bool
 ```
@@ -408,7 +408,7 @@ cdnfrontdoororigin.CdnFrontdoorOrigin_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cdnFrontdoorOrigin.CdnFrontdoorOrigin.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoororigin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoororigin"
 
 cdnfrontdoororigin.CdnFrontdoorOrigin_IsTerraformResource(x interface{}) *bool
 ```
@@ -915,7 +915,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorOrigin.CdnFrontdoorOriginConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoororigin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoororigin"
 
 &cdnfrontdoororigin.CdnFrontdoorOriginConfig {
 	Connection: interface{},
@@ -936,8 +936,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoororigin
 	Id: *string,
 	OriginHostHeader: *string,
 	Priority: *f64,
-	PrivateLink: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.cdnFrontdoorOrigin.CdnFrontdoorOriginPrivateLink,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.cdnFrontdoorOrigin.CdnFrontdoorOriginTimeouts,
+	PrivateLink: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnFrontdoorOrigin.CdnFrontdoorOriginPrivateLink,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnFrontdoorOrigin.CdnFrontdoorOriginTimeouts,
 	Weight: *f64,
 }
 ```
@@ -1220,7 +1220,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorOrigin.CdnFrontdoorOriginPrivateLink.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoororigin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoororigin"
 
 &cdnfrontdoororigin.CdnFrontdoorOriginPrivateLink {
 	Location: *string,
@@ -1294,7 +1294,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorOrigin.CdnFrontdoorOriginTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoororigin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoororigin"
 
 &cdnfrontdoororigin.CdnFrontdoorOriginTimeouts {
 	Create: *string,
@@ -1370,7 +1370,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorOrigin.CdnFrontdoorOriginPrivateLinkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoororigin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoororigin"
 
 cdnfrontdoororigin.NewCdnFrontdoorOriginPrivateLinkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnFrontdoorOriginPrivateLinkOutputReference
 ```
@@ -1721,7 +1721,7 @@ func InternalValue() CdnFrontdoorOriginPrivateLink
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorOrigin.CdnFrontdoorOriginTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/cdnfrontdoororigin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoororigin"
 
 cdnfrontdoororigin.NewCdnFrontdoorOriginTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnFrontdoorOriginTimeoutsOutputReference
 ```

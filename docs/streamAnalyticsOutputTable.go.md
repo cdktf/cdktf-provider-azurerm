@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_ana
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsOutputTable.StreamAnalyticsOutputTable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/streamanalyticsoutputtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputtable"
 
 streamanalyticsoutputtable.NewStreamAnalyticsOutputTable(scope Construct, id *string, config StreamAnalyticsOutputTableConfig) StreamAnalyticsOutputTable
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.streamAnalyticsOutputTable.StreamAnalyticsOutputTable.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/streamanalyticsoutputtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputtable"
 
 streamanalyticsoutputtable.StreamAnalyticsOutputTable_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.streamAnalyticsOutputTable.StreamAnalyticsOutputTable.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/streamanalyticsoutputtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputtable"
 
 streamanalyticsoutputtable.StreamAnalyticsOutputTable_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ streamanalyticsoutputtable.StreamAnalyticsOutputTable_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.streamAnalyticsOutputTable.StreamAnalyticsOutputTable.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/streamanalyticsoutputtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputtable"
 
 streamanalyticsoutputtable.StreamAnalyticsOutputTable_IsTerraformResource(x interface{}) *bool
 ```
@@ -809,7 +809,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsOutputTable.StreamAnalyticsOutputTableConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/streamanalyticsoutputtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputtable"
 
 &streamanalyticsoutputtable.StreamAnalyticsOutputTableConfig {
 	Connection: interface{},
@@ -830,7 +830,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/streamanalyticsout
 	Table: *string,
 	ColumnsToRemove: *[]*string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.streamAnalyticsOutputTable.StreamAnalyticsOutputTableTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.streamAnalyticsOutputTable.StreamAnalyticsOutputTableTimeouts,
 }
 ```
 
@@ -1084,7 +1084,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsOutputTable.StreamAnalyticsOutputTableTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/streamanalyticsoutputtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputtable"
 
 &streamanalyticsoutputtable.StreamAnalyticsOutputTableTimeouts {
 	Create: *string,
@@ -1160,7 +1160,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsOutputTable.StreamAnalyticsOutputTableTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/streamanalyticsoutputtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputtable"
 
 streamanalyticsoutputtable.NewStreamAnalyticsOutputTableTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StreamAnalyticsOutputTableTimeoutsOutputReference
 ```
