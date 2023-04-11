@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventgridDomainTopic.DataAzurermEventgridDomainTopic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermeventgriddomaintopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgriddomaintopic"
 
 dataazurermeventgriddomaintopic.NewDataAzurermEventgridDomainTopic(scope Construct, id *string, config DataAzurermEventgridDomainTopicConfig) DataAzurermEventgridDomainTopic
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermEventgridDomainTopic.DataAzurermEventgridDomainTopic.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermeventgriddomaintopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgriddomaintopic"
 
 dataazurermeventgriddomaintopic.DataAzurermEventgridDomainTopic_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermEventgridDomainTopic.DataAzurermEventgridDomainTopic.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermeventgriddomaintopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgriddomaintopic"
 
 dataazurermeventgriddomaintopic.DataAzurermEventgridDomainTopic_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermeventgriddomaintopic.DataAzurermEventgridDomainTopic_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermEventgridDomainTopic.DataAzurermEventgridDomainTopic.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermeventgriddomaintopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgriddomaintopic"
 
 dataazurermeventgriddomaintopic.DataAzurermEventgridDomainTopic_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -626,7 +626,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermEventgridDomainTopic.DataAzurermEventgridDomainTopicConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermeventgriddomaintopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgriddomaintopic"
 
 &dataazurermeventgriddomaintopic.DataAzurermEventgridDomainTopicConfig {
 	Connection: interface{},
@@ -640,7 +640,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermeventgr
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.dataAzurermEventgridDomainTopic.DataAzurermEventgridDomainTopicTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermEventgridDomainTopic.DataAzurermEventgridDomainTopicTimeouts,
 }
 ```
 
@@ -803,7 +803,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermEventgridDomainTopic.DataAzurermEventgridDomainTopicTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermeventgriddomaintopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgriddomaintopic"
 
 &dataazurermeventgriddomaintopic.DataAzurermEventgridDomainTopicTimeouts {
 	Read: *string,
@@ -837,7 +837,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventgridDomainTopic.DataAzurermEventgridDomainTopicTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/dataazurermeventgriddomaintopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgriddomaintopic"
 
 dataazurermeventgriddomaintopic.NewDataAzurermEventgridDomainTopicTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermEventgridDomainTopicTimeoutsOutputReference
 ```

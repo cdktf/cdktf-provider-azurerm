@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/nginx_depl
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeployment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 nginxdeployment.NewNginxDeployment(scope Construct, id *string, config NginxDeploymentConfig) NginxDeployment
 ```
@@ -414,7 +414,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeployment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 nginxdeployment.NginxDeployment_IsConstruct(x interface{}) *bool
 ```
@@ -446,7 +446,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeployment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 nginxdeployment.NginxDeployment_IsTerraformElement(x interface{}) *bool
 ```
@@ -460,7 +460,7 @@ nginxdeployment.NginxDeployment_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeployment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 nginxdeployment.NginxDeployment_IsTerraformResource(x interface{}) *bool
 ```
@@ -989,7 +989,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 &nginxdeployment.NginxDeploymentConfig {
 	Connection: interface{},
@@ -1005,14 +1005,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
 	Sku: *string,
 	DiagnoseSupportEnabled: interface{},
 	FrontendPrivate: interface{},
-	FrontendPublic: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.nginxDeployment.NginxDeploymentFrontendPublic,
+	FrontendPublic: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.nginxDeployment.NginxDeploymentFrontendPublic,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.nginxDeployment.NginxDeploymentIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.nginxDeployment.NginxDeploymentIdentity,
 	LoggingStorageAccount: interface{},
 	ManagedResourceGroup: *string,
 	NetworkInterface: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.nginxDeployment.NginxDeploymentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.nginxDeployment.NginxDeploymentTimeouts,
 }
 ```
 
@@ -1302,7 +1302,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentFrontendPrivate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 &nginxdeployment.NginxDeploymentFrontendPrivate {
 	AllocationMethod: *string,
@@ -1362,7 +1362,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentFrontendPublic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 &nginxdeployment.NginxDeploymentFrontendPublic {
 	IpAddress: *[]*string,
@@ -1394,7 +1394,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 &nginxdeployment.NginxDeploymentIdentity {
 	Type: *string,
@@ -1440,7 +1440,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentLoggingStorageAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 &nginxdeployment.NginxDeploymentLoggingStorageAccount {
 	ContainerName: *string,
@@ -1486,7 +1486,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentNetworkInterface.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 &nginxdeployment.NginxDeploymentNetworkInterface {
 	SubnetId: *string,
@@ -1518,7 +1518,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 &nginxdeployment.NginxDeploymentTimeouts {
 	Create: *string,
@@ -1594,7 +1594,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentFrontendPrivateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 nginxdeployment.NewNginxDeploymentFrontendPrivateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NginxDeploymentFrontendPrivateList
 ```
@@ -1737,7 +1737,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentFrontendPrivateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 nginxdeployment.NewNginxDeploymentFrontendPrivateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NginxDeploymentFrontendPrivateOutputReference
 ```
@@ -2070,7 +2070,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentFrontendPublicOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 nginxdeployment.NewNginxDeploymentFrontendPublicOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NginxDeploymentFrontendPublicOutputReference
 ```
@@ -2348,7 +2348,7 @@ func InternalValue() NginxDeploymentFrontendPublic
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 nginxdeployment.NewNginxDeploymentIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NginxDeploymentIdentityOutputReference
 ```
@@ -2670,7 +2670,7 @@ func InternalValue() NginxDeploymentIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentLoggingStorageAccountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 nginxdeployment.NewNginxDeploymentLoggingStorageAccountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NginxDeploymentLoggingStorageAccountList
 ```
@@ -2813,7 +2813,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentLoggingStorageAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 nginxdeployment.NewNginxDeploymentLoggingStorageAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NginxDeploymentLoggingStorageAccountOutputReference
 ```
@@ -3138,7 +3138,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentNetworkInterfaceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 nginxdeployment.NewNginxDeploymentNetworkInterfaceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NginxDeploymentNetworkInterfaceList
 ```
@@ -3281,7 +3281,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentNetworkInterfaceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 nginxdeployment.NewNginxDeploymentNetworkInterfaceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NginxDeploymentNetworkInterfaceOutputReference
 ```
@@ -3570,7 +3570,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxDeployment.NginxDeploymentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/nginxdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxdeployment"
 
 nginxdeployment.NewNginxDeploymentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NginxDeploymentTimeoutsOutputReference
 ```

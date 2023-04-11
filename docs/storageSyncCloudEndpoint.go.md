@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagesynccloudendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagesynccloudendpoint"
 
 storagesynccloudendpoint.NewStorageSyncCloudEndpoint(scope Construct, id *string, config StorageSyncCloudEndpointConfig) StorageSyncCloudEndpoint
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagesynccloudendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagesynccloudendpoint"
 
 storagesynccloudendpoint.StorageSyncCloudEndpoint_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagesynccloudendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagesynccloudendpoint"
 
 storagesynccloudendpoint.StorageSyncCloudEndpoint_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ storagesynccloudendpoint.StorageSyncCloudEndpoint_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagesynccloudendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagesynccloudendpoint"
 
 storagesynccloudendpoint.StorageSyncCloudEndpoint_IsTerraformResource(x interface{}) *bool
 ```
@@ -699,7 +699,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagesynccloudendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagesynccloudendpoint"
 
 &storagesynccloudendpoint.StorageSyncCloudEndpointConfig {
 	Connection: interface{},
@@ -715,7 +715,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagesyncclouden
 	StorageSyncGroupId: *string,
 	Id: *string,
 	StorageAccountTenantId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5.storageSyncCloudEndpoint.StorageSyncCloudEndpointTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointTimeouts,
 }
 ```
 
@@ -904,7 +904,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagesynccloudendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagesynccloudendpoint"
 
 &storagesynccloudendpoint.StorageSyncCloudEndpointTimeouts {
 	Create: *string,
@@ -966,7 +966,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v5/storagesynccloudendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagesynccloudendpoint"
 
 storagesynccloudendpoint.NewStorageSyncCloudEndpointTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageSyncCloudEndpointTimeoutsOutputReference
 ```
