@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_connec
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiConnection.ApiConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apiconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apiconnection"
 
 apiconnection.NewApiConnection(scope Construct, id *string, config ApiConnectionConfig) ApiConnection
 ```
@@ -314,7 +314,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiConnection.ApiConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apiconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apiconnection"
 
 apiconnection.ApiConnection_IsConstruct(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiConnection.ApiConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apiconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apiconnection"
 
 apiconnection.ApiConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ apiconnection.ApiConnection_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiConnection.ApiConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apiconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apiconnection"
 
 apiconnection.ApiConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -735,7 +735,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiConnection.ApiConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apiconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apiconnection"
 
 &apiconnection.ApiConnectionConfig {
 	Connection: interface{},
@@ -752,7 +752,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apiconnection"
 	Id: *string,
 	ParameterValues: *map[string]*string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiConnection.ApiConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.apiConnection.ApiConnectionTimeouts,
 }
 ```
 
@@ -954,7 +954,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiConnection.ApiConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apiconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apiconnection"
 
 &apiconnection.ApiConnectionTimeouts {
 	Create: *string,
@@ -1030,7 +1030,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiConnection.ApiConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apiconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apiconnection"
 
 apiconnection.NewApiConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiConnectionTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm azurerm}.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.provider.AzurermProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 provider.NewAzurermProvider(scope Construct, id *string, config AzurermProviderConfig) AzurermProvider
 ```
@@ -304,7 +304,7 @@ func ResetUseOidc()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.provider.AzurermProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 provider.AzurermProvider_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.provider.AzurermProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 provider.AzurermProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ provider.AzurermProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktf/provider-azurerm.provider.AzurermProvider.isTerraformProvider"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 provider.AzurermProvider_IsTerraformProvider(x interface{}) *bool
 ```
@@ -1033,10 +1033,10 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.provider.AzurermProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 &provider.AzurermProviderConfig {
-	Features: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.provider.AzurermProviderFeatures,
+	Features: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.provider.AzurermProviderFeatures,
 	Alias: *string,
 	AuxiliaryTenantIds: *[]*string,
 	ClientCertificate: *string,
@@ -1453,21 +1453,21 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 &provider.AzurermProviderFeatures {
-	ApiManagement: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.provider.AzurermProviderFeaturesApiManagement,
-	AppConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.provider.AzurermProviderFeaturesAppConfiguration,
-	ApplicationInsights: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.provider.AzurermProviderFeaturesApplicationInsights,
-	CognitiveAccount: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.provider.AzurermProviderFeaturesCognitiveAccount,
-	KeyVault: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.provider.AzurermProviderFeaturesKeyVault,
-	LogAnalyticsWorkspace: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.provider.AzurermProviderFeaturesLogAnalyticsWorkspace,
-	ManagedDisk: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.provider.AzurermProviderFeaturesManagedDisk,
-	Network: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.provider.AzurermProviderFeaturesNetwork,
-	ResourceGroup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.provider.AzurermProviderFeaturesResourceGroup,
-	TemplateDeployment: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.provider.AzurermProviderFeaturesTemplateDeployment,
-	VirtualMachine: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.provider.AzurermProviderFeaturesVirtualMachine,
-	VirtualMachineScaleSet: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet,
+	ApiManagement: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.provider.AzurermProviderFeaturesApiManagement,
+	AppConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.provider.AzurermProviderFeaturesAppConfiguration,
+	ApplicationInsights: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.provider.AzurermProviderFeaturesApplicationInsights,
+	CognitiveAccount: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.provider.AzurermProviderFeaturesCognitiveAccount,
+	KeyVault: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.provider.AzurermProviderFeaturesKeyVault,
+	LogAnalyticsWorkspace: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.provider.AzurermProviderFeaturesLogAnalyticsWorkspace,
+	ManagedDisk: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.provider.AzurermProviderFeaturesManagedDisk,
+	Network: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.provider.AzurermProviderFeaturesNetwork,
+	ResourceGroup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.provider.AzurermProviderFeaturesResourceGroup,
+	TemplateDeployment: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.provider.AzurermProviderFeaturesTemplateDeployment,
+	VirtualMachine: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.provider.AzurermProviderFeaturesVirtualMachine,
+	VirtualMachineScaleSet: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.provider.AzurermProviderFeaturesVirtualMachineScaleSet,
 }
 ```
 
@@ -1663,7 +1663,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApiManagement.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 &provider.AzurermProviderFeaturesApiManagement {
 	PurgeSoftDeleteOnDestroy: interface{},
@@ -1709,7 +1709,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesAppConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 &provider.AzurermProviderFeaturesAppConfiguration {
 	PurgeSoftDeleteOnDestroy: interface{},
@@ -1755,7 +1755,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApplicationInsights.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 &provider.AzurermProviderFeaturesApplicationInsights {
 	DisableGeneratedRule: interface{},
@@ -1787,7 +1787,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesCognitiveAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 &provider.AzurermProviderFeaturesCognitiveAccount {
 	PurgeSoftDeleteOnDestroy: interface{},
@@ -1819,7 +1819,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 &provider.AzurermProviderFeaturesKeyVault {
 	PurgeSoftDeletedCertificatesOnDestroy: interface{},
@@ -1981,7 +1981,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesLogAnalyticsWorkspace.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 &provider.AzurermProviderFeaturesLogAnalyticsWorkspace {
 	PermanentlyDeleteOnDestroy: interface{},
@@ -2013,7 +2013,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesManagedDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 &provider.AzurermProviderFeaturesManagedDisk {
 	ExpandWithoutDowntime: interface{},
@@ -2045,7 +2045,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 &provider.AzurermProviderFeaturesNetwork {
 	RelaxedLocking: interface{},
@@ -2077,7 +2077,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesResourceGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 &provider.AzurermProviderFeaturesResourceGroup {
 	PreventDeletionIfContainsResources: interface{},
@@ -2109,7 +2109,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesTemplateDeployment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 &provider.AzurermProviderFeaturesTemplateDeployment {
 	DeleteNestedItemsDuringDeletion: interface{},
@@ -2141,7 +2141,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 &provider.AzurermProviderFeaturesVirtualMachine {
 	DeleteOsDiskOnDeletion: interface{},
@@ -2201,7 +2201,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/provider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/provider"
 
 &provider.AzurermProviderFeaturesVirtualMachineScaleSet {
 	RollInstancesWhenRequired: interface{},

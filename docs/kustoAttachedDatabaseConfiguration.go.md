@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_atta
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustoattacheddatabaseconfiguration"
 
 kustoattacheddatabaseconfiguration.NewKustoAttachedDatabaseConfiguration(scope Construct, id *string, config KustoAttachedDatabaseConfigurationConfig) KustoAttachedDatabaseConfiguration
 ```
@@ -320,7 +320,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustoattacheddatabaseconfiguration"
 
 kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -352,7 +352,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustoattacheddatabaseconfiguration"
 
 kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfiguration_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustoattacheddatabaseconfiguration"
 
 kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -796,7 +796,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustoattacheddatabaseconfiguration"
 
 &kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfigurationConfig {
 	Connection: interface{},
@@ -814,8 +814,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabase
 	ResourceGroupName: *string,
 	DefaultPrincipalModificationKind: *string,
 	Id: *string,
-	Sharing: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationSharing,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationTimeouts,
+	Sharing: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationSharing,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationTimeouts,
 }
 ```
 
@@ -1045,7 +1045,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationSharing.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustoattacheddatabaseconfiguration"
 
 &kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfigurationSharing {
 	ExternalTablesToExclude: *[]*string,
@@ -1147,7 +1147,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustoattacheddatabaseconfiguration"
 
 &kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfigurationTimeouts {
 	Create: *string,
@@ -1223,7 +1223,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationSharingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustoattacheddatabaseconfiguration"
 
 kustoattacheddatabaseconfiguration.NewKustoAttachedDatabaseConfigurationSharingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KustoAttachedDatabaseConfigurationSharingOutputReference
 ```
@@ -1646,7 +1646,7 @@ func InternalValue() KustoAttachedDatabaseConfigurationSharing
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustoattacheddatabaseconfiguration"
 
 kustoattacheddatabaseconfiguration.NewKustoAttachedDatabaseConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KustoAttachedDatabaseConfigurationTimeoutsOutputReference
 ```

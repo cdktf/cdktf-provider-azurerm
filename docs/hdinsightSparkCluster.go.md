@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkCluster(scope Construct, id *string, config HdinsightSparkClusterConfig) HdinsightSparkCluster
 ```
@@ -533,7 +533,7 @@ func ResetTlsMinVersion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.HdinsightSparkCluster_IsConstruct(x interface{}) *bool
 ```
@@ -565,7 +565,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.HdinsightSparkCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -579,7 +579,7 @@ hdinsightsparkcluster.HdinsightSparkCluster_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.HdinsightSparkCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -1284,7 +1284,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterComponentVersion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterComponentVersion {
 	Spark: *string,
@@ -1316,7 +1316,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterComputeIsolation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterComputeIsolation {
 	ComputeIsolationEnabled: interface{},
@@ -1362,7 +1362,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterConfig {
 	Connection: interface{},
@@ -1373,26 +1373,26 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	ClusterVersion: *string,
-	ComponentVersion: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterComponentVersion,
-	Gateway: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterGateway,
+	ComponentVersion: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterComponentVersion,
+	Gateway: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterGateway,
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	Roles: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterRoles,
+	Roles: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterRoles,
 	Tier: *string,
-	ComputeIsolation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterComputeIsolation,
+	ComputeIsolation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterComputeIsolation,
 	DiskEncryption: interface{},
 	EncryptionInTransitEnabled: interface{},
-	Extension: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterExtension,
+	Extension: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterExtension,
 	Id: *string,
-	Metastores: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterMetastores,
-	Monitor: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterMonitor,
-	Network: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterNetwork,
-	SecurityProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterSecurityProfile,
+	Metastores: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterMetastores,
+	Monitor: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterMonitor,
+	Network: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterNetwork,
+	SecurityProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterSecurityProfile,
 	StorageAccount: interface{},
-	StorageAccountGen2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterStorageAccountGen2,
+	StorageAccountGen2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterStorageAccountGen2,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterTimeouts,
 	TlsMinVersion: *string,
 }
 ```
@@ -1801,7 +1801,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterDiskEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterDiskEncryption {
 	EncryptionAlgorithm: *string,
@@ -1875,7 +1875,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterExtension.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterExtension {
 	LogAnalyticsWorkspaceId: *string,
@@ -1921,7 +1921,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterGateway {
 	Password: *string,
@@ -1967,12 +1967,12 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterMetastores.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterMetastores {
-	Ambari: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterMetastoresAmbari,
-	Hive: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterMetastoresHive,
-	Oozie: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterMetastoresOozie,
+	Ambari: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterMetastoresAmbari,
+	Hive: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterMetastoresHive,
+	Oozie: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterMetastoresOozie,
 }
 ```
 
@@ -2033,7 +2033,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterMetastoresAmbari.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterMetastoresAmbari {
 	DatabaseName: *string,
@@ -2107,7 +2107,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterMetastoresHive.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterMetastoresHive {
 	DatabaseName: *string,
@@ -2181,7 +2181,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterMetastoresOozie.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterMetastoresOozie {
 	DatabaseName: *string,
@@ -2255,7 +2255,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterMonitor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterMonitor {
 	LogAnalyticsWorkspaceId: *string,
@@ -2301,7 +2301,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterNetwork {
 	ConnectionDirection: *string,
@@ -2347,12 +2347,12 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRoles.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterRoles {
-	HeadNode: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesHeadNode,
-	WorkerNode: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNode,
-	ZookeeperNode: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesZookeeperNode,
+	HeadNode: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterRolesHeadNode,
+	WorkerNode: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNode,
+	ZookeeperNode: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterRolesZookeeperNode,
 }
 ```
 
@@ -2413,7 +2413,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesHeadNode.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterRolesHeadNode {
 	Username: *string,
@@ -2531,7 +2531,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesHeadNodeScriptActions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterRolesHeadNodeScriptActions {
 	Name: *string,
@@ -2591,13 +2591,13 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNode.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterRolesWorkerNode {
 	TargetInstanceCount: *f64,
 	Username: *string,
 	VmSize: *string,
-	Autoscale: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeAutoscale,
+	Autoscale: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeAutoscale,
 	Password: *string,
 	ScriptActions: interface{},
 	SshKeys: *[]*string,
@@ -2739,11 +2739,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeAutoscale.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterRolesWorkerNodeAutoscale {
-	Capacity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacity,
-	Recurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrence,
+	Capacity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacity,
+	Recurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrence,
 }
 ```
 
@@ -2789,7 +2789,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacity {
 	MaxInstanceCount: *f64,
@@ -2835,7 +2835,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrence.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrence {
 	Schedule: interface{},
@@ -2883,7 +2883,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule {
 	Days: *[]*string,
@@ -2943,7 +2943,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeScriptActions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterRolesWorkerNodeScriptActions {
 	Name: *string,
@@ -3003,7 +3003,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesZookeeperNode.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterRolesZookeeperNode {
 	Username: *string,
@@ -3121,7 +3121,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesZookeeperNodeScriptActions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterRolesZookeeperNodeScriptActions {
 	Name: *string,
@@ -3181,7 +3181,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterSecurityProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterSecurityProfile {
 	AaddsResourceId: *string,
@@ -3297,7 +3297,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterStorageAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterStorageAccount {
 	IsDefault: interface{},
@@ -3371,7 +3371,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterStorageAccountGen2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterStorageAccountGen2 {
 	FilesystemId: *string,
@@ -3445,7 +3445,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 &hdinsightsparkcluster.HdinsightSparkClusterTimeouts {
 	Create: *string,
@@ -3521,7 +3521,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterComponentVersionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterComponentVersionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterComponentVersionOutputReference
 ```
@@ -3792,7 +3792,7 @@ func InternalValue() HdinsightSparkClusterComponentVersion
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterComputeIsolationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterComputeIsolationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterComputeIsolationOutputReference
 ```
@@ -4099,7 +4099,7 @@ func InternalValue() HdinsightSparkClusterComputeIsolation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterDiskEncryptionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterDiskEncryptionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HdinsightSparkClusterDiskEncryptionList
 ```
@@ -4242,7 +4242,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterDiskEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterDiskEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HdinsightSparkClusterDiskEncryptionOutputReference
 ```
@@ -4625,7 +4625,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterExtensionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterExtensionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterExtensionOutputReference
 ```
@@ -4918,7 +4918,7 @@ func InternalValue() HdinsightSparkClusterExtension
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterGatewayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterGatewayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterGatewayOutputReference
 ```
@@ -5211,7 +5211,7 @@ func InternalValue() HdinsightSparkClusterGateway
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterMetastoresAmbariOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterMetastoresAmbariOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterMetastoresAmbariOutputReference
 ```
@@ -5548,7 +5548,7 @@ func InternalValue() HdinsightSparkClusterMetastoresAmbari
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterMetastoresHiveOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterMetastoresHiveOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterMetastoresHiveOutputReference
 ```
@@ -5885,7 +5885,7 @@ func InternalValue() HdinsightSparkClusterMetastoresHive
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterMetastoresOozieOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterMetastoresOozieOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterMetastoresOozieOutputReference
 ```
@@ -6222,7 +6222,7 @@ func InternalValue() HdinsightSparkClusterMetastoresOozie
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterMetastoresOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterMetastoresOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterMetastoresOutputReference
 ```
@@ -6597,7 +6597,7 @@ func InternalValue() HdinsightSparkClusterMetastores
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterMonitorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterMonitorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterMonitorOutputReference
 ```
@@ -6890,7 +6890,7 @@ func InternalValue() HdinsightSparkClusterMonitor
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterNetworkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterNetworkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterNetworkOutputReference
 ```
@@ -7197,7 +7197,7 @@ func InternalValue() HdinsightSparkClusterNetwork
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesHeadNodeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterRolesHeadNodeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterRolesHeadNodeOutputReference
 ```
@@ -7648,7 +7648,7 @@ func InternalValue() HdinsightSparkClusterRolesHeadNode
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesHeadNodeScriptActionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterRolesHeadNodeScriptActionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HdinsightSparkClusterRolesHeadNodeScriptActionsList
 ```
@@ -7791,7 +7791,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesHeadNodeScriptActionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterRolesHeadNodeScriptActionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HdinsightSparkClusterRolesHeadNodeScriptActionsOutputReference
 ```
@@ -8131,7 +8131,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterRolesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterRolesOutputReference
 ```
@@ -8485,7 +8485,7 @@ func InternalValue() HdinsightSparkClusterRoles
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterRolesWorkerNodeAutoscaleCapacityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacityOutputReference
 ```
@@ -8778,7 +8778,7 @@ func InternalValue() HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeAutoscaleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterRolesWorkerNodeAutoscaleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterRolesWorkerNodeAutoscaleOutputReference
 ```
@@ -9111,7 +9111,7 @@ func InternalValue() HdinsightSparkClusterRolesWorkerNodeAutoscale
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceOutputReference
 ```
@@ -9417,7 +9417,7 @@ func InternalValue() HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrence
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceScheduleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceScheduleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceScheduleList
 ```
@@ -9560,7 +9560,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceScheduleOutputReference
 ```
@@ -9893,7 +9893,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterRolesWorkerNodeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterRolesWorkerNodeOutputReference
 ```
@@ -10408,7 +10408,7 @@ func InternalValue() HdinsightSparkClusterRolesWorkerNode
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeScriptActionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterRolesWorkerNodeScriptActionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HdinsightSparkClusterRolesWorkerNodeScriptActionsList
 ```
@@ -10551,7 +10551,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesWorkerNodeScriptActionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterRolesWorkerNodeScriptActionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HdinsightSparkClusterRolesWorkerNodeScriptActionsOutputReference
 ```
@@ -10891,7 +10891,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesZookeeperNodeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterRolesZookeeperNodeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterRolesZookeeperNodeOutputReference
 ```
@@ -11342,7 +11342,7 @@ func InternalValue() HdinsightSparkClusterRolesZookeeperNode
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesZookeeperNodeScriptActionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterRolesZookeeperNodeScriptActionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HdinsightSparkClusterRolesZookeeperNodeScriptActionsList
 ```
@@ -11485,7 +11485,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterRolesZookeeperNodeScriptActionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterRolesZookeeperNodeScriptActionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HdinsightSparkClusterRolesZookeeperNodeScriptActionsOutputReference
 ```
@@ -11825,7 +11825,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterSecurityProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterSecurityProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterSecurityProfileOutputReference
 ```
@@ -12235,7 +12235,7 @@ func InternalValue() HdinsightSparkClusterSecurityProfile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterStorageAccountGen2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterStorageAccountGen2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterStorageAccountGen2OutputReference
 ```
@@ -12572,7 +12572,7 @@ func InternalValue() HdinsightSparkClusterStorageAccountGen2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterStorageAccountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterStorageAccountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HdinsightSparkClusterStorageAccountList
 ```
@@ -12715,7 +12715,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterStorageAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterStorageAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HdinsightSparkClusterStorageAccountOutputReference
 ```
@@ -13077,7 +13077,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightSparkCluster.HdinsightSparkClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hdinsightsparkcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/hdinsightsparkcluster"
 
 hdinsightsparkcluster.NewHdinsightSparkClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightSparkClusterTimeoutsOutputReference
 ```

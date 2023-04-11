@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/function_a
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/functionapphybridconnection"
 
 functionapphybridconnection.NewFunctionAppHybridConnection(scope Construct, id *string, config FunctionAppHybridConnectionConfig) FunctionAppHybridConnection
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/functionapphybridconnection"
 
 functionapphybridconnection.FunctionAppHybridConnection_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/functionapphybridconnection"
 
 functionapphybridconnection.FunctionAppHybridConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ functionapphybridconnection.FunctionAppHybridConnection_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/functionapphybridconnection"
 
 functionapphybridconnection.FunctionAppHybridConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -754,7 +754,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/functionapphybridconnection"
 
 &functionapphybridconnection.FunctionAppHybridConnectionConfig {
 	Connection: interface{},
@@ -770,7 +770,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconn
 	RelayId: *string,
 	Id: *string,
 	SendKeyName: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.functionAppHybridConnection.FunctionAppHybridConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.functionAppHybridConnection.FunctionAppHybridConnectionTimeouts,
 }
 ```
 
@@ -969,7 +969,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/functionapphybridconnection"
 
 &functionapphybridconnection.FunctionAppHybridConnectionTimeouts {
 	Create: *string,
@@ -1045,7 +1045,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/functionapphybridconnection"
 
 functionapphybridconnection.NewFunctionAppHybridConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppHybridConnectionTimeoutsOutputReference
 ```

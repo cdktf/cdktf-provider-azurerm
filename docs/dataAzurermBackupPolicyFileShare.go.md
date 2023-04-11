@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/backup_pol
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBackupPolicyFileShare.DataAzurermBackupPolicyFileShare.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermbackuppolicyfileshare"
 
 dataazurermbackuppolicyfileshare.NewDataAzurermBackupPolicyFileShare(scope Construct, id *string, config DataAzurermBackupPolicyFileShareConfig) DataAzurermBackupPolicyFileShare
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermBackupPolicyFileShare.DataAzurermBackupPolicyFileShare.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermbackuppolicyfileshare"
 
 dataazurermbackuppolicyfileshare.DataAzurermBackupPolicyFileShare_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermBackupPolicyFileShare.DataAzurermBackupPolicyFileShare.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermbackuppolicyfileshare"
 
 dataazurermbackuppolicyfileshare.DataAzurermBackupPolicyFileShare_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermbackuppolicyfileshare.DataAzurermBackupPolicyFileShare_IsTerraformEle
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermBackupPolicyFileShare.DataAzurermBackupPolicyFileShare.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermbackuppolicyfileshare"
 
 dataazurermbackuppolicyfileshare.DataAzurermBackupPolicyFileShare_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -626,7 +626,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBackupPolicyFileShare.DataAzurermBackupPolicyFileShareConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermbackuppolicyfileshare"
 
 &dataazurermbackuppolicyfileshare.DataAzurermBackupPolicyFileShareConfig {
 	Connection: interface{},
@@ -640,7 +640,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppoli
 	RecoveryVaultName: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermBackupPolicyFileShare.DataAzurermBackupPolicyFileShareTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermBackupPolicyFileShare.DataAzurermBackupPolicyFileShareTimeouts,
 }
 ```
 
@@ -803,7 +803,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBackupPolicyFileShare.DataAzurermBackupPolicyFileShareTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermbackuppolicyfileshare"
 
 &dataazurermbackuppolicyfileshare.DataAzurermBackupPolicyFileShareTimeouts {
 	Read: *string,
@@ -837,7 +837,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBackupPolicyFileShare.DataAzurermBackupPolicyFileShareTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermbackuppolicyfileshare"
 
 dataazurermbackuppolicyfileshare.NewDataAzurermBackupPolicyFileShareTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermBackupPolicyFileShareTimeoutsOutputReference
 ```

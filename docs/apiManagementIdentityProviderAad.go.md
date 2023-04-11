@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_manage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovideraad"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementidentityprovideraad"
 
 apimanagementidentityprovideraad.NewApiManagementIdentityProviderAad(scope Construct, id *string, config ApiManagementIdentityProviderAadConfig) ApiManagementIdentityProviderAad
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovideraad"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementidentityprovideraad"
 
 apimanagementidentityprovideraad.ApiManagementIdentityProviderAad_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovideraad"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementidentityprovideraad"
 
 apimanagementidentityprovideraad.ApiManagementIdentityProviderAad_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ apimanagementidentityprovideraad.ApiManagementIdentityProviderAad_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovideraad"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementidentityprovideraad"
 
 apimanagementidentityprovideraad.ApiManagementIdentityProviderAad_IsTerraformResource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovideraad"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementidentityprovideraad"
 
 &apimanagementidentityprovideraad.ApiManagementIdentityProviderAadConfig {
 	Connection: interface{},
@@ -738,7 +738,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentity
 	ResourceGroupName: *string,
 	Id: *string,
 	SigninTenant: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadTimeouts,
 }
 ```
 
@@ -940,7 +940,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovideraad"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementidentityprovideraad"
 
 &apimanagementidentityprovideraad.ApiManagementIdentityProviderAadTimeouts {
 	Create: *string,
@@ -1016,7 +1016,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovideraad"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementidentityprovideraad"
 
 apimanagementidentityprovideraad.NewApiManagementIdentityProviderAadTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementIdentityProviderAadTimeoutsOutputReference
 ```
