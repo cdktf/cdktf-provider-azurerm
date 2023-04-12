@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_prote
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupInstancePostgresql.DataProtectionBackupInstancePostgresql.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataprotectionbackupinstancepostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupinstancepostgresql"
 
 dataprotectionbackupinstancepostgresql.NewDataProtectionBackupInstancePostgresql(scope Construct, id *string, config DataProtectionBackupInstancePostgresqlConfig) DataProtectionBackupInstancePostgresql
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataProtectionBackupInstancePostgresql.DataProtectionBackupInstancePostgresql.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataprotectionbackupinstancepostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupinstancepostgresql"
 
 dataprotectionbackupinstancepostgresql.DataProtectionBackupInstancePostgresql_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataProtectionBackupInstancePostgresql.DataProtectionBackupInstancePostgresql.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataprotectionbackupinstancepostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupinstancepostgresql"
 
 dataprotectionbackupinstancepostgresql.DataProtectionBackupInstancePostgresql_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ dataprotectionbackupinstancepostgresql.DataProtectionBackupInstancePostgresql_Is
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataProtectionBackupInstancePostgresql.DataProtectionBackupInstancePostgresql.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataprotectionbackupinstancepostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupinstancepostgresql"
 
 dataprotectionbackupinstancepostgresql.DataProtectionBackupInstancePostgresql_IsTerraformResource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupInstancePostgresql.DataProtectionBackupInstancePostgresqlConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataprotectionbackupinstancepostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupinstancepostgresql"
 
 &dataprotectionbackupinstancepostgresql.DataProtectionBackupInstancePostgresqlConfig {
 	Connection: interface{},
@@ -738,7 +738,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataprotectionback
 	VaultId: *string,
 	DatabaseCredentialKeyVaultSecretId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataProtectionBackupInstancePostgresql.DataProtectionBackupInstancePostgresqlTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataProtectionBackupInstancePostgresql.DataProtectionBackupInstancePostgresqlTimeouts,
 }
 ```
 
@@ -940,7 +940,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupInstancePostgresql.DataProtectionBackupInstancePostgresqlTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataprotectionbackupinstancepostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupinstancepostgresql"
 
 &dataprotectionbackupinstancepostgresql.DataProtectionBackupInstancePostgresqlTimeouts {
 	Create: *string,
@@ -1016,7 +1016,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupInstancePostgresql.DataProtectionBackupInstancePostgresqlTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataprotectionbackupinstancepostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupinstancepostgresql"
 
 dataprotectionbackupinstancepostgresql.NewDataProtectionBackupInstancePostgresqlTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataProtectionBackupInstancePostgresqlTimeoutsOutputReference
 ```

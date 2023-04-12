@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mobile_net
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 dataazurermmobilenetworksimpolicy.NewDataAzurermMobileNetworkSimPolicy(scope Construct, id *string, config DataAzurermMobileNetworkSimPolicyConfig) DataAzurermMobileNetworkSimPolicy
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 dataazurermmobilenetworksimpolicy.DataAzurermMobileNetworkSimPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 dataazurermmobilenetworksimpolicy.DataAzurermMobileNetworkSimPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermmobilenetworksimpolicy.DataAzurermMobileNetworkSimPolicy_IsTerraformE
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 dataazurermmobilenetworksimpolicy.DataAzurermMobileNetworkSimPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -681,7 +681,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 &dataazurermmobilenetworksimpolicy.DataAzurermMobileNetworkSimPolicyConfig {
 	Connection: interface{},
@@ -694,7 +694,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilen
 	MobileNetworkId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicyTimeouts,
 }
 ```
 
@@ -844,7 +844,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicySlice.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 &dataazurermmobilenetworksimpolicy.DataAzurermMobileNetworkSimPolicySlice {
 
@@ -857,7 +857,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilen
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicySliceDataNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 &dataazurermmobilenetworksimpolicy.DataAzurermMobileNetworkSimPolicySliceDataNetwork {
 
@@ -870,7 +870,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilen
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 &dataazurermmobilenetworksimpolicy.DataAzurermMobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRate {
 
@@ -883,7 +883,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilen
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 &dataazurermmobilenetworksimpolicy.DataAzurermMobileNetworkSimPolicyTimeouts {
 	Read: *string,
@@ -915,7 +915,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 &dataazurermmobilenetworksimpolicy.DataAzurermMobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRate {
 
@@ -930,7 +930,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilen
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicySliceDataNetworkList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 dataazurermmobilenetworksimpolicy.NewDataAzurermMobileNetworkSimPolicySliceDataNetworkList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMobileNetworkSimPolicySliceDataNetworkList
 ```
@@ -1062,7 +1062,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicySliceDataNetworkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 dataazurermmobilenetworksimpolicy.NewDataAzurermMobileNetworkSimPolicySliceDataNetworkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMobileNetworkSimPolicySliceDataNetworkOutputReference
 ```
@@ -1439,7 +1439,7 @@ func InternalValue() DataAzurermMobileNetworkSimPolicySliceDataNetwork
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 dataazurermmobilenetworksimpolicy.NewDataAzurermMobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRateList
 ```
@@ -1571,7 +1571,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 dataazurermmobilenetworksimpolicy.NewDataAzurermMobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRateOutputReference
 ```
@@ -1860,7 +1860,7 @@ func InternalValue() DataAzurermMobileNetworkSimPolicySliceDataNetworkSessionAgg
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicySliceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 dataazurermmobilenetworksimpolicy.NewDataAzurermMobileNetworkSimPolicySliceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMobileNetworkSimPolicySliceList
 ```
@@ -1992,7 +1992,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicySliceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 dataazurermmobilenetworksimpolicy.NewDataAzurermMobileNetworkSimPolicySliceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMobileNetworkSimPolicySliceOutputReference
 ```
@@ -2292,7 +2292,7 @@ func InternalValue() DataAzurermMobileNetworkSimPolicySlice
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 dataazurermmobilenetworksimpolicy.NewDataAzurermMobileNetworkSimPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMobileNetworkSimPolicyTimeoutsOutputReference
 ```
@@ -2570,7 +2570,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 dataazurermmobilenetworksimpolicy.NewDataAzurermMobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRateList
 ```
@@ -2702,7 +2702,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimPolicy.DataAzurermMobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmobilenetworksimpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksimpolicy"
 
 dataazurermmobilenetworksimpolicy.NewDataAzurermMobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRateOutputReference
 ```

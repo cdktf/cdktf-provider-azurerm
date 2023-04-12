@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtua
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlVirtualNetworkRule.SqlVirtualNetworkRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/sqlvirtualnetworkrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlvirtualnetworkrule"
 
 sqlvirtualnetworkrule.NewSqlVirtualNetworkRule(scope Construct, id *string, config SqlVirtualNetworkRuleConfig) SqlVirtualNetworkRule
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sqlVirtualNetworkRule.SqlVirtualNetworkRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/sqlvirtualnetworkrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlvirtualnetworkrule"
 
 sqlvirtualnetworkrule.SqlVirtualNetworkRule_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sqlVirtualNetworkRule.SqlVirtualNetworkRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/sqlvirtualnetworkrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlvirtualnetworkrule"
 
 sqlvirtualnetworkrule.SqlVirtualNetworkRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ sqlvirtualnetworkrule.SqlVirtualNetworkRule_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sqlVirtualNetworkRule.SqlVirtualNetworkRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/sqlvirtualnetworkrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlvirtualnetworkrule"
 
 sqlvirtualnetworkrule.SqlVirtualNetworkRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -699,7 +699,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlVirtualNetworkRule.SqlVirtualNetworkRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/sqlvirtualnetworkrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlvirtualnetworkrule"
 
 &sqlvirtualnetworkrule.SqlVirtualNetworkRuleConfig {
 	Connection: interface{},
@@ -715,7 +715,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/sqlvirtualnetworkr
 	SubnetId: *string,
 	Id: *string,
 	IgnoreMissingVnetServiceEndpoint: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.sqlVirtualNetworkRule.SqlVirtualNetworkRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlVirtualNetworkRule.SqlVirtualNetworkRuleTimeouts,
 }
 ```
 
@@ -904,7 +904,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlVirtualNetworkRule.SqlVirtualNetworkRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/sqlvirtualnetworkrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlvirtualnetworkrule"
 
 &sqlvirtualnetworkrule.SqlVirtualNetworkRuleTimeouts {
 	Create: *string,
@@ -980,7 +980,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlVirtualNetworkRule.SqlVirtualNetworkRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/sqlvirtualnetworkrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlvirtualnetworkrule"
 
 sqlvirtualnetworkrule.NewSqlVirtualNetworkRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlVirtualNetworkRuleTimeoutsOutputReference
 ```

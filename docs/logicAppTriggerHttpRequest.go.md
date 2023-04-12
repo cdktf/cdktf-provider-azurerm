@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppTriggerHttpRequest.LogicAppTriggerHttpRequest.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerhttprequest"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerhttprequest"
 
 logicapptriggerhttprequest.NewLogicAppTriggerHttpRequest(scope Construct, id *string, config LogicAppTriggerHttpRequestConfig) LogicAppTriggerHttpRequest
 ```
@@ -307,7 +307,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logicAppTriggerHttpRequest.LogicAppTriggerHttpRequest.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerhttprequest"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerhttprequest"
 
 logicapptriggerhttprequest.LogicAppTriggerHttpRequest_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logicAppTriggerHttpRequest.LogicAppTriggerHttpRequest.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerhttprequest"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerhttprequest"
 
 logicapptriggerhttprequest.LogicAppTriggerHttpRequest_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ logicapptriggerhttprequest.LogicAppTriggerHttpRequest_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logicAppTriggerHttpRequest.LogicAppTriggerHttpRequest.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerhttprequest"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerhttprequest"
 
 logicapptriggerhttprequest.LogicAppTriggerHttpRequest_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppTriggerHttpRequest.LogicAppTriggerHttpRequestConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerhttprequest"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerhttprequest"
 
 &logicapptriggerhttprequest.LogicAppTriggerHttpRequestConfig {
 	Connection: interface{},
@@ -733,7 +733,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerhtt
 	Id: *string,
 	Method: *string,
 	RelativePath: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.logicAppTriggerHttpRequest.LogicAppTriggerHttpRequestTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logicAppTriggerHttpRequest.LogicAppTriggerHttpRequestTimeouts,
 }
 ```
 
@@ -922,7 +922,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppTriggerHttpRequest.LogicAppTriggerHttpRequestTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerhttprequest"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerhttprequest"
 
 &logicapptriggerhttprequest.LogicAppTriggerHttpRequestTimeouts {
 	Create: *string,
@@ -998,7 +998,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppTriggerHttpRequest.LogicAppTriggerHttpRequestTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerhttprequest"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerhttprequest"
 
 logicapptriggerhttprequest.NewLogicAppTriggerHttpRequestTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogicAppTriggerHttpRequestTimeoutsOutputReference
 ```

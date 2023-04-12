@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_share
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataShareDatasetKustoCluster.DataShareDatasetKustoCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datasharedatasetkustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datasharedatasetkustocluster"
 
 datasharedatasetkustocluster.NewDataShareDatasetKustoCluster(scope Construct, id *string, config DataShareDatasetKustoClusterConfig) DataShareDatasetKustoCluster
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataShareDatasetKustoCluster.DataShareDatasetKustoCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datasharedatasetkustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datasharedatasetkustocluster"
 
 datasharedatasetkustocluster.DataShareDatasetKustoCluster_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataShareDatasetKustoCluster.DataShareDatasetKustoCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datasharedatasetkustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datasharedatasetkustocluster"
 
 datasharedatasetkustocluster.DataShareDatasetKustoCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ datasharedatasetkustocluster.DataShareDatasetKustoCluster_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataShareDatasetKustoCluster.DataShareDatasetKustoCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datasharedatasetkustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datasharedatasetkustocluster"
 
 datasharedatasetkustocluster.DataShareDatasetKustoCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -670,7 +670,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataShareDatasetKustoCluster.DataShareDatasetKustoClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datasharedatasetkustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datasharedatasetkustocluster"
 
 &datasharedatasetkustocluster.DataShareDatasetKustoClusterConfig {
 	Connection: interface{},
@@ -684,7 +684,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datasharedatasetku
 	Name: *string,
 	ShareId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataShareDatasetKustoCluster.DataShareDatasetKustoClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataShareDatasetKustoCluster.DataShareDatasetKustoClusterTimeouts,
 }
 ```
 
@@ -847,7 +847,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataShareDatasetKustoCluster.DataShareDatasetKustoClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datasharedatasetkustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datasharedatasetkustocluster"
 
 &datasharedatasetkustocluster.DataShareDatasetKustoClusterTimeouts {
 	Create: *string,
@@ -909,7 +909,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataShareDatasetKustoCluster.DataShareDatasetKustoClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datasharedatasetkustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datasharedatasetkustocluster"
 
 datasharedatasetkustocluster.NewDataShareDatasetKustoClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataShareDatasetKustoClusterTimeoutsOutputReference
 ```

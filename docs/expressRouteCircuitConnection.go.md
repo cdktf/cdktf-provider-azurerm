@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/express_ro
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuitConnection.ExpressRouteCircuitConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/expressroutecircuitconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitconnection"
 
 expressroutecircuitconnection.NewExpressRouteCircuitConnection(scope Construct, id *string, config ExpressRouteCircuitConnectionConfig) ExpressRouteCircuitConnection
 ```
@@ -307,7 +307,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.expressRouteCircuitConnection.ExpressRouteCircuitConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/expressroutecircuitconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitconnection"
 
 expressroutecircuitconnection.ExpressRouteCircuitConnection_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.expressRouteCircuitConnection.ExpressRouteCircuitConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/expressroutecircuitconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitconnection"
 
 expressroutecircuitconnection.ExpressRouteCircuitConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ expressroutecircuitconnection.ExpressRouteCircuitConnection_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.expressRouteCircuitConnection.ExpressRouteCircuitConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/expressroutecircuitconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitconnection"
 
 expressroutecircuitconnection.ExpressRouteCircuitConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -728,7 +728,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteCircuitConnection.ExpressRouteCircuitConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/expressroutecircuitconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitconnection"
 
 &expressroutecircuitconnection.ExpressRouteCircuitConnectionConfig {
 	Connection: interface{},
@@ -745,7 +745,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/expressroutecircui
 	AddressPrefixIpv6: *string,
 	AuthorizationKey: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.expressRouteCircuitConnection.ExpressRouteCircuitConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.expressRouteCircuitConnection.ExpressRouteCircuitConnectionTimeouts,
 }
 ```
 
@@ -947,7 +947,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteCircuitConnection.ExpressRouteCircuitConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/expressroutecircuitconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitconnection"
 
 &expressroutecircuitconnection.ExpressRouteCircuitConnectionTimeouts {
 	Create: *string,
@@ -1023,7 +1023,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuitConnection.ExpressRouteCircuitConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/expressroutecircuitconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitconnection"
 
 expressroutecircuitconnection.NewExpressRouteCircuitConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ExpressRouteCircuitConnectionTimeoutsOutputReference
 ```

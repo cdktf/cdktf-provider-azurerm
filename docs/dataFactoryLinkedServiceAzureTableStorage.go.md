@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_facto
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureTableStorage.DataFactoryLinkedServiceAzureTableStorage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuretablestorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuretablestorage"
 
 datafactorylinkedserviceazuretablestorage.NewDataFactoryLinkedServiceAzureTableStorage(scope Construct, id *string, config DataFactoryLinkedServiceAzureTableStorageConfig) DataFactoryLinkedServiceAzureTableStorage
 ```
@@ -328,7 +328,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureTableStorage.DataFactoryLinkedServiceAzureTableStorage.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuretablestorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuretablestorage"
 
 datafactorylinkedserviceazuretablestorage.DataFactoryLinkedServiceAzureTableStorage_IsConstruct(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureTableStorage.DataFactoryLinkedServiceAzureTableStorage.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuretablestorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuretablestorage"
 
 datafactorylinkedserviceazuretablestorage.DataFactoryLinkedServiceAzureTableStorage_IsTerraformElement(x interface{}) *bool
 ```
@@ -374,7 +374,7 @@ datafactorylinkedserviceazuretablestorage.DataFactoryLinkedServiceAzureTableStor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureTableStorage.DataFactoryLinkedServiceAzureTableStorage.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuretablestorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuretablestorage"
 
 datafactorylinkedserviceazuretablestorage.DataFactoryLinkedServiceAzureTableStorage_IsTerraformResource(x interface{}) *bool
 ```
@@ -793,7 +793,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureTableStorage.DataFactoryLinkedServiceAzureTableStorageConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuretablestorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuretablestorage"
 
 &datafactorylinkedserviceazuretablestorage.DataFactoryLinkedServiceAzureTableStorageConfig {
 	Connection: interface{},
@@ -812,7 +812,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkeds
 	Id: *string,
 	IntegrationRuntimeName: *string,
 	Parameters: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataFactoryLinkedServiceAzureTableStorage.DataFactoryLinkedServiceAzureTableStorageTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryLinkedServiceAzureTableStorage.DataFactoryLinkedServiceAzureTableStorageTimeouts,
 }
 ```
 
@@ -1040,7 +1040,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureTableStorage.DataFactoryLinkedServiceAzureTableStorageTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuretablestorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuretablestorage"
 
 &datafactorylinkedserviceazuretablestorage.DataFactoryLinkedServiceAzureTableStorageTimeouts {
 	Create: *string,
@@ -1116,7 +1116,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureTableStorage.DataFactoryLinkedServiceAzureTableStorageTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazuretablestorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuretablestorage"
 
 datafactorylinkedserviceazuretablestorage.NewDataFactoryLinkedServiceAzureTableStorageTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceAzureTableStorageTimeoutsOutputReference
 ```

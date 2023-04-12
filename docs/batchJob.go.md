@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/batch_job 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchJob.BatchJob.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/batchjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchjob"
 
 batchjob.NewBatchJob(scope Construct, id *string, config BatchJobConfig) BatchJob
 ```
@@ -321,7 +321,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.batchJob.BatchJob.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/batchjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchjob"
 
 batchjob.BatchJob_IsConstruct(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.batchJob.BatchJob.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/batchjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchjob"
 
 batchjob.BatchJob_IsTerraformElement(x interface{}) *bool
 ```
@@ -367,7 +367,7 @@ batchjob.BatchJob_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.batchJob.BatchJob.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/batchjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchjob"
 
 batchjob.BatchJob_IsTerraformResource(x interface{}) *bool
 ```
@@ -742,7 +742,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchJob.BatchJobConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/batchjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchjob"
 
 &batchjob.BatchJobConfig {
 	Connection: interface{},
@@ -759,7 +759,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/batchjob"
 	Id: *string,
 	Priority: *f64,
 	TaskRetryMaximum: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.batchJob.BatchJobTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchJob.BatchJobTimeouts,
 }
 ```
 
@@ -961,7 +961,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchJob.BatchJobTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/batchjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchjob"
 
 &batchjob.BatchJobTimeouts {
 	Create: *string,
@@ -1037,7 +1037,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchJob.BatchJobTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/batchjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchjob"
 
 batchjob.NewBatchJobTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchJobTimeoutsOutputReference
 ```

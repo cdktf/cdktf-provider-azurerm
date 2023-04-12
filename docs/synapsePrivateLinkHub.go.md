@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_pr
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapsePrivateLinkHub.SynapsePrivateLinkHub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/synapseprivatelinkhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseprivatelinkhub"
 
 synapseprivatelinkhub.NewSynapsePrivateLinkHub(scope Construct, id *string, config SynapsePrivateLinkHubConfig) SynapsePrivateLinkHub
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.synapsePrivateLinkHub.SynapsePrivateLinkHub.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/synapseprivatelinkhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseprivatelinkhub"
 
 synapseprivatelinkhub.SynapsePrivateLinkHub_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.synapsePrivateLinkHub.SynapsePrivateLinkHub.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/synapseprivatelinkhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseprivatelinkhub"
 
 synapseprivatelinkhub.SynapsePrivateLinkHub_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ synapseprivatelinkhub.SynapsePrivateLinkHub_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.synapsePrivateLinkHub.SynapsePrivateLinkHub.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/synapseprivatelinkhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseprivatelinkhub"
 
 synapseprivatelinkhub.SynapsePrivateLinkHub_IsTerraformResource(x interface{}) *bool
 ```
@@ -677,7 +677,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapsePrivateLinkHub.SynapsePrivateLinkHubConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/synapseprivatelinkhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseprivatelinkhub"
 
 &synapseprivatelinkhub.SynapsePrivateLinkHubConfig {
 	Connection: interface{},
@@ -692,7 +692,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/synapseprivatelink
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.synapsePrivateLinkHub.SynapsePrivateLinkHubTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.synapsePrivateLinkHub.SynapsePrivateLinkHubTimeouts,
 }
 ```
 
@@ -868,7 +868,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapsePrivateLinkHub.SynapsePrivateLinkHubTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/synapseprivatelinkhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseprivatelinkhub"
 
 &synapseprivatelinkhub.SynapsePrivateLinkHubTimeouts {
 	Create: *string,
@@ -944,7 +944,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapsePrivateLinkHub.SynapsePrivateLinkHubTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/synapseprivatelinkhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseprivatelinkhub"
 
 synapseprivatelinkhub.NewSynapsePrivateLinkHubTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SynapsePrivateLinkHubTimeoutsOutputReference
 ```

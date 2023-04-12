@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_c
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermeventhubcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubcluster"
 
 dataazurermeventhubcluster.NewDataAzurermEventhubCluster(scope Construct, id *string, config DataAzurermEventhubClusterConfig) DataAzurermEventhubCluster
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermeventhubcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubcluster"
 
 dataazurermeventhubcluster.DataAzurermEventhubCluster_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermeventhubcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubcluster"
 
 dataazurermeventhubcluster.DataAzurermEventhubCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermeventhubcluster.DataAzurermEventhubCluster_IsTerraformElement(x inter
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermeventhubcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubcluster"
 
 dataazurermeventhubcluster.DataAzurermEventhubCluster_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -626,7 +626,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermeventhubcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubcluster"
 
 &dataazurermeventhubcluster.DataAzurermEventhubClusterConfig {
 	Connection: interface{},
@@ -639,7 +639,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermeventhu
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermEventhubCluster.DataAzurermEventhubClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterTimeouts,
 }
 ```
 
@@ -789,7 +789,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermeventhubcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubcluster"
 
 &dataazurermeventhubcluster.DataAzurermEventhubClusterTimeouts {
 	Read: *string,
@@ -823,7 +823,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermeventhubcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubcluster"
 
 dataazurermeventhubcluster.NewDataAzurermEventhubClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermEventhubClusterTimeoutsOutputReference
 ```

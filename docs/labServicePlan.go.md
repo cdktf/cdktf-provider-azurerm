@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lab_servic
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceplan"
 
 labserviceplan.NewLabServicePlan(scope Construct, id *string, config LabServicePlanConfig) LabServicePlan
 ```
@@ -374,7 +374,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlan.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceplan"
 
 labserviceplan.LabServicePlan_IsConstruct(x interface{}) *bool
 ```
@@ -406,7 +406,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlan.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceplan"
 
 labserviceplan.LabServicePlan_IsTerraformElement(x interface{}) *bool
 ```
@@ -420,7 +420,7 @@ labserviceplan.LabServicePlan_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlan.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceplan"
 
 labserviceplan.LabServicePlan_IsTerraformResource(x interface{}) *bool
 ```
@@ -883,7 +883,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceplan"
 
 &labserviceplan.LabServicePlanConfig {
 	Connection: interface{},
@@ -897,14 +897,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	DefaultAutoShutdown: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.labServicePlan.LabServicePlanDefaultAutoShutdown,
-	DefaultConnection: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.labServicePlan.LabServicePlanDefaultConnection,
+	DefaultAutoShutdown: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServicePlan.LabServicePlanDefaultAutoShutdown,
+	DefaultConnection: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServicePlan.LabServicePlanDefaultConnection,
 	DefaultNetworkSubnetId: *string,
 	Id: *string,
 	SharedGalleryId: *string,
-	Support: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.labServicePlan.LabServicePlanSupport,
+	Support: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServicePlan.LabServicePlanSupport,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.labServicePlan.LabServicePlanTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServicePlan.LabServicePlanTimeouts,
 }
 ```
 
@@ -1164,7 +1164,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultAutoShutdown.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceplan"
 
 &labserviceplan.LabServicePlanDefaultAutoShutdown {
 	DisconnectDelay: *string,
@@ -1238,7 +1238,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceplan"
 
 &labserviceplan.LabServicePlanDefaultConnection {
 	ClientRdpAccess: *string,
@@ -1312,7 +1312,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanSupport.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceplan"
 
 &labserviceplan.LabServicePlanSupport {
 	Email: *string,
@@ -1386,7 +1386,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceplan"
 
 &labserviceplan.LabServicePlanTimeouts {
 	Create: *string,
@@ -1462,7 +1462,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultAutoShutdownOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceplan"
 
 labserviceplan.NewLabServicePlanDefaultAutoShutdownOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServicePlanDefaultAutoShutdownOutputReference
 ```
@@ -1827,7 +1827,7 @@ func InternalValue() LabServicePlanDefaultAutoShutdown
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultConnectionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceplan"
 
 labserviceplan.NewLabServicePlanDefaultConnectionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServicePlanDefaultConnectionOutputReference
 ```
@@ -2192,7 +2192,7 @@ func InternalValue() LabServicePlanDefaultConnection
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanSupportOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceplan"
 
 labserviceplan.NewLabServicePlanSupportOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServicePlanSupportOutputReference
 ```
@@ -2557,7 +2557,7 @@ func InternalValue() LabServicePlanSupport
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceplan"
 
 labserviceplan.NewLabServicePlanTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServicePlanTimeoutsOutputReference
 ```

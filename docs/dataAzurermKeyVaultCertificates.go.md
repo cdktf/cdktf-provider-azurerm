@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificates.DataAzurermKeyVaultCertificates.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermkeyvaultcertificates"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificates"
 
 dataazurermkeyvaultcertificates.NewDataAzurermKeyVaultCertificates(scope Construct, id *string, config DataAzurermKeyVaultCertificatesConfig) DataAzurermKeyVaultCertificates
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificates.DataAzurermKeyVaultCertificates.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermkeyvaultcertificates"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificates"
 
 dataazurermkeyvaultcertificates.DataAzurermKeyVaultCertificates_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificates.DataAzurermKeyVaultCertificates.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermkeyvaultcertificates"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificates"
 
 dataazurermkeyvaultcertificates.DataAzurermKeyVaultCertificates_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ dataazurermkeyvaultcertificates.DataAzurermKeyVaultCertificates_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificates.DataAzurermKeyVaultCertificates.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermkeyvaultcertificates"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificates"
 
 dataazurermkeyvaultcertificates.DataAzurermKeyVaultCertificates_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -633,7 +633,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificates.DataAzurermKeyVaultCertificatesCertificates.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermkeyvaultcertificates"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificates"
 
 &dataazurermkeyvaultcertificates.DataAzurermKeyVaultCertificatesCertificates {
 
@@ -646,7 +646,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermkeyvaul
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificates.DataAzurermKeyVaultCertificatesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermkeyvaultcertificates"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificates"
 
 &dataazurermkeyvaultcertificates.DataAzurermKeyVaultCertificatesConfig {
 	Connection: interface{},
@@ -659,7 +659,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermkeyvaul
 	KeyVaultId: *string,
 	Id: *string,
 	IncludePending: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermKeyVaultCertificates.DataAzurermKeyVaultCertificatesTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermKeyVaultCertificates.DataAzurermKeyVaultCertificatesTimeouts,
 }
 ```
 
@@ -809,7 +809,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificates.DataAzurermKeyVaultCertificatesTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermkeyvaultcertificates"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificates"
 
 &dataazurermkeyvaultcertificates.DataAzurermKeyVaultCertificatesTimeouts {
 	Read: *string,
@@ -843,7 +843,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificates.DataAzurermKeyVaultCertificatesCertificatesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermkeyvaultcertificates"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificates"
 
 dataazurermkeyvaultcertificates.NewDataAzurermKeyVaultCertificatesCertificatesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKeyVaultCertificatesCertificatesList
 ```
@@ -975,7 +975,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificates.DataAzurermKeyVaultCertificatesCertificatesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermkeyvaultcertificates"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificates"
 
 dataazurermkeyvaultcertificates.NewDataAzurermKeyVaultCertificatesCertificatesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKeyVaultCertificatesCertificatesOutputReference
 ```
@@ -1275,7 +1275,7 @@ func InternalValue() DataAzurermKeyVaultCertificatesCertificates
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificates.DataAzurermKeyVaultCertificatesTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermkeyvaultcertificates"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificates"
 
 dataazurermkeyvaultcertificates.NewDataAzurermKeyVaultCertificatesTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermKeyVaultCertificatesTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_ta
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageTable.StorageTable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagetable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetable"
 
 storagetable.NewStorageTable(scope Construct, id *string, config StorageTableConfig) StorageTable
 ```
@@ -313,7 +313,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageTable.StorageTable.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagetable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetable"
 
 storagetable.StorageTable_IsConstruct(x interface{}) *bool
 ```
@@ -345,7 +345,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageTable.StorageTable.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagetable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetable"
 
 storagetable.StorageTable_IsTerraformElement(x interface{}) *bool
 ```
@@ -359,7 +359,7 @@ storagetable.StorageTable_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageTable.StorageTable.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagetable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetable"
 
 storagetable.StorageTable_IsTerraformResource(x interface{}) *bool
 ```
@@ -668,7 +668,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageTable.StorageTableAcl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagetable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetable"
 
 &storagetable.StorageTableAcl {
 	Id: *string,
@@ -719,7 +719,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageTable.StorageTableAclAccessPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagetable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetable"
 
 &storagetable.StorageTableAclAccessPolicy {
 	Expiry: *string,
@@ -779,7 +779,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageTable.StorageTableConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagetable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetable"
 
 &storagetable.StorageTableConfig {
 	Connection: interface{},
@@ -793,7 +793,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagetable"
 	StorageAccountName: *string,
 	Acl: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.storageTable.StorageTableTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageTable.StorageTableTimeouts,
 }
 ```
 
@@ -958,7 +958,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageTable.StorageTableTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagetable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetable"
 
 &storagetable.StorageTableTimeouts {
 	Create: *string,
@@ -1034,7 +1034,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageTable.StorageTableAclAccessPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagetable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetable"
 
 storagetable.NewStorageTableAclAccessPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageTableAclAccessPolicyList
 ```
@@ -1177,7 +1177,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageTable.StorageTableAclAccessPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagetable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetable"
 
 storagetable.NewStorageTableAclAccessPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageTableAclAccessPolicyOutputReference
 ```
@@ -1510,7 +1510,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageTable.StorageTableAclList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagetable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetable"
 
 storagetable.NewStorageTableAclList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageTableAclList
 ```
@@ -1653,7 +1653,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageTable.StorageTableAclOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagetable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetable"
 
 storagetable.NewStorageTableAclOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageTableAclOutputReference
 ```
@@ -1984,7 +1984,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageTable.StorageTableTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/storagetable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetable"
 
 storagetable.NewStorageTableTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageTableTimeoutsOutputReference
 ```

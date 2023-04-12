@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_ma
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachineExtension.VirtualMachineExtension.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachineextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachineextension"
 
 virtualmachineextension.NewVirtualMachineExtension(scope Construct, id *string, config VirtualMachineExtensionConfig) VirtualMachineExtension
 ```
@@ -355,7 +355,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.virtualMachineExtension.VirtualMachineExtension.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachineextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachineextension"
 
 virtualmachineextension.VirtualMachineExtension_IsConstruct(x interface{}) *bool
 ```
@@ -387,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.virtualMachineExtension.VirtualMachineExtension.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachineextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachineextension"
 
 virtualmachineextension.VirtualMachineExtension_IsTerraformElement(x interface{}) *bool
 ```
@@ -401,7 +401,7 @@ virtualmachineextension.VirtualMachineExtension_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.virtualMachineExtension.VirtualMachineExtension.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachineextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachineextension"
 
 virtualmachineextension.VirtualMachineExtension_IsTerraformResource(x interface{}) *bool
 ```
@@ -908,7 +908,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualMachineExtension.VirtualMachineExtensionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachineextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachineextension"
 
 &virtualmachineextension.VirtualMachineExtensionConfig {
 	Connection: interface{},
@@ -928,10 +928,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachineexte
 	FailureSuppressionEnabled: interface{},
 	Id: *string,
 	ProtectedSettings: *string,
-	ProtectedSettingsFromKeyVault: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.virtualMachineExtension.VirtualMachineExtensionProtectedSettingsFromKeyVault,
+	ProtectedSettingsFromKeyVault: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualMachineExtension.VirtualMachineExtensionProtectedSettingsFromKeyVault,
 	Settings: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.virtualMachineExtension.VirtualMachineExtensionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualMachineExtension.VirtualMachineExtensionTimeouts,
 }
 ```
 
@@ -1213,7 +1213,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualMachineExtension.VirtualMachineExtensionProtectedSettingsFromKeyVault.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachineextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachineextension"
 
 &virtualmachineextension.VirtualMachineExtensionProtectedSettingsFromKeyVault {
 	SecretUrl: *string,
@@ -1259,7 +1259,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualMachineExtension.VirtualMachineExtensionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachineextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachineextension"
 
 &virtualmachineextension.VirtualMachineExtensionTimeouts {
 	Create: *string,
@@ -1335,7 +1335,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachineExtension.VirtualMachineExtensionProtectedSettingsFromKeyVaultOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachineextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachineextension"
 
 virtualmachineextension.NewVirtualMachineExtensionProtectedSettingsFromKeyVaultOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualMachineExtensionProtectedSettingsFromKeyVaultOutputReference
 ```
@@ -1628,7 +1628,7 @@ func InternalValue() VirtualMachineExtensionProtectedSettingsFromKeyVault
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachineExtension.VirtualMachineExtensionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachineextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachineextension"
 
 virtualmachineextension.NewVirtualMachineExtensionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualMachineExtensionTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/digital_tw
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDigitalTwinsInstance.DataAzurermDigitalTwinsInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermdigitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdigitaltwinsinstance"
 
 dataazurermdigitaltwinsinstance.NewDataAzurermDigitalTwinsInstance(scope Construct, id *string, config DataAzurermDigitalTwinsInstanceConfig) DataAzurermDigitalTwinsInstance
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermDigitalTwinsInstance.DataAzurermDigitalTwinsInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermdigitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdigitaltwinsinstance"
 
 dataazurermdigitaltwinsinstance.DataAzurermDigitalTwinsInstance_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermDigitalTwinsInstance.DataAzurermDigitalTwinsInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermdigitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdigitaltwinsinstance"
 
 dataazurermdigitaltwinsinstance.DataAzurermDigitalTwinsInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermdigitaltwinsinstance.DataAzurermDigitalTwinsInstance_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermDigitalTwinsInstance.DataAzurermDigitalTwinsInstance.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermdigitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdigitaltwinsinstance"
 
 dataazurermdigitaltwinsinstance.DataAzurermDigitalTwinsInstance_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -637,7 +637,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDigitalTwinsInstance.DataAzurermDigitalTwinsInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermdigitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdigitaltwinsinstance"
 
 &dataazurermdigitaltwinsinstance.DataAzurermDigitalTwinsInstanceConfig {
 	Connection: interface{},
@@ -650,7 +650,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermdigital
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermDigitalTwinsInstance.DataAzurermDigitalTwinsInstanceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermDigitalTwinsInstance.DataAzurermDigitalTwinsInstanceTimeouts,
 }
 ```
 
@@ -800,7 +800,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDigitalTwinsInstance.DataAzurermDigitalTwinsInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermdigitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdigitaltwinsinstance"
 
 &dataazurermdigitaltwinsinstance.DataAzurermDigitalTwinsInstanceTimeouts {
 	Read: *string,
@@ -834,7 +834,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDigitalTwinsInstance.DataAzurermDigitalTwinsInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermdigitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdigitaltwinsinstance"
 
 dataazurermdigitaltwinsinstance.NewDataAzurermDigitalTwinsInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDigitalTwinsInstanceTimeoutsOutputReference
 ```

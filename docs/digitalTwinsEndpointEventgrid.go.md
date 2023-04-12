@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/digital_tw
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventgrid.DigitalTwinsEndpointEventgrid.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/digitaltwinsendpointeventgrid"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsendpointeventgrid"
 
 digitaltwinsendpointeventgrid.NewDigitalTwinsEndpointEventgrid(scope Construct, id *string, config DigitalTwinsEndpointEventgridConfig) DigitalTwinsEndpointEventgrid
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventgrid.DigitalTwinsEndpointEventgrid.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/digitaltwinsendpointeventgrid"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsendpointeventgrid"
 
 digitaltwinsendpointeventgrid.DigitalTwinsEndpointEventgrid_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventgrid.DigitalTwinsEndpointEventgrid.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/digitaltwinsendpointeventgrid"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsendpointeventgrid"
 
 digitaltwinsendpointeventgrid.DigitalTwinsEndpointEventgrid_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ digitaltwinsendpointeventgrid.DigitalTwinsEndpointEventgrid_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventgrid.DigitalTwinsEndpointEventgrid.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/digitaltwinsendpointeventgrid"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsendpointeventgrid"
 
 digitaltwinsendpointeventgrid.DigitalTwinsEndpointEventgrid_IsTerraformResource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventgrid.DigitalTwinsEndpointEventgridConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/digitaltwinsendpointeventgrid"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsendpointeventgrid"
 
 &digitaltwinsendpointeventgrid.DigitalTwinsEndpointEventgridConfig {
 	Connection: interface{},
@@ -738,7 +738,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/digitaltwinsendpoi
 	Name: *string,
 	DeadLetterStorageSecret: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.digitalTwinsEndpointEventgrid.DigitalTwinsEndpointEventgridTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.digitalTwinsEndpointEventgrid.DigitalTwinsEndpointEventgridTimeouts,
 }
 ```
 
@@ -940,7 +940,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventgrid.DigitalTwinsEndpointEventgridTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/digitaltwinsendpointeventgrid"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsendpointeventgrid"
 
 &digitaltwinsendpointeventgrid.DigitalTwinsEndpointEventgridTimeouts {
 	Create: *string,
@@ -1016,7 +1016,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventgrid.DigitalTwinsEndpointEventgridTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/digitaltwinsendpointeventgrid"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsendpointeventgrid"
 
 digitaltwinsendpointeventgrid.NewDigitalTwinsEndpointEventgridTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DigitalTwinsEndpointEventgridTimeoutsOutputReference
 ```

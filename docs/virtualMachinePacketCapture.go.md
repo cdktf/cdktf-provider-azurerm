@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_ma
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachinePacketCapture.VirtualMachinePacketCapture.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachinepacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinepacketcapture"
 
 virtualmachinepacketcapture.NewVirtualMachinePacketCapture(scope Construct, id *string, config VirtualMachinePacketCaptureConfig) VirtualMachinePacketCapture
 ```
@@ -347,7 +347,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.virtualMachinePacketCapture.VirtualMachinePacketCapture.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachinepacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinepacketcapture"
 
 virtualmachinepacketcapture.VirtualMachinePacketCapture_IsConstruct(x interface{}) *bool
 ```
@@ -379,7 +379,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.virtualMachinePacketCapture.VirtualMachinePacketCapture.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachinepacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinepacketcapture"
 
 virtualmachinepacketcapture.VirtualMachinePacketCapture_IsTerraformElement(x interface{}) *bool
 ```
@@ -393,7 +393,7 @@ virtualmachinepacketcapture.VirtualMachinePacketCapture_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.virtualMachinePacketCapture.VirtualMachinePacketCapture.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachinepacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinepacketcapture"
 
 virtualmachinepacketcapture.VirtualMachinePacketCapture_IsTerraformResource(x interface{}) *bool
 ```
@@ -812,7 +812,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualMachinePacketCapture.VirtualMachinePacketCaptureConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachinepacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinepacketcapture"
 
 &virtualmachinepacketcapture.VirtualMachinePacketCaptureConfig {
 	Connection: interface{},
@@ -824,14 +824,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachinepack
 	Provisioners: *[]interface{},
 	Name: *string,
 	NetworkWatcherId: *string,
-	StorageLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.virtualMachinePacketCapture.VirtualMachinePacketCaptureStorageLocation,
+	StorageLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualMachinePacketCapture.VirtualMachinePacketCaptureStorageLocation,
 	VirtualMachineId: *string,
 	Filter: interface{},
 	Id: *string,
 	MaximumBytesPerPacket: *f64,
 	MaximumBytesPerSession: *f64,
 	MaximumCaptureDurationInSeconds: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.virtualMachinePacketCapture.VirtualMachinePacketCaptureTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualMachinePacketCapture.VirtualMachinePacketCaptureTimeouts,
 }
 ```
 
@@ -1063,7 +1063,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualMachinePacketCapture.VirtualMachinePacketCaptureFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachinepacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinepacketcapture"
 
 &virtualmachinepacketcapture.VirtualMachinePacketCaptureFilter {
 	Protocol: *string,
@@ -1151,7 +1151,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualMachinePacketCapture.VirtualMachinePacketCaptureStorageLocation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachinepacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinepacketcapture"
 
 &virtualmachinepacketcapture.VirtualMachinePacketCaptureStorageLocation {
 	FilePath: *string,
@@ -1197,7 +1197,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualMachinePacketCapture.VirtualMachinePacketCaptureTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachinepacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinepacketcapture"
 
 &virtualmachinepacketcapture.VirtualMachinePacketCaptureTimeouts {
 	Create: *string,
@@ -1259,7 +1259,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachinePacketCapture.VirtualMachinePacketCaptureFilterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachinepacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinepacketcapture"
 
 virtualmachinepacketcapture.NewVirtualMachinePacketCaptureFilterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VirtualMachinePacketCaptureFilterList
 ```
@@ -1402,7 +1402,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachinePacketCapture.VirtualMachinePacketCaptureFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachinepacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinepacketcapture"
 
 virtualmachinepacketcapture.NewVirtualMachinePacketCaptureFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VirtualMachinePacketCaptureFilterOutputReference
 ```
@@ -1807,7 +1807,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachinePacketCapture.VirtualMachinePacketCaptureStorageLocationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachinepacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinepacketcapture"
 
 virtualmachinepacketcapture.NewVirtualMachinePacketCaptureStorageLocationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualMachinePacketCaptureStorageLocationOutputReference
 ```
@@ -2125,7 +2125,7 @@ func InternalValue() VirtualMachinePacketCaptureStorageLocation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachinePacketCapture.VirtualMachinePacketCaptureTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/virtualmachinepacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinepacketcapture"
 
 virtualmachinepacketcapture.NewVirtualMachinePacketCaptureTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualMachinePacketCaptureTimeoutsOutputReference
 ```

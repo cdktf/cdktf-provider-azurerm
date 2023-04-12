@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/maps_accou
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mapsAccount.MapsAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mapsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mapsaccount"
 
 mapsaccount.NewMapsAccount(scope Construct, id *string, config MapsAccountConfig) MapsAccount
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mapsAccount.MapsAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mapsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mapsaccount"
 
 mapsaccount.MapsAccount_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mapsAccount.MapsAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mapsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mapsaccount"
 
 mapsaccount.MapsAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ mapsaccount.MapsAccount_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mapsAccount.MapsAccount.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mapsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mapsaccount"
 
 mapsaccount.MapsAccount_IsTerraformResource(x interface{}) *bool
 ```
@@ -710,7 +710,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mapsAccount.MapsAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mapsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mapsaccount"
 
 &mapsaccount.MapsAccountConfig {
 	Connection: interface{},
@@ -725,7 +725,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mapsaccount"
 	SkuName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.mapsAccount.MapsAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mapsAccount.MapsAccountTimeouts,
 }
 ```
 
@@ -901,7 +901,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mapsAccount.MapsAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mapsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mapsaccount"
 
 &mapsaccount.MapsAccountTimeouts {
 	Create: *string,
@@ -977,7 +977,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mapsAccount.MapsAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mapsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mapsaccount"
 
 mapsaccount.NewMapsAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MapsAccountTimeoutsOutputReference
 ```
