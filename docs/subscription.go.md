@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subscripti
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscription.Subscription.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subscription"
 
 subscription.NewSubscription(scope Construct, id *string, config SubscriptionConfig) Subscription
 ```
@@ -328,7 +328,7 @@ func ResetWorkload()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.subscription.Subscription.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subscription"
 
 subscription.Subscription_IsConstruct(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.subscription.Subscription.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subscription"
 
 subscription.Subscription_IsTerraformElement(x interface{}) *bool
 ```
@@ -374,7 +374,7 @@ subscription.Subscription_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.subscription.Subscription.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subscription"
 
 subscription.Subscription_IsTerraformResource(x interface{}) *bool
 ```
@@ -760,7 +760,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscription.SubscriptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subscription"
 
 &subscription.SubscriptionConfig {
 	Connection: interface{},
@@ -776,7 +776,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscription"
 	Id: *string,
 	SubscriptionId: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.subscription.SubscriptionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.subscription.SubscriptionTimeouts,
 	Workload: *string,
 }
 ```
@@ -987,7 +987,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscription.SubscriptionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subscription"
 
 &subscription.SubscriptionTimeouts {
 	Create: *string,
@@ -1063,7 +1063,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscription.SubscriptionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/subscription"
 
 subscription.NewSubscriptionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SubscriptionTimeoutsOutputReference
 ```

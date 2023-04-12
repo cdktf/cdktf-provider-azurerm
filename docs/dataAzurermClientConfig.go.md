@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/client_con
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermclientconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermclientconfig"
 
 dataazurermclientconfig.NewDataAzurermClientConfig(scope Construct, id *string, config DataAzurermClientConfigConfig) DataAzurermClientConfig
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermclientconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermclientconfig"
 
 dataazurermclientconfig.DataAzurermClientConfig_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermclientconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermclientconfig"
 
 dataazurermclientconfig.DataAzurermClientConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermclientconfig.DataAzurermClientConfig_IsTerraformElement(x interface{}
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermclientconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermclientconfig"
 
 dataazurermclientconfig.DataAzurermClientConfig_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -604,7 +604,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermclientconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermclientconfig"
 
 &dataazurermclientconfig.DataAzurermClientConfigConfig {
 	Connection: interface{},
@@ -615,7 +615,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermclientconf
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermClientConfig.DataAzurermClientConfigTimeouts,
 }
 ```
 
@@ -739,7 +739,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermclientconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermclientconfig"
 
 &dataazurermclientconfig.DataAzurermClientConfigTimeouts {
 	Read: *string,
@@ -773,7 +773,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermclientconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermclientconfig"
 
 dataazurermclientconfig.NewDataAzurermClientConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermClientConfigTimeoutsOutputReference
 ```

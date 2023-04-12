@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_data
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoDatabase.KustoDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustodatabase"
 
 kustodatabase.NewKustoDatabase(scope Construct, id *string, config KustoDatabaseConfig) KustoDatabase
 ```
@@ -307,7 +307,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.kustoDatabase.KustoDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustodatabase"
 
 kustodatabase.KustoDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.kustoDatabase.KustoDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustodatabase"
 
 kustodatabase.KustoDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ kustodatabase.KustoDatabase_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.kustoDatabase.KustoDatabase.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustodatabase"
 
 kustodatabase.KustoDatabase_IsTerraformResource(x interface{}) *bool
 ```
@@ -739,7 +739,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoDatabase.KustoDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustodatabase"
 
 &kustodatabase.KustoDatabaseConfig {
 	Connection: interface{},
@@ -756,7 +756,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustodatabase"
 	HotCachePeriod: *string,
 	Id: *string,
 	SoftDeletePeriod: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.kustoDatabase.KustoDatabaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.kustoDatabase.KustoDatabaseTimeouts,
 }
 ```
 
@@ -958,7 +958,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoDatabase.KustoDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustodatabase"
 
 &kustodatabase.KustoDatabaseTimeouts {
 	Create: *string,
@@ -1034,7 +1034,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoDatabase.KustoDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/kustodatabase"
 
 kustodatabase.NewKustoDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KustoDatabaseTimeoutsOutputReference
 ```
