@@ -189,7 +189,7 @@ export class WebPubsubCustomCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_web_pubsub_custom_certificate',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.51.0',
+        providerVersion: '3.52.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -1258,7 +1258,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_live_event',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.51.0',
+        providerVersion: '3.52.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

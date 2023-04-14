@@ -23,6 +23,10 @@ export interface DataAzurermKeyVaultSecretConfig extends cdktf.TerraformMetaArgu
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_secret#version DataAzurermKeyVaultSecret#version}
+  */
+  readonly version?: string;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_secret#timeouts DataAzurermKeyVaultSecret#timeouts}
@@ -131,7 +135,7 @@ export class DataAzurermKeyVaultSecret extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_key_vault_secret',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.51.0',
+        providerVersion: '3.52.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -145,6 +149,7 @@ export class DataAzurermKeyVaultSecret extends cdktf.TerraformDataSource {
     this._id = config.id;
     this._keyVaultId = config.keyVaultId;
     this._name = config.name;
+    this._version = config.version;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -155,6 +160,11 @@ export class DataAzurermKeyVaultSecret extends cdktf.TerraformDataSource {
   // content_type - computed: true, optional: false, required: false
   public get contentType() {
     return this.getStringAttribute('content_type');
+  }
+
+  // expiration_date - computed: true, optional: false, required: false
+  public get expirationDate() {
+    return this.getStringAttribute('expiration_date');
   }
 
   // id - computed: true, optional: true, required: false
@@ -199,6 +209,11 @@ export class DataAzurermKeyVaultSecret extends cdktf.TerraformDataSource {
     return this._name;
   }
 
+  // not_before_date - computed: true, optional: false, required: false
+  public get notBeforeDate() {
+    return this.getStringAttribute('not_before_date');
+  }
+
   // resource_id - computed: true, optional: false, required: false
   public get resourceId() {
     return this.getStringAttribute('resource_id');
@@ -220,9 +235,20 @@ export class DataAzurermKeyVaultSecret extends cdktf.TerraformDataSource {
     return this.getStringAttribute('value');
   }
 
-  // version - computed: true, optional: false, required: false
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
   }
 
   // versionless_id - computed: true, optional: false, required: false
@@ -255,6 +281,7 @@ export class DataAzurermKeyVaultSecret extends cdktf.TerraformDataSource {
       id: cdktf.stringToTerraform(this._id),
       key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
       name: cdktf.stringToTerraform(this._name),
+      version: cdktf.stringToTerraform(this._version),
       timeouts: dataAzurermKeyVaultSecretTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

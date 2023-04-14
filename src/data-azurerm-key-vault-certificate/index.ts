@@ -799,7 +799,7 @@ export class DataAzurermKeyVaultCertificate extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_key_vault_certificate',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.51.0',
+        providerVersion: '3.52.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -887,6 +887,16 @@ export class DataAzurermKeyVaultCertificate extends cdktf.TerraformDataSource {
   // not_before - computed: true, optional: false, required: false
   public get notBefore() {
     return this.getStringAttribute('not_before');
+  }
+
+  // resource_manager_id - computed: true, optional: false, required: false
+  public get resourceManagerId() {
+    return this.getStringAttribute('resource_manager_id');
+  }
+
+  // resource_manager_versionless_id - computed: true, optional: false, required: false
+  public get resourceManagerVersionlessId() {
+    return this.getStringAttribute('resource_manager_versionless_id');
   }
 
   // secret_id - computed: true, optional: false, required: false

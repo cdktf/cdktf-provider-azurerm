@@ -228,7 +228,7 @@ export class VoiceServicesCommunicationsGatewayTestLine extends cdktf.TerraformR
       terraformResourceType: 'azurerm_voice_services_communications_gateway_test_line',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.51.0',
+        providerVersion: '3.52.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
