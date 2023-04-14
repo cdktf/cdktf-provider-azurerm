@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_facto
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureFunction.DataFactoryLinkedServiceAzureFunction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazurefunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazurefunction"
 
 datafactorylinkedserviceazurefunction.NewDataFactoryLinkedServiceAzureFunction(scope Construct, id *string, config DataFactoryLinkedServiceAzureFunctionConfig) DataFactoryLinkedServiceAzureFunction
 ```
@@ -355,7 +355,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureFunction.DataFactoryLinkedServiceAzureFunction.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazurefunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazurefunction"
 
 datafactorylinkedserviceazurefunction.DataFactoryLinkedServiceAzureFunction_IsConstruct(x interface{}) *bool
 ```
@@ -387,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureFunction.DataFactoryLinkedServiceAzureFunction.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazurefunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazurefunction"
 
 datafactorylinkedserviceazurefunction.DataFactoryLinkedServiceAzureFunction_IsTerraformElement(x interface{}) *bool
 ```
@@ -401,7 +401,7 @@ datafactorylinkedserviceazurefunction.DataFactoryLinkedServiceAzureFunction_IsTe
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureFunction.DataFactoryLinkedServiceAzureFunction.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazurefunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazurefunction"
 
 datafactorylinkedserviceazurefunction.DataFactoryLinkedServiceAzureFunction_IsTerraformResource(x interface{}) *bool
 ```
@@ -864,7 +864,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureFunction.DataFactoryLinkedServiceAzureFunctionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazurefunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazurefunction"
 
 &datafactorylinkedserviceazurefunction.DataFactoryLinkedServiceAzureFunctionConfig {
 	Connection: interface{},
@@ -883,9 +883,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserv
 	Id: *string,
 	IntegrationRuntimeName: *string,
 	Key: *string,
-	KeyVaultKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryLinkedServiceAzureFunction.DataFactoryLinkedServiceAzureFunctionKeyVaultKey,
+	KeyVaultKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataFactoryLinkedServiceAzureFunction.DataFactoryLinkedServiceAzureFunctionKeyVaultKey,
 	Parameters: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryLinkedServiceAzureFunction.DataFactoryLinkedServiceAzureFunctionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataFactoryLinkedServiceAzureFunction.DataFactoryLinkedServiceAzureFunctionTimeouts,
 }
 ```
 
@@ -1141,7 +1141,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureFunction.DataFactoryLinkedServiceAzureFunctionKeyVaultKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazurefunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazurefunction"
 
 &datafactorylinkedserviceazurefunction.DataFactoryLinkedServiceAzureFunctionKeyVaultKey {
 	LinkedServiceName: *string,
@@ -1187,7 +1187,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureFunction.DataFactoryLinkedServiceAzureFunctionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazurefunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazurefunction"
 
 &datafactorylinkedserviceazurefunction.DataFactoryLinkedServiceAzureFunctionTimeouts {
 	Create: *string,
@@ -1263,7 +1263,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureFunction.DataFactoryLinkedServiceAzureFunctionKeyVaultKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazurefunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazurefunction"
 
 datafactorylinkedserviceazurefunction.NewDataFactoryLinkedServiceAzureFunctionKeyVaultKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceAzureFunctionKeyVaultKeyOutputReference
 ```
@@ -1556,7 +1556,7 @@ func InternalValue() DataFactoryLinkedServiceAzureFunctionKeyVaultKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureFunction.DataFactoryLinkedServiceAzureFunctionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazurefunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/datafactorylinkedserviceazurefunction"
 
 datafactorylinkedserviceazurefunction.NewDataFactoryLinkedServiceAzureFunctionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceAzureFunctionTimeoutsOutputReference
 ```

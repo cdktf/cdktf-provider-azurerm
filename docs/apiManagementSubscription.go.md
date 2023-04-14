@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_manage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscription.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementsubscription"
 
 apimanagementsubscription.NewApiManagementSubscription(scope Construct, id *string, config ApiManagementSubscriptionConfig) ApiManagementSubscription
 ```
@@ -349,7 +349,7 @@ func ResetUserId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscription.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementsubscription"
 
 apimanagementsubscription.ApiManagementSubscription_IsConstruct(x interface{}) *bool
 ```
@@ -381,7 +381,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscription.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementsubscription"
 
 apimanagementsubscription.ApiManagementSubscription_IsTerraformElement(x interface{}) *bool
 ```
@@ -395,7 +395,7 @@ apimanagementsubscription.ApiManagementSubscription_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscription.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementsubscription"
 
 apimanagementsubscription.ApiManagementSubscription_IsTerraformResource(x interface{}) *bool
 ```
@@ -880,7 +880,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementsubscription"
 
 &apimanagementsubscription.ApiManagementSubscriptionConfig {
 	Connection: interface{},
@@ -901,7 +901,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscrip
 	SecondaryKey: *string,
 	State: *string,
 	SubscriptionId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementSubscription.ApiManagementSubscriptionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.apiManagementSubscription.ApiManagementSubscriptionTimeouts,
 	UserId: *string,
 }
 ```
@@ -1169,7 +1169,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementsubscription"
 
 &apimanagementsubscription.ApiManagementSubscriptionTimeouts {
 	Create: *string,
@@ -1245,7 +1245,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementsubscription"
 
 apimanagementsubscription.NewApiManagementSubscriptionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementSubscriptionTimeoutsOutputReference
 ```

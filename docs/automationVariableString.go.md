@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationVariableString.AutomationVariableString.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariablestring"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationvariablestring"
 
 automationvariablestring.NewAutomationVariableString(scope Construct, id *string, config AutomationVariableStringConfig) AutomationVariableString
 ```
@@ -314,7 +314,7 @@ func ResetValue()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationVariableString.AutomationVariableString.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariablestring"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationvariablestring"
 
 automationvariablestring.AutomationVariableString_IsConstruct(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationVariableString.AutomationVariableString.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariablestring"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationvariablestring"
 
 automationvariablestring.AutomationVariableString_IsTerraformElement(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ automationvariablestring.AutomationVariableString_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationVariableString.AutomationVariableString.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariablestring"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationvariablestring"
 
 automationvariablestring.AutomationVariableString_IsTerraformResource(x interface{}) *bool
 ```
@@ -735,7 +735,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationVariableString.AutomationVariableStringConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariablestring"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationvariablestring"
 
 &automationvariablestring.AutomationVariableStringConfig {
 	Connection: interface{},
@@ -751,7 +751,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariablestr
 	Description: *string,
 	Encrypted: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationVariableString.AutomationVariableStringTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.automationVariableString.AutomationVariableStringTimeouts,
 	Value: *string,
 }
 ```
@@ -954,7 +954,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationVariableString.AutomationVariableStringTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariablestring"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationvariablestring"
 
 &automationvariablestring.AutomationVariableStringTimeouts {
 	Create: *string,
@@ -1030,7 +1030,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationVariableString.AutomationVariableStringTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariablestring"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationvariablestring"
 
 automationvariablestring.NewAutomationVariableStringTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationVariableStringTimeoutsOutputReference
 ```

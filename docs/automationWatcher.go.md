@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationWatcher.AutomationWatcher.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationwatcher"
 
 automationwatcher.NewAutomationWatcher(scope Construct, id *string, config AutomationWatcherConfig) AutomationWatcher
 ```
@@ -321,7 +321,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationWatcher.AutomationWatcher.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationwatcher"
 
 automationwatcher.AutomationWatcher_IsConstruct(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationWatcher.AutomationWatcher.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationwatcher"
 
 automationwatcher.AutomationWatcher_IsTerraformElement(x interface{}) *bool
 ```
@@ -367,7 +367,7 @@ automationwatcher.AutomationWatcher_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationWatcher.AutomationWatcher.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationwatcher"
 
 automationwatcher.AutomationWatcher_IsTerraformResource(x interface{}) *bool
 ```
@@ -841,7 +841,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationWatcher.AutomationWatcherConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationwatcher"
 
 &automationwatcher.AutomationWatcherConfig {
 	Connection: interface{},
@@ -862,7 +862,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationwatcher"
 	Id: *string,
 	ScriptParameters: *map[string]*string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationWatcher.AutomationWatcherTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.automationWatcher.AutomationWatcherTimeouts,
 }
 ```
 
@@ -1116,7 +1116,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationWatcher.AutomationWatcherTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationwatcher"
 
 &automationwatcher.AutomationWatcherTimeouts {
 	Create: *string,
@@ -1192,7 +1192,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationWatcher.AutomationWatcherTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationwatcher"
 
 automationwatcher.NewAutomationWatcherTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationWatcherTimeoutsOutputReference
 ```

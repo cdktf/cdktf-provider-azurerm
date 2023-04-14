@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_manage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoft.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidermicrosoft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementidentityprovidermicrosoft"
 
 apimanagementidentityprovidermicrosoft.NewApiManagementIdentityProviderMicrosoft(scope Construct, id *string, config ApiManagementIdentityProviderMicrosoftConfig) ApiManagementIdentityProviderMicrosoft
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoft.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidermicrosoft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementidentityprovidermicrosoft"
 
 apimanagementidentityprovidermicrosoft.ApiManagementIdentityProviderMicrosoft_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoft.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidermicrosoft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementidentityprovidermicrosoft"
 
 apimanagementidentityprovidermicrosoft.ApiManagementIdentityProviderMicrosoft_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ apimanagementidentityprovidermicrosoft.ApiManagementIdentityProviderMicrosoft_Is
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoft.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidermicrosoft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementidentityprovidermicrosoft"
 
 apimanagementidentityprovidermicrosoft.ApiManagementIdentityProviderMicrosoft_IsTerraformResource(x interface{}) *bool
 ```
@@ -670,7 +670,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidermicrosoft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementidentityprovidermicrosoft"
 
 &apimanagementidentityprovidermicrosoft.ApiManagementIdentityProviderMicrosoftConfig {
 	Connection: interface{},
@@ -685,7 +685,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentity
 	ClientSecret: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftTimeouts,
 }
 ```
 
@@ -861,7 +861,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidermicrosoft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementidentityprovidermicrosoft"
 
 &apimanagementidentityprovidermicrosoft.ApiManagementIdentityProviderMicrosoftTimeouts {
 	Create: *string,
@@ -937,7 +937,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidermicrosoft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementidentityprovidermicrosoft"
 
 apimanagementidentityprovidermicrosoft.NewApiManagementIdentityProviderMicrosoftTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementIdentityProviderMicrosoftTimeoutsOutputReference
 ```

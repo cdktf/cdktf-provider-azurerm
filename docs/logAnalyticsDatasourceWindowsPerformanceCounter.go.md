@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analyt
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsDatasourceWindowsPerformanceCounter.LogAnalyticsDatasourceWindowsPerformanceCounter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsdatasourcewindowsperformancecounter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/loganalyticsdatasourcewindowsperformancecounter"
 
 loganalyticsdatasourcewindowsperformancecounter.NewLogAnalyticsDatasourceWindowsPerformanceCounter(scope Construct, id *string, config LogAnalyticsDatasourceWindowsPerformanceCounterConfig) LogAnalyticsDatasourceWindowsPerformanceCounter
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logAnalyticsDatasourceWindowsPerformanceCounter.LogAnalyticsDatasourceWindowsPerformanceCounter.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsdatasourcewindowsperformancecounter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/loganalyticsdatasourcewindowsperformancecounter"
 
 loganalyticsdatasourcewindowsperformancecounter.LogAnalyticsDatasourceWindowsPerformanceCounter_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logAnalyticsDatasourceWindowsPerformanceCounter.LogAnalyticsDatasourceWindowsPerformanceCounter.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsdatasourcewindowsperformancecounter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/loganalyticsdatasourcewindowsperformancecounter"
 
 loganalyticsdatasourcewindowsperformancecounter.LogAnalyticsDatasourceWindowsPerformanceCounter_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ loganalyticsdatasourcewindowsperformancecounter.LogAnalyticsDatasourceWindowsPer
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logAnalyticsDatasourceWindowsPerformanceCounter.LogAnalyticsDatasourceWindowsPerformanceCounter.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsdatasourcewindowsperformancecounter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/loganalyticsdatasourcewindowsperformancecounter"
 
 loganalyticsdatasourcewindowsperformancecounter.LogAnalyticsDatasourceWindowsPerformanceCounter_IsTerraformResource(x interface{}) *bool
 ```
@@ -736,7 +736,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logAnalyticsDatasourceWindowsPerformanceCounter.LogAnalyticsDatasourceWindowsPerformanceCounterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsdatasourcewindowsperformancecounter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/loganalyticsdatasourcewindowsperformancecounter"
 
 &loganalyticsdatasourcewindowsperformancecounter.LogAnalyticsDatasourceWindowsPerformanceCounterConfig {
 	Connection: interface{},
@@ -754,7 +754,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsdatasourc
 	ResourceGroupName: *string,
 	WorkspaceName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logAnalyticsDatasourceWindowsPerformanceCounter.LogAnalyticsDatasourceWindowsPerformanceCounterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.logAnalyticsDatasourceWindowsPerformanceCounter.LogAnalyticsDatasourceWindowsPerformanceCounterTimeouts,
 }
 ```
 
@@ -969,7 +969,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logAnalyticsDatasourceWindowsPerformanceCounter.LogAnalyticsDatasourceWindowsPerformanceCounterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsdatasourcewindowsperformancecounter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/loganalyticsdatasourcewindowsperformancecounter"
 
 &loganalyticsdatasourcewindowsperformancecounter.LogAnalyticsDatasourceWindowsPerformanceCounterTimeouts {
 	Create: *string,
@@ -1045,7 +1045,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsDatasourceWindowsPerformanceCounter.LogAnalyticsDatasourceWindowsPerformanceCounterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsdatasourcewindowsperformancecounter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/loganalyticsdatasourcewindowsperformancecounter"
 
 loganalyticsdatasourcewindowsperformancecounter.NewLogAnalyticsDatasourceWindowsPerformanceCounterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogAnalyticsDatasourceWindowsPerformanceCounterTimeoutsOutputReference
 ```

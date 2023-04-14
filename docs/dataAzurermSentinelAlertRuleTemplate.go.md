@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_a
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 dataazurermsentinelalertruletemplate.NewDataAzurermSentinelAlertRuleTemplate(scope Construct, id *string, config DataAzurermSentinelAlertRuleTemplateConfig) DataAzurermSentinelAlertRuleTemplate
 ```
@@ -307,7 +307,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 dataazurermsentinelalertruletemplate.DataAzurermSentinelAlertRuleTemplate_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 dataazurermsentinelalertruletemplate.DataAzurermSentinelAlertRuleTemplate_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ dataazurermsentinelalertruletemplate.DataAzurermSentinelAlertRuleTemplate_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplate.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 dataazurermsentinelalertruletemplate.DataAzurermSentinelAlertRuleTemplate_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -673,7 +673,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 &dataazurermsentinelalertruletemplate.DataAzurermSentinelAlertRuleTemplateConfig {
 	Connection: interface{},
@@ -687,7 +687,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelal
 	DisplayName: *string,
 	Id: *string,
 	Name: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplateTimeouts,
 }
 ```
 
@@ -850,7 +850,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplateNrtTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 &dataazurermsentinelalertruletemplate.DataAzurermSentinelAlertRuleTemplateNrtTemplate {
 
@@ -863,7 +863,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelal
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplateScheduledTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 &dataazurermsentinelalertruletemplate.DataAzurermSentinelAlertRuleTemplateScheduledTemplate {
 
@@ -876,7 +876,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelal
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 &dataazurermsentinelalertruletemplate.DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplate {
 
@@ -889,7 +889,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelal
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 &dataazurermsentinelalertruletemplate.DataAzurermSentinelAlertRuleTemplateTimeouts {
 	Read: *string,
@@ -923,7 +923,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplateNrtTemplateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 dataazurermsentinelalertruletemplate.NewDataAzurermSentinelAlertRuleTemplateNrtTemplateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermSentinelAlertRuleTemplateNrtTemplateList
 ```
@@ -1055,7 +1055,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplateNrtTemplateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 dataazurermsentinelalertruletemplate.NewDataAzurermSentinelAlertRuleTemplateNrtTemplateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermSentinelAlertRuleTemplateNrtTemplateOutputReference
 ```
@@ -1366,7 +1366,7 @@ func InternalValue() DataAzurermSentinelAlertRuleTemplateNrtTemplate
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplateScheduledTemplateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 dataazurermsentinelalertruletemplate.NewDataAzurermSentinelAlertRuleTemplateScheduledTemplateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermSentinelAlertRuleTemplateScheduledTemplateList
 ```
@@ -1498,7 +1498,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplateScheduledTemplateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 dataazurermsentinelalertruletemplate.NewDataAzurermSentinelAlertRuleTemplateScheduledTemplateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermSentinelAlertRuleTemplateScheduledTemplateOutputReference
 ```
@@ -1853,7 +1853,7 @@ func InternalValue() DataAzurermSentinelAlertRuleTemplateScheduledTemplate
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 dataazurermsentinelalertruletemplate.NewDataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplateList
 ```
@@ -1985,7 +1985,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 dataazurermsentinelalertruletemplate.NewDataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplateOutputReference
 ```
@@ -2274,7 +2274,7 @@ func InternalValue() DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplat
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRuleTemplate.DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertruletemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsentinelalertruletemplate"
 
 dataazurermsentinelalertruletemplate.NewDataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference
 ```

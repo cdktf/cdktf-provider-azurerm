@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_enr
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubenrichment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/iothubenrichment"
 
 iothubenrichment.NewIothubEnrichmentA(scope Construct, id *string, config IothubEnrichmentAConfig) IothubEnrichmentA
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentA.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubenrichment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/iothubenrichment"
 
 iothubenrichment.IothubEnrichmentA_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentA.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubenrichment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/iothubenrichment"
 
 iothubenrichment.IothubEnrichmentA_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ iothubenrichment.IothubEnrichmentA_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentA.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubenrichment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/iothubenrichment"
 
 iothubenrichment.IothubEnrichmentA_IsTerraformResource(x interface{}) *bool
 ```
@@ -692,7 +692,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubenrichment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/iothubenrichment"
 
 &iothubenrichment.IothubEnrichmentAConfig {
 	Connection: interface{},
@@ -708,7 +708,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubenrichment"
 	ResourceGroupName: *string,
 	Value: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.iothubEnrichment.IothubEnrichmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.iothubEnrichment.IothubEnrichmentTimeouts,
 }
 ```
 
@@ -897,7 +897,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubenrichment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/iothubenrichment"
 
 &iothubenrichment.IothubEnrichmentTimeouts {
 	Create: *string,
@@ -973,7 +973,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubenrichment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/iothubenrichment"
 
 iothubenrichment.NewIothubEnrichmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubEnrichmentTimeoutsOutputReference
 ```

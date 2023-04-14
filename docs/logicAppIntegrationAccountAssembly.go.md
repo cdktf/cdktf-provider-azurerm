@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppIntegrationAccountAssembly.LogicAppIntegrationAccountAssembly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountassembly"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicappintegrationaccountassembly"
 
 logicappintegrationaccountassembly.NewLogicAppIntegrationAccountAssembly(scope Construct, id *string, config LogicAppIntegrationAccountAssemblyConfig) LogicAppIntegrationAccountAssembly
 ```
@@ -321,7 +321,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logicAppIntegrationAccountAssembly.LogicAppIntegrationAccountAssembly.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountassembly"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicappintegrationaccountassembly"
 
 logicappintegrationaccountassembly.LogicAppIntegrationAccountAssembly_IsConstruct(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logicAppIntegrationAccountAssembly.LogicAppIntegrationAccountAssembly.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountassembly"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicappintegrationaccountassembly"
 
 logicappintegrationaccountassembly.LogicAppIntegrationAccountAssembly_IsTerraformElement(x interface{}) *bool
 ```
@@ -367,7 +367,7 @@ logicappintegrationaccountassembly.LogicAppIntegrationAccountAssembly_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logicAppIntegrationAccountAssembly.LogicAppIntegrationAccountAssembly.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountassembly"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicappintegrationaccountassembly"
 
 logicappintegrationaccountassembly.LogicAppIntegrationAccountAssembly_IsTerraformResource(x interface{}) *bool
 ```
@@ -786,7 +786,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppIntegrationAccountAssembly.LogicAppIntegrationAccountAssemblyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountassembly"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicappintegrationaccountassembly"
 
 &logicappintegrationaccountassembly.LogicAppIntegrationAccountAssemblyConfig {
 	Connection: interface{},
@@ -805,7 +805,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationac
 	ContentLinkUri: *string,
 	Id: *string,
 	Metadata: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logicAppIntegrationAccountAssembly.LogicAppIntegrationAccountAssemblyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.logicAppIntegrationAccountAssembly.LogicAppIntegrationAccountAssemblyTimeouts,
 }
 ```
 
@@ -1033,7 +1033,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppIntegrationAccountAssembly.LogicAppIntegrationAccountAssemblyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountassembly"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicappintegrationaccountassembly"
 
 &logicappintegrationaccountassembly.LogicAppIntegrationAccountAssemblyTimeouts {
 	Create: *string,
@@ -1109,7 +1109,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppIntegrationAccountAssembly.LogicAppIntegrationAccountAssemblyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountassembly"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicappintegrationaccountassembly"
 
 logicappintegrationaccountassembly.NewLogicAppIntegrationAccountAssemblyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogicAppIntegrationAccountAssemblyTimeoutsOutputReference
 ```

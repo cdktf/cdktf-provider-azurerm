@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_da
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorDataCollectionRuleAssociation.MonitorDataCollectionRuleAssociation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollectionruleassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/monitordatacollectionruleassociation"
 
 monitordatacollectionruleassociation.NewMonitorDataCollectionRuleAssociation(scope Construct, id *string, config MonitorDataCollectionRuleAssociationConfig) MonitorDataCollectionRuleAssociation
 ```
@@ -321,7 +321,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.monitorDataCollectionRuleAssociation.MonitorDataCollectionRuleAssociation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollectionruleassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/monitordatacollectionruleassociation"
 
 monitordatacollectionruleassociation.MonitorDataCollectionRuleAssociation_IsConstruct(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.monitorDataCollectionRuleAssociation.MonitorDataCollectionRuleAssociation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollectionruleassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/monitordatacollectionruleassociation"
 
 monitordatacollectionruleassociation.MonitorDataCollectionRuleAssociation_IsTerraformElement(x interface{}) *bool
 ```
@@ -367,7 +367,7 @@ monitordatacollectionruleassociation.MonitorDataCollectionRuleAssociation_IsTerr
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.monitorDataCollectionRuleAssociation.MonitorDataCollectionRuleAssociation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollectionruleassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/monitordatacollectionruleassociation"
 
 monitordatacollectionruleassociation.MonitorDataCollectionRuleAssociation_IsTerraformResource(x interface{}) *bool
 ```
@@ -720,7 +720,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorDataCollectionRuleAssociation.MonitorDataCollectionRuleAssociationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollectionruleassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/monitordatacollectionruleassociation"
 
 &monitordatacollectionruleassociation.MonitorDataCollectionRuleAssociationConfig {
 	Connection: interface{},
@@ -736,7 +736,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollection
 	Description: *string,
 	Id: *string,
 	Name: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorDataCollectionRuleAssociation.MonitorDataCollectionRuleAssociationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.monitorDataCollectionRuleAssociation.MonitorDataCollectionRuleAssociationTimeouts,
 }
 ```
 
@@ -925,7 +925,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorDataCollectionRuleAssociation.MonitorDataCollectionRuleAssociationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollectionruleassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/monitordatacollectionruleassociation"
 
 &monitordatacollectionruleassociation.MonitorDataCollectionRuleAssociationTimeouts {
 	Create: *string,
@@ -1001,7 +1001,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorDataCollectionRuleAssociation.MonitorDataCollectionRuleAssociationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollectionruleassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/monitordatacollectionruleassociation"
 
 monitordatacollectionruleassociation.NewMonitorDataCollectionRuleAssociationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorDataCollectionRuleAssociationTimeoutsOutputReference
 ```

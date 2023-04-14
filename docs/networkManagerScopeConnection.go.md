@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_ma
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkManagerScopeConnection.NetworkManagerScopeConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerscopeconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/networkmanagerscopeconnection"
 
 networkmanagerscopeconnection.NewNetworkManagerScopeConnection(scope Construct, id *string, config NetworkManagerScopeConnectionConfig) NetworkManagerScopeConnection
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.networkManagerScopeConnection.NetworkManagerScopeConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerscopeconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/networkmanagerscopeconnection"
 
 networkmanagerscopeconnection.NetworkManagerScopeConnection_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.networkManagerScopeConnection.NetworkManagerScopeConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerscopeconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/networkmanagerscopeconnection"
 
 networkmanagerscopeconnection.NetworkManagerScopeConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ networkmanagerscopeconnection.NetworkManagerScopeConnection_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.networkManagerScopeConnection.NetworkManagerScopeConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerscopeconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/networkmanagerscopeconnection"
 
 networkmanagerscopeconnection.NetworkManagerScopeConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -710,7 +710,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkManagerScopeConnection.NetworkManagerScopeConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerscopeconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/networkmanagerscopeconnection"
 
 &networkmanagerscopeconnection.NetworkManagerScopeConnectionConfig {
 	Connection: interface{},
@@ -726,7 +726,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerscopeco
 	TenantId: *string,
 	Description: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkManagerScopeConnection.NetworkManagerScopeConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.networkManagerScopeConnection.NetworkManagerScopeConnectionTimeouts,
 }
 ```
 
@@ -915,7 +915,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkManagerScopeConnection.NetworkManagerScopeConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerscopeconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/networkmanagerscopeconnection"
 
 &networkmanagerscopeconnection.NetworkManagerScopeConnectionTimeouts {
 	Create: *string,
@@ -991,7 +991,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkManagerScopeConnection.NetworkManagerScopeConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerscopeconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/networkmanagerscopeconnection"
 
 networkmanagerscopeconnection.NewNetworkManagerScopeConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkManagerScopeConnectionTimeoutsOutputReference
 ```
