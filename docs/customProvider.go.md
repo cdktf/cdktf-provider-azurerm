@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/custom_pro
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.customProvider.CustomProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 customprovider.NewCustomProvider(scope Construct, id *string, config CustomProviderConfig) CustomProvider
 ```
@@ -360,7 +360,7 @@ func ResetValidation()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.customProvider.CustomProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 customprovider.CustomProvider_IsConstruct(x interface{}) *bool
 ```
@@ -392,7 +392,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.customProvider.CustomProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 customprovider.CustomProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -406,7 +406,7 @@ customprovider.CustomProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.customProvider.CustomProvider.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 customprovider.CustomProvider_IsTerraformResource(x interface{}) *bool
 ```
@@ -803,7 +803,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.customProvider.CustomProviderAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 &customprovider.CustomProviderAction {
 	Endpoint: *string,
@@ -849,7 +849,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.customProvider.CustomProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 &customprovider.CustomProviderConfig {
 	Connection: interface{},
@@ -866,7 +866,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
 	Id: *string,
 	ResourceType: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.customProvider.CustomProviderTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.customProvider.CustomProviderTimeouts,
 	Validation: interface{},
 }
 ```
@@ -1088,7 +1088,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.customProvider.CustomProviderResourceType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 &customprovider.CustomProviderResourceType {
 	Endpoint: *string,
@@ -1148,7 +1148,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.customProvider.CustomProviderTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 &customprovider.CustomProviderTimeouts {
 	Create: *string,
@@ -1222,7 +1222,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.customProvider.CustomProviderValidation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 &customprovider.CustomProviderValidation {
 	Specification: *string,
@@ -1256,7 +1256,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.customProvider.CustomProviderActionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 customprovider.NewCustomProviderActionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CustomProviderActionList
 ```
@@ -1399,7 +1399,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.customProvider.CustomProviderActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 customprovider.NewCustomProviderActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CustomProviderActionOutputReference
 ```
@@ -1710,7 +1710,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.customProvider.CustomProviderResourceTypeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 customprovider.NewCustomProviderResourceTypeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CustomProviderResourceTypeList
 ```
@@ -1853,7 +1853,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.customProvider.CustomProviderResourceTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 customprovider.NewCustomProviderResourceTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CustomProviderResourceTypeOutputReference
 ```
@@ -2193,7 +2193,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.customProvider.CustomProviderTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 customprovider.NewCustomProviderTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CustomProviderTimeoutsOutputReference
 ```
@@ -2558,7 +2558,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.customProvider.CustomProviderValidationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 customprovider.NewCustomProviderValidationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CustomProviderValidationList
 ```
@@ -2701,7 +2701,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.customProvider.CustomProviderValidationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/customprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customprovider"
 
 customprovider.NewCustomProviderValidationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CustomProviderValidationOutputReference
 ```

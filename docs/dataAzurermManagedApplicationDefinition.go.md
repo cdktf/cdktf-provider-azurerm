@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/managed_ap
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmanagedapplicationdefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmanagedapplicationdefinition"
 
 dataazurermmanagedapplicationdefinition.NewDataAzurermManagedApplicationDefinition(scope Construct, id *string, config DataAzurermManagedApplicationDefinitionConfig) DataAzurermManagedApplicationDefinition
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmanagedapplicationdefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmanagedapplicationdefinition"
 
 dataazurermmanagedapplicationdefinition.DataAzurermManagedApplicationDefinition_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmanagedapplicationdefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmanagedapplicationdefinition"
 
 dataazurermmanagedapplicationdefinition.DataAzurermManagedApplicationDefinition_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermmanagedapplicationdefinition.DataAzurermManagedApplicationDefinition_
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmanagedapplicationdefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmanagedapplicationdefinition"
 
 dataazurermmanagedapplicationdefinition.DataAzurermManagedApplicationDefinition_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -615,7 +615,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmanagedapplicationdefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmanagedapplicationdefinition"
 
 &dataazurermmanagedapplicationdefinition.DataAzurermManagedApplicationDefinitionConfig {
 	Connection: interface{},
@@ -628,7 +628,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmanaged
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeouts,
 }
 ```
 
@@ -778,7 +778,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmanagedapplicationdefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmanagedapplicationdefinition"
 
 &dataazurermmanagedapplicationdefinition.DataAzurermManagedApplicationDefinitionTimeouts {
 	Read: *string,
@@ -812,7 +812,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermmanagedapplicationdefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmanagedapplicationdefinition"
 
 dataazurermmanagedapplicationdefinition.NewDataAzurermManagedApplicationDefinitionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermManagedApplicationDefinitionTimeoutsOutputReference
 ```

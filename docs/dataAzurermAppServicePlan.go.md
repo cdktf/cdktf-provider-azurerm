@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_servic
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppServicePlan.DataAzurermAppServicePlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceplan"
 
 dataazurermappserviceplan.NewDataAzurermAppServicePlan(scope Construct, id *string, config DataAzurermAppServicePlanConfig) DataAzurermAppServicePlan
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermAppServicePlan.DataAzurermAppServicePlan.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceplan"
 
 dataazurermappserviceplan.DataAzurermAppServicePlan_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermAppServicePlan.DataAzurermAppServicePlan.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceplan"
 
 dataazurermappserviceplan.DataAzurermAppServicePlan_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ dataazurermappserviceplan.DataAzurermAppServicePlan_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermAppServicePlan.DataAzurermAppServicePlan.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceplan"
 
 dataazurermappserviceplan.DataAzurermAppServicePlan_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -725,7 +725,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppServicePlan.DataAzurermAppServicePlanConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceplan"
 
 &dataazurermappserviceplan.DataAzurermAppServicePlanConfig {
 	Connection: interface{},
@@ -738,7 +738,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappserv
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermAppServicePlan.DataAzurermAppServicePlanTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermAppServicePlan.DataAzurermAppServicePlanTimeouts,
 }
 ```
 
@@ -888,7 +888,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppServicePlan.DataAzurermAppServicePlanSku.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceplan"
 
 &dataazurermappserviceplan.DataAzurermAppServicePlanSku {
 
@@ -901,7 +901,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappserv
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppServicePlan.DataAzurermAppServicePlanTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceplan"
 
 &dataazurermappserviceplan.DataAzurermAppServicePlanTimeouts {
 	Read: *string,
@@ -935,7 +935,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppServicePlan.DataAzurermAppServicePlanSkuList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceplan"
 
 dataazurermappserviceplan.NewDataAzurermAppServicePlanSkuList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppServicePlanSkuList
 ```
@@ -1067,7 +1067,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppServicePlan.DataAzurermAppServicePlanSkuOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceplan"
 
 dataazurermappserviceplan.NewDataAzurermAppServicePlanSkuOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppServicePlanSkuOutputReference
 ```
@@ -1367,7 +1367,7 @@ func InternalValue() DataAzurermAppServicePlanSku
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppServicePlan.DataAzurermAppServicePlanTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermappserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappserviceplan"
 
 dataazurermappserviceplan.NewDataAzurermAppServicePlanTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermAppServicePlanTimeoutsOutputReference
 ```

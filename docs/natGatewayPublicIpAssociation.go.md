@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gatewa
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/natgatewaypublicipassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipassociation"
 
 natgatewaypublicipassociation.NewNatGatewayPublicIpAssociation(scope Construct, id *string, config NatGatewayPublicIpAssociationConfig) NatGatewayPublicIpAssociation
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/natgatewaypublicipassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipassociation"
 
 natgatewaypublicipassociation.NatGatewayPublicIpAssociation_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/natgatewaypublicipassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipassociation"
 
 natgatewaypublicipassociation.NatGatewayPublicIpAssociation_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ natgatewaypublicipassociation.NatGatewayPublicIpAssociation_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/natgatewaypublicipassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipassociation"
 
 natgatewaypublicipassociation.NatGatewayPublicIpAssociation_IsTerraformResource(x interface{}) *bool
 ```
@@ -626,7 +626,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/natgatewaypublicipassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipassociation"
 
 &natgatewaypublicipassociation.NatGatewayPublicIpAssociationConfig {
 	Connection: interface{},
@@ -639,7 +639,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/natgatewaypublicip
 	NatGatewayId: *string,
 	PublicIpAddressId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationTimeouts,
 }
 ```
 
@@ -789,7 +789,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/natgatewaypublicipassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipassociation"
 
 &natgatewaypublicipassociation.NatGatewayPublicIpAssociationTimeouts {
 	Create: *string,
@@ -851,7 +851,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/natgatewaypublicipassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipassociation"
 
 natgatewaypublicipassociation.NewNatGatewayPublicIpAssociationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NatGatewayPublicIpAssociationTimeoutsOutputReference
 ```

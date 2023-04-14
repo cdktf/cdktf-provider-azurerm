@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_manage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementLogger.ApiManagementLogger.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementlogger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementlogger"
 
 apimanagementlogger.NewApiManagementLogger(scope Construct, id *string, config ApiManagementLoggerConfig) ApiManagementLogger
 ```
@@ -354,7 +354,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementLogger.ApiManagementLogger.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementlogger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementlogger"
 
 apimanagementlogger.ApiManagementLogger_IsConstruct(x interface{}) *bool
 ```
@@ -386,7 +386,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementLogger.ApiManagementLogger.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementlogger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementlogger"
 
 apimanagementlogger.ApiManagementLogger_IsTerraformElement(x interface{}) *bool
 ```
@@ -400,7 +400,7 @@ apimanagementlogger.ApiManagementLogger_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementLogger.ApiManagementLogger.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementlogger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementlogger"
 
 apimanagementlogger.ApiManagementLogger_IsTerraformResource(x interface{}) *bool
 ```
@@ -819,7 +819,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementLogger.ApiManagementLoggerApplicationInsights.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementlogger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementlogger"
 
 &apimanagementlogger.ApiManagementLoggerApplicationInsights {
 	InstrumentationKey: *string,
@@ -851,7 +851,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementLogger.ApiManagementLoggerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementlogger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementlogger"
 
 &apimanagementlogger.ApiManagementLoggerConfig {
 	Connection: interface{},
@@ -864,13 +864,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementlogge
 	ApiManagementName: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	ApplicationInsights: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.apiManagementLogger.ApiManagementLoggerApplicationInsights,
+	ApplicationInsights: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementLogger.ApiManagementLoggerApplicationInsights,
 	Buffered: interface{},
 	Description: *string,
-	Eventhub: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.apiManagementLogger.ApiManagementLoggerEventhub,
+	Eventhub: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementLogger.ApiManagementLoggerEventhub,
 	Id: *string,
 	ResourceId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.apiManagementLogger.ApiManagementLoggerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementLogger.ApiManagementLoggerTimeouts,
 }
 ```
 
@@ -1102,7 +1102,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementLogger.ApiManagementLoggerEventhub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementlogger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementlogger"
 
 &apimanagementlogger.ApiManagementLoggerEventhub {
 	ConnectionString: *string,
@@ -1148,7 +1148,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementLogger.ApiManagementLoggerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementlogger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementlogger"
 
 &apimanagementlogger.ApiManagementLoggerTimeouts {
 	Create: *string,
@@ -1224,7 +1224,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementLogger.ApiManagementLoggerApplicationInsightsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementlogger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementlogger"
 
 apimanagementlogger.NewApiManagementLoggerApplicationInsightsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementLoggerApplicationInsightsOutputReference
 ```
@@ -1495,7 +1495,7 @@ func InternalValue() ApiManagementLoggerApplicationInsights
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementLogger.ApiManagementLoggerEventhubOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementlogger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementlogger"
 
 apimanagementlogger.NewApiManagementLoggerEventhubOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementLoggerEventhubOutputReference
 ```
@@ -1788,7 +1788,7 @@ func InternalValue() ApiManagementLoggerEventhub
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementLogger.ApiManagementLoggerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementlogger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementlogger"
 
 apimanagementlogger.NewApiManagementLoggerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementLoggerTimeoutsOutputReference
 ```

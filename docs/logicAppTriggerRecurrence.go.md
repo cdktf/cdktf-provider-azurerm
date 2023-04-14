@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppTriggerRecurrence.LogicAppTriggerRecurrence.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerrecurrence"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerrecurrence"
 
 logicapptriggerrecurrence.NewLogicAppTriggerRecurrence(scope Construct, id *string, config LogicAppTriggerRecurrenceConfig) LogicAppTriggerRecurrence
 ```
@@ -327,7 +327,7 @@ func ResetTimeZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logicAppTriggerRecurrence.LogicAppTriggerRecurrence.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerrecurrence"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerrecurrence"
 
 logicapptriggerrecurrence.LogicAppTriggerRecurrence_IsConstruct(x interface{}) *bool
 ```
@@ -359,7 +359,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logicAppTriggerRecurrence.LogicAppTriggerRecurrence.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerrecurrence"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerrecurrence"
 
 logicapptriggerrecurrence.LogicAppTriggerRecurrence_IsTerraformElement(x interface{}) *bool
 ```
@@ -373,7 +373,7 @@ logicapptriggerrecurrence.LogicAppTriggerRecurrence_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logicAppTriggerRecurrence.LogicAppTriggerRecurrence.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerrecurrence"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerrecurrence"
 
 logicapptriggerrecurrence.LogicAppTriggerRecurrence_IsTerraformResource(x interface{}) *bool
 ```
@@ -770,7 +770,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppTriggerRecurrence.LogicAppTriggerRecurrenceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerrecurrence"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerrecurrence"
 
 &logicapptriggerrecurrence.LogicAppTriggerRecurrenceConfig {
 	Connection: interface{},
@@ -785,9 +785,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerrec
 	LogicAppId: *string,
 	Name: *string,
 	Id: *string,
-	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.logicAppTriggerRecurrence.LogicAppTriggerRecurrenceSchedule,
+	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logicAppTriggerRecurrence.LogicAppTriggerRecurrenceSchedule,
 	StartTime: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.logicAppTriggerRecurrence.LogicAppTriggerRecurrenceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logicAppTriggerRecurrence.LogicAppTriggerRecurrenceTimeouts,
 	TimeZone: *string,
 }
 ```
@@ -1005,7 +1005,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppTriggerRecurrence.LogicAppTriggerRecurrenceSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerrecurrence"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerrecurrence"
 
 &logicapptriggerrecurrence.LogicAppTriggerRecurrenceSchedule {
 	AtTheseHours: *[]*f64,
@@ -1065,7 +1065,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppTriggerRecurrence.LogicAppTriggerRecurrenceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerrecurrence"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerrecurrence"
 
 &logicapptriggerrecurrence.LogicAppTriggerRecurrenceTimeouts {
 	Create: *string,
@@ -1141,7 +1141,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppTriggerRecurrence.LogicAppTriggerRecurrenceScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerrecurrence"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerrecurrence"
 
 logicapptriggerrecurrence.NewLogicAppTriggerRecurrenceScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogicAppTriggerRecurrenceScheduleOutputReference
 ```
@@ -1477,7 +1477,7 @@ func InternalValue() LogicAppTriggerRecurrenceSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppTriggerRecurrence.LogicAppTriggerRecurrenceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/logicapptriggerrecurrence"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicapptriggerrecurrence"
 
 logicapptriggerrecurrence.NewLogicAppTriggerRecurrenceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogicAppTriggerRecurrenceTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_a
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventhubAuthorizationRule.EventhubAuthorizationRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/eventhubauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubauthorizationrule"
 
 eventhubauthorizationrule.NewEventhubAuthorizationRule(scope Construct, id *string, config EventhubAuthorizationRuleConfig) EventhubAuthorizationRule
 ```
@@ -314,7 +314,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.eventhubAuthorizationRule.EventhubAuthorizationRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/eventhubauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubauthorizationrule"
 
 eventhubauthorizationrule.EventhubAuthorizationRule_IsConstruct(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.eventhubAuthorizationRule.EventhubAuthorizationRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/eventhubauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubauthorizationrule"
 
 eventhubauthorizationrule.EventhubAuthorizationRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ eventhubauthorizationrule.EventhubAuthorizationRule_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.eventhubAuthorizationRule.EventhubAuthorizationRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/eventhubauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubauthorizationrule"
 
 eventhubauthorizationrule.EventhubAuthorizationRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -823,7 +823,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventhubAuthorizationRule.EventhubAuthorizationRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/eventhubauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubauthorizationrule"
 
 &eventhubauthorizationrule.EventhubAuthorizationRuleConfig {
 	Connection: interface{},
@@ -841,7 +841,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/eventhubauthorizat
 	Listen: interface{},
 	Manage: interface{},
 	Send: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.eventhubAuthorizationRule.EventhubAuthorizationRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventhubAuthorizationRule.EventhubAuthorizationRuleTimeouts,
 }
 ```
 
@@ -1056,7 +1056,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventhubAuthorizationRule.EventhubAuthorizationRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/eventhubauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubauthorizationrule"
 
 &eventhubauthorizationrule.EventhubAuthorizationRuleTimeouts {
 	Create: *string,
@@ -1132,7 +1132,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventhubAuthorizationRule.EventhubAuthorizationRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/eventhubauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubauthorizationrule"
 
 eventhubauthorizationrule.NewEventhubAuthorizationRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventhubAuthorizationRuleTimeoutsOutputReference
 ```

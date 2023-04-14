@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_manage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementAuthorizationServer.ApiManagementAuthorizationServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementauthorizationserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementauthorizationserver"
 
 apimanagementauthorizationserver.NewApiManagementAuthorizationServer(scope Construct, id *string, config ApiManagementAuthorizationServerConfig) ApiManagementAuthorizationServer
 ```
@@ -376,7 +376,7 @@ func ResetTokenEndpoint()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementAuthorizationServer.ApiManagementAuthorizationServer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementauthorizationserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementauthorizationserver"
 
 apimanagementauthorizationserver.ApiManagementAuthorizationServer_IsConstruct(x interface{}) *bool
 ```
@@ -408,7 +408,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementAuthorizationServer.ApiManagementAuthorizationServer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementauthorizationserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementauthorizationserver"
 
 apimanagementauthorizationserver.ApiManagementAuthorizationServer_IsTerraformElement(x interface{}) *bool
 ```
@@ -422,7 +422,7 @@ apimanagementauthorizationserver.ApiManagementAuthorizationServer_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementAuthorizationServer.ApiManagementAuthorizationServer.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementauthorizationserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementauthorizationserver"
 
 apimanagementauthorizationserver.ApiManagementAuthorizationServer_IsTerraformResource(x interface{}) *bool
 ```
@@ -1083,7 +1083,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementAuthorizationServer.ApiManagementAuthorizationServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementauthorizationserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementauthorizationserver"
 
 &apimanagementauthorizationserver.ApiManagementAuthorizationServerConfig {
 	Connection: interface{},
@@ -1111,7 +1111,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementautho
 	ResourceOwnerPassword: *string,
 	ResourceOwnerUsername: *string,
 	SupportState: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.apiManagementAuthorizationServer.ApiManagementAuthorizationServerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementAuthorizationServer.ApiManagementAuthorizationServerTimeouts,
 	TokenBodyParameter: interface{},
 	TokenEndpoint: *string,
 }
@@ -1486,7 +1486,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementAuthorizationServer.ApiManagementAuthorizationServerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementauthorizationserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementauthorizationserver"
 
 &apimanagementauthorizationserver.ApiManagementAuthorizationServerTimeouts {
 	Create: *string,
@@ -1560,7 +1560,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementAuthorizationServer.ApiManagementAuthorizationServerTokenBodyParameter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementauthorizationserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementauthorizationserver"
 
 &apimanagementauthorizationserver.ApiManagementAuthorizationServerTokenBodyParameter {
 	Name: *string,
@@ -1608,7 +1608,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementAuthorizationServer.ApiManagementAuthorizationServerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementauthorizationserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementauthorizationserver"
 
 apimanagementauthorizationserver.NewApiManagementAuthorizationServerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementAuthorizationServerTimeoutsOutputReference
 ```
@@ -1973,7 +1973,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementAuthorizationServer.ApiManagementAuthorizationServerTokenBodyParameterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementauthorizationserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementauthorizationserver"
 
 apimanagementauthorizationserver.NewApiManagementAuthorizationServerTokenBodyParameterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementAuthorizationServerTokenBodyParameterList
 ```
@@ -2116,7 +2116,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementAuthorizationServer.ApiManagementAuthorizationServerTokenBodyParameterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/apimanagementauthorizationserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementauthorizationserver"
 
 apimanagementauthorizationserver.NewApiManagementAuthorizationServerTokenBodyParameterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementAuthorizationServerTokenBodyParameterOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encry
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/diskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskencryptionset"
 
 diskencryptionset.NewDiskEncryptionSet(scope Construct, id *string, config DiskEncryptionSetConfig) DiskEncryptionSet
 ```
@@ -334,7 +334,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/diskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskencryptionset"
 
 diskencryptionset.DiskEncryptionSet_IsConstruct(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/diskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskencryptionset"
 
 diskencryptionset.DiskEncryptionSet_IsTerraformElement(x interface{}) *bool
 ```
@@ -380,7 +380,7 @@ diskencryptionset.DiskEncryptionSet_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/diskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskencryptionset"
 
 diskencryptionset.DiskEncryptionSet_IsTerraformResource(x interface{}) *bool
 ```
@@ -821,7 +821,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/diskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskencryptionset"
 
 &diskencryptionset.DiskEncryptionSetConfig {
 	Connection: interface{},
@@ -831,7 +831,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/diskencryptionset"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.diskEncryptionSet.DiskEncryptionSetIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.diskEncryptionSet.DiskEncryptionSetIdentity,
 	KeyVaultKeyId: *string,
 	Location: *string,
 	Name: *string,
@@ -841,7 +841,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/diskencryptionset"
 	FederatedClientId: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.diskEncryptionSet.DiskEncryptionSetTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.diskEncryptionSet.DiskEncryptionSetTimeouts,
 }
 ```
 
@@ -1084,7 +1084,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/diskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskencryptionset"
 
 &diskencryptionset.DiskEncryptionSetIdentity {
 	Type: *string,
@@ -1130,7 +1130,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/diskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskencryptionset"
 
 &diskencryptionset.DiskEncryptionSetTimeouts {
 	Create: *string,
@@ -1206,7 +1206,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/diskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskencryptionset"
 
 diskencryptionset.NewDiskEncryptionSetIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DiskEncryptionSetIdentityOutputReference
 ```
@@ -1528,7 +1528,7 @@ func InternalValue() DiskEncryptionSetIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/diskencryptionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskencryptionset"
 
 diskencryptionset.NewDiskEncryptionSetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DiskEncryptionSetTimeoutsOutputReference
 ```

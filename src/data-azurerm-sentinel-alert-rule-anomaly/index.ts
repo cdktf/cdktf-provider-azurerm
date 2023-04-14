@@ -525,7 +525,7 @@ export class DataAzurermSentinelAlertRuleAnomaly extends cdktf.TerraformDataSour
       terraformResourceType: 'azurerm_sentinel_alert_rule_anomaly',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.51.0',
+        providerVersion: '3.52.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_mana
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mssqlmanagedinstancefailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlmanagedinstancefailovergroup"
 
 mssqlmanagedinstancefailovergroup.NewMssqlManagedInstanceFailoverGroup(scope Construct, id *string, config MssqlManagedInstanceFailoverGroupConfig) MssqlManagedInstanceFailoverGroup
 ```
@@ -313,7 +313,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mssqlmanagedinstancefailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlmanagedinstancefailovergroup"
 
 mssqlmanagedinstancefailovergroup.MssqlManagedInstanceFailoverGroup_IsConstruct(x interface{}) *bool
 ```
@@ -345,7 +345,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mssqlmanagedinstancefailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlmanagedinstancefailovergroup"
 
 mssqlmanagedinstancefailovergroup.MssqlManagedInstanceFailoverGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -359,7 +359,7 @@ mssqlmanagedinstancefailovergroup.MssqlManagedInstanceFailoverGroup_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mssqlmanagedinstancefailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlmanagedinstancefailovergroup"
 
 mssqlmanagedinstancefailovergroup.MssqlManagedInstanceFailoverGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -756,7 +756,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mssqlmanagedinstancefailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlmanagedinstancefailovergroup"
 
 &mssqlmanagedinstancefailovergroup.MssqlManagedInstanceFailoverGroupConfig {
 	Connection: interface{},
@@ -770,10 +770,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mssqlmanagedinstan
 	ManagedInstanceId: *string,
 	Name: *string,
 	PartnerManagedInstanceId: *string,
-	ReadWriteEndpointFailoverPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicy,
+	ReadWriteEndpointFailoverPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicy,
 	Id: *string,
 	ReadonlyEndpointFailoverPolicyEnabled: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroupTimeouts,
 }
 ```
 
@@ -977,7 +977,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroupPartnerRegion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mssqlmanagedinstancefailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlmanagedinstancefailovergroup"
 
 &mssqlmanagedinstancefailovergroup.MssqlManagedInstanceFailoverGroupPartnerRegion {
 
@@ -990,7 +990,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mssqlmanagedinstan
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mssqlmanagedinstancefailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlmanagedinstancefailovergroup"
 
 &mssqlmanagedinstancefailovergroup.MssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicy {
 	Mode: *string,
@@ -1036,7 +1036,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mssqlmanagedinstancefailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlmanagedinstancefailovergroup"
 
 &mssqlmanagedinstancefailovergroup.MssqlManagedInstanceFailoverGroupTimeouts {
 	Create: *string,
@@ -1112,7 +1112,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroupPartnerRegionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mssqlmanagedinstancefailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlmanagedinstancefailovergroup"
 
 mssqlmanagedinstancefailovergroup.NewMssqlManagedInstanceFailoverGroupPartnerRegionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MssqlManagedInstanceFailoverGroupPartnerRegionList
 ```
@@ -1244,7 +1244,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroupPartnerRegionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mssqlmanagedinstancefailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlmanagedinstancefailovergroup"
 
 mssqlmanagedinstancefailovergroup.NewMssqlManagedInstanceFailoverGroupPartnerRegionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MssqlManagedInstanceFailoverGroupPartnerRegionOutputReference
 ```
@@ -1533,7 +1533,7 @@ func InternalValue() MssqlManagedInstanceFailoverGroupPartnerRegion
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mssqlmanagedinstancefailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlmanagedinstancefailovergroup"
 
 mssqlmanagedinstancefailovergroup.NewMssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicyOutputReference
 ```
@@ -1833,7 +1833,7 @@ func InternalValue() MssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverP
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlManagedInstanceFailoverGroup.MssqlManagedInstanceFailoverGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/mssqlmanagedinstancefailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlmanagedinstancefailovergroup"
 
 mssqlmanagedinstancefailovergroup.NewMssqlManagedInstanceFailoverGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlManagedInstanceFailoverGroupTimeoutsOutputReference
 ```
