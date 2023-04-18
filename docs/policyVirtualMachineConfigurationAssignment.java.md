@@ -1,3 +1,7 @@
+# `azurerm_policy_virtual_machine_configuration_assignment`
+
+Refer to the Terraform Registory for docs: [`azurerm_policy_virtual_machine_configuration_assignment`](https://www.terraform.io/docs/providers/azurerm/r/policy_virtual_machine_configuration_assignment).
+
 # `policyVirtualMachineConfigurationAssignment` Submodule <a name="`policyVirtualMachineConfigurationAssignment` Submodule" id="@cdktf/provider-azurerm.policyVirtualMachineConfigurationAssignment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

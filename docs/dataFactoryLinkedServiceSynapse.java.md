@@ -1,3 +1,7 @@
+# `azurerm_data_factory_linked_service_synapse`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_factory_linked_service_synapse`](https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse).
+
 # `dataFactoryLinkedServiceSynapse` Submodule <a name="`dataFactoryLinkedServiceSynapse` Submodule" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceSynapse"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

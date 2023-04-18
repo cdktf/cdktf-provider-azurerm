@@ -1,3 +1,7 @@
+# `azurerm_cosmosdb_sql_role_assignment`
+
+Refer to the Terraform Registory for docs: [`azurerm_cosmosdb_sql_role_assignment`](https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_role_assignment).
+
 # `cosmosdbSqlRoleAssignment` Submodule <a name="`cosmosdbSqlRoleAssignment` Submodule" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

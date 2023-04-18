@@ -1,3 +1,7 @@
+# `azurerm_windows_virtual_machine`
+
+Refer to the Terraform Registory for docs: [`azurerm_windows_virtual_machine`](https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine).
+
 # `windowsVirtualMachine` Submodule <a name="`windowsVirtualMachine` Submodule" id="@cdktf/provider-azurerm.windowsVirtualMachine"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

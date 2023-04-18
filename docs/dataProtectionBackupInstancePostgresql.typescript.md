@@ -1,3 +1,7 @@
+# `azurerm_data_protection_backup_instance_postgresql`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_protection_backup_instance_postgresql`](https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_postgresql).
+
 # `dataProtectionBackupInstancePostgresql` Submodule <a name="`dataProtectionBackupInstancePostgresql` Submodule" id="@cdktf/provider-azurerm.dataProtectionBackupInstancePostgresql"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

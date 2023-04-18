@@ -1,3 +1,7 @@
+# `azurerm_virtual_network_gateway_nat_rule`
+
+Refer to the Terraform Registory for docs: [`azurerm_virtual_network_gateway_nat_rule`](https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_nat_rule).
+
 # `virtualNetworkGatewayNatRule` Submodule <a name="`virtualNetworkGatewayNatRule` Submodule" id="@cdktf/provider-azurerm.virtualNetworkGatewayNatRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

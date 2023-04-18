@@ -1,3 +1,7 @@
+# `data_azurerm_healthcare_dicom_service`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_healthcare_dicom_service`](https://www.terraform.io/docs/providers/azurerm/d/healthcare_dicom_service).
+
 # `dataAzurermHealthcareDicomService` Submodule <a name="`dataAzurermHealthcareDicomService` Submodule" id="@cdktf/provider-azurerm.dataAzurermHealthcareDicomService"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

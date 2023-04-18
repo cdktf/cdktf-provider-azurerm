@@ -1,3 +1,7 @@
+# `azurerm_cosmosdb_cassandra_keyspace`
+
+Refer to the Terraform Registory for docs: [`azurerm_cosmosdb_cassandra_keyspace`](https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_keyspace).
+
 # `cosmosdbCassandraKeyspace` Submodule <a name="`cosmosdbCassandraKeyspace` Submodule" id="@cdktf/provider-azurerm.cosmosdbCassandraKeyspace"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

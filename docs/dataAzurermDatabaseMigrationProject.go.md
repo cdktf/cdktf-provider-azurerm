@@ -1,3 +1,7 @@
+# `data_azurerm_database_migration_project`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_database_migration_project`](https://www.terraform.io/docs/providers/azurerm/d/database_migration_project).
+
 # `dataAzurermDatabaseMigrationProject` Submodule <a name="`dataAzurermDatabaseMigrationProject` Submodule" id="@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

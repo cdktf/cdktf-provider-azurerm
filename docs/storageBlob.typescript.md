@@ -1,3 +1,7 @@
+# `azurerm_storage_blob`
+
+Refer to the Terraform Registory for docs: [`azurerm_storage_blob`](https://www.terraform.io/docs/providers/azurerm/r/storage_blob).
+
 # `storageBlob` Submodule <a name="`storageBlob` Submodule" id="@cdktf/provider-azurerm.storageBlob"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

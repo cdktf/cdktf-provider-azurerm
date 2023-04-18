@@ -1,3 +1,7 @@
+# `azurerm_api_management_identity_provider_facebook`
+
+Refer to the Terraform Registory for docs: [`azurerm_api_management_identity_provider_facebook`](https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook).
+
 # `apiManagementIdentityProviderFacebook` Submodule <a name="`apiManagementIdentityProviderFacebook` Submodule" id="@cdktf/provider-azurerm.apiManagementIdentityProviderFacebook"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

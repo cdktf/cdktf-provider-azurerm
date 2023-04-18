@@ -1,3 +1,7 @@
+# `azurerm_network_manager_admin_rule_collection`
+
+Refer to the Terraform Registory for docs: [`azurerm_network_manager_admin_rule_collection`](https://www.terraform.io/docs/providers/azurerm/r/network_manager_admin_rule_collection).
+
 # `networkManagerAdminRuleCollection` Submodule <a name="`networkManagerAdminRuleCollection` Submodule" id="@cdktf/provider-azurerm.networkManagerAdminRuleCollection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

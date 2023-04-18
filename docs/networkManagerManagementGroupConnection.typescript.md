@@ -1,3 +1,7 @@
+# `azurerm_network_manager_management_group_connection`
+
+Refer to the Terraform Registory for docs: [`azurerm_network_manager_management_group_connection`](https://www.terraform.io/docs/providers/azurerm/r/network_manager_management_group_connection).
+
 # `networkManagerManagementGroupConnection` Submodule <a name="`networkManagerManagementGroupConnection` Submodule" id="@cdktf/provider-azurerm.networkManagerManagementGroupConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

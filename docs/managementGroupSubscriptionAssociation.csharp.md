@@ -1,3 +1,7 @@
+# `azurerm_management_group_subscription_association`
+
+Refer to the Terraform Registory for docs: [`azurerm_management_group_subscription_association`](https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association).
+
 # `managementGroupSubscriptionAssociation` Submodule <a name="`managementGroupSubscriptionAssociation` Submodule" id="@cdktf/provider-azurerm.managementGroupSubscriptionAssociation"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

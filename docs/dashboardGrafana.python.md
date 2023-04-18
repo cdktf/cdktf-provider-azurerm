@@ -1,3 +1,7 @@
+# `azurerm_dashboard_grafana`
+
+Refer to the Terraform Registory for docs: [`azurerm_dashboard_grafana`](https://www.terraform.io/docs/providers/azurerm/r/dashboard_grafana).
+
 # `dashboardGrafana` Submodule <a name="`dashboardGrafana` Submodule" id="@cdktf/provider-azurerm.dashboardGrafana"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

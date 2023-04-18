@@ -1,3 +1,7 @@
+# `azurerm_mssql_server_dns_alias`
+
+Refer to the Terraform Registory for docs: [`azurerm_mssql_server_dns_alias`](https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias).
+
 # `mssqlServerDnsAlias` Submodule <a name="`mssqlServerDnsAlias` Submodule" id="@cdktf/provider-azurerm.mssqlServerDnsAlias"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `data_azurerm_spring_cloud_app`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_spring_cloud_app`](https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app).
+
 # `dataAzurermSpringCloudApp` Submodule <a name="`dataAzurermSpringCloudApp` Submodule" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

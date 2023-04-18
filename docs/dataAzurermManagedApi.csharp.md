@@ -1,3 +1,7 @@
+# `data_azurerm_managed_api`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_managed_api`](https://www.terraform.io/docs/providers/azurerm/d/managed_api).
+
 # `dataAzurermManagedApi` Submodule <a name="`dataAzurermManagedApi` Submodule" id="@cdktf/provider-azurerm.dataAzurermManagedApi"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

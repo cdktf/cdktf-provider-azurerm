@@ -1,3 +1,7 @@
+# `azurerm_route_map`
+
+Refer to the Terraform Registory for docs: [`azurerm_route_map`](https://www.terraform.io/docs/providers/azurerm/r/route_map).
+
 # `routeMap` Submodule <a name="`routeMap` Submodule" id="@cdktf/provider-azurerm.routeMap"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

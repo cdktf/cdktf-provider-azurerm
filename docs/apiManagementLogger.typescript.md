@@ -1,3 +1,7 @@
+# `azurerm_api_management_logger`
+
+Refer to the Terraform Registory for docs: [`azurerm_api_management_logger`](https://www.terraform.io/docs/providers/azurerm/r/api_management_logger).
+
 # `apiManagementLogger` Submodule <a name="`apiManagementLogger` Submodule" id="@cdktf/provider-azurerm.apiManagementLogger"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

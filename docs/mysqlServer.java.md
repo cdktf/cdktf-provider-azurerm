@@ -1,3 +1,7 @@
+# `azurerm_mysql_server`
+
+Refer to the Terraform Registory for docs: [`azurerm_mysql_server`](https://www.terraform.io/docs/providers/azurerm/r/mysql_server).
+
 # `mysqlServer` Submodule <a name="`mysqlServer` Submodule" id="@cdktf/provider-azurerm.mysqlServer"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

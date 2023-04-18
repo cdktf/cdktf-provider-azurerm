@@ -1,3 +1,7 @@
+# `azurerm_stream_analytics_job_schedule`
+
+Refer to the Terraform Registory for docs: [`azurerm_stream_analytics_job_schedule`](https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job_schedule).
+
 # `streamAnalyticsJobSchedule` Submodule <a name="`streamAnalyticsJobSchedule` Submodule" id="@cdktf/provider-azurerm.streamAnalyticsJobSchedule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

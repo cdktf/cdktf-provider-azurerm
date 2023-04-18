@@ -1,3 +1,7 @@
+# `azurerm_data_factory_integration_runtime_azure_ssis`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_factory_integration_runtime_azure_ssis`](https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis).
+
 # `dataFactoryIntegrationRuntimeAzureSsis` Submodule <a name="`dataFactoryIntegrationRuntimeAzureSsis` Submodule" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

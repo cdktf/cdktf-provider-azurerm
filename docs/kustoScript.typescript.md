@@ -1,3 +1,7 @@
+# `azurerm_kusto_script`
+
+Refer to the Terraform Registory for docs: [`azurerm_kusto_script`](https://www.terraform.io/docs/providers/azurerm/r/kusto_script).
+
 # `kustoScript` Submodule <a name="`kustoScript` Submodule" id="@cdktf/provider-azurerm.kustoScript"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

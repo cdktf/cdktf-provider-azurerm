@@ -1,3 +1,7 @@
+# `azurerm_data_factory_dataset_postgresql`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_factory_dataset_postgresql`](https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql).
+
 # `dataFactoryDatasetPostgresql` Submodule <a name="`dataFactoryDatasetPostgresql` Submodule" id="@cdktf/provider-azurerm.dataFactoryDatasetPostgresql"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

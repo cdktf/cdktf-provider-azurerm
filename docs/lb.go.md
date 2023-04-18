@@ -1,3 +1,7 @@
+# `azurerm_lb`
+
+Refer to the Terraform Registory for docs: [`azurerm_lb`](https://www.terraform.io/docs/providers/azurerm/r/lb).
+
 # `lb` Submodule <a name="`lb` Submodule" id="@cdktf/provider-azurerm.lb"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

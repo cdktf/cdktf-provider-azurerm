@@ -1,3 +1,7 @@
+# `azurerm_virtual_desktop_scaling_plan`
+
+Refer to the Terraform Registory for docs: [`azurerm_virtual_desktop_scaling_plan`](https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_scaling_plan).
+
 # `virtualDesktopScalingPlan` Submodule <a name="`virtualDesktopScalingPlan` Submodule" id="@cdktf/provider-azurerm.virtualDesktopScalingPlan"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

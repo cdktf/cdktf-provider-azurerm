@@ -1,3 +1,7 @@
+# `azurerm_netapp_snapshot_policy`
+
+Refer to the Terraform Registory for docs: [`azurerm_netapp_snapshot_policy`](https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy).
+
 # `netappSnapshotPolicy` Submodule <a name="`netappSnapshotPolicy` Submodule" id="@cdktf/provider-azurerm.netappSnapshotPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

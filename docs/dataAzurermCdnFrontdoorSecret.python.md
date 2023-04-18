@@ -1,3 +1,7 @@
+# `data_azurerm_cdn_frontdoor_secret`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_cdn_frontdoor_secret`](https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_secret).
+
 # `dataAzurermCdnFrontdoorSecret` Submodule <a name="`dataAzurermCdnFrontdoorSecret` Submodule" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorSecret"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

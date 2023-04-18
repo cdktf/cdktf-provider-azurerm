@@ -1,3 +1,7 @@
+# `azurerm_eventgrid_topic`
+
+Refer to the Terraform Registory for docs: [`azurerm_eventgrid_topic`](https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic).
+
 # `eventgridTopic` Submodule <a name="`eventgridTopic` Submodule" id="@cdktf/provider-azurerm.eventgridTopic"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

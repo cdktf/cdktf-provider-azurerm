@@ -1,3 +1,7 @@
+# `data_azurerm_disk_access`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_disk_access`](https://www.terraform.io/docs/providers/azurerm/d/disk_access).
+
 # `dataAzurermDiskAccess` Submodule <a name="`dataAzurermDiskAccess` Submodule" id="@cdktf/provider-azurerm.dataAzurermDiskAccess"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

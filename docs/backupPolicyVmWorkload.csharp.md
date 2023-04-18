@@ -1,3 +1,7 @@
+# `azurerm_backup_policy_vm_workload`
+
+Refer to the Terraform Registory for docs: [`azurerm_backup_policy_vm_workload`](https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm_workload).
+
 # `backupPolicyVmWorkload` Submodule <a name="`backupPolicyVmWorkload` Submodule" id="@cdktf/provider-azurerm.backupPolicyVmWorkload"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

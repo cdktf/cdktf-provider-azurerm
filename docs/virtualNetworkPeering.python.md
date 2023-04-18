@@ -1,3 +1,7 @@
+# `azurerm_virtual_network_peering`
+
+Refer to the Terraform Registory for docs: [`azurerm_virtual_network_peering`](https://www.terraform.io/docs/providers/azurerm/r/virtual_network_peering).
+
 # `virtualNetworkPeering` Submodule <a name="`virtualNetworkPeering` Submodule" id="@cdktf/provider-azurerm.virtualNetworkPeering"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

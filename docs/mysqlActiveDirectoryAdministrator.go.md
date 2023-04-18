@@ -1,3 +1,7 @@
+# `azurerm_mysql_active_directory_administrator`
+
+Refer to the Terraform Registory for docs: [`azurerm_mysql_active_directory_administrator`](https://www.terraform.io/docs/providers/azurerm/r/mysql_active_directory_administrator).
+
 # `mysqlActiveDirectoryAdministrator` Submodule <a name="`mysqlActiveDirectoryAdministrator` Submodule" id="@cdktf/provider-azurerm.mysqlActiveDirectoryAdministrator"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

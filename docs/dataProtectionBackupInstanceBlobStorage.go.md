@@ -1,3 +1,7 @@
+# `azurerm_data_protection_backup_instance_blob_storage`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_protection_backup_instance_blob_storage`](https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage).
+
 # `dataProtectionBackupInstanceBlobStorage` Submodule <a name="`dataProtectionBackupInstanceBlobStorage` Submodule" id="@cdktf/provider-azurerm.dataProtectionBackupInstanceBlobStorage"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

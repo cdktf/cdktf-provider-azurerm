@@ -1,3 +1,7 @@
+# `azurerm_data_factory_integration_runtime_self_hosted`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_factory_integration_runtime_self_hosted`](https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_self_hosted).
+
 # `dataFactoryIntegrationRuntimeSelfHosted` Submodule <a name="`dataFactoryIntegrationRuntimeSelfHosted` Submodule" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeSelfHosted"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

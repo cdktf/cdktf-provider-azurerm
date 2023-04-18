@@ -1,3 +1,7 @@
+# `azurerm_virtual_hub_connection`
+
+Refer to the Terraform Registory for docs: [`azurerm_virtual_hub_connection`](https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection).
+
 # `virtualHubConnection` Submodule <a name="`virtualHubConnection` Submodule" id="@cdktf/provider-azurerm.virtualHubConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

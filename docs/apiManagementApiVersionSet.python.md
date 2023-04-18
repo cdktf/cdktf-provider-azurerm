@@ -1,3 +1,7 @@
+# `azurerm_api_management_api_version_set`
+
+Refer to the Terraform Registory for docs: [`azurerm_api_management_api_version_set`](https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set).
+
 # `apiManagementApiVersionSet` Submodule <a name="`apiManagementApiVersionSet` Submodule" id="@cdktf/provider-azurerm.apiManagementApiVersionSet"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

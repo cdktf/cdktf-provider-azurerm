@@ -1,3 +1,7 @@
+# `azurerm_cosmosdb_cassandra_table`
+
+Refer to the Terraform Registory for docs: [`azurerm_cosmosdb_cassandra_table`](https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_table).
+
 # `cosmosdbCassandraTable` Submodule <a name="`cosmosdbCassandraTable` Submodule" id="@cdktf/provider-azurerm.cosmosdbCassandraTable"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `data_azurerm_lb_outbound_rule`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_lb_outbound_rule`](https://www.terraform.io/docs/providers/azurerm/d/lb_outbound_rule).
+
 # `dataAzurermLbOutboundRule` Submodule <a name="`dataAzurermLbOutboundRule` Submodule" id="@cdktf/provider-azurerm.dataAzurermLbOutboundRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

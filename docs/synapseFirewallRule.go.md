@@ -1,3 +1,7 @@
+# `azurerm_synapse_firewall_rule`
+
+Refer to the Terraform Registory for docs: [`azurerm_synapse_firewall_rule`](https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule).
+
 # `synapseFirewallRule` Submodule <a name="`synapseFirewallRule` Submodule" id="@cdktf/provider-azurerm.synapseFirewallRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

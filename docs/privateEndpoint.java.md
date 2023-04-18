@@ -1,3 +1,7 @@
+# `azurerm_private_endpoint`
+
+Refer to the Terraform Registory for docs: [`azurerm_private_endpoint`](https://www.terraform.io/docs/providers/azurerm/r/private_endpoint).
+
 # `privateEndpoint` Submodule <a name="`privateEndpoint` Submodule" id="@cdktf/provider-azurerm.privateEndpoint"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

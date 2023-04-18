@@ -1,3 +1,7 @@
+# `data_azurerm_lb`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_lb`](https://www.terraform.io/docs/providers/azurerm/d/lb).
+
 # `dataAzurermLb` Submodule <a name="`dataAzurermLb` Submodule" id="@cdktf/provider-azurerm.dataAzurermLb"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

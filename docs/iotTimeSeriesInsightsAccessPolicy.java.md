@@ -1,3 +1,7 @@
+# `azurerm_iot_time_series_insights_access_policy`
+
+Refer to the Terraform Registory for docs: [`azurerm_iot_time_series_insights_access_policy`](https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_access_policy).
+
 # `iotTimeSeriesInsightsAccessPolicy` Submodule <a name="`iotTimeSeriesInsightsAccessPolicy` Submodule" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsAccessPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

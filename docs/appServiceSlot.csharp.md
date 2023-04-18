@@ -1,3 +1,7 @@
+# `azurerm_app_service_slot`
+
+Refer to the Terraform Registory for docs: [`azurerm_app_service_slot`](https://www.terraform.io/docs/providers/azurerm/r/app_service_slot).
+
 # `appServiceSlot` Submodule <a name="`appServiceSlot` Submodule" id="@cdktf/provider-azurerm.appServiceSlot"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_mssql_database`
+
+Refer to the Terraform Registory for docs: [`azurerm_mssql_database`](https://www.terraform.io/docs/providers/azurerm/r/mssql_database).
+
 # `mssqlDatabase` Submodule <a name="`mssqlDatabase` Submodule" id="@cdktf/provider-azurerm.mssqlDatabase"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

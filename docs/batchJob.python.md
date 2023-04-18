@@ -1,3 +1,7 @@
+# `azurerm_batch_job`
+
+Refer to the Terraform Registory for docs: [`azurerm_batch_job`](https://www.terraform.io/docs/providers/azurerm/r/batch_job).
+
 # `batchJob` Submodule <a name="`batchJob` Submodule" id="@cdktf/provider-azurerm.batchJob"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_disk_encryption_set`
+
+Refer to the Terraform Registory for docs: [`azurerm_disk_encryption_set`](https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set).
+
 # `diskEncryptionSet` Submodule <a name="`diskEncryptionSet` Submodule" id="@cdktf/provider-azurerm.diskEncryptionSet"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_sql_server`
+
+Refer to the Terraform Registory for docs: [`azurerm_sql_server`](https://www.terraform.io/docs/providers/azurerm/r/sql_server).
+
 # `sqlServer` Submodule <a name="`sqlServer` Submodule" id="@cdktf/provider-azurerm.sqlServer"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

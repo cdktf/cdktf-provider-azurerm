@@ -1,3 +1,7 @@
+# `data_azurerm_cdn_frontdoor_profile`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_cdn_frontdoor_profile`](https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_profile).
+
 # `dataAzurermCdnFrontdoorProfile` Submodule <a name="`dataAzurermCdnFrontdoorProfile` Submodule" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorProfile"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

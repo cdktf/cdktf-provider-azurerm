@@ -1,3 +1,7 @@
+# `azurerm_spring_cloud_app_mysql_association`
+
+Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_app_mysql_association`](https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association).
+
 # `springCloudAppMysqlAssociation` Submodule <a name="`springCloudAppMysqlAssociation` Submodule" id="@cdktf/provider-azurerm.springCloudAppMysqlAssociation"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

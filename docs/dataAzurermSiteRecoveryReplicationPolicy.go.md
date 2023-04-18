@@ -1,3 +1,7 @@
+# `data_azurerm_site_recovery_replication_policy`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_site_recovery_replication_policy`](https://www.terraform.io/docs/providers/azurerm/d/site_recovery_replication_policy).
+
 # `dataAzurermSiteRecoveryReplicationPolicy` Submodule <a name="`dataAzurermSiteRecoveryReplicationPolicy` Submodule" id="@cdktf/provider-azurerm.dataAzurermSiteRecoveryReplicationPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_data_protection_resource_guard`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_protection_resource_guard`](https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard).
+
 # `dataProtectionResourceGuard` Submodule <a name="`dataProtectionResourceGuard` Submodule" id="@cdktf/provider-azurerm.dataProtectionResourceGuard"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

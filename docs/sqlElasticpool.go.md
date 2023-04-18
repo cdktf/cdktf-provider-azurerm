@@ -1,3 +1,7 @@
+# `azurerm_sql_elasticpool`
+
+Refer to the Terraform Registory for docs: [`azurerm_sql_elasticpool`](https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool).
+
 # `sqlElasticpool` Submodule <a name="`sqlElasticpool` Submodule" id="@cdktf/provider-azurerm.sqlElasticpool"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

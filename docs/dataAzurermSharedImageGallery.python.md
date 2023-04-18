@@ -1,3 +1,7 @@
+# `data_azurerm_shared_image_gallery`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_shared_image_gallery`](https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery).
+
 # `dataAzurermSharedImageGallery` Submodule <a name="`dataAzurermSharedImageGallery` Submodule" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

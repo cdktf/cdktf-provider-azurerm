@@ -1,3 +1,7 @@
+# `azurerm_postgresql_virtual_network_rule`
+
+Refer to the Terraform Registory for docs: [`azurerm_postgresql_virtual_network_rule`](https://www.terraform.io/docs/providers/azurerm/r/postgresql_virtual_network_rule).
+
 # `postgresqlVirtualNetworkRule` Submodule <a name="`postgresqlVirtualNetworkRule` Submodule" id="@cdktf/provider-azurerm.postgresqlVirtualNetworkRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

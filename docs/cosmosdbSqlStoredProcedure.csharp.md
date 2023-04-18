@@ -1,3 +1,7 @@
+# `azurerm_cosmosdb_sql_stored_procedure`
+
+Refer to the Terraform Registory for docs: [`azurerm_cosmosdb_sql_stored_procedure`](https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_stored_procedure).
+
 # `cosmosdbSqlStoredProcedure` Submodule <a name="`cosmosdbSqlStoredProcedure` Submodule" id="@cdktf/provider-azurerm.cosmosdbSqlStoredProcedure"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

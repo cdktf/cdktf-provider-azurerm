@@ -1,3 +1,7 @@
+# `azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection`
+
+Refer to the Terraform Registory for docs: [`azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection`](https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_defender_advanced_threat_protection).
+
 # `sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection` Submodule <a name="`sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection` Submodule" id="@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

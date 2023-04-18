@@ -1,3 +1,7 @@
+# `data_azurerm_dns_caa_record`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_dns_caa_record`](https://www.terraform.io/docs/providers/azurerm/d/dns_caa_record).
+
 # `dataAzurermDnsCaaRecord` Submodule <a name="`dataAzurermDnsCaaRecord` Submodule" id="@cdktf/provider-azurerm.dataAzurermDnsCaaRecord"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

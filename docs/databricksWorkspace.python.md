@@ -1,3 +1,7 @@
+# `azurerm_databricks_workspace`
+
+Refer to the Terraform Registory for docs: [`azurerm_databricks_workspace`](https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace).
+
 # `databricksWorkspace` Submodule <a name="`databricksWorkspace` Submodule" id="@cdktf/provider-azurerm.databricksWorkspace"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

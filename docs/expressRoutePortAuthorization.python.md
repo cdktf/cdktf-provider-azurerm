@@ -1,3 +1,7 @@
+# `azurerm_express_route_port_authorization`
+
+Refer to the Terraform Registory for docs: [`azurerm_express_route_port_authorization`](https://www.terraform.io/docs/providers/azurerm/r/express_route_port_authorization).
+
 # `expressRoutePortAuthorization` Submodule <a name="`expressRoutePortAuthorization` Submodule" id="@cdktf/provider-azurerm.expressRoutePortAuthorization"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

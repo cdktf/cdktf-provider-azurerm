@@ -1,3 +1,7 @@
+# `azurerm_static_site`
+
+Refer to the Terraform Registory for docs: [`azurerm_static_site`](https://www.terraform.io/docs/providers/azurerm/r/static_site).
+
 # `staticSite` Submodule <a name="`staticSite` Submodule" id="@cdktf/provider-azurerm.staticSite"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

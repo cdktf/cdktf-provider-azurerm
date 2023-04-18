@@ -1,3 +1,7 @@
+# `azurerm_api_management_product_api`
+
+Refer to the Terraform Registory for docs: [`azurerm_api_management_product_api`](https://www.terraform.io/docs/providers/azurerm/r/api_management_product_api).
+
 # `apiManagementProductApi` Submodule <a name="`apiManagementProductApi` Submodule" id="@cdktf/provider-azurerm.apiManagementProductApi"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

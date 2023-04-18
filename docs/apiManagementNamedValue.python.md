@@ -1,3 +1,7 @@
+# `azurerm_api_management_named_value`
+
+Refer to the Terraform Registory for docs: [`azurerm_api_management_named_value`](https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value).
+
 # `apiManagementNamedValue` Submodule <a name="`apiManagementNamedValue` Submodule" id="@cdktf/provider-azurerm.apiManagementNamedValue"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

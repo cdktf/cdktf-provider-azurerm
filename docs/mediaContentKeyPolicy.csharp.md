@@ -1,3 +1,7 @@
+# `azurerm_media_content_key_policy`
+
+Refer to the Terraform Registory for docs: [`azurerm_media_content_key_policy`](https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy).
+
 # `mediaContentKeyPolicy` Submodule <a name="`mediaContentKeyPolicy` Submodule" id="@cdktf/provider-azurerm.mediaContentKeyPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

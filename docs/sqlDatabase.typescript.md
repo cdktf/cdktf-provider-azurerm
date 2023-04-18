@@ -1,3 +1,7 @@
+# `azurerm_sql_database`
+
+Refer to the Terraform Registory for docs: [`azurerm_sql_database`](https://www.terraform.io/docs/providers/azurerm/r/sql_database).
+
 # `sqlDatabase` Submodule <a name="`sqlDatabase` Submodule" id="@cdktf/provider-azurerm.sqlDatabase"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_app_service_managed_certificate`
+
+Refer to the Terraform Registory for docs: [`azurerm_app_service_managed_certificate`](https://www.terraform.io/docs/providers/azurerm/r/app_service_managed_certificate).
+
 # `appServiceManagedCertificate` Submodule <a name="`appServiceManagedCertificate` Submodule" id="@cdktf/provider-azurerm.appServiceManagedCertificate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

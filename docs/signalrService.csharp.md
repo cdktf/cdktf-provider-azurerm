@@ -1,3 +1,7 @@
+# `azurerm_signalr_service`
+
+Refer to the Terraform Registory for docs: [`azurerm_signalr_service`](https://www.terraform.io/docs/providers/azurerm/r/signalr_service).
+
 # `signalrService` Submodule <a name="`signalrService` Submodule" id="@cdktf/provider-azurerm.signalrService"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

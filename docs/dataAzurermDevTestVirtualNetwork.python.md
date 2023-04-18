@@ -1,3 +1,7 @@
+# `data_azurerm_dev_test_virtual_network`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_dev_test_virtual_network`](https://www.terraform.io/docs/providers/azurerm/d/dev_test_virtual_network).
+
 # `dataAzurermDevTestVirtualNetwork` Submodule <a name="`dataAzurermDevTestVirtualNetwork` Submodule" id="@cdktf/provider-azurerm.dataAzurermDevTestVirtualNetwork"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

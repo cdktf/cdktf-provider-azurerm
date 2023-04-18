@@ -1,3 +1,7 @@
+# `data_azurerm_subnet`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_subnet`](https://www.terraform.io/docs/providers/azurerm/d/subnet).
+
 # `dataAzurermSubnet` Submodule <a name="`dataAzurermSubnet` Submodule" id="@cdktf/provider-azurerm.dataAzurermSubnet"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

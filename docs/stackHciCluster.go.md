@@ -1,3 +1,7 @@
+# `azurerm_stack_hci_cluster`
+
+Refer to the Terraform Registory for docs: [`azurerm_stack_hci_cluster`](https://www.terraform.io/docs/providers/azurerm/r/stack_hci_cluster).
+
 # `stackHciCluster` Submodule <a name="`stackHciCluster` Submodule" id="@cdktf/provider-azurerm.stackHciCluster"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

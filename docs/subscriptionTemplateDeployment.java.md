@@ -1,3 +1,7 @@
+# `azurerm_subscription_template_deployment`
+
+Refer to the Terraform Registory for docs: [`azurerm_subscription_template_deployment`](https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment).
+
 # `subscriptionTemplateDeployment` Submodule <a name="`subscriptionTemplateDeployment` Submodule" id="@cdktf/provider-azurerm.subscriptionTemplateDeployment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

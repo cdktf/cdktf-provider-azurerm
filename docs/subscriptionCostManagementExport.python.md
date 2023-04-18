@@ -1,3 +1,7 @@
+# `azurerm_subscription_cost_management_export`
+
+Refer to the Terraform Registory for docs: [`azurerm_subscription_cost_management_export`](https://www.terraform.io/docs/providers/azurerm/r/subscription_cost_management_export).
+
 # `subscriptionCostManagementExport` Submodule <a name="`subscriptionCostManagementExport` Submodule" id="@cdktf/provider-azurerm.subscriptionCostManagementExport"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

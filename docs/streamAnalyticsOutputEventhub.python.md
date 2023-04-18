@@ -1,3 +1,7 @@
+# `azurerm_stream_analytics_output_eventhub`
+
+Refer to the Terraform Registory for docs: [`azurerm_stream_analytics_output_eventhub`](https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub).
+
 # `streamAnalyticsOutputEventhub` Submodule <a name="`streamAnalyticsOutputEventhub` Submodule" id="@cdktf/provider-azurerm.streamAnalyticsOutputEventhub"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_data_factory_linked_service_postgresql`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_factory_linked_service_postgresql`](https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql).
+
 # `dataFactoryLinkedServicePostgresql` Submodule <a name="`dataFactoryLinkedServicePostgresql` Submodule" id="@cdktf/provider-azurerm.dataFactoryLinkedServicePostgresql"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

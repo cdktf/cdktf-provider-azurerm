@@ -1,3 +1,7 @@
+# `azurerm_synapse_workspace_aad_admin`
+
+Refer to the Terraform Registory for docs: [`azurerm_synapse_workspace_aad_admin`](https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin).
+
 # `synapseWorkspaceAadAdmin` Submodule <a name="`synapseWorkspaceAadAdmin` Submodule" id="@cdktf/provider-azurerm.synapseWorkspaceAadAdmin"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

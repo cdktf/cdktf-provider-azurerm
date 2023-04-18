@@ -1,3 +1,7 @@
+# `azurerm_web_app_hybrid_connection`
+
+Refer to the Terraform Registory for docs: [`azurerm_web_app_hybrid_connection`](https://www.terraform.io/docs/providers/azurerm/r/web_app_hybrid_connection).
+
 # `webAppHybridConnection` Submodule <a name="`webAppHybridConnection` Submodule" id="@cdktf/provider-azurerm.webAppHybridConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

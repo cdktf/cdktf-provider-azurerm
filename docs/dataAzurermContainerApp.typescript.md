@@ -1,3 +1,7 @@
+# `data_azurerm_container_app`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_container_app`](https://www.terraform.io/docs/providers/azurerm/d/container_app).
+
 # `dataAzurermContainerApp` Submodule <a name="`dataAzurermContainerApp` Submodule" id="@cdktf/provider-azurerm.dataAzurermContainerApp"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

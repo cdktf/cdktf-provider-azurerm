@@ -1,3 +1,7 @@
+# `azurerm_sentinel_data_connector_azure_security_center`
+
+Refer to the Terraform Registory for docs: [`azurerm_sentinel_data_connector_azure_security_center`](https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_security_center).
+
 # `sentinelDataConnectorAzureSecurityCenter` Submodule <a name="`sentinelDataConnectorAzureSecurityCenter` Submodule" id="@cdktf/provider-azurerm.sentinelDataConnectorAzureSecurityCenter"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

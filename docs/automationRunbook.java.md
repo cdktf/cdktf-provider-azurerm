@@ -1,3 +1,7 @@
+# `azurerm_automation_runbook`
+
+Refer to the Terraform Registory for docs: [`azurerm_automation_runbook`](https://www.terraform.io/docs/providers/azurerm/r/automation_runbook).
+
 # `automationRunbook` Submodule <a name="`automationRunbook` Submodule" id="@cdktf/provider-azurerm.automationRunbook"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_cdn_frontdoor_custom_domain_association`
+
+Refer to the Terraform Registory for docs: [`azurerm_cdn_frontdoor_custom_domain_association`](https://www.terraform.io/docs/providers/azurerm/r/cdn_frontdoor_custom_domain_association).
+
 # `cdnFrontdoorCustomDomainAssociation` Submodule <a name="`cdnFrontdoorCustomDomainAssociation` Submodule" id="@cdktf/provider-azurerm.cdnFrontdoorCustomDomainAssociation"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

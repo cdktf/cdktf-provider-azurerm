@@ -1,3 +1,7 @@
+# `azurerm_app_service_certificate_order`
+
+Refer to the Terraform Registory for docs: [`azurerm_app_service_certificate_order`](https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order).
+
 # `appServiceCertificateOrder` Submodule <a name="`appServiceCertificateOrder` Submodule" id="@cdktf/provider-azurerm.appServiceCertificateOrder"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

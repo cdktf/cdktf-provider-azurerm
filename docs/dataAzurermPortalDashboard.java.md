@@ -1,3 +1,7 @@
+# `data_azurerm_portal_dashboard`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_portal_dashboard`](https://www.terraform.io/docs/providers/azurerm/d/portal_dashboard).
+
 # `dataAzurermPortalDashboard` Submodule <a name="`dataAzurermPortalDashboard` Submodule" id="@cdktf/provider-azurerm.dataAzurermPortalDashboard"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

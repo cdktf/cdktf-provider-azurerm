@@ -1,3 +1,7 @@
+# `data_azurerm_application_gateway`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_application_gateway`](https://www.terraform.io/docs/providers/azurerm/d/application_gateway).
+
 # `dataAzurermApplicationGateway` Submodule <a name="`dataAzurermApplicationGateway` Submodule" id="@cdktf/provider-azurerm.dataAzurermApplicationGateway"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

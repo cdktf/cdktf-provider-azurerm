@@ -1,3 +1,7 @@
+# `azurerm_logic_app_integration_account_schema`
+
+Refer to the Terraform Registory for docs: [`azurerm_logic_app_integration_account_schema`](https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_schema).
+
 # `logicAppIntegrationAccountSchema` Submodule <a name="`logicAppIntegrationAccountSchema` Submodule" id="@cdktf/provider-azurerm.logicAppIntegrationAccountSchema"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

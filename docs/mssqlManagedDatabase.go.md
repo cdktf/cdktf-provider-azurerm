@@ -1,3 +1,7 @@
+# `azurerm_mssql_managed_database`
+
+Refer to the Terraform Registory for docs: [`azurerm_mssql_managed_database`](https://www.terraform.io/docs/providers/azurerm/r/mssql_managed_database).
+
 # `mssqlManagedDatabase` Submodule <a name="`mssqlManagedDatabase` Submodule" id="@cdktf/provider-azurerm.mssqlManagedDatabase"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

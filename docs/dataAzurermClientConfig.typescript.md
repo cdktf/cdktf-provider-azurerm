@@ -1,3 +1,7 @@
+# `data_azurerm_client_config`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_client_config`](https://www.terraform.io/docs/providers/azurerm/d/client_config).
+
 # `dataAzurermClientConfig` Submodule <a name="`dataAzurermClientConfig` Submodule" id="@cdktf/provider-azurerm.dataAzurermClientConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

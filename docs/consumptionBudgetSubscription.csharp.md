@@ -1,3 +1,7 @@
+# `azurerm_consumption_budget_subscription`
+
+Refer to the Terraform Registory for docs: [`azurerm_consumption_budget_subscription`](https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription).
+
 # `consumptionBudgetSubscription` Submodule <a name="`consumptionBudgetSubscription` Submodule" id="@cdktf/provider-azurerm.consumptionBudgetSubscription"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

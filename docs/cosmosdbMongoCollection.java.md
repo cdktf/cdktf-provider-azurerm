@@ -1,3 +1,7 @@
+# `azurerm_cosmosdb_mongo_collection`
+
+Refer to the Terraform Registory for docs: [`azurerm_cosmosdb_mongo_collection`](https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection).
+
 # `cosmosdbMongoCollection` Submodule <a name="`cosmosdbMongoCollection` Submodule" id="@cdktf/provider-azurerm.cosmosdbMongoCollection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

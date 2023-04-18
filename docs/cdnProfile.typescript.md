@@ -1,3 +1,7 @@
+# `azurerm_cdn_profile`
+
+Refer to the Terraform Registory for docs: [`azurerm_cdn_profile`](https://www.terraform.io/docs/providers/azurerm/r/cdn_profile).
+
 # `cdnProfile` Submodule <a name="`cdnProfile` Submodule" id="@cdktf/provider-azurerm.cdnProfile"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_network_profile`
+
+Refer to the Terraform Registory for docs: [`azurerm_network_profile`](https://www.terraform.io/docs/providers/azurerm/r/network_profile).
+
 # `networkProfile` Submodule <a name="`networkProfile` Submodule" id="@cdktf/provider-azurerm.networkProfile"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

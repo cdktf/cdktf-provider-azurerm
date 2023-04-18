@@ -1,3 +1,7 @@
+# `azurerm_cosmosdb_sql_dedicated_gateway`
+
+Refer to the Terraform Registory for docs: [`azurerm_cosmosdb_sql_dedicated_gateway`](https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_dedicated_gateway).
+
 # `cosmosdbSqlDedicatedGateway` Submodule <a name="`cosmosdbSqlDedicatedGateway` Submodule" id="@cdktf/provider-azurerm.cosmosdbSqlDedicatedGateway"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

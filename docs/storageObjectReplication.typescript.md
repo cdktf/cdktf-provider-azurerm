@@ -1,3 +1,7 @@
+# `azurerm_storage_object_replication`
+
+Refer to the Terraform Registory for docs: [`azurerm_storage_object_replication`](https://www.terraform.io/docs/providers/azurerm/r/storage_object_replication).
+
 # `storageObjectReplication` Submodule <a name="`storageObjectReplication` Submodule" id="@cdktf/provider-azurerm.storageObjectReplication"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

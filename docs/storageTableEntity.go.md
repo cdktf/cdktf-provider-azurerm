@@ -1,3 +1,7 @@
+# `azurerm_storage_table_entity`
+
+Refer to the Terraform Registory for docs: [`azurerm_storage_table_entity`](https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity).
+
 # `storageTableEntity` Submodule <a name="`storageTableEntity` Submodule" id="@cdktf/provider-azurerm.storageTableEntity"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_automation_module`
+
+Refer to the Terraform Registory for docs: [`azurerm_automation_module`](https://www.terraform.io/docs/providers/azurerm/r/automation_module).
+
 # `automationModule` Submodule <a name="`automationModule` Submodule" id="@cdktf/provider-azurerm.automationModule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

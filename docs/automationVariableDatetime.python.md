@@ -1,3 +1,7 @@
+# `azurerm_automation_variable_datetime`
+
+Refer to the Terraform Registory for docs: [`azurerm_automation_variable_datetime`](https://www.terraform.io/docs/providers/azurerm/r/automation_variable_datetime).
+
 # `automationVariableDatetime` Submodule <a name="`automationVariableDatetime` Submodule" id="@cdktf/provider-azurerm.automationVariableDatetime"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

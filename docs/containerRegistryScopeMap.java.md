@@ -1,3 +1,7 @@
+# `azurerm_container_registry_scope_map`
+
+Refer to the Terraform Registory for docs: [`azurerm_container_registry_scope_map`](https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map).
+
 # `containerRegistryScopeMap` Submodule <a name="`containerRegistryScopeMap` Submodule" id="@cdktf/provider-azurerm.containerRegistryScopeMap"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

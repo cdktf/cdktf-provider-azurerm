@@ -1,3 +1,7 @@
+# `azurerm_managed_application_definition`
+
+Refer to the Terraform Registory for docs: [`azurerm_managed_application_definition`](https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition).
+
 # `managedApplicationDefinition` Submodule <a name="`managedApplicationDefinition` Submodule" id="@cdktf/provider-azurerm.managedApplicationDefinition"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

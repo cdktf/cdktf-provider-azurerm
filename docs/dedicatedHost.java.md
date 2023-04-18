@@ -1,3 +1,7 @@
+# `azurerm_dedicated_host`
+
+Refer to the Terraform Registory for docs: [`azurerm_dedicated_host`](https://www.terraform.io/docs/providers/azurerm/r/dedicated_host).
+
 # `dedicatedHost` Submodule <a name="`dedicatedHost` Submodule" id="@cdktf/provider-azurerm.dedicatedHost"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

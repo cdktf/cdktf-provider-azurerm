@@ -1,3 +1,7 @@
+# `data_azurerm_api_management_gateway_host_name_configuration`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_api_management_gateway_host_name_configuration`](https://www.terraform.io/docs/providers/azurerm/d/api_management_gateway_host_name_configuration).
+
 # `dataAzurermApiManagementGatewayHostNameConfiguration` Submodule <a name="`dataAzurermApiManagementGatewayHostNameConfiguration` Submodule" id="@cdktf/provider-azurerm.dataAzurermApiManagementGatewayHostNameConfiguration"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

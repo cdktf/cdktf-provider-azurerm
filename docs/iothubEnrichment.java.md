@@ -1,3 +1,7 @@
+# `azurerm_iothub_enrichment`
+
+Refer to the Terraform Registory for docs: [`azurerm_iothub_enrichment`](https://www.terraform.io/docs/providers/azurerm/r/iothub_enrichment).
+
 # `iothubEnrichment` Submodule <a name="`iothubEnrichment` Submodule" id="@cdktf/provider-azurerm.iothubEnrichment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

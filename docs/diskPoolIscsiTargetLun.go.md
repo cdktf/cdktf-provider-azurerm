@@ -1,3 +1,7 @@
+# `azurerm_disk_pool_iscsi_target_lun`
+
+Refer to the Terraform Registory for docs: [`azurerm_disk_pool_iscsi_target_lun`](https://www.terraform.io/docs/providers/azurerm/r/disk_pool_iscsi_target_lun).
+
 # `diskPoolIscsiTargetLun` Submodule <a name="`diskPoolIscsiTargetLun` Submodule" id="@cdktf/provider-azurerm.diskPoolIscsiTargetLun"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

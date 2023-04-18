@@ -1,3 +1,7 @@
+# `azurerm_storage_account_local_user`
+
+Refer to the Terraform Registory for docs: [`azurerm_storage_account_local_user`](https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user).
+
 # `storageAccountLocalUser` Submodule <a name="`storageAccountLocalUser` Submodule" id="@cdktf/provider-azurerm.storageAccountLocalUser"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

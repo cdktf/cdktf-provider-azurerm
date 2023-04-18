@@ -1,3 +1,7 @@
+# `azurerm_automation_watcher`
+
+Refer to the Terraform Registory for docs: [`azurerm_automation_watcher`](https://www.terraform.io/docs/providers/azurerm/r/automation_watcher).
+
 # `automationWatcher` Submodule <a name="`automationWatcher` Submodule" id="@cdktf/provider-azurerm.automationWatcher"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

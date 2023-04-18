@@ -1,3 +1,7 @@
+# `azurerm_data_factory_linked_service_azure_function`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_factory_linked_service_azure_function`](https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function).
+
 # `dataFactoryLinkedServiceAzureFunction` Submodule <a name="`dataFactoryLinkedServiceAzureFunction` Submodule" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureFunction"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

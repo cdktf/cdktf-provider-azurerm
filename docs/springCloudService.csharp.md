@@ -1,3 +1,7 @@
+# `azurerm_spring_cloud_service`
+
+Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_service`](https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service).
+
 # `springCloudService` Submodule <a name="`springCloudService` Submodule" id="@cdktf/provider-azurerm.springCloudService"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_virtual_network_dns_servers`
+
+Refer to the Terraform Registory for docs: [`azurerm_virtual_network_dns_servers`](https://www.terraform.io/docs/providers/azurerm/r/virtual_network_dns_servers).
+
 # `virtualNetworkDnsServers` Submodule <a name="`virtualNetworkDnsServers` Submodule" id="@cdktf/provider-azurerm.virtualNetworkDnsServers"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_notification_hub_authorization_rule`
+
+Refer to the Terraform Registory for docs: [`azurerm_notification_hub_authorization_rule`](https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule).
+
 # `notificationHubAuthorizationRule` Submodule <a name="`notificationHubAuthorizationRule` Submodule" id="@cdktf/provider-azurerm.notificationHubAuthorizationRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

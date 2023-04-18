@@ -1,3 +1,7 @@
+# `azurerm_security_center_subscription_pricing`
+
+Refer to the Terraform Registory for docs: [`azurerm_security_center_subscription_pricing`](https://www.terraform.io/docs/providers/azurerm/r/security_center_subscription_pricing).
+
 # `securityCenterSubscriptionPricing` Submodule <a name="`securityCenterSubscriptionPricing` Submodule" id="@cdktf/provider-azurerm.securityCenterSubscriptionPricing"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

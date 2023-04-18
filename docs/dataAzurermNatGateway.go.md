@@ -1,3 +1,7 @@
+# `data_azurerm_nat_gateway`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_nat_gateway`](https://www.terraform.io/docs/providers/azurerm/d/nat_gateway).
+
 # `dataAzurermNatGateway` Submodule <a name="`dataAzurermNatGateway` Submodule" id="@cdktf/provider-azurerm.dataAzurermNatGateway"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

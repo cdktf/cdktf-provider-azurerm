@@ -1,3 +1,7 @@
+# `azurerm_logic_app_trigger_recurrence`
+
+Refer to the Terraform Registory for docs: [`azurerm_logic_app_trigger_recurrence`](https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence).
+
 # `logicAppTriggerRecurrence` Submodule <a name="`logicAppTriggerRecurrence` Submodule" id="@cdktf/provider-azurerm.logicAppTriggerRecurrence"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

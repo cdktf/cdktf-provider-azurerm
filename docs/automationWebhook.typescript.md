@@ -1,3 +1,7 @@
+# `azurerm_automation_webhook`
+
+Refer to the Terraform Registory for docs: [`azurerm_automation_webhook`](https://www.terraform.io/docs/providers/azurerm/r/automation_webhook).
+
 # `automationWebhook` Submodule <a name="`automationWebhook` Submodule" id="@cdktf/provider-azurerm.automationWebhook"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

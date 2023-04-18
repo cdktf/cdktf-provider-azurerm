@@ -1,3 +1,7 @@
+# `data_azurerm_kubernetes_cluster_node_pool`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_kubernetes_cluster_node_pool`](https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool).
+
 # `dataAzurermKubernetesClusterNodePool` Submodule <a name="`dataAzurermKubernetesClusterNodePool` Submodule" id="@cdktf/provider-azurerm.dataAzurermKubernetesClusterNodePool"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

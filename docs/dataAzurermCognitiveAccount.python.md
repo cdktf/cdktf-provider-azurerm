@@ -1,3 +1,7 @@
+# `data_azurerm_cognitive_account`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_cognitive_account`](https://www.terraform.io/docs/providers/azurerm/d/cognitive_account).
+
 # `dataAzurermCognitiveAccount` Submodule <a name="`dataAzurermCognitiveAccount` Submodule" id="@cdktf/provider-azurerm.dataAzurermCognitiveAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

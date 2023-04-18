@@ -1,3 +1,7 @@
+# `azurerm_cdn_frontdoor_rule_set`
+
+Refer to the Terraform Registory for docs: [`azurerm_cdn_frontdoor_rule_set`](https://www.terraform.io/docs/providers/azurerm/r/cdn_frontdoor_rule_set).
+
 # `cdnFrontdoorRuleSet` Submodule <a name="`cdnFrontdoorRuleSet` Submodule" id="@cdktf/provider-azurerm.cdnFrontdoorRuleSet"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

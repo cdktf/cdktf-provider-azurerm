@@ -1,3 +1,7 @@
+# `azurerm_spring_cloud_customized_accelerator`
+
+Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_customized_accelerator`](https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_customized_accelerator).
+
 # `springCloudCustomizedAccelerator` Submodule <a name="`springCloudCustomizedAccelerator` Submodule" id="@cdktf/provider-azurerm.springCloudCustomizedAccelerator"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `data_azurerm_app_service_plan`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_app_service_plan`](https://www.terraform.io/docs/providers/azurerm/d/app_service_plan).
+
 # `dataAzurermAppServicePlan` Submodule <a name="`dataAzurermAppServicePlan` Submodule" id="@cdktf/provider-azurerm.dataAzurermAppServicePlan"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

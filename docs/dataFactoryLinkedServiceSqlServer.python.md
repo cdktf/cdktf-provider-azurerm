@@ -1,3 +1,7 @@
+# `azurerm_data_factory_linked_service_sql_server`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_factory_linked_service_sql_server`](https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server).
+
 # `dataFactoryLinkedServiceSqlServer` Submodule <a name="`dataFactoryLinkedServiceSqlServer` Submodule" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceSqlServer"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

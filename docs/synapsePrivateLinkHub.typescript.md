@@ -1,3 +1,7 @@
+# `azurerm_synapse_private_link_hub`
+
+Refer to the Terraform Registory for docs: [`azurerm_synapse_private_link_hub`](https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub).
+
 # `synapsePrivateLinkHub` Submodule <a name="`synapsePrivateLinkHub` Submodule" id="@cdktf/provider-azurerm.synapsePrivateLinkHub"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

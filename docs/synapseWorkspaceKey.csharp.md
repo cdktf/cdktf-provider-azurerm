@@ -1,3 +1,7 @@
+# `azurerm_synapse_workspace_key`
+
+Refer to the Terraform Registory for docs: [`azurerm_synapse_workspace_key`](https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_key).
+
 # `synapseWorkspaceKey` Submodule <a name="`synapseWorkspaceKey` Submodule" id="@cdktf/provider-azurerm.synapseWorkspaceKey"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

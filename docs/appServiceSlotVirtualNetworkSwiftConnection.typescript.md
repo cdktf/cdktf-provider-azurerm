@@ -1,3 +1,7 @@
+# `azurerm_app_service_slot_virtual_network_swift_connection`
+
+Refer to the Terraform Registory for docs: [`azurerm_app_service_slot_virtual_network_swift_connection`](https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_virtual_network_swift_connection).
+
 # `appServiceSlotVirtualNetworkSwiftConnection` Submodule <a name="`appServiceSlotVirtualNetworkSwiftConnection` Submodule" id="@cdktf/provider-azurerm.appServiceSlotVirtualNetworkSwiftConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

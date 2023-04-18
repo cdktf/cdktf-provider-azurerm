@@ -1,3 +1,7 @@
+# `azurerm_virtual_desktop_workspace_application_group_association`
+
+Refer to the Terraform Registory for docs: [`azurerm_virtual_desktop_workspace_application_group_association`](https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace_application_group_association).
+
 # `virtualDesktopWorkspaceApplicationGroupAssociation` Submodule <a name="`virtualDesktopWorkspaceApplicationGroupAssociation` Submodule" id="@cdktf/provider-azurerm.virtualDesktopWorkspaceApplicationGroupAssociation"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

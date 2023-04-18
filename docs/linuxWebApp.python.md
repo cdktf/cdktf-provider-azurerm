@@ -1,3 +1,7 @@
+# `azurerm_linux_web_app`
+
+Refer to the Terraform Registory for docs: [`azurerm_linux_web_app`](https://www.terraform.io/docs/providers/azurerm/r/linux_web_app).
+
 # `linuxWebApp` Submodule <a name="`linuxWebApp` Submodule" id="@cdktf/provider-azurerm.linuxWebApp"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

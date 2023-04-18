@@ -1,3 +1,7 @@
+# `azurerm_spring_cloud_builder`
+
+Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_builder`](https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_builder).
+
 # `springCloudBuilder` Submodule <a name="`springCloudBuilder` Submodule" id="@cdktf/provider-azurerm.springCloudBuilder"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

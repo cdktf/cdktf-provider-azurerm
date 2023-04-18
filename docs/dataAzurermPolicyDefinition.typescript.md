@@ -1,3 +1,7 @@
+# `data_azurerm_policy_definition`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_policy_definition`](https://www.terraform.io/docs/providers/azurerm/d/policy_definition).
+
 # `dataAzurermPolicyDefinition` Submodule <a name="`dataAzurermPolicyDefinition` Submodule" id="@cdktf/provider-azurerm.dataAzurermPolicyDefinition"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

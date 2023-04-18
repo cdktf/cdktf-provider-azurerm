@@ -1,3 +1,7 @@
+# `azurerm_bot_service_azure_bot`
+
+Refer to the Terraform Registory for docs: [`azurerm_bot_service_azure_bot`](https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot).
+
 # `botServiceAzureBot` Submodule <a name="`botServiceAzureBot` Submodule" id="@cdktf/provider-azurerm.botServiceAzureBot"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

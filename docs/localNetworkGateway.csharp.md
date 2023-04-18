@@ -1,3 +1,7 @@
+# `azurerm_local_network_gateway`
+
+Refer to the Terraform Registory for docs: [`azurerm_local_network_gateway`](https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway).
+
 # `localNetworkGateway` Submodule <a name="`localNetworkGateway` Submodule" id="@cdktf/provider-azurerm.localNetworkGateway"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_bot_channel_line`
+
+Refer to the Terraform Registory for docs: [`azurerm_bot_channel_line`](https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line).
+
 # `botChannelLine` Submodule <a name="`botChannelLine` Submodule" id="@cdktf/provider-azurerm.botChannelLine"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

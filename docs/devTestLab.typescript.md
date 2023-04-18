@@ -1,3 +1,7 @@
+# `azurerm_dev_test_lab`
+
+Refer to the Terraform Registory for docs: [`azurerm_dev_test_lab`](https://www.terraform.io/docs/providers/azurerm/r/dev_test_lab).
+
 # `devTestLab` Submodule <a name="`devTestLab` Submodule" id="@cdktf/provider-azurerm.devTestLab"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

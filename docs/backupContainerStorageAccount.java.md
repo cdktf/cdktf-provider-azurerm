@@ -1,3 +1,7 @@
+# `azurerm_backup_container_storage_account`
+
+Refer to the Terraform Registory for docs: [`azurerm_backup_container_storage_account`](https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account).
+
 # `backupContainerStorageAccount` Submodule <a name="`backupContainerStorageAccount` Submodule" id="@cdktf/provider-azurerm.backupContainerStorageAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

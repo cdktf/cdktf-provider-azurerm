@@ -1,3 +1,7 @@
+# `azurerm_kusto_cluster`
+
+Refer to the Terraform Registory for docs: [`azurerm_kusto_cluster`](https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster).
+
 # `kustoCluster` Submodule <a name="`kustoCluster` Submodule" id="@cdktf/provider-azurerm.kustoCluster"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_servicebus_namespace_authorization_rule`
+
+Refer to the Terraform Registory for docs: [`azurerm_servicebus_namespace_authorization_rule`](https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule).
+
 # `servicebusNamespaceAuthorizationRule` Submodule <a name="`servicebusNamespaceAuthorizationRule` Submodule" id="@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_app_configuration`
+
+Refer to the Terraform Registory for docs: [`azurerm_app_configuration`](https://www.terraform.io/docs/providers/azurerm/r/app_configuration).
+
 # `appConfiguration` Submodule <a name="`appConfiguration` Submodule" id="@cdktf/provider-azurerm.appConfiguration"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

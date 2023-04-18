@@ -1,3 +1,7 @@
+# `azurerm_virtual_desktop_application`
+
+Refer to the Terraform Registory for docs: [`azurerm_virtual_desktop_application`](https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application).
+
 # `virtualDesktopApplication` Submodule <a name="`virtualDesktopApplication` Submodule" id="@cdktf/provider-azurerm.virtualDesktopApplication"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

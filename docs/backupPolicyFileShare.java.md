@@ -1,3 +1,7 @@
+# `azurerm_backup_policy_file_share`
+
+Refer to the Terraform Registory for docs: [`azurerm_backup_policy_file_share`](https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share).
+
 # `backupPolicyFileShare` Submodule <a name="`backupPolicyFileShare` Submodule" id="@cdktf/provider-azurerm.backupPolicyFileShare"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

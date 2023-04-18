@@ -1,3 +1,7 @@
+# `azurerm_frontdoor_firewall_policy`
+
+Refer to the Terraform Registory for docs: [`azurerm_frontdoor_firewall_policy`](https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy).
+
 # `frontdoorFirewallPolicy` Submodule <a name="`frontdoorFirewallPolicy` Submodule" id="@cdktf/provider-azurerm.frontdoorFirewallPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

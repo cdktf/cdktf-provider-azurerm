@@ -1,3 +1,7 @@
+# `azurerm_backup_policy_vm`
+
+Refer to the Terraform Registory for docs: [`azurerm_backup_policy_vm`](https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm).
+
 # `backupPolicyVm` Submodule <a name="`backupPolicyVm` Submodule" id="@cdktf/provider-azurerm.backupPolicyVm"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

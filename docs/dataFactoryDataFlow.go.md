@@ -1,3 +1,7 @@
+# `azurerm_data_factory_data_flow`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_factory_data_flow`](https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow).
+
 # `dataFactoryDataFlow` Submodule <a name="`dataFactoryDataFlow` Submodule" id="@cdktf/provider-azurerm.dataFactoryDataFlow"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

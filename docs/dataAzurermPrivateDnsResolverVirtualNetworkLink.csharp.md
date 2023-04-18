@@ -1,3 +1,7 @@
+# `data_azurerm_private_dns_resolver_virtual_network_link`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_private_dns_resolver_virtual_network_link`](https://www.terraform.io/docs/providers/azurerm/d/private_dns_resolver_virtual_network_link).
+
 # `dataAzurermPrivateDnsResolverVirtualNetworkLink` Submodule <a name="`dataAzurermPrivateDnsResolverVirtualNetworkLink` Submodule" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsResolverVirtualNetworkLink"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

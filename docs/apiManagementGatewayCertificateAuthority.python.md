@@ -1,3 +1,7 @@
+# `azurerm_api_management_gateway_certificate_authority`
+
+Refer to the Terraform Registory for docs: [`azurerm_api_management_gateway_certificate_authority`](https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_certificate_authority).
+
 # `apiManagementGatewayCertificateAuthority` Submodule <a name="`apiManagementGatewayCertificateAuthority` Submodule" id="@cdktf/provider-azurerm.apiManagementGatewayCertificateAuthority"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

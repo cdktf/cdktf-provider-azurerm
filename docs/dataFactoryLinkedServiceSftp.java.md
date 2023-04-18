@@ -1,3 +1,7 @@
+# `azurerm_data_factory_linked_service_sftp`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_factory_linked_service_sftp`](https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp).
+
 # `dataFactoryLinkedServiceSftp` Submodule <a name="`dataFactoryLinkedServiceSftp` Submodule" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceSftp"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

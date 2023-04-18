@@ -1,3 +1,7 @@
+# `azurerm_source_control_token`
+
+Refer to the Terraform Registory for docs: [`azurerm_source_control_token`](https://www.terraform.io/docs/providers/azurerm/r/source_control_token).
+
 # `sourceControlToken` Submodule <a name="`sourceControlToken` Submodule" id="@cdktf/provider-azurerm.sourceControlToken"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

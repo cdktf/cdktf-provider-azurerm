@@ -1,3 +1,7 @@
+# `azurerm_data_factory_custom_dataset`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_factory_custom_dataset`](https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset).
+
 # `dataFactoryCustomDataset` Submodule <a name="`dataFactoryCustomDataset` Submodule" id="@cdktf/provider-azurerm.dataFactoryCustomDataset"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

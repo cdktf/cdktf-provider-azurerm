@@ -1,3 +1,7 @@
+# `azurerm_nginx_certificate`
+
+Refer to the Terraform Registory for docs: [`azurerm_nginx_certificate`](https://www.terraform.io/docs/providers/azurerm/r/nginx_certificate).
+
 # `nginxCertificate` Submodule <a name="`nginxCertificate` Submodule" id="@cdktf/provider-azurerm.nginxCertificate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

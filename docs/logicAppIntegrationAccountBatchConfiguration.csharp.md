@@ -1,3 +1,7 @@
+# `azurerm_logic_app_integration_account_batch_configuration`
+
+Refer to the Terraform Registory for docs: [`azurerm_logic_app_integration_account_batch_configuration`](https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_batch_configuration).
+
 # `logicAppIntegrationAccountBatchConfiguration` Submodule <a name="`logicAppIntegrationAccountBatchConfiguration` Submodule" id="@cdktf/provider-azurerm.logicAppIntegrationAccountBatchConfiguration"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

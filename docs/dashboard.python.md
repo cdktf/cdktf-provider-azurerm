@@ -1,3 +1,7 @@
+# `azurerm_dashboard`
+
+Refer to the Terraform Registory for docs: [`azurerm_dashboard`](https://www.terraform.io/docs/providers/azurerm/r/dashboard).
+
 # `dashboard` Submodule <a name="`dashboard` Submodule" id="@cdktf/provider-azurerm.dashboard"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

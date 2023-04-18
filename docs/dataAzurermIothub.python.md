@@ -1,3 +1,7 @@
+# `data_azurerm_iothub`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_iothub`](https://www.terraform.io/docs/providers/azurerm/d/iothub).
+
 # `dataAzurermIothub` Submodule <a name="`dataAzurermIothub` Submodule" id="@cdktf/provider-azurerm.dataAzurermIothub"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

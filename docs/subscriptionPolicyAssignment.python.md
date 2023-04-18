@@ -1,3 +1,7 @@
+# `azurerm_subscription_policy_assignment`
+
+Refer to the Terraform Registory for docs: [`azurerm_subscription_policy_assignment`](https://www.terraform.io/docs/providers/azurerm/r/subscription_policy_assignment).
+
 # `subscriptionPolicyAssignment` Submodule <a name="`subscriptionPolicyAssignment` Submodule" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

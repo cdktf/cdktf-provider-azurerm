@@ -1,3 +1,7 @@
+# `azurerm_security_center_setting`
+
+Refer to the Terraform Registory for docs: [`azurerm_security_center_setting`](https://www.terraform.io/docs/providers/azurerm/r/security_center_setting).
+
 # `securityCenterSetting` Submodule <a name="`securityCenterSetting` Submodule" id="@cdktf/provider-azurerm.securityCenterSetting"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

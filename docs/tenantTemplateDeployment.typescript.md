@@ -1,3 +1,7 @@
+# `azurerm_tenant_template_deployment`
+
+Refer to the Terraform Registory for docs: [`azurerm_tenant_template_deployment`](https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment).
+
 # `tenantTemplateDeployment` Submodule <a name="`tenantTemplateDeployment` Submodule" id="@cdktf/provider-azurerm.tenantTemplateDeployment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

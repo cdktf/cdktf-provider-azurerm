@@ -1,3 +1,7 @@
+# `data_azurerm_role_definition`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_role_definition`](https://www.terraform.io/docs/providers/azurerm/d/role_definition).
+
 # `dataAzurermRoleDefinition` Submodule <a name="`dataAzurermRoleDefinition` Submodule" id="@cdktf/provider-azurerm.dataAzurermRoleDefinition"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
