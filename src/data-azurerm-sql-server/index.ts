@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/sql_server
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/sql_server
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_server#id DataAzurermSqlServer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/sql_server#id DataAzurermSqlServer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_server#name DataAzurermSqlServer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/sql_server#name DataAzurermSqlServer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_server#resource_group_name DataAzurermSqlServer#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/sql_server#resource_group_name DataAzurermSqlServer#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_server#timeouts DataAzurermSqlServer#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/sql_server#timeouts DataAzurermSqlServer#timeouts}
   */
   readonly timeouts?: DataAzurermSqlServerTimeouts;
 }
@@ -105,12 +105,12 @@ export class DataAzurermSqlServerIdentityList extends cdktf.ComplexList {
 }
 export interface DataAzurermSqlServerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_server#read DataAzurermSqlServer#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/sql_server#read DataAzurermSqlServer#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermSqlServerTimeoutsToTerraform(struct?: DataAzurermSqlServerTimeoutsOutputReference | DataAzurermSqlServerTimeouts | cdktf.IResolvable): any {
+export function dataAzurermSqlServerTimeoutsToTerraform(struct?: DataAzurermSqlServerTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -129,7 +129,7 @@ export class DataAzurermSqlServerTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermSqlServerTimeouts | cdktf.IResolvable | undefined {
@@ -180,7 +180,7 @@ export class DataAzurermSqlServerTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/sql_server azurerm_sql_server}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/sql_server azurerm_sql_server}
 */
 export class DataAzurermSqlServer extends cdktf.TerraformDataSource {
 
@@ -194,7 +194,7 @@ export class DataAzurermSqlServer extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/sql_server azurerm_sql_server} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/sql_server azurerm_sql_server} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

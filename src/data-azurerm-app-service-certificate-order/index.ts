@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate_order
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_certificate_order
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAppServiceCertificateOrderConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate_order#id DataAzurermAppServiceCertificateOrder#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_certificate_order#id DataAzurermAppServiceCertificateOrder#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate_order#name DataAzurermAppServiceCertificateOrder#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_certificate_order#name DataAzurermAppServiceCertificateOrder#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate_order#resource_group_name DataAzurermAppServiceCertificateOrder#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_certificate_order#resource_group_name DataAzurermAppServiceCertificateOrder#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate_order#timeouts DataAzurermAppServiceCertificateOrder#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_certificate_order#timeouts DataAzurermAppServiceCertificateOrder#timeouts}
   */
   readonly timeouts?: DataAzurermAppServiceCertificateOrderTimeouts;
 }
@@ -110,12 +110,12 @@ export class DataAzurermAppServiceCertificateOrderCertificatesList extends cdktf
 }
 export interface DataAzurermAppServiceCertificateOrderTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate_order#read DataAzurermAppServiceCertificateOrder#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_certificate_order#read DataAzurermAppServiceCertificateOrder#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermAppServiceCertificateOrderTimeoutsToTerraform(struct?: DataAzurermAppServiceCertificateOrderTimeoutsOutputReference | DataAzurermAppServiceCertificateOrderTimeouts | cdktf.IResolvable): any {
+export function dataAzurermAppServiceCertificateOrderTimeoutsToTerraform(struct?: DataAzurermAppServiceCertificateOrderTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -134,7 +134,7 @@ export class DataAzurermAppServiceCertificateOrderTimeoutsOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermAppServiceCertificateOrderTimeouts | cdktf.IResolvable | undefined {
@@ -185,7 +185,7 @@ export class DataAzurermAppServiceCertificateOrderTimeoutsOutputReference extend
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate_order azurerm_app_service_certificate_order}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_certificate_order azurerm_app_service_certificate_order}
 */
 export class DataAzurermAppServiceCertificateOrder extends cdktf.TerraformDataSource {
 
@@ -199,7 +199,7 @@ export class DataAzurermAppServiceCertificateOrder extends cdktf.TerraformDataSo
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate_order azurerm_app_service_certificate_order} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_certificate_order azurerm_app_service_certificate_order} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,6 +1,6 @@
 # `azurerm_bot_channel_slack`
 
-Refer to the Terraform Registory for docs: [`azurerm_bot_channel_slack`](https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack).
+Refer to the Terraform Registory for docs: [`azurerm_bot_channel_slack`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack).
 
 # `botChannelSlack` Submodule <a name="`botChannelSlack` Submodule" id="@cdktf/provider-azurerm.botChannelSlack"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_bot_channel_slack`](https:/
 
 ### BotChannelSlack <a name="BotChannelSlack" id="@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack azurerm_bot_channel_slack}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack azurerm_bot_channel_slack}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer"></a>
 
@@ -19,6 +19,7 @@ BotChannelSlack.Builder.create(Construct scope, java.lang.String id)
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -44,21 +45,21 @@ BotChannelSlack.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.botName">botName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#bot_name BotChannelSlack#bot_name}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.clientId">clientId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#client_id BotChannelSlack#client_id}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.clientSecret">clientSecret</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#client_secret BotChannelSlack#client_secret}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#location BotChannelSlack#location}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#resource_group_name BotChannelSlack#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.verificationToken">verificationToken</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#verification_token BotChannelSlack#verification_token}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#id BotChannelSlack#id}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.landingPageUrl">landingPageUrl</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#landing_page_url BotChannelSlack#landing_page_url}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.signingSecret">signingSecret</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#signing_secret BotChannelSlack#signing_secret}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.botName">botName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#bot_name BotChannelSlack#bot_name}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.clientId">clientId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#client_id BotChannelSlack#client_id}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.clientSecret">clientSecret</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#client_secret BotChannelSlack#client_secret}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#location BotChannelSlack#location}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#resource_group_name BotChannelSlack#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.verificationToken">verificationToken</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#verification_token BotChannelSlack#verification_token}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#id BotChannelSlack#id}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.landingPageUrl">landingPageUrl</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#landing_page_url BotChannelSlack#landing_page_url}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.signingSecret">signingSecret</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#signing_secret BotChannelSlack#signing_secret}. |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts">BotChannelSlackTimeouts</a></code> | timeouts block. |
 
 ---
@@ -89,7 +90,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -127,7 +128,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#bot_name BotChannelSlack#bot_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#bot_name BotChannelSlack#bot_name}.
 
 ---
 
@@ -135,7 +136,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#client_id BotChannelSlack#client_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#client_id BotChannelSlack#client_id}.
 
 ---
 
@@ -143,7 +144,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#client_secret BotChannelSlack#client_secret}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#client_secret BotChannelSlack#client_secret}.
 
 ---
 
@@ -151,7 +152,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#location BotChannelSlack#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#location BotChannelSlack#location}.
 
 ---
 
@@ -159,7 +160,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#resource_group_name BotChannelSlack#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#resource_group_name BotChannelSlack#resource_group_name}.
 
 ---
 
@@ -167,7 +168,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#verification_token BotChannelSlack#verification_token}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#verification_token BotChannelSlack#verification_token}.
 
 ---
 
@@ -175,7 +176,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#id BotChannelSlack#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#id BotChannelSlack#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -186,7 +187,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#landing_page_url BotChannelSlack#landing_page_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#landing_page_url BotChannelSlack#landing_page_url}.
 
 ---
 
@@ -194,7 +195,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#signing_secret BotChannelSlack#signing_secret}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#signing_secret BotChannelSlack#signing_secret}.
 
 ---
 
@@ -204,7 +205,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#timeouts BotChannelSlack#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#timeouts BotChannelSlack#timeouts}
 
 ---
 
@@ -538,7 +539,7 @@ BotChannelSlack.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -652,10 +653,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -940,6 +941,7 @@ BotChannelSlackConfig.builder()
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -965,21 +967,21 @@ BotChannelSlackConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.botName">botName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#bot_name BotChannelSlack#bot_name}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.clientId">clientId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#client_id BotChannelSlack#client_id}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.clientSecret">clientSecret</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#client_secret BotChannelSlack#client_secret}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#location BotChannelSlack#location}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#resource_group_name BotChannelSlack#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.verificationToken">verificationToken</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#verification_token BotChannelSlack#verification_token}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#id BotChannelSlack#id}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.landingPageUrl">landingPageUrl</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#landing_page_url BotChannelSlack#landing_page_url}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.signingSecret">signingSecret</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#signing_secret BotChannelSlack#signing_secret}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.botName">botName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#bot_name BotChannelSlack#bot_name}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.clientId">clientId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#client_id BotChannelSlack#client_id}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.clientSecret">clientSecret</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#client_secret BotChannelSlack#client_secret}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#location BotChannelSlack#location}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#resource_group_name BotChannelSlack#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.verificationToken">verificationToken</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#verification_token BotChannelSlack#verification_token}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#id BotChannelSlack#id}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.landingPageUrl">landingPageUrl</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#landing_page_url BotChannelSlack#landing_page_url}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.signingSecret">signingSecret</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#signing_secret BotChannelSlack#signing_secret}. |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts">BotChannelSlackTimeouts</a></code> | timeouts block. |
 
 ---
@@ -997,10 +999,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1062,7 +1064,7 @@ public java.lang.String getBotName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#bot_name BotChannelSlack#bot_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#bot_name BotChannelSlack#bot_name}.
 
 ---
 
@@ -1074,7 +1076,7 @@ public java.lang.String getClientId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#client_id BotChannelSlack#client_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#client_id BotChannelSlack#client_id}.
 
 ---
 
@@ -1086,7 +1088,7 @@ public java.lang.String getClientSecret();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#client_secret BotChannelSlack#client_secret}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#client_secret BotChannelSlack#client_secret}.
 
 ---
 
@@ -1098,7 +1100,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#location BotChannelSlack#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#location BotChannelSlack#location}.
 
 ---
 
@@ -1110,7 +1112,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#resource_group_name BotChannelSlack#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#resource_group_name BotChannelSlack#resource_group_name}.
 
 ---
 
@@ -1122,7 +1124,7 @@ public java.lang.String getVerificationToken();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#verification_token BotChannelSlack#verification_token}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#verification_token BotChannelSlack#verification_token}.
 
 ---
 
@@ -1134,7 +1136,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#id BotChannelSlack#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#id BotChannelSlack#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1149,7 +1151,7 @@ public java.lang.String getLandingPageUrl();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#landing_page_url BotChannelSlack#landing_page_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#landing_page_url BotChannelSlack#landing_page_url}.
 
 ---
 
@@ -1161,7 +1163,7 @@ public java.lang.String getSigningSecret();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#signing_secret BotChannelSlack#signing_secret}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#signing_secret BotChannelSlack#signing_secret}.
 
 ---
 
@@ -1175,7 +1177,7 @@ public BotChannelSlackTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#timeouts BotChannelSlack#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#timeouts BotChannelSlack#timeouts}
 
 ---
 
@@ -1198,10 +1200,10 @@ BotChannelSlackTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#create BotChannelSlack#create}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#delete BotChannelSlack#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#read BotChannelSlack#read}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#update BotChannelSlack#update}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#create BotChannelSlack#create}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#delete BotChannelSlack#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#read BotChannelSlack#read}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#update BotChannelSlack#update}. |
 
 ---
 
@@ -1213,7 +1215,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#create BotChannelSlack#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#create BotChannelSlack#create}.
 
 ---
 
@@ -1225,7 +1227,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#delete BotChannelSlack#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#delete BotChannelSlack#delete}.
 
 ---
 
@@ -1237,7 +1239,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#read BotChannelSlack#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#read BotChannelSlack#read}.
 
 ---
 
@@ -1249,7 +1251,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack#update BotChannelSlack#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/bot_channel_slack#update BotChannelSlack#update}.
 
 ---
 

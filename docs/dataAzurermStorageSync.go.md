@@ -1,6 +1,6 @@
 # `data_azurerm_storage_sync`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_storage_sync`](https://www.terraform.io/docs/providers/azurerm/d/storage_sync).
+Refer to the Terraform Registory for docs: [`data_azurerm_storage_sync`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_sync).
 
 # `dataAzurermStorageSync` Submodule <a name="`dataAzurermStorageSync` Submodule" id="@cdktf/provider-azurerm.dataAzurermStorageSync"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_storage_sync`](https:/
 
 ### DataAzurermStorageSync <a name="DataAzurermStorageSync" id="@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_sync azurerm_storage_sync}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_sync azurerm_storage_sync}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstoragesync"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstoragesync"
 
 dataazurermstoragesync.NewDataAzurermStorageSync(scope Construct, id *string, config DataAzurermStorageSyncConfig) DataAzurermStorageSync
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstoragesync"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstoragesync"
 
 dataazurermstoragesync.DataAzurermStorageSync_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstoragesync"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstoragesync"
 
 dataazurermstoragesync.DataAzurermStorageSync_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermstoragesync.DataAzurermStorageSync_IsTerraformElement(x interface{}) 
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstoragesync"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstoragesync"
 
 dataazurermstoragesync.DataAzurermStorageSync_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -365,7 +365,7 @@ dataazurermstoragesync.DataAzurermStorageSync_IsTerraformDataSource(x interface{
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>*map[string]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -459,10 +459,10 @@ func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -641,11 +641,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstoragesync"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstoragesync"
 
 &dataazurermstoragesync.DataAzurermStorageSyncConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -654,7 +654,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstorage
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermStorageSync.DataAzurermStorageSyncTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermStorageSync.DataAzurermStorageSyncTimeouts,
 }
 ```
 
@@ -663,15 +663,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstorage
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_sync#name DataAzurermStorageSync#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_sync#resource_group_name DataAzurermStorageSync#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_sync#id DataAzurermStorageSync#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_sync#name DataAzurermStorageSync#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_sync#resource_group_name DataAzurermStorageSync#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_sync#id DataAzurermStorageSync#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncTimeouts">DataAzurermStorageSyncTimeouts</a></code> | timeouts block. |
 
 ---
@@ -689,10 +689,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -754,7 +754,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_sync#name DataAzurermStorageSync#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_sync#name DataAzurermStorageSync#name}.
 
 ---
 
@@ -766,7 +766,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_sync#resource_group_name DataAzurermStorageSync#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_sync#resource_group_name DataAzurermStorageSync#resource_group_name}.
 
 ---
 
@@ -778,7 +778,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_sync#id DataAzurermStorageSync#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_sync#id DataAzurermStorageSync#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -795,7 +795,7 @@ Timeouts DataAzurermStorageSyncTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_sync#timeouts DataAzurermStorageSync#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_sync#timeouts DataAzurermStorageSync#timeouts}
 
 ---
 
@@ -804,7 +804,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstoragesync"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstoragesync"
 
 &dataazurermstoragesync.DataAzurermStorageSyncTimeouts {
 	Read: *string,
@@ -815,7 +815,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstorage
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_sync#read DataAzurermStorageSync#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_sync#read DataAzurermStorageSync#read}. |
 
 ---
 
@@ -827,7 +827,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_sync#read DataAzurermStorageSync#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_sync#read DataAzurermStorageSync#read}.
 
 ---
 
@@ -838,7 +838,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermstoragesync"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstoragesync"
 
 dataazurermstoragesync.NewDataAzurermStorageSyncTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermStorageSyncTimeoutsOutputReference
 ```

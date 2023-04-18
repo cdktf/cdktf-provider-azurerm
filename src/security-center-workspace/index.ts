@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface SecurityCenterWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#id SecurityCenterWorkspace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#id SecurityCenterWorkspace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#scope SecurityCenterWorkspace#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#scope SecurityCenterWorkspace#scope}
   */
   readonly scope: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#workspace_id SecurityCenterWorkspace#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#workspace_id SecurityCenterWorkspace#workspace_id}
   */
   readonly workspaceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#timeouts SecurityCenterWorkspace#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#timeouts SecurityCenterWorkspace#timeouts}
   */
   readonly timeouts?: SecurityCenterWorkspaceTimeouts;
 }
 export interface SecurityCenterWorkspaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#create SecurityCenterWorkspace#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#create SecurityCenterWorkspace#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#delete SecurityCenterWorkspace#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#delete SecurityCenterWorkspace#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#read SecurityCenterWorkspace#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#read SecurityCenterWorkspace#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#update SecurityCenterWorkspace#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#update SecurityCenterWorkspace#update}
   */
   readonly update?: string;
 }
 
-export function securityCenterWorkspaceTimeoutsToTerraform(struct?: SecurityCenterWorkspaceTimeoutsOutputReference | SecurityCenterWorkspaceTimeouts | cdktf.IResolvable): any {
+export function securityCenterWorkspaceTimeoutsToTerraform(struct?: SecurityCenterWorkspaceTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -70,7 +70,7 @@ export class SecurityCenterWorkspaceTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): SecurityCenterWorkspaceTimeouts | cdktf.IResolvable | undefined {
@@ -187,7 +187,7 @@ export class SecurityCenterWorkspaceTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace azurerm_security_center_workspace}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace azurerm_security_center_workspace}
 */
 export class SecurityCenterWorkspace extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class SecurityCenterWorkspace extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace azurerm_security_center_workspace} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace azurerm_security_center_workspace} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

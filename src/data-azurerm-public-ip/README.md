@@ -1,3 +1,3 @@
 # `data_azurerm_public_ip`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_public_ip`](https://www.terraform.io/docs/providers/azurerm/d/public_ip).
+Refer to the Terraform Registory for docs: [`data_azurerm_public_ip`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/public_ip).

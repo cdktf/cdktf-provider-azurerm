@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/policy_definition
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_definition
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermPolicyDefinitionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition#display_name DataAzurermPolicyDefinition#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_definition#display_name DataAzurermPolicyDefinition#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition#id DataAzurermPolicyDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_definition#id DataAzurermPolicyDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition#management_group_name DataAzurermPolicyDefinition#management_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_definition#management_group_name DataAzurermPolicyDefinition#management_group_name}
   */
   readonly managementGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition#name DataAzurermPolicyDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_definition#name DataAzurermPolicyDefinition#name}
   */
   readonly name?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition#timeouts DataAzurermPolicyDefinition#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_definition#timeouts DataAzurermPolicyDefinition#timeouts}
   */
   readonly timeouts?: DataAzurermPolicyDefinitionTimeouts;
 }
 export interface DataAzurermPolicyDefinitionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition#read DataAzurermPolicyDefinition#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_definition#read DataAzurermPolicyDefinition#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermPolicyDefinitionTimeoutsToTerraform(struct?: DataAzurermPolicyDefinitionTimeoutsOutputReference | DataAzurermPolicyDefinitionTimeouts | cdktf.IResolvable): any {
+export function dataAzurermPolicyDefinitionTimeoutsToTerraform(struct?: DataAzurermPolicyDefinitionTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -59,7 +59,7 @@ export class DataAzurermPolicyDefinitionTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermPolicyDefinitionTimeouts | cdktf.IResolvable | undefined {
@@ -110,7 +110,7 @@ export class DataAzurermPolicyDefinitionTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition azurerm_policy_definition}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_definition azurerm_policy_definition}
 */
 export class DataAzurermPolicyDefinition extends cdktf.TerraformDataSource {
 
@@ -124,7 +124,7 @@ export class DataAzurermPolicyDefinition extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition azurerm_policy_definition} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_definition azurerm_policy_definition} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

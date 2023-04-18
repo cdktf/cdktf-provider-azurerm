@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_mpa_account_scope
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,15 +8,15 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermBillingMpaAccountScopeConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope#billing_account_name DataAzurermBillingMpaAccountScope#billing_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_mpa_account_scope#billing_account_name DataAzurermBillingMpaAccountScope#billing_account_name}
   */
   readonly billingAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope#customer_name DataAzurermBillingMpaAccountScope#customer_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_mpa_account_scope#customer_name DataAzurermBillingMpaAccountScope#customer_name}
   */
   readonly customerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope#id DataAzurermBillingMpaAccountScope#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_mpa_account_scope#id DataAzurermBillingMpaAccountScope#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -25,18 +25,18 @@ export interface DataAzurermBillingMpaAccountScopeConfig extends cdktf.Terraform
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope#timeouts DataAzurermBillingMpaAccountScope#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_mpa_account_scope#timeouts DataAzurermBillingMpaAccountScope#timeouts}
   */
   readonly timeouts?: DataAzurermBillingMpaAccountScopeTimeouts;
 }
 export interface DataAzurermBillingMpaAccountScopeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope#read DataAzurermBillingMpaAccountScope#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_mpa_account_scope#read DataAzurermBillingMpaAccountScope#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermBillingMpaAccountScopeTimeoutsToTerraform(struct?: DataAzurermBillingMpaAccountScopeTimeoutsOutputReference | DataAzurermBillingMpaAccountScopeTimeouts | cdktf.IResolvable): any {
+export function dataAzurermBillingMpaAccountScopeTimeoutsToTerraform(struct?: DataAzurermBillingMpaAccountScopeTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -55,7 +55,7 @@ export class DataAzurermBillingMpaAccountScopeTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermBillingMpaAccountScopeTimeouts | cdktf.IResolvable | undefined {
@@ -106,7 +106,7 @@ export class DataAzurermBillingMpaAccountScopeTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope azurerm_billing_mpa_account_scope}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_mpa_account_scope azurerm_billing_mpa_account_scope}
 */
 export class DataAzurermBillingMpaAccountScope extends cdktf.TerraformDataSource {
 
@@ -120,7 +120,7 @@ export class DataAzurermBillingMpaAccountScope extends cdktf.TerraformDataSource
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope azurerm_billing_mpa_account_scope} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_mpa_account_scope azurerm_billing_mpa_account_scope} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/marketplace_agreement
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/marketplace_agreement
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMarketplaceAgreementConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/marketplace_agreement#id DataAzurermMarketplaceAgreement#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/marketplace_agreement#id DataAzurermMarketplaceAgreement#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/marketplace_agreement#offer DataAzurermMarketplaceAgreement#offer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/marketplace_agreement#offer DataAzurermMarketplaceAgreement#offer}
   */
   readonly offer: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/marketplace_agreement#plan DataAzurermMarketplaceAgreement#plan}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/marketplace_agreement#plan DataAzurermMarketplaceAgreement#plan}
   */
   readonly plan: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/marketplace_agreement#publisher DataAzurermMarketplaceAgreement#publisher}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/marketplace_agreement#publisher DataAzurermMarketplaceAgreement#publisher}
   */
   readonly publisher: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/marketplace_agreement#timeouts DataAzurermMarketplaceAgreement#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/marketplace_agreement#timeouts DataAzurermMarketplaceAgreement#timeouts}
   */
   readonly timeouts?: DataAzurermMarketplaceAgreementTimeouts;
 }
 export interface DataAzurermMarketplaceAgreementTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/marketplace_agreement#read DataAzurermMarketplaceAgreement#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/marketplace_agreement#read DataAzurermMarketplaceAgreement#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermMarketplaceAgreementTimeoutsToTerraform(struct?: DataAzurermMarketplaceAgreementTimeoutsOutputReference | DataAzurermMarketplaceAgreementTimeouts | cdktf.IResolvable): any {
+export function dataAzurermMarketplaceAgreementTimeoutsToTerraform(struct?: DataAzurermMarketplaceAgreementTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -59,7 +59,7 @@ export class DataAzurermMarketplaceAgreementTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermMarketplaceAgreementTimeouts | cdktf.IResolvable | undefined {
@@ -110,7 +110,7 @@ export class DataAzurermMarketplaceAgreementTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/marketplace_agreement azurerm_marketplace_agreement}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/marketplace_agreement azurerm_marketplace_agreement}
 */
 export class DataAzurermMarketplaceAgreement extends cdktf.TerraformDataSource {
 
@@ -124,7 +124,7 @@ export class DataAzurermMarketplaceAgreement extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/marketplace_agreement azurerm_marketplace_agreement} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/marketplace_agreement azurerm_marketplace_agreement} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

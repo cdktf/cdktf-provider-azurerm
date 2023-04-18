@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/managed_disk_sas_token
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_disk_sas_token
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface ManagedDiskSasTokenConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk_sas_token#access_level ManagedDiskSasToken#access_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_disk_sas_token#access_level ManagedDiskSasToken#access_level}
   */
   readonly accessLevel: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk_sas_token#duration_in_seconds ManagedDiskSasToken#duration_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_disk_sas_token#duration_in_seconds ManagedDiskSasToken#duration_in_seconds}
   */
   readonly durationInSeconds: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk_sas_token#id ManagedDiskSasToken#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_disk_sas_token#id ManagedDiskSasToken#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk_sas_token#managed_disk_id ManagedDiskSasToken#managed_disk_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_disk_sas_token#managed_disk_id ManagedDiskSasToken#managed_disk_id}
   */
   readonly managedDiskId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk_sas_token#timeouts ManagedDiskSasToken#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_disk_sas_token#timeouts ManagedDiskSasToken#timeouts}
   */
   readonly timeouts?: ManagedDiskSasTokenTimeouts;
 }
 export interface ManagedDiskSasTokenTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk_sas_token#create ManagedDiskSasToken#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_disk_sas_token#create ManagedDiskSasToken#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk_sas_token#delete ManagedDiskSasToken#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_disk_sas_token#delete ManagedDiskSasToken#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk_sas_token#read ManagedDiskSasToken#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_disk_sas_token#read ManagedDiskSasToken#read}
   */
   readonly read?: string;
 }
 
-export function managedDiskSasTokenTimeoutsToTerraform(struct?: ManagedDiskSasTokenTimeoutsOutputReference | ManagedDiskSasTokenTimeouts | cdktf.IResolvable): any {
+export function managedDiskSasTokenTimeoutsToTerraform(struct?: ManagedDiskSasTokenTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -69,7 +69,7 @@ export class ManagedDiskSasTokenTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ManagedDiskSasTokenTimeouts | cdktf.IResolvable | undefined {
@@ -164,7 +164,7 @@ export class ManagedDiskSasTokenTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk_sas_token azurerm_managed_disk_sas_token}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_disk_sas_token azurerm_managed_disk_sas_token}
 */
 export class ManagedDiskSasToken extends cdktf.TerraformResource {
 
@@ -178,7 +178,7 @@ export class ManagedDiskSasToken extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk_sas_token azurerm_managed_disk_sas_token} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_disk_sas_token azurerm_managed_disk_sas_token} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

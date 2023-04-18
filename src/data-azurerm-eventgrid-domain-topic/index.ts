@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/eventgrid_domain_topic
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermEventgridDomainTopicConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic#domain_name DataAzurermEventgridDomainTopic#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/eventgrid_domain_topic#domain_name DataAzurermEventgridDomainTopic#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic#id DataAzurermEventgridDomainTopic#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/eventgrid_domain_topic#id DataAzurermEventgridDomainTopic#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic#name DataAzurermEventgridDomainTopic#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/eventgrid_domain_topic#name DataAzurermEventgridDomainTopic#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic#resource_group_name DataAzurermEventgridDomainTopic#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/eventgrid_domain_topic#resource_group_name DataAzurermEventgridDomainTopic#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic#timeouts DataAzurermEventgridDomainTopic#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/eventgrid_domain_topic#timeouts DataAzurermEventgridDomainTopic#timeouts}
   */
   readonly timeouts?: DataAzurermEventgridDomainTopicTimeouts;
 }
 export interface DataAzurermEventgridDomainTopicTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic#read DataAzurermEventgridDomainTopic#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/eventgrid_domain_topic#read DataAzurermEventgridDomainTopic#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermEventgridDomainTopicTimeoutsToTerraform(struct?: DataAzurermEventgridDomainTopicTimeoutsOutputReference | DataAzurermEventgridDomainTopicTimeouts | cdktf.IResolvable): any {
+export function dataAzurermEventgridDomainTopicTimeoutsToTerraform(struct?: DataAzurermEventgridDomainTopicTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -59,7 +59,7 @@ export class DataAzurermEventgridDomainTopicTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermEventgridDomainTopicTimeouts | cdktf.IResolvable | undefined {
@@ -110,7 +110,7 @@ export class DataAzurermEventgridDomainTopicTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic azurerm_eventgrid_domain_topic}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/eventgrid_domain_topic azurerm_eventgrid_domain_topic}
 */
 export class DataAzurermEventgridDomainTopic extends cdktf.TerraformDataSource {
 
@@ -124,7 +124,7 @@ export class DataAzurermEventgridDomainTopic extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic azurerm_eventgrid_domain_topic} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/eventgrid_domain_topic azurerm_eventgrid_domain_topic} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/site_recovery_replication_recovery_plan
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_replication_recovery_plan
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSiteRecoveryReplicationRecoveryPlanConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/site_recovery_replication_recovery_plan#id DataAzurermSiteRecoveryReplicationRecoveryPlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_replication_recovery_plan#id DataAzurermSiteRecoveryReplicationRecoveryPlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/site_recovery_replication_recovery_plan#name DataAzurermSiteRecoveryReplicationRecoveryPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_replication_recovery_plan#name DataAzurermSiteRecoveryReplicationRecoveryPlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/site_recovery_replication_recovery_plan#recovery_vault_id DataAzurermSiteRecoveryReplicationRecoveryPlan#recovery_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_replication_recovery_plan#recovery_vault_id DataAzurermSiteRecoveryReplicationRecoveryPlan#recovery_vault_id}
   */
   readonly recoveryVaultId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/site_recovery_replication_recovery_plan#timeouts DataAzurermSiteRecoveryReplicationRecoveryPlan#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_replication_recovery_plan#timeouts DataAzurermSiteRecoveryReplicationRecoveryPlan#timeouts}
   */
   readonly timeouts?: DataAzurermSiteRecoveryReplicationRecoveryPlanTimeouts;
 }
@@ -107,6 +107,25 @@ export class DataAzurermSiteRecoveryReplicationRecoveryPlanRecoveryGroupPostActi
   // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
+  }
+}
+
+export class DataAzurermSiteRecoveryReplicationRecoveryPlanRecoveryGroupPostActionListList extends cdktf.MapList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSiteRecoveryReplicationRecoveryPlanRecoveryGroupPostActionList {
+    return new DataAzurermSiteRecoveryReplicationRecoveryPlanRecoveryGroupPostActionList(this, `[${index}]`, false);
   }
 }
 
@@ -209,6 +228,25 @@ export class DataAzurermSiteRecoveryReplicationRecoveryPlanRecoveryGroupPreActio
   }
 }
 
+export class DataAzurermSiteRecoveryReplicationRecoveryPlanRecoveryGroupPreActionListList extends cdktf.MapList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSiteRecoveryReplicationRecoveryPlanRecoveryGroupPreActionList {
+    return new DataAzurermSiteRecoveryReplicationRecoveryPlanRecoveryGroupPreActionList(this, `[${index}]`, false);
+  }
+}
+
 export class DataAzurermSiteRecoveryReplicationRecoveryPlanRecoveryGroupPreActionList extends cdktf.ComplexList {
 
   /**
@@ -268,13 +306,13 @@ export class DataAzurermSiteRecoveryReplicationRecoveryPlanRecoveryGroupOutputRe
   }
 
   // post_action - computed: true, optional: false, required: false
-  private _postAction = new DataAzurermSiteRecoveryReplicationRecoveryPlanRecoveryGroupPostActionList(this, "post_action", true);
+  private _postAction = new DataAzurermSiteRecoveryReplicationRecoveryPlanRecoveryGroupPostActionListList(this, "post_action", true);
   public get postAction() {
     return this._postAction;
   }
 
   // pre_action - computed: true, optional: false, required: false
-  private _preAction = new DataAzurermSiteRecoveryReplicationRecoveryPlanRecoveryGroupPreActionList(this, "pre_action", true);
+  private _preAction = new DataAzurermSiteRecoveryReplicationRecoveryPlanRecoveryGroupPreActionListList(this, "pre_action", true);
   public get preAction() {
     return this._preAction;
   }
@@ -310,12 +348,12 @@ export class DataAzurermSiteRecoveryReplicationRecoveryPlanRecoveryGroupList ext
 }
 export interface DataAzurermSiteRecoveryReplicationRecoveryPlanTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/site_recovery_replication_recovery_plan#read DataAzurermSiteRecoveryReplicationRecoveryPlan#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_replication_recovery_plan#read DataAzurermSiteRecoveryReplicationRecoveryPlan#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermSiteRecoveryReplicationRecoveryPlanTimeoutsToTerraform(struct?: DataAzurermSiteRecoveryReplicationRecoveryPlanTimeoutsOutputReference | DataAzurermSiteRecoveryReplicationRecoveryPlanTimeouts | cdktf.IResolvable): any {
+export function dataAzurermSiteRecoveryReplicationRecoveryPlanTimeoutsToTerraform(struct?: DataAzurermSiteRecoveryReplicationRecoveryPlanTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -334,7 +372,7 @@ export class DataAzurermSiteRecoveryReplicationRecoveryPlanTimeoutsOutputReferen
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermSiteRecoveryReplicationRecoveryPlanTimeouts | cdktf.IResolvable | undefined {
@@ -385,7 +423,7 @@ export class DataAzurermSiteRecoveryReplicationRecoveryPlanTimeoutsOutputReferen
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/site_recovery_replication_recovery_plan azurerm_site_recovery_replication_recovery_plan}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_replication_recovery_plan azurerm_site_recovery_replication_recovery_plan}
 */
 export class DataAzurermSiteRecoveryReplicationRecoveryPlan extends cdktf.TerraformDataSource {
 
@@ -399,7 +437,7 @@ export class DataAzurermSiteRecoveryReplicationRecoveryPlan extends cdktf.Terraf
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/site_recovery_replication_recovery_plan azurerm_site_recovery_replication_recovery_plan} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_replication_recovery_plan azurerm_site_recovery_replication_recovery_plan} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

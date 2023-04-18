@@ -1,3 +1,3 @@
 # `azurerm_batch_certificate`
 
-Refer to the Terraform Registory for docs: [`azurerm_batch_certificate`](https://www.terraform.io/docs/providers/azurerm/r/batch_certificate).
+Refer to the Terraform Registory for docs: [`azurerm_batch_certificate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/batch_certificate).

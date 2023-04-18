@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/maintenance_configuration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMaintenanceConfigurationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration#id DataAzurermMaintenanceConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/maintenance_configuration#id DataAzurermMaintenanceConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration#name DataAzurermMaintenanceConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/maintenance_configuration#name DataAzurermMaintenanceConfiguration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration#resource_group_name DataAzurermMaintenanceConfiguration#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/maintenance_configuration#resource_group_name DataAzurermMaintenanceConfiguration#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration#timeouts DataAzurermMaintenanceConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/maintenance_configuration#timeouts DataAzurermMaintenanceConfiguration#timeouts}
   */
   readonly timeouts?: DataAzurermMaintenanceConfigurationTimeouts;
 }
@@ -339,12 +339,12 @@ export class DataAzurermMaintenanceConfigurationWindowList extends cdktf.Complex
 }
 export interface DataAzurermMaintenanceConfigurationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration#read DataAzurermMaintenanceConfiguration#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/maintenance_configuration#read DataAzurermMaintenanceConfiguration#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermMaintenanceConfigurationTimeoutsToTerraform(struct?: DataAzurermMaintenanceConfigurationTimeoutsOutputReference | DataAzurermMaintenanceConfigurationTimeouts | cdktf.IResolvable): any {
+export function dataAzurermMaintenanceConfigurationTimeoutsToTerraform(struct?: DataAzurermMaintenanceConfigurationTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -363,7 +363,7 @@ export class DataAzurermMaintenanceConfigurationTimeoutsOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermMaintenanceConfigurationTimeouts | cdktf.IResolvable | undefined {
@@ -414,7 +414,7 @@ export class DataAzurermMaintenanceConfigurationTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration azurerm_maintenance_configuration}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/maintenance_configuration azurerm_maintenance_configuration}
 */
 export class DataAzurermMaintenanceConfiguration extends cdktf.TerraformDataSource {
 
@@ -428,7 +428,7 @@ export class DataAzurermMaintenanceConfiguration extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration azurerm_maintenance_configuration} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/maintenance_configuration azurerm_maintenance_configuration} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

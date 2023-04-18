@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment_v3
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAppServiceEnvironmentV3Config extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3#id DataAzurermAppServiceEnvironmentV3#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment_v3#id DataAzurermAppServiceEnvironmentV3#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3#name DataAzurermAppServiceEnvironmentV3#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment_v3#name DataAzurermAppServiceEnvironmentV3#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3#resource_group_name DataAzurermAppServiceEnvironmentV3#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment_v3#resource_group_name DataAzurermAppServiceEnvironmentV3#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3#timeouts DataAzurermAppServiceEnvironmentV3#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment_v3#timeouts DataAzurermAppServiceEnvironmentV3#timeouts}
   */
   readonly timeouts?: DataAzurermAppServiceEnvironmentV3Timeouts;
 }
@@ -174,12 +174,12 @@ export class DataAzurermAppServiceEnvironmentV3InboundNetworkDependenciesList ex
 }
 export interface DataAzurermAppServiceEnvironmentV3Timeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3#read DataAzurermAppServiceEnvironmentV3#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment_v3#read DataAzurermAppServiceEnvironmentV3#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermAppServiceEnvironmentV3TimeoutsToTerraform(struct?: DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference | DataAzurermAppServiceEnvironmentV3Timeouts | cdktf.IResolvable): any {
+export function dataAzurermAppServiceEnvironmentV3TimeoutsToTerraform(struct?: DataAzurermAppServiceEnvironmentV3Timeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -198,7 +198,7 @@ export class DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermAppServiceEnvironmentV3Timeouts | cdktf.IResolvable | undefined {
@@ -249,7 +249,7 @@ export class DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3 azurerm_app_service_environment_v3}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment_v3 azurerm_app_service_environment_v3}
 */
 export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSource {
 
@@ -263,7 +263,7 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3 azurerm_app_service_environment_v3} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment_v3 azurerm_app_service_environment_v3} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

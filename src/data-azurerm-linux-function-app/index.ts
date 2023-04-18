@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/linux_function_app
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/linux_function_app
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermLinuxFunctionAppConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/linux_function_app#id DataAzurermLinuxFunctionApp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/linux_function_app#id DataAzurermLinuxFunctionApp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/linux_function_app#name DataAzurermLinuxFunctionApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/linux_function_app#name DataAzurermLinuxFunctionApp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/linux_function_app#resource_group_name DataAzurermLinuxFunctionApp#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/linux_function_app#resource_group_name DataAzurermLinuxFunctionApp#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/linux_function_app#timeouts DataAzurermLinuxFunctionApp#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/linux_function_app#timeouts DataAzurermLinuxFunctionApp#timeouts}
   */
   readonly timeouts?: DataAzurermLinuxFunctionAppTimeouts;
 }
@@ -3060,12 +3060,12 @@ export class DataAzurermLinuxFunctionAppStickySettingsList extends cdktf.Complex
 }
 export interface DataAzurermLinuxFunctionAppTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/linux_function_app#read DataAzurermLinuxFunctionApp#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/linux_function_app#read DataAzurermLinuxFunctionApp#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermLinuxFunctionAppTimeoutsToTerraform(struct?: DataAzurermLinuxFunctionAppTimeoutsOutputReference | DataAzurermLinuxFunctionAppTimeouts | cdktf.IResolvable): any {
+export function dataAzurermLinuxFunctionAppTimeoutsToTerraform(struct?: DataAzurermLinuxFunctionAppTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3084,7 +3084,7 @@ export class DataAzurermLinuxFunctionAppTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermLinuxFunctionAppTimeouts | cdktf.IResolvable | undefined {
@@ -3135,7 +3135,7 @@ export class DataAzurermLinuxFunctionAppTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/linux_function_app azurerm_linux_function_app}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/linux_function_app azurerm_linux_function_app}
 */
 export class DataAzurermLinuxFunctionApp extends cdktf.TerraformDataSource {
 
@@ -3149,7 +3149,7 @@ export class DataAzurermLinuxFunctionApp extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/linux_function_app azurerm_linux_function_app} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/linux_function_app azurerm_linux_function_app} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

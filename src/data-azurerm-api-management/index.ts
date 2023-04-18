@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/api_management
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/api_management
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermApiManagementConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management#id DataAzurermApiManagement#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/api_management#id DataAzurermApiManagement#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management#name DataAzurermApiManagement#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/api_management#name DataAzurermApiManagement#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management#resource_group_name DataAzurermApiManagement#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/api_management#resource_group_name DataAzurermApiManagement#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management#timeouts DataAzurermApiManagement#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/api_management#timeouts DataAzurermApiManagement#timeouts}
   */
   readonly timeouts?: DataAzurermApiManagementTimeouts;
 }
@@ -747,12 +747,12 @@ export class DataAzurermApiManagementTenantAccessList extends cdktf.ComplexList 
 }
 export interface DataAzurermApiManagementTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management#read DataAzurermApiManagement#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/api_management#read DataAzurermApiManagement#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermApiManagementTimeoutsToTerraform(struct?: DataAzurermApiManagementTimeoutsOutputReference | DataAzurermApiManagementTimeouts | cdktf.IResolvable): any {
+export function dataAzurermApiManagementTimeoutsToTerraform(struct?: DataAzurermApiManagementTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -771,7 +771,7 @@ export class DataAzurermApiManagementTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermApiManagementTimeouts | cdktf.IResolvable | undefined {
@@ -822,7 +822,7 @@ export class DataAzurermApiManagementTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management azurerm_api_management}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/api_management azurerm_api_management}
 */
 export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
 
@@ -836,7 +836,7 @@ export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/api_management azurerm_api_management} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/api_management azurerm_api_management} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

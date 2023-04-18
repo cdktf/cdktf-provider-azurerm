@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_geographical_location
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_geographical_location
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,31 +8,31 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermTrafficManagerGeographicalLocationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_geographical_location#id DataAzurermTrafficManagerGeographicalLocation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_geographical_location#id DataAzurermTrafficManagerGeographicalLocation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_geographical_location#name DataAzurermTrafficManagerGeographicalLocation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_geographical_location#name DataAzurermTrafficManagerGeographicalLocation#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_geographical_location#timeouts DataAzurermTrafficManagerGeographicalLocation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_geographical_location#timeouts DataAzurermTrafficManagerGeographicalLocation#timeouts}
   */
   readonly timeouts?: DataAzurermTrafficManagerGeographicalLocationTimeouts;
 }
 export interface DataAzurermTrafficManagerGeographicalLocationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_geographical_location#read DataAzurermTrafficManagerGeographicalLocation#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_geographical_location#read DataAzurermTrafficManagerGeographicalLocation#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermTrafficManagerGeographicalLocationTimeoutsToTerraform(struct?: DataAzurermTrafficManagerGeographicalLocationTimeoutsOutputReference | DataAzurermTrafficManagerGeographicalLocationTimeouts | cdktf.IResolvable): any {
+export function dataAzurermTrafficManagerGeographicalLocationTimeoutsToTerraform(struct?: DataAzurermTrafficManagerGeographicalLocationTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -51,7 +51,7 @@ export class DataAzurermTrafficManagerGeographicalLocationTimeoutsOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermTrafficManagerGeographicalLocationTimeouts | cdktf.IResolvable | undefined {
@@ -102,7 +102,7 @@ export class DataAzurermTrafficManagerGeographicalLocationTimeoutsOutputReferenc
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_geographical_location azurerm_traffic_manager_geographical_location}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_geographical_location azurerm_traffic_manager_geographical_location}
 */
 export class DataAzurermTrafficManagerGeographicalLocation extends cdktf.TerraformDataSource {
 
@@ -116,7 +116,7 @@ export class DataAzurermTrafficManagerGeographicalLocation extends cdktf.Terrafo
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_geographical_location azurerm_traffic_manager_geographical_location} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_geographical_location azurerm_traffic_manager_geographical_location} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

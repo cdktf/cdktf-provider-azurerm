@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/storage_blob
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_blob
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermStorageBlobConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob#id DataAzurermStorageBlob#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_blob#id DataAzurermStorageBlob#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob#metadata DataAzurermStorageBlob#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_blob#metadata DataAzurermStorageBlob#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob#name DataAzurermStorageBlob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_blob#name DataAzurermStorageBlob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob#storage_account_name DataAzurermStorageBlob#storage_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_blob#storage_account_name DataAzurermStorageBlob#storage_account_name}
   */
   readonly storageAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob#storage_container_name DataAzurermStorageBlob#storage_container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_blob#storage_container_name DataAzurermStorageBlob#storage_container_name}
   */
   readonly storageContainerName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob#timeouts DataAzurermStorageBlob#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_blob#timeouts DataAzurermStorageBlob#timeouts}
   */
   readonly timeouts?: DataAzurermStorageBlobTimeouts;
 }
 export interface DataAzurermStorageBlobTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob#read DataAzurermStorageBlob#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_blob#read DataAzurermStorageBlob#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermStorageBlobTimeoutsToTerraform(struct?: DataAzurermStorageBlobTimeoutsOutputReference | DataAzurermStorageBlobTimeouts | cdktf.IResolvable): any {
+export function dataAzurermStorageBlobTimeoutsToTerraform(struct?: DataAzurermStorageBlobTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -63,7 +63,7 @@ export class DataAzurermStorageBlobTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermStorageBlobTimeouts | cdktf.IResolvable | undefined {
@@ -114,7 +114,7 @@ export class DataAzurermStorageBlobTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob azurerm_storage_blob}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_blob azurerm_storage_blob}
 */
 export class DataAzurermStorageBlob extends cdktf.TerraformDataSource {
 
@@ -128,7 +128,7 @@ export class DataAzurermStorageBlob extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob azurerm_storage_blob} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/storage_blob azurerm_storage_blob} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface MssqlServerDnsAliasConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#id MssqlServerDnsAlias#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#id MssqlServerDnsAlias#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}
   */
   readonly mssqlServerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#name MssqlServerDnsAlias#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#name MssqlServerDnsAlias#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#timeouts MssqlServerDnsAlias#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#timeouts MssqlServerDnsAlias#timeouts}
   */
   readonly timeouts?: MssqlServerDnsAliasTimeouts;
 }
 export interface MssqlServerDnsAliasTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#create MssqlServerDnsAlias#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#create MssqlServerDnsAlias#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#delete MssqlServerDnsAlias#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#delete MssqlServerDnsAlias#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#read MssqlServerDnsAlias#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#read MssqlServerDnsAlias#read}
   */
   readonly read?: string;
 }
 
-export function mssqlServerDnsAliasTimeoutsToTerraform(struct?: MssqlServerDnsAliasTimeoutsOutputReference | MssqlServerDnsAliasTimeouts | cdktf.IResolvable): any {
+export function mssqlServerDnsAliasTimeoutsToTerraform(struct?: MssqlServerDnsAliasTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -65,7 +65,7 @@ export class MssqlServerDnsAliasTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): MssqlServerDnsAliasTimeouts | cdktf.IResolvable | undefined {
@@ -160,7 +160,7 @@ export class MssqlServerDnsAliasTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias azurerm_mssql_server_dns_alias}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias azurerm_mssql_server_dns_alias}
 */
 export class MssqlServerDnsAlias extends cdktf.TerraformResource {
 
@@ -174,7 +174,7 @@ export class MssqlServerDnsAlias extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias azurerm_mssql_server_dns_alias} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias azurerm_mssql_server_dns_alias} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,3 +1,3 @@
 # `data_azurerm_app_configuration_key`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_app_configuration_key`](https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key).
+Refer to the Terraform Registory for docs: [`data_azurerm_app_configuration_key`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_configuration_key).

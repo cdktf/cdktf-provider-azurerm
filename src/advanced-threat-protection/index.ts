@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/advanced_threat_protection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface AdvancedThreatProtectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection#enabled AdvancedThreatProtection#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/advanced_threat_protection#enabled AdvancedThreatProtection#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection#id AdvancedThreatProtection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/advanced_threat_protection#id AdvancedThreatProtection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection#target_resource_id AdvancedThreatProtection#target_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/advanced_threat_protection#target_resource_id AdvancedThreatProtection#target_resource_id}
   */
   readonly targetResourceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection#timeouts AdvancedThreatProtection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/advanced_threat_protection#timeouts AdvancedThreatProtection#timeouts}
   */
   readonly timeouts?: AdvancedThreatProtectionTimeouts;
 }
 export interface AdvancedThreatProtectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection#create AdvancedThreatProtection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/advanced_threat_protection#create AdvancedThreatProtection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection#delete AdvancedThreatProtection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/advanced_threat_protection#delete AdvancedThreatProtection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection#read AdvancedThreatProtection#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/advanced_threat_protection#read AdvancedThreatProtection#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection#update AdvancedThreatProtection#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/advanced_threat_protection#update AdvancedThreatProtection#update}
   */
   readonly update?: string;
 }
 
-export function advancedThreatProtectionTimeoutsToTerraform(struct?: AdvancedThreatProtectionTimeoutsOutputReference | AdvancedThreatProtectionTimeouts | cdktf.IResolvable): any {
+export function advancedThreatProtectionTimeoutsToTerraform(struct?: AdvancedThreatProtectionTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -70,7 +70,7 @@ export class AdvancedThreatProtectionTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): AdvancedThreatProtectionTimeouts | cdktf.IResolvable | undefined {
@@ -187,7 +187,7 @@ export class AdvancedThreatProtectionTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection azurerm_advanced_threat_protection}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/advanced_threat_protection azurerm_advanced_threat_protection}
 */
 export class AdvancedThreatProtection extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class AdvancedThreatProtection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection azurerm_advanced_threat_protection} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/advanced_threat_protection azurerm_advanced_threat_protection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

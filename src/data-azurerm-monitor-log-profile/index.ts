@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/monitor_log_profile
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,20 +8,20 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMonitorLogProfileConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile#id DataAzurermMonitorLogProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/monitor_log_profile#id DataAzurermMonitorLogProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile#name DataAzurermMonitorLogProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/monitor_log_profile#name DataAzurermMonitorLogProfile#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile#timeouts DataAzurermMonitorLogProfile#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/monitor_log_profile#timeouts DataAzurermMonitorLogProfile#timeouts}
   */
   readonly timeouts?: DataAzurermMonitorLogProfileTimeouts;
 }
@@ -96,12 +96,12 @@ export class DataAzurermMonitorLogProfileRetentionPolicyList extends cdktf.Compl
 }
 export interface DataAzurermMonitorLogProfileTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile#read DataAzurermMonitorLogProfile#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/monitor_log_profile#read DataAzurermMonitorLogProfile#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermMonitorLogProfileTimeoutsToTerraform(struct?: DataAzurermMonitorLogProfileTimeoutsOutputReference | DataAzurermMonitorLogProfileTimeouts | cdktf.IResolvable): any {
+export function dataAzurermMonitorLogProfileTimeoutsToTerraform(struct?: DataAzurermMonitorLogProfileTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -120,7 +120,7 @@ export class DataAzurermMonitorLogProfileTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermMonitorLogProfileTimeouts | cdktf.IResolvable | undefined {
@@ -171,7 +171,7 @@ export class DataAzurermMonitorLogProfileTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile azurerm_monitor_log_profile}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/monitor_log_profile azurerm_monitor_log_profile}
 */
 export class DataAzurermMonitorLogProfile extends cdktf.TerraformDataSource {
 
@@ -185,7 +185,7 @@ export class DataAzurermMonitorLogProfile extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile azurerm_monitor_log_profile} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/monitor_log_profile azurerm_monitor_log_profile} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

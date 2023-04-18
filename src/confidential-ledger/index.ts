@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,62 +8,62 @@ import * as cdktf from 'cdktf';
 
 export interface ConfidentialLedgerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#id ConfidentialLedger#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#id ConfidentialLedger#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#ledger_type ConfidentialLedger#ledger_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#ledger_type ConfidentialLedger#ledger_type}
   */
   readonly ledgerType: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#location ConfidentialLedger#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#location ConfidentialLedger#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#name ConfidentialLedger#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#name ConfidentialLedger#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#resource_group_name ConfidentialLedger#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#resource_group_name ConfidentialLedger#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#tags ConfidentialLedger#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#tags ConfidentialLedger#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * azuread_based_service_principal block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#azuread_based_service_principal ConfidentialLedger#azuread_based_service_principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#azuread_based_service_principal ConfidentialLedger#azuread_based_service_principal}
   */
   readonly azureadBasedServicePrincipal: ConfidentialLedgerAzureadBasedServicePrincipal[] | cdktf.IResolvable;
   /**
   * certificate_based_security_principal block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#certificate_based_security_principal ConfidentialLedger#certificate_based_security_principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#certificate_based_security_principal ConfidentialLedger#certificate_based_security_principal}
   */
   readonly certificateBasedSecurityPrincipal?: ConfidentialLedgerCertificateBasedSecurityPrincipal[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#timeouts ConfidentialLedger#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#timeouts ConfidentialLedger#timeouts}
   */
   readonly timeouts?: ConfidentialLedgerTimeouts;
 }
 export interface ConfidentialLedgerAzureadBasedServicePrincipal {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#ledger_role_name ConfidentialLedger#ledger_role_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#ledger_role_name ConfidentialLedger#ledger_role_name}
   */
   readonly ledgerRoleName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#principal_id ConfidentialLedger#principal_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#principal_id ConfidentialLedger#principal_id}
   */
   readonly principalId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#tenant_id ConfidentialLedger#tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#tenant_id ConfidentialLedger#tenant_id}
   */
   readonly tenantId: string;
 }
@@ -197,11 +197,11 @@ export class ConfidentialLedgerAzureadBasedServicePrincipalList extends cdktf.Co
 }
 export interface ConfidentialLedgerCertificateBasedSecurityPrincipal {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#ledger_role_name ConfidentialLedger#ledger_role_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#ledger_role_name ConfidentialLedger#ledger_role_name}
   */
   readonly ledgerRoleName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#pem_public_key ConfidentialLedger#pem_public_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#pem_public_key ConfidentialLedger#pem_public_key}
   */
   readonly pemPublicKey: string;
 }
@@ -315,24 +315,24 @@ export class ConfidentialLedgerCertificateBasedSecurityPrincipalList extends cdk
 }
 export interface ConfidentialLedgerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#create ConfidentialLedger#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#create ConfidentialLedger#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#delete ConfidentialLedger#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#delete ConfidentialLedger#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#read ConfidentialLedger#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#read ConfidentialLedger#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger#update ConfidentialLedger#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger#update ConfidentialLedger#update}
   */
   readonly update?: string;
 }
 
-export function confidentialLedgerTimeoutsToTerraform(struct?: ConfidentialLedgerTimeoutsOutputReference | ConfidentialLedgerTimeouts | cdktf.IResolvable): any {
+export function confidentialLedgerTimeoutsToTerraform(struct?: ConfidentialLedgerTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -354,7 +354,7 @@ export class ConfidentialLedgerTimeoutsOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ConfidentialLedgerTimeouts | cdktf.IResolvable | undefined {
@@ -471,7 +471,7 @@ export class ConfidentialLedgerTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger azurerm_confidential_ledger}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger azurerm_confidential_ledger}
 */
 export class ConfidentialLedger extends cdktf.TerraformResource {
 
@@ -485,7 +485,7 @@ export class ConfidentialLedger extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/confidential_ledger azurerm_confidential_ledger} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/confidential_ledger azurerm_confidential_ledger} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

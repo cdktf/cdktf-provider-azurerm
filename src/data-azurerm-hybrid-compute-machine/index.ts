@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/hybrid_compute_machine
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/hybrid_compute_machine
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermHybridComputeMachineConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hybrid_compute_machine#id DataAzurermHybridComputeMachine#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/hybrid_compute_machine#id DataAzurermHybridComputeMachine#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hybrid_compute_machine#name DataAzurermHybridComputeMachine#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/hybrid_compute_machine#name DataAzurermHybridComputeMachine#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hybrid_compute_machine#resource_group_name DataAzurermHybridComputeMachine#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/hybrid_compute_machine#resource_group_name DataAzurermHybridComputeMachine#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hybrid_compute_machine#timeouts DataAzurermHybridComputeMachine#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/hybrid_compute_machine#timeouts DataAzurermHybridComputeMachine#timeouts}
   */
   readonly timeouts?: DataAzurermHybridComputeMachineTimeouts;
 }
@@ -1184,12 +1184,12 @@ export class DataAzurermHybridComputeMachineServiceStatusList extends cdktf.Comp
 }
 export interface DataAzurermHybridComputeMachineTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hybrid_compute_machine#read DataAzurermHybridComputeMachine#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/hybrid_compute_machine#read DataAzurermHybridComputeMachine#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermHybridComputeMachineTimeoutsToTerraform(struct?: DataAzurermHybridComputeMachineTimeoutsOutputReference | DataAzurermHybridComputeMachineTimeouts | cdktf.IResolvable): any {
+export function dataAzurermHybridComputeMachineTimeoutsToTerraform(struct?: DataAzurermHybridComputeMachineTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1208,7 +1208,7 @@ export class DataAzurermHybridComputeMachineTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermHybridComputeMachineTimeouts | cdktf.IResolvable | undefined {
@@ -1259,7 +1259,7 @@ export class DataAzurermHybridComputeMachineTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/hybrid_compute_machine azurerm_hybrid_compute_machine}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/hybrid_compute_machine azurerm_hybrid_compute_machine}
 */
 export class DataAzurermHybridComputeMachine extends cdktf.TerraformDataSource {
 
@@ -1273,7 +1273,7 @@ export class DataAzurermHybridComputeMachine extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/hybrid_compute_machine azurerm_hybrid_compute_machine} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/hybrid_compute_machine azurerm_hybrid_compute_machine} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
