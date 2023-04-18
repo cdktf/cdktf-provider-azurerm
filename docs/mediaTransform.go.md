@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 mediatransform.NewMediaTransform(scope Construct, id *string, config MediaTransformConfig) MediaTransform
 ```
@@ -324,7 +324,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 mediatransform.MediaTransform_IsConstruct(x interface{}) *bool
 ```
@@ -356,7 +356,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 mediatransform.MediaTransform_IsTerraformElement(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ mediatransform.MediaTransform_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 mediatransform.MediaTransform_IsTerraformResource(x interface{}) *bool
 ```
@@ -723,7 +723,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 &mediatransform.MediaTransformConfig {
 	Connection: interface{},
@@ -739,7 +739,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
 	Description: *string,
 	Id: *string,
 	Output: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaTransform.MediaTransformTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.mediaTransform.MediaTransformTimeouts,
 }
 ```
 
@@ -930,15 +930,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 &mediatransform.MediaTransformOutput {
-	AudioAnalyzerPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPreset,
-	BuiltinPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaTransform.MediaTransformOutputBuiltinPreset,
-	FaceDetectorPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset,
+	AudioAnalyzerPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.mediaTransform.MediaTransformOutputAudioAnalyzerPreset,
+	BuiltinPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.mediaTransform.MediaTransformOutputBuiltinPreset,
+	FaceDetectorPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.mediaTransform.MediaTransformOutputFaceDetectorPreset,
 	OnErrorAction: *string,
 	RelativePriority: *string,
-	VideoAnalyzerPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset,
+	VideoAnalyzerPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.mediaTransform.MediaTransformOutputVideoAnalyzerPreset,
 }
 ```
 
@@ -1040,7 +1040,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPreset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 &mediatransform.MediaTransformOutputAudioAnalyzerPreset {
 	AudioAnalysisMode: *string,
@@ -1086,7 +1086,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPreset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 &mediatransform.MediaTransformOutputBuiltinPreset {
 	PresetName: *string,
@@ -1118,7 +1118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 &mediatransform.MediaTransformOutputFaceDetectorPreset {
 	AnalysisResolution: *string,
@@ -1150,7 +1150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 &mediatransform.MediaTransformOutputVideoAnalyzerPreset {
 	AudioAnalysisMode: *string,
@@ -1210,7 +1210,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 &mediatransform.MediaTransformTimeouts {
 	Create: *string,
@@ -1286,7 +1286,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPresetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 mediatransform.NewMediaTransformOutputAudioAnalyzerPresetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputAudioAnalyzerPresetOutputReference
 ```
@@ -1593,7 +1593,7 @@ func InternalValue() MediaTransformOutputAudioAnalyzerPreset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 mediatransform.NewMediaTransformOutputBuiltinPresetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputBuiltinPresetOutputReference
 ```
@@ -1864,7 +1864,7 @@ func InternalValue() MediaTransformOutputBuiltinPreset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPresetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 mediatransform.NewMediaTransformOutputFaceDetectorPresetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputFaceDetectorPresetOutputReference
 ```
@@ -2142,7 +2142,7 @@ func InternalValue() MediaTransformOutputFaceDetectorPreset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 mediatransform.NewMediaTransformOutputList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaTransformOutputList
 ```
@@ -2285,7 +2285,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 mediatransform.NewMediaTransformOutputOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaTransformOutputOutputReference
 ```
@@ -2778,7 +2778,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPresetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 mediatransform.NewMediaTransformOutputVideoAnalyzerPresetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputVideoAnalyzerPresetOutputReference
 ```
@@ -3114,7 +3114,7 @@ func InternalValue() MediaTransformOutputVideoAnalyzerPreset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/mediatransform"
 
 mediatransform.NewMediaTransformTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformTimeoutsOutputReference
 ```

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVm.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 backuppolicyvm.NewBackupPolicyVm(scope Construct, id *string, config BackupPolicyVmConfig) BackupPolicyVm
 ```
@@ -431,7 +431,7 @@ func ResetTimezone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVm.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 backuppolicyvm.BackupPolicyVm_IsConstruct(x interface{}) *bool
 ```
@@ -463,7 +463,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVm.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 backuppolicyvm.BackupPolicyVm_IsTerraformElement(x interface{}) *bool
 ```
@@ -477,7 +477,7 @@ backuppolicyvm.BackupPolicyVm_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVm.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 backuppolicyvm.BackupPolicyVm_IsTerraformResource(x interface{}) *bool
 ```
@@ -984,7 +984,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVmBackup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 &backuppolicyvm.BackupPolicyVmBackup {
 	Frequency: *string,
@@ -1072,7 +1072,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVmConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 &backuppolicyvm.BackupPolicyVmConfig {
 	Connection: interface{},
@@ -1082,19 +1082,19 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyVm.BackupPolicyVmBackup,
+	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.backupPolicyVm.BackupPolicyVmBackup,
 	Name: *string,
 	RecoveryVaultName: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	InstantRestoreResourceGroup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyVm.BackupPolicyVmInstantRestoreResourceGroup,
+	InstantRestoreResourceGroup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.backupPolicyVm.BackupPolicyVmInstantRestoreResourceGroup,
 	InstantRestoreRetentionDays: *f64,
 	PolicyType: *string,
-	RetentionDaily: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyVm.BackupPolicyVmRetentionDaily,
-	RetentionMonthly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyVm.BackupPolicyVmRetentionMonthly,
-	RetentionWeekly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyVm.BackupPolicyVmRetentionWeekly,
-	RetentionYearly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyVm.BackupPolicyVmRetentionYearly,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyVm.BackupPolicyVmTimeouts,
+	RetentionDaily: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.backupPolicyVm.BackupPolicyVmRetentionDaily,
+	RetentionMonthly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.backupPolicyVm.BackupPolicyVmRetentionMonthly,
+	RetentionWeekly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.backupPolicyVm.BackupPolicyVmRetentionWeekly,
+	RetentionYearly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.backupPolicyVm.BackupPolicyVmRetentionYearly,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.backupPolicyVm.BackupPolicyVmTimeouts,
 	Timezone: *string,
 }
 ```
@@ -1387,7 +1387,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVmInstantRestoreResourceGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 &backuppolicyvm.BackupPolicyVmInstantRestoreResourceGroup {
 	Prefix: *string,
@@ -1433,7 +1433,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVmRetentionDaily.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 &backuppolicyvm.BackupPolicyVmRetentionDaily {
 	Count: *f64,
@@ -1465,7 +1465,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVmRetentionMonthly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 &backuppolicyvm.BackupPolicyVmRetentionMonthly {
 	Count: *f64,
@@ -1525,7 +1525,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVmRetentionWeekly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 &backuppolicyvm.BackupPolicyVmRetentionWeekly {
 	Count: *f64,
@@ -1571,7 +1571,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVmRetentionYearly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 &backuppolicyvm.BackupPolicyVmRetentionYearly {
 	Count: *f64,
@@ -1645,7 +1645,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVmTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 &backuppolicyvm.BackupPolicyVmTimeouts {
 	Create: *string,
@@ -1721,7 +1721,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVmBackupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 backuppolicyvm.NewBackupPolicyVmBackupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyVmBackupOutputReference
 ```
@@ -2101,7 +2101,7 @@ func InternalValue() BackupPolicyVmBackup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVmInstantRestoreResourceGroupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 backuppolicyvm.NewBackupPolicyVmInstantRestoreResourceGroupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyVmInstantRestoreResourceGroupOutputReference
 ```
@@ -2401,7 +2401,7 @@ func InternalValue() BackupPolicyVmInstantRestoreResourceGroup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVmRetentionDailyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 backuppolicyvm.NewBackupPolicyVmRetentionDailyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyVmRetentionDailyOutputReference
 ```
@@ -2672,7 +2672,7 @@ func InternalValue() BackupPolicyVmRetentionDaily
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVmRetentionMonthlyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 backuppolicyvm.NewBackupPolicyVmRetentionMonthlyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyVmRetentionMonthlyOutputReference
 ```
@@ -2987,7 +2987,7 @@ func InternalValue() BackupPolicyVmRetentionMonthly
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVmRetentionWeeklyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 backuppolicyvm.NewBackupPolicyVmRetentionWeeklyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyVmRetentionWeeklyOutputReference
 ```
@@ -3280,7 +3280,7 @@ func InternalValue() BackupPolicyVmRetentionWeekly
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVmRetentionYearlyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 backuppolicyvm.NewBackupPolicyVmRetentionYearlyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyVmRetentionYearlyOutputReference
 ```
@@ -3617,7 +3617,7 @@ func InternalValue() BackupPolicyVmRetentionYearly
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyVm.BackupPolicyVmTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyvm"
 
 backuppolicyvm.NewBackupPolicyVmTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyVmTimeoutsOutputReference
 ```
