@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_cluster
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_share_dataset_kusto_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface DataShareDatasetKustoClusterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_cluster#id DataShareDatasetKustoCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_share_dataset_kusto_cluster#id DataShareDatasetKustoCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_cluster#kusto_cluster_id DataShareDatasetKustoCluster#kusto_cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_share_dataset_kusto_cluster#kusto_cluster_id DataShareDatasetKustoCluster#kusto_cluster_id}
   */
   readonly kustoClusterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_cluster#name DataShareDatasetKustoCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_share_dataset_kusto_cluster#name DataShareDatasetKustoCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_cluster#share_id DataShareDatasetKustoCluster#share_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_share_dataset_kusto_cluster#share_id DataShareDatasetKustoCluster#share_id}
   */
   readonly shareId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_cluster#timeouts DataShareDatasetKustoCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_share_dataset_kusto_cluster#timeouts DataShareDatasetKustoCluster#timeouts}
   */
   readonly timeouts?: DataShareDatasetKustoClusterTimeouts;
 }
 export interface DataShareDatasetKustoClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_cluster#create DataShareDatasetKustoCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_share_dataset_kusto_cluster#create DataShareDatasetKustoCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_cluster#delete DataShareDatasetKustoCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_share_dataset_kusto_cluster#delete DataShareDatasetKustoCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_cluster#read DataShareDatasetKustoCluster#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_share_dataset_kusto_cluster#read DataShareDatasetKustoCluster#read}
   */
   readonly read?: string;
 }
 
-export function dataShareDatasetKustoClusterTimeoutsToTerraform(struct?: DataShareDatasetKustoClusterTimeoutsOutputReference | DataShareDatasetKustoClusterTimeouts | cdktf.IResolvable): any {
+export function dataShareDatasetKustoClusterTimeoutsToTerraform(struct?: DataShareDatasetKustoClusterTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -69,7 +69,7 @@ export class DataShareDatasetKustoClusterTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataShareDatasetKustoClusterTimeouts | cdktf.IResolvable | undefined {
@@ -164,7 +164,7 @@ export class DataShareDatasetKustoClusterTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_cluster azurerm_data_share_dataset_kusto_cluster}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_share_dataset_kusto_cluster azurerm_data_share_dataset_kusto_cluster}
 */
 export class DataShareDatasetKustoCluster extends cdktf.TerraformResource {
 
@@ -178,7 +178,7 @@ export class DataShareDatasetKustoCluster extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_cluster azurerm_data_share_dataset_kusto_cluster} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_share_dataset_kusto_cluster azurerm_data_share_dataset_kusto_cluster} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

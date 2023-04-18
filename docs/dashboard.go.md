@@ -1,6 +1,6 @@
 # `azurerm_dashboard`
 
-Refer to the Terraform Registory for docs: [`azurerm_dashboard`](https://www.terraform.io/docs/providers/azurerm/r/dashboard).
+Refer to the Terraform Registory for docs: [`azurerm_dashboard`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard).
 
 # `dashboard` Submodule <a name="`dashboard` Submodule" id="@cdktf/provider-azurerm.dashboard"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_dashboard`](https://www.ter
 
 ### Dashboard <a name="Dashboard" id="@cdktf/provider-azurerm.dashboard.Dashboard"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard azurerm_dashboard}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard azurerm_dashboard}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dashboard.Dashboard.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dashboard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dashboard"
 
 dashboard.NewDashboard(scope Construct, id *string, config DashboardConfig) Dashboard
 ```
@@ -311,7 +311,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dashboard.Dashboard.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dashboard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dashboard"
 
 dashboard.Dashboard_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dashboard.Dashboard.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dashboard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dashboard"
 
 dashboard.Dashboard_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ dashboard.Dashboard_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dashboard.Dashboard.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dashboard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dashboard"
 
 dashboard.Dashboard_IsTerraformResource(x interface{}) *bool
 ```
@@ -380,7 +380,7 @@ dashboard.Dashboard_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -488,10 +488,10 @@ func Connection() interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dashboard.Dashboard.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -710,11 +710,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dashboard.DashboardConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dashboard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dashboard"
 
 &dashboard.DashboardConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -726,7 +726,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dashboard"
 	DashboardProperties: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dashboard.DashboardTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.dashboard.DashboardTimeouts,
 }
 ```
 
@@ -735,18 +735,18 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dashboard"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#location Dashboard#location}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#name Dashboard#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#resource_group_name Dashboard#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.dashboardProperties">DashboardProperties</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#dashboard_properties Dashboard#dashboard_properties}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#id Dashboard#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#tags Dashboard#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#location Dashboard#location}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#name Dashboard#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#resource_group_name Dashboard#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.dashboardProperties">DashboardProperties</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#dashboard_properties Dashboard#dashboard_properties}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#id Dashboard#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#tags Dashboard#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts">DashboardTimeouts</a></code> | timeouts block. |
 
 ---
@@ -764,10 +764,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dashboard.DashboardConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -829,7 +829,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#location Dashboard#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#location Dashboard#location}.
 
 ---
 
@@ -841,7 +841,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#name Dashboard#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#name Dashboard#name}.
 
 ---
 
@@ -853,7 +853,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#resource_group_name Dashboard#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#resource_group_name Dashboard#resource_group_name}.
 
 ---
 
@@ -865,7 +865,7 @@ DashboardProperties *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#dashboard_properties Dashboard#dashboard_properties}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#dashboard_properties Dashboard#dashboard_properties}.
 
 ---
 
@@ -877,7 +877,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#id Dashboard#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#id Dashboard#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -892,7 +892,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#tags Dashboard#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#tags Dashboard#tags}.
 
 ---
 
@@ -906,7 +906,7 @@ Timeouts DashboardTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#timeouts Dashboard#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#timeouts Dashboard#timeouts}
 
 ---
 
@@ -915,7 +915,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dashboard.DashboardTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dashboard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dashboard"
 
 &dashboard.DashboardTimeouts {
 	Create: *string,
@@ -929,10 +929,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dashboard"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#create Dashboard#create}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#delete Dashboard#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#read Dashboard#read}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#update Dashboard#update}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#create Dashboard#create}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#delete Dashboard#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#read Dashboard#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#update Dashboard#update}. |
 
 ---
 
@@ -944,7 +944,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#create Dashboard#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#create Dashboard#create}.
 
 ---
 
@@ -956,7 +956,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#delete Dashboard#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#delete Dashboard#delete}.
 
 ---
 
@@ -968,7 +968,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#read Dashboard#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#read Dashboard#read}.
 
 ---
 
@@ -980,7 +980,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard#update Dashboard#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dashboard#update Dashboard#update}.
 
 ---
 
@@ -991,7 +991,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dashboard.DashboardTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dashboard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dashboard"
 
 dashboard.NewDashboardTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DashboardTimeoutsOutputReference
 ```

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/mobile_network_data_network
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mobile_network_data_network
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,59 +8,59 @@ import * as cdktf from 'cdktf';
 
 export interface MobileNetworkDataNetworkConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mobile_network_data_network#description MobileNetworkDataNetwork#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mobile_network_data_network#description MobileNetworkDataNetwork#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mobile_network_data_network#id MobileNetworkDataNetwork#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mobile_network_data_network#id MobileNetworkDataNetwork#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mobile_network_data_network#location MobileNetworkDataNetwork#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mobile_network_data_network#location MobileNetworkDataNetwork#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mobile_network_data_network#mobile_network_id MobileNetworkDataNetwork#mobile_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mobile_network_data_network#mobile_network_id MobileNetworkDataNetwork#mobile_network_id}
   */
   readonly mobileNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mobile_network_data_network#name MobileNetworkDataNetwork#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mobile_network_data_network#name MobileNetworkDataNetwork#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mobile_network_data_network#tags MobileNetworkDataNetwork#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mobile_network_data_network#tags MobileNetworkDataNetwork#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mobile_network_data_network#timeouts MobileNetworkDataNetwork#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mobile_network_data_network#timeouts MobileNetworkDataNetwork#timeouts}
   */
   readonly timeouts?: MobileNetworkDataNetworkTimeouts;
 }
 export interface MobileNetworkDataNetworkTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mobile_network_data_network#create MobileNetworkDataNetwork#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mobile_network_data_network#create MobileNetworkDataNetwork#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mobile_network_data_network#delete MobileNetworkDataNetwork#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mobile_network_data_network#delete MobileNetworkDataNetwork#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mobile_network_data_network#read MobileNetworkDataNetwork#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mobile_network_data_network#read MobileNetworkDataNetwork#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mobile_network_data_network#update MobileNetworkDataNetwork#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mobile_network_data_network#update MobileNetworkDataNetwork#update}
   */
   readonly update?: string;
 }
 
-export function mobileNetworkDataNetworkTimeoutsToTerraform(struct?: MobileNetworkDataNetworkTimeoutsOutputReference | MobileNetworkDataNetworkTimeouts | cdktf.IResolvable): any {
+export function mobileNetworkDataNetworkTimeoutsToTerraform(struct?: MobileNetworkDataNetworkTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -82,7 +82,7 @@ export class MobileNetworkDataNetworkTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): MobileNetworkDataNetworkTimeouts | cdktf.IResolvable | undefined {
@@ -199,7 +199,7 @@ export class MobileNetworkDataNetworkTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mobile_network_data_network azurerm_mobile_network_data_network}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mobile_network_data_network azurerm_mobile_network_data_network}
 */
 export class MobileNetworkDataNetwork extends cdktf.TerraformResource {
 
@@ -213,7 +213,7 @@ export class MobileNetworkDataNetwork extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mobile_network_data_network azurerm_mobile_network_data_network} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mobile_network_data_network azurerm_mobile_network_data_network} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

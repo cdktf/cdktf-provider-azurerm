@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/dns_zone
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_zone
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDnsZoneConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone#id DataAzurermDnsZone#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_zone#id DataAzurermDnsZone#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone#name DataAzurermDnsZone#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_zone#name DataAzurermDnsZone#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone#resource_group_name DataAzurermDnsZone#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_zone#resource_group_name DataAzurermDnsZone#resource_group_name}
   */
   readonly resourceGroupName?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone#timeouts DataAzurermDnsZone#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_zone#timeouts DataAzurermDnsZone#timeouts}
   */
   readonly timeouts?: DataAzurermDnsZoneTimeouts;
 }
 export interface DataAzurermDnsZoneTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone#read DataAzurermDnsZone#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_zone#read DataAzurermDnsZone#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermDnsZoneTimeoutsToTerraform(struct?: DataAzurermDnsZoneTimeoutsOutputReference | DataAzurermDnsZoneTimeouts | cdktf.IResolvable): any {
+export function dataAzurermDnsZoneTimeoutsToTerraform(struct?: DataAzurermDnsZoneTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -55,7 +55,7 @@ export class DataAzurermDnsZoneTimeoutsOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermDnsZoneTimeouts | cdktf.IResolvable | undefined {
@@ -106,7 +106,7 @@ export class DataAzurermDnsZoneTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone azurerm_dns_zone}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_zone azurerm_dns_zone}
 */
 export class DataAzurermDnsZone extends cdktf.TerraformDataSource {
 
@@ -120,7 +120,7 @@ export class DataAzurermDnsZone extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone azurerm_dns_zone} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_zone azurerm_dns_zone} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,6 +1,6 @@
 # `azurerm_subscription`
 
-Refer to the Terraform Registory for docs: [`azurerm_subscription`](https://www.terraform.io/docs/providers/azurerm/r/subscription).
+Refer to the Terraform Registory for docs: [`azurerm_subscription`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription).
 
 # `subscription` Submodule <a name="`subscription` Submodule" id="@cdktf/provider-azurerm.subscription"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_subscription`](https://www.
 
 ### Subscription <a name="Subscription" id="@cdktf/provider-azurerm.subscription.Subscription"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subscription azurerm_subscription}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription azurerm_subscription}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscription.Subscription.Initializer"></a>
 
@@ -401,7 +401,7 @@ Subscription.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-azurerm.subscription.Subscription.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subscription.Subscription.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subscription.Subscription.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.subscription.Subscription.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.subscription.Subscription.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subscription.Subscription.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subscription.Subscription.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subscription.Subscription.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -512,10 +512,10 @@ public object Connection { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.subscription.Subscription.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -768,7 +768,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new SubscriptionConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -790,7 +790,7 @@ new SubscriptionConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -798,10 +798,10 @@ new SubscriptionConfig {
 | <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.subscriptionName">SubscriptionName</a></code> | <code>string</code> | The Display Name for the Subscription. |
 | <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.alias">Alias</a></code> | <code>string</code> | The Alias Name of the subscription. If omitted a new UUID will be generated for this property. |
-| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.billingScopeId">BillingScopeId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#billing_scope_id Subscription#billing_scope_id}. |
-| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#id Subscription#id}. |
+| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.billingScopeId">BillingScopeId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#billing_scope_id Subscription#billing_scope_id}. |
+| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#id Subscription#id}. |
 | <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.subscriptionId">SubscriptionId</a></code> | <code>string</code> | The GUID of the Subscription. |
-| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#tags Subscription#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#tags Subscription#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionTimeouts">SubscriptionTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.workload">Workload</a></code> | <code>string</code> | The workload type for the Subscription. Possible values are `Production` (default) and `DevTest`. |
 
@@ -820,10 +820,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.subscription.SubscriptionConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -887,7 +887,7 @@ public string SubscriptionName { get; set; }
 
 The Display Name for the Subscription.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#subscription_name Subscription#subscription_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#subscription_name Subscription#subscription_name}
 
 ---
 
@@ -901,7 +901,7 @@ public string Alias { get; set; }
 
 The Alias Name of the subscription. If omitted a new UUID will be generated for this property.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#alias Subscription#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#alias Subscription#alias}
 
 ---
 
@@ -913,7 +913,7 @@ public string BillingScopeId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#billing_scope_id Subscription#billing_scope_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#billing_scope_id Subscription#billing_scope_id}.
 
 ---
 
@@ -925,7 +925,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#id Subscription#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#id Subscription#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -942,7 +942,7 @@ public string SubscriptionId { get; set; }
 
 The GUID of the Subscription.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#subscription_id Subscription#subscription_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#subscription_id Subscription#subscription_id}
 
 ---
 
@@ -954,7 +954,7 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#tags Subscription#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#tags Subscription#tags}.
 
 ---
 
@@ -968,7 +968,7 @@ public SubscriptionTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#timeouts Subscription#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#timeouts Subscription#timeouts}
 
 ---
 
@@ -982,7 +982,7 @@ public string Workload { get; set; }
 
 The workload type for the Subscription. Possible values are `Production` (default) and `DevTest`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#workload Subscription#workload}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#workload Subscription#workload}
 
 ---
 
@@ -1005,10 +1005,10 @@ new SubscriptionTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#create Subscription#create}. |
-| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#delete Subscription#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#read Subscription#read}. |
-| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#update Subscription#update}. |
+| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#create Subscription#create}. |
+| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#delete Subscription#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#read Subscription#read}. |
+| <code><a href="#@cdktf/provider-azurerm.subscription.SubscriptionTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#update Subscription#update}. |
 
 ---
 
@@ -1020,7 +1020,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#create Subscription#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#create Subscription#create}.
 
 ---
 
@@ -1032,7 +1032,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#delete Subscription#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#delete Subscription#delete}.
 
 ---
 
@@ -1044,7 +1044,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#read Subscription#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#read Subscription#read}.
 
 ---
 
@@ -1056,7 +1056,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#update Subscription#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#update Subscription#update}.
 
 ---
 

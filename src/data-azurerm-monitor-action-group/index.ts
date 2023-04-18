@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/monitor_action_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMonitorActionGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#id DataAzurermMonitorActionGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/monitor_action_group#id DataAzurermMonitorActionGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#name DataAzurermMonitorActionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/monitor_action_group#name DataAzurermMonitorActionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#resource_group_name DataAzurermMonitorActionGroup#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/monitor_action_group#resource_group_name DataAzurermMonitorActionGroup#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#timeouts DataAzurermMonitorActionGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/monitor_action_group#timeouts DataAzurermMonitorActionGroup#timeouts}
   */
   readonly timeouts?: DataAzurermMonitorActionGroupTimeouts;
 }
@@ -985,12 +985,12 @@ export class DataAzurermMonitorActionGroupWebhookReceiverList extends cdktf.Comp
 }
 export interface DataAzurermMonitorActionGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#read DataAzurermMonitorActionGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/monitor_action_group#read DataAzurermMonitorActionGroup#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermMonitorActionGroupTimeoutsToTerraform(struct?: DataAzurermMonitorActionGroupTimeoutsOutputReference | DataAzurermMonitorActionGroupTimeouts | cdktf.IResolvable): any {
+export function dataAzurermMonitorActionGroupTimeoutsToTerraform(struct?: DataAzurermMonitorActionGroupTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1009,7 +1009,7 @@ export class DataAzurermMonitorActionGroupTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermMonitorActionGroupTimeouts | cdktf.IResolvable | undefined {
@@ -1060,7 +1060,7 @@ export class DataAzurermMonitorActionGroupTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group azurerm_monitor_action_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/monitor_action_group azurerm_monitor_action_group}
 */
 export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
 
@@ -1074,7 +1074,7 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group azurerm_monitor_action_group} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/monitor_action_group azurerm_monitor_action_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/subscription
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,15 +10,15 @@ export interface SubscriptionConfig extends cdktf.TerraformMetaArguments {
   /**
   * The Alias Name of the subscription. If omitted a new UUID will be generated for this property.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#alias Subscription#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#alias Subscription#alias}
   */
   readonly alias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#billing_scope_id Subscription#billing_scope_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#billing_scope_id Subscription#billing_scope_id}
   */
   readonly billingScopeId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#id Subscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#id Subscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -27,52 +27,52 @@ export interface SubscriptionConfig extends cdktf.TerraformMetaArguments {
   /**
   * The GUID of the Subscription.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#subscription_id Subscription#subscription_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#subscription_id Subscription#subscription_id}
   */
   readonly subscriptionId?: string;
   /**
   * The Display Name for the Subscription.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#subscription_name Subscription#subscription_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#subscription_name Subscription#subscription_name}
   */
   readonly subscriptionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#tags Subscription#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#tags Subscription#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * The workload type for the Subscription. Possible values are `Production` (default) and `DevTest`.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#workload Subscription#workload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#workload Subscription#workload}
   */
   readonly workload?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#timeouts Subscription#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#timeouts Subscription#timeouts}
   */
   readonly timeouts?: SubscriptionTimeouts;
 }
 export interface SubscriptionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#create Subscription#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#create Subscription#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#delete Subscription#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#delete Subscription#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#read Subscription#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#read Subscription#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription#update Subscription#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription#update Subscription#update}
   */
   readonly update?: string;
 }
 
-export function subscriptionTimeoutsToTerraform(struct?: SubscriptionTimeoutsOutputReference | SubscriptionTimeouts | cdktf.IResolvable): any {
+export function subscriptionTimeoutsToTerraform(struct?: SubscriptionTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -94,7 +94,7 @@ export class SubscriptionTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): SubscriptionTimeouts | cdktf.IResolvable | undefined {
@@ -211,7 +211,7 @@ export class SubscriptionTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subscription azurerm_subscription}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription azurerm_subscription}
 */
 export class Subscription extends cdktf.TerraformResource {
 
@@ -225,7 +225,7 @@ export class Subscription extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/subscription azurerm_subscription} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/subscription azurerm_subscription} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

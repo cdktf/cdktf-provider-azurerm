@@ -1,6 +1,6 @@
 # `data_azurerm_mobile_network_sim_group`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_mobile_network_sim_group`](https://www.terraform.io/docs/providers/azurerm/d/mobile_network_sim_group).
+Refer to the Terraform Registory for docs: [`data_azurerm_mobile_network_sim_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/mobile_network_sim_group).
 
 # `dataAzurermMobileNetworkSimGroup` Submodule <a name="`dataAzurermMobileNetworkSimGroup` Submodule" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_mobile_network_sim_gro
 
 ### DataAzurermMobileNetworkSimGroup <a name="DataAzurermMobileNetworkSimGroup" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroup"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mobile_network_sim_group azurerm_mobile_network_sim_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/mobile_network_sim_group azurerm_mobile_network_sim_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroup.Initializer"></a>
 
@@ -365,7 +365,7 @@ DataAzurermMobileNetworkSimGroup.IsTerraformDataSource(object X);
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroup.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroup.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroup.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroup.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroup.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroup.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroup.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroup.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -460,10 +460,10 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroup.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -656,7 +656,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new DataAzurermMobileNetworkSimGroupConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -674,15 +674,15 @@ new DataAzurermMobileNetworkSimGroupConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.mobileNetworkId">MobileNetworkId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mobile_network_sim_group#mobile_network_id DataAzurermMobileNetworkSimGroup#mobile_network_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mobile_network_sim_group#name DataAzurermMobileNetworkSimGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mobile_network_sim_group#id DataAzurermMobileNetworkSimGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.mobileNetworkId">MobileNetworkId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/mobile_network_sim_group#mobile_network_id DataAzurermMobileNetworkSimGroup#mobile_network_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/mobile_network_sim_group#name DataAzurermMobileNetworkSimGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/mobile_network_sim_group#id DataAzurermMobileNetworkSimGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupTimeouts">DataAzurermMobileNetworkSimGroupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -700,10 +700,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -765,7 +765,7 @@ public string MobileNetworkId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mobile_network_sim_group#mobile_network_id DataAzurermMobileNetworkSimGroup#mobile_network_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/mobile_network_sim_group#mobile_network_id DataAzurermMobileNetworkSimGroup#mobile_network_id}.
 
 ---
 
@@ -777,7 +777,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mobile_network_sim_group#name DataAzurermMobileNetworkSimGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/mobile_network_sim_group#name DataAzurermMobileNetworkSimGroup#name}.
 
 ---
 
@@ -789,7 +789,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mobile_network_sim_group#id DataAzurermMobileNetworkSimGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/mobile_network_sim_group#id DataAzurermMobileNetworkSimGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -806,7 +806,7 @@ public DataAzurermMobileNetworkSimGroupTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mobile_network_sim_group#timeouts DataAzurermMobileNetworkSimGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/mobile_network_sim_group#timeouts DataAzurermMobileNetworkSimGroup#timeouts}
 
 ---
 
@@ -839,7 +839,7 @@ new DataAzurermMobileNetworkSimGroupTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mobile_network_sim_group#read DataAzurermMobileNetworkSimGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSimGroup.DataAzurermMobileNetworkSimGroupTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/mobile_network_sim_group#read DataAzurermMobileNetworkSimGroup#read}. |
 
 ---
 
@@ -851,7 +851,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mobile_network_sim_group#read DataAzurermMobileNetworkSimGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/mobile_network_sim_group#read DataAzurermMobileNetworkSimGroup#read}.
 
 ---
 

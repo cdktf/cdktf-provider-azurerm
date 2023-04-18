@@ -1,3 +1,3 @@
 # `data_azurerm_policy_assignment`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_policy_assignment`](https://www.terraform.io/docs/providers/azurerm/d/policy_assignment).
+Refer to the Terraform Registory for docs: [`data_azurerm_policy_assignment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_assignment).

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/storage_sync_cloud_endpoint
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_sync_cloud_endpoint
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,55 +8,55 @@ import * as cdktf from 'cdktf';
 
 export interface StorageSyncCloudEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_cloud_endpoint#file_share_name StorageSyncCloudEndpoint#file_share_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_sync_cloud_endpoint#file_share_name StorageSyncCloudEndpoint#file_share_name}
   */
   readonly fileShareName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_cloud_endpoint#id StorageSyncCloudEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_sync_cloud_endpoint#id StorageSyncCloudEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_cloud_endpoint#name StorageSyncCloudEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_sync_cloud_endpoint#name StorageSyncCloudEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_cloud_endpoint#storage_account_id StorageSyncCloudEndpoint#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_sync_cloud_endpoint#storage_account_id StorageSyncCloudEndpoint#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_cloud_endpoint#storage_account_tenant_id StorageSyncCloudEndpoint#storage_account_tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_sync_cloud_endpoint#storage_account_tenant_id StorageSyncCloudEndpoint#storage_account_tenant_id}
   */
   readonly storageAccountTenantId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_cloud_endpoint#storage_sync_group_id StorageSyncCloudEndpoint#storage_sync_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_sync_cloud_endpoint#storage_sync_group_id StorageSyncCloudEndpoint#storage_sync_group_id}
   */
   readonly storageSyncGroupId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_cloud_endpoint#timeouts StorageSyncCloudEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_sync_cloud_endpoint#timeouts StorageSyncCloudEndpoint#timeouts}
   */
   readonly timeouts?: StorageSyncCloudEndpointTimeouts;
 }
 export interface StorageSyncCloudEndpointTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_cloud_endpoint#create StorageSyncCloudEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_sync_cloud_endpoint#create StorageSyncCloudEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_cloud_endpoint#delete StorageSyncCloudEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_sync_cloud_endpoint#delete StorageSyncCloudEndpoint#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_cloud_endpoint#read StorageSyncCloudEndpoint#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_sync_cloud_endpoint#read StorageSyncCloudEndpoint#read}
   */
   readonly read?: string;
 }
 
-export function storageSyncCloudEndpointTimeoutsToTerraform(struct?: StorageSyncCloudEndpointTimeoutsOutputReference | StorageSyncCloudEndpointTimeouts | cdktf.IResolvable): any {
+export function storageSyncCloudEndpointTimeoutsToTerraform(struct?: StorageSyncCloudEndpointTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -77,7 +77,7 @@ export class StorageSyncCloudEndpointTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): StorageSyncCloudEndpointTimeouts | cdktf.IResolvable | undefined {
@@ -172,7 +172,7 @@ export class StorageSyncCloudEndpointTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_cloud_endpoint azurerm_storage_sync_cloud_endpoint}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_sync_cloud_endpoint azurerm_storage_sync_cloud_endpoint}
 */
 export class StorageSyncCloudEndpoint extends cdktf.TerraformResource {
 
@@ -186,7 +186,7 @@ export class StorageSyncCloudEndpoint extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_cloud_endpoint azurerm_storage_sync_cloud_endpoint} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_sync_cloud_endpoint azurerm_storage_sync_cloud_endpoint} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

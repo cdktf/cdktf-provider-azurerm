@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,67 +8,67 @@ import * as cdktf from 'cdktf';
 
 export interface IothubSharedAccessPolicyAConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy#device_connect IothubSharedAccessPolicyA#device_connect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy#device_connect IothubSharedAccessPolicyA#device_connect}
   */
   readonly deviceConnect?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy#id IothubSharedAccessPolicyA#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy#id IothubSharedAccessPolicyA#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy#iothub_name IothubSharedAccessPolicyA#iothub_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy#iothub_name IothubSharedAccessPolicyA#iothub_name}
   */
   readonly iothubName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy#name IothubSharedAccessPolicyA#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy#name IothubSharedAccessPolicyA#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy#registry_read IothubSharedAccessPolicyA#registry_read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy#registry_read IothubSharedAccessPolicyA#registry_read}
   */
   readonly registryRead?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy#registry_write IothubSharedAccessPolicyA#registry_write}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy#registry_write IothubSharedAccessPolicyA#registry_write}
   */
   readonly registryWrite?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy#resource_group_name IothubSharedAccessPolicyA#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy#resource_group_name IothubSharedAccessPolicyA#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy#service_connect IothubSharedAccessPolicyA#service_connect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy#service_connect IothubSharedAccessPolicyA#service_connect}
   */
   readonly serviceConnect?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy#timeouts IothubSharedAccessPolicyA#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy#timeouts IothubSharedAccessPolicyA#timeouts}
   */
   readonly timeouts?: IothubSharedAccessPolicyTimeouts;
 }
 export interface IothubSharedAccessPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy#create IothubSharedAccessPolicyA#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy#create IothubSharedAccessPolicyA#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy#delete IothubSharedAccessPolicyA#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy#delete IothubSharedAccessPolicyA#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy#read IothubSharedAccessPolicyA#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy#read IothubSharedAccessPolicyA#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy#update IothubSharedAccessPolicyA#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy#update IothubSharedAccessPolicyA#update}
   */
   readonly update?: string;
 }
 
-export function iothubSharedAccessPolicyTimeoutsToTerraform(struct?: IothubSharedAccessPolicyTimeoutsOutputReference | IothubSharedAccessPolicyTimeouts | cdktf.IResolvable): any {
+export function iothubSharedAccessPolicyTimeoutsToTerraform(struct?: IothubSharedAccessPolicyTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -90,7 +90,7 @@ export class IothubSharedAccessPolicyTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): IothubSharedAccessPolicyTimeouts | cdktf.IResolvable | undefined {
@@ -207,7 +207,7 @@ export class IothubSharedAccessPolicyTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy azurerm_iothub_shared_access_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy azurerm_iothub_shared_access_policy}
 */
 export class IothubSharedAccessPolicyA extends cdktf.TerraformResource {
 
@@ -221,7 +221,7 @@ export class IothubSharedAccessPolicyA extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy azurerm_iothub_shared_access_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/iothub_shared_access_policy azurerm_iothub_shared_access_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

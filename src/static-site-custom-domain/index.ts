@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/static_site_custom_domain
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface StaticSiteCustomDomainConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#domain_name StaticSiteCustomDomain#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/static_site_custom_domain#domain_name StaticSiteCustomDomain#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#id StaticSiteCustomDomain#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/static_site_custom_domain#id StaticSiteCustomDomain#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#static_site_id StaticSiteCustomDomain#static_site_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/static_site_custom_domain#static_site_id StaticSiteCustomDomain#static_site_id}
   */
   readonly staticSiteId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#validation_type StaticSiteCustomDomain#validation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/static_site_custom_domain#validation_type StaticSiteCustomDomain#validation_type}
   */
   readonly validationType?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#timeouts StaticSiteCustomDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/static_site_custom_domain#timeouts StaticSiteCustomDomain#timeouts}
   */
   readonly timeouts?: StaticSiteCustomDomainTimeouts;
 }
 export interface StaticSiteCustomDomainTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#create StaticSiteCustomDomain#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/static_site_custom_domain#create StaticSiteCustomDomain#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#delete StaticSiteCustomDomain#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/static_site_custom_domain#delete StaticSiteCustomDomain#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#read StaticSiteCustomDomain#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/static_site_custom_domain#read StaticSiteCustomDomain#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#update StaticSiteCustomDomain#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/static_site_custom_domain#update StaticSiteCustomDomain#update}
   */
   readonly update?: string;
 }
 
-export function staticSiteCustomDomainTimeoutsToTerraform(struct?: StaticSiteCustomDomainTimeoutsOutputReference | StaticSiteCustomDomainTimeouts | cdktf.IResolvable): any {
+export function staticSiteCustomDomainTimeoutsToTerraform(struct?: StaticSiteCustomDomainTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -74,7 +74,7 @@ export class StaticSiteCustomDomainTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): StaticSiteCustomDomainTimeouts | cdktf.IResolvable | undefined {
@@ -191,7 +191,7 @@ export class StaticSiteCustomDomainTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain azurerm_static_site_custom_domain}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/static_site_custom_domain azurerm_static_site_custom_domain}
 */
 export class StaticSiteCustomDomain extends cdktf.TerraformResource {
 
@@ -205,7 +205,7 @@ export class StaticSiteCustomDomain extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain azurerm_static_site_custom_domain} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/static_site_custom_domain azurerm_static_site_custom_domain} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

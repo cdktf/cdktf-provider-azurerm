@@ -1,6 +1,6 @@
 # `azurerm_automation_dsc_nodeconfiguration`
 
-Refer to the Terraform Registory for docs: [`azurerm_automation_dsc_nodeconfiguration`](https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration).
+Refer to the Terraform Registory for docs: [`azurerm_automation_dsc_nodeconfiguration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration).
 
 # `automationDscNodeconfiguration` Submodule <a name="`automationDscNodeconfiguration` Submodule" id="@cdktf/provider-azurerm.automationDscNodeconfiguration"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_automation_dsc_nodeconfigur
 
 ### AutomationDscNodeconfiguration <a name="AutomationDscNodeconfiguration" id="@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfiguration"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration azurerm_automation_dsc_nodeconfiguration}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration azurerm_automation_dsc_nodeconfiguration}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationdscnodeconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automationdscnodeconfiguration"
 
 automationdscnodeconfiguration.NewAutomationDscNodeconfiguration(scope Construct, id *string, config AutomationDscNodeconfigurationConfig) AutomationDscNodeconfiguration
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationdscnodeconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automationdscnodeconfiguration"
 
 automationdscnodeconfiguration.AutomationDscNodeconfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationdscnodeconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automationdscnodeconfiguration"
 
 automationdscnodeconfiguration.AutomationDscNodeconfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ automationdscnodeconfiguration.AutomationDscNodeconfiguration_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationdscnodeconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automationdscnodeconfiguration"
 
 automationdscnodeconfiguration.AutomationDscNodeconfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ automationdscnodeconfiguration.AutomationDscNodeconfiguration_IsTerraformResourc
 | <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfiguration.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfiguration.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfiguration.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfiguration.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfiguration.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfiguration.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfiguration.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfiguration.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -473,10 +473,10 @@ func Connection() interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfiguration.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -685,11 +685,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationdscnodeconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automationdscnodeconfiguration"
 
 &automationdscnodeconfiguration.AutomationDscNodeconfigurationConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -700,7 +700,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationdscnodec
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.automationDscNodeconfiguration.AutomationDscNodeconfigurationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.automationDscNodeconfiguration.AutomationDscNodeconfigurationTimeouts,
 }
 ```
 
@@ -709,17 +709,17 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationdscnodec
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.automationAccountName">AutomationAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#automation_account_name AutomationDscNodeconfiguration#automation_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.contentEmbedded">ContentEmbedded</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#content_embedded AutomationDscNodeconfiguration#content_embedded}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#name AutomationDscNodeconfiguration#name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#resource_group_name AutomationDscNodeconfiguration#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#id AutomationDscNodeconfiguration#id}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.automationAccountName">AutomationAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#automation_account_name AutomationDscNodeconfiguration#automation_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.contentEmbedded">ContentEmbedded</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#content_embedded AutomationDscNodeconfiguration#content_embedded}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#name AutomationDscNodeconfiguration#name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#resource_group_name AutomationDscNodeconfiguration#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#id AutomationDscNodeconfiguration#id}. |
 | <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationTimeouts">AutomationDscNodeconfigurationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -737,10 +737,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -802,7 +802,7 @@ AutomationAccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#automation_account_name AutomationDscNodeconfiguration#automation_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#automation_account_name AutomationDscNodeconfiguration#automation_account_name}.
 
 ---
 
@@ -814,7 +814,7 @@ ContentEmbedded *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#content_embedded AutomationDscNodeconfiguration#content_embedded}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#content_embedded AutomationDscNodeconfiguration#content_embedded}.
 
 ---
 
@@ -826,7 +826,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#name AutomationDscNodeconfiguration#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#name AutomationDscNodeconfiguration#name}.
 
 ---
 
@@ -838,7 +838,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#resource_group_name AutomationDscNodeconfiguration#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#resource_group_name AutomationDscNodeconfiguration#resource_group_name}.
 
 ---
 
@@ -850,7 +850,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#id AutomationDscNodeconfiguration#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#id AutomationDscNodeconfiguration#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -867,7 +867,7 @@ Timeouts AutomationDscNodeconfigurationTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#timeouts AutomationDscNodeconfiguration#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#timeouts AutomationDscNodeconfiguration#timeouts}
 
 ---
 
@@ -876,7 +876,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationdscnodeconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automationdscnodeconfiguration"
 
 &automationdscnodeconfiguration.AutomationDscNodeconfigurationTimeouts {
 	Create: *string,
@@ -890,10 +890,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationdscnodec
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#create AutomationDscNodeconfiguration#create}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#delete AutomationDscNodeconfiguration#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#read AutomationDscNodeconfiguration#read}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#update AutomationDscNodeconfiguration#update}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#create AutomationDscNodeconfiguration#create}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#delete AutomationDscNodeconfiguration#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#read AutomationDscNodeconfiguration#read}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#update AutomationDscNodeconfiguration#update}. |
 
 ---
 
@@ -905,7 +905,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#create AutomationDscNodeconfiguration#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#create AutomationDscNodeconfiguration#create}.
 
 ---
 
@@ -917,7 +917,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#delete AutomationDscNodeconfiguration#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#delete AutomationDscNodeconfiguration#delete}.
 
 ---
 
@@ -929,7 +929,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#read AutomationDscNodeconfiguration#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#read AutomationDscNodeconfiguration#read}.
 
 ---
 
@@ -941,7 +941,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration#update AutomationDscNodeconfiguration#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/automation_dsc_nodeconfiguration#update AutomationDscNodeconfiguration#update}.
 
 ---
 
@@ -952,7 +952,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationDscNodeconfiguration.AutomationDscNodeconfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/automationdscnodeconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automationdscnodeconfiguration"
 
 automationdscnodeconfiguration.NewAutomationDscNodeconfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationDscNodeconfigurationTimeoutsOutputReference
 ```

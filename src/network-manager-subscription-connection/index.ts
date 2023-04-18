@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/network_manager_subscription_connection
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/network_manager_subscription_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,55 +8,55 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkManagerSubscriptionConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_manager_subscription_connection#description NetworkManagerSubscriptionConnection#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/network_manager_subscription_connection#description NetworkManagerSubscriptionConnection#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_manager_subscription_connection#id NetworkManagerSubscriptionConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/network_manager_subscription_connection#id NetworkManagerSubscriptionConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_manager_subscription_connection#name NetworkManagerSubscriptionConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/network_manager_subscription_connection#name NetworkManagerSubscriptionConnection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_manager_subscription_connection#network_manager_id NetworkManagerSubscriptionConnection#network_manager_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/network_manager_subscription_connection#network_manager_id NetworkManagerSubscriptionConnection#network_manager_id}
   */
   readonly networkManagerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_manager_subscription_connection#subscription_id NetworkManagerSubscriptionConnection#subscription_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/network_manager_subscription_connection#subscription_id NetworkManagerSubscriptionConnection#subscription_id}
   */
   readonly subscriptionId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_manager_subscription_connection#timeouts NetworkManagerSubscriptionConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/network_manager_subscription_connection#timeouts NetworkManagerSubscriptionConnection#timeouts}
   */
   readonly timeouts?: NetworkManagerSubscriptionConnectionTimeouts;
 }
 export interface NetworkManagerSubscriptionConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_manager_subscription_connection#create NetworkManagerSubscriptionConnection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/network_manager_subscription_connection#create NetworkManagerSubscriptionConnection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_manager_subscription_connection#delete NetworkManagerSubscriptionConnection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/network_manager_subscription_connection#delete NetworkManagerSubscriptionConnection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_manager_subscription_connection#read NetworkManagerSubscriptionConnection#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/network_manager_subscription_connection#read NetworkManagerSubscriptionConnection#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_manager_subscription_connection#update NetworkManagerSubscriptionConnection#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/network_manager_subscription_connection#update NetworkManagerSubscriptionConnection#update}
   */
   readonly update?: string;
 }
 
-export function networkManagerSubscriptionConnectionTimeoutsToTerraform(struct?: NetworkManagerSubscriptionConnectionTimeoutsOutputReference | NetworkManagerSubscriptionConnectionTimeouts | cdktf.IResolvable): any {
+export function networkManagerSubscriptionConnectionTimeoutsToTerraform(struct?: NetworkManagerSubscriptionConnectionTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -78,7 +78,7 @@ export class NetworkManagerSubscriptionConnectionTimeoutsOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): NetworkManagerSubscriptionConnectionTimeouts | cdktf.IResolvable | undefined {
@@ -195,7 +195,7 @@ export class NetworkManagerSubscriptionConnectionTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_manager_subscription_connection azurerm_network_manager_subscription_connection}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/network_manager_subscription_connection azurerm_network_manager_subscription_connection}
 */
 export class NetworkManagerSubscriptionConnection extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class NetworkManagerSubscriptionConnection extends cdktf.TerraformResourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/network_manager_subscription_connection azurerm_network_manager_subscription_connection} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/network_manager_subscription_connection azurerm_network_manager_subscription_connection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

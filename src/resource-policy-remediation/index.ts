@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,79 +8,79 @@ import * as cdktf from 'cdktf';
 
 export interface ResourcePolicyRemediationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#failure_percentage ResourcePolicyRemediation#failure_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#failure_percentage ResourcePolicyRemediation#failure_percentage}
   */
   readonly failurePercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#id ResourcePolicyRemediation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#id ResourcePolicyRemediation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#location_filters ResourcePolicyRemediation#location_filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#location_filters ResourcePolicyRemediation#location_filters}
   */
   readonly locationFilters?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#name ResourcePolicyRemediation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#name ResourcePolicyRemediation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#parallel_deployments ResourcePolicyRemediation#parallel_deployments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#parallel_deployments ResourcePolicyRemediation#parallel_deployments}
   */
   readonly parallelDeployments?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#policy_assignment_id ResourcePolicyRemediation#policy_assignment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#policy_assignment_id ResourcePolicyRemediation#policy_assignment_id}
   */
   readonly policyAssignmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#policy_definition_id ResourcePolicyRemediation#policy_definition_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#policy_definition_id ResourcePolicyRemediation#policy_definition_id}
   */
   readonly policyDefinitionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#policy_definition_reference_id ResourcePolicyRemediation#policy_definition_reference_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#policy_definition_reference_id ResourcePolicyRemediation#policy_definition_reference_id}
   */
   readonly policyDefinitionReferenceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#resource_count ResourcePolicyRemediation#resource_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#resource_count ResourcePolicyRemediation#resource_count}
   */
   readonly resourceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#resource_discovery_mode ResourcePolicyRemediation#resource_discovery_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#resource_discovery_mode ResourcePolicyRemediation#resource_discovery_mode}
   */
   readonly resourceDiscoveryMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#resource_id ResourcePolicyRemediation#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#resource_id ResourcePolicyRemediation#resource_id}
   */
   readonly resourceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#timeouts ResourcePolicyRemediation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#timeouts ResourcePolicyRemediation#timeouts}
   */
   readonly timeouts?: ResourcePolicyRemediationTimeouts;
 }
 export interface ResourcePolicyRemediationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#create ResourcePolicyRemediation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#create ResourcePolicyRemediation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#delete ResourcePolicyRemediation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#delete ResourcePolicyRemediation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#read ResourcePolicyRemediation#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#read ResourcePolicyRemediation#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation#update ResourcePolicyRemediation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation#update ResourcePolicyRemediation#update}
   */
   readonly update?: string;
 }
 
-export function resourcePolicyRemediationTimeoutsToTerraform(struct?: ResourcePolicyRemediationTimeoutsOutputReference | ResourcePolicyRemediationTimeouts | cdktf.IResolvable): any {
+export function resourcePolicyRemediationTimeoutsToTerraform(struct?: ResourcePolicyRemediationTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -102,7 +102,7 @@ export class ResourcePolicyRemediationTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ResourcePolicyRemediationTimeouts | cdktf.IResolvable | undefined {
@@ -219,7 +219,7 @@ export class ResourcePolicyRemediationTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation azurerm_resource_policy_remediation}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation azurerm_resource_policy_remediation}
 */
 export class ResourcePolicyRemediation extends cdktf.TerraformResource {
 
@@ -233,7 +233,7 @@ export class ResourcePolicyRemediation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_remediation azurerm_resource_policy_remediation} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_remediation azurerm_resource_policy_remediation} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

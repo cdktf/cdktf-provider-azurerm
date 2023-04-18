@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/virtual_wan
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,71 +8,71 @@ import * as cdktf from 'cdktf';
 
 export interface VirtualWanConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#allow_branch_to_branch_traffic VirtualWan#allow_branch_to_branch_traffic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan#allow_branch_to_branch_traffic VirtualWan#allow_branch_to_branch_traffic}
   */
   readonly allowBranchToBranchTraffic?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#disable_vpn_encryption VirtualWan#disable_vpn_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan#disable_vpn_encryption VirtualWan#disable_vpn_encryption}
   */
   readonly disableVpnEncryption?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#id VirtualWan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan#id VirtualWan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#location VirtualWan#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan#location VirtualWan#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#name VirtualWan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan#name VirtualWan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#office365_local_breakout_category VirtualWan#office365_local_breakout_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan#office365_local_breakout_category VirtualWan#office365_local_breakout_category}
   */
   readonly office365LocalBreakoutCategory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#resource_group_name VirtualWan#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan#resource_group_name VirtualWan#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#tags VirtualWan#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan#tags VirtualWan#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#type VirtualWan#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan#type VirtualWan#type}
   */
   readonly type?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#timeouts VirtualWan#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan#timeouts VirtualWan#timeouts}
   */
   readonly timeouts?: VirtualWanTimeouts;
 }
 export interface VirtualWanTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#create VirtualWan#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan#create VirtualWan#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#delete VirtualWan#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan#delete VirtualWan#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#read VirtualWan#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan#read VirtualWan#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#update VirtualWan#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan#update VirtualWan#update}
   */
   readonly update?: string;
 }
 
-export function virtualWanTimeoutsToTerraform(struct?: VirtualWanTimeoutsOutputReference | VirtualWanTimeouts | cdktf.IResolvable): any {
+export function virtualWanTimeoutsToTerraform(struct?: VirtualWanTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -94,7 +94,7 @@ export class VirtualWanTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): VirtualWanTimeouts | cdktf.IResolvable | undefined {
@@ -211,7 +211,7 @@ export class VirtualWanTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan azurerm_virtual_wan}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan azurerm_virtual_wan}
 */
 export class VirtualWan extends cdktf.TerraformResource {
 
@@ -225,7 +225,7 @@ export class VirtualWan extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan azurerm_virtual_wan} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/virtual_wan azurerm_virtual_wan} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

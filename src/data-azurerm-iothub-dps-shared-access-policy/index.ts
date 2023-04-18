@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/iothub_dps_shared_access_policy
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/iothub_dps_shared_access_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermIothubDpsSharedAccessPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps_shared_access_policy#id DataAzurermIothubDpsSharedAccessPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/iothub_dps_shared_access_policy#id DataAzurermIothubDpsSharedAccessPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps_shared_access_policy#iothub_dps_name DataAzurermIothubDpsSharedAccessPolicy#iothub_dps_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/iothub_dps_shared_access_policy#iothub_dps_name DataAzurermIothubDpsSharedAccessPolicy#iothub_dps_name}
   */
   readonly iothubDpsName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps_shared_access_policy#name DataAzurermIothubDpsSharedAccessPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/iothub_dps_shared_access_policy#name DataAzurermIothubDpsSharedAccessPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps_shared_access_policy#resource_group_name DataAzurermIothubDpsSharedAccessPolicy#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/iothub_dps_shared_access_policy#resource_group_name DataAzurermIothubDpsSharedAccessPolicy#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps_shared_access_policy#timeouts DataAzurermIothubDpsSharedAccessPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/iothub_dps_shared_access_policy#timeouts DataAzurermIothubDpsSharedAccessPolicy#timeouts}
   */
   readonly timeouts?: DataAzurermIothubDpsSharedAccessPolicyTimeouts;
 }
 export interface DataAzurermIothubDpsSharedAccessPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps_shared_access_policy#read DataAzurermIothubDpsSharedAccessPolicy#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/iothub_dps_shared_access_policy#read DataAzurermIothubDpsSharedAccessPolicy#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermIothubDpsSharedAccessPolicyTimeoutsToTerraform(struct?: DataAzurermIothubDpsSharedAccessPolicyTimeoutsOutputReference | DataAzurermIothubDpsSharedAccessPolicyTimeouts | cdktf.IResolvable): any {
+export function dataAzurermIothubDpsSharedAccessPolicyTimeoutsToTerraform(struct?: DataAzurermIothubDpsSharedAccessPolicyTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -59,7 +59,7 @@ export class DataAzurermIothubDpsSharedAccessPolicyTimeoutsOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermIothubDpsSharedAccessPolicyTimeouts | cdktf.IResolvable | undefined {
@@ -110,7 +110,7 @@ export class DataAzurermIothubDpsSharedAccessPolicyTimeoutsOutputReference exten
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps_shared_access_policy azurerm_iothub_dps_shared_access_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/iothub_dps_shared_access_policy azurerm_iothub_dps_shared_access_policy}
 */
 export class DataAzurermIothubDpsSharedAccessPolicy extends cdktf.TerraformDataSource {
 
@@ -124,7 +124,7 @@ export class DataAzurermIothubDpsSharedAccessPolicy extends cdktf.TerraformDataS
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps_shared_access_policy azurerm_iothub_dps_shared_access_policy} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/iothub_dps_shared_access_policy azurerm_iothub_dps_shared_access_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,6 +1,6 @@
 # `data_azurerm_container_group`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_container_group`](https://www.terraform.io/docs/providers/azurerm/d/container_group).
+Refer to the Terraform Registory for docs: [`data_azurerm_container_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_group).
 
 # `dataAzurermContainerGroup` Submodule <a name="`dataAzurermContainerGroup` Submodule" id="@cdktf/provider-azurerm.dataAzurermContainerGroup"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_container_group`](http
 
 ### DataAzurermContainerGroup <a name="DataAzurermContainerGroup" id="@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/container_group azurerm_container_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_group azurerm_container_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermcontainergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermcontainergroup"
 
 dataazurermcontainergroup.NewDataAzurermContainerGroup(scope Construct, id *string, config DataAzurermContainerGroupConfig) DataAzurermContainerGroup
 ```
@@ -304,7 +304,7 @@ func ResetZones()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermcontainergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermcontainergroup"
 
 dataazurermcontainergroup.DataAzurermContainerGroup_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermcontainergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermcontainergroup"
 
 dataazurermcontainergroup.DataAzurermContainerGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ dataazurermcontainergroup.DataAzurermContainerGroup_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermcontainergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermcontainergroup"
 
 dataazurermcontainergroup.DataAzurermContainerGroup_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -372,7 +372,7 @@ dataazurermcontainergroup.DataAzurermContainerGroup_IsTerraformDataSource(x inte
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>*map[string]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -471,10 +471,10 @@ func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -703,11 +703,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermcontainergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermcontainergroup"
 
 &dataazurermcontainergroup.DataAzurermContainerGroupConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -716,7 +716,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermcontain
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermContainerGroup.DataAzurermContainerGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.dataAzurermContainerGroup.DataAzurermContainerGroupTimeouts,
 	Zones: *[]*string,
 }
 ```
@@ -726,17 +726,17 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermcontain
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_group#name DataAzurermContainerGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_group#resource_group_name DataAzurermContainerGroup#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_group#id DataAzurermContainerGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_group#name DataAzurermContainerGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_group#resource_group_name DataAzurermContainerGroup#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_group#id DataAzurermContainerGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupTimeouts">DataAzurermContainerGroupTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.zones">Zones</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_group#zones DataAzurermContainerGroup#zones}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.zones">Zones</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_group#zones DataAzurermContainerGroup#zones}. |
 
 ---
 
@@ -753,10 +753,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -818,7 +818,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_group#name DataAzurermContainerGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_group#name DataAzurermContainerGroup#name}.
 
 ---
 
@@ -830,7 +830,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_group#resource_group_name DataAzurermContainerGroup#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_group#resource_group_name DataAzurermContainerGroup#resource_group_name}.
 
 ---
 
@@ -842,7 +842,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_group#id DataAzurermContainerGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_group#id DataAzurermContainerGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -859,7 +859,7 @@ Timeouts DataAzurermContainerGroupTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_group#timeouts DataAzurermContainerGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_group#timeouts DataAzurermContainerGroup#timeouts}
 
 ---
 
@@ -871,7 +871,7 @@ Zones *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_group#zones DataAzurermContainerGroup#zones}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_group#zones DataAzurermContainerGroup#zones}.
 
 ---
 
@@ -880,7 +880,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermcontainergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermcontainergroup"
 
 &dataazurermcontainergroup.DataAzurermContainerGroupIdentity {
 
@@ -893,7 +893,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermcontain
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermcontainergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermcontainergroup"
 
 &dataazurermcontainergroup.DataAzurermContainerGroupTimeouts {
 	Read: *string,
@@ -904,7 +904,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermcontain
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_group#read DataAzurermContainerGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_group#read DataAzurermContainerGroup#read}. |
 
 ---
 
@@ -916,7 +916,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_group#read DataAzurermContainerGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_group#read DataAzurermContainerGroup#read}.
 
 ---
 
@@ -927,7 +927,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermcontainergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermcontainergroup"
 
 dataazurermcontainergroup.NewDataAzurermContainerGroupIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerGroupIdentityList
 ```
@@ -1059,7 +1059,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermcontainergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermcontainergroup"
 
 dataazurermcontainergroup.NewDataAzurermContainerGroupIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerGroupIdentityOutputReference
 ```
@@ -1370,7 +1370,7 @@ func InternalValue() DataAzurermContainerGroupIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermcontainergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermcontainergroup"
 
 dataazurermcontainergroup.NewDataAzurermContainerGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermContainerGroupTimeoutsOutputReference
 ```

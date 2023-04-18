@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/web_pubsub_private_link_resource
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/web_pubsub_private_link_resource
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,20 +8,20 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermWebPubsubPrivateLinkResourceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/web_pubsub_private_link_resource#id DataAzurermWebPubsubPrivateLinkResource#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/web_pubsub_private_link_resource#id DataAzurermWebPubsubPrivateLinkResource#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/web_pubsub_private_link_resource#web_pubsub_id DataAzurermWebPubsubPrivateLinkResource#web_pubsub_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/web_pubsub_private_link_resource#web_pubsub_id DataAzurermWebPubsubPrivateLinkResource#web_pubsub_id}
   */
   readonly webPubsubId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/web_pubsub_private_link_resource#timeouts DataAzurermWebPubsubPrivateLinkResource#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/web_pubsub_private_link_resource#timeouts DataAzurermWebPubsubPrivateLinkResource#timeouts}
   */
   readonly timeouts?: DataAzurermWebPubsubPrivateLinkResourceTimeouts;
 }
@@ -96,12 +96,12 @@ export class DataAzurermWebPubsubPrivateLinkResourceSharedPrivateLinkResourceTyp
 }
 export interface DataAzurermWebPubsubPrivateLinkResourceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/web_pubsub_private_link_resource#read DataAzurermWebPubsubPrivateLinkResource#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/web_pubsub_private_link_resource#read DataAzurermWebPubsubPrivateLinkResource#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermWebPubsubPrivateLinkResourceTimeoutsToTerraform(struct?: DataAzurermWebPubsubPrivateLinkResourceTimeoutsOutputReference | DataAzurermWebPubsubPrivateLinkResourceTimeouts | cdktf.IResolvable): any {
+export function dataAzurermWebPubsubPrivateLinkResourceTimeoutsToTerraform(struct?: DataAzurermWebPubsubPrivateLinkResourceTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -120,7 +120,7 @@ export class DataAzurermWebPubsubPrivateLinkResourceTimeoutsOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermWebPubsubPrivateLinkResourceTimeouts | cdktf.IResolvable | undefined {
@@ -171,7 +171,7 @@ export class DataAzurermWebPubsubPrivateLinkResourceTimeoutsOutputReference exte
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/web_pubsub_private_link_resource azurerm_web_pubsub_private_link_resource}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/web_pubsub_private_link_resource azurerm_web_pubsub_private_link_resource}
 */
 export class DataAzurermWebPubsubPrivateLinkResource extends cdktf.TerraformDataSource {
 
@@ -185,7 +185,7 @@ export class DataAzurermWebPubsubPrivateLinkResource extends cdktf.TerraformData
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/web_pubsub_private_link_resource azurerm_web_pubsub_private_link_resource} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/web_pubsub_private_link_resource azurerm_web_pubsub_private_link_resource} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

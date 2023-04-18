@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/databricks_workspace_private_endpoint_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDatabricksWorkspacePrivateEndpointConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection#id DataAzurermDatabricksWorkspacePrivateEndpointConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/databricks_workspace_private_endpoint_connection#id DataAzurermDatabricksWorkspacePrivateEndpointConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection#private_endpoint_id DataAzurermDatabricksWorkspacePrivateEndpointConnection#private_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/databricks_workspace_private_endpoint_connection#private_endpoint_id DataAzurermDatabricksWorkspacePrivateEndpointConnection#private_endpoint_id}
   */
   readonly privateEndpointId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection#workspace_id DataAzurermDatabricksWorkspacePrivateEndpointConnection#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/databricks_workspace_private_endpoint_connection#workspace_id DataAzurermDatabricksWorkspacePrivateEndpointConnection#workspace_id}
   */
   readonly workspaceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection#timeouts DataAzurermDatabricksWorkspacePrivateEndpointConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/databricks_workspace_private_endpoint_connection#timeouts DataAzurermDatabricksWorkspacePrivateEndpointConnection#timeouts}
   */
   readonly timeouts?: DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeouts;
 }
@@ -115,12 +115,12 @@ export class DataAzurermDatabricksWorkspacePrivateEndpointConnectionConnectionsL
 }
 export interface DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection#read DataAzurermDatabricksWorkspacePrivateEndpointConnection#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/databricks_workspace_private_endpoint_connection#read DataAzurermDatabricksWorkspacePrivateEndpointConnection#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeoutsToTerraform(struct?: DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeoutsOutputReference | DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeouts | cdktf.IResolvable): any {
+export function dataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeoutsToTerraform(struct?: DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -139,7 +139,7 @@ export class DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeoutsOutp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeouts | cdktf.IResolvable | undefined {
@@ -190,7 +190,7 @@ export class DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeoutsOutp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection azurerm_databricks_workspace_private_endpoint_connection}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/databricks_workspace_private_endpoint_connection azurerm_databricks_workspace_private_endpoint_connection}
 */
 export class DataAzurermDatabricksWorkspacePrivateEndpointConnection extends cdktf.TerraformDataSource {
 
@@ -204,7 +204,7 @@ export class DataAzurermDatabricksWorkspacePrivateEndpointConnection extends cdk
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection azurerm_databricks_workspace_private_endpoint_connection} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/databricks_workspace_private_endpoint_connection azurerm_databricks_workspace_private_endpoint_connection} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

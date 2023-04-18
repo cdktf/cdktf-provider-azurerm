@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/portal_dashboard
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/portal_dashboard
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermPortalDashboardConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/portal_dashboard#dashboard_properties DataAzurermPortalDashboard#dashboard_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/portal_dashboard#dashboard_properties DataAzurermPortalDashboard#dashboard_properties}
   */
   readonly dashboardProperties?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/portal_dashboard#display_name DataAzurermPortalDashboard#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/portal_dashboard#display_name DataAzurermPortalDashboard#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/portal_dashboard#id DataAzurermPortalDashboard#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/portal_dashboard#id DataAzurermPortalDashboard#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/portal_dashboard#name DataAzurermPortalDashboard#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/portal_dashboard#name DataAzurermPortalDashboard#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/portal_dashboard#resource_group_name DataAzurermPortalDashboard#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/portal_dashboard#resource_group_name DataAzurermPortalDashboard#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/portal_dashboard#timeouts DataAzurermPortalDashboard#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/portal_dashboard#timeouts DataAzurermPortalDashboard#timeouts}
   */
   readonly timeouts?: DataAzurermPortalDashboardTimeouts;
 }
 export interface DataAzurermPortalDashboardTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/portal_dashboard#read DataAzurermPortalDashboard#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/portal_dashboard#read DataAzurermPortalDashboard#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermPortalDashboardTimeoutsToTerraform(struct?: DataAzurermPortalDashboardTimeoutsOutputReference | DataAzurermPortalDashboardTimeouts | cdktf.IResolvable): any {
+export function dataAzurermPortalDashboardTimeoutsToTerraform(struct?: DataAzurermPortalDashboardTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -63,7 +63,7 @@ export class DataAzurermPortalDashboardTimeoutsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermPortalDashboardTimeouts | cdktf.IResolvable | undefined {
@@ -114,7 +114,7 @@ export class DataAzurermPortalDashboardTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/portal_dashboard azurerm_portal_dashboard}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/portal_dashboard azurerm_portal_dashboard}
 */
 export class DataAzurermPortalDashboard extends cdktf.TerraformDataSource {
 
@@ -128,7 +128,7 @@ export class DataAzurermPortalDashboard extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/portal_dashboard azurerm_portal_dashboard} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/portal_dashboard azurerm_portal_dashboard} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

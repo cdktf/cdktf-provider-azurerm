@@ -1,6 +1,6 @@
 # `data_azurerm_lb`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_lb`](https://www.terraform.io/docs/providers/azurerm/d/lb).
+Refer to the Terraform Registory for docs: [`data_azurerm_lb`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/lb).
 
 # `dataAzurermLb` Submodule <a name="`dataAzurermLb` Submodule" id="@cdktf/provider-azurerm.dataAzurermLb"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_lb`](https://www.terra
 
 ### DataAzurermLb <a name="DataAzurermLb" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/lb azurerm_lb}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/lb azurerm_lb}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermlb"
 
 dataazurermlb.NewDataAzurermLb(scope Construct, id *string, config DataAzurermLbConfig) DataAzurermLb
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermlb"
 
 dataazurermlb.DataAzurermLb_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermlb"
 
 dataazurermlb.DataAzurermLb_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermlb.DataAzurermLb_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermlb"
 
 dataazurermlb.DataAzurermLb_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -365,7 +365,7 @@ dataazurermlb.DataAzurermLb_IsTerraformDataSource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>*map[string]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -462,10 +462,10 @@ func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -674,11 +674,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermlb"
 
 &dataazurermlb.DataAzurermLbConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -687,7 +687,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermlb"
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermLb.DataAzurermLbTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.dataAzurermLb.DataAzurermLbTimeouts,
 }
 ```
 
@@ -696,15 +696,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermlb"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb#name DataAzurermLb#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb#resource_group_name DataAzurermLb#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb#id DataAzurermLb#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/lb#name DataAzurermLb#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/lb#resource_group_name DataAzurermLb#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/lb#id DataAzurermLb#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbTimeouts">DataAzurermLbTimeouts</a></code> | timeouts block. |
 
 ---
@@ -722,10 +722,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -787,7 +787,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb#name DataAzurermLb#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/lb#name DataAzurermLb#name}.
 
 ---
 
@@ -799,7 +799,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb#resource_group_name DataAzurermLb#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/lb#resource_group_name DataAzurermLb#resource_group_name}.
 
 ---
 
@@ -811,7 +811,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb#id DataAzurermLb#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/lb#id DataAzurermLb#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -828,7 +828,7 @@ Timeouts DataAzurermLbTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb#timeouts DataAzurermLb#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/lb#timeouts DataAzurermLb#timeouts}
 
 ---
 
@@ -837,7 +837,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbFrontendIpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermlb"
 
 &dataazurermlb.DataAzurermLbFrontendIpConfiguration {
 
@@ -850,7 +850,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermlb"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermlb"
 
 &dataazurermlb.DataAzurermLbTimeouts {
 	Read: *string,
@@ -861,7 +861,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermlb"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb#read DataAzurermLb#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/lb#read DataAzurermLb#read}. |
 
 ---
 
@@ -873,7 +873,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb#read DataAzurermLb#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/lb#read DataAzurermLb#read}.
 
 ---
 
@@ -884,7 +884,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbFrontendIpConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermlb"
 
 dataazurermlb.NewDataAzurermLbFrontendIpConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLbFrontendIpConfigurationList
 ```
@@ -1016,7 +1016,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbFrontendIpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermlb"
 
 dataazurermlb.NewDataAzurermLbFrontendIpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLbFrontendIpConfigurationOutputReference
 ```
@@ -1371,7 +1371,7 @@ func InternalValue() DataAzurermLbFrontendIpConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermlb"
 
 dataazurermlb.NewDataAzurermLbTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermLbTimeoutsOutputReference
 ```

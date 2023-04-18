@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_origin_group
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_origin_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,28 +8,28 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermCdnFrontdoorOriginGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_origin_group#id DataAzurermCdnFrontdoorOriginGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_origin_group#id DataAzurermCdnFrontdoorOriginGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_origin_group#name DataAzurermCdnFrontdoorOriginGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_origin_group#name DataAzurermCdnFrontdoorOriginGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_origin_group#profile_name DataAzurermCdnFrontdoorOriginGroup#profile_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_origin_group#profile_name DataAzurermCdnFrontdoorOriginGroup#profile_name}
   */
   readonly profileName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_origin_group#resource_group_name DataAzurermCdnFrontdoorOriginGroup#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_origin_group#resource_group_name DataAzurermCdnFrontdoorOriginGroup#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_origin_group#timeouts DataAzurermCdnFrontdoorOriginGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_origin_group#timeouts DataAzurermCdnFrontdoorOriginGroup#timeouts}
   */
   readonly timeouts?: DataAzurermCdnFrontdoorOriginGroupTimeouts;
 }
@@ -188,12 +188,12 @@ export class DataAzurermCdnFrontdoorOriginGroupLoadBalancingList extends cdktf.C
 }
 export interface DataAzurermCdnFrontdoorOriginGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_origin_group#read DataAzurermCdnFrontdoorOriginGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_origin_group#read DataAzurermCdnFrontdoorOriginGroup#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermCdnFrontdoorOriginGroupTimeoutsToTerraform(struct?: DataAzurermCdnFrontdoorOriginGroupTimeoutsOutputReference | DataAzurermCdnFrontdoorOriginGroupTimeouts | cdktf.IResolvable): any {
+export function dataAzurermCdnFrontdoorOriginGroupTimeoutsToTerraform(struct?: DataAzurermCdnFrontdoorOriginGroupTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -212,7 +212,7 @@ export class DataAzurermCdnFrontdoorOriginGroupTimeoutsOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermCdnFrontdoorOriginGroupTimeouts | cdktf.IResolvable | undefined {
@@ -263,7 +263,7 @@ export class DataAzurermCdnFrontdoorOriginGroupTimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_origin_group azurerm_cdn_frontdoor_origin_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_origin_group azurerm_cdn_frontdoor_origin_group}
 */
 export class DataAzurermCdnFrontdoorOriginGroup extends cdktf.TerraformDataSource {
 
@@ -277,7 +277,7 @@ export class DataAzurermCdnFrontdoorOriginGroup extends cdktf.TerraformDataSourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_origin_group azurerm_cdn_frontdoor_origin_group} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_origin_group azurerm_cdn_frontdoor_origin_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/disk_pool_managed_disk_attachment
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool_managed_disk_attachment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface DiskPoolManagedDiskAttachmentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool_managed_disk_attachment#disk_pool_id DiskPoolManagedDiskAttachment#disk_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool_managed_disk_attachment#disk_pool_id DiskPoolManagedDiskAttachment#disk_pool_id}
   */
   readonly diskPoolId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool_managed_disk_attachment#id DiskPoolManagedDiskAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool_managed_disk_attachment#id DiskPoolManagedDiskAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool_managed_disk_attachment#managed_disk_id DiskPoolManagedDiskAttachment#managed_disk_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool_managed_disk_attachment#managed_disk_id DiskPoolManagedDiskAttachment#managed_disk_id}
   */
   readonly managedDiskId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool_managed_disk_attachment#timeouts DiskPoolManagedDiskAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool_managed_disk_attachment#timeouts DiskPoolManagedDiskAttachment#timeouts}
   */
   readonly timeouts?: DiskPoolManagedDiskAttachmentTimeouts;
 }
 export interface DiskPoolManagedDiskAttachmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool_managed_disk_attachment#create DiskPoolManagedDiskAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool_managed_disk_attachment#create DiskPoolManagedDiskAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool_managed_disk_attachment#delete DiskPoolManagedDiskAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool_managed_disk_attachment#delete DiskPoolManagedDiskAttachment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool_managed_disk_attachment#read DiskPoolManagedDiskAttachment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool_managed_disk_attachment#read DiskPoolManagedDiskAttachment#read}
   */
   readonly read?: string;
 }
 
-export function diskPoolManagedDiskAttachmentTimeoutsToTerraform(struct?: DiskPoolManagedDiskAttachmentTimeoutsOutputReference | DiskPoolManagedDiskAttachmentTimeouts | cdktf.IResolvable): any {
+export function diskPoolManagedDiskAttachmentTimeoutsToTerraform(struct?: DiskPoolManagedDiskAttachmentTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -65,7 +65,7 @@ export class DiskPoolManagedDiskAttachmentTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DiskPoolManagedDiskAttachmentTimeouts | cdktf.IResolvable | undefined {
@@ -160,7 +160,7 @@ export class DiskPoolManagedDiskAttachmentTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool_managed_disk_attachment azurerm_disk_pool_managed_disk_attachment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool_managed_disk_attachment azurerm_disk_pool_managed_disk_attachment}
 */
 export class DiskPoolManagedDiskAttachment extends cdktf.TerraformResource {
 
@@ -174,7 +174,7 @@ export class DiskPoolManagedDiskAttachment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool_managed_disk_attachment azurerm_disk_pool_managed_disk_attachment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool_managed_disk_attachment azurerm_disk_pool_managed_disk_attachment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/notification_hub_namespace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermNotificationHubNamespaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace#id DataAzurermNotificationHubNamespace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/notification_hub_namespace#id DataAzurermNotificationHubNamespace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace#name DataAzurermNotificationHubNamespace#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/notification_hub_namespace#name DataAzurermNotificationHubNamespace#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace#resource_group_name DataAzurermNotificationHubNamespace#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/notification_hub_namespace#resource_group_name DataAzurermNotificationHubNamespace#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace#timeouts DataAzurermNotificationHubNamespace#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/notification_hub_namespace#timeouts DataAzurermNotificationHubNamespace#timeouts}
   */
   readonly timeouts?: DataAzurermNotificationHubNamespaceTimeouts;
 }
@@ -95,12 +95,12 @@ export class DataAzurermNotificationHubNamespaceSkuList extends cdktf.ComplexLis
 }
 export interface DataAzurermNotificationHubNamespaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace#read DataAzurermNotificationHubNamespace#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/notification_hub_namespace#read DataAzurermNotificationHubNamespace#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermNotificationHubNamespaceTimeoutsToTerraform(struct?: DataAzurermNotificationHubNamespaceTimeoutsOutputReference | DataAzurermNotificationHubNamespaceTimeouts | cdktf.IResolvable): any {
+export function dataAzurermNotificationHubNamespaceTimeoutsToTerraform(struct?: DataAzurermNotificationHubNamespaceTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -119,7 +119,7 @@ export class DataAzurermNotificationHubNamespaceTimeoutsOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermNotificationHubNamespaceTimeouts | cdktf.IResolvable | undefined {
@@ -170,7 +170,7 @@ export class DataAzurermNotificationHubNamespaceTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace azurerm_notification_hub_namespace}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/notification_hub_namespace azurerm_notification_hub_namespace}
 */
 export class DataAzurermNotificationHubNamespace extends cdktf.TerraformDataSource {
 
@@ -184,7 +184,7 @@ export class DataAzurermNotificationHubNamespace extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace azurerm_notification_hub_namespace} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/notification_hub_namespace azurerm_notification_hub_namespace} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

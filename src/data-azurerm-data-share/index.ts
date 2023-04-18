@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/data_share
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDataShareConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share#account_id DataAzurermDataShare#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share#account_id DataAzurermDataShare#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share#id DataAzurermDataShare#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share#id DataAzurermDataShare#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share#name DataAzurermDataShare#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share#name DataAzurermDataShare#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share#timeouts DataAzurermDataShare#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share#timeouts DataAzurermDataShare#timeouts}
   */
   readonly timeouts?: DataAzurermDataShareTimeouts;
 }
@@ -105,12 +105,12 @@ export class DataAzurermDataShareSnapshotScheduleList extends cdktf.ComplexList 
 }
 export interface DataAzurermDataShareTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share#read DataAzurermDataShare#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share#read DataAzurermDataShare#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermDataShareTimeoutsToTerraform(struct?: DataAzurermDataShareTimeoutsOutputReference | DataAzurermDataShareTimeouts | cdktf.IResolvable): any {
+export function dataAzurermDataShareTimeoutsToTerraform(struct?: DataAzurermDataShareTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -129,7 +129,7 @@ export class DataAzurermDataShareTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermDataShareTimeouts | cdktf.IResolvable | undefined {
@@ -180,7 +180,7 @@ export class DataAzurermDataShareTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_share azurerm_data_share}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share azurerm_data_share}
 */
 export class DataAzurermDataShare extends cdktf.TerraformDataSource {
 
@@ -194,7 +194,7 @@ export class DataAzurermDataShare extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/data_share azurerm_data_share} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share azurerm_data_share} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

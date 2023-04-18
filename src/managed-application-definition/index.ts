@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,76 +8,76 @@ import * as cdktf from 'cdktf';
 
 export interface ManagedApplicationDefinitionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#create_ui_definition ManagedApplicationDefinition#create_ui_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#create_ui_definition ManagedApplicationDefinition#create_ui_definition}
   */
   readonly createUiDefinition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#description ManagedApplicationDefinition#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#description ManagedApplicationDefinition#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#display_name ManagedApplicationDefinition#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#display_name ManagedApplicationDefinition#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#id ManagedApplicationDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#id ManagedApplicationDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#location ManagedApplicationDefinition#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#location ManagedApplicationDefinition#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#lock_level ManagedApplicationDefinition#lock_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#lock_level ManagedApplicationDefinition#lock_level}
   */
   readonly lockLevel: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#main_template ManagedApplicationDefinition#main_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#main_template ManagedApplicationDefinition#main_template}
   */
   readonly mainTemplate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#name ManagedApplicationDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#name ManagedApplicationDefinition#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#package_enabled ManagedApplicationDefinition#package_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#package_enabled ManagedApplicationDefinition#package_enabled}
   */
   readonly packageEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#package_file_uri ManagedApplicationDefinition#package_file_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#package_file_uri ManagedApplicationDefinition#package_file_uri}
   */
   readonly packageFileUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#resource_group_name ManagedApplicationDefinition#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#resource_group_name ManagedApplicationDefinition#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#tags ManagedApplicationDefinition#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#tags ManagedApplicationDefinition#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * authorization block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#authorization ManagedApplicationDefinition#authorization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#authorization ManagedApplicationDefinition#authorization}
   */
   readonly authorization?: ManagedApplicationDefinitionAuthorization[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#timeouts ManagedApplicationDefinition#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#timeouts ManagedApplicationDefinition#timeouts}
   */
   readonly timeouts?: ManagedApplicationDefinitionTimeouts;
 }
 export interface ManagedApplicationDefinitionAuthorization {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#role_definition_id ManagedApplicationDefinition#role_definition_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#role_definition_id ManagedApplicationDefinition#role_definition_id}
   */
   readonly roleDefinitionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#service_principal_id ManagedApplicationDefinition#service_principal_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#service_principal_id ManagedApplicationDefinition#service_principal_id}
   */
   readonly servicePrincipalId: string;
 }
@@ -191,24 +191,24 @@ export class ManagedApplicationDefinitionAuthorizationList extends cdktf.Complex
 }
 export interface ManagedApplicationDefinitionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#create ManagedApplicationDefinition#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#create ManagedApplicationDefinition#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#delete ManagedApplicationDefinition#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#delete ManagedApplicationDefinition#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#read ManagedApplicationDefinition#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#read ManagedApplicationDefinition#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#update ManagedApplicationDefinition#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition#update ManagedApplicationDefinition#update}
   */
   readonly update?: string;
 }
 
-export function managedApplicationDefinitionTimeoutsToTerraform(struct?: ManagedApplicationDefinitionTimeoutsOutputReference | ManagedApplicationDefinitionTimeouts | cdktf.IResolvable): any {
+export function managedApplicationDefinitionTimeoutsToTerraform(struct?: ManagedApplicationDefinitionTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -230,7 +230,7 @@ export class ManagedApplicationDefinitionTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ManagedApplicationDefinitionTimeouts | cdktf.IResolvable | undefined {
@@ -347,7 +347,7 @@ export class ManagedApplicationDefinitionTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition azurerm_managed_application_definition}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition azurerm_managed_application_definition}
 */
 export class ManagedApplicationDefinition extends cdktf.TerraformResource {
 
@@ -361,7 +361,7 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition azurerm_managed_application_definition} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/managed_application_definition azurerm_managed_application_definition} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

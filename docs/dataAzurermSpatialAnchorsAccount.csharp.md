@@ -1,6 +1,6 @@
 # `data_azurerm_spatial_anchors_account`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_spatial_anchors_account`](https://www.terraform.io/docs/providers/azurerm/d/spatial_anchors_account).
+Refer to the Terraform Registory for docs: [`data_azurerm_spatial_anchors_account`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spatial_anchors_account).
 
 # `dataAzurermSpatialAnchorsAccount` Submodule <a name="`dataAzurermSpatialAnchorsAccount` Submodule" id="@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_spatial_anchors_accoun
 
 ### DataAzurermSpatialAnchorsAccount <a name="DataAzurermSpatialAnchorsAccount" id="@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/spatial_anchors_account azurerm_spatial_anchors_account}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spatial_anchors_account azurerm_spatial_anchors_account}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.Initializer"></a>
 
@@ -365,7 +365,7 @@ DataAzurermSpatialAnchorsAccount.IsTerraformDataSource(object X);
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -460,10 +460,10 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -656,7 +656,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new DataAzurermSpatialAnchorsAccountConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -674,15 +674,15 @@ new DataAzurermSpatialAnchorsAccountConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spatial_anchors_account#name DataAzurermSpatialAnchorsAccount#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spatial_anchors_account#resource_group_name DataAzurermSpatialAnchorsAccount#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spatial_anchors_account#id DataAzurermSpatialAnchorsAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spatial_anchors_account#name DataAzurermSpatialAnchorsAccount#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spatial_anchors_account#resource_group_name DataAzurermSpatialAnchorsAccount#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spatial_anchors_account#id DataAzurermSpatialAnchorsAccount#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeouts">DataAzurermSpatialAnchorsAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -700,10 +700,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -765,7 +765,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spatial_anchors_account#name DataAzurermSpatialAnchorsAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spatial_anchors_account#name DataAzurermSpatialAnchorsAccount#name}.
 
 ---
 
@@ -777,7 +777,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spatial_anchors_account#resource_group_name DataAzurermSpatialAnchorsAccount#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spatial_anchors_account#resource_group_name DataAzurermSpatialAnchorsAccount#resource_group_name}.
 
 ---
 
@@ -789,7 +789,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spatial_anchors_account#id DataAzurermSpatialAnchorsAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spatial_anchors_account#id DataAzurermSpatialAnchorsAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -806,7 +806,7 @@ public DataAzurermSpatialAnchorsAccountTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spatial_anchors_account#timeouts DataAzurermSpatialAnchorsAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spatial_anchors_account#timeouts DataAzurermSpatialAnchorsAccount#timeouts}
 
 ---
 
@@ -826,7 +826,7 @@ new DataAzurermSpatialAnchorsAccountTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spatial_anchors_account#read DataAzurermSpatialAnchorsAccount#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spatial_anchors_account#read DataAzurermSpatialAnchorsAccount#read}. |
 
 ---
 
@@ -838,7 +838,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spatial_anchors_account#read DataAzurermSpatialAnchorsAccount#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spatial_anchors_account#read DataAzurermSpatialAnchorsAccount#read}.
 
 ---
 

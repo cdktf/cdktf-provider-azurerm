@@ -1,6 +1,6 @@
 # `azurerm_api_management_api_tag`
 
-Refer to the Terraform Registory for docs: [`azurerm_api_management_api_tag`](https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag).
+Refer to the Terraform Registory for docs: [`azurerm_api_management_api_tag`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag).
 
 # `apiManagementApiTag` Submodule <a name="`apiManagementApiTag` Submodule" id="@cdktf/provider-azurerm.apiManagementApiTag"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_api_management_api_tag`](ht
 
 ### ApiManagementApiTag <a name="ApiManagementApiTag" id="@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTag"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag azurerm_api_management_api_tag}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag azurerm_api_management_api_tag}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTag.Initializer"></a>
 
@@ -366,7 +366,7 @@ apiManagementApiTag.ApiManagementApiTag.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTag.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTag.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTag.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTag.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTag.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTag.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTag.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTag.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -468,10 +468,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTag.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -640,15 +640,15 @@ const apiManagementApiTagConfig: apiManagementApiTag.ApiManagementApiTagConfig =
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.apiId">apiId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag#api_id ApiManagementApiTag#api_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag#name ApiManagementApiTag#name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag#id ApiManagementApiTag#id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.apiId">apiId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag#api_id ApiManagementApiTag#api_id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag#name ApiManagementApiTag#name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag#id ApiManagementApiTag#id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagTimeouts">ApiManagementApiTagTimeouts</a></code> | timeouts block. |
 
 ---
@@ -666,10 +666,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagConfig.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -731,7 +731,7 @@ public readonly apiId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag#api_id ApiManagementApiTag#api_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag#api_id ApiManagementApiTag#api_id}.
 
 ---
 
@@ -743,7 +743,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag#name ApiManagementApiTag#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag#name ApiManagementApiTag#name}.
 
 ---
 
@@ -755,7 +755,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag#id ApiManagementApiTag#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag#id ApiManagementApiTag#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -772,7 +772,7 @@ public readonly timeouts: ApiManagementApiTagTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag#timeouts ApiManagementApiTag#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag#timeouts ApiManagementApiTag#timeouts}
 
 ---
 
@@ -790,9 +790,9 @@ const apiManagementApiTagTimeouts: apiManagementApiTag.ApiManagementApiTagTimeou
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag#create ApiManagementApiTag#create}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag#delete ApiManagementApiTag#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag#read ApiManagementApiTag#read}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag#create ApiManagementApiTag#create}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag#delete ApiManagementApiTag#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiTag.ApiManagementApiTagTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag#read ApiManagementApiTag#read}. |
 
 ---
 
@@ -804,7 +804,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag#create ApiManagementApiTag#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag#create ApiManagementApiTag#create}.
 
 ---
 
@@ -816,7 +816,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag#delete ApiManagementApiTag#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag#delete ApiManagementApiTag#delete}.
 
 ---
 
@@ -828,7 +828,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag#read ApiManagementApiTag#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag#read ApiManagementApiTag#read}.
 
 ---
 

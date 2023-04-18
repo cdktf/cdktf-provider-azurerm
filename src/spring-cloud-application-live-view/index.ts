@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_application_live_view
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_application_live_view
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudApplicationLiveViewConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_application_live_view#id SpringCloudApplicationLiveView#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_application_live_view#id SpringCloudApplicationLiveView#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_application_live_view#name SpringCloudApplicationLiveView#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_application_live_view#name SpringCloudApplicationLiveView#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_application_live_view#spring_cloud_service_id SpringCloudApplicationLiveView#spring_cloud_service_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_application_live_view#spring_cloud_service_id SpringCloudApplicationLiveView#spring_cloud_service_id}
   */
   readonly springCloudServiceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_application_live_view#timeouts SpringCloudApplicationLiveView#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_application_live_view#timeouts SpringCloudApplicationLiveView#timeouts}
   */
   readonly timeouts?: SpringCloudApplicationLiveViewTimeouts;
 }
 export interface SpringCloudApplicationLiveViewTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_application_live_view#create SpringCloudApplicationLiveView#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_application_live_view#create SpringCloudApplicationLiveView#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_application_live_view#delete SpringCloudApplicationLiveView#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_application_live_view#delete SpringCloudApplicationLiveView#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_application_live_view#read SpringCloudApplicationLiveView#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_application_live_view#read SpringCloudApplicationLiveView#read}
   */
   readonly read?: string;
 }
 
-export function springCloudApplicationLiveViewTimeoutsToTerraform(struct?: SpringCloudApplicationLiveViewTimeoutsOutputReference | SpringCloudApplicationLiveViewTimeouts | cdktf.IResolvable): any {
+export function springCloudApplicationLiveViewTimeoutsToTerraform(struct?: SpringCloudApplicationLiveViewTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -65,7 +65,7 @@ export class SpringCloudApplicationLiveViewTimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): SpringCloudApplicationLiveViewTimeouts | cdktf.IResolvable | undefined {
@@ -160,7 +160,7 @@ export class SpringCloudApplicationLiveViewTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_application_live_view azurerm_spring_cloud_application_live_view}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_application_live_view azurerm_spring_cloud_application_live_view}
 */
 export class SpringCloudApplicationLiveView extends cdktf.TerraformResource {
 
@@ -174,7 +174,7 @@ export class SpringCloudApplicationLiveView extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_application_live_view azurerm_spring_cloud_application_live_view} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_application_live_view azurerm_spring_cloud_application_live_view} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

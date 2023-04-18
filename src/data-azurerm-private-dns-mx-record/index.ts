@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/private_dns_mx_record
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_mx_record
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,28 +8,28 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermPrivateDnsMxRecordConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_mx_record#id DataAzurermPrivateDnsMxRecord#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_mx_record#id DataAzurermPrivateDnsMxRecord#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_mx_record#name DataAzurermPrivateDnsMxRecord#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_mx_record#name DataAzurermPrivateDnsMxRecord#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_mx_record#resource_group_name DataAzurermPrivateDnsMxRecord#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_mx_record#resource_group_name DataAzurermPrivateDnsMxRecord#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_mx_record#zone_name DataAzurermPrivateDnsMxRecord#zone_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_mx_record#zone_name DataAzurermPrivateDnsMxRecord#zone_name}
   */
   readonly zoneName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_mx_record#timeouts DataAzurermPrivateDnsMxRecord#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_mx_record#timeouts DataAzurermPrivateDnsMxRecord#timeouts}
   */
   readonly timeouts?: DataAzurermPrivateDnsMxRecordTimeouts;
 }
@@ -104,12 +104,12 @@ export class DataAzurermPrivateDnsMxRecordRecordList extends cdktf.ComplexList {
 }
 export interface DataAzurermPrivateDnsMxRecordTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_mx_record#read DataAzurermPrivateDnsMxRecord#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_mx_record#read DataAzurermPrivateDnsMxRecord#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermPrivateDnsMxRecordTimeoutsToTerraform(struct?: DataAzurermPrivateDnsMxRecordTimeoutsOutputReference | DataAzurermPrivateDnsMxRecordTimeouts | cdktf.IResolvable): any {
+export function dataAzurermPrivateDnsMxRecordTimeoutsToTerraform(struct?: DataAzurermPrivateDnsMxRecordTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -128,7 +128,7 @@ export class DataAzurermPrivateDnsMxRecordTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermPrivateDnsMxRecordTimeouts | cdktf.IResolvable | undefined {
@@ -179,7 +179,7 @@ export class DataAzurermPrivateDnsMxRecordTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_mx_record azurerm_private_dns_mx_record}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_mx_record azurerm_private_dns_mx_record}
 */
 export class DataAzurermPrivateDnsMxRecord extends cdktf.TerraformDataSource {
 
@@ -193,7 +193,7 @@ export class DataAzurermPrivateDnsMxRecord extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_mx_record azurerm_private_dns_mx_record} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_mx_record azurerm_private_dns_mx_record} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

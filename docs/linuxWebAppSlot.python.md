@@ -1,6 +1,6 @@
 # `azurerm_linux_web_app_slot`
 
-Refer to the Terraform Registory for docs: [`azurerm_linux_web_app_slot`](https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot).
+Refer to the Terraform Registory for docs: [`azurerm_linux_web_app_slot`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot).
 
 # `linuxWebAppSlot` Submodule <a name="`linuxWebAppSlot` Submodule" id="@cdktf/provider-azurerm.linuxWebAppSlot"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_linux_web_app_slot`](https:
 
 ### LinuxWebAppSlot <a name="LinuxWebAppSlot" id="@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot azurerm_linux_web_app_slot}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot azurerm_linux_web_app_slot}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer"></a>
 
@@ -19,7 +19,7 @@ linuxWebAppSlot.LinuxWebAppSlot(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -57,35 +57,35 @@ linuxWebAppSlot.LinuxWebAppSlot(
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.appServiceId">app_service_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_service_id LinuxWebAppSlot#app_service_id}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#name LinuxWebAppSlot#name}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.appServiceId">app_service_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_service_id LinuxWebAppSlot#app_service_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#name LinuxWebAppSlot#name}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.siteConfig">site_config</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig">LinuxWebAppSlotSiteConfig</a></code> | site_config block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.appSettings">app_settings</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_settings LinuxWebAppSlot#app_settings}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.appSettings">app_settings</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_settings LinuxWebAppSlot#app_settings}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.authSettings">auth_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotAuthSettings">LinuxWebAppSlotAuthSettings</a></code> | auth_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.authSettingsV2">auth_settings_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotAuthSettingsV2">LinuxWebAppSlotAuthSettingsV2</a></code> | auth_settings_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.backup">backup</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotBackup">LinuxWebAppSlotBackup</a></code> | backup block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.clientAffinityEnabled">client_affinity_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_affinity_enabled LinuxWebAppSlot#client_affinity_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_certificate_enabled LinuxWebAppSlot#client_certificate_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.clientAffinityEnabled">client_affinity_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_affinity_enabled LinuxWebAppSlot#client_affinity_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_certificate_enabled LinuxWebAppSlot#client_certificate_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.clientCertificateExclusionPaths">client_certificate_exclusion_paths</a></code> | <code>str</code> | Paths to exclude when using client certificates, separated by ; |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_certificate_mode LinuxWebAppSlot#client_certificate_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_certificate_mode LinuxWebAppSlot#client_certificate_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.connectionString">connection_string</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConnectionString">LinuxWebAppSlotConnectionString</a>]]</code> | connection_string block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.httpsOnly">https_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#https_only LinuxWebAppSlot#https_only}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#id LinuxWebAppSlot#id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.httpsOnly">https_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#https_only LinuxWebAppSlot#https_only}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#id LinuxWebAppSlot#id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotIdentity">LinuxWebAppSlotIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.keyVaultReferenceIdentityId">key_vault_reference_identity_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#key_vault_reference_identity_id LinuxWebAppSlot#key_vault_reference_identity_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.keyVaultReferenceIdentityId">key_vault_reference_identity_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#key_vault_reference_identity_id LinuxWebAppSlot#key_vault_reference_identity_id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.logs">logs</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogs">LinuxWebAppSlotLogs</a></code> | logs block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.servicePlanId">service_plan_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#service_plan_id LinuxWebAppSlot#service_plan_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.servicePlanId">service_plan_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#service_plan_id LinuxWebAppSlot#service_plan_id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.storageAccount">storage_account</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount">LinuxWebAppSlotStorageAccount</a>]]</code> | storage_account block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#tags LinuxWebAppSlot#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#tags LinuxWebAppSlot#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts">LinuxWebAppSlotTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#virtual_network_subnet_id LinuxWebAppSlot#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#virtual_network_subnet_id LinuxWebAppSlot#virtual_network_subnet_id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.zipDeployFile">zip_deploy_file</a></code> | <code>str</code> | The local path and filename of the Zip packaged application to deploy to this Windows Web App. |
 
 ---
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -154,7 +154,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_service_id LinuxWebAppSlot#app_service_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_service_id LinuxWebAppSlot#app_service_id}.
 
 ---
 
@@ -162,7 +162,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#name LinuxWebAppSlot#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#name LinuxWebAppSlot#name}.
 
 ---
 
@@ -172,7 +172,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 site_config block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#site_config LinuxWebAppSlot#site_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#site_config LinuxWebAppSlot#site_config}
 
 ---
 
@@ -180,7 +180,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_settings LinuxWebAppSlot#app_settings}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_settings LinuxWebAppSlot#app_settings}.
 
 ---
 
@@ -190,7 +190,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 auth_settings block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#auth_settings LinuxWebAppSlot#auth_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#auth_settings LinuxWebAppSlot#auth_settings}
 
 ---
 
@@ -200,7 +200,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 auth_settings_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#auth_settings_v2 LinuxWebAppSlot#auth_settings_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#auth_settings_v2 LinuxWebAppSlot#auth_settings_v2}
 
 ---
 
@@ -210,7 +210,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 backup block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#backup LinuxWebAppSlot#backup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#backup LinuxWebAppSlot#backup}
 
 ---
 
@@ -218,7 +218,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_affinity_enabled LinuxWebAppSlot#client_affinity_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_affinity_enabled LinuxWebAppSlot#client_affinity_enabled}.
 
 ---
 
@@ -226,7 +226,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_certificate_enabled LinuxWebAppSlot#client_certificate_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_certificate_enabled LinuxWebAppSlot#client_certificate_enabled}.
 
 ---
 
@@ -236,7 +236,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Paths to exclude when using client certificates, separated by ;
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_certificate_exclusion_paths LinuxWebAppSlot#client_certificate_exclusion_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_certificate_exclusion_paths LinuxWebAppSlot#client_certificate_exclusion_paths}
 
 ---
 
@@ -244,7 +244,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_certificate_mode LinuxWebAppSlot#client_certificate_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_certificate_mode LinuxWebAppSlot#client_certificate_mode}.
 
 ---
 
@@ -254,7 +254,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 connection_string block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#connection_string LinuxWebAppSlot#connection_string}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#connection_string LinuxWebAppSlot#connection_string}
 
 ---
 
@@ -262,7 +262,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}.
 
 ---
 
@@ -270,7 +270,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#https_only LinuxWebAppSlot#https_only}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#https_only LinuxWebAppSlot#https_only}.
 
 ---
 
@@ -278,7 +278,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#id LinuxWebAppSlot#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#id LinuxWebAppSlot#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -291,7 +291,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 identity block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#identity LinuxWebAppSlot#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#identity LinuxWebAppSlot#identity}
 
 ---
 
@@ -299,7 +299,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#key_vault_reference_identity_id LinuxWebAppSlot#key_vault_reference_identity_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#key_vault_reference_identity_id LinuxWebAppSlot#key_vault_reference_identity_id}.
 
 ---
 
@@ -309,7 +309,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 logs block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#logs LinuxWebAppSlot#logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#logs LinuxWebAppSlot#logs}
 
 ---
 
@@ -317,7 +317,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#service_plan_id LinuxWebAppSlot#service_plan_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#service_plan_id LinuxWebAppSlot#service_plan_id}.
 
 ---
 
@@ -327,7 +327,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 storage_account block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#storage_account LinuxWebAppSlot#storage_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#storage_account LinuxWebAppSlot#storage_account}
 
 ---
 
@@ -335,7 +335,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#tags LinuxWebAppSlot#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#tags LinuxWebAppSlot#tags}.
 
 ---
 
@@ -345,7 +345,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#timeouts LinuxWebAppSlot#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#timeouts LinuxWebAppSlot#timeouts}
 
 ---
 
@@ -353,7 +353,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#virtual_network_subnet_id LinuxWebAppSlot#virtual_network_subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#virtual_network_subnet_id LinuxWebAppSlot#virtual_network_subnet_id}.
 
 ---
 
@@ -365,7 +365,7 @@ The local path and filename of the Zip packaged application to deploy to this Wi
 
 **Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` on the App in `app_settings`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#zip_deploy_file LinuxWebAppSlot#zip_deploy_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#zip_deploy_file LinuxWebAppSlot#zip_deploy_file}
 
 ---
 
@@ -659,7 +659,7 @@ def put_auth_settings(
 
 Should the Authentication / Authorization feature be enabled?
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}
 
 ---
 
@@ -669,7 +669,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 active_directory block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#active_directory LinuxWebAppSlot#active_directory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#active_directory LinuxWebAppSlot#active_directory}
 
 ---
 
@@ -679,7 +679,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a map of Login Parameters to send to the OpenID Connect authorization endpoint when a user logs in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#additional_login_parameters LinuxWebAppSlot#additional_login_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#additional_login_parameters LinuxWebAppSlot#additional_login_parameters}
 
 ---
 
@@ -689,7 +689,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of External URLs that can be redirected to as part of logging in or logging out of the Windows Web App.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_external_redirect_urls LinuxWebAppSlot#allowed_external_redirect_urls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_external_redirect_urls LinuxWebAppSlot#allowed_external_redirect_urls}
 
 ---
 
@@ -701,7 +701,7 @@ The default authentication provider to use when multiple providers are configure
 
 Possible values include: `AzureActiveDirectory`, `Facebook`, `Google`, `MicrosoftAccount`, `Twitter`, `Github`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#default_provider LinuxWebAppSlot#default_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#default_provider LinuxWebAppSlot#default_provider}
 
 ---
 
@@ -711,7 +711,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 facebook block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#facebook LinuxWebAppSlot#facebook}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#facebook LinuxWebAppSlot#facebook}
 
 ---
 
@@ -721,7 +721,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 github block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#github LinuxWebAppSlot#github}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#github LinuxWebAppSlot#github}
 
 ---
 
@@ -731,7 +731,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 google block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#google LinuxWebAppSlot#google}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#google LinuxWebAppSlot#google}
 
 ---
 
@@ -741,7 +741,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The OpenID Connect Issuer URI that represents the entity which issues access tokens.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#issuer LinuxWebAppSlot#issuer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#issuer LinuxWebAppSlot#issuer}
 
 ---
 
@@ -751,7 +751,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 microsoft block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#microsoft LinuxWebAppSlot#microsoft}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#microsoft LinuxWebAppSlot#microsoft}
 
 ---
 
@@ -761,7 +761,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The RuntimeVersion of the Authentication / Authorization feature in use.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#runtime_version LinuxWebAppSlot#runtime_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#runtime_version LinuxWebAppSlot#runtime_version}
 
 ---
 
@@ -773,7 +773,7 @@ The number of hours after session token expiration that a session token can be u
 
 Defaults to `72` hours.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#token_refresh_extension_hours LinuxWebAppSlot#token_refresh_extension_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#token_refresh_extension_hours LinuxWebAppSlot#token_refresh_extension_hours}
 
 ---
 
@@ -783,7 +783,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#token_store_enabled LinuxWebAppSlot#token_store_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#token_store_enabled LinuxWebAppSlot#token_store_enabled}
 
 ---
 
@@ -793,7 +793,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 twitter block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#twitter LinuxWebAppSlot#twitter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#twitter LinuxWebAppSlot#twitter}
 
 ---
 
@@ -803,7 +803,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The action to take when an unauthenticated client attempts to access the app. Possible values include: `RedirectToLoginPage`, `AllowAnonymous`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#unauthenticated_client_action LinuxWebAppSlot#unauthenticated_client_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#unauthenticated_client_action LinuxWebAppSlot#unauthenticated_client_action}
 
 ---
 
@@ -842,7 +842,7 @@ def put_auth_settings_v2(
 
 login block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#login LinuxWebAppSlot#login}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#login LinuxWebAppSlot#login}
 
 ---
 
@@ -852,7 +852,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 active_directory_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#active_directory_v2 LinuxWebAppSlot#active_directory_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#active_directory_v2 LinuxWebAppSlot#active_directory_v2}
 
 ---
 
@@ -862,7 +862,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 apple_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#apple_v2 LinuxWebAppSlot#apple_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#apple_v2 LinuxWebAppSlot#apple_v2}
 
 ---
 
@@ -872,7 +872,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the AuthV2 Settings be enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#auth_enabled LinuxWebAppSlot#auth_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#auth_enabled LinuxWebAppSlot#auth_enabled}
 
 ---
 
@@ -882,7 +882,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 azure_static_web_app_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#azure_static_web_app_v2 LinuxWebAppSlot#azure_static_web_app_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#azure_static_web_app_v2 LinuxWebAppSlot#azure_static_web_app_v2}
 
 ---
 
@@ -892,7 +892,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#config_file_path LinuxWebAppSlot#config_file_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#config_file_path LinuxWebAppSlot#config_file_path}
 
 ---
 
@@ -902,7 +902,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 custom_oidc_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#custom_oidc_v2 LinuxWebAppSlot#custom_oidc_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#custom_oidc_v2 LinuxWebAppSlot#custom_oidc_v2}
 
 ---
 
@@ -912,7 +912,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#default_provider LinuxWebAppSlot#default_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#default_provider LinuxWebAppSlot#default_provider}
 
 ---
 
@@ -922,7 +922,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#excluded_paths LinuxWebAppSlot#excluded_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#excluded_paths LinuxWebAppSlot#excluded_paths}
 
 ---
 
@@ -932,7 +932,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 facebook_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#facebook_v2 LinuxWebAppSlot#facebook_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#facebook_v2 LinuxWebAppSlot#facebook_v2}
 
 ---
 
@@ -944,7 +944,7 @@ The convention used to determine the url of the request made.
 
 Possible values include `ForwardProxyConventionNoProxy`, `ForwardProxyConventionStandard`, `ForwardProxyConventionCustom`. Defaults to `ForwardProxyConventionNoProxy`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#forward_proxy_convention LinuxWebAppSlot#forward_proxy_convention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#forward_proxy_convention LinuxWebAppSlot#forward_proxy_convention}
 
 ---
 
@@ -954,7 +954,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The name of the header containing the host of the request.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#forward_proxy_custom_host_header_name LinuxWebAppSlot#forward_proxy_custom_host_header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#forward_proxy_custom_host_header_name LinuxWebAppSlot#forward_proxy_custom_host_header_name}
 
 ---
 
@@ -964,7 +964,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The name of the header containing the scheme of the request.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#forward_proxy_custom_scheme_header_name LinuxWebAppSlot#forward_proxy_custom_scheme_header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#forward_proxy_custom_scheme_header_name LinuxWebAppSlot#forward_proxy_custom_scheme_header_name}
 
 ---
 
@@ -974,7 +974,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 github_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#github_v2 LinuxWebAppSlot#github_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#github_v2 LinuxWebAppSlot#github_v2}
 
 ---
 
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 google_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#google_v2 LinuxWebAppSlot#google_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#google_v2 LinuxWebAppSlot#google_v2}
 
 ---
 
@@ -994,7 +994,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#http_route_api_prefix LinuxWebAppSlot#http_route_api_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#http_route_api_prefix LinuxWebAppSlot#http_route_api_prefix}
 
 ---
 
@@ -1004,7 +1004,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 microsoft_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#microsoft_v2 LinuxWebAppSlot#microsoft_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#microsoft_v2 LinuxWebAppSlot#microsoft_v2}
 
 ---
 
@@ -1014,7 +1014,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the authentication flow be used for all requests.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#require_authentication LinuxWebAppSlot#require_authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#require_authentication LinuxWebAppSlot#require_authentication}
 
 ---
 
@@ -1024,7 +1024,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should HTTPS be required on connections? Defaults to true.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#require_https LinuxWebAppSlot#require_https}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#require_https LinuxWebAppSlot#require_https}
 
 ---
 
@@ -1034,7 +1034,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#runtime_version LinuxWebAppSlot#runtime_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#runtime_version LinuxWebAppSlot#runtime_version}
 
 ---
 
@@ -1044,7 +1044,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 twitter_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#twitter_v2 LinuxWebAppSlot#twitter_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#twitter_v2 LinuxWebAppSlot#twitter_v2}
 
 ---
 
@@ -1056,7 +1056,7 @@ The action to take for requests made without authentication.
 
 Possible values include `RedirectToLoginPage`, `AllowAnonymous`, `Return401`, and `Return403`. Defaults to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#unauthenticated_action LinuxWebAppSlot#unauthenticated_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#unauthenticated_action LinuxWebAppSlot#unauthenticated_action}
 
 ---
 
@@ -1077,7 +1077,7 @@ def put_backup(
 
 The name which should be used for this Backup.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#name LinuxWebAppSlot#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#name LinuxWebAppSlot#name}
 
 ---
 
@@ -1087,7 +1087,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 schedule block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#schedule LinuxWebAppSlot#schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#schedule LinuxWebAppSlot#schedule}
 
 ---
 
@@ -1097,7 +1097,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The SAS URL to the container.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#storage_account_url LinuxWebAppSlot#storage_account_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#storage_account_url LinuxWebAppSlot#storage_account_url}
 
 ---
 
@@ -1107,7 +1107,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should this backup job be enabled?
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}
 
 ---
 
@@ -1138,7 +1138,7 @@ def put_identity(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#type LinuxWebAppSlot#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#type LinuxWebAppSlot#type}.
 
 ---
 
@@ -1146,7 +1146,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#identity_ids LinuxWebAppSlot#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#identity_ids LinuxWebAppSlot#identity_ids}.
 
 ---
 
@@ -1167,7 +1167,7 @@ def put_logs(
 
 application_logs block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#application_logs LinuxWebAppSlot#application_logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#application_logs LinuxWebAppSlot#application_logs}
 
 ---
 
@@ -1175,7 +1175,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#detailed_error_messages LinuxWebAppSlot#detailed_error_messages}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#detailed_error_messages LinuxWebAppSlot#detailed_error_messages}.
 
 ---
 
@@ -1183,7 +1183,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#failed_request_tracing LinuxWebAppSlot#failed_request_tracing}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#failed_request_tracing LinuxWebAppSlot#failed_request_tracing}.
 
 ---
 
@@ -1193,7 +1193,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 http_logs block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#http_logs LinuxWebAppSlot#http_logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#http_logs LinuxWebAppSlot#http_logs}
 
 ---
 
@@ -1238,7 +1238,7 @@ def put_site_config(
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#always_on LinuxWebAppSlot#always_on}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#always_on LinuxWebAppSlot#always_on}.
 
 ---
 
@@ -1246,7 +1246,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#api_definition_url LinuxWebAppSlot#api_definition_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#api_definition_url LinuxWebAppSlot#api_definition_url}.
 
 ---
 
@@ -1254,7 +1254,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#api_management_api_id LinuxWebAppSlot#api_management_api_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#api_management_api_id LinuxWebAppSlot#api_management_api_id}.
 
 ---
 
@@ -1262,7 +1262,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_command_line LinuxWebAppSlot#app_command_line}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_command_line LinuxWebAppSlot#app_command_line}.
 
 ---
 
@@ -1272,7 +1272,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 application_stack block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#application_stack LinuxWebAppSlot#application_stack}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#application_stack LinuxWebAppSlot#application_stack}
 
 ---
 
@@ -1280,7 +1280,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#auto_heal_enabled LinuxWebAppSlot#auto_heal_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#auto_heal_enabled LinuxWebAppSlot#auto_heal_enabled}.
 
 ---
 
@@ -1290,7 +1290,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 auto_heal_setting block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#auto_heal_setting LinuxWebAppSlot#auto_heal_setting}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#auto_heal_setting LinuxWebAppSlot#auto_heal_setting}
 
 ---
 
@@ -1298,7 +1298,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#auto_swap_slot_name LinuxWebAppSlot#auto_swap_slot_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#auto_swap_slot_name LinuxWebAppSlot#auto_swap_slot_name}.
 
 ---
 
@@ -1306,7 +1306,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#container_registry_managed_identity_client_id LinuxWebAppSlot#container_registry_managed_identity_client_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#container_registry_managed_identity_client_id LinuxWebAppSlot#container_registry_managed_identity_client_id}.
 
 ---
 
@@ -1314,7 +1314,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#container_registry_use_managed_identity LinuxWebAppSlot#container_registry_use_managed_identity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#container_registry_use_managed_identity LinuxWebAppSlot#container_registry_use_managed_identity}.
 
 ---
 
@@ -1324,7 +1324,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 cors block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#cors LinuxWebAppSlot#cors}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#cors LinuxWebAppSlot#cors}
 
 ---
 
@@ -1332,7 +1332,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#default_documents LinuxWebAppSlot#default_documents}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#default_documents LinuxWebAppSlot#default_documents}.
 
 ---
 
@@ -1340,7 +1340,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#ftps_state LinuxWebAppSlot#ftps_state}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#ftps_state LinuxWebAppSlot#ftps_state}.
 
 ---
 
@@ -1352,7 +1352,7 @@ The amount of time in minutes that a node is unhealthy before being removed from
 
 Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#health_check_eviction_time_in_min LinuxWebAppSlot#health_check_eviction_time_in_min}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#health_check_eviction_time_in_min LinuxWebAppSlot#health_check_eviction_time_in_min}
 
 ---
 
@@ -1360,7 +1360,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#health_check_path LinuxWebAppSlot#health_check_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#health_check_path LinuxWebAppSlot#health_check_path}.
 
 ---
 
@@ -1368,7 +1368,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#http2_enabled LinuxWebAppSlot#http2_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#http2_enabled LinuxWebAppSlot#http2_enabled}.
 
 ---
 
@@ -1378,7 +1378,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ip_restriction block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#ip_restriction LinuxWebAppSlot#ip_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#ip_restriction LinuxWebAppSlot#ip_restriction}
 
 ---
 
@@ -1386,7 +1386,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#load_balancing_mode LinuxWebAppSlot#load_balancing_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#load_balancing_mode LinuxWebAppSlot#load_balancing_mode}.
 
 ---
 
@@ -1394,7 +1394,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#local_mysql_enabled LinuxWebAppSlot#local_mysql_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#local_mysql_enabled LinuxWebAppSlot#local_mysql_enabled}.
 
 ---
 
@@ -1402,7 +1402,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#managed_pipeline_mode LinuxWebAppSlot#managed_pipeline_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#managed_pipeline_mode LinuxWebAppSlot#managed_pipeline_mode}.
 
 ---
 
@@ -1410,7 +1410,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#minimum_tls_version LinuxWebAppSlot#minimum_tls_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#minimum_tls_version LinuxWebAppSlot#minimum_tls_version}.
 
 ---
 
@@ -1418,7 +1418,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#remote_debugging_enabled LinuxWebAppSlot#remote_debugging_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#remote_debugging_enabled LinuxWebAppSlot#remote_debugging_enabled}.
 
 ---
 
@@ -1426,7 +1426,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#remote_debugging_version LinuxWebAppSlot#remote_debugging_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#remote_debugging_version LinuxWebAppSlot#remote_debugging_version}.
 
 ---
 
@@ -1436,7 +1436,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 scm_ip_restriction block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#scm_ip_restriction LinuxWebAppSlot#scm_ip_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#scm_ip_restriction LinuxWebAppSlot#scm_ip_restriction}
 
 ---
 
@@ -1444,7 +1444,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#scm_minimum_tls_version LinuxWebAppSlot#scm_minimum_tls_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#scm_minimum_tls_version LinuxWebAppSlot#scm_minimum_tls_version}.
 
 ---
 
@@ -1452,7 +1452,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#scm_use_main_ip_restriction LinuxWebAppSlot#scm_use_main_ip_restriction}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#scm_use_main_ip_restriction LinuxWebAppSlot#scm_use_main_ip_restriction}.
 
 ---
 
@@ -1460,7 +1460,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#use_32_bit_worker LinuxWebAppSlot#use_32_bit_worker}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#use_32_bit_worker LinuxWebAppSlot#use_32_bit_worker}.
 
 ---
 
@@ -1470,7 +1470,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#vnet_route_all_enabled LinuxWebAppSlot#vnet_route_all_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#vnet_route_all_enabled LinuxWebAppSlot#vnet_route_all_enabled}
 
 ---
 
@@ -1478,7 +1478,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#websockets_enabled LinuxWebAppSlot#websockets_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#websockets_enabled LinuxWebAppSlot#websockets_enabled}.
 
 ---
 
@@ -1486,7 +1486,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#worker_count LinuxWebAppSlot#worker_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#worker_count LinuxWebAppSlot#worker_count}.
 
 ---
 
@@ -1519,7 +1519,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#create LinuxWebAppSlot#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#create LinuxWebAppSlot#create}.
 
 ---
 
@@ -1527,7 +1527,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#delete LinuxWebAppSlot#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#delete LinuxWebAppSlot#delete}.
 
 ---
 
@@ -1535,7 +1535,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#read LinuxWebAppSlot#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#read LinuxWebAppSlot#read}.
 
 ---
 
@@ -1543,7 +1543,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#update LinuxWebAppSlot#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#update LinuxWebAppSlot#update}.
 
 ---
 
@@ -1761,7 +1761,7 @@ linuxWebAppSlot.LinuxWebAppSlot.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -1912,10 +1912,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -2617,7 +2617,7 @@ enabled: typing.Union[bool, IResolvable]
 
 Should the Authentication / Authorization feature be enabled?
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}
 
 ---
 
@@ -2631,7 +2631,7 @@ active_directory: LinuxWebAppSlotAuthSettingsActiveDirectory
 
 active_directory block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#active_directory LinuxWebAppSlot#active_directory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#active_directory LinuxWebAppSlot#active_directory}
 
 ---
 
@@ -2645,7 +2645,7 @@ additional_login_parameters: typing.Mapping[str]
 
 Specifies a map of Login Parameters to send to the OpenID Connect authorization endpoint when a user logs in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#additional_login_parameters LinuxWebAppSlot#additional_login_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#additional_login_parameters LinuxWebAppSlot#additional_login_parameters}
 
 ---
 
@@ -2659,7 +2659,7 @@ allowed_external_redirect_urls: typing.List[str]
 
 Specifies a list of External URLs that can be redirected to as part of logging in or logging out of the Windows Web App.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_external_redirect_urls LinuxWebAppSlot#allowed_external_redirect_urls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_external_redirect_urls LinuxWebAppSlot#allowed_external_redirect_urls}
 
 ---
 
@@ -2675,7 +2675,7 @@ The default authentication provider to use when multiple providers are configure
 
 Possible values include: `AzureActiveDirectory`, `Facebook`, `Google`, `MicrosoftAccount`, `Twitter`, `Github`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#default_provider LinuxWebAppSlot#default_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#default_provider LinuxWebAppSlot#default_provider}
 
 ---
 
@@ -2689,7 +2689,7 @@ facebook: LinuxWebAppSlotAuthSettingsFacebook
 
 facebook block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#facebook LinuxWebAppSlot#facebook}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#facebook LinuxWebAppSlot#facebook}
 
 ---
 
@@ -2703,7 +2703,7 @@ github: LinuxWebAppSlotAuthSettingsGithub
 
 github block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#github LinuxWebAppSlot#github}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#github LinuxWebAppSlot#github}
 
 ---
 
@@ -2717,7 +2717,7 @@ google: LinuxWebAppSlotAuthSettingsGoogle
 
 google block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#google LinuxWebAppSlot#google}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#google LinuxWebAppSlot#google}
 
 ---
 
@@ -2731,7 +2731,7 @@ issuer: str
 
 The OpenID Connect Issuer URI that represents the entity which issues access tokens.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#issuer LinuxWebAppSlot#issuer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#issuer LinuxWebAppSlot#issuer}
 
 ---
 
@@ -2745,7 +2745,7 @@ microsoft: LinuxWebAppSlotAuthSettingsMicrosoft
 
 microsoft block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#microsoft LinuxWebAppSlot#microsoft}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#microsoft LinuxWebAppSlot#microsoft}
 
 ---
 
@@ -2759,7 +2759,7 @@ runtime_version: str
 
 The RuntimeVersion of the Authentication / Authorization feature in use.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#runtime_version LinuxWebAppSlot#runtime_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#runtime_version LinuxWebAppSlot#runtime_version}
 
 ---
 
@@ -2775,7 +2775,7 @@ The number of hours after session token expiration that a session token can be u
 
 Defaults to `72` hours.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#token_refresh_extension_hours LinuxWebAppSlot#token_refresh_extension_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#token_refresh_extension_hours LinuxWebAppSlot#token_refresh_extension_hours}
 
 ---
 
@@ -2789,7 +2789,7 @@ token_store_enabled: typing.Union[bool, IResolvable]
 
 Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#token_store_enabled LinuxWebAppSlot#token_store_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#token_store_enabled LinuxWebAppSlot#token_store_enabled}
 
 ---
 
@@ -2803,7 +2803,7 @@ twitter: LinuxWebAppSlotAuthSettingsTwitter
 
 twitter block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#twitter LinuxWebAppSlot#twitter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#twitter LinuxWebAppSlot#twitter}
 
 ---
 
@@ -2817,7 +2817,7 @@ unauthenticated_client_action: str
 
 The action to take when an unauthenticated client attempts to access the app. Possible values include: `RedirectToLoginPage`, `AllowAnonymous`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#unauthenticated_client_action LinuxWebAppSlot#unauthenticated_client_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#unauthenticated_client_action LinuxWebAppSlot#unauthenticated_client_action}
 
 ---
 
@@ -2857,7 +2857,7 @@ client_id: str
 
 The ID of the Client to use to authenticate with Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -2871,7 +2871,7 @@ allowed_audiences: typing.List[str]
 
 Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
 
 ---
 
@@ -2885,7 +2885,7 @@ client_secret: str
 
 The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
 
 ---
 
@@ -2899,7 +2899,7 @@ client_secret_setting_name: str
 
 The App Setting name that contains the client secret of the Client. Cannot be used with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -2939,7 +2939,7 @@ app_id: str
 
 The App ID of the Facebook app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_id LinuxWebAppSlot#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_id LinuxWebAppSlot#app_id}
 
 ---
 
@@ -2953,7 +2953,7 @@ app_secret: str
 
 The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_secret LinuxWebAppSlot#app_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_secret LinuxWebAppSlot#app_secret}
 
 ---
 
@@ -2967,7 +2967,7 @@ app_secret_setting_name: str
 
 The app setting name that contains the `app_secret` value used for Facebook Login. Cannot be specified with `app_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_secret_setting_name LinuxWebAppSlot#app_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_secret_setting_name LinuxWebAppSlot#app_secret_setting_name}
 
 ---
 
@@ -2981,7 +2981,7 @@ oauth_scopes: typing.List[str]
 
 Specifies a list of OAuth 2.0 scopes to be requested as part of Facebook Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
 
 ---
 
@@ -3021,7 +3021,7 @@ client_id: str
 
 The ID of the GitHub app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -3035,7 +3035,7 @@ client_secret: str
 
 The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
 
 ---
 
@@ -3049,7 +3049,7 @@ client_secret_setting_name: str
 
 The app setting name that contains the `client_secret` value used for GitHub Login. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -3063,7 +3063,7 @@ oauth_scopes: typing.List[str]
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
 
 ---
 
@@ -3103,7 +3103,7 @@ client_id: str
 
 The OpenID Connect Client ID for the Google web application.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -3117,7 +3117,7 @@ client_secret: str
 
 The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
 
 ---
 
@@ -3131,7 +3131,7 @@ client_secret_setting_name: str
 
 The app setting name that contains the `client_secret` value used for Google Login. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -3145,7 +3145,7 @@ oauth_scopes: typing.List[str]
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication. If not specified, "openid", "profile", and "email" are used as default scopes.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
 
 ---
 
@@ -3185,7 +3185,7 @@ client_id: str
 
 The OAuth 2.0 client ID that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -3199,7 +3199,7 @@ client_secret: str
 
 The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
 
 ---
 
@@ -3213,7 +3213,7 @@ client_secret_setting_name: str
 
 The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -3227,7 +3227,7 @@ oauth_scopes: typing.List[str]
 
 The list of OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. If not specified, `wl.basic` is used as the default scope.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
 
 ---
 
@@ -3265,7 +3265,7 @@ consumer_key: str
 
 The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#consumer_key LinuxWebAppSlot#consumer_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#consumer_key LinuxWebAppSlot#consumer_key}
 
 ---
 
@@ -3279,7 +3279,7 @@ consumer_secret: str
 
 The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#consumer_secret LinuxWebAppSlot#consumer_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#consumer_secret LinuxWebAppSlot#consumer_secret}
 
 ---
 
@@ -3293,7 +3293,7 @@ consumer_secret_setting_name: str
 
 The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#consumer_secret_setting_name LinuxWebAppSlot#consumer_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#consumer_secret_setting_name LinuxWebAppSlot#consumer_secret_setting_name}
 
 ---
 
@@ -3369,7 +3369,7 @@ login: LinuxWebAppSlotAuthSettingsV2Login
 
 login block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#login LinuxWebAppSlot#login}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#login LinuxWebAppSlot#login}
 
 ---
 
@@ -3383,7 +3383,7 @@ active_directory_v2: LinuxWebAppSlotAuthSettingsV2ActiveDirectoryV2
 
 active_directory_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#active_directory_v2 LinuxWebAppSlot#active_directory_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#active_directory_v2 LinuxWebAppSlot#active_directory_v2}
 
 ---
 
@@ -3397,7 +3397,7 @@ apple_v2: LinuxWebAppSlotAuthSettingsV2AppleV2
 
 apple_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#apple_v2 LinuxWebAppSlot#apple_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#apple_v2 LinuxWebAppSlot#apple_v2}
 
 ---
 
@@ -3411,7 +3411,7 @@ auth_enabled: typing.Union[bool, IResolvable]
 
 Should the AuthV2 Settings be enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#auth_enabled LinuxWebAppSlot#auth_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#auth_enabled LinuxWebAppSlot#auth_enabled}
 
 ---
 
@@ -3425,7 +3425,7 @@ azure_static_web_app_v2: LinuxWebAppSlotAuthSettingsV2AzureStaticWebAppV2
 
 azure_static_web_app_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#azure_static_web_app_v2 LinuxWebAppSlot#azure_static_web_app_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#azure_static_web_app_v2 LinuxWebAppSlot#azure_static_web_app_v2}
 
 ---
 
@@ -3439,7 +3439,7 @@ config_file_path: str
 
 The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#config_file_path LinuxWebAppSlot#config_file_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#config_file_path LinuxWebAppSlot#config_file_path}
 
 ---
 
@@ -3453,7 +3453,7 @@ custom_oidc_v2: typing.Union[IResolvable, typing.List[LinuxWebAppSlotAuthSetting
 
 custom_oidc_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#custom_oidc_v2 LinuxWebAppSlot#custom_oidc_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#custom_oidc_v2 LinuxWebAppSlot#custom_oidc_v2}
 
 ---
 
@@ -3467,7 +3467,7 @@ default_provider: str
 
 The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#default_provider LinuxWebAppSlot#default_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#default_provider LinuxWebAppSlot#default_provider}
 
 ---
 
@@ -3481,7 +3481,7 @@ excluded_paths: typing.List[str]
 
 The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#excluded_paths LinuxWebAppSlot#excluded_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#excluded_paths LinuxWebAppSlot#excluded_paths}
 
 ---
 
@@ -3495,7 +3495,7 @@ facebook_v2: LinuxWebAppSlotAuthSettingsV2FacebookV2
 
 facebook_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#facebook_v2 LinuxWebAppSlot#facebook_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#facebook_v2 LinuxWebAppSlot#facebook_v2}
 
 ---
 
@@ -3511,7 +3511,7 @@ The convention used to determine the url of the request made.
 
 Possible values include `ForwardProxyConventionNoProxy`, `ForwardProxyConventionStandard`, `ForwardProxyConventionCustom`. Defaults to `ForwardProxyConventionNoProxy`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#forward_proxy_convention LinuxWebAppSlot#forward_proxy_convention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#forward_proxy_convention LinuxWebAppSlot#forward_proxy_convention}
 
 ---
 
@@ -3525,7 +3525,7 @@ forward_proxy_custom_host_header_name: str
 
 The name of the header containing the host of the request.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#forward_proxy_custom_host_header_name LinuxWebAppSlot#forward_proxy_custom_host_header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#forward_proxy_custom_host_header_name LinuxWebAppSlot#forward_proxy_custom_host_header_name}
 
 ---
 
@@ -3539,7 +3539,7 @@ forward_proxy_custom_scheme_header_name: str
 
 The name of the header containing the scheme of the request.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#forward_proxy_custom_scheme_header_name LinuxWebAppSlot#forward_proxy_custom_scheme_header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#forward_proxy_custom_scheme_header_name LinuxWebAppSlot#forward_proxy_custom_scheme_header_name}
 
 ---
 
@@ -3553,7 +3553,7 @@ github_v2: LinuxWebAppSlotAuthSettingsV2GithubV2
 
 github_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#github_v2 LinuxWebAppSlot#github_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#github_v2 LinuxWebAppSlot#github_v2}
 
 ---
 
@@ -3567,7 +3567,7 @@ google_v2: LinuxWebAppSlotAuthSettingsV2GoogleV2
 
 google_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#google_v2 LinuxWebAppSlot#google_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#google_v2 LinuxWebAppSlot#google_v2}
 
 ---
 
@@ -3581,7 +3581,7 @@ http_route_api_prefix: str
 
 The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#http_route_api_prefix LinuxWebAppSlot#http_route_api_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#http_route_api_prefix LinuxWebAppSlot#http_route_api_prefix}
 
 ---
 
@@ -3595,7 +3595,7 @@ microsoft_v2: LinuxWebAppSlotAuthSettingsV2MicrosoftV2
 
 microsoft_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#microsoft_v2 LinuxWebAppSlot#microsoft_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#microsoft_v2 LinuxWebAppSlot#microsoft_v2}
 
 ---
 
@@ -3609,7 +3609,7 @@ require_authentication: typing.Union[bool, IResolvable]
 
 Should the authentication flow be used for all requests.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#require_authentication LinuxWebAppSlot#require_authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#require_authentication LinuxWebAppSlot#require_authentication}
 
 ---
 
@@ -3623,7 +3623,7 @@ require_https: typing.Union[bool, IResolvable]
 
 Should HTTPS be required on connections? Defaults to true.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#require_https LinuxWebAppSlot#require_https}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#require_https LinuxWebAppSlot#require_https}
 
 ---
 
@@ -3637,7 +3637,7 @@ runtime_version: str
 
 The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#runtime_version LinuxWebAppSlot#runtime_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#runtime_version LinuxWebAppSlot#runtime_version}
 
 ---
 
@@ -3651,7 +3651,7 @@ twitter_v2: LinuxWebAppSlotAuthSettingsV2TwitterV2
 
 twitter_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#twitter_v2 LinuxWebAppSlot#twitter_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#twitter_v2 LinuxWebAppSlot#twitter_v2}
 
 ---
 
@@ -3667,7 +3667,7 @@ The action to take for requests made without authentication.
 
 Possible values include `RedirectToLoginPage`, `AllowAnonymous`, `Return401`, and `Return403`. Defaults to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#unauthenticated_action LinuxWebAppSlot#unauthenticated_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#unauthenticated_action LinuxWebAppSlot#unauthenticated_action}
 
 ---
 
@@ -3723,7 +3723,7 @@ client_id: str
 
 The ID of the Client to use to authenticate with Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -3737,7 +3737,7 @@ tenant_auth_endpoint: str
 
 The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#tenant_auth_endpoint LinuxWebAppSlot#tenant_auth_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#tenant_auth_endpoint LinuxWebAppSlot#tenant_auth_endpoint}
 
 ---
 
@@ -3751,7 +3751,7 @@ allowed_applications: typing.List[str]
 
 The list of allowed Applications for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_applications LinuxWebAppSlot#allowed_applications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_applications LinuxWebAppSlot#allowed_applications}
 
 ---
 
@@ -3765,7 +3765,7 @@ allowed_audiences: typing.List[str]
 
 Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
 
 ---
 
@@ -3779,7 +3779,7 @@ allowed_groups: typing.List[str]
 
 The list of allowed Group Names for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_groups LinuxWebAppSlot#allowed_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_groups LinuxWebAppSlot#allowed_groups}
 
 ---
 
@@ -3793,7 +3793,7 @@ allowed_identities: typing.List[str]
 
 The list of allowed Identities for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_identities LinuxWebAppSlot#allowed_identities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_identities LinuxWebAppSlot#allowed_identities}
 
 ---
 
@@ -3807,7 +3807,7 @@ client_secret_certificate_thumbprint: str
 
 The thumbprint of the certificate used for signing purposes.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_certificate_thumbprint LinuxWebAppSlot#client_secret_certificate_thumbprint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_certificate_thumbprint LinuxWebAppSlot#client_secret_certificate_thumbprint}
 
 ---
 
@@ -3821,7 +3821,7 @@ client_secret_setting_name: str
 
 The App Setting name that contains the client secret of the Client.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -3835,7 +3835,7 @@ jwt_allowed_client_applications: typing.List[str]
 
 A list of Allowed Client Applications in the JWT Claim.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#jwt_allowed_client_applications LinuxWebAppSlot#jwt_allowed_client_applications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#jwt_allowed_client_applications LinuxWebAppSlot#jwt_allowed_client_applications}
 
 ---
 
@@ -3849,7 +3849,7 @@ jwt_allowed_groups: typing.List[str]
 
 A list of Allowed Groups in the JWT Claim.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#jwt_allowed_groups LinuxWebAppSlot#jwt_allowed_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#jwt_allowed_groups LinuxWebAppSlot#jwt_allowed_groups}
 
 ---
 
@@ -3863,7 +3863,7 @@ login_parameters: typing.Mapping[str]
 
 A map of key-value pairs to send to the Authorisation Endpoint when a user logs in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#login_parameters LinuxWebAppSlot#login_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#login_parameters LinuxWebAppSlot#login_parameters}
 
 ---
 
@@ -3877,7 +3877,7 @@ www_authentication_disabled: typing.Union[bool, IResolvable]
 
 Should the www-authenticate provider should be omitted from the request? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#www_authentication_disabled LinuxWebAppSlot#www_authentication_disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#www_authentication_disabled LinuxWebAppSlot#www_authentication_disabled}
 
 ---
 
@@ -3913,7 +3913,7 @@ client_id: str
 
 The OpenID Connect Client ID for the Apple web application.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -3927,7 +3927,7 @@ client_secret_setting_name: str
 
 The app setting name that contains the `client_secret` value used for Apple Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -3961,7 +3961,7 @@ client_id: str
 
 The ID of the Client to use to authenticate with Azure Static Web App Authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -4003,7 +4003,7 @@ client_id: str
 
 The ID of the Client to use to authenticate with this Custom OIDC.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -4017,7 +4017,7 @@ name: str
 
 The name of the Custom OIDC Authentication Provider.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#name LinuxWebAppSlot#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#name LinuxWebAppSlot#name}
 
 ---
 
@@ -4031,7 +4031,7 @@ openid_configuration_endpoint: str
 
 The endpoint that contains all the configuration endpoints for this Custom OIDC provider.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#openid_configuration_endpoint LinuxWebAppSlot#openid_configuration_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#openid_configuration_endpoint LinuxWebAppSlot#openid_configuration_endpoint}
 
 ---
 
@@ -4045,7 +4045,7 @@ name_claim_type: str
 
 The name of the claim that contains the users name.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#name_claim_type LinuxWebAppSlot#name_claim_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#name_claim_type LinuxWebAppSlot#name_claim_type}
 
 ---
 
@@ -4059,7 +4059,7 @@ scopes: typing.List[str]
 
 The list of the scopes that should be requested while authenticating.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#scopes LinuxWebAppSlot#scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#scopes LinuxWebAppSlot#scopes}
 
 ---
 
@@ -4099,7 +4099,7 @@ app_id: str
 
 The App ID of the Facebook app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_id LinuxWebAppSlot#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_id LinuxWebAppSlot#app_id}
 
 ---
 
@@ -4113,7 +4113,7 @@ app_secret_setting_name: str
 
 The app setting name that contains the `app_secret` value used for Facebook Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_secret_setting_name LinuxWebAppSlot#app_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_secret_setting_name LinuxWebAppSlot#app_secret_setting_name}
 
 ---
 
@@ -4127,7 +4127,7 @@ graph_api_version: str
 
 The version of the Facebook API to be used while logging in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#graph_api_version LinuxWebAppSlot#graph_api_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#graph_api_version LinuxWebAppSlot#graph_api_version}
 
 ---
 
@@ -4141,7 +4141,7 @@ login_scopes: typing.List[str]
 
 Specifies a list of scopes to be requested as part of Facebook Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
 
 ---
 
@@ -4179,7 +4179,7 @@ client_id: str
 
 The ID of the GitHub app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -4193,7 +4193,7 @@ client_secret_setting_name: str
 
 The app setting name that contains the `client_secret` value used for GitHub Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -4207,7 +4207,7 @@ login_scopes: typing.List[str]
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
 
 ---
 
@@ -4247,7 +4247,7 @@ client_id: str
 
 The OpenID Connect Client ID for the Google web application.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -4261,7 +4261,7 @@ client_secret_setting_name: str
 
 The app setting name that contains the `client_secret` value used for Google Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -4275,7 +4275,7 @@ allowed_audiences: typing.List[str]
 
 Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
 
 ---
 
@@ -4289,7 +4289,7 @@ login_scopes: typing.List[str]
 
 Specifies a list of Login scopes that will be requested as part of Google Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
 
 ---
 
@@ -4345,7 +4345,7 @@ External URLs that can be redirected to as part of logging in or logging out of 
 
 This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_external_redirect_urls LinuxWebAppSlot#allowed_external_redirect_urls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_external_redirect_urls LinuxWebAppSlot#allowed_external_redirect_urls}
 
 ---
 
@@ -4359,7 +4359,7 @@ cookie_expiration_convention: str
 
 The method by which cookies expire. Possible values include: `FixedTime`, and `IdentityProviderDerived`. Defaults to `FixedTime`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#cookie_expiration_convention LinuxWebAppSlot#cookie_expiration_convention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#cookie_expiration_convention LinuxWebAppSlot#cookie_expiration_convention}
 
 ---
 
@@ -4373,7 +4373,7 @@ cookie_expiration_time: str
 
 The time after the request is made when the session cookie should expire. Defaults to `08:00:00`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#cookie_expiration_time LinuxWebAppSlot#cookie_expiration_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#cookie_expiration_time LinuxWebAppSlot#cookie_expiration_time}
 
 ---
 
@@ -4387,7 +4387,7 @@ logout_endpoint: str
 
 The endpoint to which logout requests should be made.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#logout_endpoint LinuxWebAppSlot#logout_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#logout_endpoint LinuxWebAppSlot#logout_endpoint}
 
 ---
 
@@ -4401,7 +4401,7 @@ nonce_expiration_time: str
 
 The time after the request is made when the nonce should expire. Defaults to `00:05:00`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#nonce_expiration_time LinuxWebAppSlot#nonce_expiration_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#nonce_expiration_time LinuxWebAppSlot#nonce_expiration_time}
 
 ---
 
@@ -4415,7 +4415,7 @@ preserve_url_fragments_for_logins: typing.Union[bool, IResolvable]
 
 Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#preserve_url_fragments_for_logins LinuxWebAppSlot#preserve_url_fragments_for_logins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#preserve_url_fragments_for_logins LinuxWebAppSlot#preserve_url_fragments_for_logins}
 
 ---
 
@@ -4431,7 +4431,7 @@ The number of hours after session token expiration that a session token can be u
 
 Defaults to `72` hours.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#token_refresh_extension_time LinuxWebAppSlot#token_refresh_extension_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#token_refresh_extension_time LinuxWebAppSlot#token_refresh_extension_time}
 
 ---
 
@@ -4445,7 +4445,7 @@ token_store_enabled: typing.Union[bool, IResolvable]
 
 Should the Token Store configuration Enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#token_store_enabled LinuxWebAppSlot#token_store_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#token_store_enabled LinuxWebAppSlot#token_store_enabled}
 
 ---
 
@@ -4459,7 +4459,7 @@ token_store_path: str
 
 The directory path in the App Filesystem in which the tokens will be stored.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#token_store_path LinuxWebAppSlot#token_store_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#token_store_path LinuxWebAppSlot#token_store_path}
 
 ---
 
@@ -4473,7 +4473,7 @@ token_store_sas_setting_name: str
 
 The name of the app setting which contains the SAS URL of the blob storage containing the tokens.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#token_store_sas_setting_name LinuxWebAppSlot#token_store_sas_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#token_store_sas_setting_name LinuxWebAppSlot#token_store_sas_setting_name}
 
 ---
 
@@ -4487,7 +4487,7 @@ validate_nonce: typing.Union[bool, IResolvable]
 
 Should the nonce be validated while completing the login flow. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#validate_nonce LinuxWebAppSlot#validate_nonce}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#validate_nonce LinuxWebAppSlot#validate_nonce}
 
 ---
 
@@ -4527,7 +4527,7 @@ client_id: str
 
 The OAuth 2.0 client ID that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -4541,7 +4541,7 @@ client_secret_setting_name: str
 
 The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -4555,7 +4555,7 @@ allowed_audiences: typing.List[str]
 
 Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
 
 ---
 
@@ -4569,7 +4569,7 @@ login_scopes: typing.List[str]
 
 The list of Login scopes that will be requested as part of Microsoft Account authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
 
 ---
 
@@ -4605,7 +4605,7 @@ consumer_key: str
 
 The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#consumer_key LinuxWebAppSlot#consumer_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#consumer_key LinuxWebAppSlot#consumer_key}
 
 ---
 
@@ -4619,7 +4619,7 @@ consumer_secret_setting_name: str
 
 The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#consumer_secret_setting_name LinuxWebAppSlot#consumer_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#consumer_secret_setting_name LinuxWebAppSlot#consumer_secret_setting_name}
 
 ---
 
@@ -4659,7 +4659,7 @@ name: str
 
 The name which should be used for this Backup.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#name LinuxWebAppSlot#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#name LinuxWebAppSlot#name}
 
 ---
 
@@ -4673,7 +4673,7 @@ schedule: LinuxWebAppSlotBackupSchedule
 
 schedule block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#schedule LinuxWebAppSlot#schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#schedule LinuxWebAppSlot#schedule}
 
 ---
 
@@ -4687,7 +4687,7 @@ storage_account_url: str
 
 The SAS URL to the container.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#storage_account_url LinuxWebAppSlot#storage_account_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#storage_account_url LinuxWebAppSlot#storage_account_url}
 
 ---
 
@@ -4701,7 +4701,7 @@ enabled: typing.Union[bool, IResolvable]
 
 Should this backup job be enabled?
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}
 
 ---
 
@@ -4743,7 +4743,7 @@ frequency_interval: typing.Union[int, float]
 
 How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#frequency_interval LinuxWebAppSlot#frequency_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#frequency_interval LinuxWebAppSlot#frequency_interval}
 
 ---
 
@@ -4757,7 +4757,7 @@ frequency_unit: str
 
 The unit of time for how often the backup should take place. Possible values include: `Day` and `Hour`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#frequency_unit LinuxWebAppSlot#frequency_unit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#frequency_unit LinuxWebAppSlot#frequency_unit}
 
 ---
 
@@ -4771,7 +4771,7 @@ keep_at_least_one_backup: typing.Union[bool, IResolvable]
 
 Should the service keep at least one backup, regardless of age of backup. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#keep_at_least_one_backup LinuxWebAppSlot#keep_at_least_one_backup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#keep_at_least_one_backup LinuxWebAppSlot#keep_at_least_one_backup}
 
 ---
 
@@ -4785,7 +4785,7 @@ retention_period_days: typing.Union[int, float]
 
 After how many days backups should be deleted.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#retention_period_days LinuxWebAppSlot#retention_period_days}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#retention_period_days LinuxWebAppSlot#retention_period_days}
 
 ---
 
@@ -4799,7 +4799,7 @@ start_time: str
 
 When the schedule should start working in RFC-3339 format.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#start_time LinuxWebAppSlot#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#start_time LinuxWebAppSlot#start_time}
 
 ---
 
@@ -4812,7 +4812,7 @@ from cdktf_cdktf_provider_azurerm import linux_web_app_slot
 
 linuxWebAppSlot.LinuxWebAppSlotConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -4850,35 +4850,35 @@ linuxWebAppSlot.LinuxWebAppSlotConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.appServiceId">app_service_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_service_id LinuxWebAppSlot#app_service_id}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#name LinuxWebAppSlot#name}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.appServiceId">app_service_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_service_id LinuxWebAppSlot#app_service_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#name LinuxWebAppSlot#name}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.siteConfig">site_config</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig">LinuxWebAppSlotSiteConfig</a></code> | site_config block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.appSettings">app_settings</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_settings LinuxWebAppSlot#app_settings}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.appSettings">app_settings</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_settings LinuxWebAppSlot#app_settings}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.authSettings">auth_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotAuthSettings">LinuxWebAppSlotAuthSettings</a></code> | auth_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.authSettingsV2">auth_settings_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotAuthSettingsV2">LinuxWebAppSlotAuthSettingsV2</a></code> | auth_settings_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.backup">backup</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotBackup">LinuxWebAppSlotBackup</a></code> | backup block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.clientAffinityEnabled">client_affinity_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_affinity_enabled LinuxWebAppSlot#client_affinity_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_certificate_enabled LinuxWebAppSlot#client_certificate_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.clientAffinityEnabled">client_affinity_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_affinity_enabled LinuxWebAppSlot#client_affinity_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_certificate_enabled LinuxWebAppSlot#client_certificate_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.clientCertificateExclusionPaths">client_certificate_exclusion_paths</a></code> | <code>str</code> | Paths to exclude when using client certificates, separated by ; |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_certificate_mode LinuxWebAppSlot#client_certificate_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_certificate_mode LinuxWebAppSlot#client_certificate_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.connectionString">connection_string</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConnectionString">LinuxWebAppSlotConnectionString</a>]]</code> | connection_string block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.httpsOnly">https_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#https_only LinuxWebAppSlot#https_only}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#id LinuxWebAppSlot#id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.httpsOnly">https_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#https_only LinuxWebAppSlot#https_only}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#id LinuxWebAppSlot#id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotIdentity">LinuxWebAppSlotIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.keyVaultReferenceIdentityId">key_vault_reference_identity_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#key_vault_reference_identity_id LinuxWebAppSlot#key_vault_reference_identity_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.keyVaultReferenceIdentityId">key_vault_reference_identity_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#key_vault_reference_identity_id LinuxWebAppSlot#key_vault_reference_identity_id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.logs">logs</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogs">LinuxWebAppSlotLogs</a></code> | logs block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.servicePlanId">service_plan_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#service_plan_id LinuxWebAppSlot#service_plan_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.servicePlanId">service_plan_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#service_plan_id LinuxWebAppSlot#service_plan_id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.storageAccount">storage_account</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount">LinuxWebAppSlotStorageAccount</a>]]</code> | storage_account block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#tags LinuxWebAppSlot#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#tags LinuxWebAppSlot#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts">LinuxWebAppSlotTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#virtual_network_subnet_id LinuxWebAppSlot#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#virtual_network_subnet_id LinuxWebAppSlot#virtual_network_subnet_id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.zipDeployFile">zip_deploy_file</a></code> | <code>str</code> | The local path and filename of the Zip packaged application to deploy to this Windows Web App. |
 
 ---
@@ -4896,10 +4896,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -4961,7 +4961,7 @@ app_service_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_service_id LinuxWebAppSlot#app_service_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_service_id LinuxWebAppSlot#app_service_id}.
 
 ---
 
@@ -4973,7 +4973,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#name LinuxWebAppSlot#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#name LinuxWebAppSlot#name}.
 
 ---
 
@@ -4987,7 +4987,7 @@ site_config: LinuxWebAppSlotSiteConfig
 
 site_config block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#site_config LinuxWebAppSlot#site_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#site_config LinuxWebAppSlot#site_config}
 
 ---
 
@@ -4999,7 +4999,7 @@ app_settings: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_settings LinuxWebAppSlot#app_settings}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_settings LinuxWebAppSlot#app_settings}.
 
 ---
 
@@ -5013,7 +5013,7 @@ auth_settings: LinuxWebAppSlotAuthSettings
 
 auth_settings block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#auth_settings LinuxWebAppSlot#auth_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#auth_settings LinuxWebAppSlot#auth_settings}
 
 ---
 
@@ -5027,7 +5027,7 @@ auth_settings_v2: LinuxWebAppSlotAuthSettingsV2
 
 auth_settings_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#auth_settings_v2 LinuxWebAppSlot#auth_settings_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#auth_settings_v2 LinuxWebAppSlot#auth_settings_v2}
 
 ---
 
@@ -5041,7 +5041,7 @@ backup: LinuxWebAppSlotBackup
 
 backup block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#backup LinuxWebAppSlot#backup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#backup LinuxWebAppSlot#backup}
 
 ---
 
@@ -5053,7 +5053,7 @@ client_affinity_enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_affinity_enabled LinuxWebAppSlot#client_affinity_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_affinity_enabled LinuxWebAppSlot#client_affinity_enabled}.
 
 ---
 
@@ -5065,7 +5065,7 @@ client_certificate_enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_certificate_enabled LinuxWebAppSlot#client_certificate_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_certificate_enabled LinuxWebAppSlot#client_certificate_enabled}.
 
 ---
 
@@ -5079,7 +5079,7 @@ client_certificate_exclusion_paths: str
 
 Paths to exclude when using client certificates, separated by ;
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_certificate_exclusion_paths LinuxWebAppSlot#client_certificate_exclusion_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_certificate_exclusion_paths LinuxWebAppSlot#client_certificate_exclusion_paths}
 
 ---
 
@@ -5091,7 +5091,7 @@ client_certificate_mode: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_certificate_mode LinuxWebAppSlot#client_certificate_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_certificate_mode LinuxWebAppSlot#client_certificate_mode}.
 
 ---
 
@@ -5105,7 +5105,7 @@ connection_string: typing.Union[IResolvable, typing.List[LinuxWebAppSlotConnecti
 
 connection_string block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#connection_string LinuxWebAppSlot#connection_string}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#connection_string LinuxWebAppSlot#connection_string}
 
 ---
 
@@ -5117,7 +5117,7 @@ enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#enabled LinuxWebAppSlot#enabled}.
 
 ---
 
@@ -5129,7 +5129,7 @@ https_only: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#https_only LinuxWebAppSlot#https_only}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#https_only LinuxWebAppSlot#https_only}.
 
 ---
 
@@ -5141,7 +5141,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#id LinuxWebAppSlot#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#id LinuxWebAppSlot#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -5158,7 +5158,7 @@ identity: LinuxWebAppSlotIdentity
 
 identity block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#identity LinuxWebAppSlot#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#identity LinuxWebAppSlot#identity}
 
 ---
 
@@ -5170,7 +5170,7 @@ key_vault_reference_identity_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#key_vault_reference_identity_id LinuxWebAppSlot#key_vault_reference_identity_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#key_vault_reference_identity_id LinuxWebAppSlot#key_vault_reference_identity_id}.
 
 ---
 
@@ -5184,7 +5184,7 @@ logs: LinuxWebAppSlotLogs
 
 logs block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#logs LinuxWebAppSlot#logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#logs LinuxWebAppSlot#logs}
 
 ---
 
@@ -5196,7 +5196,7 @@ service_plan_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#service_plan_id LinuxWebAppSlot#service_plan_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#service_plan_id LinuxWebAppSlot#service_plan_id}.
 
 ---
 
@@ -5210,7 +5210,7 @@ storage_account: typing.Union[IResolvable, typing.List[LinuxWebAppSlotStorageAcc
 
 storage_account block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#storage_account LinuxWebAppSlot#storage_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#storage_account LinuxWebAppSlot#storage_account}
 
 ---
 
@@ -5222,7 +5222,7 @@ tags: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#tags LinuxWebAppSlot#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#tags LinuxWebAppSlot#tags}.
 
 ---
 
@@ -5236,7 +5236,7 @@ timeouts: LinuxWebAppSlotTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#timeouts LinuxWebAppSlot#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#timeouts LinuxWebAppSlot#timeouts}
 
 ---
 
@@ -5248,7 +5248,7 @@ virtual_network_subnet_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#virtual_network_subnet_id LinuxWebAppSlot#virtual_network_subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#virtual_network_subnet_id LinuxWebAppSlot#virtual_network_subnet_id}.
 
 ---
 
@@ -5264,7 +5264,7 @@ The local path and filename of the Zip packaged application to deploy to this Wi
 
 **Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` on the App in `app_settings`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#zip_deploy_file LinuxWebAppSlot#zip_deploy_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#zip_deploy_file LinuxWebAppSlot#zip_deploy_file}
 
 ---
 
@@ -5302,7 +5302,7 @@ name: str
 
 The name which should be used for this Connection.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#name LinuxWebAppSlot#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#name LinuxWebAppSlot#name}
 
 ---
 
@@ -5316,7 +5316,7 @@ type: str
 
 Type of database. Possible values include: `MySQL`, `SQLServer`, `SQLAzure`, `Custom`, `NotificationHub`, `ServiceBus`, `EventHub`, `APIHub`, `DocDb`, `RedisCache`, and `PostgreSQL`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#type LinuxWebAppSlot#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#type LinuxWebAppSlot#type}
 
 ---
 
@@ -5330,7 +5330,7 @@ value: str
 
 The connection string value.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#value LinuxWebAppSlot#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#value LinuxWebAppSlot#value}
 
 ---
 
@@ -5351,8 +5351,8 @@ linuxWebAppSlot.LinuxWebAppSlotIdentity(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotIdentity.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#type LinuxWebAppSlot#type}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotIdentity.property.identityIds">identity_ids</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#identity_ids LinuxWebAppSlot#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotIdentity.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#type LinuxWebAppSlot#type}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotIdentity.property.identityIds">identity_ids</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#identity_ids LinuxWebAppSlot#identity_ids}. |
 
 ---
 
@@ -5364,7 +5364,7 @@ type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#type LinuxWebAppSlot#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#type LinuxWebAppSlot#type}.
 
 ---
 
@@ -5376,7 +5376,7 @@ identity_ids: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#identity_ids LinuxWebAppSlot#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#identity_ids LinuxWebAppSlot#identity_ids}.
 
 ---
 
@@ -5400,8 +5400,8 @@ linuxWebAppSlot.LinuxWebAppSlotLogs(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogs.property.applicationLogs">application_logs</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsApplicationLogs">LinuxWebAppSlotLogsApplicationLogs</a></code> | application_logs block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogs.property.detailedErrorMessages">detailed_error_messages</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#detailed_error_messages LinuxWebAppSlot#detailed_error_messages}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogs.property.failedRequestTracing">failed_request_tracing</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#failed_request_tracing LinuxWebAppSlot#failed_request_tracing}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogs.property.detailedErrorMessages">detailed_error_messages</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#detailed_error_messages LinuxWebAppSlot#detailed_error_messages}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogs.property.failedRequestTracing">failed_request_tracing</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#failed_request_tracing LinuxWebAppSlot#failed_request_tracing}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogs.property.httpLogs">http_logs</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsHttpLogs">LinuxWebAppSlotLogsHttpLogs</a></code> | http_logs block. |
 
 ---
@@ -5416,7 +5416,7 @@ application_logs: LinuxWebAppSlotLogsApplicationLogs
 
 application_logs block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#application_logs LinuxWebAppSlot#application_logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#application_logs LinuxWebAppSlot#application_logs}
 
 ---
 
@@ -5428,7 +5428,7 @@ detailed_error_messages: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#detailed_error_messages LinuxWebAppSlot#detailed_error_messages}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#detailed_error_messages LinuxWebAppSlot#detailed_error_messages}.
 
 ---
 
@@ -5440,7 +5440,7 @@ failed_request_tracing: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#failed_request_tracing LinuxWebAppSlot#failed_request_tracing}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#failed_request_tracing LinuxWebAppSlot#failed_request_tracing}.
 
 ---
 
@@ -5454,7 +5454,7 @@ http_logs: LinuxWebAppSlotLogsHttpLogs
 
 http_logs block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#http_logs LinuxWebAppSlot#http_logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#http_logs LinuxWebAppSlot#http_logs}
 
 ---
 
@@ -5475,7 +5475,7 @@ linuxWebAppSlot.LinuxWebAppSlotLogsApplicationLogs(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsApplicationLogs.property.fileSystemLevel">file_system_level</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#file_system_level LinuxWebAppSlot#file_system_level}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsApplicationLogs.property.fileSystemLevel">file_system_level</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#file_system_level LinuxWebAppSlot#file_system_level}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsApplicationLogs.property.azureBlobStorage">azure_blob_storage</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsApplicationLogsAzureBlobStorage">LinuxWebAppSlotLogsApplicationLogsAzureBlobStorage</a></code> | azure_blob_storage block. |
 
 ---
@@ -5488,7 +5488,7 @@ file_system_level: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#file_system_level LinuxWebAppSlot#file_system_level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#file_system_level LinuxWebAppSlot#file_system_level}.
 
 ---
 
@@ -5502,7 +5502,7 @@ azure_blob_storage: LinuxWebAppSlotLogsApplicationLogsAzureBlobStorage
 
 azure_blob_storage block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#azure_blob_storage LinuxWebAppSlot#azure_blob_storage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#azure_blob_storage LinuxWebAppSlot#azure_blob_storage}
 
 ---
 
@@ -5524,9 +5524,9 @@ linuxWebAppSlot.LinuxWebAppSlotLogsApplicationLogsAzureBlobStorage(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsApplicationLogsAzureBlobStorage.property.level">level</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#level LinuxWebAppSlot#level}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsApplicationLogsAzureBlobStorage.property.retentionInDays">retention_in_days</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsApplicationLogsAzureBlobStorage.property.sasUrl">sas_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#sas_url LinuxWebAppSlot#sas_url}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsApplicationLogsAzureBlobStorage.property.level">level</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#level LinuxWebAppSlot#level}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsApplicationLogsAzureBlobStorage.property.retentionInDays">retention_in_days</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsApplicationLogsAzureBlobStorage.property.sasUrl">sas_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#sas_url LinuxWebAppSlot#sas_url}. |
 
 ---
 
@@ -5538,7 +5538,7 @@ level: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#level LinuxWebAppSlot#level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#level LinuxWebAppSlot#level}.
 
 ---
 
@@ -5550,7 +5550,7 @@ retention_in_days: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}.
 
 ---
 
@@ -5562,7 +5562,7 @@ sas_url: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#sas_url LinuxWebAppSlot#sas_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#sas_url LinuxWebAppSlot#sas_url}.
 
 ---
 
@@ -5598,7 +5598,7 @@ azure_blob_storage: LinuxWebAppSlotLogsHttpLogsAzureBlobStorage
 
 azure_blob_storage block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#azure_blob_storage LinuxWebAppSlot#azure_blob_storage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#azure_blob_storage LinuxWebAppSlot#azure_blob_storage}
 
 ---
 
@@ -5612,7 +5612,7 @@ file_system: LinuxWebAppSlotLogsHttpLogsFileSystem
 
 file_system block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#file_system LinuxWebAppSlot#file_system}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#file_system LinuxWebAppSlot#file_system}
 
 ---
 
@@ -5633,8 +5633,8 @@ linuxWebAppSlot.LinuxWebAppSlotLogsHttpLogsAzureBlobStorage(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsHttpLogsAzureBlobStorage.property.sasUrl">sas_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#sas_url LinuxWebAppSlot#sas_url}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsHttpLogsAzureBlobStorage.property.retentionInDays">retention_in_days</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsHttpLogsAzureBlobStorage.property.sasUrl">sas_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#sas_url LinuxWebAppSlot#sas_url}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsHttpLogsAzureBlobStorage.property.retentionInDays">retention_in_days</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}. |
 
 ---
 
@@ -5646,7 +5646,7 @@ sas_url: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#sas_url LinuxWebAppSlot#sas_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#sas_url LinuxWebAppSlot#sas_url}.
 
 ---
 
@@ -5658,7 +5658,7 @@ retention_in_days: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}.
 
 ---
 
@@ -5679,8 +5679,8 @@ linuxWebAppSlot.LinuxWebAppSlotLogsHttpLogsFileSystem(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsHttpLogsFileSystem.property.retentionInDays">retention_in_days</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsHttpLogsFileSystem.property.retentionInMb">retention_in_mb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#retention_in_mb LinuxWebAppSlot#retention_in_mb}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsHttpLogsFileSystem.property.retentionInDays">retention_in_days</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotLogsHttpLogsFileSystem.property.retentionInMb">retention_in_mb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#retention_in_mb LinuxWebAppSlot#retention_in_mb}. |
 
 ---
 
@@ -5692,7 +5692,7 @@ retention_in_days: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}.
 
 ---
 
@@ -5704,7 +5704,7 @@ retention_in_mb: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#retention_in_mb LinuxWebAppSlot#retention_in_mb}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#retention_in_mb LinuxWebAppSlot#retention_in_mb}.
 
 ---
 
@@ -5753,36 +5753,36 @@ linuxWebAppSlot.LinuxWebAppSlotSiteConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.alwaysOn">always_on</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#always_on LinuxWebAppSlot#always_on}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.apiDefinitionUrl">api_definition_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#api_definition_url LinuxWebAppSlot#api_definition_url}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.apiManagementApiId">api_management_api_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#api_management_api_id LinuxWebAppSlot#api_management_api_id}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.appCommandLine">app_command_line</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_command_line LinuxWebAppSlot#app_command_line}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.alwaysOn">always_on</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#always_on LinuxWebAppSlot#always_on}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.apiDefinitionUrl">api_definition_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#api_definition_url LinuxWebAppSlot#api_definition_url}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.apiManagementApiId">api_management_api_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#api_management_api_id LinuxWebAppSlot#api_management_api_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.appCommandLine">app_command_line</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_command_line LinuxWebAppSlot#app_command_line}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.applicationStack">application_stack</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack">LinuxWebAppSlotSiteConfigApplicationStack</a></code> | application_stack block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.autoHealEnabled">auto_heal_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#auto_heal_enabled LinuxWebAppSlot#auto_heal_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.autoHealEnabled">auto_heal_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#auto_heal_enabled LinuxWebAppSlot#auto_heal_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.autoHealSetting">auto_heal_setting</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSetting">LinuxWebAppSlotSiteConfigAutoHealSetting</a></code> | auto_heal_setting block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.autoSwapSlotName">auto_swap_slot_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#auto_swap_slot_name LinuxWebAppSlot#auto_swap_slot_name}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.containerRegistryManagedIdentityClientId">container_registry_managed_identity_client_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#container_registry_managed_identity_client_id LinuxWebAppSlot#container_registry_managed_identity_client_id}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.containerRegistryUseManagedIdentity">container_registry_use_managed_identity</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#container_registry_use_managed_identity LinuxWebAppSlot#container_registry_use_managed_identity}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.autoSwapSlotName">auto_swap_slot_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#auto_swap_slot_name LinuxWebAppSlot#auto_swap_slot_name}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.containerRegistryManagedIdentityClientId">container_registry_managed_identity_client_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#container_registry_managed_identity_client_id LinuxWebAppSlot#container_registry_managed_identity_client_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.containerRegistryUseManagedIdentity">container_registry_use_managed_identity</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#container_registry_use_managed_identity LinuxWebAppSlot#container_registry_use_managed_identity}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.cors">cors</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigCors">LinuxWebAppSlotSiteConfigCors</a></code> | cors block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.defaultDocuments">default_documents</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#default_documents LinuxWebAppSlot#default_documents}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.ftpsState">ftps_state</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#ftps_state LinuxWebAppSlot#ftps_state}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.defaultDocuments">default_documents</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#default_documents LinuxWebAppSlot#default_documents}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.ftpsState">ftps_state</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#ftps_state LinuxWebAppSlot#ftps_state}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.healthCheckEvictionTimeInMin">health_check_eviction_time_in_min</a></code> | <code>typing.Union[int, float]</code> | The amount of time in minutes that a node is unhealthy before being removed from the load balancer. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.healthCheckPath">health_check_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#health_check_path LinuxWebAppSlot#health_check_path}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.http2Enabled">http2_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#http2_enabled LinuxWebAppSlot#http2_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.healthCheckPath">health_check_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#health_check_path LinuxWebAppSlot#health_check_path}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.http2Enabled">http2_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#http2_enabled LinuxWebAppSlot#http2_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.ipRestriction">ip_restriction</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestriction">LinuxWebAppSlotSiteConfigIpRestriction</a>]]</code> | ip_restriction block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.loadBalancingMode">load_balancing_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#load_balancing_mode LinuxWebAppSlot#load_balancing_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.localMysqlEnabled">local_mysql_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#local_mysql_enabled LinuxWebAppSlot#local_mysql_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.managedPipelineMode">managed_pipeline_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#managed_pipeline_mode LinuxWebAppSlot#managed_pipeline_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.minimumTlsVersion">minimum_tls_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#minimum_tls_version LinuxWebAppSlot#minimum_tls_version}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.remoteDebuggingEnabled">remote_debugging_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#remote_debugging_enabled LinuxWebAppSlot#remote_debugging_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.remoteDebuggingVersion">remote_debugging_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#remote_debugging_version LinuxWebAppSlot#remote_debugging_version}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.loadBalancingMode">load_balancing_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#load_balancing_mode LinuxWebAppSlot#load_balancing_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.localMysqlEnabled">local_mysql_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#local_mysql_enabled LinuxWebAppSlot#local_mysql_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.managedPipelineMode">managed_pipeline_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#managed_pipeline_mode LinuxWebAppSlot#managed_pipeline_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.minimumTlsVersion">minimum_tls_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#minimum_tls_version LinuxWebAppSlot#minimum_tls_version}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.remoteDebuggingEnabled">remote_debugging_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#remote_debugging_enabled LinuxWebAppSlot#remote_debugging_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.remoteDebuggingVersion">remote_debugging_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#remote_debugging_version LinuxWebAppSlot#remote_debugging_version}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.scmIpRestriction">scm_ip_restriction</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestriction">LinuxWebAppSlotSiteConfigScmIpRestriction</a>]]</code> | scm_ip_restriction block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.scmMinimumTlsVersion">scm_minimum_tls_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#scm_minimum_tls_version LinuxWebAppSlot#scm_minimum_tls_version}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.scmUseMainIpRestriction">scm_use_main_ip_restriction</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#scm_use_main_ip_restriction LinuxWebAppSlot#scm_use_main_ip_restriction}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.use32BitWorker">use32_bit_worker</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#use_32_bit_worker LinuxWebAppSlot#use_32_bit_worker}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.scmMinimumTlsVersion">scm_minimum_tls_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#scm_minimum_tls_version LinuxWebAppSlot#scm_minimum_tls_version}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.scmUseMainIpRestriction">scm_use_main_ip_restriction</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#scm_use_main_ip_restriction LinuxWebAppSlot#scm_use_main_ip_restriction}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.use32BitWorker">use32_bit_worker</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#use_32_bit_worker LinuxWebAppSlot#use_32_bit_worker}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.vnetRouteAllEnabled">vnet_route_all_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.websocketsEnabled">websockets_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#websockets_enabled LinuxWebAppSlot#websockets_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.workerCount">worker_count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#worker_count LinuxWebAppSlot#worker_count}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.websocketsEnabled">websockets_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#websockets_enabled LinuxWebAppSlot#websockets_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig.property.workerCount">worker_count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#worker_count LinuxWebAppSlot#worker_count}. |
 
 ---
 
@@ -5794,7 +5794,7 @@ always_on: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#always_on LinuxWebAppSlot#always_on}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#always_on LinuxWebAppSlot#always_on}.
 
 ---
 
@@ -5806,7 +5806,7 @@ api_definition_url: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#api_definition_url LinuxWebAppSlot#api_definition_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#api_definition_url LinuxWebAppSlot#api_definition_url}.
 
 ---
 
@@ -5818,7 +5818,7 @@ api_management_api_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#api_management_api_id LinuxWebAppSlot#api_management_api_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#api_management_api_id LinuxWebAppSlot#api_management_api_id}.
 
 ---
 
@@ -5830,7 +5830,7 @@ app_command_line: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_command_line LinuxWebAppSlot#app_command_line}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_command_line LinuxWebAppSlot#app_command_line}.
 
 ---
 
@@ -5844,7 +5844,7 @@ application_stack: LinuxWebAppSlotSiteConfigApplicationStack
 
 application_stack block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#application_stack LinuxWebAppSlot#application_stack}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#application_stack LinuxWebAppSlot#application_stack}
 
 ---
 
@@ -5856,7 +5856,7 @@ auto_heal_enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#auto_heal_enabled LinuxWebAppSlot#auto_heal_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#auto_heal_enabled LinuxWebAppSlot#auto_heal_enabled}.
 
 ---
 
@@ -5870,7 +5870,7 @@ auto_heal_setting: LinuxWebAppSlotSiteConfigAutoHealSetting
 
 auto_heal_setting block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#auto_heal_setting LinuxWebAppSlot#auto_heal_setting}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#auto_heal_setting LinuxWebAppSlot#auto_heal_setting}
 
 ---
 
@@ -5882,7 +5882,7 @@ auto_swap_slot_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#auto_swap_slot_name LinuxWebAppSlot#auto_swap_slot_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#auto_swap_slot_name LinuxWebAppSlot#auto_swap_slot_name}.
 
 ---
 
@@ -5894,7 +5894,7 @@ container_registry_managed_identity_client_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#container_registry_managed_identity_client_id LinuxWebAppSlot#container_registry_managed_identity_client_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#container_registry_managed_identity_client_id LinuxWebAppSlot#container_registry_managed_identity_client_id}.
 
 ---
 
@@ -5906,7 +5906,7 @@ container_registry_use_managed_identity: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#container_registry_use_managed_identity LinuxWebAppSlot#container_registry_use_managed_identity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#container_registry_use_managed_identity LinuxWebAppSlot#container_registry_use_managed_identity}.
 
 ---
 
@@ -5920,7 +5920,7 @@ cors: LinuxWebAppSlotSiteConfigCors
 
 cors block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#cors LinuxWebAppSlot#cors}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#cors LinuxWebAppSlot#cors}
 
 ---
 
@@ -5932,7 +5932,7 @@ default_documents: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#default_documents LinuxWebAppSlot#default_documents}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#default_documents LinuxWebAppSlot#default_documents}.
 
 ---
 
@@ -5944,7 +5944,7 @@ ftps_state: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#ftps_state LinuxWebAppSlot#ftps_state}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#ftps_state LinuxWebAppSlot#ftps_state}.
 
 ---
 
@@ -5960,7 +5960,7 @@ The amount of time in minutes that a node is unhealthy before being removed from
 
 Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#health_check_eviction_time_in_min LinuxWebAppSlot#health_check_eviction_time_in_min}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#health_check_eviction_time_in_min LinuxWebAppSlot#health_check_eviction_time_in_min}
 
 ---
 
@@ -5972,7 +5972,7 @@ health_check_path: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#health_check_path LinuxWebAppSlot#health_check_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#health_check_path LinuxWebAppSlot#health_check_path}.
 
 ---
 
@@ -5984,7 +5984,7 @@ http2_enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#http2_enabled LinuxWebAppSlot#http2_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#http2_enabled LinuxWebAppSlot#http2_enabled}.
 
 ---
 
@@ -5998,7 +5998,7 @@ ip_restriction: typing.Union[IResolvable, typing.List[LinuxWebAppSlotSiteConfigI
 
 ip_restriction block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#ip_restriction LinuxWebAppSlot#ip_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#ip_restriction LinuxWebAppSlot#ip_restriction}
 
 ---
 
@@ -6010,7 +6010,7 @@ load_balancing_mode: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#load_balancing_mode LinuxWebAppSlot#load_balancing_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#load_balancing_mode LinuxWebAppSlot#load_balancing_mode}.
 
 ---
 
@@ -6022,7 +6022,7 @@ local_mysql_enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#local_mysql_enabled LinuxWebAppSlot#local_mysql_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#local_mysql_enabled LinuxWebAppSlot#local_mysql_enabled}.
 
 ---
 
@@ -6034,7 +6034,7 @@ managed_pipeline_mode: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#managed_pipeline_mode LinuxWebAppSlot#managed_pipeline_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#managed_pipeline_mode LinuxWebAppSlot#managed_pipeline_mode}.
 
 ---
 
@@ -6046,7 +6046,7 @@ minimum_tls_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#minimum_tls_version LinuxWebAppSlot#minimum_tls_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#minimum_tls_version LinuxWebAppSlot#minimum_tls_version}.
 
 ---
 
@@ -6058,7 +6058,7 @@ remote_debugging_enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#remote_debugging_enabled LinuxWebAppSlot#remote_debugging_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#remote_debugging_enabled LinuxWebAppSlot#remote_debugging_enabled}.
 
 ---
 
@@ -6070,7 +6070,7 @@ remote_debugging_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#remote_debugging_version LinuxWebAppSlot#remote_debugging_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#remote_debugging_version LinuxWebAppSlot#remote_debugging_version}.
 
 ---
 
@@ -6084,7 +6084,7 @@ scm_ip_restriction: typing.Union[IResolvable, typing.List[LinuxWebAppSlotSiteCon
 
 scm_ip_restriction block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#scm_ip_restriction LinuxWebAppSlot#scm_ip_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#scm_ip_restriction LinuxWebAppSlot#scm_ip_restriction}
 
 ---
 
@@ -6096,7 +6096,7 @@ scm_minimum_tls_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#scm_minimum_tls_version LinuxWebAppSlot#scm_minimum_tls_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#scm_minimum_tls_version LinuxWebAppSlot#scm_minimum_tls_version}.
 
 ---
 
@@ -6108,7 +6108,7 @@ scm_use_main_ip_restriction: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#scm_use_main_ip_restriction LinuxWebAppSlot#scm_use_main_ip_restriction}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#scm_use_main_ip_restriction LinuxWebAppSlot#scm_use_main_ip_restriction}.
 
 ---
 
@@ -6120,7 +6120,7 @@ use32_bit_worker: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#use_32_bit_worker LinuxWebAppSlot#use_32_bit_worker}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#use_32_bit_worker LinuxWebAppSlot#use_32_bit_worker}.
 
 ---
 
@@ -6134,7 +6134,7 @@ vnet_route_all_enabled: typing.Union[bool, IResolvable]
 
 Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#vnet_route_all_enabled LinuxWebAppSlot#vnet_route_all_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#vnet_route_all_enabled LinuxWebAppSlot#vnet_route_all_enabled}
 
 ---
 
@@ -6146,7 +6146,7 @@ websockets_enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#websockets_enabled LinuxWebAppSlot#websockets_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#websockets_enabled LinuxWebAppSlot#websockets_enabled}.
 
 ---
 
@@ -6158,7 +6158,7 @@ worker_count: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#worker_count LinuxWebAppSlot#worker_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#worker_count LinuxWebAppSlot#worker_count}.
 
 ---
 
@@ -6188,17 +6188,17 @@ linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.dockerImage">docker_image</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#docker_image LinuxWebAppSlot#docker_image}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.dockerImageTag">docker_image_tag</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#docker_image_tag LinuxWebAppSlot#docker_image_tag}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.dotnetVersion">dotnet_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#dotnet_version LinuxWebAppSlot#dotnet_version}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.goVersion">go_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#go_version LinuxWebAppSlot#go_version}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.javaServer">java_server</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#java_server LinuxWebAppSlot#java_server}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.javaServerVersion">java_server_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#java_server_version LinuxWebAppSlot#java_server_version}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.javaVersion">java_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#java_version LinuxWebAppSlot#java_version}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.nodeVersion">node_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#node_version LinuxWebAppSlot#node_version}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.phpVersion">php_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#php_version LinuxWebAppSlot#php_version}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.pythonVersion">python_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#python_version LinuxWebAppSlot#python_version}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.rubyVersion">ruby_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#ruby_version LinuxWebAppSlot#ruby_version}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.dockerImage">docker_image</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#docker_image LinuxWebAppSlot#docker_image}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.dockerImageTag">docker_image_tag</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#docker_image_tag LinuxWebAppSlot#docker_image_tag}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.dotnetVersion">dotnet_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#dotnet_version LinuxWebAppSlot#dotnet_version}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.goVersion">go_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#go_version LinuxWebAppSlot#go_version}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.javaServer">java_server</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#java_server LinuxWebAppSlot#java_server}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.javaServerVersion">java_server_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#java_server_version LinuxWebAppSlot#java_server_version}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.javaVersion">java_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#java_version LinuxWebAppSlot#java_version}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.nodeVersion">node_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#node_version LinuxWebAppSlot#node_version}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.phpVersion">php_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#php_version LinuxWebAppSlot#php_version}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.pythonVersion">python_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#python_version LinuxWebAppSlot#python_version}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigApplicationStack.property.rubyVersion">ruby_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#ruby_version LinuxWebAppSlot#ruby_version}. |
 
 ---
 
@@ -6210,7 +6210,7 @@ docker_image: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#docker_image LinuxWebAppSlot#docker_image}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#docker_image LinuxWebAppSlot#docker_image}.
 
 ---
 
@@ -6222,7 +6222,7 @@ docker_image_tag: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#docker_image_tag LinuxWebAppSlot#docker_image_tag}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#docker_image_tag LinuxWebAppSlot#docker_image_tag}.
 
 ---
 
@@ -6234,7 +6234,7 @@ dotnet_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#dotnet_version LinuxWebAppSlot#dotnet_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#dotnet_version LinuxWebAppSlot#dotnet_version}.
 
 ---
 
@@ -6246,7 +6246,7 @@ go_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#go_version LinuxWebAppSlot#go_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#go_version LinuxWebAppSlot#go_version}.
 
 ---
 
@@ -6258,7 +6258,7 @@ java_server: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#java_server LinuxWebAppSlot#java_server}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#java_server LinuxWebAppSlot#java_server}.
 
 ---
 
@@ -6270,7 +6270,7 @@ java_server_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#java_server_version LinuxWebAppSlot#java_server_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#java_server_version LinuxWebAppSlot#java_server_version}.
 
 ---
 
@@ -6282,7 +6282,7 @@ java_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#java_version LinuxWebAppSlot#java_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#java_version LinuxWebAppSlot#java_version}.
 
 ---
 
@@ -6294,7 +6294,7 @@ node_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#node_version LinuxWebAppSlot#node_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#node_version LinuxWebAppSlot#node_version}.
 
 ---
 
@@ -6306,7 +6306,7 @@ php_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#php_version LinuxWebAppSlot#php_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#php_version LinuxWebAppSlot#php_version}.
 
 ---
 
@@ -6318,7 +6318,7 @@ python_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#python_version LinuxWebAppSlot#python_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#python_version LinuxWebAppSlot#python_version}.
 
 ---
 
@@ -6330,7 +6330,7 @@ ruby_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#ruby_version LinuxWebAppSlot#ruby_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#ruby_version LinuxWebAppSlot#ruby_version}.
 
 ---
 
@@ -6366,7 +6366,7 @@ action: LinuxWebAppSlotSiteConfigAutoHealSettingAction
 
 action block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#action LinuxWebAppSlot#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#action LinuxWebAppSlot#action}
 
 ---
 
@@ -6380,7 +6380,7 @@ trigger: LinuxWebAppSlotSiteConfigAutoHealSettingTrigger
 
 trigger block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#trigger LinuxWebAppSlot#trigger}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#trigger LinuxWebAppSlot#trigger}
 
 ---
 
@@ -6401,8 +6401,8 @@ linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingAction(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingAction.property.actionType">action_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#action_type LinuxWebAppSlot#action_type}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingAction.property.minimumProcessExecutionTime">minimum_process_execution_time</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#minimum_process_execution_time LinuxWebAppSlot#minimum_process_execution_time}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingAction.property.actionType">action_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#action_type LinuxWebAppSlot#action_type}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingAction.property.minimumProcessExecutionTime">minimum_process_execution_time</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#minimum_process_execution_time LinuxWebAppSlot#minimum_process_execution_time}. |
 
 ---
 
@@ -6414,7 +6414,7 @@ action_type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#action_type LinuxWebAppSlot#action_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#action_type LinuxWebAppSlot#action_type}.
 
 ---
 
@@ -6426,7 +6426,7 @@ minimum_process_execution_time: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#minimum_process_execution_time LinuxWebAppSlot#minimum_process_execution_time}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#minimum_process_execution_time LinuxWebAppSlot#minimum_process_execution_time}.
 
 ---
 
@@ -6464,7 +6464,7 @@ requests: LinuxWebAppSlotSiteConfigAutoHealSettingTriggerRequests
 
 requests block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#requests LinuxWebAppSlot#requests}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#requests LinuxWebAppSlot#requests}
 
 ---
 
@@ -6478,7 +6478,7 @@ slow_request: LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest
 
 slow_request block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#slow_request LinuxWebAppSlot#slow_request}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#slow_request LinuxWebAppSlot#slow_request}
 
 ---
 
@@ -6492,7 +6492,7 @@ status_code: typing.Union[IResolvable, typing.List[LinuxWebAppSlotSiteConfigAuto
 
 status_code block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#status_code LinuxWebAppSlot#status_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#status_code LinuxWebAppSlot#status_code}
 
 ---
 
@@ -6513,8 +6513,8 @@ linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerRequests(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerRequests.property.count">count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#count LinuxWebAppSlot#count}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerRequests.property.interval">interval</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#interval LinuxWebAppSlot#interval}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerRequests.property.count">count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#count LinuxWebAppSlot#count}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerRequests.property.interval">interval</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#interval LinuxWebAppSlot#interval}. |
 
 ---
 
@@ -6526,7 +6526,7 @@ count: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#count LinuxWebAppSlot#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#count LinuxWebAppSlot#count}.
 
 ---
 
@@ -6538,7 +6538,7 @@ interval: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#interval LinuxWebAppSlot#interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#interval LinuxWebAppSlot#interval}.
 
 ---
 
@@ -6561,10 +6561,10 @@ linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest.property.count">count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#count LinuxWebAppSlot#count}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest.property.interval">interval</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#interval LinuxWebAppSlot#interval}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest.property.timeTaken">time_taken</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#time_taken LinuxWebAppSlot#time_taken}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest.property.path">path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#path LinuxWebAppSlot#path}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest.property.count">count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#count LinuxWebAppSlot#count}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest.property.interval">interval</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#interval LinuxWebAppSlot#interval}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest.property.timeTaken">time_taken</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#time_taken LinuxWebAppSlot#time_taken}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest.property.path">path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#path LinuxWebAppSlot#path}. |
 
 ---
 
@@ -6576,7 +6576,7 @@ count: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#count LinuxWebAppSlot#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#count LinuxWebAppSlot#count}.
 
 ---
 
@@ -6588,7 +6588,7 @@ interval: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#interval LinuxWebAppSlot#interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#interval LinuxWebAppSlot#interval}.
 
 ---
 
@@ -6600,7 +6600,7 @@ time_taken: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#time_taken LinuxWebAppSlot#time_taken}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#time_taken LinuxWebAppSlot#time_taken}.
 
 ---
 
@@ -6612,7 +6612,7 @@ path: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#path LinuxWebAppSlot#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#path LinuxWebAppSlot#path}.
 
 ---
 
@@ -6637,12 +6637,12 @@ linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode.property.count">count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#count LinuxWebAppSlot#count}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode.property.interval">interval</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#interval LinuxWebAppSlot#interval}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode.property.statusCodeRange">status_code_range</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#status_code_range LinuxWebAppSlot#status_code_range}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode.property.path">path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#path LinuxWebAppSlot#path}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode.property.subStatus">sub_status</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#sub_status LinuxWebAppSlot#sub_status}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode.property.win32Status">win32_status</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#win32_status LinuxWebAppSlot#win32_status}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode.property.count">count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#count LinuxWebAppSlot#count}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode.property.interval">interval</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#interval LinuxWebAppSlot#interval}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode.property.statusCodeRange">status_code_range</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#status_code_range LinuxWebAppSlot#status_code_range}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode.property.path">path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#path LinuxWebAppSlot#path}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode.property.subStatus">sub_status</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#sub_status LinuxWebAppSlot#sub_status}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode.property.win32Status">win32_status</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#win32_status LinuxWebAppSlot#win32_status}. |
 
 ---
 
@@ -6654,7 +6654,7 @@ count: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#count LinuxWebAppSlot#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#count LinuxWebAppSlot#count}.
 
 ---
 
@@ -6666,7 +6666,7 @@ interval: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#interval LinuxWebAppSlot#interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#interval LinuxWebAppSlot#interval}.
 
 ---
 
@@ -6678,7 +6678,7 @@ status_code_range: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#status_code_range LinuxWebAppSlot#status_code_range}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#status_code_range LinuxWebAppSlot#status_code_range}.
 
 ---
 
@@ -6690,7 +6690,7 @@ path: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#path LinuxWebAppSlot#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#path LinuxWebAppSlot#path}.
 
 ---
 
@@ -6702,7 +6702,7 @@ sub_status: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#sub_status LinuxWebAppSlot#sub_status}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#sub_status LinuxWebAppSlot#sub_status}.
 
 ---
 
@@ -6714,7 +6714,7 @@ win32_status: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#win32_status LinuxWebAppSlot#win32_status}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#win32_status LinuxWebAppSlot#win32_status}.
 
 ---
 
@@ -6750,7 +6750,7 @@ allowed_origins: typing.List[str]
 
 Specifies a list of origins that should be allowed to make cross-origin calls.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_origins LinuxWebAppSlot#allowed_origins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_origins LinuxWebAppSlot#allowed_origins}
 
 ---
 
@@ -6764,7 +6764,7 @@ support_credentials: typing.Union[bool, IResolvable]
 
 Are credentials allowed in CORS requests? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#support_credentials LinuxWebAppSlot#support_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#support_credentials LinuxWebAppSlot#support_credentials}
 
 ---
 
@@ -6791,7 +6791,7 @@ linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestriction(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestriction.property.action">action</a></code> | <code>str</code> | The action to take. Possible values are `Allow` or `Deny`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestriction.property.headers">headers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders">LinuxWebAppSlotSiteConfigIpRestrictionHeaders</a>]]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#headers LinuxWebAppSlot#headers}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestriction.property.headers">headers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders">LinuxWebAppSlotSiteConfigIpRestrictionHeaders</a>]]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#headers LinuxWebAppSlot#headers}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestriction.property.ipAddress">ip_address</a></code> | <code>str</code> | The CIDR notation of the IP or IP Range to match. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestriction.property.name">name</a></code> | <code>str</code> | The name which should be used for this `ip_restriction`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestriction.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | The priority value of this `ip_restriction`. |
@@ -6810,7 +6810,7 @@ action: str
 
 The action to take. Possible values are `Allow` or `Deny`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#action LinuxWebAppSlot#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#action LinuxWebAppSlot#action}
 
 ---
 
@@ -6822,7 +6822,7 @@ headers: typing.Union[IResolvable, typing.List[LinuxWebAppSlotSiteConfigIpRestri
 
 - *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders">LinuxWebAppSlotSiteConfigIpRestrictionHeaders</a>]]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#headers LinuxWebAppSlot#headers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#headers LinuxWebAppSlot#headers}.
 
 ---
 
@@ -6838,7 +6838,7 @@ The CIDR notation of the IP or IP Range to match.
 
 For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#ip_address LinuxWebAppSlot#ip_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#ip_address LinuxWebAppSlot#ip_address}
 
 ---
 
@@ -6852,7 +6852,7 @@ name: str
 
 The name which should be used for this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#name LinuxWebAppSlot#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#name LinuxWebAppSlot#name}
 
 ---
 
@@ -6866,7 +6866,7 @@ priority: typing.Union[int, float]
 
 The priority value of this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#priority LinuxWebAppSlot#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#priority LinuxWebAppSlot#priority}
 
 ---
 
@@ -6880,7 +6880,7 @@ service_tag: str
 
 The Service Tag used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#service_tag LinuxWebAppSlot#service_tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#service_tag LinuxWebAppSlot#service_tag}
 
 ---
 
@@ -6894,7 +6894,7 @@ virtual_network_subnet_id: str
 
 The Virtual Network Subnet ID used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#virtual_network_subnet_id LinuxWebAppSlot#virtual_network_subnet_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#virtual_network_subnet_id LinuxWebAppSlot#virtual_network_subnet_id}
 
 ---
 
@@ -6917,10 +6917,10 @@ linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders.property.xAzureFdid">x_azure_fdid</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_azure_fdid LinuxWebAppSlot#x_azure_fdid}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders.property.xFdHealthProbe">x_fd_health_probe</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_fd_health_probe LinuxWebAppSlot#x_fd_health_probe}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders.property.xForwardedFor">x_forwarded_for</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_forwarded_for LinuxWebAppSlot#x_forwarded_for}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders.property.xForwardedHost">x_forwarded_host</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_forwarded_host LinuxWebAppSlot#x_forwarded_host}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders.property.xAzureFdid">x_azure_fdid</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_azure_fdid LinuxWebAppSlot#x_azure_fdid}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders.property.xFdHealthProbe">x_fd_health_probe</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_fd_health_probe LinuxWebAppSlot#x_fd_health_probe}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders.property.xForwardedFor">x_forwarded_for</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_forwarded_for LinuxWebAppSlot#x_forwarded_for}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders.property.xForwardedHost">x_forwarded_host</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_forwarded_host LinuxWebAppSlot#x_forwarded_host}. |
 
 ---
 
@@ -6932,7 +6932,7 @@ x_azure_fdid: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_azure_fdid LinuxWebAppSlot#x_azure_fdid}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_azure_fdid LinuxWebAppSlot#x_azure_fdid}.
 
 ---
 
@@ -6944,7 +6944,7 @@ x_fd_health_probe: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_fd_health_probe LinuxWebAppSlot#x_fd_health_probe}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_fd_health_probe LinuxWebAppSlot#x_fd_health_probe}.
 
 ---
 
@@ -6956,7 +6956,7 @@ x_forwarded_for: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_forwarded_for LinuxWebAppSlot#x_forwarded_for}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_forwarded_for LinuxWebAppSlot#x_forwarded_for}.
 
 ---
 
@@ -6968,7 +6968,7 @@ x_forwarded_host: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_forwarded_host LinuxWebAppSlot#x_forwarded_host}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_forwarded_host LinuxWebAppSlot#x_forwarded_host}.
 
 ---
 
@@ -6995,7 +6995,7 @@ linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestriction(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestriction.property.action">action</a></code> | <code>str</code> | The action to take. Possible values are `Allow` or `Deny`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestriction.property.headers">headers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders">LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders</a>]]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#headers LinuxWebAppSlot#headers}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestriction.property.headers">headers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders">LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders</a>]]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#headers LinuxWebAppSlot#headers}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestriction.property.ipAddress">ip_address</a></code> | <code>str</code> | The CIDR notation of the IP or IP Range to match. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestriction.property.name">name</a></code> | <code>str</code> | The name which should be used for this `ip_restriction`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestriction.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | The priority value of this `ip_restriction`. |
@@ -7014,7 +7014,7 @@ action: str
 
 The action to take. Possible values are `Allow` or `Deny`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#action LinuxWebAppSlot#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#action LinuxWebAppSlot#action}
 
 ---
 
@@ -7026,7 +7026,7 @@ headers: typing.Union[IResolvable, typing.List[LinuxWebAppSlotSiteConfigScmIpRes
 
 - *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders">LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders</a>]]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#headers LinuxWebAppSlot#headers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#headers LinuxWebAppSlot#headers}.
 
 ---
 
@@ -7042,7 +7042,7 @@ The CIDR notation of the IP or IP Range to match.
 
 For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#ip_address LinuxWebAppSlot#ip_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#ip_address LinuxWebAppSlot#ip_address}
 
 ---
 
@@ -7056,7 +7056,7 @@ name: str
 
 The name which should be used for this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#name LinuxWebAppSlot#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#name LinuxWebAppSlot#name}
 
 ---
 
@@ -7070,7 +7070,7 @@ priority: typing.Union[int, float]
 
 The priority value of this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#priority LinuxWebAppSlot#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#priority LinuxWebAppSlot#priority}
 
 ---
 
@@ -7084,7 +7084,7 @@ service_tag: str
 
 The Service Tag used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#service_tag LinuxWebAppSlot#service_tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#service_tag LinuxWebAppSlot#service_tag}
 
 ---
 
@@ -7098,7 +7098,7 @@ virtual_network_subnet_id: str
 
 The Virtual Network Subnet ID used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#virtual_network_subnet_id LinuxWebAppSlot#virtual_network_subnet_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#virtual_network_subnet_id LinuxWebAppSlot#virtual_network_subnet_id}
 
 ---
 
@@ -7121,10 +7121,10 @@ linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders.property.xAzureFdid">x_azure_fdid</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_azure_fdid LinuxWebAppSlot#x_azure_fdid}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders.property.xFdHealthProbe">x_fd_health_probe</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_fd_health_probe LinuxWebAppSlot#x_fd_health_probe}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders.property.xForwardedFor">x_forwarded_for</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_forwarded_for LinuxWebAppSlot#x_forwarded_for}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders.property.xForwardedHost">x_forwarded_host</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_forwarded_host LinuxWebAppSlot#x_forwarded_host}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders.property.xAzureFdid">x_azure_fdid</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_azure_fdid LinuxWebAppSlot#x_azure_fdid}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders.property.xFdHealthProbe">x_fd_health_probe</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_fd_health_probe LinuxWebAppSlot#x_fd_health_probe}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders.property.xForwardedFor">x_forwarded_for</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_forwarded_for LinuxWebAppSlot#x_forwarded_for}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders.property.xForwardedHost">x_forwarded_host</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_forwarded_host LinuxWebAppSlot#x_forwarded_host}. |
 
 ---
 
@@ -7136,7 +7136,7 @@ x_azure_fdid: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_azure_fdid LinuxWebAppSlot#x_azure_fdid}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_azure_fdid LinuxWebAppSlot#x_azure_fdid}.
 
 ---
 
@@ -7148,7 +7148,7 @@ x_fd_health_probe: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_fd_health_probe LinuxWebAppSlot#x_fd_health_probe}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_fd_health_probe LinuxWebAppSlot#x_fd_health_probe}.
 
 ---
 
@@ -7160,7 +7160,7 @@ x_forwarded_for: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_forwarded_for LinuxWebAppSlot#x_forwarded_for}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_forwarded_for LinuxWebAppSlot#x_forwarded_for}.
 
 ---
 
@@ -7172,7 +7172,7 @@ x_forwarded_host: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#x_forwarded_host LinuxWebAppSlot#x_forwarded_host}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#x_forwarded_host LinuxWebAppSlot#x_forwarded_host}.
 
 ---
 
@@ -7208,12 +7208,12 @@ linuxWebAppSlot.LinuxWebAppSlotStorageAccount(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount.property.accessKey">access_key</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#access_key LinuxWebAppSlot#access_key}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount.property.accountName">account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#account_name LinuxWebAppSlot#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#name LinuxWebAppSlot#name}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount.property.shareName">share_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#share_name LinuxWebAppSlot#share_name}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#type LinuxWebAppSlot#type}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount.property.mountPath">mount_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#mount_path LinuxWebAppSlot#mount_path}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount.property.accessKey">access_key</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#access_key LinuxWebAppSlot#access_key}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount.property.accountName">account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#account_name LinuxWebAppSlot#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#name LinuxWebAppSlot#name}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount.property.shareName">share_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#share_name LinuxWebAppSlot#share_name}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#type LinuxWebAppSlot#type}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount.property.mountPath">mount_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#mount_path LinuxWebAppSlot#mount_path}. |
 
 ---
 
@@ -7225,7 +7225,7 @@ access_key: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#access_key LinuxWebAppSlot#access_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#access_key LinuxWebAppSlot#access_key}.
 
 ---
 
@@ -7237,7 +7237,7 @@ account_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#account_name LinuxWebAppSlot#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#account_name LinuxWebAppSlot#account_name}.
 
 ---
 
@@ -7249,7 +7249,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#name LinuxWebAppSlot#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#name LinuxWebAppSlot#name}.
 
 ---
 
@@ -7261,7 +7261,7 @@ share_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#share_name LinuxWebAppSlot#share_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#share_name LinuxWebAppSlot#share_name}.
 
 ---
 
@@ -7273,7 +7273,7 @@ type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#type LinuxWebAppSlot#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#type LinuxWebAppSlot#type}.
 
 ---
 
@@ -7285,7 +7285,7 @@ mount_path: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#mount_path LinuxWebAppSlot#mount_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#mount_path LinuxWebAppSlot#mount_path}.
 
 ---
 
@@ -7308,10 +7308,10 @@ linuxWebAppSlot.LinuxWebAppSlotTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#create LinuxWebAppSlot#create}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#delete LinuxWebAppSlot#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#read LinuxWebAppSlot#read}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#update LinuxWebAppSlot#update}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#create LinuxWebAppSlot#create}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#delete LinuxWebAppSlot#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#read LinuxWebAppSlot#read}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#update LinuxWebAppSlot#update}. |
 
 ---
 
@@ -7323,7 +7323,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#create LinuxWebAppSlot#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#create LinuxWebAppSlot#create}.
 
 ---
 
@@ -7335,7 +7335,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#delete LinuxWebAppSlot#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#delete LinuxWebAppSlot#delete}.
 
 ---
 
@@ -7347,7 +7347,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#read LinuxWebAppSlot#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#read LinuxWebAppSlot#read}.
 
 ---
 
@@ -7359,7 +7359,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#update LinuxWebAppSlot#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#update LinuxWebAppSlot#update}.
 
 ---
 
@@ -9545,7 +9545,7 @@ def put_active_directory(
 
 The ID of the Client to use to authenticate with Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -9555,7 +9555,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
 
 ---
 
@@ -9565,7 +9565,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
 
 ---
 
@@ -9575,7 +9575,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The App Setting name that contains the client secret of the Client. Cannot be used with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -9596,7 +9596,7 @@ def put_facebook(
 
 The App ID of the Facebook app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_id LinuxWebAppSlot#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_id LinuxWebAppSlot#app_id}
 
 ---
 
@@ -9606,7 +9606,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_secret LinuxWebAppSlot#app_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_secret LinuxWebAppSlot#app_secret}
 
 ---
 
@@ -9616,7 +9616,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the `app_secret` value used for Facebook Login. Cannot be specified with `app_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_secret_setting_name LinuxWebAppSlot#app_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_secret_setting_name LinuxWebAppSlot#app_secret_setting_name}
 
 ---
 
@@ -9626,7 +9626,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of OAuth 2.0 scopes to be requested as part of Facebook Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
 
 ---
 
@@ -9647,7 +9647,7 @@ def put_github(
 
 The ID of the GitHub app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -9657,7 +9657,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
 
 ---
 
@@ -9667,7 +9667,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the `client_secret` value used for GitHub Login. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -9677,7 +9677,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
 
 ---
 
@@ -9698,7 +9698,7 @@ def put_google(
 
 The OpenID Connect Client ID for the Google web application.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -9708,7 +9708,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
 
 ---
 
@@ -9718,7 +9718,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the `client_secret` value used for Google Login. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -9728,7 +9728,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication. If not specified, "openid", "profile", and "email" are used as default scopes.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
 
 ---
 
@@ -9749,7 +9749,7 @@ def put_microsoft(
 
 The OAuth 2.0 client ID that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -9759,7 +9759,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret LinuxWebAppSlot#client_secret}
 
 ---
 
@@ -9769,7 +9769,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -9779,7 +9779,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The list of OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. If not specified, `wl.basic` is used as the default scope.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#oauth_scopes LinuxWebAppSlot#oauth_scopes}
 
 ---
 
@@ -9799,7 +9799,7 @@ def put_twitter(
 
 The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#consumer_key LinuxWebAppSlot#consumer_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#consumer_key LinuxWebAppSlot#consumer_key}
 
 ---
 
@@ -9809,7 +9809,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#consumer_secret LinuxWebAppSlot#consumer_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#consumer_secret LinuxWebAppSlot#consumer_secret}
 
 ---
 
@@ -9819,7 +9819,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#consumer_secret_setting_name LinuxWebAppSlot#consumer_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#consumer_secret_setting_name LinuxWebAppSlot#consumer_secret_setting_name}
 
 ---
 
@@ -14857,7 +14857,7 @@ def put_active_directory_v2(
 
 The ID of the Client to use to authenticate with Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -14867,7 +14867,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#tenant_auth_endpoint LinuxWebAppSlot#tenant_auth_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#tenant_auth_endpoint LinuxWebAppSlot#tenant_auth_endpoint}
 
 ---
 
@@ -14877,7 +14877,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The list of allowed Applications for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_applications LinuxWebAppSlot#allowed_applications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_applications LinuxWebAppSlot#allowed_applications}
 
 ---
 
@@ -14887,7 +14887,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
 
 ---
 
@@ -14897,7 +14897,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The list of allowed Group Names for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_groups LinuxWebAppSlot#allowed_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_groups LinuxWebAppSlot#allowed_groups}
 
 ---
 
@@ -14907,7 +14907,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The list of allowed Identities for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_identities LinuxWebAppSlot#allowed_identities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_identities LinuxWebAppSlot#allowed_identities}
 
 ---
 
@@ -14917,7 +14917,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The thumbprint of the certificate used for signing purposes.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_certificate_thumbprint LinuxWebAppSlot#client_secret_certificate_thumbprint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_certificate_thumbprint LinuxWebAppSlot#client_secret_certificate_thumbprint}
 
 ---
 
@@ -14927,7 +14927,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The App Setting name that contains the client secret of the Client.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -14937,7 +14937,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 A list of Allowed Client Applications in the JWT Claim.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#jwt_allowed_client_applications LinuxWebAppSlot#jwt_allowed_client_applications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#jwt_allowed_client_applications LinuxWebAppSlot#jwt_allowed_client_applications}
 
 ---
 
@@ -14947,7 +14947,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 A list of Allowed Groups in the JWT Claim.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#jwt_allowed_groups LinuxWebAppSlot#jwt_allowed_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#jwt_allowed_groups LinuxWebAppSlot#jwt_allowed_groups}
 
 ---
 
@@ -14957,7 +14957,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 A map of key-value pairs to send to the Authorisation Endpoint when a user logs in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#login_parameters LinuxWebAppSlot#login_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#login_parameters LinuxWebAppSlot#login_parameters}
 
 ---
 
@@ -14967,7 +14967,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the www-authenticate provider should be omitted from the request? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#www_authentication_disabled LinuxWebAppSlot#www_authentication_disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#www_authentication_disabled LinuxWebAppSlot#www_authentication_disabled}
 
 ---
 
@@ -14986,7 +14986,7 @@ def put_apple_v2(
 
 The OpenID Connect Client ID for the Apple web application.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -14996,7 +14996,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the `client_secret` value used for Apple Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -15014,7 +15014,7 @@ def put_azure_static_web_app_v2(
 
 The ID of the Client to use to authenticate with Azure Static Web App Authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -15049,7 +15049,7 @@ def put_facebook_v2(
 
 The App ID of the Facebook app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_id LinuxWebAppSlot#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_id LinuxWebAppSlot#app_id}
 
 ---
 
@@ -15059,7 +15059,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the `app_secret` value used for Facebook Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#app_secret_setting_name LinuxWebAppSlot#app_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#app_secret_setting_name LinuxWebAppSlot#app_secret_setting_name}
 
 ---
 
@@ -15069,7 +15069,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The version of the Facebook API to be used while logging in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#graph_api_version LinuxWebAppSlot#graph_api_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#graph_api_version LinuxWebAppSlot#graph_api_version}
 
 ---
 
@@ -15079,7 +15079,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of scopes to be requested as part of Facebook Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
 
 ---
 
@@ -15099,7 +15099,7 @@ def put_github_v2(
 
 The ID of the GitHub app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -15109,7 +15109,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the `client_secret` value used for GitHub Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -15119,7 +15119,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
 
 ---
 
@@ -15140,7 +15140,7 @@ def put_google_v2(
 
 The OpenID Connect Client ID for the Google web application.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -15150,7 +15150,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the `client_secret` value used for Google Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -15160,7 +15160,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
 
 ---
 
@@ -15170,7 +15170,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of Login scopes that will be requested as part of Google Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
 
 ---
 
@@ -15200,7 +15200,7 @@ External URLs that can be redirected to as part of logging in or logging out of 
 
 This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_external_redirect_urls LinuxWebAppSlot#allowed_external_redirect_urls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_external_redirect_urls LinuxWebAppSlot#allowed_external_redirect_urls}
 
 ---
 
@@ -15210,7 +15210,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The method by which cookies expire. Possible values include: `FixedTime`, and `IdentityProviderDerived`. Defaults to `FixedTime`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#cookie_expiration_convention LinuxWebAppSlot#cookie_expiration_convention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#cookie_expiration_convention LinuxWebAppSlot#cookie_expiration_convention}
 
 ---
 
@@ -15220,7 +15220,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The time after the request is made when the session cookie should expire. Defaults to `08:00:00`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#cookie_expiration_time LinuxWebAppSlot#cookie_expiration_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#cookie_expiration_time LinuxWebAppSlot#cookie_expiration_time}
 
 ---
 
@@ -15230,7 +15230,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The endpoint to which logout requests should be made.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#logout_endpoint LinuxWebAppSlot#logout_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#logout_endpoint LinuxWebAppSlot#logout_endpoint}
 
 ---
 
@@ -15240,7 +15240,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The time after the request is made when the nonce should expire. Defaults to `00:05:00`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#nonce_expiration_time LinuxWebAppSlot#nonce_expiration_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#nonce_expiration_time LinuxWebAppSlot#nonce_expiration_time}
 
 ---
 
@@ -15250,7 +15250,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#preserve_url_fragments_for_logins LinuxWebAppSlot#preserve_url_fragments_for_logins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#preserve_url_fragments_for_logins LinuxWebAppSlot#preserve_url_fragments_for_logins}
 
 ---
 
@@ -15262,7 +15262,7 @@ The number of hours after session token expiration that a session token can be u
 
 Defaults to `72` hours.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#token_refresh_extension_time LinuxWebAppSlot#token_refresh_extension_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#token_refresh_extension_time LinuxWebAppSlot#token_refresh_extension_time}
 
 ---
 
@@ -15272,7 +15272,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the Token Store configuration Enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#token_store_enabled LinuxWebAppSlot#token_store_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#token_store_enabled LinuxWebAppSlot#token_store_enabled}
 
 ---
 
@@ -15282,7 +15282,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The directory path in the App Filesystem in which the tokens will be stored.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#token_store_path LinuxWebAppSlot#token_store_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#token_store_path LinuxWebAppSlot#token_store_path}
 
 ---
 
@@ -15292,7 +15292,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The name of the app setting which contains the SAS URL of the blob storage containing the tokens.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#token_store_sas_setting_name LinuxWebAppSlot#token_store_sas_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#token_store_sas_setting_name LinuxWebAppSlot#token_store_sas_setting_name}
 
 ---
 
@@ -15302,7 +15302,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the nonce be validated while completing the login flow. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#validate_nonce LinuxWebAppSlot#validate_nonce}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#validate_nonce LinuxWebAppSlot#validate_nonce}
 
 ---
 
@@ -15323,7 +15323,7 @@ def put_microsoft_v2(
 
 The OAuth 2.0 client ID that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_id LinuxWebAppSlot#client_id}
 
 ---
 
@@ -15333,7 +15333,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#client_secret_setting_name LinuxWebAppSlot#client_secret_setting_name}
 
 ---
 
@@ -15343,7 +15343,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_audiences LinuxWebAppSlot#allowed_audiences}
 
 ---
 
@@ -15353,7 +15353,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The list of Login scopes that will be requested as part of Microsoft Account authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#login_scopes LinuxWebAppSlot#login_scopes}
 
 ---
 
@@ -15372,7 +15372,7 @@ def put_twitter_v2(
 
 The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#consumer_key LinuxWebAppSlot#consumer_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#consumer_key LinuxWebAppSlot#consumer_key}
 
 ---
 
@@ -15382,7 +15382,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#consumer_secret_setting_name LinuxWebAppSlot#consumer_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#consumer_secret_setting_name LinuxWebAppSlot#consumer_secret_setting_name}
 
 ---
 
@@ -16608,7 +16608,7 @@ def put_schedule(
 
 How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#frequency_interval LinuxWebAppSlot#frequency_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#frequency_interval LinuxWebAppSlot#frequency_interval}
 
 ---
 
@@ -16618,7 +16618,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The unit of time for how often the backup should take place. Possible values include: `Day` and `Hour`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#frequency_unit LinuxWebAppSlot#frequency_unit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#frequency_unit LinuxWebAppSlot#frequency_unit}
 
 ---
 
@@ -16628,7 +16628,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the service keep at least one backup, regardless of age of backup. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#keep_at_least_one_backup LinuxWebAppSlot#keep_at_least_one_backup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#keep_at_least_one_backup LinuxWebAppSlot#keep_at_least_one_backup}
 
 ---
 
@@ -16638,7 +16638,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 After how many days backups should be deleted.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#retention_period_days LinuxWebAppSlot#retention_period_days}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#retention_period_days LinuxWebAppSlot#retention_period_days}
 
 ---
 
@@ -16648,7 +16648,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 When the schedule should start working in RFC-3339 format.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#start_time LinuxWebAppSlot#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#start_time LinuxWebAppSlot#start_time}
 
 ---
 
@@ -18650,7 +18650,7 @@ def put_azure_blob_storage(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#level LinuxWebAppSlot#level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#level LinuxWebAppSlot#level}.
 
 ---
 
@@ -18658,7 +18658,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}.
 
 ---
 
@@ -18666,7 +18666,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#sas_url LinuxWebAppSlot#sas_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#sas_url LinuxWebAppSlot#sas_url}.
 
 ---
 
@@ -19654,7 +19654,7 @@ def put_azure_blob_storage(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#sas_url LinuxWebAppSlot#sas_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#sas_url LinuxWebAppSlot#sas_url}.
 
 ---
 
@@ -19662,7 +19662,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}.
 
 ---
 
@@ -19679,7 +19679,7 @@ def put_file_system(
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#retention_in_days LinuxWebAppSlot#retention_in_days}.
 
 ---
 
@@ -19687,7 +19687,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#retention_in_mb LinuxWebAppSlot#retention_in_mb}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#retention_in_mb LinuxWebAppSlot#retention_in_mb}.
 
 ---
 
@@ -20040,7 +20040,7 @@ def put_application_logs(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#file_system_level LinuxWebAppSlot#file_system_level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#file_system_level LinuxWebAppSlot#file_system_level}.
 
 ---
 
@@ -20050,7 +20050,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 azure_blob_storage block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#azure_blob_storage LinuxWebAppSlot#azure_blob_storage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#azure_blob_storage LinuxWebAppSlot#azure_blob_storage}
 
 ---
 
@@ -20069,7 +20069,7 @@ def put_http_logs(
 
 azure_blob_storage block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#azure_blob_storage LinuxWebAppSlot#azure_blob_storage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#azure_blob_storage LinuxWebAppSlot#azure_blob_storage}
 
 ---
 
@@ -20079,7 +20079,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 file_system block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#file_system LinuxWebAppSlot#file_system}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#file_system LinuxWebAppSlot#file_system}
 
 ---
 
@@ -21404,7 +21404,7 @@ def put_action(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#action_type LinuxWebAppSlot#action_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#action_type LinuxWebAppSlot#action_type}.
 
 ---
 
@@ -21412,7 +21412,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#minimum_process_execution_time LinuxWebAppSlot#minimum_process_execution_time}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#minimum_process_execution_time LinuxWebAppSlot#minimum_process_execution_time}.
 
 ---
 
@@ -21432,7 +21432,7 @@ def put_trigger(
 
 requests block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#requests LinuxWebAppSlot#requests}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#requests LinuxWebAppSlot#requests}
 
 ---
 
@@ -21442,7 +21442,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 slow_request block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#slow_request LinuxWebAppSlot#slow_request}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#slow_request LinuxWebAppSlot#slow_request}
 
 ---
 
@@ -21452,7 +21452,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 status_code block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#status_code LinuxWebAppSlot#status_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#status_code LinuxWebAppSlot#status_code}
 
 ---
 
@@ -21805,7 +21805,7 @@ def put_requests(
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#count LinuxWebAppSlot#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#count LinuxWebAppSlot#count}.
 
 ---
 
@@ -21813,7 +21813,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#interval LinuxWebAppSlot#interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#interval LinuxWebAppSlot#interval}.
 
 ---
 
@@ -21832,7 +21832,7 @@ def put_slow_request(
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#count LinuxWebAppSlot#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#count LinuxWebAppSlot#count}.
 
 ---
 
@@ -21840,7 +21840,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#interval LinuxWebAppSlot#interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#interval LinuxWebAppSlot#interval}.
 
 ---
 
@@ -21848,7 +21848,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#time_taken LinuxWebAppSlot#time_taken}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#time_taken LinuxWebAppSlot#time_taken}.
 
 ---
 
@@ -21856,7 +21856,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#path LinuxWebAppSlot#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#path LinuxWebAppSlot#path}.
 
 ---
 
@@ -25130,7 +25130,7 @@ def put_application_stack(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#docker_image LinuxWebAppSlot#docker_image}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#docker_image LinuxWebAppSlot#docker_image}.
 
 ---
 
@@ -25138,7 +25138,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#docker_image_tag LinuxWebAppSlot#docker_image_tag}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#docker_image_tag LinuxWebAppSlot#docker_image_tag}.
 
 ---
 
@@ -25146,7 +25146,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#dotnet_version LinuxWebAppSlot#dotnet_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#dotnet_version LinuxWebAppSlot#dotnet_version}.
 
 ---
 
@@ -25154,7 +25154,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#go_version LinuxWebAppSlot#go_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#go_version LinuxWebAppSlot#go_version}.
 
 ---
 
@@ -25162,7 +25162,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#java_server LinuxWebAppSlot#java_server}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#java_server LinuxWebAppSlot#java_server}.
 
 ---
 
@@ -25170,7 +25170,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#java_server_version LinuxWebAppSlot#java_server_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#java_server_version LinuxWebAppSlot#java_server_version}.
 
 ---
 
@@ -25178,7 +25178,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#java_version LinuxWebAppSlot#java_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#java_version LinuxWebAppSlot#java_version}.
 
 ---
 
@@ -25186,7 +25186,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#node_version LinuxWebAppSlot#node_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#node_version LinuxWebAppSlot#node_version}.
 
 ---
 
@@ -25194,7 +25194,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#php_version LinuxWebAppSlot#php_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#php_version LinuxWebAppSlot#php_version}.
 
 ---
 
@@ -25202,7 +25202,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#python_version LinuxWebAppSlot#python_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#python_version LinuxWebAppSlot#python_version}.
 
 ---
 
@@ -25210,7 +25210,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#ruby_version LinuxWebAppSlot#ruby_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#ruby_version LinuxWebAppSlot#ruby_version}.
 
 ---
 
@@ -25229,7 +25229,7 @@ def put_auto_heal_setting(
 
 action block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#action LinuxWebAppSlot#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#action LinuxWebAppSlot#action}
 
 ---
 
@@ -25239,7 +25239,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 trigger block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#trigger LinuxWebAppSlot#trigger}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#trigger LinuxWebAppSlot#trigger}
 
 ---
 
@@ -25258,7 +25258,7 @@ def put_cors(
 
 Specifies a list of origins that should be allowed to make cross-origin calls.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#allowed_origins LinuxWebAppSlot#allowed_origins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#allowed_origins LinuxWebAppSlot#allowed_origins}
 
 ---
 
@@ -25268,7 +25268,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Are credentials allowed in CORS requests? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#support_credentials LinuxWebAppSlot#support_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_web_app_slot#support_credentials LinuxWebAppSlot#support_credentials}
 
 ---
 

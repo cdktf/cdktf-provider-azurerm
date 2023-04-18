@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/private_link_service_endpoint_connections
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_link_service_endpoint_connections
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermPrivateLinkServiceEndpointConnectionsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service_endpoint_connections#id DataAzurermPrivateLinkServiceEndpointConnections#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_link_service_endpoint_connections#id DataAzurermPrivateLinkServiceEndpointConnections#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service_endpoint_connections#resource_group_name DataAzurermPrivateLinkServiceEndpointConnections#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_link_service_endpoint_connections#resource_group_name DataAzurermPrivateLinkServiceEndpointConnections#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service_endpoint_connections#service_id DataAzurermPrivateLinkServiceEndpointConnections#service_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_link_service_endpoint_connections#service_id DataAzurermPrivateLinkServiceEndpointConnections#service_id}
   */
   readonly serviceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service_endpoint_connections#timeouts DataAzurermPrivateLinkServiceEndpointConnections#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_link_service_endpoint_connections#timeouts DataAzurermPrivateLinkServiceEndpointConnections#timeouts}
   */
   readonly timeouts?: DataAzurermPrivateLinkServiceEndpointConnectionsTimeouts;
 }
@@ -125,12 +125,12 @@ export class DataAzurermPrivateLinkServiceEndpointConnectionsPrivateEndpointConn
 }
 export interface DataAzurermPrivateLinkServiceEndpointConnectionsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service_endpoint_connections#read DataAzurermPrivateLinkServiceEndpointConnections#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_link_service_endpoint_connections#read DataAzurermPrivateLinkServiceEndpointConnections#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermPrivateLinkServiceEndpointConnectionsTimeoutsToTerraform(struct?: DataAzurermPrivateLinkServiceEndpointConnectionsTimeoutsOutputReference | DataAzurermPrivateLinkServiceEndpointConnectionsTimeouts | cdktf.IResolvable): any {
+export function dataAzurermPrivateLinkServiceEndpointConnectionsTimeoutsToTerraform(struct?: DataAzurermPrivateLinkServiceEndpointConnectionsTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -149,7 +149,7 @@ export class DataAzurermPrivateLinkServiceEndpointConnectionsTimeoutsOutputRefer
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermPrivateLinkServiceEndpointConnectionsTimeouts | cdktf.IResolvable | undefined {
@@ -200,7 +200,7 @@ export class DataAzurermPrivateLinkServiceEndpointConnectionsTimeoutsOutputRefer
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service_endpoint_connections azurerm_private_link_service_endpoint_connections}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_link_service_endpoint_connections azurerm_private_link_service_endpoint_connections}
 */
 export class DataAzurermPrivateLinkServiceEndpointConnections extends cdktf.TerraformDataSource {
 
@@ -214,7 +214,7 @@ export class DataAzurermPrivateLinkServiceEndpointConnections extends cdktf.Terr
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service_endpoint_connections azurerm_private_link_service_endpoint_connections} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_link_service_endpoint_connections azurerm_private_link_service_endpoint_connections} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

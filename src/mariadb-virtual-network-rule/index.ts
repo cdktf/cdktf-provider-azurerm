@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/mariadb_virtual_network_rule
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mariadb_virtual_network_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,55 +8,55 @@ import * as cdktf from 'cdktf';
 
 export interface MariadbVirtualNetworkRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_virtual_network_rule#id MariadbVirtualNetworkRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mariadb_virtual_network_rule#id MariadbVirtualNetworkRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_virtual_network_rule#name MariadbVirtualNetworkRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mariadb_virtual_network_rule#name MariadbVirtualNetworkRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_virtual_network_rule#resource_group_name MariadbVirtualNetworkRule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mariadb_virtual_network_rule#resource_group_name MariadbVirtualNetworkRule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_virtual_network_rule#server_name MariadbVirtualNetworkRule#server_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mariadb_virtual_network_rule#server_name MariadbVirtualNetworkRule#server_name}
   */
   readonly serverName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_virtual_network_rule#subnet_id MariadbVirtualNetworkRule#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mariadb_virtual_network_rule#subnet_id MariadbVirtualNetworkRule#subnet_id}
   */
   readonly subnetId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_virtual_network_rule#timeouts MariadbVirtualNetworkRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mariadb_virtual_network_rule#timeouts MariadbVirtualNetworkRule#timeouts}
   */
   readonly timeouts?: MariadbVirtualNetworkRuleTimeouts;
 }
 export interface MariadbVirtualNetworkRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_virtual_network_rule#create MariadbVirtualNetworkRule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mariadb_virtual_network_rule#create MariadbVirtualNetworkRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_virtual_network_rule#delete MariadbVirtualNetworkRule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mariadb_virtual_network_rule#delete MariadbVirtualNetworkRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_virtual_network_rule#read MariadbVirtualNetworkRule#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mariadb_virtual_network_rule#read MariadbVirtualNetworkRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_virtual_network_rule#update MariadbVirtualNetworkRule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mariadb_virtual_network_rule#update MariadbVirtualNetworkRule#update}
   */
   readonly update?: string;
 }
 
-export function mariadbVirtualNetworkRuleTimeoutsToTerraform(struct?: MariadbVirtualNetworkRuleTimeoutsOutputReference | MariadbVirtualNetworkRuleTimeouts | cdktf.IResolvable): any {
+export function mariadbVirtualNetworkRuleTimeoutsToTerraform(struct?: MariadbVirtualNetworkRuleTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -78,7 +78,7 @@ export class MariadbVirtualNetworkRuleTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): MariadbVirtualNetworkRuleTimeouts | cdktf.IResolvable | undefined {
@@ -195,7 +195,7 @@ export class MariadbVirtualNetworkRuleTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_virtual_network_rule azurerm_mariadb_virtual_network_rule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mariadb_virtual_network_rule azurerm_mariadb_virtual_network_rule}
 */
 export class MariadbVirtualNetworkRule extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class MariadbVirtualNetworkRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_virtual_network_rule azurerm_mariadb_virtual_network_rule} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mariadb_virtual_network_rule azurerm_mariadb_virtual_network_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

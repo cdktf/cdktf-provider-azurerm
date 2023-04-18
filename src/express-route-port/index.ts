@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/express_route_port
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,76 +8,76 @@ import * as cdktf from 'cdktf';
 
 export interface ExpressRoutePortConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#bandwidth_in_gbps ExpressRoutePort#bandwidth_in_gbps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#bandwidth_in_gbps ExpressRoutePort#bandwidth_in_gbps}
   */
   readonly bandwidthInGbps: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#billing_type ExpressRoutePort#billing_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#billing_type ExpressRoutePort#billing_type}
   */
   readonly billingType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#encapsulation ExpressRoutePort#encapsulation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#encapsulation ExpressRoutePort#encapsulation}
   */
   readonly encapsulation: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#id ExpressRoutePort#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#id ExpressRoutePort#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#location ExpressRoutePort#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#location ExpressRoutePort#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#name ExpressRoutePort#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#name ExpressRoutePort#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#peering_location ExpressRoutePort#peering_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#peering_location ExpressRoutePort#peering_location}
   */
   readonly peeringLocation: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#resource_group_name ExpressRoutePort#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#resource_group_name ExpressRoutePort#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#tags ExpressRoutePort#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#tags ExpressRoutePort#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#identity ExpressRoutePort#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#identity ExpressRoutePort#identity}
   */
   readonly identity?: ExpressRoutePortIdentity;
   /**
   * link1 block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#link1 ExpressRoutePort#link1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#link1 ExpressRoutePort#link1}
   */
   readonly link1?: ExpressRoutePortLink1;
   /**
   * link2 block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#link2 ExpressRoutePort#link2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#link2 ExpressRoutePort#link2}
   */
   readonly link2?: ExpressRoutePortLink2;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#timeouts ExpressRoutePort#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#timeouts ExpressRoutePort#timeouts}
   */
   readonly timeouts?: ExpressRoutePortTimeouts;
 }
 export interface ExpressRoutePortIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#identity_ids ExpressRoutePort#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#identity_ids ExpressRoutePort#identity_ids}
   */
   readonly identityIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#type ExpressRoutePort#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#type ExpressRoutePort#type}
   */
   readonly type: string;
 }
@@ -159,19 +159,19 @@ export class ExpressRoutePortIdentityOutputReference extends cdktf.ComplexObject
 }
 export interface ExpressRoutePortLink1 {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#admin_enabled ExpressRoutePort#admin_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#admin_enabled ExpressRoutePort#admin_enabled}
   */
   readonly adminEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#macsec_cak_keyvault_secret_id ExpressRoutePort#macsec_cak_keyvault_secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#macsec_cak_keyvault_secret_id ExpressRoutePort#macsec_cak_keyvault_secret_id}
   */
   readonly macsecCakKeyvaultSecretId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#macsec_cipher ExpressRoutePort#macsec_cipher}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#macsec_cipher ExpressRoutePort#macsec_cipher}
   */
   readonly macsecCipher?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#macsec_ckn_keyvault_secret_id ExpressRoutePort#macsec_ckn_keyvault_secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#macsec_ckn_keyvault_secret_id ExpressRoutePort#macsec_ckn_keyvault_secret_id}
   */
   readonly macsecCknKeyvaultSecretId?: string;
 }
@@ -335,19 +335,19 @@ export class ExpressRoutePortLink1OutputReference extends cdktf.ComplexObject {
 }
 export interface ExpressRoutePortLink2 {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#admin_enabled ExpressRoutePort#admin_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#admin_enabled ExpressRoutePort#admin_enabled}
   */
   readonly adminEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#macsec_cak_keyvault_secret_id ExpressRoutePort#macsec_cak_keyvault_secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#macsec_cak_keyvault_secret_id ExpressRoutePort#macsec_cak_keyvault_secret_id}
   */
   readonly macsecCakKeyvaultSecretId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#macsec_cipher ExpressRoutePort#macsec_cipher}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#macsec_cipher ExpressRoutePort#macsec_cipher}
   */
   readonly macsecCipher?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#macsec_ckn_keyvault_secret_id ExpressRoutePort#macsec_ckn_keyvault_secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#macsec_ckn_keyvault_secret_id ExpressRoutePort#macsec_ckn_keyvault_secret_id}
   */
   readonly macsecCknKeyvaultSecretId?: string;
 }
@@ -511,24 +511,24 @@ export class ExpressRoutePortLink2OutputReference extends cdktf.ComplexObject {
 }
 export interface ExpressRoutePortTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#create ExpressRoutePort#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#create ExpressRoutePort#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#delete ExpressRoutePort#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#delete ExpressRoutePort#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#read ExpressRoutePort#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#read ExpressRoutePort#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#update ExpressRoutePort#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port#update ExpressRoutePort#update}
   */
   readonly update?: string;
 }
 
-export function expressRoutePortTimeoutsToTerraform(struct?: ExpressRoutePortTimeoutsOutputReference | ExpressRoutePortTimeouts | cdktf.IResolvable): any {
+export function expressRoutePortTimeoutsToTerraform(struct?: ExpressRoutePortTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -550,7 +550,7 @@ export class ExpressRoutePortTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ExpressRoutePortTimeouts | cdktf.IResolvable | undefined {
@@ -667,7 +667,7 @@ export class ExpressRoutePortTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port azurerm_express_route_port}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port azurerm_express_route_port}
 */
 export class ExpressRoutePort extends cdktf.TerraformResource {
 
@@ -681,7 +681,7 @@ export class ExpressRoutePort extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port azurerm_express_route_port} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/express_route_port azurerm_express_route_port} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

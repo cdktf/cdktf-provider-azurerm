@@ -1,6 +1,6 @@
 # `azurerm_dns_cname_record`
 
-Refer to the Terraform Registory for docs: [`azurerm_dns_cname_record`](https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record).
+Refer to the Terraform Registory for docs: [`azurerm_dns_cname_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record).
 
 # `dnsCnameRecord` Submodule <a name="`dnsCnameRecord` Submodule" id="@cdktf/provider-azurerm.dnsCnameRecord"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_dns_cname_record`](https://
 
 ### DnsCnameRecord <a name="DnsCnameRecord" id="@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record azurerm_dns_cname_record}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record azurerm_dns_cname_record}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer"></a>
 
@@ -19,6 +19,7 @@ DnsCnameRecord.Builder.create(Construct scope, java.lang.String id)
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -43,20 +44,20 @@ DnsCnameRecord.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#name DnsCnameRecord#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#resource_group_name DnsCnameRecord#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.ttl">ttl</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#ttl DnsCnameRecord#ttl}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.zoneName">zoneName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#zone_name DnsCnameRecord#zone_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#id DnsCnameRecord#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.record">record</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#record DnsCnameRecord#record}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#tags DnsCnameRecord#tags}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.targetResourceId">targetResourceId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#target_resource_id DnsCnameRecord#target_resource_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#name DnsCnameRecord#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#resource_group_name DnsCnameRecord#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.ttl">ttl</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#ttl DnsCnameRecord#ttl}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.zoneName">zoneName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#zone_name DnsCnameRecord#zone_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#id DnsCnameRecord#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.record">record</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#record DnsCnameRecord#record}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#tags DnsCnameRecord#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.targetResourceId">targetResourceId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#target_resource_id DnsCnameRecord#target_resource_id}. |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordTimeouts">DnsCnameRecordTimeouts</a></code> | timeouts block. |
 
 ---
@@ -87,7 +88,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -125,7 +126,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#name DnsCnameRecord#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#name DnsCnameRecord#name}.
 
 ---
 
@@ -133,7 +134,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#resource_group_name DnsCnameRecord#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#resource_group_name DnsCnameRecord#resource_group_name}.
 
 ---
 
@@ -141,7 +142,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.Number
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#ttl DnsCnameRecord#ttl}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#ttl DnsCnameRecord#ttl}.
 
 ---
 
@@ -149,7 +150,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#zone_name DnsCnameRecord#zone_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#zone_name DnsCnameRecord#zone_name}.
 
 ---
 
@@ -157,7 +158,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#id DnsCnameRecord#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#id DnsCnameRecord#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -168,7 +169,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#record DnsCnameRecord#record}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#record DnsCnameRecord#record}.
 
 ---
 
@@ -176,7 +177,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#tags DnsCnameRecord#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#tags DnsCnameRecord#tags}.
 
 ---
 
@@ -184,7 +185,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#target_resource_id DnsCnameRecord#target_resource_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#target_resource_id DnsCnameRecord#target_resource_id}.
 
 ---
 
@@ -194,7 +195,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#timeouts DnsCnameRecord#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#timeouts DnsCnameRecord#timeouts}
 
 ---
 
@@ -535,7 +536,7 @@ DnsCnameRecord.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -648,10 +649,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecord.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -926,6 +927,7 @@ DnsCnameRecordConfig.builder()
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -950,20 +952,20 @@ DnsCnameRecordConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#name DnsCnameRecord#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#resource_group_name DnsCnameRecord#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.ttl">ttl</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#ttl DnsCnameRecord#ttl}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.zoneName">zoneName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#zone_name DnsCnameRecord#zone_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#id DnsCnameRecord#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.record">record</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#record DnsCnameRecord#record}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#tags DnsCnameRecord#tags}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.targetResourceId">targetResourceId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#target_resource_id DnsCnameRecord#target_resource_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#name DnsCnameRecord#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#resource_group_name DnsCnameRecord#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.ttl">ttl</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#ttl DnsCnameRecord#ttl}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.zoneName">zoneName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#zone_name DnsCnameRecord#zone_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#id DnsCnameRecord#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.record">record</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#record DnsCnameRecord#record}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#tags DnsCnameRecord#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.targetResourceId">targetResourceId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#target_resource_id DnsCnameRecord#target_resource_id}. |
 | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordTimeouts">DnsCnameRecordTimeouts</a></code> | timeouts block. |
 
 ---
@@ -981,10 +983,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordConfig.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1046,7 +1048,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#name DnsCnameRecord#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#name DnsCnameRecord#name}.
 
 ---
 
@@ -1058,7 +1060,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#resource_group_name DnsCnameRecord#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#resource_group_name DnsCnameRecord#resource_group_name}.
 
 ---
 
@@ -1070,7 +1072,7 @@ public java.lang.Number getTtl();
 
 - *Type:* java.lang.Number
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#ttl DnsCnameRecord#ttl}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#ttl DnsCnameRecord#ttl}.
 
 ---
 
@@ -1082,7 +1084,7 @@ public java.lang.String getZoneName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#zone_name DnsCnameRecord#zone_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#zone_name DnsCnameRecord#zone_name}.
 
 ---
 
@@ -1094,7 +1096,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#id DnsCnameRecord#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#id DnsCnameRecord#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1109,7 +1111,7 @@ public java.lang.String getRecord();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#record DnsCnameRecord#record}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#record DnsCnameRecord#record}.
 
 ---
 
@@ -1121,7 +1123,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTags();
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#tags DnsCnameRecord#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#tags DnsCnameRecord#tags}.
 
 ---
 
@@ -1133,7 +1135,7 @@ public java.lang.String getTargetResourceId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#target_resource_id DnsCnameRecord#target_resource_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#target_resource_id DnsCnameRecord#target_resource_id}.
 
 ---
 
@@ -1147,7 +1149,7 @@ public DnsCnameRecordTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#timeouts DnsCnameRecord#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#timeouts DnsCnameRecord#timeouts}
 
 ---
 
@@ -1170,10 +1172,10 @@ DnsCnameRecordTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#create DnsCnameRecord#create}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#delete DnsCnameRecord#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#read DnsCnameRecord#read}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#update DnsCnameRecord#update}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#create DnsCnameRecord#create}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#delete DnsCnameRecord#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#read DnsCnameRecord#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsCnameRecord.DnsCnameRecordTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#update DnsCnameRecord#update}. |
 
 ---
 
@@ -1185,7 +1187,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#create DnsCnameRecord#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#create DnsCnameRecord#create}.
 
 ---
 
@@ -1197,7 +1199,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#delete DnsCnameRecord#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#delete DnsCnameRecord#delete}.
 
 ---
 
@@ -1209,7 +1211,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#read DnsCnameRecord#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#read DnsCnameRecord#read}.
 
 ---
 
@@ -1221,7 +1223,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record#update DnsCnameRecord#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dns_cname_record#update DnsCnameRecord#update}.
 
 ---
 

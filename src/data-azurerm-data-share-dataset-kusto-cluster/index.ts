@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share_dataset_kusto_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDataShareDatasetKustoClusterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster#id DataAzurermDataShareDatasetKustoCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share_dataset_kusto_cluster#id DataAzurermDataShareDatasetKustoCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster#name DataAzurermDataShareDatasetKustoCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share_dataset_kusto_cluster#name DataAzurermDataShareDatasetKustoCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster#share_id DataAzurermDataShareDatasetKustoCluster#share_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share_dataset_kusto_cluster#share_id DataAzurermDataShareDatasetKustoCluster#share_id}
   */
   readonly shareId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster#timeouts DataAzurermDataShareDatasetKustoCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share_dataset_kusto_cluster#timeouts DataAzurermDataShareDatasetKustoCluster#timeouts}
   */
   readonly timeouts?: DataAzurermDataShareDatasetKustoClusterTimeouts;
 }
 export interface DataAzurermDataShareDatasetKustoClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster#read DataAzurermDataShareDatasetKustoCluster#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share_dataset_kusto_cluster#read DataAzurermDataShareDatasetKustoCluster#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermDataShareDatasetKustoClusterTimeoutsToTerraform(struct?: DataAzurermDataShareDatasetKustoClusterTimeoutsOutputReference | DataAzurermDataShareDatasetKustoClusterTimeouts | cdktf.IResolvable): any {
+export function dataAzurermDataShareDatasetKustoClusterTimeoutsToTerraform(struct?: DataAzurermDataShareDatasetKustoClusterTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -55,7 +55,7 @@ export class DataAzurermDataShareDatasetKustoClusterTimeoutsOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermDataShareDatasetKustoClusterTimeouts | cdktf.IResolvable | undefined {
@@ -106,7 +106,7 @@ export class DataAzurermDataShareDatasetKustoClusterTimeoutsOutputReference exte
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster azurerm_data_share_dataset_kusto_cluster}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share_dataset_kusto_cluster azurerm_data_share_dataset_kusto_cluster}
 */
 export class DataAzurermDataShareDatasetKustoCluster extends cdktf.TerraformDataSource {
 
@@ -120,7 +120,7 @@ export class DataAzurermDataShareDatasetKustoCluster extends cdktf.TerraformData
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster azurerm_data_share_dataset_kusto_cluster} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/data_share_dataset_kusto_cluster azurerm_data_share_dataset_kusto_cluster} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

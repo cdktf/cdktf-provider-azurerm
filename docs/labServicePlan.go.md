@@ -1,6 +1,6 @@
 # `azurerm_lab_service_plan`
 
-Refer to the Terraform Registory for docs: [`azurerm_lab_service_plan`](https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan).
+Refer to the Terraform Registory for docs: [`azurerm_lab_service_plan`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan).
 
 # `labServicePlan` Submodule <a name="`labServicePlan` Submodule" id="@cdktf/provider-azurerm.labServicePlan"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_lab_service_plan`](https://
 
 ### LabServicePlan <a name="LabServicePlan" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlan"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan azurerm_lab_service_plan}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan azurerm_lab_service_plan}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/labserviceplan"
 
 labserviceplan.NewLabServicePlan(scope Construct, id *string, config LabServicePlanConfig) LabServicePlan
 ```
@@ -378,7 +378,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlan.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/labserviceplan"
 
 labserviceplan.LabServicePlan_IsConstruct(x interface{}) *bool
 ```
@@ -410,7 +410,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlan.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/labserviceplan"
 
 labserviceplan.LabServicePlan_IsTerraformElement(x interface{}) *bool
 ```
@@ -424,7 +424,7 @@ labserviceplan.LabServicePlan_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlan.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/labserviceplan"
 
 labserviceplan.LabServicePlan_IsTerraformResource(x interface{}) *bool
 ```
@@ -447,7 +447,7 @@ labserviceplan.LabServicePlan_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlan.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlan.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlan.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlan.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlan.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlan.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlan.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlan.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -565,10 +565,10 @@ func Connection() interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlan.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -887,11 +887,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/labserviceplan"
 
 &labserviceplan.LabServicePlanConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -901,14 +901,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	DefaultAutoShutdown: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.labServicePlan.LabServicePlanDefaultAutoShutdown,
-	DefaultConnection: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.labServicePlan.LabServicePlanDefaultConnection,
+	DefaultAutoShutdown: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.labServicePlan.LabServicePlanDefaultAutoShutdown,
+	DefaultConnection: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.labServicePlan.LabServicePlanDefaultConnection,
 	DefaultNetworkSubnetId: *string,
 	Id: *string,
 	SharedGalleryId: *string,
-	Support: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.labServicePlan.LabServicePlanSupport,
+	Support: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.labServicePlan.LabServicePlanSupport,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.labServicePlan.LabServicePlanTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.labServicePlan.LabServicePlanTimeouts,
 }
 ```
 
@@ -917,23 +917,23 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.allowedRegions">AllowedRegions</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#allowed_regions LabServicePlan#allowed_regions}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#location LabServicePlan#location}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#name LabServicePlan#name}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#resource_group_name LabServicePlan#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.allowedRegions">AllowedRegions</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#allowed_regions LabServicePlan#allowed_regions}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#location LabServicePlan#location}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#name LabServicePlan#name}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#resource_group_name LabServicePlan#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.defaultAutoShutdown">DefaultAutoShutdown</a></code> | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultAutoShutdown">LabServicePlanDefaultAutoShutdown</a></code> | default_auto_shutdown block. |
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.defaultConnection">DefaultConnection</a></code> | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultConnection">LabServicePlanDefaultConnection</a></code> | default_connection block. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.defaultNetworkSubnetId">DefaultNetworkSubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#default_network_subnet_id LabServicePlan#default_network_subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#id LabServicePlan#id}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.sharedGalleryId">SharedGalleryId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#shared_gallery_id LabServicePlan#shared_gallery_id}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.defaultNetworkSubnetId">DefaultNetworkSubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#default_network_subnet_id LabServicePlan#default_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#id LabServicePlan#id}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.sharedGalleryId">SharedGalleryId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#shared_gallery_id LabServicePlan#shared_gallery_id}. |
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.support">Support</a></code> | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanSupport">LabServicePlanSupport</a></code> | support block. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#tags LabServicePlan#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#tags LabServicePlan#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanTimeouts">LabServicePlanTimeouts</a></code> | timeouts block. |
 
 ---
@@ -951,10 +951,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -1016,7 +1016,7 @@ AllowedRegions *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#allowed_regions LabServicePlan#allowed_regions}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#allowed_regions LabServicePlan#allowed_regions}.
 
 ---
 
@@ -1028,7 +1028,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#location LabServicePlan#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#location LabServicePlan#location}.
 
 ---
 
@@ -1040,7 +1040,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#name LabServicePlan#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#name LabServicePlan#name}.
 
 ---
 
@@ -1052,7 +1052,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#resource_group_name LabServicePlan#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#resource_group_name LabServicePlan#resource_group_name}.
 
 ---
 
@@ -1066,7 +1066,7 @@ DefaultAutoShutdown LabServicePlanDefaultAutoShutdown
 
 default_auto_shutdown block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#default_auto_shutdown LabServicePlan#default_auto_shutdown}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#default_auto_shutdown LabServicePlan#default_auto_shutdown}
 
 ---
 
@@ -1080,7 +1080,7 @@ DefaultConnection LabServicePlanDefaultConnection
 
 default_connection block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#default_connection LabServicePlan#default_connection}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#default_connection LabServicePlan#default_connection}
 
 ---
 
@@ -1092,7 +1092,7 @@ DefaultNetworkSubnetId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#default_network_subnet_id LabServicePlan#default_network_subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#default_network_subnet_id LabServicePlan#default_network_subnet_id}.
 
 ---
 
@@ -1104,7 +1104,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#id LabServicePlan#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#id LabServicePlan#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1119,7 +1119,7 @@ SharedGalleryId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#shared_gallery_id LabServicePlan#shared_gallery_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#shared_gallery_id LabServicePlan#shared_gallery_id}.
 
 ---
 
@@ -1133,7 +1133,7 @@ Support LabServicePlanSupport
 
 support block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#support LabServicePlan#support}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#support LabServicePlan#support}
 
 ---
 
@@ -1145,7 +1145,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#tags LabServicePlan#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#tags LabServicePlan#tags}.
 
 ---
 
@@ -1159,7 +1159,7 @@ Timeouts LabServicePlanTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#timeouts LabServicePlan#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#timeouts LabServicePlan#timeouts}
 
 ---
 
@@ -1168,7 +1168,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultAutoShutdown.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/labserviceplan"
 
 &labserviceplan.LabServicePlanDefaultAutoShutdown {
 	DisconnectDelay: *string,
@@ -1182,10 +1182,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultAutoShutdown.property.disconnectDelay">DisconnectDelay</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#disconnect_delay LabServicePlan#disconnect_delay}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultAutoShutdown.property.idleDelay">IdleDelay</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#idle_delay LabServicePlan#idle_delay}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultAutoShutdown.property.noConnectDelay">NoConnectDelay</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#no_connect_delay LabServicePlan#no_connect_delay}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultAutoShutdown.property.shutdownOnIdle">ShutdownOnIdle</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#shutdown_on_idle LabServicePlan#shutdown_on_idle}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultAutoShutdown.property.disconnectDelay">DisconnectDelay</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#disconnect_delay LabServicePlan#disconnect_delay}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultAutoShutdown.property.idleDelay">IdleDelay</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#idle_delay LabServicePlan#idle_delay}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultAutoShutdown.property.noConnectDelay">NoConnectDelay</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#no_connect_delay LabServicePlan#no_connect_delay}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultAutoShutdown.property.shutdownOnIdle">ShutdownOnIdle</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#shutdown_on_idle LabServicePlan#shutdown_on_idle}. |
 
 ---
 
@@ -1197,7 +1197,7 @@ DisconnectDelay *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#disconnect_delay LabServicePlan#disconnect_delay}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#disconnect_delay LabServicePlan#disconnect_delay}.
 
 ---
 
@@ -1209,7 +1209,7 @@ IdleDelay *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#idle_delay LabServicePlan#idle_delay}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#idle_delay LabServicePlan#idle_delay}.
 
 ---
 
@@ -1221,7 +1221,7 @@ NoConnectDelay *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#no_connect_delay LabServicePlan#no_connect_delay}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#no_connect_delay LabServicePlan#no_connect_delay}.
 
 ---
 
@@ -1233,7 +1233,7 @@ ShutdownOnIdle *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#shutdown_on_idle LabServicePlan#shutdown_on_idle}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#shutdown_on_idle LabServicePlan#shutdown_on_idle}.
 
 ---
 
@@ -1242,7 +1242,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/labserviceplan"
 
 &labserviceplan.LabServicePlanDefaultConnection {
 	ClientRdpAccess: *string,
@@ -1256,10 +1256,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultConnection.property.clientRdpAccess">ClientRdpAccess</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#client_rdp_access LabServicePlan#client_rdp_access}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultConnection.property.clientSshAccess">ClientSshAccess</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#client_ssh_access LabServicePlan#client_ssh_access}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultConnection.property.webRdpAccess">WebRdpAccess</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#web_rdp_access LabServicePlan#web_rdp_access}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultConnection.property.webSshAccess">WebSshAccess</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#web_ssh_access LabServicePlan#web_ssh_access}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultConnection.property.clientRdpAccess">ClientRdpAccess</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#client_rdp_access LabServicePlan#client_rdp_access}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultConnection.property.clientSshAccess">ClientSshAccess</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#client_ssh_access LabServicePlan#client_ssh_access}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultConnection.property.webRdpAccess">WebRdpAccess</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#web_rdp_access LabServicePlan#web_rdp_access}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultConnection.property.webSshAccess">WebSshAccess</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#web_ssh_access LabServicePlan#web_ssh_access}. |
 
 ---
 
@@ -1271,7 +1271,7 @@ ClientRdpAccess *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#client_rdp_access LabServicePlan#client_rdp_access}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#client_rdp_access LabServicePlan#client_rdp_access}.
 
 ---
 
@@ -1283,7 +1283,7 @@ ClientSshAccess *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#client_ssh_access LabServicePlan#client_ssh_access}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#client_ssh_access LabServicePlan#client_ssh_access}.
 
 ---
 
@@ -1295,7 +1295,7 @@ WebRdpAccess *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#web_rdp_access LabServicePlan#web_rdp_access}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#web_rdp_access LabServicePlan#web_rdp_access}.
 
 ---
 
@@ -1307,7 +1307,7 @@ WebSshAccess *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#web_ssh_access LabServicePlan#web_ssh_access}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#web_ssh_access LabServicePlan#web_ssh_access}.
 
 ---
 
@@ -1316,7 +1316,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanSupport.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/labserviceplan"
 
 &labserviceplan.LabServicePlanSupport {
 	Email: *string,
@@ -1330,10 +1330,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanSupport.property.email">Email</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#email LabServicePlan#email}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanSupport.property.instructions">Instructions</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#instructions LabServicePlan#instructions}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanSupport.property.phone">Phone</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#phone LabServicePlan#phone}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanSupport.property.url">Url</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#url LabServicePlan#url}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanSupport.property.email">Email</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#email LabServicePlan#email}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanSupport.property.instructions">Instructions</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#instructions LabServicePlan#instructions}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanSupport.property.phone">Phone</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#phone LabServicePlan#phone}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanSupport.property.url">Url</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#url LabServicePlan#url}. |
 
 ---
 
@@ -1345,7 +1345,7 @@ Email *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#email LabServicePlan#email}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#email LabServicePlan#email}.
 
 ---
 
@@ -1357,7 +1357,7 @@ Instructions *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#instructions LabServicePlan#instructions}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#instructions LabServicePlan#instructions}.
 
 ---
 
@@ -1369,7 +1369,7 @@ Phone *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#phone LabServicePlan#phone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#phone LabServicePlan#phone}.
 
 ---
 
@@ -1381,7 +1381,7 @@ Url *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#url LabServicePlan#url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#url LabServicePlan#url}.
 
 ---
 
@@ -1390,7 +1390,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/labserviceplan"
 
 &labserviceplan.LabServicePlanTimeouts {
 	Create: *string,
@@ -1404,10 +1404,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#create LabServicePlan#create}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#delete LabServicePlan#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#read LabServicePlan#read}. |
-| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#update LabServicePlan#update}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#create LabServicePlan#create}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#delete LabServicePlan#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#read LabServicePlan#read}. |
+| <code><a href="#@cdktf/provider-azurerm.labServicePlan.LabServicePlanTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#update LabServicePlan#update}. |
 
 ---
 
@@ -1419,7 +1419,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#create LabServicePlan#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#create LabServicePlan#create}.
 
 ---
 
@@ -1431,7 +1431,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#delete LabServicePlan#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#delete LabServicePlan#delete}.
 
 ---
 
@@ -1443,7 +1443,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#read LabServicePlan#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#read LabServicePlan#read}.
 
 ---
 
@@ -1455,7 +1455,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan#update LabServicePlan#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/lab_service_plan#update LabServicePlan#update}.
 
 ---
 
@@ -1466,7 +1466,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultAutoShutdownOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/labserviceplan"
 
 labserviceplan.NewLabServicePlanDefaultAutoShutdownOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServicePlanDefaultAutoShutdownOutputReference
 ```
@@ -1831,7 +1831,7 @@ func InternalValue() LabServicePlanDefaultAutoShutdown
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanDefaultConnectionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/labserviceplan"
 
 labserviceplan.NewLabServicePlanDefaultConnectionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServicePlanDefaultConnectionOutputReference
 ```
@@ -2196,7 +2196,7 @@ func InternalValue() LabServicePlanDefaultConnection
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanSupportOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/labserviceplan"
 
 labserviceplan.NewLabServicePlanSupportOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServicePlanSupportOutputReference
 ```
@@ -2561,7 +2561,7 @@ func InternalValue() LabServicePlanSupport
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServicePlan.LabServicePlanTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/labserviceplan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/labserviceplan"
 
 labserviceplan.NewLabServicePlanTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServicePlanTimeoutsOutputReference
 ```

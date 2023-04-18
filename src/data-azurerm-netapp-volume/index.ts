@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/netapp_volume
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/netapp_volume
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,36 +8,36 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermNetappVolumeConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_volume#account_name DataAzurermNetappVolume#account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/netapp_volume#account_name DataAzurermNetappVolume#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_volume#id DataAzurermNetappVolume#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/netapp_volume#id DataAzurermNetappVolume#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_volume#name DataAzurermNetappVolume#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/netapp_volume#name DataAzurermNetappVolume#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_volume#pool_name DataAzurermNetappVolume#pool_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/netapp_volume#pool_name DataAzurermNetappVolume#pool_name}
   */
   readonly poolName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_volume#resource_group_name DataAzurermNetappVolume#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/netapp_volume#resource_group_name DataAzurermNetappVolume#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_volume#security_style DataAzurermNetappVolume#security_style}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/netapp_volume#security_style DataAzurermNetappVolume#security_style}
   */
   readonly securityStyle?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_volume#timeouts DataAzurermNetappVolume#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/netapp_volume#timeouts DataAzurermNetappVolume#timeouts}
   */
   readonly timeouts?: DataAzurermNetappVolumeTimeouts;
 }
@@ -122,12 +122,12 @@ export class DataAzurermNetappVolumeDataProtectionReplicationList extends cdktf.
 }
 export interface DataAzurermNetappVolumeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_volume#read DataAzurermNetappVolume#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/netapp_volume#read DataAzurermNetappVolume#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermNetappVolumeTimeoutsToTerraform(struct?: DataAzurermNetappVolumeTimeoutsOutputReference | DataAzurermNetappVolumeTimeouts | cdktf.IResolvable): any {
+export function dataAzurermNetappVolumeTimeoutsToTerraform(struct?: DataAzurermNetappVolumeTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -146,7 +146,7 @@ export class DataAzurermNetappVolumeTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermNetappVolumeTimeouts | cdktf.IResolvable | undefined {
@@ -197,7 +197,7 @@ export class DataAzurermNetappVolumeTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_volume azurerm_netapp_volume}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/netapp_volume azurerm_netapp_volume}
 */
 export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
 
@@ -211,7 +211,7 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_volume azurerm_netapp_volume} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/netapp_volume azurerm_netapp_volume} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

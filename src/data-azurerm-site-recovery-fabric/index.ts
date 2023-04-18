@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/site_recovery_fabric
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_fabric
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSiteRecoveryFabricConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/site_recovery_fabric#id DataAzurermSiteRecoveryFabric#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_fabric#id DataAzurermSiteRecoveryFabric#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/site_recovery_fabric#name DataAzurermSiteRecoveryFabric#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_fabric#name DataAzurermSiteRecoveryFabric#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/site_recovery_fabric#recovery_vault_name DataAzurermSiteRecoveryFabric#recovery_vault_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_fabric#recovery_vault_name DataAzurermSiteRecoveryFabric#recovery_vault_name}
   */
   readonly recoveryVaultName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/site_recovery_fabric#resource_group_name DataAzurermSiteRecoveryFabric#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_fabric#resource_group_name DataAzurermSiteRecoveryFabric#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/site_recovery_fabric#timeouts DataAzurermSiteRecoveryFabric#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_fabric#timeouts DataAzurermSiteRecoveryFabric#timeouts}
   */
   readonly timeouts?: DataAzurermSiteRecoveryFabricTimeouts;
 }
 export interface DataAzurermSiteRecoveryFabricTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/site_recovery_fabric#read DataAzurermSiteRecoveryFabric#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_fabric#read DataAzurermSiteRecoveryFabric#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermSiteRecoveryFabricTimeoutsToTerraform(struct?: DataAzurermSiteRecoveryFabricTimeoutsOutputReference | DataAzurermSiteRecoveryFabricTimeouts | cdktf.IResolvable): any {
+export function dataAzurermSiteRecoveryFabricTimeoutsToTerraform(struct?: DataAzurermSiteRecoveryFabricTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -59,7 +59,7 @@ export class DataAzurermSiteRecoveryFabricTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermSiteRecoveryFabricTimeouts | cdktf.IResolvable | undefined {
@@ -110,7 +110,7 @@ export class DataAzurermSiteRecoveryFabricTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/site_recovery_fabric azurerm_site_recovery_fabric}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_fabric azurerm_site_recovery_fabric}
 */
 export class DataAzurermSiteRecoveryFabric extends cdktf.TerraformDataSource {
 
@@ -124,7 +124,7 @@ export class DataAzurermSiteRecoveryFabric extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/site_recovery_fabric azurerm_site_recovery_fabric} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/site_recovery_fabric azurerm_site_recovery_fabric} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

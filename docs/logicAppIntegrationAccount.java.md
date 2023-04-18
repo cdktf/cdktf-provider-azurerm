@@ -1,6 +1,6 @@
 # `azurerm_logic_app_integration_account`
 
-Refer to the Terraform Registory for docs: [`azurerm_logic_app_integration_account`](https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account).
+Refer to the Terraform Registory for docs: [`azurerm_logic_app_integration_account`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account).
 
 # `logicAppIntegrationAccount` Submodule <a name="`logicAppIntegrationAccount` Submodule" id="@cdktf/provider-azurerm.logicAppIntegrationAccount"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_logic_app_integration_accou
 
 ### LogicAppIntegrationAccount <a name="LogicAppIntegrationAccount" id="@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account azurerm_logic_app_integration_account}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account azurerm_logic_app_integration_account}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer"></a>
 
@@ -19,6 +19,7 @@ LogicAppIntegrationAccount.Builder.create(Construct scope, java.lang.String id)
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -42,19 +43,19 @@ LogicAppIntegrationAccount.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#location LogicAppIntegrationAccount#location}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#name LogicAppIntegrationAccount#name}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#resource_group_name LogicAppIntegrationAccount#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.skuName">skuName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#sku_name LogicAppIntegrationAccount#sku_name}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#id LogicAppIntegrationAccount#id}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.integrationServiceEnvironmentId">integrationServiceEnvironmentId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#integration_service_environment_id LogicAppIntegrationAccount#integration_service_environment_id}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#tags LogicAppIntegrationAccount#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#location LogicAppIntegrationAccount#location}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#name LogicAppIntegrationAccount#name}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#resource_group_name LogicAppIntegrationAccount#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.skuName">skuName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#sku_name LogicAppIntegrationAccount#sku_name}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#id LogicAppIntegrationAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.integrationServiceEnvironmentId">integrationServiceEnvironmentId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#integration_service_environment_id LogicAppIntegrationAccount#integration_service_environment_id}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#tags LogicAppIntegrationAccount#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountTimeouts">LogicAppIntegrationAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -85,7 +86,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -123,7 +124,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#location LogicAppIntegrationAccount#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#location LogicAppIntegrationAccount#location}.
 
 ---
 
@@ -131,7 +132,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#name LogicAppIntegrationAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#name LogicAppIntegrationAccount#name}.
 
 ---
 
@@ -139,7 +140,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#resource_group_name LogicAppIntegrationAccount#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#resource_group_name LogicAppIntegrationAccount#resource_group_name}.
 
 ---
 
@@ -147,7 +148,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#sku_name LogicAppIntegrationAccount#sku_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#sku_name LogicAppIntegrationAccount#sku_name}.
 
 ---
 
@@ -155,7 +156,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#id LogicAppIntegrationAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#id LogicAppIntegrationAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -166,7 +167,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#integration_service_environment_id LogicAppIntegrationAccount#integration_service_environment_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#integration_service_environment_id LogicAppIntegrationAccount#integration_service_environment_id}.
 
 ---
 
@@ -174,7 +175,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#tags LogicAppIntegrationAccount#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#tags LogicAppIntegrationAccount#tags}.
 
 ---
 
@@ -184,7 +185,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#timeouts LogicAppIntegrationAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#timeouts LogicAppIntegrationAccount#timeouts}
 
 ---
 
@@ -518,7 +519,7 @@ LogicAppIntegrationAccount.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -628,10 +629,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccount.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -876,6 +877,7 @@ LogicAppIntegrationAccountConfig.builder()
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -899,19 +901,19 @@ LogicAppIntegrationAccountConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#location LogicAppIntegrationAccount#location}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#name LogicAppIntegrationAccount#name}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#resource_group_name LogicAppIntegrationAccount#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.skuName">skuName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#sku_name LogicAppIntegrationAccount#sku_name}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#id LogicAppIntegrationAccount#id}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.integrationServiceEnvironmentId">integrationServiceEnvironmentId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#integration_service_environment_id LogicAppIntegrationAccount#integration_service_environment_id}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#tags LogicAppIntegrationAccount#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#location LogicAppIntegrationAccount#location}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#name LogicAppIntegrationAccount#name}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#resource_group_name LogicAppIntegrationAccount#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.skuName">skuName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#sku_name LogicAppIntegrationAccount#sku_name}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#id LogicAppIntegrationAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.integrationServiceEnvironmentId">integrationServiceEnvironmentId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#integration_service_environment_id LogicAppIntegrationAccount#integration_service_environment_id}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#tags LogicAppIntegrationAccount#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountTimeouts">LogicAppIntegrationAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -929,10 +931,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountConfig.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -994,7 +996,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#location LogicAppIntegrationAccount#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#location LogicAppIntegrationAccount#location}.
 
 ---
 
@@ -1006,7 +1008,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#name LogicAppIntegrationAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#name LogicAppIntegrationAccount#name}.
 
 ---
 
@@ -1018,7 +1020,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#resource_group_name LogicAppIntegrationAccount#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#resource_group_name LogicAppIntegrationAccount#resource_group_name}.
 
 ---
 
@@ -1030,7 +1032,7 @@ public java.lang.String getSkuName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#sku_name LogicAppIntegrationAccount#sku_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#sku_name LogicAppIntegrationAccount#sku_name}.
 
 ---
 
@@ -1042,7 +1044,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#id LogicAppIntegrationAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#id LogicAppIntegrationAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1057,7 +1059,7 @@ public java.lang.String getIntegrationServiceEnvironmentId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#integration_service_environment_id LogicAppIntegrationAccount#integration_service_environment_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#integration_service_environment_id LogicAppIntegrationAccount#integration_service_environment_id}.
 
 ---
 
@@ -1069,7 +1071,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTags();
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#tags LogicAppIntegrationAccount#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#tags LogicAppIntegrationAccount#tags}.
 
 ---
 
@@ -1083,7 +1085,7 @@ public LogicAppIntegrationAccountTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#timeouts LogicAppIntegrationAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#timeouts LogicAppIntegrationAccount#timeouts}
 
 ---
 
@@ -1106,10 +1108,10 @@ LogicAppIntegrationAccountTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#create LogicAppIntegrationAccount#create}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#delete LogicAppIntegrationAccount#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#read LogicAppIntegrationAccount#read}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#update LogicAppIntegrationAccount#update}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#create LogicAppIntegrationAccount#create}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#delete LogicAppIntegrationAccount#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#read LogicAppIntegrationAccount#read}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccount.LogicAppIntegrationAccountTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#update LogicAppIntegrationAccount#update}. |
 
 ---
 
@@ -1121,7 +1123,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#create LogicAppIntegrationAccount#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#create LogicAppIntegrationAccount#create}.
 
 ---
 
@@ -1133,7 +1135,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#delete LogicAppIntegrationAccount#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#delete LogicAppIntegrationAccount#delete}.
 
 ---
 
@@ -1145,7 +1147,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#read LogicAppIntegrationAccount#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#read LogicAppIntegrationAccount#read}.
 
 ---
 
@@ -1157,7 +1159,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account#update LogicAppIntegrationAccount#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/logic_app_integration_account#update LogicAppIntegrationAccount#update}.
 
 ---
 

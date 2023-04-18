@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_database
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mysql_flexible_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,59 +8,59 @@ import * as cdktf from 'cdktf';
 
 export interface MysqlFlexibleDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_database#charset MysqlFlexibleDatabase#charset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mysql_flexible_database#charset MysqlFlexibleDatabase#charset}
   */
   readonly charset: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_database#collation MysqlFlexibleDatabase#collation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mysql_flexible_database#collation MysqlFlexibleDatabase#collation}
   */
   readonly collation: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_database#id MysqlFlexibleDatabase#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mysql_flexible_database#id MysqlFlexibleDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_database#name MysqlFlexibleDatabase#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mysql_flexible_database#name MysqlFlexibleDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_database#resource_group_name MysqlFlexibleDatabase#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mysql_flexible_database#resource_group_name MysqlFlexibleDatabase#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_database#server_name MysqlFlexibleDatabase#server_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mysql_flexible_database#server_name MysqlFlexibleDatabase#server_name}
   */
   readonly serverName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_database#timeouts MysqlFlexibleDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mysql_flexible_database#timeouts MysqlFlexibleDatabase#timeouts}
   */
   readonly timeouts?: MysqlFlexibleDatabaseTimeouts;
 }
 export interface MysqlFlexibleDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_database#create MysqlFlexibleDatabase#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mysql_flexible_database#create MysqlFlexibleDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_database#delete MysqlFlexibleDatabase#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mysql_flexible_database#delete MysqlFlexibleDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_database#read MysqlFlexibleDatabase#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mysql_flexible_database#read MysqlFlexibleDatabase#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_database#update MysqlFlexibleDatabase#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mysql_flexible_database#update MysqlFlexibleDatabase#update}
   */
   readonly update?: string;
 }
 
-export function mysqlFlexibleDatabaseTimeoutsToTerraform(struct?: MysqlFlexibleDatabaseTimeoutsOutputReference | MysqlFlexibleDatabaseTimeouts | cdktf.IResolvable): any {
+export function mysqlFlexibleDatabaseTimeoutsToTerraform(struct?: MysqlFlexibleDatabaseTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -82,7 +82,7 @@ export class MysqlFlexibleDatabaseTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): MysqlFlexibleDatabaseTimeouts | cdktf.IResolvable | undefined {
@@ -199,7 +199,7 @@ export class MysqlFlexibleDatabaseTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_database azurerm_mysql_flexible_database}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mysql_flexible_database azurerm_mysql_flexible_database}
 */
 export class MysqlFlexibleDatabase extends cdktf.TerraformResource {
 
@@ -213,7 +213,7 @@ export class MysqlFlexibleDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_database azurerm_mysql_flexible_database} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mysql_flexible_database azurerm_mysql_flexible_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

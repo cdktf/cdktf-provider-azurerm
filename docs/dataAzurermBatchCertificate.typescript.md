@@ -1,6 +1,6 @@
 # `data_azurerm_batch_certificate`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_batch_certificate`](https://www.terraform.io/docs/providers/azurerm/d/batch_certificate).
+Refer to the Terraform Registory for docs: [`data_azurerm_batch_certificate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/batch_certificate).
 
 # `dataAzurermBatchCertificate` Submodule <a name="`dataAzurermBatchCertificate` Submodule" id="@cdktf/provider-azurerm.dataAzurermBatchCertificate"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_batch_certificate`](ht
 
 ### DataAzurermBatchCertificate <a name="DataAzurermBatchCertificate" id="@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificate"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate azurerm_batch_certificate}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/batch_certificate azurerm_batch_certificate}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificate.Initializer"></a>
 
@@ -365,7 +365,7 @@ dataAzurermBatchCertificate.DataAzurermBatchCertificate.isTerraformDataSource(x:
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificate.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificate.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificate.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificate.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificate.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificate.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificate.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificate.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -462,10 +462,10 @@ public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificate.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -684,16 +684,16 @@ const dataAzurermBatchCertificateConfig: dataAzurermBatchCertificate.DataAzurerm
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.accountName">accountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate#account_name DataAzurermBatchCertificate#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate#name DataAzurermBatchCertificate#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate#resource_group_name DataAzurermBatchCertificate#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate#id DataAzurermBatchCertificate#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.accountName">accountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/batch_certificate#account_name DataAzurermBatchCertificate#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/batch_certificate#name DataAzurermBatchCertificate#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/batch_certificate#resource_group_name DataAzurermBatchCertificate#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/batch_certificate#id DataAzurermBatchCertificate#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateTimeouts">DataAzurermBatchCertificateTimeouts</a></code> | timeouts block. |
 
 ---
@@ -711,10 +711,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateConfig.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -776,7 +776,7 @@ public readonly accountName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate#account_name DataAzurermBatchCertificate#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/batch_certificate#account_name DataAzurermBatchCertificate#account_name}.
 
 ---
 
@@ -788,7 +788,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate#name DataAzurermBatchCertificate#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/batch_certificate#name DataAzurermBatchCertificate#name}.
 
 ---
 
@@ -800,7 +800,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate#resource_group_name DataAzurermBatchCertificate#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/batch_certificate#resource_group_name DataAzurermBatchCertificate#resource_group_name}.
 
 ---
 
@@ -812,7 +812,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate#id DataAzurermBatchCertificate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/batch_certificate#id DataAzurermBatchCertificate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -829,7 +829,7 @@ public readonly timeouts: DataAzurermBatchCertificateTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate#timeouts DataAzurermBatchCertificate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/batch_certificate#timeouts DataAzurermBatchCertificate#timeouts}
 
 ---
 
@@ -847,7 +847,7 @@ const dataAzurermBatchCertificateTimeouts: dataAzurermBatchCertificate.DataAzure
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate#read DataAzurermBatchCertificate#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchCertificate.DataAzurermBatchCertificateTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/batch_certificate#read DataAzurermBatchCertificate#read}. |
 
 ---
 
@@ -859,7 +859,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate#read DataAzurermBatchCertificate#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/batch_certificate#read DataAzurermBatchCertificate#read}.
 
 ---
 

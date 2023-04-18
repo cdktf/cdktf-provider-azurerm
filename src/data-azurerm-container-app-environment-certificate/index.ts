@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/container_app_environment_certificate
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_app_environment_certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,11 +10,11 @@ export interface DataAzurermContainerAppEnvironmentCertificateConfig extends cdk
   /**
   * The Container App Managed Environment ID to configure this Certificate on.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_app_environment_certificate#container_app_environment_id DataAzurermContainerAppEnvironmentCertificate#container_app_environment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_app_environment_certificate#container_app_environment_id DataAzurermContainerAppEnvironmentCertificate#container_app_environment_id}
   */
   readonly containerAppEnvironmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_app_environment_certificate#id DataAzurermContainerAppEnvironmentCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_app_environment_certificate#id DataAzurermContainerAppEnvironmentCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,24 +23,24 @@ export interface DataAzurermContainerAppEnvironmentCertificateConfig extends cdk
   /**
   * The name of the Container Apps Certificate.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_app_environment_certificate#name DataAzurermContainerAppEnvironmentCertificate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_app_environment_certificate#name DataAzurermContainerAppEnvironmentCertificate#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_app_environment_certificate#timeouts DataAzurermContainerAppEnvironmentCertificate#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_app_environment_certificate#timeouts DataAzurermContainerAppEnvironmentCertificate#timeouts}
   */
   readonly timeouts?: DataAzurermContainerAppEnvironmentCertificateTimeouts;
 }
 export interface DataAzurermContainerAppEnvironmentCertificateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_app_environment_certificate#read DataAzurermContainerAppEnvironmentCertificate#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_app_environment_certificate#read DataAzurermContainerAppEnvironmentCertificate#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermContainerAppEnvironmentCertificateTimeoutsToTerraform(struct?: DataAzurermContainerAppEnvironmentCertificateTimeoutsOutputReference | DataAzurermContainerAppEnvironmentCertificateTimeouts | cdktf.IResolvable): any {
+export function dataAzurermContainerAppEnvironmentCertificateTimeoutsToTerraform(struct?: DataAzurermContainerAppEnvironmentCertificateTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -59,7 +59,7 @@ export class DataAzurermContainerAppEnvironmentCertificateTimeoutsOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermContainerAppEnvironmentCertificateTimeouts | cdktf.IResolvable | undefined {
@@ -110,7 +110,7 @@ export class DataAzurermContainerAppEnvironmentCertificateTimeoutsOutputReferenc
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/container_app_environment_certificate azurerm_container_app_environment_certificate}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_app_environment_certificate azurerm_container_app_environment_certificate}
 */
 export class DataAzurermContainerAppEnvironmentCertificate extends cdktf.TerraformDataSource {
 
@@ -124,7 +124,7 @@ export class DataAzurermContainerAppEnvironmentCertificate extends cdktf.Terrafo
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/container_app_environment_certificate azurerm_container_app_environment_certificate} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_app_environment_certificate azurerm_container_app_environment_certificate} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,6 +1,6 @@
 # `data_azurerm_postgresql_server`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_postgresql_server`](https://www.terraform.io/docs/providers/azurerm/d/postgresql_server).
+Refer to the Terraform Registory for docs: [`data_azurerm_postgresql_server`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/postgresql_server).
 
 # `dataAzurermPostgresqlServer` Submodule <a name="`dataAzurermPostgresqlServer` Submodule" id="@cdktf/provider-azurerm.dataAzurermPostgresqlServer"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_postgresql_server`](ht
 
 ### DataAzurermPostgresqlServer <a name="DataAzurermPostgresqlServer" id="@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server azurerm_postgresql_server}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/postgresql_server azurerm_postgresql_server}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.Initializer"></a>
 
@@ -365,7 +365,7 @@ DataAzurermPostgresqlServer.IsTerraformDataSource(object X);
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -463,10 +463,10 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -689,7 +689,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new DataAzurermPostgresqlServerConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -707,15 +707,15 @@ new DataAzurermPostgresqlServerConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server#name DataAzurermPostgresqlServer#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server#resource_group_name DataAzurermPostgresqlServer#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server#id DataAzurermPostgresqlServer#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/postgresql_server#name DataAzurermPostgresqlServer#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/postgresql_server#resource_group_name DataAzurermPostgresqlServer#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/postgresql_server#id DataAzurermPostgresqlServer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeouts">DataAzurermPostgresqlServerTimeouts</a></code> | timeouts block. |
 
 ---
@@ -733,10 +733,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -798,7 +798,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server#name DataAzurermPostgresqlServer#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/postgresql_server#name DataAzurermPostgresqlServer#name}.
 
 ---
 
@@ -810,7 +810,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server#resource_group_name DataAzurermPostgresqlServer#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/postgresql_server#resource_group_name DataAzurermPostgresqlServer#resource_group_name}.
 
 ---
 
@@ -822,7 +822,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server#id DataAzurermPostgresqlServer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/postgresql_server#id DataAzurermPostgresqlServer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -839,7 +839,7 @@ public DataAzurermPostgresqlServerTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server#timeouts DataAzurermPostgresqlServer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/postgresql_server#timeouts DataAzurermPostgresqlServer#timeouts}
 
 ---
 
@@ -872,7 +872,7 @@ new DataAzurermPostgresqlServerTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server#read DataAzurermPostgresqlServer#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/postgresql_server#read DataAzurermPostgresqlServer#read}. |
 
 ---
 
@@ -884,7 +884,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server#read DataAzurermPostgresqlServer#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/postgresql_server#read DataAzurermPostgresqlServer#read}.
 
 ---
 

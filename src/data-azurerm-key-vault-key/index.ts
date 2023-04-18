@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/key_vault_key
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermKeyVaultKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_key#id DataAzurermKeyVaultKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_key#id DataAzurermKeyVaultKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_key#key_vault_id DataAzurermKeyVaultKey#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_key#key_vault_id DataAzurermKeyVaultKey#key_vault_id}
   */
   readonly keyVaultId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_key#name DataAzurermKeyVaultKey#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_key#name DataAzurermKeyVaultKey#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_key#timeouts DataAzurermKeyVaultKey#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_key#timeouts DataAzurermKeyVaultKey#timeouts}
   */
   readonly timeouts?: DataAzurermKeyVaultKeyTimeouts;
 }
 export interface DataAzurermKeyVaultKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_key#read DataAzurermKeyVaultKey#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_key#read DataAzurermKeyVaultKey#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermKeyVaultKeyTimeoutsToTerraform(struct?: DataAzurermKeyVaultKeyTimeoutsOutputReference | DataAzurermKeyVaultKeyTimeouts | cdktf.IResolvable): any {
+export function dataAzurermKeyVaultKeyTimeoutsToTerraform(struct?: DataAzurermKeyVaultKeyTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -55,7 +55,7 @@ export class DataAzurermKeyVaultKeyTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermKeyVaultKeyTimeouts | cdktf.IResolvable | undefined {
@@ -106,7 +106,7 @@ export class DataAzurermKeyVaultKeyTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_key azurerm_key_vault_key}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_key azurerm_key_vault_key}
 */
 export class DataAzurermKeyVaultKey extends cdktf.TerraformDataSource {
 
@@ -120,7 +120,7 @@ export class DataAzurermKeyVaultKey extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_key azurerm_key_vault_key} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_key azurerm_key_vault_key} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

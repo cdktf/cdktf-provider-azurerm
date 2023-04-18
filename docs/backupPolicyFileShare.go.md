@@ -1,6 +1,6 @@
 # `azurerm_backup_policy_file_share`
 
-Refer to the Terraform Registory for docs: [`azurerm_backup_policy_file_share`](https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share).
+Refer to the Terraform Registory for docs: [`azurerm_backup_policy_file_share`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share).
 
 # `backupPolicyFileShare` Submodule <a name="`backupPolicyFileShare` Submodule" id="@cdktf/provider-azurerm.backupPolicyFileShare"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_backup_policy_file_share`](
 
 ### BackupPolicyFileShare <a name="BackupPolicyFileShare" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share azurerm_backup_policy_file_share}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share azurerm_backup_policy_file_share}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 backuppolicyfileshare.NewBackupPolicyFileShare(scope Construct, id *string, config BackupPolicyFileShareConfig) BackupPolicyFileShare
 ```
@@ -390,7 +390,7 @@ func ResetTimezone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 backuppolicyfileshare.BackupPolicyFileShare_IsConstruct(x interface{}) *bool
 ```
@@ -422,7 +422,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 backuppolicyfileshare.BackupPolicyFileShare_IsTerraformElement(x interface{}) *bool
 ```
@@ -436,7 +436,7 @@ backuppolicyfileshare.BackupPolicyFileShare_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 backuppolicyfileshare.BackupPolicyFileShare_IsTerraformResource(x interface{}) *bool
 ```
@@ -459,7 +459,7 @@ backuppolicyfileshare.BackupPolicyFileShare_IsTerraformResource(x interface{}) *
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -575,10 +575,10 @@ func Connection() interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -877,7 +877,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareBackup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 &backuppolicyfileshare.BackupPolicyFileShareBackup {
 	Frequency: *string,
@@ -889,8 +889,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfilesh
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareBackup.property.frequency">Frequency</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#frequency BackupPolicyFileShare#frequency}. |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareBackup.property.time">Time</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#time BackupPolicyFileShare#time}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareBackup.property.frequency">Frequency</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#frequency BackupPolicyFileShare#frequency}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareBackup.property.time">Time</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#time BackupPolicyFileShare#time}. |
 
 ---
 
@@ -902,7 +902,7 @@ Frequency *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#frequency BackupPolicyFileShare#frequency}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#frequency BackupPolicyFileShare#frequency}.
 
 ---
 
@@ -914,7 +914,7 @@ Time *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#time BackupPolicyFileShare#time}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#time BackupPolicyFileShare#time}.
 
 ---
 
@@ -923,26 +923,26 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 &backuppolicyfileshare.BackupPolicyFileShareConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.backupPolicyFileShare.BackupPolicyFileShareBackup,
+	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.backupPolicyFileShare.BackupPolicyFileShareBackup,
 	Name: *string,
 	RecoveryVaultName: *string,
 	ResourceGroupName: *string,
-	RetentionDaily: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.backupPolicyFileShare.BackupPolicyFileShareRetentionDaily,
+	RetentionDaily: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.backupPolicyFileShare.BackupPolicyFileShareRetentionDaily,
 	Id: *string,
-	RetentionMonthly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.backupPolicyFileShare.BackupPolicyFileShareRetentionMonthly,
-	RetentionWeekly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.backupPolicyFileShare.BackupPolicyFileShareRetentionWeekly,
-	RetentionYearly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.backupPolicyFileShare.BackupPolicyFileShareRetentionYearly,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.backupPolicyFileShare.BackupPolicyFileShareTimeouts,
+	RetentionMonthly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.backupPolicyFileShare.BackupPolicyFileShareRetentionMonthly,
+	RetentionWeekly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.backupPolicyFileShare.BackupPolicyFileShareRetentionWeekly,
+	RetentionYearly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.backupPolicyFileShare.BackupPolicyFileShareRetentionYearly,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.backupPolicyFileShare.BackupPolicyFileShareTimeouts,
 	Timezone: *string,
 }
 ```
@@ -952,23 +952,23 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfilesh
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.backup">Backup</a></code> | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareBackup">BackupPolicyFileShareBackup</a></code> | backup block. |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#name BackupPolicyFileShare#name}. |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.recoveryVaultName">RecoveryVaultName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#recovery_vault_name BackupPolicyFileShare#recovery_vault_name}. |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#resource_group_name BackupPolicyFileShare#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#name BackupPolicyFileShare#name}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.recoveryVaultName">RecoveryVaultName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#recovery_vault_name BackupPolicyFileShare#recovery_vault_name}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#resource_group_name BackupPolicyFileShare#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.retentionDaily">RetentionDaily</a></code> | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionDaily">BackupPolicyFileShareRetentionDaily</a></code> | retention_daily block. |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#id BackupPolicyFileShare#id}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#id BackupPolicyFileShare#id}. |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.retentionMonthly">RetentionMonthly</a></code> | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionMonthly">BackupPolicyFileShareRetentionMonthly</a></code> | retention_monthly block. |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.retentionWeekly">RetentionWeekly</a></code> | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionWeekly">BackupPolicyFileShareRetentionWeekly</a></code> | retention_weekly block. |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.retentionYearly">RetentionYearly</a></code> | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionYearly">BackupPolicyFileShareRetentionYearly</a></code> | retention_yearly block. |
 | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareTimeouts">BackupPolicyFileShareTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.timezone">Timezone</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#timezone BackupPolicyFileShare#timezone}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.timezone">Timezone</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#timezone BackupPolicyFileShare#timezone}. |
 
 ---
 
@@ -985,10 +985,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -1052,7 +1052,7 @@ Backup BackupPolicyFileShareBackup
 
 backup block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#backup BackupPolicyFileShare#backup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#backup BackupPolicyFileShare#backup}
 
 ---
 
@@ -1064,7 +1064,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#name BackupPolicyFileShare#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#name BackupPolicyFileShare#name}.
 
 ---
 
@@ -1076,7 +1076,7 @@ RecoveryVaultName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#recovery_vault_name BackupPolicyFileShare#recovery_vault_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#recovery_vault_name BackupPolicyFileShare#recovery_vault_name}.
 
 ---
 
@@ -1088,7 +1088,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#resource_group_name BackupPolicyFileShare#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#resource_group_name BackupPolicyFileShare#resource_group_name}.
 
 ---
 
@@ -1102,7 +1102,7 @@ RetentionDaily BackupPolicyFileShareRetentionDaily
 
 retention_daily block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#retention_daily BackupPolicyFileShare#retention_daily}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#retention_daily BackupPolicyFileShare#retention_daily}
 
 ---
 
@@ -1114,7 +1114,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#id BackupPolicyFileShare#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#id BackupPolicyFileShare#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1131,7 +1131,7 @@ RetentionMonthly BackupPolicyFileShareRetentionMonthly
 
 retention_monthly block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#retention_monthly BackupPolicyFileShare#retention_monthly}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#retention_monthly BackupPolicyFileShare#retention_monthly}
 
 ---
 
@@ -1145,7 +1145,7 @@ RetentionWeekly BackupPolicyFileShareRetentionWeekly
 
 retention_weekly block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#retention_weekly BackupPolicyFileShare#retention_weekly}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#retention_weekly BackupPolicyFileShare#retention_weekly}
 
 ---
 
@@ -1159,7 +1159,7 @@ RetentionYearly BackupPolicyFileShareRetentionYearly
 
 retention_yearly block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#retention_yearly BackupPolicyFileShare#retention_yearly}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#retention_yearly BackupPolicyFileShare#retention_yearly}
 
 ---
 
@@ -1173,7 +1173,7 @@ Timeouts BackupPolicyFileShareTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#timeouts BackupPolicyFileShare#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#timeouts BackupPolicyFileShare#timeouts}
 
 ---
 
@@ -1185,7 +1185,7 @@ Timezone *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#timezone BackupPolicyFileShare#timezone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#timezone BackupPolicyFileShare#timezone}.
 
 ---
 
@@ -1194,7 +1194,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionDaily.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 &backuppolicyfileshare.BackupPolicyFileShareRetentionDaily {
 	Count: *f64,
@@ -1205,7 +1205,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfilesh
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionDaily.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#count BackupPolicyFileShare#count}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionDaily.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}. |
 
 ---
 
@@ -1217,7 +1217,7 @@ Count *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#count BackupPolicyFileShare#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}.
 
 ---
 
@@ -1226,7 +1226,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionMonthly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 &backuppolicyfileshare.BackupPolicyFileShareRetentionMonthly {
 	Count: *f64,
@@ -1239,9 +1239,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfilesh
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionMonthly.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#count BackupPolicyFileShare#count}. |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionMonthly.property.weekdays">Weekdays</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}. |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionMonthly.property.weeks">Weeks</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#weeks BackupPolicyFileShare#weeks}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionMonthly.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionMonthly.property.weekdays">Weekdays</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionMonthly.property.weeks">Weeks</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#weeks BackupPolicyFileShare#weeks}. |
 
 ---
 
@@ -1253,7 +1253,7 @@ Count *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#count BackupPolicyFileShare#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}.
 
 ---
 
@@ -1265,7 +1265,7 @@ Weekdays *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}.
 
 ---
 
@@ -1277,7 +1277,7 @@ Weeks *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#weeks BackupPolicyFileShare#weeks}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#weeks BackupPolicyFileShare#weeks}.
 
 ---
 
@@ -1286,7 +1286,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionWeekly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 &backuppolicyfileshare.BackupPolicyFileShareRetentionWeekly {
 	Count: *f64,
@@ -1298,8 +1298,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfilesh
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionWeekly.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#count BackupPolicyFileShare#count}. |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionWeekly.property.weekdays">Weekdays</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionWeekly.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionWeekly.property.weekdays">Weekdays</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}. |
 
 ---
 
@@ -1311,7 +1311,7 @@ Count *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#count BackupPolicyFileShare#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}.
 
 ---
 
@@ -1323,7 +1323,7 @@ Weekdays *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}.
 
 ---
 
@@ -1332,7 +1332,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionYearly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 &backuppolicyfileshare.BackupPolicyFileShareRetentionYearly {
 	Count: *f64,
@@ -1346,10 +1346,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfilesh
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionYearly.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#count BackupPolicyFileShare#count}. |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionYearly.property.months">Months</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#months BackupPolicyFileShare#months}. |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionYearly.property.weekdays">Weekdays</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}. |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionYearly.property.weeks">Weeks</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#weeks BackupPolicyFileShare#weeks}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionYearly.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionYearly.property.months">Months</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#months BackupPolicyFileShare#months}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionYearly.property.weekdays">Weekdays</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionYearly.property.weeks">Weeks</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#weeks BackupPolicyFileShare#weeks}. |
 
 ---
 
@@ -1361,7 +1361,7 @@ Count *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#count BackupPolicyFileShare#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}.
 
 ---
 
@@ -1373,7 +1373,7 @@ Months *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#months BackupPolicyFileShare#months}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#months BackupPolicyFileShare#months}.
 
 ---
 
@@ -1385,7 +1385,7 @@ Weekdays *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}.
 
 ---
 
@@ -1397,7 +1397,7 @@ Weeks *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#weeks BackupPolicyFileShare#weeks}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#weeks BackupPolicyFileShare#weeks}.
 
 ---
 
@@ -1406,7 +1406,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 &backuppolicyfileshare.BackupPolicyFileShareTimeouts {
 	Create: *string,
@@ -1420,10 +1420,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfilesh
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#create BackupPolicyFileShare#create}. |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#delete BackupPolicyFileShare#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#read BackupPolicyFileShare#read}. |
-| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#update BackupPolicyFileShare#update}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#create BackupPolicyFileShare#create}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#delete BackupPolicyFileShare#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#read BackupPolicyFileShare#read}. |
+| <code><a href="#@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#update BackupPolicyFileShare#update}. |
 
 ---
 
@@ -1435,7 +1435,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#create BackupPolicyFileShare#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#create BackupPolicyFileShare#create}.
 
 ---
 
@@ -1447,7 +1447,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#delete BackupPolicyFileShare#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#delete BackupPolicyFileShare#delete}.
 
 ---
 
@@ -1459,7 +1459,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#read BackupPolicyFileShare#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#read BackupPolicyFileShare#read}.
 
 ---
 
@@ -1471,7 +1471,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#update BackupPolicyFileShare#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_policy_file_share#update BackupPolicyFileShare#update}.
 
 ---
 
@@ -1482,7 +1482,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareBackupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 backuppolicyfileshare.NewBackupPolicyFileShareBackupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyFileShareBackupOutputReference
 ```
@@ -1775,7 +1775,7 @@ func InternalValue() BackupPolicyFileShareBackup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionDailyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 backuppolicyfileshare.NewBackupPolicyFileShareRetentionDailyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyFileShareRetentionDailyOutputReference
 ```
@@ -2046,7 +2046,7 @@ func InternalValue() BackupPolicyFileShareRetentionDaily
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionMonthlyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 backuppolicyfileshare.NewBackupPolicyFileShareRetentionMonthlyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyFileShareRetentionMonthlyOutputReference
 ```
@@ -2361,7 +2361,7 @@ func InternalValue() BackupPolicyFileShareRetentionMonthly
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionWeeklyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 backuppolicyfileshare.NewBackupPolicyFileShareRetentionWeeklyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyFileShareRetentionWeeklyOutputReference
 ```
@@ -2654,7 +2654,7 @@ func InternalValue() BackupPolicyFileShareRetentionWeekly
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionYearlyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 backuppolicyfileshare.NewBackupPolicyFileShareRetentionYearlyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyFileShareRetentionYearlyOutputReference
 ```
@@ -2991,7 +2991,7 @@ func InternalValue() BackupPolicyFileShareRetentionYearly
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backuppolicyfileshare"
 
 backuppolicyfileshare.NewBackupPolicyFileShareTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyFileShareTimeoutsOutputReference
 ```

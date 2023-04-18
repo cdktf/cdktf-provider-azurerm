@@ -1,6 +1,6 @@
 # `data_azurerm_ip_group`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_ip_group`](https://www.terraform.io/docs/providers/azurerm/d/ip_group).
+Refer to the Terraform Registory for docs: [`data_azurerm_ip_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ip_group).
 
 # `dataAzurermIpGroup` Submodule <a name="`dataAzurermIpGroup` Submodule" id="@cdktf/provider-azurerm.dataAzurermIpGroup"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_ip_group`](https://www
 
 ### DataAzurermIpGroup <a name="DataAzurermIpGroup" id="@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group azurerm_ip_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ip_group azurerm_ip_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup.Initializer"></a>
 
@@ -365,7 +365,7 @@ DataAzurermIpGroup.IsTerraformDataSource(object X);
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -459,10 +459,10 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -645,7 +645,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new DataAzurermIpGroupConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -663,15 +663,15 @@ new DataAzurermIpGroupConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group#name DataAzurermIpGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group#resource_group_name DataAzurermIpGroup#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group#id DataAzurermIpGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ip_group#name DataAzurermIpGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ip_group#resource_group_name DataAzurermIpGroup#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ip_group#id DataAzurermIpGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupTimeouts">DataAzurermIpGroupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -689,10 +689,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -754,7 +754,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group#name DataAzurermIpGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ip_group#name DataAzurermIpGroup#name}.
 
 ---
 
@@ -766,7 +766,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group#resource_group_name DataAzurermIpGroup#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ip_group#resource_group_name DataAzurermIpGroup#resource_group_name}.
 
 ---
 
@@ -778,7 +778,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group#id DataAzurermIpGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ip_group#id DataAzurermIpGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -795,7 +795,7 @@ public DataAzurermIpGroupTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group#timeouts DataAzurermIpGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ip_group#timeouts DataAzurermIpGroup#timeouts}
 
 ---
 
@@ -815,7 +815,7 @@ new DataAzurermIpGroupTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group#read DataAzurermIpGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ip_group#read DataAzurermIpGroup#read}. |
 
 ---
 
@@ -827,7 +827,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group#read DataAzurermIpGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ip_group#read DataAzurermIpGroup#read}.
 
 ---
 

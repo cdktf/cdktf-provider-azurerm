@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/kubernetes_cluster_node_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,28 +8,28 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermKubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool#id DataAzurermKubernetesClusterNodePool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/kubernetes_cluster_node_pool#id DataAzurermKubernetesClusterNodePool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool#kubernetes_cluster_name DataAzurermKubernetesClusterNodePool#kubernetes_cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/kubernetes_cluster_node_pool#kubernetes_cluster_name DataAzurermKubernetesClusterNodePool#kubernetes_cluster_name}
   */
   readonly kubernetesClusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool#name DataAzurermKubernetesClusterNodePool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/kubernetes_cluster_node_pool#name DataAzurermKubernetesClusterNodePool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool#resource_group_name DataAzurermKubernetesClusterNodePool#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/kubernetes_cluster_node_pool#resource_group_name DataAzurermKubernetesClusterNodePool#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool#timeouts DataAzurermKubernetesClusterNodePool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/kubernetes_cluster_node_pool#timeouts DataAzurermKubernetesClusterNodePool#timeouts}
   */
   readonly timeouts?: DataAzurermKubernetesClusterNodePoolTimeouts;
 }
@@ -99,12 +99,12 @@ export class DataAzurermKubernetesClusterNodePoolUpgradeSettingsList extends cdk
 }
 export interface DataAzurermKubernetesClusterNodePoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool#read DataAzurermKubernetesClusterNodePool#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/kubernetes_cluster_node_pool#read DataAzurermKubernetesClusterNodePool#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermKubernetesClusterNodePoolTimeoutsToTerraform(struct?: DataAzurermKubernetesClusterNodePoolTimeoutsOutputReference | DataAzurermKubernetesClusterNodePoolTimeouts | cdktf.IResolvable): any {
+export function dataAzurermKubernetesClusterNodePoolTimeoutsToTerraform(struct?: DataAzurermKubernetesClusterNodePoolTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -123,7 +123,7 @@ export class DataAzurermKubernetesClusterNodePoolTimeoutsOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermKubernetesClusterNodePoolTimeouts | cdktf.IResolvable | undefined {
@@ -174,7 +174,7 @@ export class DataAzurermKubernetesClusterNodePoolTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool azurerm_kubernetes_cluster_node_pool}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/kubernetes_cluster_node_pool azurerm_kubernetes_cluster_node_pool}
 */
 export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSource {
 
@@ -188,7 +188,7 @@ export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSou
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool azurerm_kubernetes_cluster_node_pool} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/kubernetes_cluster_node_pool azurerm_kubernetes_cluster_node_pool} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

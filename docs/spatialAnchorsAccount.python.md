@@ -1,6 +1,6 @@
 # `azurerm_spatial_anchors_account`
 
-Refer to the Terraform Registory for docs: [`azurerm_spatial_anchors_account`](https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account).
+Refer to the Terraform Registory for docs: [`azurerm_spatial_anchors_account`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account).
 
 # `spatialAnchorsAccount` Submodule <a name="`spatialAnchorsAccount` Submodule" id="@cdktf/provider-azurerm.spatialAnchorsAccount"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_spatial_anchors_account`](h
 
 ### SpatialAnchorsAccount <a name="SpatialAnchorsAccount" id="@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account azurerm_spatial_anchors_account}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account azurerm_spatial_anchors_account}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer"></a>
 
@@ -19,7 +19,7 @@ spatialAnchorsAccount.SpatialAnchorsAccount(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -39,17 +39,17 @@ spatialAnchorsAccount.SpatialAnchorsAccount(
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#location SpatialAnchorsAccount#location}. |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#name SpatialAnchorsAccount#name}. |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#resource_group_name SpatialAnchorsAccount#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#id SpatialAnchorsAccount#id}. |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#tags SpatialAnchorsAccount#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#location SpatialAnchorsAccount#location}. |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#name SpatialAnchorsAccount#name}. |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#resource_group_name SpatialAnchorsAccount#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#id SpatialAnchorsAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#tags SpatialAnchorsAccount#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountTimeouts">SpatialAnchorsAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -80,7 +80,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#location SpatialAnchorsAccount#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#location SpatialAnchorsAccount#location}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#name SpatialAnchorsAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#name SpatialAnchorsAccount#name}.
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#resource_group_name SpatialAnchorsAccount#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#resource_group_name SpatialAnchorsAccount#resource_group_name}.
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#id SpatialAnchorsAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#id SpatialAnchorsAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -153,7 +153,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#tags SpatialAnchorsAccount#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#tags SpatialAnchorsAccount#tags}.
 
 ---
 
@@ -163,7 +163,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#timeouts SpatialAnchorsAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#timeouts SpatialAnchorsAccount#timeouts}
 
 ---
 
@@ -418,7 +418,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#create SpatialAnchorsAccount#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#create SpatialAnchorsAccount#create}.
 
 ---
 
@@ -426,7 +426,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#delete SpatialAnchorsAccount#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#delete SpatialAnchorsAccount#delete}.
 
 ---
 
@@ -434,7 +434,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#read SpatialAnchorsAccount#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#read SpatialAnchorsAccount#read}.
 
 ---
 
@@ -442,7 +442,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#update SpatialAnchorsAccount#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#update SpatialAnchorsAccount#update}.
 
 ---
 
@@ -552,7 +552,7 @@ spatialAnchorsAccount.SpatialAnchorsAccount.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -660,10 +660,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -886,7 +886,7 @@ from cdktf_cdktf_provider_azurerm import spatial_anchors_account
 
 spatialAnchorsAccount.SpatialAnchorsAccountConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -906,17 +906,17 @@ spatialAnchorsAccount.SpatialAnchorsAccountConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#location SpatialAnchorsAccount#location}. |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#name SpatialAnchorsAccount#name}. |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#resource_group_name SpatialAnchorsAccount#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#id SpatialAnchorsAccount#id}. |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#tags SpatialAnchorsAccount#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#location SpatialAnchorsAccount#location}. |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#name SpatialAnchorsAccount#name}. |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#resource_group_name SpatialAnchorsAccount#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#id SpatialAnchorsAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#tags SpatialAnchorsAccount#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountTimeouts">SpatialAnchorsAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -934,10 +934,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -999,7 +999,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#location SpatialAnchorsAccount#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#location SpatialAnchorsAccount#location}.
 
 ---
 
@@ -1011,7 +1011,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#name SpatialAnchorsAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#name SpatialAnchorsAccount#name}.
 
 ---
 
@@ -1023,7 +1023,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#resource_group_name SpatialAnchorsAccount#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#resource_group_name SpatialAnchorsAccount#resource_group_name}.
 
 ---
 
@@ -1035,7 +1035,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#id SpatialAnchorsAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#id SpatialAnchorsAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1050,7 +1050,7 @@ tags: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#tags SpatialAnchorsAccount#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#tags SpatialAnchorsAccount#tags}.
 
 ---
 
@@ -1064,7 +1064,7 @@ timeouts: SpatialAnchorsAccountTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#timeouts SpatialAnchorsAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#timeouts SpatialAnchorsAccount#timeouts}
 
 ---
 
@@ -1087,10 +1087,10 @@ spatialAnchorsAccount.SpatialAnchorsAccountTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#create SpatialAnchorsAccount#create}. |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#delete SpatialAnchorsAccount#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#read SpatialAnchorsAccount#read}. |
-| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#update SpatialAnchorsAccount#update}. |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#create SpatialAnchorsAccount#create}. |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#delete SpatialAnchorsAccount#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#read SpatialAnchorsAccount#read}. |
+| <code><a href="#@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#update SpatialAnchorsAccount#update}. |
 
 ---
 
@@ -1102,7 +1102,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#create SpatialAnchorsAccount#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#create SpatialAnchorsAccount#create}.
 
 ---
 
@@ -1114,7 +1114,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#delete SpatialAnchorsAccount#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#delete SpatialAnchorsAccount#delete}.
 
 ---
 
@@ -1126,7 +1126,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#read SpatialAnchorsAccount#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#read SpatialAnchorsAccount#read}.
 
 ---
 
@@ -1138,7 +1138,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#update SpatialAnchorsAccount#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spatial_anchors_account#update SpatialAnchorsAccount#update}.
 
 ---
 

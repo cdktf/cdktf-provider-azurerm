@@ -1,6 +1,6 @@
 # `azurerm_windows_web_app`
 
-Refer to the Terraform Registory for docs: [`azurerm_windows_web_app`](https://www.terraform.io/docs/providers/azurerm/r/windows_web_app).
+Refer to the Terraform Registory for docs: [`azurerm_windows_web_app`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app).
 
 # `windowsWebApp` Submodule <a name="`windowsWebApp` Submodule" id="@cdktf/provider-azurerm.windowsWebApp"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_windows_web_app`](https://w
 
 ### WindowsWebApp <a name="WindowsWebApp" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app azurerm_windows_web_app}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app azurerm_windows_web_app}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer"></a>
 
@@ -19,7 +19,7 @@ windowsWebApp.WindowsWebApp(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -59,37 +59,37 @@ windowsWebApp.WindowsWebApp(
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#location WindowsWebApp#location}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#resource_group_name WindowsWebApp#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.servicePlanId">service_plan_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#service_plan_id WindowsWebApp#service_plan_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#location WindowsWebApp#location}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#name WindowsWebApp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#resource_group_name WindowsWebApp#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.servicePlanId">service_plan_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#service_plan_id WindowsWebApp#service_plan_id}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.siteConfig">site_config</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig">WindowsWebAppSiteConfig</a></code> | site_config block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.appSettings">app_settings</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_settings WindowsWebApp#app_settings}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.appSettings">app_settings</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_settings WindowsWebApp#app_settings}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.authSettings">auth_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppAuthSettings">WindowsWebAppAuthSettings</a></code> | auth_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.authSettingsV2">auth_settings_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppAuthSettingsV2">WindowsWebAppAuthSettingsV2</a></code> | auth_settings_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.backup">backup</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppBackup">WindowsWebAppBackup</a></code> | backup block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.clientAffinityEnabled">client_affinity_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_affinity_enabled WindowsWebApp#client_affinity_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_certificate_enabled WindowsWebApp#client_certificate_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.clientAffinityEnabled">client_affinity_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_affinity_enabled WindowsWebApp#client_affinity_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_certificate_enabled WindowsWebApp#client_certificate_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.clientCertificateExclusionPaths">client_certificate_exclusion_paths</a></code> | <code>str</code> | Paths to exclude when using client certificates, separated by ; |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_certificate_mode WindowsWebApp#client_certificate_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_certificate_mode WindowsWebApp#client_certificate_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.connectionString">connection_string</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConnectionString">WindowsWebAppConnectionString</a>]]</code> | connection_string block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#enabled WindowsWebApp#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.httpsOnly">https_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#https_only WindowsWebApp#https_only}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#id WindowsWebApp#id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#enabled WindowsWebApp#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.httpsOnly">https_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#https_only WindowsWebApp#https_only}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#id WindowsWebApp#id}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppIdentity">WindowsWebAppIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.keyVaultReferenceIdentityId">key_vault_reference_identity_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#key_vault_reference_identity_id WindowsWebApp#key_vault_reference_identity_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.keyVaultReferenceIdentityId">key_vault_reference_identity_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#key_vault_reference_identity_id WindowsWebApp#key_vault_reference_identity_id}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.logs">logs</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogs">WindowsWebAppLogs</a></code> | logs block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.stickySettings">sticky_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStickySettings">WindowsWebAppStickySettings</a></code> | sticky_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.storageAccount">storage_account</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount">WindowsWebAppStorageAccount</a>]]</code> | storage_account block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#tags WindowsWebApp#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#tags WindowsWebApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts">WindowsWebAppTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.zipDeployFile">zip_deploy_file</a></code> | <code>str</code> | The local path and filename of the Zip packaged application to deploy to this Windows Web App. |
 
 ---
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -158,7 +158,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#location WindowsWebApp#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#location WindowsWebApp#location}.
 
 ---
 
@@ -166,7 +166,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#name WindowsWebApp#name}.
 
 ---
 
@@ -174,7 +174,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#resource_group_name WindowsWebApp#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#resource_group_name WindowsWebApp#resource_group_name}.
 
 ---
 
@@ -182,7 +182,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#service_plan_id WindowsWebApp#service_plan_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#service_plan_id WindowsWebApp#service_plan_id}.
 
 ---
 
@@ -192,7 +192,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 site_config block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#site_config WindowsWebApp#site_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#site_config WindowsWebApp#site_config}
 
 ---
 
@@ -200,7 +200,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_settings WindowsWebApp#app_settings}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_settings WindowsWebApp#app_settings}.
 
 ---
 
@@ -210,7 +210,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 auth_settings block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#auth_settings WindowsWebApp#auth_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#auth_settings WindowsWebApp#auth_settings}
 
 ---
 
@@ -220,7 +220,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 auth_settings_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#auth_settings_v2 WindowsWebApp#auth_settings_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#auth_settings_v2 WindowsWebApp#auth_settings_v2}
 
 ---
 
@@ -230,7 +230,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 backup block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#backup WindowsWebApp#backup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#backup WindowsWebApp#backup}
 
 ---
 
@@ -238,7 +238,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_affinity_enabled WindowsWebApp#client_affinity_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_affinity_enabled WindowsWebApp#client_affinity_enabled}.
 
 ---
 
@@ -246,7 +246,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_certificate_enabled WindowsWebApp#client_certificate_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_certificate_enabled WindowsWebApp#client_certificate_enabled}.
 
 ---
 
@@ -256,7 +256,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Paths to exclude when using client certificates, separated by ;
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_certificate_exclusion_paths WindowsWebApp#client_certificate_exclusion_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_certificate_exclusion_paths WindowsWebApp#client_certificate_exclusion_paths}
 
 ---
 
@@ -264,7 +264,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_certificate_mode WindowsWebApp#client_certificate_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_certificate_mode WindowsWebApp#client_certificate_mode}.
 
 ---
 
@@ -274,7 +274,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 connection_string block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#connection_string WindowsWebApp#connection_string}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#connection_string WindowsWebApp#connection_string}
 
 ---
 
@@ -282,7 +282,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#enabled WindowsWebApp#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#enabled WindowsWebApp#enabled}.
 
 ---
 
@@ -290,7 +290,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#https_only WindowsWebApp#https_only}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#https_only WindowsWebApp#https_only}.
 
 ---
 
@@ -298,7 +298,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#id WindowsWebApp#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#id WindowsWebApp#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -311,7 +311,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 identity block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#identity WindowsWebApp#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#identity WindowsWebApp#identity}
 
 ---
 
@@ -319,7 +319,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#key_vault_reference_identity_id WindowsWebApp#key_vault_reference_identity_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#key_vault_reference_identity_id WindowsWebApp#key_vault_reference_identity_id}.
 
 ---
 
@@ -329,7 +329,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 logs block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#logs WindowsWebApp#logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#logs WindowsWebApp#logs}
 
 ---
 
@@ -339,7 +339,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 sticky_settings block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#sticky_settings WindowsWebApp#sticky_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#sticky_settings WindowsWebApp#sticky_settings}
 
 ---
 
@@ -349,7 +349,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 storage_account block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#storage_account WindowsWebApp#storage_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#storage_account WindowsWebApp#storage_account}
 
 ---
 
@@ -357,7 +357,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#tags WindowsWebApp#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#tags WindowsWebApp#tags}.
 
 ---
 
@@ -367,7 +367,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#timeouts WindowsWebApp#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#timeouts WindowsWebApp#timeouts}
 
 ---
 
@@ -375,7 +375,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}.
 
 ---
 
@@ -387,7 +387,7 @@ The local path and filename of the Zip packaged application to deploy to this Wi
 
 **Note:** Using this value requires either `WEBSITE_RUN_FROM_PACKAGE=1` or `SCM_DO_BUILD_DURING_DEPLOYMENT=true` to be set on the App in `app_settings`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#zip_deploy_file WindowsWebApp#zip_deploy_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#zip_deploy_file WindowsWebApp#zip_deploy_file}
 
 ---
 
@@ -682,7 +682,7 @@ def put_auth_settings(
 
 Should the Authentication / Authorization feature be enabled?
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#enabled WindowsWebApp#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#enabled WindowsWebApp#enabled}
 
 ---
 
@@ -692,7 +692,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 active_directory block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#active_directory WindowsWebApp#active_directory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#active_directory WindowsWebApp#active_directory}
 
 ---
 
@@ -702,7 +702,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a map of Login Parameters to send to the OpenID Connect authorization endpoint when a user logs in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#additional_login_parameters WindowsWebApp#additional_login_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#additional_login_parameters WindowsWebApp#additional_login_parameters}
 
 ---
 
@@ -712,7 +712,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of External URLs that can be redirected to as part of logging in or logging out of the Windows Web App.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_external_redirect_urls WindowsWebApp#allowed_external_redirect_urls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_external_redirect_urls WindowsWebApp#allowed_external_redirect_urls}
 
 ---
 
@@ -724,7 +724,7 @@ The default authentication provider to use when multiple providers are configure
 
 Possible values include: `AzureActiveDirectory`, `Facebook`, `Google`, `MicrosoftAccount`, `Twitter`, `Github`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#default_provider WindowsWebApp#default_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#default_provider WindowsWebApp#default_provider}
 
 ---
 
@@ -734,7 +734,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 facebook block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#facebook WindowsWebApp#facebook}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#facebook WindowsWebApp#facebook}
 
 ---
 
@@ -744,7 +744,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 github block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#github WindowsWebApp#github}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#github WindowsWebApp#github}
 
 ---
 
@@ -754,7 +754,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 google block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#google WindowsWebApp#google}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#google WindowsWebApp#google}
 
 ---
 
@@ -764,7 +764,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The OpenID Connect Issuer URI that represents the entity which issues access tokens.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#issuer WindowsWebApp#issuer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#issuer WindowsWebApp#issuer}
 
 ---
 
@@ -774,7 +774,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 microsoft block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#microsoft WindowsWebApp#microsoft}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#microsoft WindowsWebApp#microsoft}
 
 ---
 
@@ -784,7 +784,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The RuntimeVersion of the Authentication / Authorization feature in use.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#runtime_version WindowsWebApp#runtime_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#runtime_version WindowsWebApp#runtime_version}
 
 ---
 
@@ -796,7 +796,7 @@ The number of hours after session token expiration that a session token can be u
 
 Defaults to `72` hours.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#token_refresh_extension_hours WindowsWebApp#token_refresh_extension_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#token_refresh_extension_hours WindowsWebApp#token_refresh_extension_hours}
 
 ---
 
@@ -806,7 +806,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#token_store_enabled WindowsWebApp#token_store_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#token_store_enabled WindowsWebApp#token_store_enabled}
 
 ---
 
@@ -816,7 +816,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 twitter block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#twitter WindowsWebApp#twitter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#twitter WindowsWebApp#twitter}
 
 ---
 
@@ -826,7 +826,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The action to take when an unauthenticated client attempts to access the app. Possible values include: `RedirectToLoginPage`, `AllowAnonymous`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#unauthenticated_client_action WindowsWebApp#unauthenticated_client_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#unauthenticated_client_action WindowsWebApp#unauthenticated_client_action}
 
 ---
 
@@ -865,7 +865,7 @@ def put_auth_settings_v2(
 
 login block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#login WindowsWebApp#login}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#login WindowsWebApp#login}
 
 ---
 
@@ -875,7 +875,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 active_directory_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#active_directory_v2 WindowsWebApp#active_directory_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#active_directory_v2 WindowsWebApp#active_directory_v2}
 
 ---
 
@@ -885,7 +885,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 apple_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#apple_v2 WindowsWebApp#apple_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#apple_v2 WindowsWebApp#apple_v2}
 
 ---
 
@@ -895,7 +895,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the AuthV2 Settings be enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#auth_enabled WindowsWebApp#auth_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#auth_enabled WindowsWebApp#auth_enabled}
 
 ---
 
@@ -905,7 +905,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 azure_static_web_app_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#azure_static_web_app_v2 WindowsWebApp#azure_static_web_app_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#azure_static_web_app_v2 WindowsWebApp#azure_static_web_app_v2}
 
 ---
 
@@ -915,7 +915,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#config_file_path WindowsWebApp#config_file_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#config_file_path WindowsWebApp#config_file_path}
 
 ---
 
@@ -925,7 +925,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 custom_oidc_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#custom_oidc_v2 WindowsWebApp#custom_oidc_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#custom_oidc_v2 WindowsWebApp#custom_oidc_v2}
 
 ---
 
@@ -935,7 +935,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#default_provider WindowsWebApp#default_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#default_provider WindowsWebApp#default_provider}
 
 ---
 
@@ -945,7 +945,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#excluded_paths WindowsWebApp#excluded_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#excluded_paths WindowsWebApp#excluded_paths}
 
 ---
 
@@ -955,7 +955,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 facebook_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#facebook_v2 WindowsWebApp#facebook_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#facebook_v2 WindowsWebApp#facebook_v2}
 
 ---
 
@@ -967,7 +967,7 @@ The convention used to determine the url of the request made.
 
 Possible values include `ForwardProxyConventionNoProxy`, `ForwardProxyConventionStandard`, `ForwardProxyConventionCustom`. Defaults to `ForwardProxyConventionNoProxy`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#forward_proxy_convention WindowsWebApp#forward_proxy_convention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#forward_proxy_convention WindowsWebApp#forward_proxy_convention}
 
 ---
 
@@ -977,7 +977,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The name of the header containing the host of the request.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#forward_proxy_custom_host_header_name WindowsWebApp#forward_proxy_custom_host_header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#forward_proxy_custom_host_header_name WindowsWebApp#forward_proxy_custom_host_header_name}
 
 ---
 
@@ -987,7 +987,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The name of the header containing the scheme of the request.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#forward_proxy_custom_scheme_header_name WindowsWebApp#forward_proxy_custom_scheme_header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#forward_proxy_custom_scheme_header_name WindowsWebApp#forward_proxy_custom_scheme_header_name}
 
 ---
 
@@ -997,7 +997,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 github_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#github_v2 WindowsWebApp#github_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#github_v2 WindowsWebApp#github_v2}
 
 ---
 
@@ -1007,7 +1007,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 google_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#google_v2 WindowsWebApp#google_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#google_v2 WindowsWebApp#google_v2}
 
 ---
 
@@ -1017,7 +1017,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#http_route_api_prefix WindowsWebApp#http_route_api_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#http_route_api_prefix WindowsWebApp#http_route_api_prefix}
 
 ---
 
@@ -1027,7 +1027,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 microsoft_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#microsoft_v2 WindowsWebApp#microsoft_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#microsoft_v2 WindowsWebApp#microsoft_v2}
 
 ---
 
@@ -1037,7 +1037,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the authentication flow be used for all requests.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#require_authentication WindowsWebApp#require_authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#require_authentication WindowsWebApp#require_authentication}
 
 ---
 
@@ -1047,7 +1047,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should HTTPS be required on connections? Defaults to true.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#require_https WindowsWebApp#require_https}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#require_https WindowsWebApp#require_https}
 
 ---
 
@@ -1057,7 +1057,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#runtime_version WindowsWebApp#runtime_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#runtime_version WindowsWebApp#runtime_version}
 
 ---
 
@@ -1067,7 +1067,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 twitter_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#twitter_v2 WindowsWebApp#twitter_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#twitter_v2 WindowsWebApp#twitter_v2}
 
 ---
 
@@ -1079,7 +1079,7 @@ The action to take for requests made without authentication.
 
 Possible values include `RedirectToLoginPage`, `AllowAnonymous`, `Return401`, and `Return403`. Defaults to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#unauthenticated_action WindowsWebApp#unauthenticated_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#unauthenticated_action WindowsWebApp#unauthenticated_action}
 
 ---
 
@@ -1100,7 +1100,7 @@ def put_backup(
 
 The name which should be used for this Backup.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#name WindowsWebApp#name}
 
 ---
 
@@ -1110,7 +1110,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 schedule block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#schedule WindowsWebApp#schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#schedule WindowsWebApp#schedule}
 
 ---
 
@@ -1120,7 +1120,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The SAS URL to the container.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#storage_account_url WindowsWebApp#storage_account_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#storage_account_url WindowsWebApp#storage_account_url}
 
 ---
 
@@ -1130,7 +1130,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should this backup job be enabled?
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#enabled WindowsWebApp#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#enabled WindowsWebApp#enabled}
 
 ---
 
@@ -1161,7 +1161,7 @@ def put_identity(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#type WindowsWebApp#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#type WindowsWebApp#type}.
 
 ---
 
@@ -1169,7 +1169,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#identity_ids WindowsWebApp#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#identity_ids WindowsWebApp#identity_ids}.
 
 ---
 
@@ -1190,7 +1190,7 @@ def put_logs(
 
 application_logs block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#application_logs WindowsWebApp#application_logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#application_logs WindowsWebApp#application_logs}
 
 ---
 
@@ -1198,7 +1198,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#detailed_error_messages WindowsWebApp#detailed_error_messages}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#detailed_error_messages WindowsWebApp#detailed_error_messages}.
 
 ---
 
@@ -1206,7 +1206,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#failed_request_tracing WindowsWebApp#failed_request_tracing}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#failed_request_tracing WindowsWebApp#failed_request_tracing}.
 
 ---
 
@@ -1216,7 +1216,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 http_logs block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#http_logs WindowsWebApp#http_logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#http_logs WindowsWebApp#http_logs}
 
 ---
 
@@ -1261,7 +1261,7 @@ def put_site_config(
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#always_on WindowsWebApp#always_on}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#always_on WindowsWebApp#always_on}.
 
 ---
 
@@ -1269,7 +1269,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#api_definition_url WindowsWebApp#api_definition_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#api_definition_url WindowsWebApp#api_definition_url}.
 
 ---
 
@@ -1277,7 +1277,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#api_management_api_id WindowsWebApp#api_management_api_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#api_management_api_id WindowsWebApp#api_management_api_id}.
 
 ---
 
@@ -1285,7 +1285,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_command_line WindowsWebApp#app_command_line}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_command_line WindowsWebApp#app_command_line}.
 
 ---
 
@@ -1295,7 +1295,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 application_stack block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#application_stack WindowsWebApp#application_stack}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#application_stack WindowsWebApp#application_stack}
 
 ---
 
@@ -1303,7 +1303,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#auto_heal_enabled WindowsWebApp#auto_heal_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#auto_heal_enabled WindowsWebApp#auto_heal_enabled}.
 
 ---
 
@@ -1313,7 +1313,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 auto_heal_setting block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#auto_heal_setting WindowsWebApp#auto_heal_setting}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#auto_heal_setting WindowsWebApp#auto_heal_setting}
 
 ---
 
@@ -1321,7 +1321,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#container_registry_managed_identity_client_id WindowsWebApp#container_registry_managed_identity_client_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#container_registry_managed_identity_client_id WindowsWebApp#container_registry_managed_identity_client_id}.
 
 ---
 
@@ -1329,7 +1329,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#container_registry_use_managed_identity WindowsWebApp#container_registry_use_managed_identity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#container_registry_use_managed_identity WindowsWebApp#container_registry_use_managed_identity}.
 
 ---
 
@@ -1339,7 +1339,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 cors block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#cors WindowsWebApp#cors}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#cors WindowsWebApp#cors}
 
 ---
 
@@ -1347,7 +1347,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#default_documents WindowsWebApp#default_documents}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#default_documents WindowsWebApp#default_documents}.
 
 ---
 
@@ -1355,7 +1355,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ftps_state WindowsWebApp#ftps_state}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#ftps_state WindowsWebApp#ftps_state}.
 
 ---
 
@@ -1367,7 +1367,7 @@ The amount of time in minutes that a node is unhealthy before being removed from
 
 Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#health_check_eviction_time_in_min WindowsWebApp#health_check_eviction_time_in_min}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#health_check_eviction_time_in_min WindowsWebApp#health_check_eviction_time_in_min}
 
 ---
 
@@ -1375,7 +1375,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#health_check_path WindowsWebApp#health_check_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#health_check_path WindowsWebApp#health_check_path}.
 
 ---
 
@@ -1383,7 +1383,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#http2_enabled WindowsWebApp#http2_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#http2_enabled WindowsWebApp#http2_enabled}.
 
 ---
 
@@ -1393,7 +1393,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 ip_restriction block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ip_restriction WindowsWebApp#ip_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#ip_restriction WindowsWebApp#ip_restriction}
 
 ---
 
@@ -1401,7 +1401,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#load_balancing_mode WindowsWebApp#load_balancing_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#load_balancing_mode WindowsWebApp#load_balancing_mode}.
 
 ---
 
@@ -1409,7 +1409,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#local_mysql_enabled WindowsWebApp#local_mysql_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#local_mysql_enabled WindowsWebApp#local_mysql_enabled}.
 
 ---
 
@@ -1417,7 +1417,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#managed_pipeline_mode WindowsWebApp#managed_pipeline_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#managed_pipeline_mode WindowsWebApp#managed_pipeline_mode}.
 
 ---
 
@@ -1425,7 +1425,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#minimum_tls_version WindowsWebApp#minimum_tls_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#minimum_tls_version WindowsWebApp#minimum_tls_version}.
 
 ---
 
@@ -1433,7 +1433,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#remote_debugging_enabled WindowsWebApp#remote_debugging_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#remote_debugging_enabled WindowsWebApp#remote_debugging_enabled}.
 
 ---
 
@@ -1441,7 +1441,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#remote_debugging_version WindowsWebApp#remote_debugging_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#remote_debugging_version WindowsWebApp#remote_debugging_version}.
 
 ---
 
@@ -1451,7 +1451,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 scm_ip_restriction block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#scm_ip_restriction WindowsWebApp#scm_ip_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#scm_ip_restriction WindowsWebApp#scm_ip_restriction}
 
 ---
 
@@ -1459,7 +1459,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#scm_minimum_tls_version WindowsWebApp#scm_minimum_tls_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#scm_minimum_tls_version WindowsWebApp#scm_minimum_tls_version}.
 
 ---
 
@@ -1467,7 +1467,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#scm_use_main_ip_restriction WindowsWebApp#scm_use_main_ip_restriction}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#scm_use_main_ip_restriction WindowsWebApp#scm_use_main_ip_restriction}.
 
 ---
 
@@ -1475,7 +1475,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#use_32_bit_worker WindowsWebApp#use_32_bit_worker}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#use_32_bit_worker WindowsWebApp#use_32_bit_worker}.
 
 ---
 
@@ -1485,7 +1485,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 virtual_application block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_application WindowsWebApp#virtual_application}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#virtual_application WindowsWebApp#virtual_application}
 
 ---
 
@@ -1495,7 +1495,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#vnet_route_all_enabled WindowsWebApp#vnet_route_all_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#vnet_route_all_enabled WindowsWebApp#vnet_route_all_enabled}
 
 ---
 
@@ -1503,7 +1503,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#websockets_enabled WindowsWebApp#websockets_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#websockets_enabled WindowsWebApp#websockets_enabled}.
 
 ---
 
@@ -1511,7 +1511,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#worker_count WindowsWebApp#worker_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#worker_count WindowsWebApp#worker_count}.
 
 ---
 
@@ -1528,7 +1528,7 @@ def put_sticky_settings(
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_setting_names WindowsWebApp#app_setting_names}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_setting_names WindowsWebApp#app_setting_names}.
 
 ---
 
@@ -1536,7 +1536,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#connection_string_names WindowsWebApp#connection_string_names}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#connection_string_names WindowsWebApp#connection_string_names}.
 
 ---
 
@@ -1569,7 +1569,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#create WindowsWebApp#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#create WindowsWebApp#create}.
 
 ---
 
@@ -1577,7 +1577,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#delete WindowsWebApp#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#delete WindowsWebApp#delete}.
 
 ---
 
@@ -1585,7 +1585,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#read WindowsWebApp#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#read WindowsWebApp#read}.
 
 ---
 
@@ -1593,7 +1593,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#update WindowsWebApp#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#update WindowsWebApp#update}.
 
 ---
 
@@ -1811,7 +1811,7 @@ windowsWebApp.WindowsWebApp.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -1965,10 +1965,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -2700,7 +2700,7 @@ enabled: typing.Union[bool, IResolvable]
 
 Should the Authentication / Authorization feature be enabled?
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#enabled WindowsWebApp#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#enabled WindowsWebApp#enabled}
 
 ---
 
@@ -2714,7 +2714,7 @@ active_directory: WindowsWebAppAuthSettingsActiveDirectory
 
 active_directory block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#active_directory WindowsWebApp#active_directory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#active_directory WindowsWebApp#active_directory}
 
 ---
 
@@ -2728,7 +2728,7 @@ additional_login_parameters: typing.Mapping[str]
 
 Specifies a map of Login Parameters to send to the OpenID Connect authorization endpoint when a user logs in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#additional_login_parameters WindowsWebApp#additional_login_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#additional_login_parameters WindowsWebApp#additional_login_parameters}
 
 ---
 
@@ -2742,7 +2742,7 @@ allowed_external_redirect_urls: typing.List[str]
 
 Specifies a list of External URLs that can be redirected to as part of logging in or logging out of the Windows Web App.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_external_redirect_urls WindowsWebApp#allowed_external_redirect_urls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_external_redirect_urls WindowsWebApp#allowed_external_redirect_urls}
 
 ---
 
@@ -2758,7 +2758,7 @@ The default authentication provider to use when multiple providers are configure
 
 Possible values include: `AzureActiveDirectory`, `Facebook`, `Google`, `MicrosoftAccount`, `Twitter`, `Github`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#default_provider WindowsWebApp#default_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#default_provider WindowsWebApp#default_provider}
 
 ---
 
@@ -2772,7 +2772,7 @@ facebook: WindowsWebAppAuthSettingsFacebook
 
 facebook block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#facebook WindowsWebApp#facebook}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#facebook WindowsWebApp#facebook}
 
 ---
 
@@ -2786,7 +2786,7 @@ github: WindowsWebAppAuthSettingsGithub
 
 github block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#github WindowsWebApp#github}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#github WindowsWebApp#github}
 
 ---
 
@@ -2800,7 +2800,7 @@ google: WindowsWebAppAuthSettingsGoogle
 
 google block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#google WindowsWebApp#google}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#google WindowsWebApp#google}
 
 ---
 
@@ -2814,7 +2814,7 @@ issuer: str
 
 The OpenID Connect Issuer URI that represents the entity which issues access tokens.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#issuer WindowsWebApp#issuer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#issuer WindowsWebApp#issuer}
 
 ---
 
@@ -2828,7 +2828,7 @@ microsoft: WindowsWebAppAuthSettingsMicrosoft
 
 microsoft block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#microsoft WindowsWebApp#microsoft}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#microsoft WindowsWebApp#microsoft}
 
 ---
 
@@ -2842,7 +2842,7 @@ runtime_version: str
 
 The RuntimeVersion of the Authentication / Authorization feature in use.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#runtime_version WindowsWebApp#runtime_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#runtime_version WindowsWebApp#runtime_version}
 
 ---
 
@@ -2858,7 +2858,7 @@ The number of hours after session token expiration that a session token can be u
 
 Defaults to `72` hours.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#token_refresh_extension_hours WindowsWebApp#token_refresh_extension_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#token_refresh_extension_hours WindowsWebApp#token_refresh_extension_hours}
 
 ---
 
@@ -2872,7 +2872,7 @@ token_store_enabled: typing.Union[bool, IResolvable]
 
 Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#token_store_enabled WindowsWebApp#token_store_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#token_store_enabled WindowsWebApp#token_store_enabled}
 
 ---
 
@@ -2886,7 +2886,7 @@ twitter: WindowsWebAppAuthSettingsTwitter
 
 twitter block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#twitter WindowsWebApp#twitter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#twitter WindowsWebApp#twitter}
 
 ---
 
@@ -2900,7 +2900,7 @@ unauthenticated_client_action: str
 
 The action to take when an unauthenticated client attempts to access the app. Possible values include: `RedirectToLoginPage`, `AllowAnonymous`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#unauthenticated_client_action WindowsWebApp#unauthenticated_client_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#unauthenticated_client_action WindowsWebApp#unauthenticated_client_action}
 
 ---
 
@@ -2940,7 +2940,7 @@ client_id: str
 
 The ID of the Client to use to authenticate with Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -2954,7 +2954,7 @@ allowed_audiences: typing.List[str]
 
 Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
 
 ---
 
@@ -2968,7 +2968,7 @@ client_secret: str
 
 The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret WindowsWebApp#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret WindowsWebApp#client_secret}
 
 ---
 
@@ -2982,7 +2982,7 @@ client_secret_setting_name: str
 
 The App Setting name that contains the client secret of the Client. Cannot be used with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -3022,7 +3022,7 @@ app_id: str
 
 The App ID of the Facebook app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_id WindowsWebApp#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_id WindowsWebApp#app_id}
 
 ---
 
@@ -3036,7 +3036,7 @@ app_secret: str
 
 The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_secret WindowsWebApp#app_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_secret WindowsWebApp#app_secret}
 
 ---
 
@@ -3050,7 +3050,7 @@ app_secret_setting_name: str
 
 The app setting name that contains the `app_secret` value used for Facebook Login. Cannot be specified with `app_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_secret_setting_name WindowsWebApp#app_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_secret_setting_name WindowsWebApp#app_secret_setting_name}
 
 ---
 
@@ -3064,7 +3064,7 @@ oauth_scopes: typing.List[str]
 
 Specifies a list of OAuth 2.0 scopes to be requested as part of Facebook Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
 
 ---
 
@@ -3104,7 +3104,7 @@ client_id: str
 
 The ID of the GitHub app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -3118,7 +3118,7 @@ client_secret: str
 
 The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret WindowsWebApp#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret WindowsWebApp#client_secret}
 
 ---
 
@@ -3132,7 +3132,7 @@ client_secret_setting_name: str
 
 The app setting name that contains the `client_secret` value used for GitHub Login. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -3146,7 +3146,7 @@ oauth_scopes: typing.List[str]
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
 
 ---
 
@@ -3186,7 +3186,7 @@ client_id: str
 
 The OpenID Connect Client ID for the Google web application.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -3200,7 +3200,7 @@ client_secret: str
 
 The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret WindowsWebApp#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret WindowsWebApp#client_secret}
 
 ---
 
@@ -3214,7 +3214,7 @@ client_secret_setting_name: str
 
 The app setting name that contains the `client_secret` value used for Google Login. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -3228,7 +3228,7 @@ oauth_scopes: typing.List[str]
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication. If not specified, "openid", "profile", and "email" are used as default scopes.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
 
 ---
 
@@ -3268,7 +3268,7 @@ client_id: str
 
 The OAuth 2.0 client ID that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -3282,7 +3282,7 @@ client_secret: str
 
 The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret WindowsWebApp#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret WindowsWebApp#client_secret}
 
 ---
 
@@ -3296,7 +3296,7 @@ client_secret_setting_name: str
 
 The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -3310,7 +3310,7 @@ oauth_scopes: typing.List[str]
 
 The list of OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. If not specified, `wl.basic` is used as the default scope.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
 
 ---
 
@@ -3348,7 +3348,7 @@ consumer_key: str
 
 The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#consumer_key WindowsWebApp#consumer_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#consumer_key WindowsWebApp#consumer_key}
 
 ---
 
@@ -3362,7 +3362,7 @@ consumer_secret: str
 
 The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#consumer_secret WindowsWebApp#consumer_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#consumer_secret WindowsWebApp#consumer_secret}
 
 ---
 
@@ -3376,7 +3376,7 @@ consumer_secret_setting_name: str
 
 The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#consumer_secret_setting_name WindowsWebApp#consumer_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#consumer_secret_setting_name WindowsWebApp#consumer_secret_setting_name}
 
 ---
 
@@ -3452,7 +3452,7 @@ login: WindowsWebAppAuthSettingsV2Login
 
 login block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#login WindowsWebApp#login}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#login WindowsWebApp#login}
 
 ---
 
@@ -3466,7 +3466,7 @@ active_directory_v2: WindowsWebAppAuthSettingsV2ActiveDirectoryV2
 
 active_directory_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#active_directory_v2 WindowsWebApp#active_directory_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#active_directory_v2 WindowsWebApp#active_directory_v2}
 
 ---
 
@@ -3480,7 +3480,7 @@ apple_v2: WindowsWebAppAuthSettingsV2AppleV2
 
 apple_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#apple_v2 WindowsWebApp#apple_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#apple_v2 WindowsWebApp#apple_v2}
 
 ---
 
@@ -3494,7 +3494,7 @@ auth_enabled: typing.Union[bool, IResolvable]
 
 Should the AuthV2 Settings be enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#auth_enabled WindowsWebApp#auth_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#auth_enabled WindowsWebApp#auth_enabled}
 
 ---
 
@@ -3508,7 +3508,7 @@ azure_static_web_app_v2: WindowsWebAppAuthSettingsV2AzureStaticWebAppV2
 
 azure_static_web_app_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#azure_static_web_app_v2 WindowsWebApp#azure_static_web_app_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#azure_static_web_app_v2 WindowsWebApp#azure_static_web_app_v2}
 
 ---
 
@@ -3522,7 +3522,7 @@ config_file_path: str
 
 The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#config_file_path WindowsWebApp#config_file_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#config_file_path WindowsWebApp#config_file_path}
 
 ---
 
@@ -3536,7 +3536,7 @@ custom_oidc_v2: typing.Union[IResolvable, typing.List[WindowsWebAppAuthSettingsV
 
 custom_oidc_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#custom_oidc_v2 WindowsWebApp#custom_oidc_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#custom_oidc_v2 WindowsWebApp#custom_oidc_v2}
 
 ---
 
@@ -3550,7 +3550,7 @@ default_provider: str
 
 The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#default_provider WindowsWebApp#default_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#default_provider WindowsWebApp#default_provider}
 
 ---
 
@@ -3564,7 +3564,7 @@ excluded_paths: typing.List[str]
 
 The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#excluded_paths WindowsWebApp#excluded_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#excluded_paths WindowsWebApp#excluded_paths}
 
 ---
 
@@ -3578,7 +3578,7 @@ facebook_v2: WindowsWebAppAuthSettingsV2FacebookV2
 
 facebook_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#facebook_v2 WindowsWebApp#facebook_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#facebook_v2 WindowsWebApp#facebook_v2}
 
 ---
 
@@ -3594,7 +3594,7 @@ The convention used to determine the url of the request made.
 
 Possible values include `ForwardProxyConventionNoProxy`, `ForwardProxyConventionStandard`, `ForwardProxyConventionCustom`. Defaults to `ForwardProxyConventionNoProxy`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#forward_proxy_convention WindowsWebApp#forward_proxy_convention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#forward_proxy_convention WindowsWebApp#forward_proxy_convention}
 
 ---
 
@@ -3608,7 +3608,7 @@ forward_proxy_custom_host_header_name: str
 
 The name of the header containing the host of the request.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#forward_proxy_custom_host_header_name WindowsWebApp#forward_proxy_custom_host_header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#forward_proxy_custom_host_header_name WindowsWebApp#forward_proxy_custom_host_header_name}
 
 ---
 
@@ -3622,7 +3622,7 @@ forward_proxy_custom_scheme_header_name: str
 
 The name of the header containing the scheme of the request.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#forward_proxy_custom_scheme_header_name WindowsWebApp#forward_proxy_custom_scheme_header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#forward_proxy_custom_scheme_header_name WindowsWebApp#forward_proxy_custom_scheme_header_name}
 
 ---
 
@@ -3636,7 +3636,7 @@ github_v2: WindowsWebAppAuthSettingsV2GithubV2
 
 github_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#github_v2 WindowsWebApp#github_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#github_v2 WindowsWebApp#github_v2}
 
 ---
 
@@ -3650,7 +3650,7 @@ google_v2: WindowsWebAppAuthSettingsV2GoogleV2
 
 google_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#google_v2 WindowsWebApp#google_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#google_v2 WindowsWebApp#google_v2}
 
 ---
 
@@ -3664,7 +3664,7 @@ http_route_api_prefix: str
 
 The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#http_route_api_prefix WindowsWebApp#http_route_api_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#http_route_api_prefix WindowsWebApp#http_route_api_prefix}
 
 ---
 
@@ -3678,7 +3678,7 @@ microsoft_v2: WindowsWebAppAuthSettingsV2MicrosoftV2
 
 microsoft_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#microsoft_v2 WindowsWebApp#microsoft_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#microsoft_v2 WindowsWebApp#microsoft_v2}
 
 ---
 
@@ -3692,7 +3692,7 @@ require_authentication: typing.Union[bool, IResolvable]
 
 Should the authentication flow be used for all requests.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#require_authentication WindowsWebApp#require_authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#require_authentication WindowsWebApp#require_authentication}
 
 ---
 
@@ -3706,7 +3706,7 @@ require_https: typing.Union[bool, IResolvable]
 
 Should HTTPS be required on connections? Defaults to true.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#require_https WindowsWebApp#require_https}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#require_https WindowsWebApp#require_https}
 
 ---
 
@@ -3720,7 +3720,7 @@ runtime_version: str
 
 The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#runtime_version WindowsWebApp#runtime_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#runtime_version WindowsWebApp#runtime_version}
 
 ---
 
@@ -3734,7 +3734,7 @@ twitter_v2: WindowsWebAppAuthSettingsV2TwitterV2
 
 twitter_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#twitter_v2 WindowsWebApp#twitter_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#twitter_v2 WindowsWebApp#twitter_v2}
 
 ---
 
@@ -3750,7 +3750,7 @@ The action to take for requests made without authentication.
 
 Possible values include `RedirectToLoginPage`, `AllowAnonymous`, `Return401`, and `Return403`. Defaults to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#unauthenticated_action WindowsWebApp#unauthenticated_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#unauthenticated_action WindowsWebApp#unauthenticated_action}
 
 ---
 
@@ -3806,7 +3806,7 @@ client_id: str
 
 The ID of the Client to use to authenticate with Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -3820,7 +3820,7 @@ tenant_auth_endpoint: str
 
 The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#tenant_auth_endpoint WindowsWebApp#tenant_auth_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#tenant_auth_endpoint WindowsWebApp#tenant_auth_endpoint}
 
 ---
 
@@ -3834,7 +3834,7 @@ allowed_applications: typing.List[str]
 
 The list of allowed Applications for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_applications WindowsWebApp#allowed_applications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_applications WindowsWebApp#allowed_applications}
 
 ---
 
@@ -3848,7 +3848,7 @@ allowed_audiences: typing.List[str]
 
 Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
 
 ---
 
@@ -3862,7 +3862,7 @@ allowed_groups: typing.List[str]
 
 The list of allowed Group Names for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_groups WindowsWebApp#allowed_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_groups WindowsWebApp#allowed_groups}
 
 ---
 
@@ -3876,7 +3876,7 @@ allowed_identities: typing.List[str]
 
 The list of allowed Identities for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_identities WindowsWebApp#allowed_identities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_identities WindowsWebApp#allowed_identities}
 
 ---
 
@@ -3890,7 +3890,7 @@ client_secret_certificate_thumbprint: str
 
 The thumbprint of the certificate used for signing purposes.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_certificate_thumbprint WindowsWebApp#client_secret_certificate_thumbprint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_certificate_thumbprint WindowsWebApp#client_secret_certificate_thumbprint}
 
 ---
 
@@ -3904,7 +3904,7 @@ client_secret_setting_name: str
 
 The App Setting name that contains the client secret of the Client.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -3918,7 +3918,7 @@ jwt_allowed_client_applications: typing.List[str]
 
 A list of Allowed Client Applications in the JWT Claim.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#jwt_allowed_client_applications WindowsWebApp#jwt_allowed_client_applications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#jwt_allowed_client_applications WindowsWebApp#jwt_allowed_client_applications}
 
 ---
 
@@ -3932,7 +3932,7 @@ jwt_allowed_groups: typing.List[str]
 
 A list of Allowed Groups in the JWT Claim.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#jwt_allowed_groups WindowsWebApp#jwt_allowed_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#jwt_allowed_groups WindowsWebApp#jwt_allowed_groups}
 
 ---
 
@@ -3946,7 +3946,7 @@ login_parameters: typing.Mapping[str]
 
 A map of key-value pairs to send to the Authorisation Endpoint when a user logs in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#login_parameters WindowsWebApp#login_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#login_parameters WindowsWebApp#login_parameters}
 
 ---
 
@@ -3960,7 +3960,7 @@ www_authentication_disabled: typing.Union[bool, IResolvable]
 
 Should the www-authenticate provider should be omitted from the request? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#www_authentication_disabled WindowsWebApp#www_authentication_disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#www_authentication_disabled WindowsWebApp#www_authentication_disabled}
 
 ---
 
@@ -3996,7 +3996,7 @@ client_id: str
 
 The OpenID Connect Client ID for the Apple web application.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -4010,7 +4010,7 @@ client_secret_setting_name: str
 
 The app setting name that contains the `client_secret` value used for Apple Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -4044,7 +4044,7 @@ client_id: str
 
 The ID of the Client to use to authenticate with Azure Static Web App Authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -4086,7 +4086,7 @@ client_id: str
 
 The ID of the Client to use to authenticate with this Custom OIDC.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -4100,7 +4100,7 @@ name: str
 
 The name of the Custom OIDC Authentication Provider.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#name WindowsWebApp#name}
 
 ---
 
@@ -4114,7 +4114,7 @@ openid_configuration_endpoint: str
 
 The endpoint that contains all the configuration endpoints for this Custom OIDC provider.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#openid_configuration_endpoint WindowsWebApp#openid_configuration_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#openid_configuration_endpoint WindowsWebApp#openid_configuration_endpoint}
 
 ---
 
@@ -4128,7 +4128,7 @@ name_claim_type: str
 
 The name of the claim that contains the users name.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name_claim_type WindowsWebApp#name_claim_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#name_claim_type WindowsWebApp#name_claim_type}
 
 ---
 
@@ -4142,7 +4142,7 @@ scopes: typing.List[str]
 
 The list of the scopes that should be requested while authenticating.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#scopes WindowsWebApp#scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#scopes WindowsWebApp#scopes}
 
 ---
 
@@ -4182,7 +4182,7 @@ app_id: str
 
 The App ID of the Facebook app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_id WindowsWebApp#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_id WindowsWebApp#app_id}
 
 ---
 
@@ -4196,7 +4196,7 @@ app_secret_setting_name: str
 
 The app setting name that contains the `app_secret` value used for Facebook Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_secret_setting_name WindowsWebApp#app_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_secret_setting_name WindowsWebApp#app_secret_setting_name}
 
 ---
 
@@ -4210,7 +4210,7 @@ graph_api_version: str
 
 The version of the Facebook API to be used while logging in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#graph_api_version WindowsWebApp#graph_api_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#graph_api_version WindowsWebApp#graph_api_version}
 
 ---
 
@@ -4224,7 +4224,7 @@ login_scopes: typing.List[str]
 
 Specifies a list of scopes to be requested as part of Facebook Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#login_scopes WindowsWebApp#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#login_scopes WindowsWebApp#login_scopes}
 
 ---
 
@@ -4262,7 +4262,7 @@ client_id: str
 
 The ID of the GitHub app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -4276,7 +4276,7 @@ client_secret_setting_name: str
 
 The app setting name that contains the `client_secret` value used for GitHub Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -4290,7 +4290,7 @@ login_scopes: typing.List[str]
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#login_scopes WindowsWebApp#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#login_scopes WindowsWebApp#login_scopes}
 
 ---
 
@@ -4330,7 +4330,7 @@ client_id: str
 
 The OpenID Connect Client ID for the Google web application.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -4344,7 +4344,7 @@ client_secret_setting_name: str
 
 The app setting name that contains the `client_secret` value used for Google Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -4358,7 +4358,7 @@ allowed_audiences: typing.List[str]
 
 Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
 
 ---
 
@@ -4372,7 +4372,7 @@ login_scopes: typing.List[str]
 
 Specifies a list of Login scopes that will be requested as part of Google Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#login_scopes WindowsWebApp#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#login_scopes WindowsWebApp#login_scopes}
 
 ---
 
@@ -4428,7 +4428,7 @@ External URLs that can be redirected to as part of logging in or logging out of 
 
 This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_external_redirect_urls WindowsWebApp#allowed_external_redirect_urls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_external_redirect_urls WindowsWebApp#allowed_external_redirect_urls}
 
 ---
 
@@ -4442,7 +4442,7 @@ cookie_expiration_convention: str
 
 The method by which cookies expire. Possible values include: `FixedTime`, and `IdentityProviderDerived`. Defaults to `FixedTime`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#cookie_expiration_convention WindowsWebApp#cookie_expiration_convention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#cookie_expiration_convention WindowsWebApp#cookie_expiration_convention}
 
 ---
 
@@ -4456,7 +4456,7 @@ cookie_expiration_time: str
 
 The time after the request is made when the session cookie should expire. Defaults to `08:00:00`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#cookie_expiration_time WindowsWebApp#cookie_expiration_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#cookie_expiration_time WindowsWebApp#cookie_expiration_time}
 
 ---
 
@@ -4470,7 +4470,7 @@ logout_endpoint: str
 
 The endpoint to which logout requests should be made.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#logout_endpoint WindowsWebApp#logout_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#logout_endpoint WindowsWebApp#logout_endpoint}
 
 ---
 
@@ -4484,7 +4484,7 @@ nonce_expiration_time: str
 
 The time after the request is made when the nonce should expire. Defaults to `00:05:00`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#nonce_expiration_time WindowsWebApp#nonce_expiration_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#nonce_expiration_time WindowsWebApp#nonce_expiration_time}
 
 ---
 
@@ -4498,7 +4498,7 @@ preserve_url_fragments_for_logins: typing.Union[bool, IResolvable]
 
 Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#preserve_url_fragments_for_logins WindowsWebApp#preserve_url_fragments_for_logins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#preserve_url_fragments_for_logins WindowsWebApp#preserve_url_fragments_for_logins}
 
 ---
 
@@ -4514,7 +4514,7 @@ The number of hours after session token expiration that a session token can be u
 
 Defaults to `72` hours.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#token_refresh_extension_time WindowsWebApp#token_refresh_extension_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#token_refresh_extension_time WindowsWebApp#token_refresh_extension_time}
 
 ---
 
@@ -4528,7 +4528,7 @@ token_store_enabled: typing.Union[bool, IResolvable]
 
 Should the Token Store configuration Enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#token_store_enabled WindowsWebApp#token_store_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#token_store_enabled WindowsWebApp#token_store_enabled}
 
 ---
 
@@ -4542,7 +4542,7 @@ token_store_path: str
 
 The directory path in the App Filesystem in which the tokens will be stored.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#token_store_path WindowsWebApp#token_store_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#token_store_path WindowsWebApp#token_store_path}
 
 ---
 
@@ -4556,7 +4556,7 @@ token_store_sas_setting_name: str
 
 The name of the app setting which contains the SAS URL of the blob storage containing the tokens.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#token_store_sas_setting_name WindowsWebApp#token_store_sas_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#token_store_sas_setting_name WindowsWebApp#token_store_sas_setting_name}
 
 ---
 
@@ -4570,7 +4570,7 @@ validate_nonce: typing.Union[bool, IResolvable]
 
 Should the nonce be validated while completing the login flow. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#validate_nonce WindowsWebApp#validate_nonce}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#validate_nonce WindowsWebApp#validate_nonce}
 
 ---
 
@@ -4610,7 +4610,7 @@ client_id: str
 
 The OAuth 2.0 client ID that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -4624,7 +4624,7 @@ client_secret_setting_name: str
 
 The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -4638,7 +4638,7 @@ allowed_audiences: typing.List[str]
 
 Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
 
 ---
 
@@ -4652,7 +4652,7 @@ login_scopes: typing.List[str]
 
 The list of Login scopes that will be requested as part of Microsoft Account authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#login_scopes WindowsWebApp#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#login_scopes WindowsWebApp#login_scopes}
 
 ---
 
@@ -4688,7 +4688,7 @@ consumer_key: str
 
 The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#consumer_key WindowsWebApp#consumer_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#consumer_key WindowsWebApp#consumer_key}
 
 ---
 
@@ -4702,7 +4702,7 @@ consumer_secret_setting_name: str
 
 The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#consumer_secret_setting_name WindowsWebApp#consumer_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#consumer_secret_setting_name WindowsWebApp#consumer_secret_setting_name}
 
 ---
 
@@ -4742,7 +4742,7 @@ name: str
 
 The name which should be used for this Backup.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#name WindowsWebApp#name}
 
 ---
 
@@ -4756,7 +4756,7 @@ schedule: WindowsWebAppBackupSchedule
 
 schedule block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#schedule WindowsWebApp#schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#schedule WindowsWebApp#schedule}
 
 ---
 
@@ -4770,7 +4770,7 @@ storage_account_url: str
 
 The SAS URL to the container.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#storage_account_url WindowsWebApp#storage_account_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#storage_account_url WindowsWebApp#storage_account_url}
 
 ---
 
@@ -4784,7 +4784,7 @@ enabled: typing.Union[bool, IResolvable]
 
 Should this backup job be enabled?
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#enabled WindowsWebApp#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#enabled WindowsWebApp#enabled}
 
 ---
 
@@ -4826,7 +4826,7 @@ frequency_interval: typing.Union[int, float]
 
 How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#frequency_interval WindowsWebApp#frequency_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#frequency_interval WindowsWebApp#frequency_interval}
 
 ---
 
@@ -4840,7 +4840,7 @@ frequency_unit: str
 
 The unit of time for how often the backup should take place. Possible values include: `Day` and `Hour`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#frequency_unit WindowsWebApp#frequency_unit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#frequency_unit WindowsWebApp#frequency_unit}
 
 ---
 
@@ -4854,7 +4854,7 @@ keep_at_least_one_backup: typing.Union[bool, IResolvable]
 
 Should the service keep at least one backup, regardless of age of backup. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#keep_at_least_one_backup WindowsWebApp#keep_at_least_one_backup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#keep_at_least_one_backup WindowsWebApp#keep_at_least_one_backup}
 
 ---
 
@@ -4868,7 +4868,7 @@ retention_period_days: typing.Union[int, float]
 
 After how many days backups should be deleted.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#retention_period_days WindowsWebApp#retention_period_days}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#retention_period_days WindowsWebApp#retention_period_days}
 
 ---
 
@@ -4882,7 +4882,7 @@ start_time: str
 
 When the schedule should start working in RFC-3339 format.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#start_time WindowsWebApp#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#start_time WindowsWebApp#start_time}
 
 ---
 
@@ -4895,7 +4895,7 @@ from cdktf_cdktf_provider_azurerm import windows_web_app
 
 windowsWebApp.WindowsWebAppConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -4935,37 +4935,37 @@ windowsWebApp.WindowsWebAppConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#location WindowsWebApp#location}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#resource_group_name WindowsWebApp#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.servicePlanId">service_plan_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#service_plan_id WindowsWebApp#service_plan_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#location WindowsWebApp#location}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#name WindowsWebApp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#resource_group_name WindowsWebApp#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.servicePlanId">service_plan_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#service_plan_id WindowsWebApp#service_plan_id}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.siteConfig">site_config</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig">WindowsWebAppSiteConfig</a></code> | site_config block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.appSettings">app_settings</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_settings WindowsWebApp#app_settings}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.appSettings">app_settings</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_settings WindowsWebApp#app_settings}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.authSettings">auth_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppAuthSettings">WindowsWebAppAuthSettings</a></code> | auth_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.authSettingsV2">auth_settings_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppAuthSettingsV2">WindowsWebAppAuthSettingsV2</a></code> | auth_settings_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.backup">backup</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppBackup">WindowsWebAppBackup</a></code> | backup block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.clientAffinityEnabled">client_affinity_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_affinity_enabled WindowsWebApp#client_affinity_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_certificate_enabled WindowsWebApp#client_certificate_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.clientAffinityEnabled">client_affinity_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_affinity_enabled WindowsWebApp#client_affinity_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_certificate_enabled WindowsWebApp#client_certificate_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.clientCertificateExclusionPaths">client_certificate_exclusion_paths</a></code> | <code>str</code> | Paths to exclude when using client certificates, separated by ; |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_certificate_mode WindowsWebApp#client_certificate_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_certificate_mode WindowsWebApp#client_certificate_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.connectionString">connection_string</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConnectionString">WindowsWebAppConnectionString</a>]]</code> | connection_string block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#enabled WindowsWebApp#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.httpsOnly">https_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#https_only WindowsWebApp#https_only}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#id WindowsWebApp#id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#enabled WindowsWebApp#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.httpsOnly">https_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#https_only WindowsWebApp#https_only}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#id WindowsWebApp#id}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppIdentity">WindowsWebAppIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.keyVaultReferenceIdentityId">key_vault_reference_identity_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#key_vault_reference_identity_id WindowsWebApp#key_vault_reference_identity_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.keyVaultReferenceIdentityId">key_vault_reference_identity_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#key_vault_reference_identity_id WindowsWebApp#key_vault_reference_identity_id}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.logs">logs</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogs">WindowsWebAppLogs</a></code> | logs block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.stickySettings">sticky_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStickySettings">WindowsWebAppStickySettings</a></code> | sticky_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.storageAccount">storage_account</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount">WindowsWebAppStorageAccount</a>]]</code> | storage_account block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#tags WindowsWebApp#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#tags WindowsWebApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts">WindowsWebAppTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.zipDeployFile">zip_deploy_file</a></code> | <code>str</code> | The local path and filename of the Zip packaged application to deploy to this Windows Web App. |
 
 ---
@@ -4983,10 +4983,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -5048,7 +5048,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#location WindowsWebApp#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#location WindowsWebApp#location}.
 
 ---
 
@@ -5060,7 +5060,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#name WindowsWebApp#name}.
 
 ---
 
@@ -5072,7 +5072,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#resource_group_name WindowsWebApp#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#resource_group_name WindowsWebApp#resource_group_name}.
 
 ---
 
@@ -5084,7 +5084,7 @@ service_plan_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#service_plan_id WindowsWebApp#service_plan_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#service_plan_id WindowsWebApp#service_plan_id}.
 
 ---
 
@@ -5098,7 +5098,7 @@ site_config: WindowsWebAppSiteConfig
 
 site_config block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#site_config WindowsWebApp#site_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#site_config WindowsWebApp#site_config}
 
 ---
 
@@ -5110,7 +5110,7 @@ app_settings: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_settings WindowsWebApp#app_settings}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_settings WindowsWebApp#app_settings}.
 
 ---
 
@@ -5124,7 +5124,7 @@ auth_settings: WindowsWebAppAuthSettings
 
 auth_settings block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#auth_settings WindowsWebApp#auth_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#auth_settings WindowsWebApp#auth_settings}
 
 ---
 
@@ -5138,7 +5138,7 @@ auth_settings_v2: WindowsWebAppAuthSettingsV2
 
 auth_settings_v2 block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#auth_settings_v2 WindowsWebApp#auth_settings_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#auth_settings_v2 WindowsWebApp#auth_settings_v2}
 
 ---
 
@@ -5152,7 +5152,7 @@ backup: WindowsWebAppBackup
 
 backup block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#backup WindowsWebApp#backup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#backup WindowsWebApp#backup}
 
 ---
 
@@ -5164,7 +5164,7 @@ client_affinity_enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_affinity_enabled WindowsWebApp#client_affinity_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_affinity_enabled WindowsWebApp#client_affinity_enabled}.
 
 ---
 
@@ -5176,7 +5176,7 @@ client_certificate_enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_certificate_enabled WindowsWebApp#client_certificate_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_certificate_enabled WindowsWebApp#client_certificate_enabled}.
 
 ---
 
@@ -5190,7 +5190,7 @@ client_certificate_exclusion_paths: str
 
 Paths to exclude when using client certificates, separated by ;
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_certificate_exclusion_paths WindowsWebApp#client_certificate_exclusion_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_certificate_exclusion_paths WindowsWebApp#client_certificate_exclusion_paths}
 
 ---
 
@@ -5202,7 +5202,7 @@ client_certificate_mode: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_certificate_mode WindowsWebApp#client_certificate_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_certificate_mode WindowsWebApp#client_certificate_mode}.
 
 ---
 
@@ -5216,7 +5216,7 @@ connection_string: typing.Union[IResolvable, typing.List[WindowsWebAppConnection
 
 connection_string block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#connection_string WindowsWebApp#connection_string}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#connection_string WindowsWebApp#connection_string}
 
 ---
 
@@ -5228,7 +5228,7 @@ enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#enabled WindowsWebApp#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#enabled WindowsWebApp#enabled}.
 
 ---
 
@@ -5240,7 +5240,7 @@ https_only: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#https_only WindowsWebApp#https_only}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#https_only WindowsWebApp#https_only}.
 
 ---
 
@@ -5252,7 +5252,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#id WindowsWebApp#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#id WindowsWebApp#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -5269,7 +5269,7 @@ identity: WindowsWebAppIdentity
 
 identity block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#identity WindowsWebApp#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#identity WindowsWebApp#identity}
 
 ---
 
@@ -5281,7 +5281,7 @@ key_vault_reference_identity_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#key_vault_reference_identity_id WindowsWebApp#key_vault_reference_identity_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#key_vault_reference_identity_id WindowsWebApp#key_vault_reference_identity_id}.
 
 ---
 
@@ -5295,7 +5295,7 @@ logs: WindowsWebAppLogs
 
 logs block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#logs WindowsWebApp#logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#logs WindowsWebApp#logs}
 
 ---
 
@@ -5309,7 +5309,7 @@ sticky_settings: WindowsWebAppStickySettings
 
 sticky_settings block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#sticky_settings WindowsWebApp#sticky_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#sticky_settings WindowsWebApp#sticky_settings}
 
 ---
 
@@ -5323,7 +5323,7 @@ storage_account: typing.Union[IResolvable, typing.List[WindowsWebAppStorageAccou
 
 storage_account block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#storage_account WindowsWebApp#storage_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#storage_account WindowsWebApp#storage_account}
 
 ---
 
@@ -5335,7 +5335,7 @@ tags: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#tags WindowsWebApp#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#tags WindowsWebApp#tags}.
 
 ---
 
@@ -5349,7 +5349,7 @@ timeouts: WindowsWebAppTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#timeouts WindowsWebApp#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#timeouts WindowsWebApp#timeouts}
 
 ---
 
@@ -5361,7 +5361,7 @@ virtual_network_subnet_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}.
 
 ---
 
@@ -5377,7 +5377,7 @@ The local path and filename of the Zip packaged application to deploy to this Wi
 
 **Note:** Using this value requires either `WEBSITE_RUN_FROM_PACKAGE=1` or `SCM_DO_BUILD_DURING_DEPLOYMENT=true` to be set on the App in `app_settings`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#zip_deploy_file WindowsWebApp#zip_deploy_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#zip_deploy_file WindowsWebApp#zip_deploy_file}
 
 ---
 
@@ -5415,7 +5415,7 @@ name: str
 
 The name which should be used for this Connection.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#name WindowsWebApp#name}
 
 ---
 
@@ -5429,7 +5429,7 @@ type: str
 
 Type of database. Possible values include: `MySQL`, `SQLServer`, `SQLAzure`, `Custom`, `NotificationHub`, `ServiceBus`, `EventHub`, `APIHub`, `DocDb`, `RedisCache`, and `PostgreSQL`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#type WindowsWebApp#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#type WindowsWebApp#type}
 
 ---
 
@@ -5443,7 +5443,7 @@ value: str
 
 The connection string value.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#value WindowsWebApp#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#value WindowsWebApp#value}
 
 ---
 
@@ -5464,8 +5464,8 @@ windowsWebApp.WindowsWebAppIdentity(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppIdentity.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#type WindowsWebApp#type}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppIdentity.property.identityIds">identity_ids</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#identity_ids WindowsWebApp#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppIdentity.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#type WindowsWebApp#type}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppIdentity.property.identityIds">identity_ids</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#identity_ids WindowsWebApp#identity_ids}. |
 
 ---
 
@@ -5477,7 +5477,7 @@ type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#type WindowsWebApp#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#type WindowsWebApp#type}.
 
 ---
 
@@ -5489,7 +5489,7 @@ identity_ids: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#identity_ids WindowsWebApp#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#identity_ids WindowsWebApp#identity_ids}.
 
 ---
 
@@ -5513,8 +5513,8 @@ windowsWebApp.WindowsWebAppLogs(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogs.property.applicationLogs">application_logs</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsApplicationLogs">WindowsWebAppLogsApplicationLogs</a></code> | application_logs block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogs.property.detailedErrorMessages">detailed_error_messages</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#detailed_error_messages WindowsWebApp#detailed_error_messages}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogs.property.failedRequestTracing">failed_request_tracing</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#failed_request_tracing WindowsWebApp#failed_request_tracing}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogs.property.detailedErrorMessages">detailed_error_messages</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#detailed_error_messages WindowsWebApp#detailed_error_messages}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogs.property.failedRequestTracing">failed_request_tracing</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#failed_request_tracing WindowsWebApp#failed_request_tracing}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogs.property.httpLogs">http_logs</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsHttpLogs">WindowsWebAppLogsHttpLogs</a></code> | http_logs block. |
 
 ---
@@ -5529,7 +5529,7 @@ application_logs: WindowsWebAppLogsApplicationLogs
 
 application_logs block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#application_logs WindowsWebApp#application_logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#application_logs WindowsWebApp#application_logs}
 
 ---
 
@@ -5541,7 +5541,7 @@ detailed_error_messages: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#detailed_error_messages WindowsWebApp#detailed_error_messages}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#detailed_error_messages WindowsWebApp#detailed_error_messages}.
 
 ---
 
@@ -5553,7 +5553,7 @@ failed_request_tracing: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#failed_request_tracing WindowsWebApp#failed_request_tracing}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#failed_request_tracing WindowsWebApp#failed_request_tracing}.
 
 ---
 
@@ -5567,7 +5567,7 @@ http_logs: WindowsWebAppLogsHttpLogs
 
 http_logs block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#http_logs WindowsWebApp#http_logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#http_logs WindowsWebApp#http_logs}
 
 ---
 
@@ -5588,7 +5588,7 @@ windowsWebApp.WindowsWebAppLogsApplicationLogs(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsApplicationLogs.property.fileSystemLevel">file_system_level</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#file_system_level WindowsWebApp#file_system_level}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsApplicationLogs.property.fileSystemLevel">file_system_level</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#file_system_level WindowsWebApp#file_system_level}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsApplicationLogs.property.azureBlobStorage">azure_blob_storage</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsApplicationLogsAzureBlobStorage">WindowsWebAppLogsApplicationLogsAzureBlobStorage</a></code> | azure_blob_storage block. |
 
 ---
@@ -5601,7 +5601,7 @@ file_system_level: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#file_system_level WindowsWebApp#file_system_level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#file_system_level WindowsWebApp#file_system_level}.
 
 ---
 
@@ -5615,7 +5615,7 @@ azure_blob_storage: WindowsWebAppLogsApplicationLogsAzureBlobStorage
 
 azure_blob_storage block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#azure_blob_storage WindowsWebApp#azure_blob_storage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#azure_blob_storage WindowsWebApp#azure_blob_storage}
 
 ---
 
@@ -5637,9 +5637,9 @@ windowsWebApp.WindowsWebAppLogsApplicationLogsAzureBlobStorage(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsApplicationLogsAzureBlobStorage.property.level">level</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#level WindowsWebApp#level}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsApplicationLogsAzureBlobStorage.property.retentionInDays">retention_in_days</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsApplicationLogsAzureBlobStorage.property.sasUrl">sas_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#sas_url WindowsWebApp#sas_url}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsApplicationLogsAzureBlobStorage.property.level">level</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#level WindowsWebApp#level}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsApplicationLogsAzureBlobStorage.property.retentionInDays">retention_in_days</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsApplicationLogsAzureBlobStorage.property.sasUrl">sas_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#sas_url WindowsWebApp#sas_url}. |
 
 ---
 
@@ -5651,7 +5651,7 @@ level: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#level WindowsWebApp#level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#level WindowsWebApp#level}.
 
 ---
 
@@ -5663,7 +5663,7 @@ retention_in_days: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}.
 
 ---
 
@@ -5675,7 +5675,7 @@ sas_url: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#sas_url WindowsWebApp#sas_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#sas_url WindowsWebApp#sas_url}.
 
 ---
 
@@ -5711,7 +5711,7 @@ azure_blob_storage: WindowsWebAppLogsHttpLogsAzureBlobStorage
 
 azure_blob_storage block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#azure_blob_storage WindowsWebApp#azure_blob_storage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#azure_blob_storage WindowsWebApp#azure_blob_storage}
 
 ---
 
@@ -5725,7 +5725,7 @@ file_system: WindowsWebAppLogsHttpLogsFileSystem
 
 file_system block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#file_system WindowsWebApp#file_system}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#file_system WindowsWebApp#file_system}
 
 ---
 
@@ -5746,8 +5746,8 @@ windowsWebApp.WindowsWebAppLogsHttpLogsAzureBlobStorage(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsHttpLogsAzureBlobStorage.property.sasUrl">sas_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#sas_url WindowsWebApp#sas_url}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsHttpLogsAzureBlobStorage.property.retentionInDays">retention_in_days</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsHttpLogsAzureBlobStorage.property.sasUrl">sas_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#sas_url WindowsWebApp#sas_url}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsHttpLogsAzureBlobStorage.property.retentionInDays">retention_in_days</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}. |
 
 ---
 
@@ -5759,7 +5759,7 @@ sas_url: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#sas_url WindowsWebApp#sas_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#sas_url WindowsWebApp#sas_url}.
 
 ---
 
@@ -5771,7 +5771,7 @@ retention_in_days: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}.
 
 ---
 
@@ -5792,8 +5792,8 @@ windowsWebApp.WindowsWebAppLogsHttpLogsFileSystem(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsHttpLogsFileSystem.property.retentionInDays">retention_in_days</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsHttpLogsFileSystem.property.retentionInMb">retention_in_mb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#retention_in_mb WindowsWebApp#retention_in_mb}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsHttpLogsFileSystem.property.retentionInDays">retention_in_days</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppLogsHttpLogsFileSystem.property.retentionInMb">retention_in_mb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#retention_in_mb WindowsWebApp#retention_in_mb}. |
 
 ---
 
@@ -5805,7 +5805,7 @@ retention_in_days: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}.
 
 ---
 
@@ -5817,7 +5817,7 @@ retention_in_mb: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#retention_in_mb WindowsWebApp#retention_in_mb}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#retention_in_mb WindowsWebApp#retention_in_mb}.
 
 ---
 
@@ -5866,36 +5866,36 @@ windowsWebApp.WindowsWebAppSiteConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.alwaysOn">always_on</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#always_on WindowsWebApp#always_on}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.apiDefinitionUrl">api_definition_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#api_definition_url WindowsWebApp#api_definition_url}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.apiManagementApiId">api_management_api_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#api_management_api_id WindowsWebApp#api_management_api_id}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.appCommandLine">app_command_line</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_command_line WindowsWebApp#app_command_line}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.alwaysOn">always_on</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#always_on WindowsWebApp#always_on}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.apiDefinitionUrl">api_definition_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#api_definition_url WindowsWebApp#api_definition_url}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.apiManagementApiId">api_management_api_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#api_management_api_id WindowsWebApp#api_management_api_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.appCommandLine">app_command_line</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_command_line WindowsWebApp#app_command_line}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.applicationStack">application_stack</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack">WindowsWebAppSiteConfigApplicationStack</a></code> | application_stack block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.autoHealEnabled">auto_heal_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#auto_heal_enabled WindowsWebApp#auto_heal_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.autoHealEnabled">auto_heal_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#auto_heal_enabled WindowsWebApp#auto_heal_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.autoHealSetting">auto_heal_setting</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSetting">WindowsWebAppSiteConfigAutoHealSetting</a></code> | auto_heal_setting block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.containerRegistryManagedIdentityClientId">container_registry_managed_identity_client_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#container_registry_managed_identity_client_id WindowsWebApp#container_registry_managed_identity_client_id}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.containerRegistryUseManagedIdentity">container_registry_use_managed_identity</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#container_registry_use_managed_identity WindowsWebApp#container_registry_use_managed_identity}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.containerRegistryManagedIdentityClientId">container_registry_managed_identity_client_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#container_registry_managed_identity_client_id WindowsWebApp#container_registry_managed_identity_client_id}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.containerRegistryUseManagedIdentity">container_registry_use_managed_identity</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#container_registry_use_managed_identity WindowsWebApp#container_registry_use_managed_identity}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.cors">cors</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigCors">WindowsWebAppSiteConfigCors</a></code> | cors block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.defaultDocuments">default_documents</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#default_documents WindowsWebApp#default_documents}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.ftpsState">ftps_state</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ftps_state WindowsWebApp#ftps_state}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.defaultDocuments">default_documents</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#default_documents WindowsWebApp#default_documents}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.ftpsState">ftps_state</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#ftps_state WindowsWebApp#ftps_state}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.healthCheckEvictionTimeInMin">health_check_eviction_time_in_min</a></code> | <code>typing.Union[int, float]</code> | The amount of time in minutes that a node is unhealthy before being removed from the load balancer. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.healthCheckPath">health_check_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#health_check_path WindowsWebApp#health_check_path}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.http2Enabled">http2_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#http2_enabled WindowsWebApp#http2_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.healthCheckPath">health_check_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#health_check_path WindowsWebApp#health_check_path}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.http2Enabled">http2_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#http2_enabled WindowsWebApp#http2_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.ipRestriction">ip_restriction</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction">WindowsWebAppSiteConfigIpRestriction</a>]]</code> | ip_restriction block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.loadBalancingMode">load_balancing_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#load_balancing_mode WindowsWebApp#load_balancing_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.localMysqlEnabled">local_mysql_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#local_mysql_enabled WindowsWebApp#local_mysql_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.managedPipelineMode">managed_pipeline_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#managed_pipeline_mode WindowsWebApp#managed_pipeline_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.minimumTlsVersion">minimum_tls_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#minimum_tls_version WindowsWebApp#minimum_tls_version}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.remoteDebuggingEnabled">remote_debugging_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#remote_debugging_enabled WindowsWebApp#remote_debugging_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.remoteDebuggingVersion">remote_debugging_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#remote_debugging_version WindowsWebApp#remote_debugging_version}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.loadBalancingMode">load_balancing_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#load_balancing_mode WindowsWebApp#load_balancing_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.localMysqlEnabled">local_mysql_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#local_mysql_enabled WindowsWebApp#local_mysql_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.managedPipelineMode">managed_pipeline_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#managed_pipeline_mode WindowsWebApp#managed_pipeline_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.minimumTlsVersion">minimum_tls_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#minimum_tls_version WindowsWebApp#minimum_tls_version}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.remoteDebuggingEnabled">remote_debugging_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#remote_debugging_enabled WindowsWebApp#remote_debugging_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.remoteDebuggingVersion">remote_debugging_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#remote_debugging_version WindowsWebApp#remote_debugging_version}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.scmIpRestriction">scm_ip_restriction</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction">WindowsWebAppSiteConfigScmIpRestriction</a>]]</code> | scm_ip_restriction block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.scmMinimumTlsVersion">scm_minimum_tls_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#scm_minimum_tls_version WindowsWebApp#scm_minimum_tls_version}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.scmUseMainIpRestriction">scm_use_main_ip_restriction</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#scm_use_main_ip_restriction WindowsWebApp#scm_use_main_ip_restriction}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.use32BitWorker">use32_bit_worker</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#use_32_bit_worker WindowsWebApp#use_32_bit_worker}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.scmMinimumTlsVersion">scm_minimum_tls_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#scm_minimum_tls_version WindowsWebApp#scm_minimum_tls_version}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.scmUseMainIpRestriction">scm_use_main_ip_restriction</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#scm_use_main_ip_restriction WindowsWebApp#scm_use_main_ip_restriction}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.use32BitWorker">use32_bit_worker</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#use_32_bit_worker WindowsWebApp#use_32_bit_worker}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.virtualApplication">virtual_application</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplication">WindowsWebAppSiteConfigVirtualApplication</a>]]</code> | virtual_application block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.vnetRouteAllEnabled">vnet_route_all_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.websocketsEnabled">websockets_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#websockets_enabled WindowsWebApp#websockets_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.workerCount">worker_count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#worker_count WindowsWebApp#worker_count}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.websocketsEnabled">websockets_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#websockets_enabled WindowsWebApp#websockets_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfig.property.workerCount">worker_count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#worker_count WindowsWebApp#worker_count}. |
 
 ---
 
@@ -5907,7 +5907,7 @@ always_on: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#always_on WindowsWebApp#always_on}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#always_on WindowsWebApp#always_on}.
 
 ---
 
@@ -5919,7 +5919,7 @@ api_definition_url: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#api_definition_url WindowsWebApp#api_definition_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#api_definition_url WindowsWebApp#api_definition_url}.
 
 ---
 
@@ -5931,7 +5931,7 @@ api_management_api_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#api_management_api_id WindowsWebApp#api_management_api_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#api_management_api_id WindowsWebApp#api_management_api_id}.
 
 ---
 
@@ -5943,7 +5943,7 @@ app_command_line: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_command_line WindowsWebApp#app_command_line}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_command_line WindowsWebApp#app_command_line}.
 
 ---
 
@@ -5957,7 +5957,7 @@ application_stack: WindowsWebAppSiteConfigApplicationStack
 
 application_stack block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#application_stack WindowsWebApp#application_stack}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#application_stack WindowsWebApp#application_stack}
 
 ---
 
@@ -5969,7 +5969,7 @@ auto_heal_enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#auto_heal_enabled WindowsWebApp#auto_heal_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#auto_heal_enabled WindowsWebApp#auto_heal_enabled}.
 
 ---
 
@@ -5983,7 +5983,7 @@ auto_heal_setting: WindowsWebAppSiteConfigAutoHealSetting
 
 auto_heal_setting block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#auto_heal_setting WindowsWebApp#auto_heal_setting}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#auto_heal_setting WindowsWebApp#auto_heal_setting}
 
 ---
 
@@ -5995,7 +5995,7 @@ container_registry_managed_identity_client_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#container_registry_managed_identity_client_id WindowsWebApp#container_registry_managed_identity_client_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#container_registry_managed_identity_client_id WindowsWebApp#container_registry_managed_identity_client_id}.
 
 ---
 
@@ -6007,7 +6007,7 @@ container_registry_use_managed_identity: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#container_registry_use_managed_identity WindowsWebApp#container_registry_use_managed_identity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#container_registry_use_managed_identity WindowsWebApp#container_registry_use_managed_identity}.
 
 ---
 
@@ -6021,7 +6021,7 @@ cors: WindowsWebAppSiteConfigCors
 
 cors block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#cors WindowsWebApp#cors}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#cors WindowsWebApp#cors}
 
 ---
 
@@ -6033,7 +6033,7 @@ default_documents: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#default_documents WindowsWebApp#default_documents}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#default_documents WindowsWebApp#default_documents}.
 
 ---
 
@@ -6045,7 +6045,7 @@ ftps_state: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ftps_state WindowsWebApp#ftps_state}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#ftps_state WindowsWebApp#ftps_state}.
 
 ---
 
@@ -6061,7 +6061,7 @@ The amount of time in minutes that a node is unhealthy before being removed from
 
 Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#health_check_eviction_time_in_min WindowsWebApp#health_check_eviction_time_in_min}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#health_check_eviction_time_in_min WindowsWebApp#health_check_eviction_time_in_min}
 
 ---
 
@@ -6073,7 +6073,7 @@ health_check_path: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#health_check_path WindowsWebApp#health_check_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#health_check_path WindowsWebApp#health_check_path}.
 
 ---
 
@@ -6085,7 +6085,7 @@ http2_enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#http2_enabled WindowsWebApp#http2_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#http2_enabled WindowsWebApp#http2_enabled}.
 
 ---
 
@@ -6099,7 +6099,7 @@ ip_restriction: typing.Union[IResolvable, typing.List[WindowsWebAppSiteConfigIpR
 
 ip_restriction block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ip_restriction WindowsWebApp#ip_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#ip_restriction WindowsWebApp#ip_restriction}
 
 ---
 
@@ -6111,7 +6111,7 @@ load_balancing_mode: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#load_balancing_mode WindowsWebApp#load_balancing_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#load_balancing_mode WindowsWebApp#load_balancing_mode}.
 
 ---
 
@@ -6123,7 +6123,7 @@ local_mysql_enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#local_mysql_enabled WindowsWebApp#local_mysql_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#local_mysql_enabled WindowsWebApp#local_mysql_enabled}.
 
 ---
 
@@ -6135,7 +6135,7 @@ managed_pipeline_mode: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#managed_pipeline_mode WindowsWebApp#managed_pipeline_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#managed_pipeline_mode WindowsWebApp#managed_pipeline_mode}.
 
 ---
 
@@ -6147,7 +6147,7 @@ minimum_tls_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#minimum_tls_version WindowsWebApp#minimum_tls_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#minimum_tls_version WindowsWebApp#minimum_tls_version}.
 
 ---
 
@@ -6159,7 +6159,7 @@ remote_debugging_enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#remote_debugging_enabled WindowsWebApp#remote_debugging_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#remote_debugging_enabled WindowsWebApp#remote_debugging_enabled}.
 
 ---
 
@@ -6171,7 +6171,7 @@ remote_debugging_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#remote_debugging_version WindowsWebApp#remote_debugging_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#remote_debugging_version WindowsWebApp#remote_debugging_version}.
 
 ---
 
@@ -6185,7 +6185,7 @@ scm_ip_restriction: typing.Union[IResolvable, typing.List[WindowsWebAppSiteConfi
 
 scm_ip_restriction block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#scm_ip_restriction WindowsWebApp#scm_ip_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#scm_ip_restriction WindowsWebApp#scm_ip_restriction}
 
 ---
 
@@ -6197,7 +6197,7 @@ scm_minimum_tls_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#scm_minimum_tls_version WindowsWebApp#scm_minimum_tls_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#scm_minimum_tls_version WindowsWebApp#scm_minimum_tls_version}.
 
 ---
 
@@ -6209,7 +6209,7 @@ scm_use_main_ip_restriction: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#scm_use_main_ip_restriction WindowsWebApp#scm_use_main_ip_restriction}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#scm_use_main_ip_restriction WindowsWebApp#scm_use_main_ip_restriction}.
 
 ---
 
@@ -6221,7 +6221,7 @@ use32_bit_worker: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#use_32_bit_worker WindowsWebApp#use_32_bit_worker}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#use_32_bit_worker WindowsWebApp#use_32_bit_worker}.
 
 ---
 
@@ -6235,7 +6235,7 @@ virtual_application: typing.Union[IResolvable, typing.List[WindowsWebAppSiteConf
 
 virtual_application block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_application WindowsWebApp#virtual_application}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#virtual_application WindowsWebApp#virtual_application}
 
 ---
 
@@ -6249,7 +6249,7 @@ vnet_route_all_enabled: typing.Union[bool, IResolvable]
 
 Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#vnet_route_all_enabled WindowsWebApp#vnet_route_all_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#vnet_route_all_enabled WindowsWebApp#vnet_route_all_enabled}
 
 ---
 
@@ -6261,7 +6261,7 @@ websockets_enabled: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#websockets_enabled WindowsWebApp#websockets_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#websockets_enabled WindowsWebApp#websockets_enabled}.
 
 ---
 
@@ -6273,7 +6273,7 @@ worker_count: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#worker_count WindowsWebApp#worker_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#worker_count WindowsWebApp#worker_count}.
 
 ---
 
@@ -6307,21 +6307,21 @@ windowsWebApp.WindowsWebAppSiteConfigApplicationStack(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.currentStack">current_stack</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#current_stack WindowsWebApp#current_stack}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.dockerContainerName">docker_container_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#docker_container_name WindowsWebApp#docker_container_name}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.dockerContainerRegistry">docker_container_registry</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#docker_container_registry WindowsWebApp#docker_container_registry}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.dockerContainerTag">docker_container_tag</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#docker_container_tag WindowsWebApp#docker_container_tag}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.currentStack">current_stack</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#current_stack WindowsWebApp#current_stack}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.dockerContainerName">docker_container_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#docker_container_name WindowsWebApp#docker_container_name}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.dockerContainerRegistry">docker_container_registry</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#docker_container_registry WindowsWebApp#docker_container_registry}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.dockerContainerTag">docker_container_tag</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#docker_container_tag WindowsWebApp#docker_container_tag}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.dotnetCoreVersion">dotnet_core_version</a></code> | <code>str</code> | The version of DotNetCore to use. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.dotnetVersion">dotnet_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#dotnet_version WindowsWebApp#dotnet_version}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.javaContainer">java_container</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#java_container WindowsWebApp#java_container}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.javaContainerVersion">java_container_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#java_container_version WindowsWebApp#java_container_version}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.dotnetVersion">dotnet_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#dotnet_version WindowsWebApp#dotnet_version}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.javaContainer">java_container</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#java_container WindowsWebApp#java_container}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.javaContainerVersion">java_container_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#java_container_version WindowsWebApp#java_container_version}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.javaEmbeddedServerEnabled">java_embedded_server_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the application use the embedded web server for the version of Java in use. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.javaVersion">java_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#java_version WindowsWebApp#java_version}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.nodeVersion">node_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#node_version WindowsWebApp#node_version}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.phpVersion">php_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#php_version WindowsWebApp#php_version}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.python">python</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#python WindowsWebApp#python}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.pythonVersion">python_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#python_version WindowsWebApp#python_version}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.tomcatVersion">tomcat_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#tomcat_version WindowsWebApp#tomcat_version}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.javaVersion">java_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#java_version WindowsWebApp#java_version}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.nodeVersion">node_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#node_version WindowsWebApp#node_version}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.phpVersion">php_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#php_version WindowsWebApp#php_version}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.python">python</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#python WindowsWebApp#python}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.pythonVersion">python_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#python_version WindowsWebApp#python_version}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigApplicationStack.property.tomcatVersion">tomcat_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#tomcat_version WindowsWebApp#tomcat_version}. |
 
 ---
 
@@ -6333,7 +6333,7 @@ current_stack: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#current_stack WindowsWebApp#current_stack}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#current_stack WindowsWebApp#current_stack}.
 
 ---
 
@@ -6345,7 +6345,7 @@ docker_container_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#docker_container_name WindowsWebApp#docker_container_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#docker_container_name WindowsWebApp#docker_container_name}.
 
 ---
 
@@ -6357,7 +6357,7 @@ docker_container_registry: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#docker_container_registry WindowsWebApp#docker_container_registry}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#docker_container_registry WindowsWebApp#docker_container_registry}.
 
 ---
 
@@ -6369,7 +6369,7 @@ docker_container_tag: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#docker_container_tag WindowsWebApp#docker_container_tag}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#docker_container_tag WindowsWebApp#docker_container_tag}.
 
 ---
 
@@ -6383,7 +6383,7 @@ dotnet_core_version: str
 
 The version of DotNetCore to use.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#dotnet_core_version WindowsWebApp#dotnet_core_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#dotnet_core_version WindowsWebApp#dotnet_core_version}
 
 ---
 
@@ -6395,7 +6395,7 @@ dotnet_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#dotnet_version WindowsWebApp#dotnet_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#dotnet_version WindowsWebApp#dotnet_version}.
 
 ---
 
@@ -6407,7 +6407,7 @@ java_container: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#java_container WindowsWebApp#java_container}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#java_container WindowsWebApp#java_container}.
 
 ---
 
@@ -6419,7 +6419,7 @@ java_container_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#java_container_version WindowsWebApp#java_container_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#java_container_version WindowsWebApp#java_container_version}.
 
 ---
 
@@ -6433,7 +6433,7 @@ java_embedded_server_enabled: typing.Union[bool, IResolvable]
 
 Should the application use the embedded web server for the version of Java in use.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#java_embedded_server_enabled WindowsWebApp#java_embedded_server_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#java_embedded_server_enabled WindowsWebApp#java_embedded_server_enabled}
 
 ---
 
@@ -6445,7 +6445,7 @@ java_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#java_version WindowsWebApp#java_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#java_version WindowsWebApp#java_version}.
 
 ---
 
@@ -6457,7 +6457,7 @@ node_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#node_version WindowsWebApp#node_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#node_version WindowsWebApp#node_version}.
 
 ---
 
@@ -6469,7 +6469,7 @@ php_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#php_version WindowsWebApp#php_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#php_version WindowsWebApp#php_version}.
 
 ---
 
@@ -6481,7 +6481,7 @@ python: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#python WindowsWebApp#python}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#python WindowsWebApp#python}.
 
 ---
 
@@ -6493,7 +6493,7 @@ python_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#python_version WindowsWebApp#python_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#python_version WindowsWebApp#python_version}.
 
 ---
 
@@ -6505,7 +6505,7 @@ tomcat_version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#tomcat_version WindowsWebApp#tomcat_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#tomcat_version WindowsWebApp#tomcat_version}.
 
 ---
 
@@ -6541,7 +6541,7 @@ action: WindowsWebAppSiteConfigAutoHealSettingAction
 
 action block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#action WindowsWebApp#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#action WindowsWebApp#action}
 
 ---
 
@@ -6555,7 +6555,7 @@ trigger: WindowsWebAppSiteConfigAutoHealSettingTrigger
 
 trigger block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#trigger WindowsWebApp#trigger}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#trigger WindowsWebApp#trigger}
 
 ---
 
@@ -6577,9 +6577,9 @@ windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingAction(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingAction.property.actionType">action_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#action_type WindowsWebApp#action_type}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingAction.property.actionType">action_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#action_type WindowsWebApp#action_type}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingAction.property.customAction">custom_action</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingActionCustomAction">WindowsWebAppSiteConfigAutoHealSettingActionCustomAction</a></code> | custom_action block. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingAction.property.minimumProcessExecutionTime">minimum_process_execution_time</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#minimum_process_execution_time WindowsWebApp#minimum_process_execution_time}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingAction.property.minimumProcessExecutionTime">minimum_process_execution_time</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#minimum_process_execution_time WindowsWebApp#minimum_process_execution_time}. |
 
 ---
 
@@ -6591,7 +6591,7 @@ action_type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#action_type WindowsWebApp#action_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#action_type WindowsWebApp#action_type}.
 
 ---
 
@@ -6605,7 +6605,7 @@ custom_action: WindowsWebAppSiteConfigAutoHealSettingActionCustomAction
 
 custom_action block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#custom_action WindowsWebApp#custom_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#custom_action WindowsWebApp#custom_action}
 
 ---
 
@@ -6617,7 +6617,7 @@ minimum_process_execution_time: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#minimum_process_execution_time WindowsWebApp#minimum_process_execution_time}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#minimum_process_execution_time WindowsWebApp#minimum_process_execution_time}.
 
 ---
 
@@ -6638,8 +6638,8 @@ windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingActionCustomAction(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingActionCustomAction.property.executable">executable</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#executable WindowsWebApp#executable}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingActionCustomAction.property.parameters">parameters</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#parameters WindowsWebApp#parameters}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingActionCustomAction.property.executable">executable</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#executable WindowsWebApp#executable}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingActionCustomAction.property.parameters">parameters</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#parameters WindowsWebApp#parameters}. |
 
 ---
 
@@ -6651,7 +6651,7 @@ executable: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#executable WindowsWebApp#executable}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#executable WindowsWebApp#executable}.
 
 ---
 
@@ -6663,7 +6663,7 @@ parameters: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#parameters WindowsWebApp#parameters}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#parameters WindowsWebApp#parameters}.
 
 ---
 
@@ -6686,7 +6686,7 @@ windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTrigger(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTrigger.property.privateMemoryKb">private_memory_kb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#private_memory_kb WindowsWebApp#private_memory_kb}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTrigger.property.privateMemoryKb">private_memory_kb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#private_memory_kb WindowsWebApp#private_memory_kb}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTrigger.property.requests">requests</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerRequests">WindowsWebAppSiteConfigAutoHealSettingTriggerRequests</a></code> | requests block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTrigger.property.slowRequest">slow_request</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerSlowRequest">WindowsWebAppSiteConfigAutoHealSettingTriggerSlowRequest</a></code> | slow_request block. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTrigger.property.statusCode">status_code</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode">WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode</a>]]</code> | status_code block. |
@@ -6701,7 +6701,7 @@ private_memory_kb: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#private_memory_kb WindowsWebApp#private_memory_kb}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#private_memory_kb WindowsWebApp#private_memory_kb}.
 
 ---
 
@@ -6715,7 +6715,7 @@ requests: WindowsWebAppSiteConfigAutoHealSettingTriggerRequests
 
 requests block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#requests WindowsWebApp#requests}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#requests WindowsWebApp#requests}
 
 ---
 
@@ -6729,7 +6729,7 @@ slow_request: WindowsWebAppSiteConfigAutoHealSettingTriggerSlowRequest
 
 slow_request block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#slow_request WindowsWebApp#slow_request}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#slow_request WindowsWebApp#slow_request}
 
 ---
 
@@ -6743,7 +6743,7 @@ status_code: typing.Union[IResolvable, typing.List[WindowsWebAppSiteConfigAutoHe
 
 status_code block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#status_code WindowsWebApp#status_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#status_code WindowsWebApp#status_code}
 
 ---
 
@@ -6764,8 +6764,8 @@ windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerRequests(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerRequests.property.count">count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#count WindowsWebApp#count}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerRequests.property.interval">interval</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#interval WindowsWebApp#interval}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerRequests.property.count">count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#count WindowsWebApp#count}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerRequests.property.interval">interval</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#interval WindowsWebApp#interval}. |
 
 ---
 
@@ -6777,7 +6777,7 @@ count: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#count WindowsWebApp#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#count WindowsWebApp#count}.
 
 ---
 
@@ -6789,7 +6789,7 @@ interval: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#interval WindowsWebApp#interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#interval WindowsWebApp#interval}.
 
 ---
 
@@ -6812,10 +6812,10 @@ windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerSlowRequest(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerSlowRequest.property.count">count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#count WindowsWebApp#count}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerSlowRequest.property.interval">interval</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#interval WindowsWebApp#interval}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerSlowRequest.property.timeTaken">time_taken</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#time_taken WindowsWebApp#time_taken}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerSlowRequest.property.path">path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#path WindowsWebApp#path}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerSlowRequest.property.count">count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#count WindowsWebApp#count}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerSlowRequest.property.interval">interval</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#interval WindowsWebApp#interval}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerSlowRequest.property.timeTaken">time_taken</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#time_taken WindowsWebApp#time_taken}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerSlowRequest.property.path">path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#path WindowsWebApp#path}. |
 
 ---
 
@@ -6827,7 +6827,7 @@ count: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#count WindowsWebApp#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#count WindowsWebApp#count}.
 
 ---
 
@@ -6839,7 +6839,7 @@ interval: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#interval WindowsWebApp#interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#interval WindowsWebApp#interval}.
 
 ---
 
@@ -6851,7 +6851,7 @@ time_taken: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#time_taken WindowsWebApp#time_taken}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#time_taken WindowsWebApp#time_taken}.
 
 ---
 
@@ -6863,7 +6863,7 @@ path: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#path WindowsWebApp#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#path WindowsWebApp#path}.
 
 ---
 
@@ -6888,12 +6888,12 @@ windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode.property.count">count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#count WindowsWebApp#count}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode.property.interval">interval</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#interval WindowsWebApp#interval}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode.property.statusCodeRange">status_code_range</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#status_code_range WindowsWebApp#status_code_range}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode.property.path">path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#path WindowsWebApp#path}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode.property.subStatus">sub_status</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#sub_status WindowsWebApp#sub_status}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode.property.win32Status">win32_status</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#win32_status WindowsWebApp#win32_status}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode.property.count">count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#count WindowsWebApp#count}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode.property.interval">interval</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#interval WindowsWebApp#interval}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode.property.statusCodeRange">status_code_range</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#status_code_range WindowsWebApp#status_code_range}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode.property.path">path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#path WindowsWebApp#path}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode.property.subStatus">sub_status</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#sub_status WindowsWebApp#sub_status}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode.property.win32Status">win32_status</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#win32_status WindowsWebApp#win32_status}. |
 
 ---
 
@@ -6905,7 +6905,7 @@ count: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#count WindowsWebApp#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#count WindowsWebApp#count}.
 
 ---
 
@@ -6917,7 +6917,7 @@ interval: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#interval WindowsWebApp#interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#interval WindowsWebApp#interval}.
 
 ---
 
@@ -6929,7 +6929,7 @@ status_code_range: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#status_code_range WindowsWebApp#status_code_range}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#status_code_range WindowsWebApp#status_code_range}.
 
 ---
 
@@ -6941,7 +6941,7 @@ path: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#path WindowsWebApp#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#path WindowsWebApp#path}.
 
 ---
 
@@ -6953,7 +6953,7 @@ sub_status: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#sub_status WindowsWebApp#sub_status}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#sub_status WindowsWebApp#sub_status}.
 
 ---
 
@@ -6965,7 +6965,7 @@ win32_status: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#win32_status WindowsWebApp#win32_status}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#win32_status WindowsWebApp#win32_status}.
 
 ---
 
@@ -7001,7 +7001,7 @@ allowed_origins: typing.List[str]
 
 Specifies a list of origins that should be allowed to make cross-origin calls.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_origins WindowsWebApp#allowed_origins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_origins WindowsWebApp#allowed_origins}
 
 ---
 
@@ -7015,7 +7015,7 @@ support_credentials: typing.Union[bool, IResolvable]
 
 Are credentials allowed in CORS requests? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#support_credentials WindowsWebApp#support_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#support_credentials WindowsWebApp#support_credentials}
 
 ---
 
@@ -7042,7 +7042,7 @@ windowsWebApp.WindowsWebAppSiteConfigIpRestriction(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.action">action</a></code> | <code>str</code> | The action to take. Possible values are `Allow` or `Deny`. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.headers">headers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders">WindowsWebAppSiteConfigIpRestrictionHeaders</a>]]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#headers WindowsWebApp#headers}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.headers">headers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders">WindowsWebAppSiteConfigIpRestrictionHeaders</a>]]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#headers WindowsWebApp#headers}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.ipAddress">ip_address</a></code> | <code>str</code> | The CIDR notation of the IP or IP Range to match. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.name">name</a></code> | <code>str</code> | The name which should be used for this `ip_restriction`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | The priority value of this `ip_restriction`. |
@@ -7061,7 +7061,7 @@ action: str
 
 The action to take. Possible values are `Allow` or `Deny`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#action WindowsWebApp#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#action WindowsWebApp#action}
 
 ---
 
@@ -7073,7 +7073,7 @@ headers: typing.Union[IResolvable, typing.List[WindowsWebAppSiteConfigIpRestrict
 
 - *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders">WindowsWebAppSiteConfigIpRestrictionHeaders</a>]]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#headers WindowsWebApp#headers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#headers WindowsWebApp#headers}.
 
 ---
 
@@ -7089,7 +7089,7 @@ The CIDR notation of the IP or IP Range to match.
 
 For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ip_address WindowsWebApp#ip_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#ip_address WindowsWebApp#ip_address}
 
 ---
 
@@ -7103,7 +7103,7 @@ name: str
 
 The name which should be used for this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#name WindowsWebApp#name}
 
 ---
 
@@ -7117,7 +7117,7 @@ priority: typing.Union[int, float]
 
 The priority value of this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#priority WindowsWebApp#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#priority WindowsWebApp#priority}
 
 ---
 
@@ -7131,7 +7131,7 @@ service_tag: str
 
 The Service Tag used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#service_tag WindowsWebApp#service_tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#service_tag WindowsWebApp#service_tag}
 
 ---
 
@@ -7145,7 +7145,7 @@ virtual_network_subnet_id: str
 
 The Virtual Network Subnet ID used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}
 
 ---
 
@@ -7168,10 +7168,10 @@ windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders.property.xAzureFdid">x_azure_fdid</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_azure_fdid WindowsWebApp#x_azure_fdid}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders.property.xFdHealthProbe">x_fd_health_probe</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_fd_health_probe WindowsWebApp#x_fd_health_probe}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders.property.xForwardedFor">x_forwarded_for</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_forwarded_for WindowsWebApp#x_forwarded_for}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders.property.xForwardedHost">x_forwarded_host</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_forwarded_host WindowsWebApp#x_forwarded_host}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders.property.xAzureFdid">x_azure_fdid</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_azure_fdid WindowsWebApp#x_azure_fdid}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders.property.xFdHealthProbe">x_fd_health_probe</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_fd_health_probe WindowsWebApp#x_fd_health_probe}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders.property.xForwardedFor">x_forwarded_for</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_forwarded_for WindowsWebApp#x_forwarded_for}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders.property.xForwardedHost">x_forwarded_host</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_forwarded_host WindowsWebApp#x_forwarded_host}. |
 
 ---
 
@@ -7183,7 +7183,7 @@ x_azure_fdid: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_azure_fdid WindowsWebApp#x_azure_fdid}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_azure_fdid WindowsWebApp#x_azure_fdid}.
 
 ---
 
@@ -7195,7 +7195,7 @@ x_fd_health_probe: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_fd_health_probe WindowsWebApp#x_fd_health_probe}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_fd_health_probe WindowsWebApp#x_fd_health_probe}.
 
 ---
 
@@ -7207,7 +7207,7 @@ x_forwarded_for: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_forwarded_for WindowsWebApp#x_forwarded_for}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_forwarded_for WindowsWebApp#x_forwarded_for}.
 
 ---
 
@@ -7219,7 +7219,7 @@ x_forwarded_host: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_forwarded_host WindowsWebApp#x_forwarded_host}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_forwarded_host WindowsWebApp#x_forwarded_host}.
 
 ---
 
@@ -7246,7 +7246,7 @@ windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.action">action</a></code> | <code>str</code> | The action to take. Possible values are `Allow` or `Deny`. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.headers">headers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders">WindowsWebAppSiteConfigScmIpRestrictionHeaders</a>]]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#headers WindowsWebApp#headers}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.headers">headers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders">WindowsWebAppSiteConfigScmIpRestrictionHeaders</a>]]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#headers WindowsWebApp#headers}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.ipAddress">ip_address</a></code> | <code>str</code> | The CIDR notation of the IP or IP Range to match. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.name">name</a></code> | <code>str</code> | The name which should be used for this `ip_restriction`. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | The priority value of this `ip_restriction`. |
@@ -7265,7 +7265,7 @@ action: str
 
 The action to take. Possible values are `Allow` or `Deny`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#action WindowsWebApp#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#action WindowsWebApp#action}
 
 ---
 
@@ -7277,7 +7277,7 @@ headers: typing.Union[IResolvable, typing.List[WindowsWebAppSiteConfigScmIpRestr
 
 - *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders">WindowsWebAppSiteConfigScmIpRestrictionHeaders</a>]]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#headers WindowsWebApp#headers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#headers WindowsWebApp#headers}.
 
 ---
 
@@ -7293,7 +7293,7 @@ The CIDR notation of the IP or IP Range to match.
 
 For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#ip_address WindowsWebApp#ip_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#ip_address WindowsWebApp#ip_address}
 
 ---
 
@@ -7307,7 +7307,7 @@ name: str
 
 The name which should be used for this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#name WindowsWebApp#name}
 
 ---
 
@@ -7321,7 +7321,7 @@ priority: typing.Union[int, float]
 
 The priority value of this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#priority WindowsWebApp#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#priority WindowsWebApp#priority}
 
 ---
 
@@ -7335,7 +7335,7 @@ service_tag: str
 
 The Service Tag used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#service_tag WindowsWebApp#service_tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#service_tag WindowsWebApp#service_tag}
 
 ---
 
@@ -7349,7 +7349,7 @@ virtual_network_subnet_id: str
 
 The Virtual Network Subnet ID used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}
 
 ---
 
@@ -7372,10 +7372,10 @@ windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders.property.xAzureFdid">x_azure_fdid</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_azure_fdid WindowsWebApp#x_azure_fdid}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders.property.xFdHealthProbe">x_fd_health_probe</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_fd_health_probe WindowsWebApp#x_fd_health_probe}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders.property.xForwardedFor">x_forwarded_for</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_forwarded_for WindowsWebApp#x_forwarded_for}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders.property.xForwardedHost">x_forwarded_host</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_forwarded_host WindowsWebApp#x_forwarded_host}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders.property.xAzureFdid">x_azure_fdid</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_azure_fdid WindowsWebApp#x_azure_fdid}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders.property.xFdHealthProbe">x_fd_health_probe</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_fd_health_probe WindowsWebApp#x_fd_health_probe}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders.property.xForwardedFor">x_forwarded_for</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_forwarded_for WindowsWebApp#x_forwarded_for}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders.property.xForwardedHost">x_forwarded_host</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_forwarded_host WindowsWebApp#x_forwarded_host}. |
 
 ---
 
@@ -7387,7 +7387,7 @@ x_azure_fdid: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_azure_fdid WindowsWebApp#x_azure_fdid}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_azure_fdid WindowsWebApp#x_azure_fdid}.
 
 ---
 
@@ -7399,7 +7399,7 @@ x_fd_health_probe: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_fd_health_probe WindowsWebApp#x_fd_health_probe}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_fd_health_probe WindowsWebApp#x_fd_health_probe}.
 
 ---
 
@@ -7411,7 +7411,7 @@ x_forwarded_for: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_forwarded_for WindowsWebApp#x_forwarded_for}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_forwarded_for WindowsWebApp#x_forwarded_for}.
 
 ---
 
@@ -7423,7 +7423,7 @@ x_forwarded_host: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#x_forwarded_host WindowsWebApp#x_forwarded_host}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#x_forwarded_host WindowsWebApp#x_forwarded_host}.
 
 ---
 
@@ -7446,9 +7446,9 @@ windowsWebApp.WindowsWebAppSiteConfigVirtualApplication(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplication.property.physicalPath">physical_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#physical_path WindowsWebApp#physical_path}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplication.property.preload">preload</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#preload WindowsWebApp#preload}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplication.property.virtualPath">virtual_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_path WindowsWebApp#virtual_path}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplication.property.physicalPath">physical_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#physical_path WindowsWebApp#physical_path}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplication.property.preload">preload</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#preload WindowsWebApp#preload}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplication.property.virtualPath">virtual_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#virtual_path WindowsWebApp#virtual_path}. |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplication.property.virtualDirectory">virtual_directory</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory">WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory</a>]]</code> | virtual_directory block. |
 
 ---
@@ -7461,7 +7461,7 @@ physical_path: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#physical_path WindowsWebApp#physical_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#physical_path WindowsWebApp#physical_path}.
 
 ---
 
@@ -7473,7 +7473,7 @@ preload: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#preload WindowsWebApp#preload}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#preload WindowsWebApp#preload}.
 
 ---
 
@@ -7485,7 +7485,7 @@ virtual_path: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_path WindowsWebApp#virtual_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#virtual_path WindowsWebApp#virtual_path}.
 
 ---
 
@@ -7499,7 +7499,7 @@ virtual_directory: typing.Union[IResolvable, typing.List[WindowsWebAppSiteConfig
 
 virtual_directory block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_directory WindowsWebApp#virtual_directory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#virtual_directory WindowsWebApp#virtual_directory}
 
 ---
 
@@ -7520,8 +7520,8 @@ windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory.property.physicalPath">physical_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#physical_path WindowsWebApp#physical_path}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory.property.virtualPath">virtual_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_path WindowsWebApp#virtual_path}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory.property.physicalPath">physical_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#physical_path WindowsWebApp#physical_path}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory.property.virtualPath">virtual_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#virtual_path WindowsWebApp#virtual_path}. |
 
 ---
 
@@ -7533,7 +7533,7 @@ physical_path: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#physical_path WindowsWebApp#physical_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#physical_path WindowsWebApp#physical_path}.
 
 ---
 
@@ -7545,7 +7545,7 @@ virtual_path: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_path WindowsWebApp#virtual_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#virtual_path WindowsWebApp#virtual_path}.
 
 ---
 
@@ -7577,8 +7577,8 @@ windowsWebApp.WindowsWebAppStickySettings(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStickySettings.property.appSettingNames">app_setting_names</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_setting_names WindowsWebApp#app_setting_names}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStickySettings.property.connectionStringNames">connection_string_names</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#connection_string_names WindowsWebApp#connection_string_names}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStickySettings.property.appSettingNames">app_setting_names</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_setting_names WindowsWebApp#app_setting_names}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStickySettings.property.connectionStringNames">connection_string_names</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#connection_string_names WindowsWebApp#connection_string_names}. |
 
 ---
 
@@ -7590,7 +7590,7 @@ app_setting_names: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_setting_names WindowsWebApp#app_setting_names}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_setting_names WindowsWebApp#app_setting_names}.
 
 ---
 
@@ -7602,7 +7602,7 @@ connection_string_names: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#connection_string_names WindowsWebApp#connection_string_names}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#connection_string_names WindowsWebApp#connection_string_names}.
 
 ---
 
@@ -7627,12 +7627,12 @@ windowsWebApp.WindowsWebAppStorageAccount(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount.property.accessKey">access_key</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#access_key WindowsWebApp#access_key}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount.property.accountName">account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#account_name WindowsWebApp#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount.property.shareName">share_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#share_name WindowsWebApp#share_name}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#type WindowsWebApp#type}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount.property.mountPath">mount_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#mount_path WindowsWebApp#mount_path}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount.property.accessKey">access_key</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#access_key WindowsWebApp#access_key}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount.property.accountName">account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#account_name WindowsWebApp#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#name WindowsWebApp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount.property.shareName">share_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#share_name WindowsWebApp#share_name}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#type WindowsWebApp#type}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount.property.mountPath">mount_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#mount_path WindowsWebApp#mount_path}. |
 
 ---
 
@@ -7644,7 +7644,7 @@ access_key: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#access_key WindowsWebApp#access_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#access_key WindowsWebApp#access_key}.
 
 ---
 
@@ -7656,7 +7656,7 @@ account_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#account_name WindowsWebApp#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#account_name WindowsWebApp#account_name}.
 
 ---
 
@@ -7668,7 +7668,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#name WindowsWebApp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#name WindowsWebApp#name}.
 
 ---
 
@@ -7680,7 +7680,7 @@ share_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#share_name WindowsWebApp#share_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#share_name WindowsWebApp#share_name}.
 
 ---
 
@@ -7692,7 +7692,7 @@ type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#type WindowsWebApp#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#type WindowsWebApp#type}.
 
 ---
 
@@ -7704,7 +7704,7 @@ mount_path: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#mount_path WindowsWebApp#mount_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#mount_path WindowsWebApp#mount_path}.
 
 ---
 
@@ -7727,10 +7727,10 @@ windowsWebApp.WindowsWebAppTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#create WindowsWebApp#create}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#delete WindowsWebApp#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#read WindowsWebApp#read}. |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#update WindowsWebApp#update}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#create WindowsWebApp#create}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#delete WindowsWebApp#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#read WindowsWebApp#read}. |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#update WindowsWebApp#update}. |
 
 ---
 
@@ -7742,7 +7742,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#create WindowsWebApp#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#create WindowsWebApp#create}.
 
 ---
 
@@ -7754,7 +7754,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#delete WindowsWebApp#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#delete WindowsWebApp#delete}.
 
 ---
 
@@ -7766,7 +7766,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#read WindowsWebApp#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#read WindowsWebApp#read}.
 
 ---
 
@@ -7778,7 +7778,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#update WindowsWebApp#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#update WindowsWebApp#update}.
 
 ---
 
@@ -9964,7 +9964,7 @@ def put_active_directory(
 
 The ID of the Client to use to authenticate with Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -9974,7 +9974,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
 
 ---
 
@@ -9984,7 +9984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret WindowsWebApp#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret WindowsWebApp#client_secret}
 
 ---
 
@@ -9994,7 +9994,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The App Setting name that contains the client secret of the Client. Cannot be used with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -10015,7 +10015,7 @@ def put_facebook(
 
 The App ID of the Facebook app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_id WindowsWebApp#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_id WindowsWebApp#app_id}
 
 ---
 
@@ -10025,7 +10025,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_secret WindowsWebApp#app_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_secret WindowsWebApp#app_secret}
 
 ---
 
@@ -10035,7 +10035,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the `app_secret` value used for Facebook Login. Cannot be specified with `app_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_secret_setting_name WindowsWebApp#app_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_secret_setting_name WindowsWebApp#app_secret_setting_name}
 
 ---
 
@@ -10045,7 +10045,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of OAuth 2.0 scopes to be requested as part of Facebook Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
 
 ---
 
@@ -10066,7 +10066,7 @@ def put_github(
 
 The ID of the GitHub app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -10076,7 +10076,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret WindowsWebApp#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret WindowsWebApp#client_secret}
 
 ---
 
@@ -10086,7 +10086,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the `client_secret` value used for GitHub Login. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -10096,7 +10096,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
 
 ---
 
@@ -10117,7 +10117,7 @@ def put_google(
 
 The OpenID Connect Client ID for the Google web application.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -10127,7 +10127,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret WindowsWebApp#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret WindowsWebApp#client_secret}
 
 ---
 
@@ -10137,7 +10137,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the `client_secret` value used for Google Login. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -10147,7 +10147,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication. If not specified, "openid", "profile", and "email" are used as default scopes.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
 
 ---
 
@@ -10168,7 +10168,7 @@ def put_microsoft(
 
 The OAuth 2.0 client ID that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -10178,7 +10178,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret WindowsWebApp#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret WindowsWebApp#client_secret}
 
 ---
 
@@ -10188,7 +10188,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -10198,7 +10198,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The list of OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. If not specified, `wl.basic` is used as the default scope.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#oauth_scopes WindowsWebApp#oauth_scopes}
 
 ---
 
@@ -10218,7 +10218,7 @@ def put_twitter(
 
 The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#consumer_key WindowsWebApp#consumer_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#consumer_key WindowsWebApp#consumer_key}
 
 ---
 
@@ -10228,7 +10228,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#consumer_secret WindowsWebApp#consumer_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#consumer_secret WindowsWebApp#consumer_secret}
 
 ---
 
@@ -10238,7 +10238,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#consumer_secret_setting_name WindowsWebApp#consumer_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#consumer_secret_setting_name WindowsWebApp#consumer_secret_setting_name}
 
 ---
 
@@ -15276,7 +15276,7 @@ def put_active_directory_v2(
 
 The ID of the Client to use to authenticate with Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -15286,7 +15286,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#tenant_auth_endpoint WindowsWebApp#tenant_auth_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#tenant_auth_endpoint WindowsWebApp#tenant_auth_endpoint}
 
 ---
 
@@ -15296,7 +15296,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The list of allowed Applications for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_applications WindowsWebApp#allowed_applications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_applications WindowsWebApp#allowed_applications}
 
 ---
 
@@ -15306,7 +15306,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
 
 ---
 
@@ -15316,7 +15316,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The list of allowed Group Names for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_groups WindowsWebApp#allowed_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_groups WindowsWebApp#allowed_groups}
 
 ---
 
@@ -15326,7 +15326,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The list of allowed Identities for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_identities WindowsWebApp#allowed_identities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_identities WindowsWebApp#allowed_identities}
 
 ---
 
@@ -15336,7 +15336,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The thumbprint of the certificate used for signing purposes.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_certificate_thumbprint WindowsWebApp#client_secret_certificate_thumbprint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_certificate_thumbprint WindowsWebApp#client_secret_certificate_thumbprint}
 
 ---
 
@@ -15346,7 +15346,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The App Setting name that contains the client secret of the Client.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -15356,7 +15356,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 A list of Allowed Client Applications in the JWT Claim.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#jwt_allowed_client_applications WindowsWebApp#jwt_allowed_client_applications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#jwt_allowed_client_applications WindowsWebApp#jwt_allowed_client_applications}
 
 ---
 
@@ -15366,7 +15366,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 A list of Allowed Groups in the JWT Claim.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#jwt_allowed_groups WindowsWebApp#jwt_allowed_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#jwt_allowed_groups WindowsWebApp#jwt_allowed_groups}
 
 ---
 
@@ -15376,7 +15376,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 A map of key-value pairs to send to the Authorisation Endpoint when a user logs in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#login_parameters WindowsWebApp#login_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#login_parameters WindowsWebApp#login_parameters}
 
 ---
 
@@ -15386,7 +15386,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the www-authenticate provider should be omitted from the request? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#www_authentication_disabled WindowsWebApp#www_authentication_disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#www_authentication_disabled WindowsWebApp#www_authentication_disabled}
 
 ---
 
@@ -15405,7 +15405,7 @@ def put_apple_v2(
 
 The OpenID Connect Client ID for the Apple web application.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -15415,7 +15415,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the `client_secret` value used for Apple Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -15433,7 +15433,7 @@ def put_azure_static_web_app_v2(
 
 The ID of the Client to use to authenticate with Azure Static Web App Authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -15468,7 +15468,7 @@ def put_facebook_v2(
 
 The App ID of the Facebook app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_id WindowsWebApp#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_id WindowsWebApp#app_id}
 
 ---
 
@@ -15478,7 +15478,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the `app_secret` value used for Facebook Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#app_secret_setting_name WindowsWebApp#app_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#app_secret_setting_name WindowsWebApp#app_secret_setting_name}
 
 ---
 
@@ -15488,7 +15488,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The version of the Facebook API to be used while logging in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#graph_api_version WindowsWebApp#graph_api_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#graph_api_version WindowsWebApp#graph_api_version}
 
 ---
 
@@ -15498,7 +15498,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of scopes to be requested as part of Facebook Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#login_scopes WindowsWebApp#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#login_scopes WindowsWebApp#login_scopes}
 
 ---
 
@@ -15518,7 +15518,7 @@ def put_github_v2(
 
 The ID of the GitHub app used for login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -15528,7 +15528,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the `client_secret` value used for GitHub Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -15538,7 +15538,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#login_scopes WindowsWebApp#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#login_scopes WindowsWebApp#login_scopes}
 
 ---
 
@@ -15559,7 +15559,7 @@ def put_google_v2(
 
 The OpenID Connect Client ID for the Google web application.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -15569,7 +15569,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the `client_secret` value used for Google Login.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -15579,7 +15579,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
 
 ---
 
@@ -15589,7 +15589,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of Login scopes that will be requested as part of Google Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#login_scopes WindowsWebApp#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#login_scopes WindowsWebApp#login_scopes}
 
 ---
 
@@ -15619,7 +15619,7 @@ External URLs that can be redirected to as part of logging in or logging out of 
 
 This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_external_redirect_urls WindowsWebApp#allowed_external_redirect_urls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_external_redirect_urls WindowsWebApp#allowed_external_redirect_urls}
 
 ---
 
@@ -15629,7 +15629,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The method by which cookies expire. Possible values include: `FixedTime`, and `IdentityProviderDerived`. Defaults to `FixedTime`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#cookie_expiration_convention WindowsWebApp#cookie_expiration_convention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#cookie_expiration_convention WindowsWebApp#cookie_expiration_convention}
 
 ---
 
@@ -15639,7 +15639,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The time after the request is made when the session cookie should expire. Defaults to `08:00:00`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#cookie_expiration_time WindowsWebApp#cookie_expiration_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#cookie_expiration_time WindowsWebApp#cookie_expiration_time}
 
 ---
 
@@ -15649,7 +15649,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The endpoint to which logout requests should be made.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#logout_endpoint WindowsWebApp#logout_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#logout_endpoint WindowsWebApp#logout_endpoint}
 
 ---
 
@@ -15659,7 +15659,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The time after the request is made when the nonce should expire. Defaults to `00:05:00`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#nonce_expiration_time WindowsWebApp#nonce_expiration_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#nonce_expiration_time WindowsWebApp#nonce_expiration_time}
 
 ---
 
@@ -15669,7 +15669,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#preserve_url_fragments_for_logins WindowsWebApp#preserve_url_fragments_for_logins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#preserve_url_fragments_for_logins WindowsWebApp#preserve_url_fragments_for_logins}
 
 ---
 
@@ -15681,7 +15681,7 @@ The number of hours after session token expiration that a session token can be u
 
 Defaults to `72` hours.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#token_refresh_extension_time WindowsWebApp#token_refresh_extension_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#token_refresh_extension_time WindowsWebApp#token_refresh_extension_time}
 
 ---
 
@@ -15691,7 +15691,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the Token Store configuration Enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#token_store_enabled WindowsWebApp#token_store_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#token_store_enabled WindowsWebApp#token_store_enabled}
 
 ---
 
@@ -15701,7 +15701,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The directory path in the App Filesystem in which the tokens will be stored.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#token_store_path WindowsWebApp#token_store_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#token_store_path WindowsWebApp#token_store_path}
 
 ---
 
@@ -15711,7 +15711,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The name of the app setting which contains the SAS URL of the blob storage containing the tokens.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#token_store_sas_setting_name WindowsWebApp#token_store_sas_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#token_store_sas_setting_name WindowsWebApp#token_store_sas_setting_name}
 
 ---
 
@@ -15721,7 +15721,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the nonce be validated while completing the login flow. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#validate_nonce WindowsWebApp#validate_nonce}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#validate_nonce WindowsWebApp#validate_nonce}
 
 ---
 
@@ -15742,7 +15742,7 @@ def put_microsoft_v2(
 
 The OAuth 2.0 client ID that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_id WindowsWebApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_id WindowsWebApp#client_id}
 
 ---
 
@@ -15752,7 +15752,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#client_secret_setting_name WindowsWebApp#client_secret_setting_name}
 
 ---
 
@@ -15762,7 +15762,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_audiences WindowsWebApp#allowed_audiences}
 
 ---
 
@@ -15772,7 +15772,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The list of Login scopes that will be requested as part of Microsoft Account authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#login_scopes WindowsWebApp#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#login_scopes WindowsWebApp#login_scopes}
 
 ---
 
@@ -15791,7 +15791,7 @@ def put_twitter_v2(
 
 The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#consumer_key WindowsWebApp#consumer_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#consumer_key WindowsWebApp#consumer_key}
 
 ---
 
@@ -15801,7 +15801,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#consumer_secret_setting_name WindowsWebApp#consumer_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#consumer_secret_setting_name WindowsWebApp#consumer_secret_setting_name}
 
 ---
 
@@ -17027,7 +17027,7 @@ def put_schedule(
 
 How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#frequency_interval WindowsWebApp#frequency_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#frequency_interval WindowsWebApp#frequency_interval}
 
 ---
 
@@ -17037,7 +17037,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The unit of time for how often the backup should take place. Possible values include: `Day` and `Hour`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#frequency_unit WindowsWebApp#frequency_unit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#frequency_unit WindowsWebApp#frequency_unit}
 
 ---
 
@@ -17047,7 +17047,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the service keep at least one backup, regardless of age of backup. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#keep_at_least_one_backup WindowsWebApp#keep_at_least_one_backup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#keep_at_least_one_backup WindowsWebApp#keep_at_least_one_backup}
 
 ---
 
@@ -17057,7 +17057,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 After how many days backups should be deleted.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#retention_period_days WindowsWebApp#retention_period_days}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#retention_period_days WindowsWebApp#retention_period_days}
 
 ---
 
@@ -17067,7 +17067,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 When the schedule should start working in RFC-3339 format.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#start_time WindowsWebApp#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#start_time WindowsWebApp#start_time}
 
 ---
 
@@ -19069,7 +19069,7 @@ def put_azure_blob_storage(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#level WindowsWebApp#level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#level WindowsWebApp#level}.
 
 ---
 
@@ -19077,7 +19077,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}.
 
 ---
 
@@ -19085,7 +19085,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#sas_url WindowsWebApp#sas_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#sas_url WindowsWebApp#sas_url}.
 
 ---
 
@@ -20073,7 +20073,7 @@ def put_azure_blob_storage(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#sas_url WindowsWebApp#sas_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#sas_url WindowsWebApp#sas_url}.
 
 ---
 
@@ -20081,7 +20081,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}.
 
 ---
 
@@ -20098,7 +20098,7 @@ def put_file_system(
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#retention_in_days WindowsWebApp#retention_in_days}.
 
 ---
 
@@ -20106,7 +20106,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#retention_in_mb WindowsWebApp#retention_in_mb}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#retention_in_mb WindowsWebApp#retention_in_mb}.
 
 ---
 
@@ -20459,7 +20459,7 @@ def put_application_logs(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#file_system_level WindowsWebApp#file_system_level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#file_system_level WindowsWebApp#file_system_level}.
 
 ---
 
@@ -20469,7 +20469,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 azure_blob_storage block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#azure_blob_storage WindowsWebApp#azure_blob_storage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#azure_blob_storage WindowsWebApp#azure_blob_storage}
 
 ---
 
@@ -20488,7 +20488,7 @@ def put_http_logs(
 
 azure_blob_storage block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#azure_blob_storage WindowsWebApp#azure_blob_storage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#azure_blob_storage WindowsWebApp#azure_blob_storage}
 
 ---
 
@@ -20498,7 +20498,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 file_system block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#file_system WindowsWebApp#file_system}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#file_system WindowsWebApp#file_system}
 
 ---
 
@@ -21938,7 +21938,7 @@ def put_custom_action(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#executable WindowsWebApp#executable}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#executable WindowsWebApp#executable}.
 
 ---
 
@@ -21946,7 +21946,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#parameters WindowsWebApp#parameters}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#parameters WindowsWebApp#parameters}.
 
 ---
 
@@ -22318,7 +22318,7 @@ def put_action(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#action_type WindowsWebApp#action_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#action_type WindowsWebApp#action_type}.
 
 ---
 
@@ -22328,7 +22328,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 custom_action block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#custom_action WindowsWebApp#custom_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#custom_action WindowsWebApp#custom_action}
 
 ---
 
@@ -22336,7 +22336,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#minimum_process_execution_time WindowsWebApp#minimum_process_execution_time}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#minimum_process_execution_time WindowsWebApp#minimum_process_execution_time}.
 
 ---
 
@@ -22355,7 +22355,7 @@ def put_trigger(
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#private_memory_kb WindowsWebApp#private_memory_kb}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#private_memory_kb WindowsWebApp#private_memory_kb}.
 
 ---
 
@@ -22365,7 +22365,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 requests block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#requests WindowsWebApp#requests}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#requests WindowsWebApp#requests}
 
 ---
 
@@ -22375,7 +22375,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 slow_request block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#slow_request WindowsWebApp#slow_request}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#slow_request WindowsWebApp#slow_request}
 
 ---
 
@@ -22385,7 +22385,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 status_code block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#status_code WindowsWebApp#status_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#status_code WindowsWebApp#status_code}
 
 ---
 
@@ -22727,7 +22727,7 @@ def put_requests(
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#count WindowsWebApp#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#count WindowsWebApp#count}.
 
 ---
 
@@ -22735,7 +22735,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#interval WindowsWebApp#interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#interval WindowsWebApp#interval}.
 
 ---
 
@@ -22754,7 +22754,7 @@ def put_slow_request(
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#count WindowsWebApp#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#count WindowsWebApp#count}.
 
 ---
 
@@ -22762,7 +22762,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#interval WindowsWebApp#interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#interval WindowsWebApp#interval}.
 
 ---
 
@@ -22770,7 +22770,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#time_taken WindowsWebApp#time_taken}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#time_taken WindowsWebApp#time_taken}.
 
 ---
 
@@ -22778,7 +22778,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#path WindowsWebApp#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#path WindowsWebApp#path}.
 
 ---
 
@@ -26085,7 +26085,7 @@ def put_application_stack(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#current_stack WindowsWebApp#current_stack}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#current_stack WindowsWebApp#current_stack}.
 
 ---
 
@@ -26093,7 +26093,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#docker_container_name WindowsWebApp#docker_container_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#docker_container_name WindowsWebApp#docker_container_name}.
 
 ---
 
@@ -26101,7 +26101,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#docker_container_registry WindowsWebApp#docker_container_registry}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#docker_container_registry WindowsWebApp#docker_container_registry}.
 
 ---
 
@@ -26109,7 +26109,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#docker_container_tag WindowsWebApp#docker_container_tag}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#docker_container_tag WindowsWebApp#docker_container_tag}.
 
 ---
 
@@ -26119,7 +26119,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 The version of DotNetCore to use.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#dotnet_core_version WindowsWebApp#dotnet_core_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#dotnet_core_version WindowsWebApp#dotnet_core_version}
 
 ---
 
@@ -26127,7 +26127,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#dotnet_version WindowsWebApp#dotnet_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#dotnet_version WindowsWebApp#dotnet_version}.
 
 ---
 
@@ -26135,7 +26135,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#java_container WindowsWebApp#java_container}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#java_container WindowsWebApp#java_container}.
 
 ---
 
@@ -26143,7 +26143,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#java_container_version WindowsWebApp#java_container_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#java_container_version WindowsWebApp#java_container_version}.
 
 ---
 
@@ -26153,7 +26153,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Should the application use the embedded web server for the version of Java in use.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#java_embedded_server_enabled WindowsWebApp#java_embedded_server_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#java_embedded_server_enabled WindowsWebApp#java_embedded_server_enabled}
 
 ---
 
@@ -26161,7 +26161,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#java_version WindowsWebApp#java_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#java_version WindowsWebApp#java_version}.
 
 ---
 
@@ -26169,7 +26169,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#node_version WindowsWebApp#node_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#node_version WindowsWebApp#node_version}.
 
 ---
 
@@ -26177,7 +26177,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#php_version WindowsWebApp#php_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#php_version WindowsWebApp#php_version}.
 
 ---
 
@@ -26185,7 +26185,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#python WindowsWebApp#python}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#python WindowsWebApp#python}.
 
 ---
 
@@ -26193,7 +26193,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#python_version WindowsWebApp#python_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#python_version WindowsWebApp#python_version}.
 
 ---
 
@@ -26201,7 +26201,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#tomcat_version WindowsWebApp#tomcat_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#tomcat_version WindowsWebApp#tomcat_version}.
 
 ---
 
@@ -26220,7 +26220,7 @@ def put_auto_heal_setting(
 
 action block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#action WindowsWebApp#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#action WindowsWebApp#action}
 
 ---
 
@@ -26230,7 +26230,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 trigger block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#trigger WindowsWebApp#trigger}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#trigger WindowsWebApp#trigger}
 
 ---
 
@@ -26249,7 +26249,7 @@ def put_cors(
 
 Specifies a list of origins that should be allowed to make cross-origin calls.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#allowed_origins WindowsWebApp#allowed_origins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#allowed_origins WindowsWebApp#allowed_origins}
 
 ---
 
@@ -26259,7 +26259,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 Are credentials allowed in CORS requests? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#support_credentials WindowsWebApp#support_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/windows_web_app#support_credentials WindowsWebApp#support_credentials}
 
 ---
 

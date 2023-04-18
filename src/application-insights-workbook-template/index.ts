@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,76 +8,76 @@ import * as cdktf from 'cdktf';
 
 export interface ApplicationInsightsWorkbookTemplateConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#author ApplicationInsightsWorkbookTemplate#author}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#author ApplicationInsightsWorkbookTemplate#author}
   */
   readonly author?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#id ApplicationInsightsWorkbookTemplate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#id ApplicationInsightsWorkbookTemplate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#localized ApplicationInsightsWorkbookTemplate#localized}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#localized ApplicationInsightsWorkbookTemplate#localized}
   */
   readonly localized?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#location ApplicationInsightsWorkbookTemplate#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#location ApplicationInsightsWorkbookTemplate#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#name ApplicationInsightsWorkbookTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#name ApplicationInsightsWorkbookTemplate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#priority ApplicationInsightsWorkbookTemplate#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#priority ApplicationInsightsWorkbookTemplate#priority}
   */
   readonly priority?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#resource_group_name ApplicationInsightsWorkbookTemplate#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#resource_group_name ApplicationInsightsWorkbookTemplate#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#tags ApplicationInsightsWorkbookTemplate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#tags ApplicationInsightsWorkbookTemplate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#template_data ApplicationInsightsWorkbookTemplate#template_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#template_data ApplicationInsightsWorkbookTemplate#template_data}
   */
   readonly templateData: string;
   /**
   * galleries block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#galleries ApplicationInsightsWorkbookTemplate#galleries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#galleries ApplicationInsightsWorkbookTemplate#galleries}
   */
   readonly galleries: ApplicationInsightsWorkbookTemplateGalleries[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#timeouts ApplicationInsightsWorkbookTemplate#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#timeouts ApplicationInsightsWorkbookTemplate#timeouts}
   */
   readonly timeouts?: ApplicationInsightsWorkbookTemplateTimeouts;
 }
 export interface ApplicationInsightsWorkbookTemplateGalleries {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#category ApplicationInsightsWorkbookTemplate#category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#category ApplicationInsightsWorkbookTemplate#category}
   */
   readonly category: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#name ApplicationInsightsWorkbookTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#name ApplicationInsightsWorkbookTemplate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#order ApplicationInsightsWorkbookTemplate#order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#order ApplicationInsightsWorkbookTemplate#order}
   */
   readonly order?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#resource_type ApplicationInsightsWorkbookTemplate#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#resource_type ApplicationInsightsWorkbookTemplate#resource_type}
   */
   readonly resourceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#type ApplicationInsightsWorkbookTemplate#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#type ApplicationInsightsWorkbookTemplate#type}
   */
   readonly type?: string;
 }
@@ -260,24 +260,24 @@ export class ApplicationInsightsWorkbookTemplateGalleriesList extends cdktf.Comp
 }
 export interface ApplicationInsightsWorkbookTemplateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#create ApplicationInsightsWorkbookTemplate#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#create ApplicationInsightsWorkbookTemplate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#delete ApplicationInsightsWorkbookTemplate#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#delete ApplicationInsightsWorkbookTemplate#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#read ApplicationInsightsWorkbookTemplate#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#read ApplicationInsightsWorkbookTemplate#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template#update ApplicationInsightsWorkbookTemplate#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template#update ApplicationInsightsWorkbookTemplate#update}
   */
   readonly update?: string;
 }
 
-export function applicationInsightsWorkbookTemplateTimeoutsToTerraform(struct?: ApplicationInsightsWorkbookTemplateTimeoutsOutputReference | ApplicationInsightsWorkbookTemplateTimeouts | cdktf.IResolvable): any {
+export function applicationInsightsWorkbookTemplateTimeoutsToTerraform(struct?: ApplicationInsightsWorkbookTemplateTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -299,7 +299,7 @@ export class ApplicationInsightsWorkbookTemplateTimeoutsOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ApplicationInsightsWorkbookTemplateTimeouts | cdktf.IResolvable | undefined {
@@ -416,7 +416,7 @@ export class ApplicationInsightsWorkbookTemplateTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template azurerm_application_insights_workbook_template}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template azurerm_application_insights_workbook_template}
 */
 export class ApplicationInsightsWorkbookTemplate extends cdktf.TerraformResource {
 
@@ -430,7 +430,7 @@ export class ApplicationInsightsWorkbookTemplate extends cdktf.TerraformResource
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template azurerm_application_insights_workbook_template} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/application_insights_workbook_template azurerm_application_insights_workbook_template} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

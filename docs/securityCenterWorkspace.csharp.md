@@ -1,6 +1,6 @@
 # `azurerm_security_center_workspace`
 
-Refer to the Terraform Registory for docs: [`azurerm_security_center_workspace`](https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace).
+Refer to the Terraform Registory for docs: [`azurerm_security_center_workspace`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace).
 
 # `securityCenterWorkspace` Submodule <a name="`securityCenterWorkspace` Submodule" id="@cdktf/provider-azurerm.securityCenterWorkspace"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_security_center_workspace`]
 
 ### SecurityCenterWorkspace <a name="SecurityCenterWorkspace" id="@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace azurerm_security_center_workspace}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace azurerm_security_center_workspace}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.Initializer"></a>
 
@@ -366,7 +366,7 @@ SecurityCenterWorkspace.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -468,10 +468,10 @@ public object Connection { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -634,7 +634,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new SecurityCenterWorkspaceConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -652,15 +652,15 @@ new SecurityCenterWorkspaceConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.scope">Scope</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#scope SecurityCenterWorkspace#scope}. |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.workspaceId">WorkspaceId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#workspace_id SecurityCenterWorkspace#workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#id SecurityCenterWorkspace#id}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.scope">Scope</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#scope SecurityCenterWorkspace#scope}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.workspaceId">WorkspaceId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#workspace_id SecurityCenterWorkspace#workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#id SecurityCenterWorkspace#id}. |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts">SecurityCenterWorkspaceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -678,10 +678,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -743,7 +743,7 @@ public string Scope { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#scope SecurityCenterWorkspace#scope}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#scope SecurityCenterWorkspace#scope}.
 
 ---
 
@@ -755,7 +755,7 @@ public string WorkspaceId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#workspace_id SecurityCenterWorkspace#workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#workspace_id SecurityCenterWorkspace#workspace_id}.
 
 ---
 
@@ -767,7 +767,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#id SecurityCenterWorkspace#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#id SecurityCenterWorkspace#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -784,7 +784,7 @@ public SecurityCenterWorkspaceTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#timeouts SecurityCenterWorkspace#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#timeouts SecurityCenterWorkspace#timeouts}
 
 ---
 
@@ -807,10 +807,10 @@ new SecurityCenterWorkspaceTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#create SecurityCenterWorkspace#create}. |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#delete SecurityCenterWorkspace#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#read SecurityCenterWorkspace#read}. |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#update SecurityCenterWorkspace#update}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#create SecurityCenterWorkspace#create}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#delete SecurityCenterWorkspace#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#read SecurityCenterWorkspace#read}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#update SecurityCenterWorkspace#update}. |
 
 ---
 
@@ -822,7 +822,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#create SecurityCenterWorkspace#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#create SecurityCenterWorkspace#create}.
 
 ---
 
@@ -834,7 +834,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#delete SecurityCenterWorkspace#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#delete SecurityCenterWorkspace#delete}.
 
 ---
 
@@ -846,7 +846,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#read SecurityCenterWorkspace#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#read SecurityCenterWorkspace#read}.
 
 ---
 
@@ -858,7 +858,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#update SecurityCenterWorkspace#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/security_center_workspace#update SecurityCenterWorkspace#update}.
 
 ---
 

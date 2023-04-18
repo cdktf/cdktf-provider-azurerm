@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/proximity_placement_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermProximityPlacementGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group#id DataAzurermProximityPlacementGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/proximity_placement_group#id DataAzurermProximityPlacementGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group#name DataAzurermProximityPlacementGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/proximity_placement_group#name DataAzurermProximityPlacementGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group#resource_group_name DataAzurermProximityPlacementGroup#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/proximity_placement_group#resource_group_name DataAzurermProximityPlacementGroup#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group#timeouts DataAzurermProximityPlacementGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/proximity_placement_group#timeouts DataAzurermProximityPlacementGroup#timeouts}
   */
   readonly timeouts?: DataAzurermProximityPlacementGroupTimeouts;
 }
 export interface DataAzurermProximityPlacementGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group#read DataAzurermProximityPlacementGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/proximity_placement_group#read DataAzurermProximityPlacementGroup#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermProximityPlacementGroupTimeoutsToTerraform(struct?: DataAzurermProximityPlacementGroupTimeoutsOutputReference | DataAzurermProximityPlacementGroupTimeouts | cdktf.IResolvable): any {
+export function dataAzurermProximityPlacementGroupTimeoutsToTerraform(struct?: DataAzurermProximityPlacementGroupTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -55,7 +55,7 @@ export class DataAzurermProximityPlacementGroupTimeoutsOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermProximityPlacementGroupTimeouts | cdktf.IResolvable | undefined {
@@ -106,7 +106,7 @@ export class DataAzurermProximityPlacementGroupTimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group azurerm_proximity_placement_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/proximity_placement_group azurerm_proximity_placement_group}
 */
 export class DataAzurermProximityPlacementGroup extends cdktf.TerraformDataSource {
 
@@ -120,7 +120,7 @@ export class DataAzurermProximityPlacementGroup extends cdktf.TerraformDataSourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group azurerm_proximity_placement_group} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/proximity_placement_group azurerm_proximity_placement_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

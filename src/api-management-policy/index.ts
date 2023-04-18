@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/api_management_policy
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementPolicyAConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_policy#api_management_id ApiManagementPolicyA#api_management_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_policy#api_management_id ApiManagementPolicyA#api_management_id}
   */
   readonly apiManagementId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_policy#id ApiManagementPolicyA#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_policy#id ApiManagementPolicyA#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_policy#xml_content ApiManagementPolicyA#xml_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_policy#xml_content ApiManagementPolicyA#xml_content}
   */
   readonly xmlContent?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_policy#xml_link ApiManagementPolicyA#xml_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_policy#xml_link ApiManagementPolicyA#xml_link}
   */
   readonly xmlLink?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_policy#timeouts ApiManagementPolicyA#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_policy#timeouts ApiManagementPolicyA#timeouts}
   */
   readonly timeouts?: ApiManagementPolicyTimeouts;
 }
 export interface ApiManagementPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_policy#create ApiManagementPolicyA#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_policy#create ApiManagementPolicyA#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_policy#delete ApiManagementPolicyA#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_policy#delete ApiManagementPolicyA#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_policy#read ApiManagementPolicyA#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_policy#read ApiManagementPolicyA#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_policy#update ApiManagementPolicyA#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_policy#update ApiManagementPolicyA#update}
   */
   readonly update?: string;
 }
 
-export function apiManagementPolicyTimeoutsToTerraform(struct?: ApiManagementPolicyTimeoutsOutputReference | ApiManagementPolicyTimeouts | cdktf.IResolvable): any {
+export function apiManagementPolicyTimeoutsToTerraform(struct?: ApiManagementPolicyTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -74,7 +74,7 @@ export class ApiManagementPolicyTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ApiManagementPolicyTimeouts | cdktf.IResolvable | undefined {
@@ -191,7 +191,7 @@ export class ApiManagementPolicyTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_policy azurerm_api_management_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_policy azurerm_api_management_policy}
 */
 export class ApiManagementPolicyA extends cdktf.TerraformResource {
 
@@ -205,7 +205,7 @@ export class ApiManagementPolicyA extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_policy azurerm_api_management_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_policy azurerm_api_management_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

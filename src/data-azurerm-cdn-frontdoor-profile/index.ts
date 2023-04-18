@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_profile
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_profile
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermCdnFrontdoorProfileConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_profile#id DataAzurermCdnFrontdoorProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_profile#id DataAzurermCdnFrontdoorProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_profile#name DataAzurermCdnFrontdoorProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_profile#name DataAzurermCdnFrontdoorProfile#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_profile#resource_group_name DataAzurermCdnFrontdoorProfile#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_profile#resource_group_name DataAzurermCdnFrontdoorProfile#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_profile#timeouts DataAzurermCdnFrontdoorProfile#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_profile#timeouts DataAzurermCdnFrontdoorProfile#timeouts}
   */
   readonly timeouts?: DataAzurermCdnFrontdoorProfileTimeouts;
 }
 export interface DataAzurermCdnFrontdoorProfileTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_profile#read DataAzurermCdnFrontdoorProfile#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_profile#read DataAzurermCdnFrontdoorProfile#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermCdnFrontdoorProfileTimeoutsToTerraform(struct?: DataAzurermCdnFrontdoorProfileTimeoutsOutputReference | DataAzurermCdnFrontdoorProfileTimeouts | cdktf.IResolvable): any {
+export function dataAzurermCdnFrontdoorProfileTimeoutsToTerraform(struct?: DataAzurermCdnFrontdoorProfileTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -55,7 +55,7 @@ export class DataAzurermCdnFrontdoorProfileTimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermCdnFrontdoorProfileTimeouts | cdktf.IResolvable | undefined {
@@ -106,7 +106,7 @@ export class DataAzurermCdnFrontdoorProfileTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_profile azurerm_cdn_frontdoor_profile}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_profile azurerm_cdn_frontdoor_profile}
 */
 export class DataAzurermCdnFrontdoorProfile extends cdktf.TerraformDataSource {
 
@@ -120,7 +120,7 @@ export class DataAzurermCdnFrontdoorProfile extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_frontdoor_profile azurerm_cdn_frontdoor_profile} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cdn_frontdoor_profile azurerm_cdn_frontdoor_profile} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

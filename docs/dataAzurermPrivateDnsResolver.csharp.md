@@ -1,6 +1,6 @@
 # `data_azurerm_private_dns_resolver`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_private_dns_resolver`](https://www.terraform.io/docs/providers/azurerm/d/private_dns_resolver).
+Refer to the Terraform Registory for docs: [`data_azurerm_private_dns_resolver`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_resolver).
 
 # `dataAzurermPrivateDnsResolver` Submodule <a name="`dataAzurermPrivateDnsResolver` Submodule" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_private_dns_resolver`]
 
 ### DataAzurermPrivateDnsResolver <a name="DataAzurermPrivateDnsResolver" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolver"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_resolver azurerm_private_dns_resolver}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_resolver azurerm_private_dns_resolver}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolver.Initializer"></a>
 
@@ -365,7 +365,7 @@ DataAzurermPrivateDnsResolver.IsTerraformDataSource(object X);
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolver.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolver.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolver.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolver.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolver.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolver.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolver.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolver.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -459,10 +459,10 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolver.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -645,7 +645,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new DataAzurermPrivateDnsResolverConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -663,15 +663,15 @@ new DataAzurermPrivateDnsResolverConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_resolver#name DataAzurermPrivateDnsResolver#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_resolver#resource_group_name DataAzurermPrivateDnsResolver#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_resolver#id DataAzurermPrivateDnsResolver#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_resolver#name DataAzurermPrivateDnsResolver#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_resolver#resource_group_name DataAzurermPrivateDnsResolver#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_resolver#id DataAzurermPrivateDnsResolver#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverTimeouts">DataAzurermPrivateDnsResolverTimeouts</a></code> | timeouts block. |
 
 ---
@@ -689,10 +689,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -754,7 +754,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_resolver#name DataAzurermPrivateDnsResolver#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_resolver#name DataAzurermPrivateDnsResolver#name}.
 
 ---
 
@@ -766,7 +766,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_resolver#resource_group_name DataAzurermPrivateDnsResolver#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_resolver#resource_group_name DataAzurermPrivateDnsResolver#resource_group_name}.
 
 ---
 
@@ -778,7 +778,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_resolver#id DataAzurermPrivateDnsResolver#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_resolver#id DataAzurermPrivateDnsResolver#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -795,7 +795,7 @@ public DataAzurermPrivateDnsResolverTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_resolver#timeouts DataAzurermPrivateDnsResolver#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_resolver#timeouts DataAzurermPrivateDnsResolver#timeouts}
 
 ---
 
@@ -815,7 +815,7 @@ new DataAzurermPrivateDnsResolverTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_resolver#read DataAzurermPrivateDnsResolver#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver.DataAzurermPrivateDnsResolverTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_resolver#read DataAzurermPrivateDnsResolver#read}. |
 
 ---
 
@@ -827,7 +827,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_dns_resolver#read DataAzurermPrivateDnsResolver#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/private_dns_resolver#read DataAzurermPrivateDnsResolver#read}.
 
 ---
 

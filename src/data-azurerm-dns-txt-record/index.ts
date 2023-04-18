@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/dns_txt_record
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_txt_record
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,28 +8,28 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDnsTxtRecordConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_txt_record#id DataAzurermDnsTxtRecord#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_txt_record#id DataAzurermDnsTxtRecord#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_txt_record#name DataAzurermDnsTxtRecord#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_txt_record#name DataAzurermDnsTxtRecord#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_txt_record#resource_group_name DataAzurermDnsTxtRecord#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_txt_record#resource_group_name DataAzurermDnsTxtRecord#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_txt_record#zone_name DataAzurermDnsTxtRecord#zone_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_txt_record#zone_name DataAzurermDnsTxtRecord#zone_name}
   */
   readonly zoneName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_txt_record#timeouts DataAzurermDnsTxtRecord#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_txt_record#timeouts DataAzurermDnsTxtRecord#timeouts}
   */
   readonly timeouts?: DataAzurermDnsTxtRecordTimeouts;
 }
@@ -99,12 +99,12 @@ export class DataAzurermDnsTxtRecordRecordList extends cdktf.ComplexList {
 }
 export interface DataAzurermDnsTxtRecordTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_txt_record#read DataAzurermDnsTxtRecord#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_txt_record#read DataAzurermDnsTxtRecord#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermDnsTxtRecordTimeoutsToTerraform(struct?: DataAzurermDnsTxtRecordTimeoutsOutputReference | DataAzurermDnsTxtRecordTimeouts | cdktf.IResolvable): any {
+export function dataAzurermDnsTxtRecordTimeoutsToTerraform(struct?: DataAzurermDnsTxtRecordTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -123,7 +123,7 @@ export class DataAzurermDnsTxtRecordTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermDnsTxtRecordTimeouts | cdktf.IResolvable | undefined {
@@ -174,7 +174,7 @@ export class DataAzurermDnsTxtRecordTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/dns_txt_record azurerm_dns_txt_record}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_txt_record azurerm_dns_txt_record}
 */
 export class DataAzurermDnsTxtRecord extends cdktf.TerraformDataSource {
 
@@ -188,7 +188,7 @@ export class DataAzurermDnsTxtRecord extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/dns_txt_record azurerm_dns_txt_record} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/dns_txt_record azurerm_dns_txt_record} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

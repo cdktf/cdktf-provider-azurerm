@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/ip_group_cidr
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/ip_group_cidr
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface IpGroupCidrConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group_cidr#cidr IpGroupCidr#cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/ip_group_cidr#cidr IpGroupCidr#cidr}
   */
   readonly cidr: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group_cidr#id IpGroupCidr#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/ip_group_cidr#id IpGroupCidr#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group_cidr#ip_group_id IpGroupCidr#ip_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/ip_group_cidr#ip_group_id IpGroupCidr#ip_group_id}
   */
   readonly ipGroupId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group_cidr#timeouts IpGroupCidr#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/ip_group_cidr#timeouts IpGroupCidr#timeouts}
   */
   readonly timeouts?: IpGroupCidrTimeouts;
 }
 export interface IpGroupCidrTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group_cidr#create IpGroupCidr#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/ip_group_cidr#create IpGroupCidr#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group_cidr#delete IpGroupCidr#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/ip_group_cidr#delete IpGroupCidr#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group_cidr#read IpGroupCidr#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/ip_group_cidr#read IpGroupCidr#read}
   */
   readonly read?: string;
 }
 
-export function ipGroupCidrTimeoutsToTerraform(struct?: IpGroupCidrTimeoutsOutputReference | IpGroupCidrTimeouts | cdktf.IResolvable): any {
+export function ipGroupCidrTimeoutsToTerraform(struct?: IpGroupCidrTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -65,7 +65,7 @@ export class IpGroupCidrTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): IpGroupCidrTimeouts | cdktf.IResolvable | undefined {
@@ -160,7 +160,7 @@ export class IpGroupCidrTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group_cidr azurerm_ip_group_cidr}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/ip_group_cidr azurerm_ip_group_cidr}
 */
 export class IpGroupCidr extends cdktf.TerraformResource {
 
@@ -174,7 +174,7 @@ export class IpGroupCidr extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group_cidr azurerm_ip_group_cidr} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/ip_group_cidr azurerm_ip_group_cidr} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

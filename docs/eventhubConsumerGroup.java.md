@@ -1,6 +1,6 @@
 # `azurerm_eventhub_consumer_group`
 
-Refer to the Terraform Registory for docs: [`azurerm_eventhub_consumer_group`](https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group).
+Refer to the Terraform Registory for docs: [`azurerm_eventhub_consumer_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group).
 
 # `eventhubConsumerGroup` Submodule <a name="`eventhubConsumerGroup` Submodule" id="@cdktf/provider-azurerm.eventhubConsumerGroup"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_eventhub_consumer_group`](h
 
 ### EventhubConsumerGroup <a name="EventhubConsumerGroup" id="@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group azurerm_eventhub_consumer_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group azurerm_eventhub_consumer_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer"></a>
 
@@ -19,6 +19,7 @@ EventhubConsumerGroup.Builder.create(Construct scope, java.lang.String id)
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -41,19 +42,19 @@ EventhubConsumerGroup.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.eventhubName">eventhubName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#eventhub_name EventhubConsumerGroup#eventhub_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#name EventhubConsumerGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.namespaceName">namespaceName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#namespace_name EventhubConsumerGroup#namespace_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#resource_group_name EventhubConsumerGroup#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#id EventhubConsumerGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.eventhubName">eventhubName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#eventhub_name EventhubConsumerGroup#eventhub_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#name EventhubConsumerGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.namespaceName">namespaceName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#namespace_name EventhubConsumerGroup#namespace_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#resource_group_name EventhubConsumerGroup#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#id EventhubConsumerGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts">EventhubConsumerGroupTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.userMetadata">userMetadata</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#user_metadata EventhubConsumerGroup#user_metadata}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.userMetadata">userMetadata</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#user_metadata EventhubConsumerGroup#user_metadata}. |
 
 ---
 
@@ -83,7 +84,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -121,7 +122,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#eventhub_name EventhubConsumerGroup#eventhub_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#eventhub_name EventhubConsumerGroup#eventhub_name}.
 
 ---
 
@@ -129,7 +130,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#name EventhubConsumerGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#name EventhubConsumerGroup#name}.
 
 ---
 
@@ -137,7 +138,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#namespace_name EventhubConsumerGroup#namespace_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#namespace_name EventhubConsumerGroup#namespace_name}.
 
 ---
 
@@ -145,7 +146,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#resource_group_name EventhubConsumerGroup#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#resource_group_name EventhubConsumerGroup#resource_group_name}.
 
 ---
 
@@ -153,7 +154,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#id EventhubConsumerGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#id EventhubConsumerGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -166,7 +167,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#timeouts EventhubConsumerGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#timeouts EventhubConsumerGroup#timeouts}
 
 ---
 
@@ -174,7 +175,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#user_metadata EventhubConsumerGroup#user_metadata}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#user_metadata EventhubConsumerGroup#user_metadata}.
 
 ---
 
@@ -501,7 +502,7 @@ EventhubConsumerGroup.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -609,10 +610,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -837,6 +838,7 @@ EventhubConsumerGroupConfig.builder()
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -859,19 +861,19 @@ EventhubConsumerGroupConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.eventhubName">eventhubName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#eventhub_name EventhubConsumerGroup#eventhub_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#name EventhubConsumerGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.namespaceName">namespaceName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#namespace_name EventhubConsumerGroup#namespace_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#resource_group_name EventhubConsumerGroup#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#id EventhubConsumerGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.eventhubName">eventhubName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#eventhub_name EventhubConsumerGroup#eventhub_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#name EventhubConsumerGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.namespaceName">namespaceName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#namespace_name EventhubConsumerGroup#namespace_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#resource_group_name EventhubConsumerGroup#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#id EventhubConsumerGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts">EventhubConsumerGroupTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.userMetadata">userMetadata</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#user_metadata EventhubConsumerGroup#user_metadata}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.userMetadata">userMetadata</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#user_metadata EventhubConsumerGroup#user_metadata}. |
 
 ---
 
@@ -888,10 +890,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -953,7 +955,7 @@ public java.lang.String getEventhubName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#eventhub_name EventhubConsumerGroup#eventhub_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#eventhub_name EventhubConsumerGroup#eventhub_name}.
 
 ---
 
@@ -965,7 +967,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#name EventhubConsumerGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#name EventhubConsumerGroup#name}.
 
 ---
 
@@ -977,7 +979,7 @@ public java.lang.String getNamespaceName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#namespace_name EventhubConsumerGroup#namespace_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#namespace_name EventhubConsumerGroup#namespace_name}.
 
 ---
 
@@ -989,7 +991,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#resource_group_name EventhubConsumerGroup#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#resource_group_name EventhubConsumerGroup#resource_group_name}.
 
 ---
 
@@ -1001,7 +1003,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#id EventhubConsumerGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#id EventhubConsumerGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1018,7 +1020,7 @@ public EventhubConsumerGroupTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#timeouts EventhubConsumerGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#timeouts EventhubConsumerGroup#timeouts}
 
 ---
 
@@ -1030,7 +1032,7 @@ public java.lang.String getUserMetadata();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#user_metadata EventhubConsumerGroup#user_metadata}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#user_metadata EventhubConsumerGroup#user_metadata}.
 
 ---
 
@@ -1053,10 +1055,10 @@ EventhubConsumerGroupTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#create EventhubConsumerGroup#create}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#delete EventhubConsumerGroup#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#read EventhubConsumerGroup#read}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#update EventhubConsumerGroup#update}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#create EventhubConsumerGroup#create}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#delete EventhubConsumerGroup#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#read EventhubConsumerGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#update EventhubConsumerGroup#update}. |
 
 ---
 
@@ -1068,7 +1070,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#create EventhubConsumerGroup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#create EventhubConsumerGroup#create}.
 
 ---
 
@@ -1080,7 +1082,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#delete EventhubConsumerGroup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#delete EventhubConsumerGroup#delete}.
 
 ---
 
@@ -1092,7 +1094,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#read EventhubConsumerGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#read EventhubConsumerGroup#read}.
 
 ---
 
@@ -1104,7 +1106,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group#update EventhubConsumerGroup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/eventhub_consumer_group#update EventhubConsumerGroup#update}.
 
 ---
 

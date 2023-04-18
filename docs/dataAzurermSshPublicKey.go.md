@@ -1,6 +1,6 @@
 # `data_azurerm_ssh_public_key`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_ssh_public_key`](https://www.terraform.io/docs/providers/azurerm/d/ssh_public_key).
+Refer to the Terraform Registory for docs: [`data_azurerm_ssh_public_key`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ssh_public_key).
 
 # `dataAzurermSshPublicKey` Submodule <a name="`dataAzurermSshPublicKey` Submodule" id="@cdktf/provider-azurerm.dataAzurermSshPublicKey"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_ssh_public_key`](https
 
 ### DataAzurermSshPublicKey <a name="DataAzurermSshPublicKey" id="@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKey"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/ssh_public_key azurerm_ssh_public_key}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ssh_public_key azurerm_ssh_public_key}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsshpublickey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsshpublickey"
 
 dataazurermsshpublickey.NewDataAzurermSshPublicKey(scope Construct, id *string, config DataAzurermSshPublicKeyConfig) DataAzurermSshPublicKey
 ```
@@ -304,7 +304,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsshpublickey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsshpublickey"
 
 dataazurermsshpublickey.DataAzurermSshPublicKey_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsshpublickey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsshpublickey"
 
 dataazurermsshpublickey.DataAzurermSshPublicKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ dataazurermsshpublickey.DataAzurermSshPublicKey_IsTerraformElement(x interface{}
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKey.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsshpublickey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsshpublickey"
 
 dataazurermsshpublickey.DataAzurermSshPublicKey_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -372,7 +372,7 @@ dataazurermsshpublickey.DataAzurermSshPublicKey_IsTerraformDataSource(x interfac
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKey.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>*map[string]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKey.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKey.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKey.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKey.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKey.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKey.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKey.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -466,10 +466,10 @@ func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKey.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -648,11 +648,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsshpublickey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsshpublickey"
 
 &dataazurermsshpublickey.DataAzurermSshPublicKeyConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -662,7 +662,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsshpubl
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermSshPublicKey.DataAzurermSshPublicKeyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.dataAzurermSshPublicKey.DataAzurermSshPublicKeyTimeouts,
 }
 ```
 
@@ -671,16 +671,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsshpubl
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ssh_public_key#name DataAzurermSshPublicKey#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ssh_public_key#resource_group_name DataAzurermSshPublicKey#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ssh_public_key#id DataAzurermSshPublicKey#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ssh_public_key#tags DataAzurermSshPublicKey#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ssh_public_key#name DataAzurermSshPublicKey#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ssh_public_key#resource_group_name DataAzurermSshPublicKey#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ssh_public_key#id DataAzurermSshPublicKey#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ssh_public_key#tags DataAzurermSshPublicKey#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyTimeouts">DataAzurermSshPublicKeyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -698,10 +698,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -763,7 +763,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ssh_public_key#name DataAzurermSshPublicKey#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ssh_public_key#name DataAzurermSshPublicKey#name}.
 
 ---
 
@@ -775,7 +775,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ssh_public_key#resource_group_name DataAzurermSshPublicKey#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ssh_public_key#resource_group_name DataAzurermSshPublicKey#resource_group_name}.
 
 ---
 
@@ -787,7 +787,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ssh_public_key#id DataAzurermSshPublicKey#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ssh_public_key#id DataAzurermSshPublicKey#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -802,7 +802,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ssh_public_key#tags DataAzurermSshPublicKey#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ssh_public_key#tags DataAzurermSshPublicKey#tags}.
 
 ---
 
@@ -816,7 +816,7 @@ Timeouts DataAzurermSshPublicKeyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ssh_public_key#timeouts DataAzurermSshPublicKey#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ssh_public_key#timeouts DataAzurermSshPublicKey#timeouts}
 
 ---
 
@@ -825,7 +825,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsshpublickey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsshpublickey"
 
 &dataazurermsshpublickey.DataAzurermSshPublicKeyTimeouts {
 	Read: *string,
@@ -836,7 +836,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsshpubl
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ssh_public_key#read DataAzurermSshPublicKey#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ssh_public_key#read DataAzurermSshPublicKey#read}. |
 
 ---
 
@@ -848,7 +848,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ssh_public_key#read DataAzurermSshPublicKey#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/ssh_public_key#read DataAzurermSshPublicKey#read}.
 
 ---
 
@@ -859,7 +859,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSshPublicKey.DataAzurermSshPublicKeyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermsshpublickey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsshpublickey"
 
 dataazurermsshpublickey.NewDataAzurermSshPublicKeyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermSshPublicKeyTimeoutsOutputReference
 ```

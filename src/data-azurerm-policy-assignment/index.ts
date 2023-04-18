@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/policy_assignment
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_assignment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermPolicyAssignmentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_assignment#id DataAzurermPolicyAssignment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_assignment#id DataAzurermPolicyAssignment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_assignment#name DataAzurermPolicyAssignment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_assignment#name DataAzurermPolicyAssignment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_assignment#scope_id DataAzurermPolicyAssignment#scope_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_assignment#scope_id DataAzurermPolicyAssignment#scope_id}
   */
   readonly scopeId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_assignment#timeouts DataAzurermPolicyAssignment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_assignment#timeouts DataAzurermPolicyAssignment#timeouts}
   */
   readonly timeouts?: DataAzurermPolicyAssignmentTimeouts;
 }
@@ -179,12 +179,12 @@ export class DataAzurermPolicyAssignmentNonComplianceMessageList extends cdktf.C
 }
 export interface DataAzurermPolicyAssignmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_assignment#read DataAzurermPolicyAssignment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_assignment#read DataAzurermPolicyAssignment#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermPolicyAssignmentTimeoutsToTerraform(struct?: DataAzurermPolicyAssignmentTimeoutsOutputReference | DataAzurermPolicyAssignmentTimeouts | cdktf.IResolvable): any {
+export function dataAzurermPolicyAssignmentTimeoutsToTerraform(struct?: DataAzurermPolicyAssignmentTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -203,7 +203,7 @@ export class DataAzurermPolicyAssignmentTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermPolicyAssignmentTimeouts | cdktf.IResolvable | undefined {
@@ -254,7 +254,7 @@ export class DataAzurermPolicyAssignmentTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/policy_assignment azurerm_policy_assignment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_assignment azurerm_policy_assignment}
 */
 export class DataAzurermPolicyAssignment extends cdktf.TerraformDataSource {
 
@@ -268,7 +268,7 @@ export class DataAzurermPolicyAssignment extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/policy_assignment azurerm_policy_assignment} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/policy_assignment azurerm_policy_assignment} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,6 +1,6 @@
 # `azurerm_data_protection_resource_guard`
 
-Refer to the Terraform Registory for docs: [`azurerm_data_protection_resource_guard`](https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard).
+Refer to the Terraform Registory for docs: [`azurerm_data_protection_resource_guard`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard).
 
 # `dataProtectionResourceGuard` Submodule <a name="`dataProtectionResourceGuard` Submodule" id="@cdktf/provider-azurerm.dataProtectionResourceGuard"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_data_protection_resource_gu
 
 ### DataProtectionResourceGuard <a name="DataProtectionResourceGuard" id="@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard azurerm_data_protection_resource_guard}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard azurerm_data_protection_resource_guard}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer"></a>
 
@@ -19,7 +19,7 @@ dataProtectionResourceGuard.DataProtectionResourceGuard(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -40,19 +40,19 @@ dataProtectionResourceGuard.DataProtectionResourceGuard(
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#location DataProtectionResourceGuard#location}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#name DataProtectionResourceGuard#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#resource_group_name DataProtectionResourceGuard#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#id DataProtectionResourceGuard#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#tags DataProtectionResourceGuard#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#location DataProtectionResourceGuard#location}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#name DataProtectionResourceGuard#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#resource_group_name DataProtectionResourceGuard#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#id DataProtectionResourceGuard#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#tags DataProtectionResourceGuard#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardTimeouts">DataProtectionResourceGuardTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.vaultCriticalOperationExclusionList">vault_critical_operation_exclusion_list</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#vault_critical_operation_exclusion_list DataProtectionResourceGuard#vault_critical_operation_exclusion_list}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.vaultCriticalOperationExclusionList">vault_critical_operation_exclusion_list</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#vault_critical_operation_exclusion_list DataProtectionResourceGuard#vault_critical_operation_exclusion_list}. |
 
 ---
 
@@ -82,7 +82,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#location DataProtectionResourceGuard#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#location DataProtectionResourceGuard#location}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#name DataProtectionResourceGuard#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#name DataProtectionResourceGuard#name}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#resource_group_name DataProtectionResourceGuard#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#resource_group_name DataProtectionResourceGuard#resource_group_name}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#id DataProtectionResourceGuard#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#id DataProtectionResourceGuard#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -155,7 +155,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#tags DataProtectionResourceGuard#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#tags DataProtectionResourceGuard#tags}.
 
 ---
 
@@ -165,7 +165,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#timeouts DataProtectionResourceGuard#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#timeouts DataProtectionResourceGuard#timeouts}
 
 ---
 
@@ -173,7 +173,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#vault_critical_operation_exclusion_list DataProtectionResourceGuard#vault_critical_operation_exclusion_list}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#vault_critical_operation_exclusion_list DataProtectionResourceGuard#vault_critical_operation_exclusion_list}.
 
 ---
 
@@ -429,7 +429,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#create DataProtectionResourceGuard#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#create DataProtectionResourceGuard#create}.
 
 ---
 
@@ -437,7 +437,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#delete DataProtectionResourceGuard#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#delete DataProtectionResourceGuard#delete}.
 
 ---
 
@@ -445,7 +445,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#read DataProtectionResourceGuard#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#read DataProtectionResourceGuard#read}.
 
 ---
 
@@ -453,7 +453,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#update DataProtectionResourceGuard#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#update DataProtectionResourceGuard#update}.
 
 ---
 
@@ -569,7 +569,7 @@ dataProtectionResourceGuard.DataProtectionResourceGuard.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -677,10 +677,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -903,7 +903,7 @@ from cdktf_cdktf_provider_azurerm import data_protection_resource_guard
 
 dataProtectionResourceGuard.DataProtectionResourceGuardConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -924,19 +924,19 @@ dataProtectionResourceGuard.DataProtectionResourceGuardConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#location DataProtectionResourceGuard#location}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#name DataProtectionResourceGuard#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#resource_group_name DataProtectionResourceGuard#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#id DataProtectionResourceGuard#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#tags DataProtectionResourceGuard#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#location DataProtectionResourceGuard#location}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#name DataProtectionResourceGuard#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#resource_group_name DataProtectionResourceGuard#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#id DataProtectionResourceGuard#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#tags DataProtectionResourceGuard#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardTimeouts">DataProtectionResourceGuardTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.vaultCriticalOperationExclusionList">vault_critical_operation_exclusion_list</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#vault_critical_operation_exclusion_list DataProtectionResourceGuard#vault_critical_operation_exclusion_list}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.vaultCriticalOperationExclusionList">vault_critical_operation_exclusion_list</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#vault_critical_operation_exclusion_list DataProtectionResourceGuard#vault_critical_operation_exclusion_list}. |
 
 ---
 
@@ -953,10 +953,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1018,7 +1018,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#location DataProtectionResourceGuard#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#location DataProtectionResourceGuard#location}.
 
 ---
 
@@ -1030,7 +1030,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#name DataProtectionResourceGuard#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#name DataProtectionResourceGuard#name}.
 
 ---
 
@@ -1042,7 +1042,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#resource_group_name DataProtectionResourceGuard#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#resource_group_name DataProtectionResourceGuard#resource_group_name}.
 
 ---
 
@@ -1054,7 +1054,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#id DataProtectionResourceGuard#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#id DataProtectionResourceGuard#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1069,7 +1069,7 @@ tags: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#tags DataProtectionResourceGuard#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#tags DataProtectionResourceGuard#tags}.
 
 ---
 
@@ -1083,7 +1083,7 @@ timeouts: DataProtectionResourceGuardTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#timeouts DataProtectionResourceGuard#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#timeouts DataProtectionResourceGuard#timeouts}
 
 ---
 
@@ -1095,7 +1095,7 @@ vault_critical_operation_exclusion_list: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#vault_critical_operation_exclusion_list DataProtectionResourceGuard#vault_critical_operation_exclusion_list}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#vault_critical_operation_exclusion_list DataProtectionResourceGuard#vault_critical_operation_exclusion_list}.
 
 ---
 
@@ -1118,10 +1118,10 @@ dataProtectionResourceGuard.DataProtectionResourceGuardTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#create DataProtectionResourceGuard#create}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#delete DataProtectionResourceGuard#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#read DataProtectionResourceGuard#read}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#update DataProtectionResourceGuard#update}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#create DataProtectionResourceGuard#create}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#delete DataProtectionResourceGuard#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#read DataProtectionResourceGuard#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#update DataProtectionResourceGuard#update}. |
 
 ---
 
@@ -1133,7 +1133,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#create DataProtectionResourceGuard#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#create DataProtectionResourceGuard#create}.
 
 ---
 
@@ -1145,7 +1145,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#delete DataProtectionResourceGuard#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#delete DataProtectionResourceGuard#delete}.
 
 ---
 
@@ -1157,7 +1157,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#read DataProtectionResourceGuard#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#read DataProtectionResourceGuard#read}.
 
 ---
 
@@ -1169,7 +1169,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_resource_guard#update DataProtectionResourceGuard#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_protection_resource_guard#update DataProtectionResourceGuard#update}.
 
 ---
 

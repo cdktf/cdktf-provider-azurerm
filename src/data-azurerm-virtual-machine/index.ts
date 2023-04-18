@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/virtual_machine
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/virtual_machine
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermVirtualMachineConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine#id DataAzurermVirtualMachine#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/virtual_machine#id DataAzurermVirtualMachine#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine#name DataAzurermVirtualMachine#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/virtual_machine#name DataAzurermVirtualMachine#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine#resource_group_name DataAzurermVirtualMachine#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/virtual_machine#resource_group_name DataAzurermVirtualMachine#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine#timeouts DataAzurermVirtualMachine#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/virtual_machine#timeouts DataAzurermVirtualMachine#timeouts}
   */
   readonly timeouts?: DataAzurermVirtualMachineTimeouts;
 }
@@ -110,12 +110,12 @@ export class DataAzurermVirtualMachineIdentityList extends cdktf.ComplexList {
 }
 export interface DataAzurermVirtualMachineTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine#read DataAzurermVirtualMachine#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/virtual_machine#read DataAzurermVirtualMachine#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermVirtualMachineTimeoutsToTerraform(struct?: DataAzurermVirtualMachineTimeoutsOutputReference | DataAzurermVirtualMachineTimeouts | cdktf.IResolvable): any {
+export function dataAzurermVirtualMachineTimeoutsToTerraform(struct?: DataAzurermVirtualMachineTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -134,7 +134,7 @@ export class DataAzurermVirtualMachineTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermVirtualMachineTimeouts | cdktf.IResolvable | undefined {
@@ -185,7 +185,7 @@ export class DataAzurermVirtualMachineTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine azurerm_virtual_machine}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/virtual_machine azurerm_virtual_machine}
 */
 export class DataAzurermVirtualMachine extends cdktf.TerraformDataSource {
 
@@ -199,7 +199,7 @@ export class DataAzurermVirtualMachine extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine azurerm_virtual_machine} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/virtual_machine azurerm_virtual_machine} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

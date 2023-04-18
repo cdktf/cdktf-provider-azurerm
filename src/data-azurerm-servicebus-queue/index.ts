@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/servicebus_queue
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermServicebusQueueConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue#id DataAzurermServicebusQueue#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/servicebus_queue#id DataAzurermServicebusQueue#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue#name DataAzurermServicebusQueue#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/servicebus_queue#name DataAzurermServicebusQueue#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue#namespace_id DataAzurermServicebusQueue#namespace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/servicebus_queue#namespace_id DataAzurermServicebusQueue#namespace_id}
   */
   readonly namespaceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue#namespace_name DataAzurermServicebusQueue#namespace_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/servicebus_queue#namespace_name DataAzurermServicebusQueue#namespace_name}
   */
   readonly namespaceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue#resource_group_name DataAzurermServicebusQueue#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/servicebus_queue#resource_group_name DataAzurermServicebusQueue#resource_group_name}
   */
   readonly resourceGroupName?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue#timeouts DataAzurermServicebusQueue#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/servicebus_queue#timeouts DataAzurermServicebusQueue#timeouts}
   */
   readonly timeouts?: DataAzurermServicebusQueueTimeouts;
 }
 export interface DataAzurermServicebusQueueTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue#read DataAzurermServicebusQueue#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/servicebus_queue#read DataAzurermServicebusQueue#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermServicebusQueueTimeoutsToTerraform(struct?: DataAzurermServicebusQueueTimeoutsOutputReference | DataAzurermServicebusQueueTimeouts | cdktf.IResolvable): any {
+export function dataAzurermServicebusQueueTimeoutsToTerraform(struct?: DataAzurermServicebusQueueTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -63,7 +63,7 @@ export class DataAzurermServicebusQueueTimeoutsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermServicebusQueueTimeouts | cdktf.IResolvable | undefined {
@@ -114,7 +114,7 @@ export class DataAzurermServicebusQueueTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue azurerm_servicebus_queue}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/servicebus_queue azurerm_servicebus_queue}
 */
 export class DataAzurermServicebusQueue extends cdktf.TerraformDataSource {
 
@@ -128,7 +128,7 @@ export class DataAzurermServicebusQueue extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue azurerm_servicebus_queue} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/servicebus_queue azurerm_servicebus_queue} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,75 +8,75 @@ import * as cdktf from 'cdktf';
 
 export interface ResourcePolicyExemptionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption#description ResourcePolicyExemption#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption#description ResourcePolicyExemption#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption#display_name ResourcePolicyExemption#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption#display_name ResourcePolicyExemption#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption#exemption_category ResourcePolicyExemption#exemption_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption#exemption_category ResourcePolicyExemption#exemption_category}
   */
   readonly exemptionCategory: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption#expires_on ResourcePolicyExemption#expires_on}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption#expires_on ResourcePolicyExemption#expires_on}
   */
   readonly expiresOn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption#id ResourcePolicyExemption#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption#id ResourcePolicyExemption#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption#metadata ResourcePolicyExemption#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption#metadata ResourcePolicyExemption#metadata}
   */
   readonly metadata?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption#name ResourcePolicyExemption#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption#name ResourcePolicyExemption#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption#policy_assignment_id ResourcePolicyExemption#policy_assignment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption#policy_assignment_id ResourcePolicyExemption#policy_assignment_id}
   */
   readonly policyAssignmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption#policy_definition_reference_ids ResourcePolicyExemption#policy_definition_reference_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption#policy_definition_reference_ids ResourcePolicyExemption#policy_definition_reference_ids}
   */
   readonly policyDefinitionReferenceIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption#resource_id ResourcePolicyExemption#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption#resource_id ResourcePolicyExemption#resource_id}
   */
   readonly resourceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption#timeouts ResourcePolicyExemption#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption#timeouts ResourcePolicyExemption#timeouts}
   */
   readonly timeouts?: ResourcePolicyExemptionTimeouts;
 }
 export interface ResourcePolicyExemptionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption#create ResourcePolicyExemption#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption#create ResourcePolicyExemption#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption#delete ResourcePolicyExemption#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption#delete ResourcePolicyExemption#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption#read ResourcePolicyExemption#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption#read ResourcePolicyExemption#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption#update ResourcePolicyExemption#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption#update ResourcePolicyExemption#update}
   */
   readonly update?: string;
 }
 
-export function resourcePolicyExemptionTimeoutsToTerraform(struct?: ResourcePolicyExemptionTimeoutsOutputReference | ResourcePolicyExemptionTimeouts | cdktf.IResolvable): any {
+export function resourcePolicyExemptionTimeoutsToTerraform(struct?: ResourcePolicyExemptionTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -98,7 +98,7 @@ export class ResourcePolicyExemptionTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ResourcePolicyExemptionTimeouts | cdktf.IResolvable | undefined {
@@ -215,7 +215,7 @@ export class ResourcePolicyExemptionTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption azurerm_resource_policy_exemption}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption azurerm_resource_policy_exemption}
 */
 export class ResourcePolicyExemption extends cdktf.TerraformResource {
 
@@ -229,7 +229,7 @@ export class ResourcePolicyExemption extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_exemption azurerm_resource_policy_exemption} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/resource_policy_exemption azurerm_resource_policy_exemption} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

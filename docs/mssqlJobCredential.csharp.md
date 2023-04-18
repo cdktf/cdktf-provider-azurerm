@@ -1,6 +1,6 @@
 # `azurerm_mssql_job_credential`
 
-Refer to the Terraform Registory for docs: [`azurerm_mssql_job_credential`](https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential).
+Refer to the Terraform Registory for docs: [`azurerm_mssql_job_credential`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential).
 
 # `mssqlJobCredential` Submodule <a name="`mssqlJobCredential` Submodule" id="@cdktf/provider-azurerm.mssqlJobCredential"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_mssql_job_credential`](http
 
 ### MssqlJobCredential <a name="MssqlJobCredential" id="@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential azurerm_mssql_job_credential}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential azurerm_mssql_job_credential}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.Initializer"></a>
 
@@ -366,7 +366,7 @@ MssqlJobCredential.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -472,10 +472,10 @@ public object Connection { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -678,7 +678,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new MssqlJobCredentialConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -698,17 +698,17 @@ new MssqlJobCredentialConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.jobAgentId">JobAgentId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#job_agent_id MssqlJobCredential#job_agent_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#name MssqlJobCredential#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.password">Password</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#password MssqlJobCredential#password}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.username">Username</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#username MssqlJobCredential#username}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#id MssqlJobCredential#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.jobAgentId">JobAgentId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#job_agent_id MssqlJobCredential#job_agent_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#name MssqlJobCredential#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.password">Password</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#password MssqlJobCredential#password}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.username">Username</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#username MssqlJobCredential#username}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#id MssqlJobCredential#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts">MssqlJobCredentialTimeouts</a></code> | timeouts block. |
 
 ---
@@ -726,10 +726,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -791,7 +791,7 @@ public string JobAgentId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#job_agent_id MssqlJobCredential#job_agent_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#job_agent_id MssqlJobCredential#job_agent_id}.
 
 ---
 
@@ -803,7 +803,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#name MssqlJobCredential#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#name MssqlJobCredential#name}.
 
 ---
 
@@ -815,7 +815,7 @@ public string Password { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#password MssqlJobCredential#password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#password MssqlJobCredential#password}.
 
 ---
 
@@ -827,7 +827,7 @@ public string Username { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#username MssqlJobCredential#username}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#username MssqlJobCredential#username}.
 
 ---
 
@@ -839,7 +839,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#id MssqlJobCredential#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#id MssqlJobCredential#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -856,7 +856,7 @@ public MssqlJobCredentialTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#timeouts MssqlJobCredential#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#timeouts MssqlJobCredential#timeouts}
 
 ---
 
@@ -879,10 +879,10 @@ new MssqlJobCredentialTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#create MssqlJobCredential#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#delete MssqlJobCredential#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#read MssqlJobCredential#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#update MssqlJobCredential#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#create MssqlJobCredential#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#delete MssqlJobCredential#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#read MssqlJobCredential#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#update MssqlJobCredential#update}. |
 
 ---
 
@@ -894,7 +894,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#create MssqlJobCredential#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#create MssqlJobCredential#create}.
 
 ---
 
@@ -906,7 +906,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#delete MssqlJobCredential#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#delete MssqlJobCredential#delete}.
 
 ---
 
@@ -918,7 +918,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#read MssqlJobCredential#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#read MssqlJobCredential#read}.
 
 ---
 
@@ -930,7 +930,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#update MssqlJobCredential#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_job_credential#update MssqlJobCredential#update}.
 
 ---
 

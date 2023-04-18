@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spring_cloud_app
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,28 +8,28 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSpringCloudAppConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app#id DataAzurermSpringCloudApp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spring_cloud_app#id DataAzurermSpringCloudApp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app#name DataAzurermSpringCloudApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spring_cloud_app#name DataAzurermSpringCloudApp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app#resource_group_name DataAzurermSpringCloudApp#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spring_cloud_app#resource_group_name DataAzurermSpringCloudApp#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app#service_name DataAzurermSpringCloudApp#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spring_cloud_app#service_name DataAzurermSpringCloudApp#service_name}
   */
   readonly serviceName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app#timeouts DataAzurermSpringCloudApp#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spring_cloud_app#timeouts DataAzurermSpringCloudApp#timeouts}
   */
   readonly timeouts?: DataAzurermSpringCloudAppTimeouts;
 }
@@ -183,12 +183,12 @@ export class DataAzurermSpringCloudAppPersistentDiskList extends cdktf.ComplexLi
 }
 export interface DataAzurermSpringCloudAppTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app#read DataAzurermSpringCloudApp#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spring_cloud_app#read DataAzurermSpringCloudApp#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermSpringCloudAppTimeoutsToTerraform(struct?: DataAzurermSpringCloudAppTimeoutsOutputReference | DataAzurermSpringCloudAppTimeouts | cdktf.IResolvable): any {
+export function dataAzurermSpringCloudAppTimeoutsToTerraform(struct?: DataAzurermSpringCloudAppTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -207,7 +207,7 @@ export class DataAzurermSpringCloudAppTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermSpringCloudAppTimeouts | cdktf.IResolvable | undefined {
@@ -258,7 +258,7 @@ export class DataAzurermSpringCloudAppTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app azurerm_spring_cloud_app}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spring_cloud_app azurerm_spring_cloud_app}
 */
 export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
 
@@ -272,7 +272,7 @@ export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app azurerm_spring_cloud_app} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/spring_cloud_app azurerm_spring_cloud_app} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

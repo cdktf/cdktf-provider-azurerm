@@ -1,6 +1,6 @@
 # `azurerm_mssql_server_dns_alias`
 
-Refer to the Terraform Registory for docs: [`azurerm_mssql_server_dns_alias`](https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias).
+Refer to the Terraform Registory for docs: [`azurerm_mssql_server_dns_alias`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias).
 
 # `mssqlServerDnsAlias` Submodule <a name="`mssqlServerDnsAlias` Submodule" id="@cdktf/provider-azurerm.mssqlServerDnsAlias"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_mssql_server_dns_alias`](ht
 
 ### MssqlServerDnsAlias <a name="MssqlServerDnsAlias" id="@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias azurerm_mssql_server_dns_alias}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias azurerm_mssql_server_dns_alias}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer"></a>
 
@@ -19,6 +19,7 @@ MssqlServerDnsAlias.Builder.create(Construct scope, java.lang.String id)
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -38,15 +39,15 @@ MssqlServerDnsAlias.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.mssqlServerId">mssqlServerId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#name MssqlServerDnsAlias#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#id MssqlServerDnsAlias#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.mssqlServerId">mssqlServerId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#name MssqlServerDnsAlias#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#id MssqlServerDnsAlias#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts">MssqlServerDnsAliasTimeouts</a></code> | timeouts block. |
 
 ---
@@ -77,7 +78,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -115,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}.
 
 ---
 
@@ -123,7 +124,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#name MssqlServerDnsAlias#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#name MssqlServerDnsAlias#name}.
 
 ---
 
@@ -131,7 +132,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#id MssqlServerDnsAlias#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#id MssqlServerDnsAlias#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -144,7 +145,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#timeouts MssqlServerDnsAlias#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#timeouts MssqlServerDnsAlias#timeouts}
 
 ---
 
@@ -464,7 +465,7 @@ MssqlServerDnsAlias.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -567,10 +568,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -745,6 +746,7 @@ MssqlServerDnsAliasConfig.builder()
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -764,15 +766,15 @@ MssqlServerDnsAliasConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.mssqlServerId">mssqlServerId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#name MssqlServerDnsAlias#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#id MssqlServerDnsAlias#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.mssqlServerId">mssqlServerId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#name MssqlServerDnsAlias#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#id MssqlServerDnsAlias#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts">MssqlServerDnsAliasTimeouts</a></code> | timeouts block. |
 
 ---
@@ -790,10 +792,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -855,7 +857,7 @@ public java.lang.String getMssqlServerId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}.
 
 ---
 
@@ -867,7 +869,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#name MssqlServerDnsAlias#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#name MssqlServerDnsAlias#name}.
 
 ---
 
@@ -879,7 +881,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#id MssqlServerDnsAlias#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#id MssqlServerDnsAlias#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -896,7 +898,7 @@ public MssqlServerDnsAliasTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#timeouts MssqlServerDnsAlias#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#timeouts MssqlServerDnsAlias#timeouts}
 
 ---
 
@@ -918,9 +920,9 @@ MssqlServerDnsAliasTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#create MssqlServerDnsAlias#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#delete MssqlServerDnsAlias#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#read MssqlServerDnsAlias#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#create MssqlServerDnsAlias#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#delete MssqlServerDnsAlias#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#read MssqlServerDnsAlias#read}. |
 
 ---
 
@@ -932,7 +934,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#create MssqlServerDnsAlias#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#create MssqlServerDnsAlias#create}.
 
 ---
 
@@ -944,7 +946,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#delete MssqlServerDnsAlias#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#delete MssqlServerDnsAlias#delete}.
 
 ---
 
@@ -956,7 +958,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_dns_alias#read MssqlServerDnsAlias#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/mssql_server_dns_alias#read MssqlServerDnsAlias#read}.
 
 ---
 

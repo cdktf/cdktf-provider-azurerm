@@ -1,6 +1,6 @@
 # `data_azurerm_traffic_manager_profile`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_traffic_manager_profile`](https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile).
+Refer to the Terraform Registory for docs: [`data_azurerm_traffic_manager_profile`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_profile).
 
 # `dataAzurermTrafficManagerProfile` Submodule <a name="`dataAzurermTrafficManagerProfile` Submodule" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_traffic_manager_profil
 
 ### DataAzurermTrafficManagerProfile <a name="DataAzurermTrafficManagerProfile" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile azurerm_traffic_manager_profile}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_profile azurerm_traffic_manager_profile}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfile(scope Construct, id *string, config DataAzurermTrafficManagerProfileConfig) DataAzurermTrafficManagerProfile
 ```
@@ -311,7 +311,7 @@ func ResetTrafficViewEnabled()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfile_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfile_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfile_IsTerraformEle
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfile_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -379,7 +379,7 @@ dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfile_IsTerraformDat
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>*map[string]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -479,10 +479,10 @@ func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -721,11 +721,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 &dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfileConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -735,7 +735,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtraffic
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileTimeouts,
 	TrafficViewEnabled: interface{},
 }
 ```
@@ -745,18 +745,18 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtraffic
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#name DataAzurermTrafficManagerProfile#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#resource_group_name DataAzurermTrafficManagerProfile#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#id DataAzurermTrafficManagerProfile#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#tags DataAzurermTrafficManagerProfile#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_profile#name DataAzurermTrafficManagerProfile#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_profile#resource_group_name DataAzurermTrafficManagerProfile#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_profile#id DataAzurermTrafficManagerProfile#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_profile#tags DataAzurermTrafficManagerProfile#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileTimeouts">DataAzurermTrafficManagerProfileTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.trafficViewEnabled">TrafficViewEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#traffic_view_enabled DataAzurermTrafficManagerProfile#traffic_view_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.trafficViewEnabled">TrafficViewEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_profile#traffic_view_enabled DataAzurermTrafficManagerProfile#traffic_view_enabled}. |
 
 ---
 
@@ -773,10 +773,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -838,7 +838,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#name DataAzurermTrafficManagerProfile#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_profile#name DataAzurermTrafficManagerProfile#name}.
 
 ---
 
@@ -850,7 +850,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#resource_group_name DataAzurermTrafficManagerProfile#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_profile#resource_group_name DataAzurermTrafficManagerProfile#resource_group_name}.
 
 ---
 
@@ -862,7 +862,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#id DataAzurermTrafficManagerProfile#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_profile#id DataAzurermTrafficManagerProfile#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -877,7 +877,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#tags DataAzurermTrafficManagerProfile#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_profile#tags DataAzurermTrafficManagerProfile#tags}.
 
 ---
 
@@ -891,7 +891,7 @@ Timeouts DataAzurermTrafficManagerProfileTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#timeouts DataAzurermTrafficManagerProfile#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_profile#timeouts DataAzurermTrafficManagerProfile#timeouts}
 
 ---
 
@@ -903,7 +903,7 @@ TrafficViewEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#traffic_view_enabled DataAzurermTrafficManagerProfile#traffic_view_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_profile#traffic_view_enabled DataAzurermTrafficManagerProfile#traffic_view_enabled}.
 
 ---
 
@@ -912,7 +912,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileDnsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 &dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfileDnsConfig {
 
@@ -925,7 +925,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtraffic
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileMonitorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 &dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfileMonitorConfig {
 
@@ -938,7 +938,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtraffic
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileMonitorConfigCustomHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 &dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfileMonitorConfigCustomHeader {
 
@@ -951,7 +951,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtraffic
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 &dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfileTimeouts {
 	Read: *string,
@@ -962,7 +962,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtraffic
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#read DataAzurermTrafficManagerProfile#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_profile#read DataAzurermTrafficManagerProfile#read}. |
 
 ---
 
@@ -974,7 +974,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#read DataAzurermTrafficManagerProfile#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/traffic_manager_profile#read DataAzurermTrafficManagerProfile#read}.
 
 ---
 
@@ -985,7 +985,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileDnsConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfileDnsConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermTrafficManagerProfileDnsConfigList
 ```
@@ -1117,7 +1117,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileDnsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfileDnsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermTrafficManagerProfileDnsConfigOutputReference
 ```
@@ -1406,7 +1406,7 @@ func InternalValue() DataAzurermTrafficManagerProfileDnsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileMonitorConfigCustomHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfileMonitorConfigCustomHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermTrafficManagerProfileMonitorConfigCustomHeaderList
 ```
@@ -1538,7 +1538,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileMonitorConfigCustomHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfileMonitorConfigCustomHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermTrafficManagerProfileMonitorConfigCustomHeaderOutputReference
 ```
@@ -1827,7 +1827,7 @@ func InternalValue() DataAzurermTrafficManagerProfileMonitorConfigCustomHeader
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileMonitorConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfileMonitorConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermTrafficManagerProfileMonitorConfigList
 ```
@@ -1959,7 +1959,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileMonitorConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfileMonitorConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermTrafficManagerProfileMonitorConfigOutputReference
 ```
@@ -2314,7 +2314,7 @@ func InternalValue() DataAzurermTrafficManagerProfileMonitorConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfileTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermTrafficManagerProfileTimeoutsOutputReference
 ```

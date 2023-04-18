@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/vmware_netapp_volume_attachment
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/vmware_netapp_volume_attachment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface VmwareNetappVolumeAttachmentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_netapp_volume_attachment#id VmwareNetappVolumeAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/vmware_netapp_volume_attachment#id VmwareNetappVolumeAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_netapp_volume_attachment#name VmwareNetappVolumeAttachment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/vmware_netapp_volume_attachment#name VmwareNetappVolumeAttachment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_netapp_volume_attachment#netapp_volume_id VmwareNetappVolumeAttachment#netapp_volume_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/vmware_netapp_volume_attachment#netapp_volume_id VmwareNetappVolumeAttachment#netapp_volume_id}
   */
   readonly netappVolumeId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_netapp_volume_attachment#vmware_cluster_id VmwareNetappVolumeAttachment#vmware_cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/vmware_netapp_volume_attachment#vmware_cluster_id VmwareNetappVolumeAttachment#vmware_cluster_id}
   */
   readonly vmwareClusterId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_netapp_volume_attachment#timeouts VmwareNetappVolumeAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/vmware_netapp_volume_attachment#timeouts VmwareNetappVolumeAttachment#timeouts}
   */
   readonly timeouts?: VmwareNetappVolumeAttachmentTimeouts;
 }
 export interface VmwareNetappVolumeAttachmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_netapp_volume_attachment#create VmwareNetappVolumeAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/vmware_netapp_volume_attachment#create VmwareNetappVolumeAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_netapp_volume_attachment#delete VmwareNetappVolumeAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/vmware_netapp_volume_attachment#delete VmwareNetappVolumeAttachment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_netapp_volume_attachment#read VmwareNetappVolumeAttachment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/vmware_netapp_volume_attachment#read VmwareNetappVolumeAttachment#read}
   */
   readonly read?: string;
 }
 
-export function vmwareNetappVolumeAttachmentTimeoutsToTerraform(struct?: VmwareNetappVolumeAttachmentTimeoutsOutputReference | VmwareNetappVolumeAttachmentTimeouts | cdktf.IResolvable): any {
+export function vmwareNetappVolumeAttachmentTimeoutsToTerraform(struct?: VmwareNetappVolumeAttachmentTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -69,7 +69,7 @@ export class VmwareNetappVolumeAttachmentTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): VmwareNetappVolumeAttachmentTimeouts | cdktf.IResolvable | undefined {
@@ -164,7 +164,7 @@ export class VmwareNetappVolumeAttachmentTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_netapp_volume_attachment azurerm_vmware_netapp_volume_attachment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/vmware_netapp_volume_attachment azurerm_vmware_netapp_volume_attachment}
 */
 export class VmwareNetappVolumeAttachment extends cdktf.TerraformResource {
 
@@ -178,7 +178,7 @@ export class VmwareNetappVolumeAttachment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_netapp_volume_attachment azurerm_vmware_netapp_volume_attachment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/vmware_netapp_volume_attachment azurerm_vmware_netapp_volume_attachment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

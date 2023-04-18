@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cosmosdb_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermCosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account#id DataAzurermCosmosdbAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cosmosdb_account#id DataAzurermCosmosdbAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account#name DataAzurermCosmosdbAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cosmosdb_account#name DataAzurermCosmosdbAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account#resource_group_name DataAzurermCosmosdbAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cosmosdb_account#resource_group_name DataAzurermCosmosdbAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account#timeouts DataAzurermCosmosdbAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cosmosdb_account#timeouts DataAzurermCosmosdbAccount#timeouts}
   */
   readonly timeouts?: DataAzurermCosmosdbAccountTimeouts;
 }
@@ -307,12 +307,12 @@ export class DataAzurermCosmosdbAccountVirtualNetworkRuleList extends cdktf.Comp
 }
 export interface DataAzurermCosmosdbAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account#read DataAzurermCosmosdbAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cosmosdb_account#read DataAzurermCosmosdbAccount#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermCosmosdbAccountTimeoutsToTerraform(struct?: DataAzurermCosmosdbAccountTimeoutsOutputReference | DataAzurermCosmosdbAccountTimeouts | cdktf.IResolvable): any {
+export function dataAzurermCosmosdbAccountTimeoutsToTerraform(struct?: DataAzurermCosmosdbAccountTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -331,7 +331,7 @@ export class DataAzurermCosmosdbAccountTimeoutsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermCosmosdbAccountTimeouts | cdktf.IResolvable | undefined {
@@ -382,7 +382,7 @@ export class DataAzurermCosmosdbAccountTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account azurerm_cosmosdb_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cosmosdb_account azurerm_cosmosdb_account}
 */
 export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
 
@@ -396,7 +396,7 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account azurerm_cosmosdb_account} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/cosmosdb_account azurerm_cosmosdb_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

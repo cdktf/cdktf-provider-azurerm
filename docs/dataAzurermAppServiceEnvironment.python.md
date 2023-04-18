@@ -1,6 +1,6 @@
 # `data_azurerm_app_service_environment`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_app_service_environment`](https://www.terraform.io/docs/providers/azurerm/d/app_service_environment).
+Refer to the Terraform Registory for docs: [`data_azurerm_app_service_environment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment).
 
 # `dataAzurermAppServiceEnvironment` Submodule <a name="`dataAzurermAppServiceEnvironment` Submodule" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_app_service_environmen
 
 ### DataAzurermAppServiceEnvironment <a name="DataAzurermAppServiceEnvironment" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment azurerm_app_service_environment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment azurerm_app_service_environment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer"></a>
 
@@ -19,7 +19,7 @@ dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -37,15 +37,15 @@ dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#name DataAzurermAppServiceEnvironment#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#resource_group_name DataAzurermAppServiceEnvironment#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#id DataAzurermAppServiceEnvironment#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#name DataAzurermAppServiceEnvironment#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#resource_group_name DataAzurermAppServiceEnvironment#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#id DataAzurermAppServiceEnvironment#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeouts">DataAzurermAppServiceEnvironmentTimeouts</a></code> | timeouts block. |
 
 ---
@@ -76,7 +76,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#name DataAzurermAppServiceEnvironment#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#name DataAzurermAppServiceEnvironment#name}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#resource_group_name DataAzurermAppServiceEnvironment#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#resource_group_name DataAzurermAppServiceEnvironment#resource_group_name}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#id DataAzurermAppServiceEnvironment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#id DataAzurermAppServiceEnvironment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -143,7 +143,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#timeouts DataAzurermAppServiceEnvironment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#timeouts DataAzurermAppServiceEnvironment#timeouts}
 
 ---
 
@@ -394,7 +394,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#read DataAzurermAppServiceEnvironment#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#read DataAzurermAppServiceEnvironment#read}.
 
 ---
 
@@ -497,7 +497,7 @@ dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.is_terraform_d
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -596,10 +596,10 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -843,7 +843,7 @@ from cdktf_cdktf_provider_azurerm import data_azurerm_app_service_environment
 
 dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -861,15 +861,15 @@ dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#name DataAzurermAppServiceEnvironment#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#resource_group_name DataAzurermAppServiceEnvironment#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#id DataAzurermAppServiceEnvironment#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#name DataAzurermAppServiceEnvironment#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#resource_group_name DataAzurermAppServiceEnvironment#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#id DataAzurermAppServiceEnvironment#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeouts">DataAzurermAppServiceEnvironmentTimeouts</a></code> | timeouts block. |
 
 ---
@@ -887,10 +887,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -952,7 +952,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#name DataAzurermAppServiceEnvironment#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#name DataAzurermAppServiceEnvironment#name}.
 
 ---
 
@@ -964,7 +964,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#resource_group_name DataAzurermAppServiceEnvironment#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#resource_group_name DataAzurermAppServiceEnvironment#resource_group_name}.
 
 ---
 
@@ -976,7 +976,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#id DataAzurermAppServiceEnvironment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#id DataAzurermAppServiceEnvironment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -993,7 +993,7 @@ timeouts: DataAzurermAppServiceEnvironmentTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#timeouts DataAzurermAppServiceEnvironment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#timeouts DataAzurermAppServiceEnvironment#timeouts}
 
 ---
 
@@ -1013,7 +1013,7 @@ dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#read DataAzurermAppServiceEnvironment#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#read DataAzurermAppServiceEnvironment#read}. |
 
 ---
 
@@ -1025,7 +1025,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment#read DataAzurermAppServiceEnvironment#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_service_environment#read DataAzurermAppServiceEnvironment#read}.
 
 ---
 

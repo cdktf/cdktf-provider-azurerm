@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag_description
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag_description
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementApiTagDescriptionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag_description#api_tag_id ApiManagementApiTagDescription#api_tag_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag_description#api_tag_id ApiManagementApiTagDescription#api_tag_id}
   */
   readonly apiTagId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag_description#description ApiManagementApiTagDescription#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag_description#description ApiManagementApiTagDescription#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag_description#external_documentation_description ApiManagementApiTagDescription#external_documentation_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag_description#external_documentation_description ApiManagementApiTagDescription#external_documentation_description}
   */
   readonly externalDocumentationDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag_description#external_documentation_url ApiManagementApiTagDescription#external_documentation_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag_description#external_documentation_url ApiManagementApiTagDescription#external_documentation_url}
   */
   readonly externalDocumentationUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag_description#id ApiManagementApiTagDescription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag_description#id ApiManagementApiTagDescription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -33,30 +33,30 @@ export interface ApiManagementApiTagDescriptionConfig extends cdktf.TerraformMet
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag_description#timeouts ApiManagementApiTagDescription#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag_description#timeouts ApiManagementApiTagDescription#timeouts}
   */
   readonly timeouts?: ApiManagementApiTagDescriptionTimeouts;
 }
 export interface ApiManagementApiTagDescriptionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag_description#create ApiManagementApiTagDescription#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag_description#create ApiManagementApiTagDescription#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag_description#delete ApiManagementApiTagDescription#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag_description#delete ApiManagementApiTagDescription#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag_description#read ApiManagementApiTagDescription#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag_description#read ApiManagementApiTagDescription#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag_description#update ApiManagementApiTagDescription#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag_description#update ApiManagementApiTagDescription#update}
   */
   readonly update?: string;
 }
 
-export function apiManagementApiTagDescriptionTimeoutsToTerraform(struct?: ApiManagementApiTagDescriptionTimeoutsOutputReference | ApiManagementApiTagDescriptionTimeouts | cdktf.IResolvable): any {
+export function apiManagementApiTagDescriptionTimeoutsToTerraform(struct?: ApiManagementApiTagDescriptionTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -78,7 +78,7 @@ export class ApiManagementApiTagDescriptionTimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ApiManagementApiTagDescriptionTimeouts | cdktf.IResolvable | undefined {
@@ -195,7 +195,7 @@ export class ApiManagementApiTagDescriptionTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag_description azurerm_api_management_api_tag_description}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag_description azurerm_api_management_api_tag_description}
 */
 export class ApiManagementApiTagDescription extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class ApiManagementApiTagDescription extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_tag_description azurerm_api_management_api_tag_description} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/api_management_api_tag_description azurerm_api_management_api_tag_description} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

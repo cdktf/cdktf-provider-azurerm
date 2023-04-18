@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/billing_enrollment_account_scope
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_enrollment_account_scope
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,15 +8,15 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermBillingEnrollmentAccountScopeConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_enrollment_account_scope#billing_account_name DataAzurermBillingEnrollmentAccountScope#billing_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_enrollment_account_scope#billing_account_name DataAzurermBillingEnrollmentAccountScope#billing_account_name}
   */
   readonly billingAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_enrollment_account_scope#enrollment_account_name DataAzurermBillingEnrollmentAccountScope#enrollment_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_enrollment_account_scope#enrollment_account_name DataAzurermBillingEnrollmentAccountScope#enrollment_account_name}
   */
   readonly enrollmentAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_enrollment_account_scope#id DataAzurermBillingEnrollmentAccountScope#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_enrollment_account_scope#id DataAzurermBillingEnrollmentAccountScope#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -25,18 +25,18 @@ export interface DataAzurermBillingEnrollmentAccountScopeConfig extends cdktf.Te
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_enrollment_account_scope#timeouts DataAzurermBillingEnrollmentAccountScope#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_enrollment_account_scope#timeouts DataAzurermBillingEnrollmentAccountScope#timeouts}
   */
   readonly timeouts?: DataAzurermBillingEnrollmentAccountScopeTimeouts;
 }
 export interface DataAzurermBillingEnrollmentAccountScopeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_enrollment_account_scope#read DataAzurermBillingEnrollmentAccountScope#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_enrollment_account_scope#read DataAzurermBillingEnrollmentAccountScope#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermBillingEnrollmentAccountScopeTimeoutsToTerraform(struct?: DataAzurermBillingEnrollmentAccountScopeTimeoutsOutputReference | DataAzurermBillingEnrollmentAccountScopeTimeouts | cdktf.IResolvable): any {
+export function dataAzurermBillingEnrollmentAccountScopeTimeoutsToTerraform(struct?: DataAzurermBillingEnrollmentAccountScopeTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -55,7 +55,7 @@ export class DataAzurermBillingEnrollmentAccountScopeTimeoutsOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermBillingEnrollmentAccountScopeTimeouts | cdktf.IResolvable | undefined {
@@ -106,7 +106,7 @@ export class DataAzurermBillingEnrollmentAccountScopeTimeoutsOutputReference ext
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/billing_enrollment_account_scope azurerm_billing_enrollment_account_scope}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_enrollment_account_scope azurerm_billing_enrollment_account_scope}
 */
 export class DataAzurermBillingEnrollmentAccountScope extends cdktf.TerraformDataSource {
 
@@ -120,7 +120,7 @@ export class DataAzurermBillingEnrollmentAccountScope extends cdktf.TerraformDat
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/billing_enrollment_account_scope azurerm_billing_enrollment_account_scope} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/billing_enrollment_account_scope azurerm_billing_enrollment_account_scope} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

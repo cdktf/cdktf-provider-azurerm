@@ -1,6 +1,6 @@
 # `azurerm_sentinel_watchlist_item`
 
-Refer to the Terraform Registory for docs: [`azurerm_sentinel_watchlist_item`](https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item).
+Refer to the Terraform Registory for docs: [`azurerm_sentinel_watchlist_item`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item).
 
 # `sentinelWatchlistItem` Submodule <a name="`sentinelWatchlistItem` Submodule" id="@cdktf/provider-azurerm.sentinelWatchlistItem"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_sentinel_watchlist_item`](h
 
 ### SentinelWatchlistItem <a name="SentinelWatchlistItem" id="@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item azurerm_sentinel_watchlist_item}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item azurerm_sentinel_watchlist_item}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer"></a>
 
@@ -19,6 +19,7 @@ SentinelWatchlistItem.Builder.create(Construct scope, java.lang.String id)
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -39,16 +40,16 @@ SentinelWatchlistItem.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.properties">properties</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#properties SentinelWatchlistItem#properties}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.watchlistId">watchlistId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#watchlist_id SentinelWatchlistItem#watchlist_id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#id SentinelWatchlistItem#id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#name SentinelWatchlistItem#name}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.properties">properties</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#properties SentinelWatchlistItem#properties}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.watchlistId">watchlistId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#watchlist_id SentinelWatchlistItem#watchlist_id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#id SentinelWatchlistItem#id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#name SentinelWatchlistItem#name}. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemTimeouts">SentinelWatchlistItemTimeouts</a></code> | timeouts block. |
 
 ---
@@ -79,7 +80,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -117,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#properties SentinelWatchlistItem#properties}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#properties SentinelWatchlistItem#properties}.
 
 ---
 
@@ -125,7 +126,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#watchlist_id SentinelWatchlistItem#watchlist_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#watchlist_id SentinelWatchlistItem#watchlist_id}.
 
 ---
 
@@ -133,7 +134,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#id SentinelWatchlistItem#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#id SentinelWatchlistItem#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -144,7 +145,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#name SentinelWatchlistItem#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#name SentinelWatchlistItem#name}.
 
 ---
 
@@ -154,7 +155,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#timeouts SentinelWatchlistItem#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#timeouts SentinelWatchlistItem#timeouts}
 
 ---
 
@@ -481,7 +482,7 @@ SentinelWatchlistItem.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -585,10 +586,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItem.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -773,6 +774,7 @@ SentinelWatchlistItemConfig.builder()
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -793,16 +795,16 @@ SentinelWatchlistItemConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.properties">properties</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#properties SentinelWatchlistItem#properties}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.watchlistId">watchlistId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#watchlist_id SentinelWatchlistItem#watchlist_id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#id SentinelWatchlistItem#id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#name SentinelWatchlistItem#name}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.properties">properties</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#properties SentinelWatchlistItem#properties}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.watchlistId">watchlistId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#watchlist_id SentinelWatchlistItem#watchlist_id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#id SentinelWatchlistItem#id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#name SentinelWatchlistItem#name}. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemTimeouts">SentinelWatchlistItemTimeouts</a></code> | timeouts block. |
 
 ---
@@ -820,10 +822,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemConfig.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -885,7 +887,7 @@ public java.util.Map<java.lang.String, java.lang.String> getProperties();
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#properties SentinelWatchlistItem#properties}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#properties SentinelWatchlistItem#properties}.
 
 ---
 
@@ -897,7 +899,7 @@ public java.lang.String getWatchlistId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#watchlist_id SentinelWatchlistItem#watchlist_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#watchlist_id SentinelWatchlistItem#watchlist_id}.
 
 ---
 
@@ -909,7 +911,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#id SentinelWatchlistItem#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#id SentinelWatchlistItem#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -924,7 +926,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#name SentinelWatchlistItem#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#name SentinelWatchlistItem#name}.
 
 ---
 
@@ -938,7 +940,7 @@ public SentinelWatchlistItemTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#timeouts SentinelWatchlistItem#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#timeouts SentinelWatchlistItem#timeouts}
 
 ---
 
@@ -961,10 +963,10 @@ SentinelWatchlistItemTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#create SentinelWatchlistItem#create}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#delete SentinelWatchlistItem#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#read SentinelWatchlistItem#read}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#update SentinelWatchlistItem#update}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#create SentinelWatchlistItem#create}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#delete SentinelWatchlistItem#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#read SentinelWatchlistItem#read}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlistItem.SentinelWatchlistItemTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#update SentinelWatchlistItem#update}. |
 
 ---
 
@@ -976,7 +978,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#create SentinelWatchlistItem#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#create SentinelWatchlistItem#create}.
 
 ---
 
@@ -988,7 +990,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#delete SentinelWatchlistItem#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#delete SentinelWatchlistItem#delete}.
 
 ---
 
@@ -1000,7 +1002,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#read SentinelWatchlistItem#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#read SentinelWatchlistItem#read}.
 
 ---
 
@@ -1012,7 +1014,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist_item#update SentinelWatchlistItem#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/sentinel_watchlist_item#update SentinelWatchlistItem#update}.
 
 ---
 

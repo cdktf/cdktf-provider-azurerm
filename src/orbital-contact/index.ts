@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/orbital_contact
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/orbital_contact
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,59 +8,59 @@ import * as cdktf from 'cdktf';
 
 export interface OrbitalContactConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orbital_contact#contact_profile_id OrbitalContact#contact_profile_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/orbital_contact#contact_profile_id OrbitalContact#contact_profile_id}
   */
   readonly contactProfileId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orbital_contact#ground_station_name OrbitalContact#ground_station_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/orbital_contact#ground_station_name OrbitalContact#ground_station_name}
   */
   readonly groundStationName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orbital_contact#id OrbitalContact#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/orbital_contact#id OrbitalContact#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orbital_contact#name OrbitalContact#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/orbital_contact#name OrbitalContact#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orbital_contact#reservation_end_time OrbitalContact#reservation_end_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/orbital_contact#reservation_end_time OrbitalContact#reservation_end_time}
   */
   readonly reservationEndTime: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orbital_contact#reservation_start_time OrbitalContact#reservation_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/orbital_contact#reservation_start_time OrbitalContact#reservation_start_time}
   */
   readonly reservationStartTime: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orbital_contact#spacecraft_id OrbitalContact#spacecraft_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/orbital_contact#spacecraft_id OrbitalContact#spacecraft_id}
   */
   readonly spacecraftId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orbital_contact#timeouts OrbitalContact#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/orbital_contact#timeouts OrbitalContact#timeouts}
   */
   readonly timeouts?: OrbitalContactTimeouts;
 }
 export interface OrbitalContactTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orbital_contact#create OrbitalContact#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/orbital_contact#create OrbitalContact#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orbital_contact#delete OrbitalContact#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/orbital_contact#delete OrbitalContact#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orbital_contact#read OrbitalContact#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/orbital_contact#read OrbitalContact#read}
   */
   readonly read?: string;
 }
 
-export function orbitalContactTimeoutsToTerraform(struct?: OrbitalContactTimeoutsOutputReference | OrbitalContactTimeouts | cdktf.IResolvable): any {
+export function orbitalContactTimeoutsToTerraform(struct?: OrbitalContactTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -81,7 +81,7 @@ export class OrbitalContactTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): OrbitalContactTimeouts | cdktf.IResolvable | undefined {
@@ -176,7 +176,7 @@ export class OrbitalContactTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/orbital_contact azurerm_orbital_contact}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/orbital_contact azurerm_orbital_contact}
 */
 export class OrbitalContact extends cdktf.TerraformResource {
 
@@ -190,7 +190,7 @@ export class OrbitalContact extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/orbital_contact azurerm_orbital_contact} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/orbital_contact azurerm_orbital_contact} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_configuration_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAppConfigurationKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key#configuration_store_id DataAzurermAppConfigurationKey#configuration_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_configuration_key#configuration_store_id DataAzurermAppConfigurationKey#configuration_store_id}
   */
   readonly configurationStoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key#id DataAzurermAppConfigurationKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_configuration_key#id DataAzurermAppConfigurationKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key#key DataAzurermAppConfigurationKey#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_configuration_key#key DataAzurermAppConfigurationKey#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key#label DataAzurermAppConfigurationKey#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_configuration_key#label DataAzurermAppConfigurationKey#label}
   */
   readonly label?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key#timeouts DataAzurermAppConfigurationKey#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_configuration_key#timeouts DataAzurermAppConfigurationKey#timeouts}
   */
   readonly timeouts?: DataAzurermAppConfigurationKeyTimeouts;
 }
 export interface DataAzurermAppConfigurationKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key#read DataAzurermAppConfigurationKey#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_configuration_key#read DataAzurermAppConfigurationKey#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermAppConfigurationKeyTimeoutsToTerraform(struct?: DataAzurermAppConfigurationKeyTimeoutsOutputReference | DataAzurermAppConfigurationKeyTimeouts | cdktf.IResolvable): any {
+export function dataAzurermAppConfigurationKeyTimeoutsToTerraform(struct?: DataAzurermAppConfigurationKeyTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -59,7 +59,7 @@ export class DataAzurermAppConfigurationKeyTimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermAppConfigurationKeyTimeouts | cdktf.IResolvable | undefined {
@@ -110,7 +110,7 @@ export class DataAzurermAppConfigurationKeyTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key azurerm_app_configuration_key}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_configuration_key azurerm_app_configuration_key}
 */
 export class DataAzurermAppConfigurationKey extends cdktf.TerraformDataSource {
 
@@ -124,7 +124,7 @@ export class DataAzurermAppConfigurationKey extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key azurerm_app_configuration_key} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/app_configuration_key azurerm_app_configuration_key} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

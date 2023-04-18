@@ -1,3 +1,3 @@
 # `azurerm_app_service_managed_certificate`
 
-Refer to the Terraform Registory for docs: [`azurerm_app_service_managed_certificate`](https://www.terraform.io/docs/providers/azurerm/r/app_service_managed_certificate).
+Refer to the Terraform Registory for docs: [`azurerm_app_service_managed_certificate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/app_service_managed_certificate).

@@ -1,6 +1,6 @@
 # `azurerm_backup_container_storage_account`
 
-Refer to the Terraform Registory for docs: [`azurerm_backup_container_storage_account`](https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account).
+Refer to the Terraform Registory for docs: [`azurerm_backup_container_storage_account`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account).
 
 # `backupContainerStorageAccount` Submodule <a name="`backupContainerStorageAccount` Submodule" id="@cdktf/provider-azurerm.backupContainerStorageAccount"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_backup_container_storage_ac
 
 ### BackupContainerStorageAccount <a name="BackupContainerStorageAccount" id="@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccount"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account azurerm_backup_container_storage_account}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account azurerm_backup_container_storage_account}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backupcontainerstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backupcontainerstorageaccount"
 
 backupcontainerstorageaccount.NewBackupContainerStorageAccount(scope Construct, id *string, config BackupContainerStorageAccountConfig) BackupContainerStorageAccount
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backupcontainerstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backupcontainerstorageaccount"
 
 backupcontainerstorageaccount.BackupContainerStorageAccount_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backupcontainerstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backupcontainerstorageaccount"
 
 backupcontainerstorageaccount.BackupContainerStorageAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ backupcontainerstorageaccount.BackupContainerStorageAccount_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccount.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backupcontainerstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backupcontainerstorageaccount"
 
 backupcontainerstorageaccount.BackupContainerStorageAccount_IsTerraformResource(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ backupcontainerstorageaccount.BackupContainerStorageAccount_IsTerraformResource(
 | <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccount.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccount.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccount.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccount.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccount.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccount.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccount.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccount.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -470,10 +470,10 @@ func Connection() interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccount.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -652,11 +652,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backupcontainerstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backupcontainerstorageaccount"
 
 &backupcontainerstorageaccount.BackupContainerStorageAccountConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -666,7 +666,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backupcontainersto
 	ResourceGroupName: *string,
 	StorageAccountId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6.backupContainerStorageAccount.BackupContainerStorageAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.backupContainerStorageAccount.BackupContainerStorageAccountTimeouts,
 }
 ```
 
@@ -675,16 +675,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backupcontainersto
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.recoveryVaultName">RecoveryVaultName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#recovery_vault_name BackupContainerStorageAccount#recovery_vault_name}. |
-| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#resource_group_name BackupContainerStorageAccount#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.storageAccountId">StorageAccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#storage_account_id BackupContainerStorageAccount#storage_account_id}. |
-| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#id BackupContainerStorageAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.recoveryVaultName">RecoveryVaultName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#recovery_vault_name BackupContainerStorageAccount#recovery_vault_name}. |
+| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#resource_group_name BackupContainerStorageAccount#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.storageAccountId">StorageAccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#storage_account_id BackupContainerStorageAccount#storage_account_id}. |
+| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#id BackupContainerStorageAccount#id}. |
 | <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountTimeouts">BackupContainerStorageAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -702,10 +702,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -767,7 +767,7 @@ RecoveryVaultName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#recovery_vault_name BackupContainerStorageAccount#recovery_vault_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#recovery_vault_name BackupContainerStorageAccount#recovery_vault_name}.
 
 ---
 
@@ -779,7 +779,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#resource_group_name BackupContainerStorageAccount#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#resource_group_name BackupContainerStorageAccount#resource_group_name}.
 
 ---
 
@@ -791,7 +791,7 @@ StorageAccountId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#storage_account_id BackupContainerStorageAccount#storage_account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#storage_account_id BackupContainerStorageAccount#storage_account_id}.
 
 ---
 
@@ -803,7 +803,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#id BackupContainerStorageAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#id BackupContainerStorageAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -820,7 +820,7 @@ Timeouts BackupContainerStorageAccountTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#timeouts BackupContainerStorageAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#timeouts BackupContainerStorageAccount#timeouts}
 
 ---
 
@@ -829,7 +829,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backupcontainerstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backupcontainerstorageaccount"
 
 &backupcontainerstorageaccount.BackupContainerStorageAccountTimeouts {
 	Create: *string,
@@ -843,10 +843,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backupcontainersto
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#create BackupContainerStorageAccount#create}. |
-| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#delete BackupContainerStorageAccount#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#read BackupContainerStorageAccount#read}. |
-| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#update BackupContainerStorageAccount#update}. |
+| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#create BackupContainerStorageAccount#create}. |
+| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#delete BackupContainerStorageAccount#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#read BackupContainerStorageAccount#read}. |
+| <code><a href="#@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#update BackupContainerStorageAccount#update}. |
 
 ---
 
@@ -858,7 +858,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#create BackupContainerStorageAccount#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#create BackupContainerStorageAccount#create}.
 
 ---
 
@@ -870,7 +870,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#delete BackupContainerStorageAccount#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#delete BackupContainerStorageAccount#delete}.
 
 ---
 
@@ -882,7 +882,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#read BackupContainerStorageAccount#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#read BackupContainerStorageAccount#read}.
 
 ---
 
@@ -894,7 +894,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#update BackupContainerStorageAccount#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/backup_container_storage_account#update BackupContainerStorageAccount#update}.
 
 ---
 
@@ -905,7 +905,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azure
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupContainerStorageAccount.BackupContainerStorageAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v6/backupcontainerstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/backupcontainerstorageaccount"
 
 backupcontainerstorageaccount.NewBackupContainerStorageAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupContainerStorageAccountTimeoutsOutputReference
 ```

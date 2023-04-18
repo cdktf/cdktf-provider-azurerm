@@ -1,6 +1,6 @@
 # `azurerm_disk_pool`
 
-Refer to the Terraform Registory for docs: [`azurerm_disk_pool`](https://www.terraform.io/docs/providers/azurerm/r/disk_pool).
+Refer to the Terraform Registory for docs: [`azurerm_disk_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool).
 
 # `diskPool` Submodule <a name="`diskPool` Submodule" id="@cdktf/provider-azurerm.diskPool"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_disk_pool`](https://www.ter
 
 ### DiskPool <a name="DiskPool" id="@cdktf/provider-azurerm.diskPool.DiskPool"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool azurerm_disk_pool}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool azurerm_disk_pool}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.diskPool.DiskPool.Initializer"></a>
 
@@ -373,7 +373,7 @@ DiskPool.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPool.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPool.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPool.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPool.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPool.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPool.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPool.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPool.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -485,10 +485,10 @@ public object Connection { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.diskPool.DiskPool.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -751,7 +751,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new DiskPoolConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -774,20 +774,20 @@ new DiskPoolConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#location DiskPool#location}. |
-| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#name DiskPool#name}. |
-| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#resource_group_name DiskPool#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.skuName">SkuName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#sku_name DiskPool#sku_name}. |
-| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.subnetId">SubnetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#subnet_id DiskPool#subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.zones">Zones</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#zones DiskPool#zones}. |
-| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#id DiskPool#id}. |
-| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#tags DiskPool#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#location DiskPool#location}. |
+| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#name DiskPool#name}. |
+| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#resource_group_name DiskPool#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.skuName">SkuName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#sku_name DiskPool#sku_name}. |
+| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.subnetId">SubnetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#subnet_id DiskPool#subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.zones">Zones</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#zones DiskPool#zones}. |
+| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#id DiskPool#id}. |
+| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#tags DiskPool#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolTimeouts">DiskPoolTimeouts</a></code> | timeouts block. |
 
 ---
@@ -805,10 +805,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.diskPool.DiskPoolConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -870,7 +870,7 @@ public string Location { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#location DiskPool#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#location DiskPool#location}.
 
 ---
 
@@ -882,7 +882,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#name DiskPool#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#name DiskPool#name}.
 
 ---
 
@@ -894,7 +894,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#resource_group_name DiskPool#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#resource_group_name DiskPool#resource_group_name}.
 
 ---
 
@@ -906,7 +906,7 @@ public string SkuName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#sku_name DiskPool#sku_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#sku_name DiskPool#sku_name}.
 
 ---
 
@@ -918,7 +918,7 @@ public string SubnetId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#subnet_id DiskPool#subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#subnet_id DiskPool#subnet_id}.
 
 ---
 
@@ -930,7 +930,7 @@ public string[] Zones { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#zones DiskPool#zones}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#zones DiskPool#zones}.
 
 ---
 
@@ -942,7 +942,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#id DiskPool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#id DiskPool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -957,7 +957,7 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#tags DiskPool#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#tags DiskPool#tags}.
 
 ---
 
@@ -971,7 +971,7 @@ public DiskPoolTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#timeouts DiskPool#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#timeouts DiskPool#timeouts}
 
 ---
 
@@ -994,10 +994,10 @@ new DiskPoolTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#create DiskPool#create}. |
-| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#delete DiskPool#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#read DiskPool#read}. |
-| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#update DiskPool#update}. |
+| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#create DiskPool#create}. |
+| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#delete DiskPool#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#read DiskPool#read}. |
+| <code><a href="#@cdktf/provider-azurerm.diskPool.DiskPoolTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#update DiskPool#update}. |
 
 ---
 
@@ -1009,7 +1009,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#create DiskPool#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#create DiskPool#create}.
 
 ---
 
@@ -1021,7 +1021,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#delete DiskPool#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#delete DiskPool#delete}.
 
 ---
 
@@ -1033,7 +1033,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#read DiskPool#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#read DiskPool#read}.
 
 ---
 
@@ -1045,7 +1045,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#update DiskPool#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/disk_pool#update DiskPool#update}.
 
 ---
 

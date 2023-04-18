@@ -1,3 +1,3 @@
 # `data_azurerm_container_group`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_container_group`](https://www.terraform.io/docs/providers/azurerm/d/container_group).
+Refer to the Terraform Registory for docs: [`data_azurerm_container_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/container_group).

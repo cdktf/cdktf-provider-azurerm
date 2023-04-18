@@ -1,3 +1,3 @@
 # `data_azurerm_eventhub_consumer_group`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_eventhub_consumer_group`](https://www.terraform.io/docs/providers/azurerm/d/eventhub_consumer_group).
+Refer to the Terraform Registory for docs: [`data_azurerm_eventhub_consumer_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/eventhub_consumer_group).

@@ -1,3 +1,3 @@
 # `azurerm_netapp_pool`
 
-Refer to the Terraform Registory for docs: [`azurerm_netapp_pool`](https://www.terraform.io/docs/providers/azurerm/r/netapp_pool).
+Refer to the Terraform Registory for docs: [`azurerm_netapp_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/netapp_pool).

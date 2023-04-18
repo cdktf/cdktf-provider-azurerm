@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/advisor_recommendations
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,15 +8,15 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAdvisorRecommendationsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations#filter_by_category DataAzurermAdvisorRecommendations#filter_by_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/advisor_recommendations#filter_by_category DataAzurermAdvisorRecommendations#filter_by_category}
   */
   readonly filterByCategory?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations#filter_by_resource_groups DataAzurermAdvisorRecommendations#filter_by_resource_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/advisor_recommendations#filter_by_resource_groups DataAzurermAdvisorRecommendations#filter_by_resource_groups}
   */
   readonly filterByResourceGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations#id DataAzurermAdvisorRecommendations#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/advisor_recommendations#id DataAzurermAdvisorRecommendations#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -25,7 +25,7 @@ export interface DataAzurermAdvisorRecommendationsConfig extends cdktf.Terraform
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations#timeouts DataAzurermAdvisorRecommendations#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/advisor_recommendations#timeouts DataAzurermAdvisorRecommendations#timeouts}
   */
   readonly timeouts?: DataAzurermAdvisorRecommendationsTimeouts;
 }
@@ -135,12 +135,12 @@ export class DataAzurermAdvisorRecommendationsRecommendationsList extends cdktf.
 }
 export interface DataAzurermAdvisorRecommendationsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations#read DataAzurermAdvisorRecommendations#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/advisor_recommendations#read DataAzurermAdvisorRecommendations#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermAdvisorRecommendationsTimeoutsToTerraform(struct?: DataAzurermAdvisorRecommendationsTimeoutsOutputReference | DataAzurermAdvisorRecommendationsTimeouts | cdktf.IResolvable): any {
+export function dataAzurermAdvisorRecommendationsTimeoutsToTerraform(struct?: DataAzurermAdvisorRecommendationsTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -159,7 +159,7 @@ export class DataAzurermAdvisorRecommendationsTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermAdvisorRecommendationsTimeouts | cdktf.IResolvable | undefined {
@@ -210,7 +210,7 @@ export class DataAzurermAdvisorRecommendationsTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations azurerm_advisor_recommendations}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/advisor_recommendations azurerm_advisor_recommendations}
 */
 export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource {
 
@@ -224,7 +224,7 @@ export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations azurerm_advisor_recommendations} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/advisor_recommendations azurerm_advisor_recommendations} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

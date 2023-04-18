@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/private_dns_aaaa_record
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/private_dns_aaaa_record
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,63 +8,63 @@ import * as cdktf from 'cdktf';
 
 export interface PrivateDnsAaaaRecordConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_aaaa_record#id PrivateDnsAaaaRecord#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/private_dns_aaaa_record#id PrivateDnsAaaaRecord#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_aaaa_record#name PrivateDnsAaaaRecord#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/private_dns_aaaa_record#name PrivateDnsAaaaRecord#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_aaaa_record#records PrivateDnsAaaaRecord#records}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/private_dns_aaaa_record#records PrivateDnsAaaaRecord#records}
   */
   readonly records: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_aaaa_record#resource_group_name PrivateDnsAaaaRecord#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/private_dns_aaaa_record#resource_group_name PrivateDnsAaaaRecord#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_aaaa_record#tags PrivateDnsAaaaRecord#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/private_dns_aaaa_record#tags PrivateDnsAaaaRecord#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_aaaa_record#ttl PrivateDnsAaaaRecord#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/private_dns_aaaa_record#ttl PrivateDnsAaaaRecord#ttl}
   */
   readonly ttl: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_aaaa_record#zone_name PrivateDnsAaaaRecord#zone_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/private_dns_aaaa_record#zone_name PrivateDnsAaaaRecord#zone_name}
   */
   readonly zoneName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_aaaa_record#timeouts PrivateDnsAaaaRecord#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/private_dns_aaaa_record#timeouts PrivateDnsAaaaRecord#timeouts}
   */
   readonly timeouts?: PrivateDnsAaaaRecordTimeouts;
 }
 export interface PrivateDnsAaaaRecordTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_aaaa_record#create PrivateDnsAaaaRecord#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/private_dns_aaaa_record#create PrivateDnsAaaaRecord#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_aaaa_record#delete PrivateDnsAaaaRecord#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/private_dns_aaaa_record#delete PrivateDnsAaaaRecord#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_aaaa_record#read PrivateDnsAaaaRecord#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/private_dns_aaaa_record#read PrivateDnsAaaaRecord#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_aaaa_record#update PrivateDnsAaaaRecord#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/private_dns_aaaa_record#update PrivateDnsAaaaRecord#update}
   */
   readonly update?: string;
 }
 
-export function privateDnsAaaaRecordTimeoutsToTerraform(struct?: PrivateDnsAaaaRecordTimeoutsOutputReference | PrivateDnsAaaaRecordTimeouts | cdktf.IResolvable): any {
+export function privateDnsAaaaRecordTimeoutsToTerraform(struct?: PrivateDnsAaaaRecordTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -86,7 +86,7 @@ export class PrivateDnsAaaaRecordTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): PrivateDnsAaaaRecordTimeouts | cdktf.IResolvable | undefined {
@@ -203,7 +203,7 @@ export class PrivateDnsAaaaRecordTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_aaaa_record azurerm_private_dns_aaaa_record}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/private_dns_aaaa_record azurerm_private_dns_aaaa_record}
 */
 export class PrivateDnsAaaaRecord extends cdktf.TerraformResource {
 
@@ -217,7 +217,7 @@ export class PrivateDnsAaaaRecord extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_aaaa_record azurerm_private_dns_aaaa_record} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/private_dns_aaaa_record azurerm_private_dns_aaaa_record} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

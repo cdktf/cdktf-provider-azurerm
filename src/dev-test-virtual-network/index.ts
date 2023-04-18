@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,52 +8,52 @@ import * as cdktf from 'cdktf';
 
 export interface DevTestVirtualNetworkConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network#description DevTestVirtualNetwork#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network#description DevTestVirtualNetwork#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network#id DevTestVirtualNetwork#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network#id DevTestVirtualNetwork#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network#lab_name DevTestVirtualNetwork#lab_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network#lab_name DevTestVirtualNetwork#lab_name}
   */
   readonly labName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network#name DevTestVirtualNetwork#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network#name DevTestVirtualNetwork#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network#resource_group_name DevTestVirtualNetwork#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network#resource_group_name DevTestVirtualNetwork#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network#tags DevTestVirtualNetwork#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network#tags DevTestVirtualNetwork#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * subnet block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network#subnet DevTestVirtualNetwork#subnet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network#subnet DevTestVirtualNetwork#subnet}
   */
   readonly subnet?: DevTestVirtualNetworkSubnet;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network#timeouts DevTestVirtualNetwork#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network#timeouts DevTestVirtualNetwork#timeouts}
   */
   readonly timeouts?: DevTestVirtualNetworkTimeouts;
 }
 export interface DevTestVirtualNetworkSubnet {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network#use_in_virtual_machine_creation DevTestVirtualNetwork#use_in_virtual_machine_creation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network#use_in_virtual_machine_creation DevTestVirtualNetwork#use_in_virtual_machine_creation}
   */
   readonly useInVirtualMachineCreation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network#use_public_ip_address DevTestVirtualNetwork#use_public_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network#use_public_ip_address DevTestVirtualNetwork#use_public_ip_address}
   */
   readonly usePublicIpAddress?: string;
 }
@@ -146,24 +146,24 @@ export class DevTestVirtualNetworkSubnetOutputReference extends cdktf.ComplexObj
 }
 export interface DevTestVirtualNetworkTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network#create DevTestVirtualNetwork#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network#create DevTestVirtualNetwork#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network#delete DevTestVirtualNetwork#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network#delete DevTestVirtualNetwork#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network#read DevTestVirtualNetwork#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network#read DevTestVirtualNetwork#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network#update DevTestVirtualNetwork#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network#update DevTestVirtualNetwork#update}
   */
   readonly update?: string;
 }
 
-export function devTestVirtualNetworkTimeoutsToTerraform(struct?: DevTestVirtualNetworkTimeoutsOutputReference | DevTestVirtualNetworkTimeouts | cdktf.IResolvable): any {
+export function devTestVirtualNetworkTimeoutsToTerraform(struct?: DevTestVirtualNetworkTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -185,7 +185,7 @@ export class DevTestVirtualNetworkTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DevTestVirtualNetworkTimeouts | cdktf.IResolvable | undefined {
@@ -302,7 +302,7 @@ export class DevTestVirtualNetworkTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network azurerm_dev_test_virtual_network}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network azurerm_dev_test_virtual_network}
 */
 export class DevTestVirtualNetwork extends cdktf.TerraformResource {
 
@@ -316,7 +316,7 @@ export class DevTestVirtualNetwork extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network azurerm_dev_test_virtual_network} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/dev_test_virtual_network azurerm_dev_test_virtual_network} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,6 +1,6 @@
 # `data_azurerm_key_vault_access_policy`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_key_vault_access_policy`](https://www.terraform.io/docs/providers/azurerm/d/key_vault_access_policy).
+Refer to the Terraform Registory for docs: [`data_azurerm_key_vault_access_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_access_policy).
 
 # `dataAzurermKeyVaultAccessPolicy` Submodule <a name="`dataAzurermKeyVaultAccessPolicy` Submodule" id="@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_key_vault_access_polic
 
 ### DataAzurermKeyVaultAccessPolicyA <a name="DataAzurermKeyVaultAccessPolicyA" id="@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyA"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_access_policy azurerm_key_vault_access_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_access_policy azurerm_key_vault_access_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyA.Initializer"></a>
 
@@ -365,7 +365,7 @@ DataAzurermKeyVaultAccessPolicyA.IsTerraformDataSource(object X);
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyA.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyA.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyA.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyA.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyA.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyA.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyA.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyA.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -457,10 +457,10 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyA.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -623,7 +623,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new DataAzurermKeyVaultAccessPolicyAConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -640,14 +640,14 @@ new DataAzurermKeyVaultAccessPolicyAConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyAConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyAConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyAConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyAConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyAConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyAConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyAConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyAConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyAConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_access_policy#name DataAzurermKeyVaultAccessPolicyA#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyAConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_access_policy#id DataAzurermKeyVaultAccessPolicyA#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyAConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_access_policy#name DataAzurermKeyVaultAccessPolicyA#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyAConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_access_policy#id DataAzurermKeyVaultAccessPolicyA#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyAConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyTimeouts">DataAzurermKeyVaultAccessPolicyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -665,10 +665,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyAConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -730,7 +730,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_access_policy#name DataAzurermKeyVaultAccessPolicyA#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_access_policy#name DataAzurermKeyVaultAccessPolicyA#name}.
 
 ---
 
@@ -742,7 +742,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_access_policy#id DataAzurermKeyVaultAccessPolicyA#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_access_policy#id DataAzurermKeyVaultAccessPolicyA#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -759,7 +759,7 @@ public DataAzurermKeyVaultAccessPolicyTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_access_policy#timeouts DataAzurermKeyVaultAccessPolicyA#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_access_policy#timeouts DataAzurermKeyVaultAccessPolicyA#timeouts}
 
 ---
 
@@ -779,7 +779,7 @@ new DataAzurermKeyVaultAccessPolicyTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_access_policy#read DataAzurermKeyVaultAccessPolicyA#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultAccessPolicy.DataAzurermKeyVaultAccessPolicyTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_access_policy#read DataAzurermKeyVaultAccessPolicyA#read}. |
 
 ---
 
@@ -791,7 +791,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_access_policy#read DataAzurermKeyVaultAccessPolicyA#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/key_vault_access_policy#read DataAzurermKeyVaultAccessPolicyA#read}.
 
 ---
 

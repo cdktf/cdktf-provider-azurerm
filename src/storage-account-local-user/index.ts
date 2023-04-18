@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,70 +8,70 @@ import * as cdktf from 'cdktf';
 
 export interface StorageAccountLocalUserConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#home_directory StorageAccountLocalUser#home_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#home_directory StorageAccountLocalUser#home_directory}
   */
   readonly homeDirectory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#id StorageAccountLocalUser#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#id StorageAccountLocalUser#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#name StorageAccountLocalUser#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#name StorageAccountLocalUser#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#ssh_key_enabled StorageAccountLocalUser#ssh_key_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#ssh_key_enabled StorageAccountLocalUser#ssh_key_enabled}
   */
   readonly sshKeyEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#ssh_password_enabled StorageAccountLocalUser#ssh_password_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#ssh_password_enabled StorageAccountLocalUser#ssh_password_enabled}
   */
   readonly sshPasswordEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#storage_account_id StorageAccountLocalUser#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#storage_account_id StorageAccountLocalUser#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
   * permission_scope block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#permission_scope StorageAccountLocalUser#permission_scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#permission_scope StorageAccountLocalUser#permission_scope}
   */
   readonly permissionScope?: StorageAccountLocalUserPermissionScope[] | cdktf.IResolvable;
   /**
   * ssh_authorized_key block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#ssh_authorized_key StorageAccountLocalUser#ssh_authorized_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#ssh_authorized_key StorageAccountLocalUser#ssh_authorized_key}
   */
   readonly sshAuthorizedKey?: StorageAccountLocalUserSshAuthorizedKey[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#timeouts StorageAccountLocalUser#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#timeouts StorageAccountLocalUser#timeouts}
   */
   readonly timeouts?: StorageAccountLocalUserTimeouts;
 }
 export interface StorageAccountLocalUserPermissionScopePermissions {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#create StorageAccountLocalUser#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#create StorageAccountLocalUser#create}
   */
   readonly create?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#delete StorageAccountLocalUser#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#delete StorageAccountLocalUser#delete}
   */
   readonly delete?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#list StorageAccountLocalUser#list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#list StorageAccountLocalUser#list}
   */
   readonly list?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#read StorageAccountLocalUser#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#read StorageAccountLocalUser#read}
   */
   readonly read?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#write StorageAccountLocalUser#write}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#write StorageAccountLocalUser#write}
   */
   readonly write?: boolean | cdktf.IResolvable;
 }
@@ -228,17 +228,17 @@ export class StorageAccountLocalUserPermissionScopePermissionsOutputReference ex
 }
 export interface StorageAccountLocalUserPermissionScope {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#resource_name StorageAccountLocalUser#resource_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#resource_name StorageAccountLocalUser#resource_name}
   */
   readonly resourceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#service StorageAccountLocalUser#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#service StorageAccountLocalUser#service}
   */
   readonly service: string;
   /**
   * permissions block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#permissions StorageAccountLocalUser#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#permissions StorageAccountLocalUser#permissions}
   */
   readonly permissions: StorageAccountLocalUserPermissionScopePermissions;
 }
@@ -372,11 +372,11 @@ export class StorageAccountLocalUserPermissionScopeList extends cdktf.ComplexLis
 }
 export interface StorageAccountLocalUserSshAuthorizedKey {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#description StorageAccountLocalUser#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#description StorageAccountLocalUser#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#key StorageAccountLocalUser#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#key StorageAccountLocalUser#key}
   */
   readonly key: string;
 }
@@ -493,24 +493,24 @@ export class StorageAccountLocalUserSshAuthorizedKeyList extends cdktf.ComplexLi
 }
 export interface StorageAccountLocalUserTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#create StorageAccountLocalUser#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#create StorageAccountLocalUser#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#delete StorageAccountLocalUser#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#delete StorageAccountLocalUser#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#read StorageAccountLocalUser#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#read StorageAccountLocalUser#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user#update StorageAccountLocalUser#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user#update StorageAccountLocalUser#update}
   */
   readonly update?: string;
 }
 
-export function storageAccountLocalUserTimeoutsToTerraform(struct?: StorageAccountLocalUserTimeoutsOutputReference | StorageAccountLocalUserTimeouts | cdktf.IResolvable): any {
+export function storageAccountLocalUserTimeoutsToTerraform(struct?: StorageAccountLocalUserTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -532,7 +532,7 @@ export class StorageAccountLocalUserTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): StorageAccountLocalUserTimeouts | cdktf.IResolvable | undefined {
@@ -649,7 +649,7 @@ export class StorageAccountLocalUserTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user azurerm_storage_account_local_user}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user azurerm_storage_account_local_user}
 */
 export class StorageAccountLocalUser extends cdktf.TerraformResource {
 
@@ -663,7 +663,7 @@ export class StorageAccountLocalUser extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_local_user azurerm_storage_account_local_user} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/storage_account_local_user azurerm_storage_account_local_user} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

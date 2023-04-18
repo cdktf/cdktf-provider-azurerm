@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,64 +8,64 @@ import * as cdktf from 'cdktf';
 
 export interface MonitorActionRuleSuppressionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#description MonitorActionRuleSuppression#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#description MonitorActionRuleSuppression#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#enabled MonitorActionRuleSuppression#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#enabled MonitorActionRuleSuppression#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#id MonitorActionRuleSuppression#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#id MonitorActionRuleSuppression#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#name MonitorActionRuleSuppression#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#name MonitorActionRuleSuppression#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#resource_group_name MonitorActionRuleSuppression#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#resource_group_name MonitorActionRuleSuppression#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#tags MonitorActionRuleSuppression#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#tags MonitorActionRuleSuppression#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#condition MonitorActionRuleSuppression#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#condition MonitorActionRuleSuppression#condition}
   */
   readonly condition?: MonitorActionRuleSuppressionCondition;
   /**
   * scope block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#scope MonitorActionRuleSuppression#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#scope MonitorActionRuleSuppression#scope}
   */
   readonly scope?: MonitorActionRuleSuppressionScope;
   /**
   * suppression block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#suppression MonitorActionRuleSuppression#suppression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#suppression MonitorActionRuleSuppression#suppression}
   */
   readonly suppression: MonitorActionRuleSuppressionSuppression;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#timeouts MonitorActionRuleSuppression#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#timeouts MonitorActionRuleSuppression#timeouts}
   */
   readonly timeouts?: MonitorActionRuleSuppressionTimeouts;
 }
 export interface MonitorActionRuleSuppressionConditionAlertContext {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}
   */
   readonly values: string[];
 }
@@ -147,11 +147,11 @@ export class MonitorActionRuleSuppressionConditionAlertContextOutputReference ex
 }
 export interface MonitorActionRuleSuppressionConditionAlertRuleId {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}
   */
   readonly values: string[];
 }
@@ -233,11 +233,11 @@ export class MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference ext
 }
 export interface MonitorActionRuleSuppressionConditionDescription {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}
   */
   readonly values: string[];
 }
@@ -319,11 +319,11 @@ export class MonitorActionRuleSuppressionConditionDescriptionOutputReference ext
 }
 export interface MonitorActionRuleSuppressionConditionMonitor {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}
   */
   readonly values: string[];
 }
@@ -405,11 +405,11 @@ export class MonitorActionRuleSuppressionConditionMonitorOutputReference extends
 }
 export interface MonitorActionRuleSuppressionConditionMonitorService {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}
   */
   readonly values: string[];
 }
@@ -491,11 +491,11 @@ export class MonitorActionRuleSuppressionConditionMonitorServiceOutputReference 
 }
 export interface MonitorActionRuleSuppressionConditionSeverity {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}
   */
   readonly values: string[];
 }
@@ -577,11 +577,11 @@ export class MonitorActionRuleSuppressionConditionSeverityOutputReference extend
 }
 export interface MonitorActionRuleSuppressionConditionTargetResourceType {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}
   */
   readonly values: string[];
 }
@@ -665,43 +665,43 @@ export interface MonitorActionRuleSuppressionCondition {
   /**
   * alert_context block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#alert_context MonitorActionRuleSuppression#alert_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#alert_context MonitorActionRuleSuppression#alert_context}
   */
   readonly alertContext?: MonitorActionRuleSuppressionConditionAlertContext;
   /**
   * alert_rule_id block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#alert_rule_id MonitorActionRuleSuppression#alert_rule_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#alert_rule_id MonitorActionRuleSuppression#alert_rule_id}
   */
   readonly alertRuleId?: MonitorActionRuleSuppressionConditionAlertRuleId;
   /**
   * description block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#description MonitorActionRuleSuppression#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#description MonitorActionRuleSuppression#description}
   */
   readonly description?: MonitorActionRuleSuppressionConditionDescription;
   /**
   * monitor block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#monitor MonitorActionRuleSuppression#monitor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#monitor MonitorActionRuleSuppression#monitor}
   */
   readonly monitor?: MonitorActionRuleSuppressionConditionMonitor;
   /**
   * monitor_service block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#monitor_service MonitorActionRuleSuppression#monitor_service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#monitor_service MonitorActionRuleSuppression#monitor_service}
   */
   readonly monitorService?: MonitorActionRuleSuppressionConditionMonitorService;
   /**
   * severity block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#severity MonitorActionRuleSuppression#severity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#severity MonitorActionRuleSuppression#severity}
   */
   readonly severity?: MonitorActionRuleSuppressionConditionSeverity;
   /**
   * target_resource_type block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#target_resource_type MonitorActionRuleSuppression#target_resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#target_resource_type MonitorActionRuleSuppression#target_resource_type}
   */
   readonly targetResourceType?: MonitorActionRuleSuppressionConditionTargetResourceType;
 }
@@ -904,11 +904,11 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
 }
 export interface MonitorActionRuleSuppressionScope {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#resource_ids MonitorActionRuleSuppression#resource_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#resource_ids MonitorActionRuleSuppression#resource_ids}
   */
   readonly resourceIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#type MonitorActionRuleSuppression#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#type MonitorActionRuleSuppression#type}
   */
   readonly type: string;
 }
@@ -990,19 +990,19 @@ export class MonitorActionRuleSuppressionScopeOutputReference extends cdktf.Comp
 }
 export interface MonitorActionRuleSuppressionSuppressionSchedule {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#end_date_utc MonitorActionRuleSuppression#end_date_utc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#end_date_utc MonitorActionRuleSuppression#end_date_utc}
   */
   readonly endDateUtc: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#recurrence_monthly MonitorActionRuleSuppression#recurrence_monthly}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#recurrence_monthly MonitorActionRuleSuppression#recurrence_monthly}
   */
   readonly recurrenceMonthly?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#recurrence_weekly MonitorActionRuleSuppression#recurrence_weekly}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#recurrence_weekly MonitorActionRuleSuppression#recurrence_weekly}
   */
   readonly recurrenceWeekly?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#start_date_utc MonitorActionRuleSuppression#start_date_utc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#start_date_utc MonitorActionRuleSuppression#start_date_utc}
   */
   readonly startDateUtc: string;
 }
@@ -1130,13 +1130,13 @@ export class MonitorActionRuleSuppressionSuppressionScheduleOutputReference exte
 }
 export interface MonitorActionRuleSuppressionSuppression {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#recurrence_type MonitorActionRuleSuppression#recurrence_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#recurrence_type MonitorActionRuleSuppression#recurrence_type}
   */
   readonly recurrenceType: string;
   /**
   * schedule block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#schedule MonitorActionRuleSuppression#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#schedule MonitorActionRuleSuppression#schedule}
   */
   readonly schedule?: MonitorActionRuleSuppressionSuppressionSchedule;
 }
@@ -1221,24 +1221,24 @@ export class MonitorActionRuleSuppressionSuppressionOutputReference extends cdkt
 }
 export interface MonitorActionRuleSuppressionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#create MonitorActionRuleSuppression#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#create MonitorActionRuleSuppression#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#delete MonitorActionRuleSuppression#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#delete MonitorActionRuleSuppression#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#read MonitorActionRuleSuppression#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#read MonitorActionRuleSuppression#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#update MonitorActionRuleSuppression#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression#update MonitorActionRuleSuppression#update}
   */
   readonly update?: string;
 }
 
-export function monitorActionRuleSuppressionTimeoutsToTerraform(struct?: MonitorActionRuleSuppressionTimeoutsOutputReference | MonitorActionRuleSuppressionTimeouts | cdktf.IResolvable): any {
+export function monitorActionRuleSuppressionTimeoutsToTerraform(struct?: MonitorActionRuleSuppressionTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1260,7 +1260,7 @@ export class MonitorActionRuleSuppressionTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): MonitorActionRuleSuppressionTimeouts | cdktf.IResolvable | undefined {
@@ -1377,7 +1377,7 @@ export class MonitorActionRuleSuppressionTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression azurerm_monitor_action_rule_suppression}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression azurerm_monitor_action_rule_suppression}
 */
 export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
 
@@ -1391,7 +1391,7 @@ export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression azurerm_monitor_action_rule_suppression} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/monitor_action_rule_suppression azurerm_monitor_action_rule_suppression} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

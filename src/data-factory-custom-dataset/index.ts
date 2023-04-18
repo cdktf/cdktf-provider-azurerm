@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,72 +8,72 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryCustomDatasetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#additional_properties DataFactoryCustomDataset#additional_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#additional_properties DataFactoryCustomDataset#additional_properties}
   */
   readonly additionalProperties?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#annotations DataFactoryCustomDataset#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#annotations DataFactoryCustomDataset#annotations}
   */
   readonly annotations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#data_factory_id DataFactoryCustomDataset#data_factory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#data_factory_id DataFactoryCustomDataset#data_factory_id}
   */
   readonly dataFactoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#description DataFactoryCustomDataset#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#description DataFactoryCustomDataset#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#folder DataFactoryCustomDataset#folder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#folder DataFactoryCustomDataset#folder}
   */
   readonly folder?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#id DataFactoryCustomDataset#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#id DataFactoryCustomDataset#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#name DataFactoryCustomDataset#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#name DataFactoryCustomDataset#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#parameters DataFactoryCustomDataset#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#parameters DataFactoryCustomDataset#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#schema_json DataFactoryCustomDataset#schema_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#schema_json DataFactoryCustomDataset#schema_json}
   */
   readonly schemaJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#type DataFactoryCustomDataset#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#type DataFactoryCustomDataset#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#type_properties_json DataFactoryCustomDataset#type_properties_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#type_properties_json DataFactoryCustomDataset#type_properties_json}
   */
   readonly typePropertiesJson: string;
   /**
   * linked_service block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#linked_service DataFactoryCustomDataset#linked_service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#linked_service DataFactoryCustomDataset#linked_service}
   */
   readonly linkedService: DataFactoryCustomDatasetLinkedService;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#timeouts DataFactoryCustomDataset#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#timeouts DataFactoryCustomDataset#timeouts}
   */
   readonly timeouts?: DataFactoryCustomDatasetTimeouts;
 }
 export interface DataFactoryCustomDatasetLinkedService {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#name DataFactoryCustomDataset#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#name DataFactoryCustomDataset#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#parameters DataFactoryCustomDataset#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#parameters DataFactoryCustomDataset#parameters}
   */
   readonly parameters?: { [key: string]: string };
 }
@@ -158,24 +158,24 @@ export class DataFactoryCustomDatasetLinkedServiceOutputReference extends cdktf.
 }
 export interface DataFactoryCustomDatasetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#create DataFactoryCustomDataset#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#create DataFactoryCustomDataset#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#delete DataFactoryCustomDataset#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#delete DataFactoryCustomDataset#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#read DataFactoryCustomDataset#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#read DataFactoryCustomDataset#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#update DataFactoryCustomDataset#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset#update DataFactoryCustomDataset#update}
   */
   readonly update?: string;
 }
 
-export function dataFactoryCustomDatasetTimeoutsToTerraform(struct?: DataFactoryCustomDatasetTimeoutsOutputReference | DataFactoryCustomDatasetTimeouts | cdktf.IResolvable): any {
+export function dataFactoryCustomDatasetTimeoutsToTerraform(struct?: DataFactoryCustomDatasetTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -197,7 +197,7 @@ export class DataFactoryCustomDatasetTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataFactoryCustomDatasetTimeouts | cdktf.IResolvable | undefined {
@@ -314,7 +314,7 @@ export class DataFactoryCustomDatasetTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset azurerm_data_factory_custom_dataset}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset azurerm_data_factory_custom_dataset}
 */
 export class DataFactoryCustomDataset extends cdktf.TerraformResource {
 
@@ -328,7 +328,7 @@ export class DataFactoryCustomDataset extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset azurerm_data_factory_custom_dataset} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/data_factory_custom_dataset azurerm_data_factory_custom_dataset} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

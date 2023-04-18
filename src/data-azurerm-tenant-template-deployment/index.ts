@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/tenant_template_deployment
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/tenant_template_deployment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,31 +8,31 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermTenantTemplateDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/tenant_template_deployment#id DataAzurermTenantTemplateDeployment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/tenant_template_deployment#id DataAzurermTenantTemplateDeployment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/tenant_template_deployment#name DataAzurermTenantTemplateDeployment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/tenant_template_deployment#name DataAzurermTenantTemplateDeployment#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/tenant_template_deployment#timeouts DataAzurermTenantTemplateDeployment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/tenant_template_deployment#timeouts DataAzurermTenantTemplateDeployment#timeouts}
   */
   readonly timeouts?: DataAzurermTenantTemplateDeploymentTimeouts;
 }
 export interface DataAzurermTenantTemplateDeploymentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/tenant_template_deployment#read DataAzurermTenantTemplateDeployment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/tenant_template_deployment#read DataAzurermTenantTemplateDeployment#read}
   */
   readonly read?: string;
 }
 
-export function dataAzurermTenantTemplateDeploymentTimeoutsToTerraform(struct?: DataAzurermTenantTemplateDeploymentTimeoutsOutputReference | DataAzurermTenantTemplateDeploymentTimeouts | cdktf.IResolvable): any {
+export function dataAzurermTenantTemplateDeploymentTimeoutsToTerraform(struct?: DataAzurermTenantTemplateDeploymentTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -51,7 +51,7 @@ export class DataAzurermTenantTemplateDeploymentTimeoutsOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataAzurermTenantTemplateDeploymentTimeouts | cdktf.IResolvable | undefined {
@@ -102,7 +102,7 @@ export class DataAzurermTenantTemplateDeploymentTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/tenant_template_deployment azurerm_tenant_template_deployment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/tenant_template_deployment azurerm_tenant_template_deployment}
 */
 export class DataAzurermTenantTemplateDeployment extends cdktf.TerraformDataSource {
 
@@ -116,7 +116,7 @@ export class DataAzurermTenantTemplateDeployment extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/tenant_template_deployment azurerm_tenant_template_deployment} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/tenant_template_deployment azurerm_tenant_template_deployment} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

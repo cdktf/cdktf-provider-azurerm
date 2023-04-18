@@ -1,6 +1,6 @@
 # `data_azurerm_client_config`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_client_config`](https://www.terraform.io/docs/providers/azurerm/d/client_config).
+Refer to the Terraform Registory for docs: [`data_azurerm_client_config`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/client_config).
 
 # `dataAzurermClientConfig` Submodule <a name="`dataAzurermClientConfig` Submodule" id="@cdktf/provider-azurerm.dataAzurermClientConfig"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_client_config`](https:
 
 ### DataAzurermClientConfig <a name="DataAzurermClientConfig" id="@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/client_config azurerm_client_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/client_config azurerm_client_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.Initializer"></a>
 
@@ -365,7 +365,7 @@ dataAzurermClientConfig.DataAzurermClientConfig.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -456,10 +456,10 @@ public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -618,13 +618,13 @@ const dataAzurermClientConfigConfig: dataAzurermClientConfig.DataAzurermClientCo
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigConfig.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/client_config#id DataAzurermClientConfig#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/client_config#id DataAzurermClientConfig#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a></code> | timeouts block. |
 
 ---
@@ -642,10 +642,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigConfig.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -707,7 +707,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/client_config#id DataAzurermClientConfig#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/client_config#id DataAzurermClientConfig#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -724,7 +724,7 @@ public readonly timeouts: DataAzurermClientConfigTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/client_config#timeouts DataAzurermClientConfig#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/client_config#timeouts DataAzurermClientConfig#timeouts}
 
 ---
 
@@ -742,7 +742,7 @@ const dataAzurermClientConfigTimeouts: dataAzurermClientConfig.DataAzurermClient
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/client_config#read DataAzurermClientConfig#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/client_config#read DataAzurermClientConfig#read}. |
 
 ---
 
@@ -754,7 +754,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/client_config#read DataAzurermClientConfig#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/client_config#read DataAzurermClientConfig#read}.
 
 ---
 

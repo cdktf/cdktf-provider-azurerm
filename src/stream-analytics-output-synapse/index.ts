@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,71 +8,71 @@ import * as cdktf from 'cdktf';
 
 export interface StreamAnalyticsOutputSynapseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse#database StreamAnalyticsOutputSynapse#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse#database StreamAnalyticsOutputSynapse#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse#id StreamAnalyticsOutputSynapse#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse#id StreamAnalyticsOutputSynapse#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse#name StreamAnalyticsOutputSynapse#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse#name StreamAnalyticsOutputSynapse#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse#password StreamAnalyticsOutputSynapse#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse#password StreamAnalyticsOutputSynapse#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse#resource_group_name StreamAnalyticsOutputSynapse#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse#resource_group_name StreamAnalyticsOutputSynapse#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse#server StreamAnalyticsOutputSynapse#server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse#server StreamAnalyticsOutputSynapse#server}
   */
   readonly server: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse#stream_analytics_job_name StreamAnalyticsOutputSynapse#stream_analytics_job_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse#stream_analytics_job_name StreamAnalyticsOutputSynapse#stream_analytics_job_name}
   */
   readonly streamAnalyticsJobName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse#table StreamAnalyticsOutputSynapse#table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse#table StreamAnalyticsOutputSynapse#table}
   */
   readonly table: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse#user StreamAnalyticsOutputSynapse#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse#user StreamAnalyticsOutputSynapse#user}
   */
   readonly user: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse#timeouts StreamAnalyticsOutputSynapse#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse#timeouts StreamAnalyticsOutputSynapse#timeouts}
   */
   readonly timeouts?: StreamAnalyticsOutputSynapseTimeouts;
 }
 export interface StreamAnalyticsOutputSynapseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse#create StreamAnalyticsOutputSynapse#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse#create StreamAnalyticsOutputSynapse#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse#delete StreamAnalyticsOutputSynapse#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse#delete StreamAnalyticsOutputSynapse#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse#read StreamAnalyticsOutputSynapse#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse#read StreamAnalyticsOutputSynapse#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse#update StreamAnalyticsOutputSynapse#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse#update StreamAnalyticsOutputSynapse#update}
   */
   readonly update?: string;
 }
 
-export function streamAnalyticsOutputSynapseTimeoutsToTerraform(struct?: StreamAnalyticsOutputSynapseTimeoutsOutputReference | StreamAnalyticsOutputSynapseTimeouts | cdktf.IResolvable): any {
+export function streamAnalyticsOutputSynapseTimeoutsToTerraform(struct?: StreamAnalyticsOutputSynapseTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -94,7 +94,7 @@ export class StreamAnalyticsOutputSynapseTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): StreamAnalyticsOutputSynapseTimeouts | cdktf.IResolvable | undefined {
@@ -211,7 +211,7 @@ export class StreamAnalyticsOutputSynapseTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse azurerm_stream_analytics_output_synapse}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse azurerm_stream_analytics_output_synapse}
 */
 export class StreamAnalyticsOutputSynapse extends cdktf.TerraformResource {
 
@@ -225,7 +225,7 @@ export class StreamAnalyticsOutputSynapse extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_synapse azurerm_stream_analytics_output_synapse} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/stream_analytics_output_synapse azurerm_stream_analytics_output_synapse} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

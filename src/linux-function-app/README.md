@@ -1,3 +1,3 @@
 # `azurerm_linux_function_app`
 
-Refer to the Terraform Registory for docs: [`azurerm_linux_function_app`](https://www.terraform.io/docs/providers/azurerm/r/linux_function_app).
+Refer to the Terraform Registory for docs: [`azurerm_linux_function_app`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/linux_function_app).
