@@ -1,3 +1,7 @@
+# `azurerm_bot_channels_registration`
+
+Refer to the Terraform Registory for docs: [`azurerm_bot_channels_registration`](https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration).
+
 # `botChannelsRegistration` Submodule <a name="`botChannelsRegistration` Submodule" id="@cdktf/provider-azurerm.botChannelsRegistration"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_sentinel_data_connector_office_365_project`
+
+Refer to the Terraform Registory for docs: [`azurerm_sentinel_data_connector_office_365_project`](https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365_project).
+
 # `sentinelDataConnectorOffice365Project` Submodule <a name="`sentinelDataConnectorOffice365Project` Submodule" id="@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

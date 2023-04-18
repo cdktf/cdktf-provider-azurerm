@@ -1,3 +1,7 @@
+# `azurerm_sentinel_watchlist`
+
+Refer to the Terraform Registory for docs: [`azurerm_sentinel_watchlist`](https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist).
+
 # `sentinelWatchlist` Submodule <a name="`sentinelWatchlist` Submodule" id="@cdktf/provider-azurerm.sentinelWatchlist"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

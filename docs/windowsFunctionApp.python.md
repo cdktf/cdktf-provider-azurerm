@@ -1,3 +1,7 @@
+# `azurerm_windows_function_app`
+
+Refer to the Terraform Registory for docs: [`azurerm_windows_function_app`](https://www.terraform.io/docs/providers/azurerm/r/windows_function_app).
+
 # `windowsFunctionApp` Submodule <a name="`windowsFunctionApp` Submodule" id="@cdktf/provider-azurerm.windowsFunctionApp"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

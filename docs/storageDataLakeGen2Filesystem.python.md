@@ -1,3 +1,7 @@
+# `azurerm_storage_data_lake_gen2_filesystem`
+
+Refer to the Terraform Registory for docs: [`azurerm_storage_data_lake_gen2_filesystem`](https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem).
+
 # `storageDataLakeGen2Filesystem` Submodule <a name="`storageDataLakeGen2Filesystem` Submodule" id="@cdktf/provider-azurerm.storageDataLakeGen2Filesystem"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

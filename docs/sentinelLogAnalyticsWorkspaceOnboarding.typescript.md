@@ -1,3 +1,7 @@
+# `azurerm_sentinel_log_analytics_workspace_onboarding`
+
+Refer to the Terraform Registory for docs: [`azurerm_sentinel_log_analytics_workspace_onboarding`](https://www.terraform.io/docs/providers/azurerm/r/sentinel_log_analytics_workspace_onboarding).
+
 # `sentinelLogAnalyticsWorkspaceOnboarding` Submodule <a name="`sentinelLogAnalyticsWorkspaceOnboarding` Submodule" id="@cdktf/provider-azurerm.sentinelLogAnalyticsWorkspaceOnboarding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

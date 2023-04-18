@@ -1,3 +1,7 @@
+# `azurerm_kusto_eventhub_data_connection`
+
+Refer to the Terraform Registory for docs: [`azurerm_kusto_eventhub_data_connection`](https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection).
+
 # `kustoEventhubDataConnection` Submodule <a name="`kustoEventhubDataConnection` Submodule" id="@cdktf/provider-azurerm.kustoEventhubDataConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

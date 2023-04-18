@@ -1,3 +1,7 @@
+# `azurerm_logic_app_trigger_custom`
+
+Refer to the Terraform Registory for docs: [`azurerm_logic_app_trigger_custom`](https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom).
+
 # `logicAppTriggerCustom` Submodule <a name="`logicAppTriggerCustom` Submodule" id="@cdktf/provider-azurerm.logicAppTriggerCustom"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

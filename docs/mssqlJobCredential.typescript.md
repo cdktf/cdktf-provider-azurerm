@@ -1,3 +1,7 @@
+# `azurerm_mssql_job_credential`
+
+Refer to the Terraform Registory for docs: [`azurerm_mssql_job_credential`](https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential).
+
 # `mssqlJobCredential` Submodule <a name="`mssqlJobCredential` Submodule" id="@cdktf/provider-azurerm.mssqlJobCredential"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_application_insights_standard_web_test`
+
+Refer to the Terraform Registory for docs: [`azurerm_application_insights_standard_web_test`](https://www.terraform.io/docs/providers/azurerm/r/application_insights_standard_web_test).
+
 # `applicationInsightsStandardWebTest` Submodule <a name="`applicationInsightsStandardWebTest` Submodule" id="@cdktf/provider-azurerm.applicationInsightsStandardWebTest"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

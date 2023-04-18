@@ -1,3 +1,7 @@
+# `azurerm_ip_group_cidr`
+
+Refer to the Terraform Registory for docs: [`azurerm_ip_group_cidr`](https://www.terraform.io/docs/providers/azurerm/r/ip_group_cidr).
+
 # `ipGroupCidr` Submodule <a name="`ipGroupCidr` Submodule" id="@cdktf/provider-azurerm.ipGroupCidr"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

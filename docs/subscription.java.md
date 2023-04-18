@@ -1,3 +1,7 @@
+# `azurerm_subscription`
+
+Refer to the Terraform Registory for docs: [`azurerm_subscription`](https://www.terraform.io/docs/providers/azurerm/r/subscription).
+
 # `subscription` Submodule <a name="`subscription` Submodule" id="@cdktf/provider-azurerm.subscription"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_cognitive_deployment`
+
+Refer to the Terraform Registory for docs: [`azurerm_cognitive_deployment`](https://www.terraform.io/docs/providers/azurerm/r/cognitive_deployment).
+
 # `cognitiveDeployment` Submodule <a name="`cognitiveDeployment` Submodule" id="@cdktf/provider-azurerm.cognitiveDeployment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

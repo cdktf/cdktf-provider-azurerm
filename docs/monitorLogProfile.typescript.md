@@ -1,3 +1,7 @@
+# `azurerm_monitor_log_profile`
+
+Refer to the Terraform Registory for docs: [`azurerm_monitor_log_profile`](https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile).
+
 # `monitorLogProfile` Submodule <a name="`monitorLogProfile` Submodule" id="@cdktf/provider-azurerm.monitorLogProfile"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

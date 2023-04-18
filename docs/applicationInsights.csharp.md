@@ -1,3 +1,7 @@
+# `azurerm_application_insights`
+
+Refer to the Terraform Registory for docs: [`azurerm_application_insights`](https://www.terraform.io/docs/providers/azurerm/r/application_insights).
+
 # `applicationInsights` Submodule <a name="`applicationInsights` Submodule" id="@cdktf/provider-azurerm.applicationInsights"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

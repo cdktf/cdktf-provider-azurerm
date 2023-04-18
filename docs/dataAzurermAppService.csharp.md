@@ -1,3 +1,7 @@
+# `data_azurerm_app_service`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_app_service`](https://www.terraform.io/docs/providers/azurerm/d/app_service).
+
 # `dataAzurermAppService` Submodule <a name="`dataAzurermAppService` Submodule" id="@cdktf/provider-azurerm.dataAzurermAppService"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

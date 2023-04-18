@@ -1,3 +1,7 @@
+# `azurerm_servicebus_namespace`
+
+Refer to the Terraform Registory for docs: [`azurerm_servicebus_namespace`](https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace).
+
 # `servicebusNamespace` Submodule <a name="`servicebusNamespace` Submodule" id="@cdktf/provider-azurerm.servicebusNamespace"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

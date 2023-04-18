@@ -1,3 +1,7 @@
+# `azurerm_management_group`
+
+Refer to the Terraform Registory for docs: [`azurerm_management_group`](https://www.terraform.io/docs/providers/azurerm/r/management_group).
+
 # `managementGroup` Submodule <a name="`managementGroup` Submodule" id="@cdktf/provider-azurerm.managementGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

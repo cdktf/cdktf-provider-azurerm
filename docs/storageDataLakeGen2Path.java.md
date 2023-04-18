@@ -1,3 +1,7 @@
+# `azurerm_storage_data_lake_gen2_path`
+
+Refer to the Terraform Registory for docs: [`azurerm_storage_data_lake_gen2_path`](https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path).
+
 # `storageDataLakeGen2Path` Submodule <a name="`storageDataLakeGen2Path` Submodule" id="@cdktf/provider-azurerm.storageDataLakeGen2Path"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_monitor_data_collection_rule`
+
+Refer to the Terraform Registory for docs: [`azurerm_monitor_data_collection_rule`](https://www.terraform.io/docs/providers/azurerm/r/monitor_data_collection_rule).
+
 # `monitorDataCollectionRule` Submodule <a name="`monitorDataCollectionRule` Submodule" id="@cdktf/provider-azurerm.monitorDataCollectionRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

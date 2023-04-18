@@ -1,3 +1,7 @@
+# `azurerm_vmware_private_cloud`
+
+Refer to the Terraform Registory for docs: [`azurerm_vmware_private_cloud`](https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud).
+
 # `vmwarePrivateCloud` Submodule <a name="`vmwarePrivateCloud` Submodule" id="@cdktf/provider-azurerm.vmwarePrivateCloud"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

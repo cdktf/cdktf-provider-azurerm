@@ -1,3 +1,7 @@
+# `azurerm_lighthouse_assignment`
+
+Refer to the Terraform Registory for docs: [`azurerm_lighthouse_assignment`](https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment).
+
 # `lighthouseAssignment` Submodule <a name="`lighthouseAssignment` Submodule" id="@cdktf/provider-azurerm.lighthouseAssignment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

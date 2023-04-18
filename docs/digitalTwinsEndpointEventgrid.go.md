@@ -1,3 +1,7 @@
+# `azurerm_digital_twins_endpoint_eventgrid`
+
+Refer to the Terraform Registory for docs: [`azurerm_digital_twins_endpoint_eventgrid`](https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventgrid).
+
 # `digitalTwinsEndpointEventgrid` Submodule <a name="`digitalTwinsEndpointEventgrid` Submodule" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventgrid"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

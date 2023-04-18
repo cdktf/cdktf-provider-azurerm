@@ -1,3 +1,7 @@
+# `azurerm_api_management_api_release`
+
+Refer to the Terraform Registory for docs: [`azurerm_api_management_api_release`](https://www.terraform.io/docs/providers/azurerm/r/api_management_api_release).
+
 # `apiManagementApiRelease` Submodule <a name="`apiManagementApiRelease` Submodule" id="@cdktf/provider-azurerm.apiManagementApiRelease"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

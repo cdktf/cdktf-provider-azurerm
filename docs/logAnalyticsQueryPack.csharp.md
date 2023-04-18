@@ -1,3 +1,7 @@
+# `azurerm_log_analytics_query_pack`
+
+Refer to the Terraform Registory for docs: [`azurerm_log_analytics_query_pack`](https://www.terraform.io/docs/providers/azurerm/r/log_analytics_query_pack).
+
 # `logAnalyticsQueryPack` Submodule <a name="`logAnalyticsQueryPack` Submodule" id="@cdktf/provider-azurerm.logAnalyticsQueryPack"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `data_azurerm_hybrid_compute_machine`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_hybrid_compute_machine`](https://www.terraform.io/docs/providers/azurerm/d/hybrid_compute_machine).
+
 # `dataAzurermHybridComputeMachine` Submodule <a name="`dataAzurermHybridComputeMachine` Submodule" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

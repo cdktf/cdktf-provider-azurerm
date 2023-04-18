@@ -1,3 +1,7 @@
+# `azurerm_api_management_identity_provider_twitter`
+
+Refer to the Terraform Registory for docs: [`azurerm_api_management_identity_provider_twitter`](https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_twitter).
+
 # `apiManagementIdentityProviderTwitter` Submodule <a name="`apiManagementIdentityProviderTwitter` Submodule" id="@cdktf/provider-azurerm.apiManagementIdentityProviderTwitter"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

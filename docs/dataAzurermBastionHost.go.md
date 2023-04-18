@@ -1,3 +1,7 @@
+# `data_azurerm_bastion_host`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_bastion_host`](https://www.terraform.io/docs/providers/azurerm/d/bastion_host).
+
 # `dataAzurermBastionHost` Submodule <a name="`dataAzurermBastionHost` Submodule" id="@cdktf/provider-azurerm.dataAzurermBastionHost"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

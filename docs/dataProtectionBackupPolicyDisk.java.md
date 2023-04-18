@@ -1,3 +1,7 @@
+# `azurerm_data_protection_backup_policy_disk`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_protection_backup_policy_disk`](https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_disk).
+
 # `dataProtectionBackupPolicyDisk` Submodule <a name="`dataProtectionBackupPolicyDisk` Submodule" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyDisk"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_sentinel_data_connector_iot`
+
+Refer to the Terraform Registory for docs: [`azurerm_sentinel_data_connector_iot`](https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_iot).
+
 # `sentinelDataConnectorIot` Submodule <a name="`sentinelDataConnectorIot` Submodule" id="@cdktf/provider-azurerm.sentinelDataConnectorIot"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_elastic_cloud_elasticsearch`
+
+Refer to the Terraform Registory for docs: [`azurerm_elastic_cloud_elasticsearch`](https://www.terraform.io/docs/providers/azurerm/r/elastic_cloud_elasticsearch).
+
 # `elasticCloudElasticsearch` Submodule <a name="`elasticCloudElasticsearch` Submodule" id="@cdktf/provider-azurerm.elasticCloudElasticsearch"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

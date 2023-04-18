@@ -1,3 +1,7 @@
+# `data_azurerm_private_dns_resolver_outbound_endpoint`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_private_dns_resolver_outbound_endpoint`](https://www.terraform.io/docs/providers/azurerm/d/private_dns_resolver_outbound_endpoint).
+
 # `dataAzurermPrivateDnsResolverOutboundEndpoint` Submodule <a name="`dataAzurermPrivateDnsResolverOutboundEndpoint` Submodule" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsResolverOutboundEndpoint"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `data_azurerm_firewall`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_firewall`](https://www.terraform.io/docs/providers/azurerm/d/firewall).
+
 # `dataAzurermFirewall` Submodule <a name="`dataAzurermFirewall` Submodule" id="@cdktf/provider-azurerm.dataAzurermFirewall"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

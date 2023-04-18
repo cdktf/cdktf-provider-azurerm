@@ -1,3 +1,7 @@
+# `data_azurerm_batch_certificate`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_batch_certificate`](https://www.terraform.io/docs/providers/azurerm/d/batch_certificate).
+
 # `dataAzurermBatchCertificate` Submodule <a name="`dataAzurermBatchCertificate` Submodule" id="@cdktf/provider-azurerm.dataAzurermBatchCertificate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

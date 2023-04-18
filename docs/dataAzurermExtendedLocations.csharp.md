@@ -1,3 +1,7 @@
+# `data_azurerm_extended_locations`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_extended_locations`](https://www.terraform.io/docs/providers/azurerm/d/extended_locations).
+
 # `dataAzurermExtendedLocations` Submodule <a name="`dataAzurermExtendedLocations` Submodule" id="@cdktf/provider-azurerm.dataAzurermExtendedLocations"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

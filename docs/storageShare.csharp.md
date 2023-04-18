@@ -1,3 +1,7 @@
+# `azurerm_storage_share`
+
+Refer to the Terraform Registory for docs: [`azurerm_storage_share`](https://www.terraform.io/docs/providers/azurerm/r/storage_share).
+
 # `storageShare` Submodule <a name="`storageShare` Submodule" id="@cdktf/provider-azurerm.storageShare"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

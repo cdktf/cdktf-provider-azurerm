@@ -1,3 +1,7 @@
+# `azurerm_eventhub_namespace_authorization_rule`
+
+Refer to the Terraform Registory for docs: [`azurerm_eventhub_namespace_authorization_rule`](https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule).
+
 # `eventhubNamespaceAuthorizationRule` Submodule <a name="`eventhubNamespaceAuthorizationRule` Submodule" id="@cdktf/provider-azurerm.eventhubNamespaceAuthorizationRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

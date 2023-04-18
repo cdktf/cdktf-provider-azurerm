@@ -1,3 +1,7 @@
+# `azurerm_spring_cloud_api_portal_custom_domain`
+
+Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_api_portal_custom_domain`](https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_api_portal_custom_domain).
+
 # `springCloudApiPortalCustomDomain` Submodule <a name="`springCloudApiPortalCustomDomain` Submodule" id="@cdktf/provider-azurerm.springCloudApiPortalCustomDomain"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

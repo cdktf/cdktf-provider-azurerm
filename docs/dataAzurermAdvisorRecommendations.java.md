@@ -1,3 +1,7 @@
+# `data_azurerm_advisor_recommendations`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_advisor_recommendations`](https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations).
+
 # `dataAzurermAdvisorRecommendations` Submodule <a name="`dataAzurermAdvisorRecommendations` Submodule" id="@cdktf/provider-azurerm.dataAzurermAdvisorRecommendations"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

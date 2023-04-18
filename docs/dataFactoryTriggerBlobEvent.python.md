@@ -1,3 +1,7 @@
+# `azurerm_data_factory_trigger_blob_event`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_factory_trigger_blob_event`](https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_blob_event).
+
 # `dataFactoryTriggerBlobEvent` Submodule <a name="`dataFactoryTriggerBlobEvent` Submodule" id="@cdktf/provider-azurerm.dataFactoryTriggerBlobEvent"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

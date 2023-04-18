@@ -1,3 +1,7 @@
+# `azurerm_firewall_application_rule_collection`
+
+Refer to the Terraform Registory for docs: [`azurerm_firewall_application_rule_collection`](https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection).
+
 # `firewallApplicationRuleCollection` Submodule <a name="`firewallApplicationRuleCollection` Submodule" id="@cdktf/provider-azurerm.firewallApplicationRuleCollection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `data_azurerm_aadb2c_directory`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_aadb2c_directory`](https://www.terraform.io/docs/providers/azurerm/d/aadb2c_directory).
+
 # `dataAzurermAadb2CDirectory` Submodule <a name="`dataAzurermAadb2CDirectory` Submodule" id="@cdktf/provider-azurerm.dataAzurermAadb2CDirectory"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

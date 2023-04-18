@@ -1,3 +1,7 @@
+# `data_azurerm_app_service_environment_v3`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_app_service_environment_v3`](https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3).
+
 # `dataAzurermAppServiceEnvironmentV3` Submodule <a name="`dataAzurermAppServiceEnvironmentV3` Submodule" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironmentV3"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

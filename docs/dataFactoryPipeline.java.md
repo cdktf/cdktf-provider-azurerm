@@ -1,3 +1,7 @@
+# `azurerm_data_factory_pipeline`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_factory_pipeline`](https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline).
+
 # `dataFactoryPipeline` Submodule <a name="`dataFactoryPipeline` Submodule" id="@cdktf/provider-azurerm.dataFactoryPipeline"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_spring_cloud_java_deployment`
+
+Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_java_deployment`](https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment).
+
 # `springCloudJavaDeployment` Submodule <a name="`springCloudJavaDeployment` Submodule" id="@cdktf/provider-azurerm.springCloudJavaDeployment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

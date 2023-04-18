@@ -1,3 +1,7 @@
+# `azurerm_data_share_dataset_blob_storage`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_share_dataset_blob_storage`](https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage).
+
 # `dataShareDatasetBlobStorage` Submodule <a name="`dataShareDatasetBlobStorage` Submodule" id="@cdktf/provider-azurerm.dataShareDatasetBlobStorage"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

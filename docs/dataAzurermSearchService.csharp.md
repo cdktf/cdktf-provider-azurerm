@@ -1,3 +1,7 @@
+# `data_azurerm_search_service`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_search_service`](https://www.terraform.io/docs/providers/azurerm/d/search_service).
+
 # `dataAzurermSearchService` Submodule <a name="`dataAzurermSearchService` Submodule" id="@cdktf/provider-azurerm.dataAzurermSearchService"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

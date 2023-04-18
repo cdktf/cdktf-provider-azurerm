@@ -1,3 +1,7 @@
+# `azurerm_logz_sub_account`
+
+Refer to the Terraform Registory for docs: [`azurerm_logz_sub_account`](https://www.terraform.io/docs/providers/azurerm/r/logz_sub_account).
+
 # `logzSubAccount` Submodule <a name="`logzSubAccount` Submodule" id="@cdktf/provider-azurerm.logzSubAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

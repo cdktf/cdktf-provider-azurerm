@@ -1,3 +1,7 @@
+# `azurerm_media_asset`
+
+Refer to the Terraform Registory for docs: [`azurerm_media_asset`](https://www.terraform.io/docs/providers/azurerm/r/media_asset).
+
 # `mediaAsset` Submodule <a name="`mediaAsset` Submodule" id="@cdktf/provider-azurerm.mediaAsset"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

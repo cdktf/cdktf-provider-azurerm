@@ -1,3 +1,7 @@
+# `azurerm_service_fabric_cluster`
+
+Refer to the Terraform Registory for docs: [`azurerm_service_fabric_cluster`](https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster).
+
 # `serviceFabricCluster` Submodule <a name="`serviceFabricCluster` Submodule" id="@cdktf/provider-azurerm.serviceFabricCluster"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

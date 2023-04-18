@@ -1,3 +1,7 @@
+# `azurerm_web_pubsub_custom_certificate`
+
+Refer to the Terraform Registory for docs: [`azurerm_web_pubsub_custom_certificate`](https://www.terraform.io/docs/providers/azurerm/r/web_pubsub_custom_certificate).
+
 # `webPubsubCustomCertificate` Submodule <a name="`webPubsubCustomCertificate` Submodule" id="@cdktf/provider-azurerm.webPubsubCustomCertificate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

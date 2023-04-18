@@ -1,3 +1,7 @@
+# `azurerm_automation_variable_string`
+
+Refer to the Terraform Registory for docs: [`azurerm_automation_variable_string`](https://www.terraform.io/docs/providers/azurerm/r/automation_variable_string).
+
 # `automationVariableString` Submodule <a name="`automationVariableString` Submodule" id="@cdktf/provider-azurerm.automationVariableString"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

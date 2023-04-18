@@ -1,3 +1,7 @@
+# `data_azurerm_shared_image_versions`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_shared_image_versions`](https://www.terraform.io/docs/providers/azurerm/d/shared_image_versions).
+
 # `dataAzurermSharedImageVersions` Submodule <a name="`dataAzurermSharedImageVersions` Submodule" id="@cdktf/provider-azurerm.dataAzurermSharedImageVersions"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

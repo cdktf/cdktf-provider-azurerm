@@ -1,3 +1,7 @@
+# `azurerm_mobile_network_sim_group`
+
+Refer to the Terraform Registory for docs: [`azurerm_mobile_network_sim_group`](https://www.terraform.io/docs/providers/azurerm/r/mobile_network_sim_group).
+
 # `mobileNetworkSimGroup` Submodule <a name="`mobileNetworkSimGroup` Submodule" id="@cdktf/provider-azurerm.mobileNetworkSimGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

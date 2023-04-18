@@ -1,3 +1,7 @@
+# `azurerm_hpc_cache_nfs_target`
+
+Refer to the Terraform Registory for docs: [`azurerm_hpc_cache_nfs_target`](https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target).
+
 # `hpcCacheNfsTarget` Submodule <a name="`hpcCacheNfsTarget` Submodule" id="@cdktf/provider-azurerm.hpcCacheNfsTarget"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

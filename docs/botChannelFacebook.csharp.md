@@ -1,3 +1,7 @@
+# `azurerm_bot_channel_facebook`
+
+Refer to the Terraform Registory for docs: [`azurerm_bot_channel_facebook`](https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook).
+
 # `botChannelFacebook` Submodule <a name="`botChannelFacebook` Submodule" id="@cdktf/provider-azurerm.botChannelFacebook"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

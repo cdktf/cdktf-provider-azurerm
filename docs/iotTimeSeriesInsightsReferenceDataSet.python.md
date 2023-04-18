@@ -1,3 +1,7 @@
+# `azurerm_iot_time_series_insights_reference_data_set`
+
+Refer to the Terraform Registory for docs: [`azurerm_iot_time_series_insights_reference_data_set`](https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set).
+
 # `iotTimeSeriesInsightsReferenceDataSet` Submodule <a name="`iotTimeSeriesInsightsReferenceDataSet` Submodule" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsReferenceDataSet"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

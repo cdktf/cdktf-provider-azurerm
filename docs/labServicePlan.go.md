@@ -1,3 +1,7 @@
+# `azurerm_lab_service_plan`
+
+Refer to the Terraform Registory for docs: [`azurerm_lab_service_plan`](https://www.terraform.io/docs/providers/azurerm/r/lab_service_plan).
+
 # `labServicePlan` Submodule <a name="`labServicePlan` Submodule" id="@cdktf/provider-azurerm.labServicePlan"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

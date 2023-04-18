@@ -1,3 +1,7 @@
+# `azurerm_api_management_authorization_server`
+
+Refer to the Terraform Registory for docs: [`azurerm_api_management_authorization_server`](https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server).
+
 # `apiManagementAuthorizationServer` Submodule <a name="`apiManagementAuthorizationServer` Submodule" id="@cdktf/provider-azurerm.apiManagementAuthorizationServer"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

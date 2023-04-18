@@ -1,3 +1,7 @@
+# `data_azurerm_servicebus_topic`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_servicebus_topic`](https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic).
+
 # `dataAzurermServicebusTopic` Submodule <a name="`dataAzurermServicebusTopic` Submodule" id="@cdktf/provider-azurerm.dataAzurermServicebusTopic"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

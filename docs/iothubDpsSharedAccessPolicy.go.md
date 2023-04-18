@@ -1,3 +1,7 @@
+# `azurerm_iothub_dps_shared_access_policy`
+
+Refer to the Terraform Registory for docs: [`azurerm_iothub_dps_shared_access_policy`](https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy).
+
 # `iothubDpsSharedAccessPolicy` Submodule <a name="`iothubDpsSharedAccessPolicy` Submodule" id="@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

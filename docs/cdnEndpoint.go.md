@@ -1,3 +1,7 @@
+# `azurerm_cdn_endpoint`
+
+Refer to the Terraform Registory for docs: [`azurerm_cdn_endpoint`](https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint).
+
 # `cdnEndpoint` Submodule <a name="`cdnEndpoint` Submodule" id="@cdktf/provider-azurerm.cdnEndpoint"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

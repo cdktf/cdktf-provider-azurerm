@@ -1,3 +1,7 @@
+# `data_azurerm_storage_account`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_storage_account`](https://www.terraform.io/docs/providers/azurerm/d/storage_account).
+
 # `dataAzurermStorageAccount` Submodule <a name="`dataAzurermStorageAccount` Submodule" id="@cdktf/provider-azurerm.dataAzurermStorageAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_eventhub_namespace_disaster_recovery_config`
+
+Refer to the Terraform Registory for docs: [`azurerm_eventhub_namespace_disaster_recovery_config`](https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_disaster_recovery_config).
+
 # `eventhubNamespaceDisasterRecoveryConfig` Submodule <a name="`eventhubNamespaceDisasterRecoveryConfig` Submodule" id="@cdktf/provider-azurerm.eventhubNamespaceDisasterRecoveryConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

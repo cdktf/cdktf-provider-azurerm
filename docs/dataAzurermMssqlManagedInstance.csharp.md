@@ -1,3 +1,7 @@
+# `data_azurerm_mssql_managed_instance`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_mssql_managed_instance`](https://www.terraform.io/docs/providers/azurerm/d/mssql_managed_instance).
+
 # `dataAzurermMssqlManagedInstance` Submodule <a name="`dataAzurermMssqlManagedInstance` Submodule" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedInstance"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

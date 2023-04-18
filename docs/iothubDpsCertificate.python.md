@@ -1,3 +1,7 @@
+# `azurerm_iothub_dps_certificate`
+
+Refer to the Terraform Registory for docs: [`azurerm_iothub_dps_certificate`](https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate).
+
 # `iothubDpsCertificate` Submodule <a name="`iothubDpsCertificate` Submodule" id="@cdktf/provider-azurerm.iothubDpsCertificate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

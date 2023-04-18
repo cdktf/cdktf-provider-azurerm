@@ -1,3 +1,7 @@
+# `azurerm_redis_enterprise_cluster`
+
+Refer to the Terraform Registory for docs: [`azurerm_redis_enterprise_cluster`](https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster).
+
 # `redisEnterpriseCluster` Submodule <a name="`redisEnterpriseCluster` Submodule" id="@cdktf/provider-azurerm.redisEnterpriseCluster"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

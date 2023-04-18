@@ -1,3 +1,7 @@
+# `azurerm_express_route_connection`
+
+Refer to the Terraform Registory for docs: [`azurerm_express_route_connection`](https://www.terraform.io/docs/providers/azurerm/r/express_route_connection).
+
 # `expressRouteConnection` Submodule <a name="`expressRouteConnection` Submodule" id="@cdktf/provider-azurerm.expressRouteConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `data_azurerm_private_dns_resolver`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_private_dns_resolver`](https://www.terraform.io/docs/providers/azurerm/d/private_dns_resolver).
+
 # `dataAzurermPrivateDnsResolver` Submodule <a name="`dataAzurermPrivateDnsResolver` Submodule" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsResolver"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

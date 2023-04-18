@@ -1,3 +1,7 @@
+# `azurerm_mssql_database_extended_auditing_policy`
+
+Refer to the Terraform Registory for docs: [`azurerm_mssql_database_extended_auditing_policy`](https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy).
+
 # `mssqlDatabaseExtendedAuditingPolicy` Submodule <a name="`mssqlDatabaseExtendedAuditingPolicy` Submodule" id="@cdktf/provider-azurerm.mssqlDatabaseExtendedAuditingPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

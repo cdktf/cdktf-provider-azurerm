@@ -1,3 +1,7 @@
+# `data_azurerm_public_ips`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_public_ips`](https://www.terraform.io/docs/providers/azurerm/d/public_ips).
+
 # `dataAzurermPublicIps` Submodule <a name="`dataAzurermPublicIps` Submodule" id="@cdktf/provider-azurerm.dataAzurermPublicIps"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

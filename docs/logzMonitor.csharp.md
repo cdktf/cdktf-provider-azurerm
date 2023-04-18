@@ -1,3 +1,7 @@
+# `azurerm_logz_monitor`
+
+Refer to the Terraform Registory for docs: [`azurerm_logz_monitor`](https://www.terraform.io/docs/providers/azurerm/r/logz_monitor).
+
 # `logzMonitor` Submodule <a name="`logzMonitor` Submodule" id="@cdktf/provider-azurerm.logzMonitor"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

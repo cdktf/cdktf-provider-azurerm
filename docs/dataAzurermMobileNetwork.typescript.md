@@ -1,3 +1,7 @@
+# `data_azurerm_mobile_network`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_mobile_network`](https://www.terraform.io/docs/providers/azurerm/d/mobile_network).
+
 # `dataAzurermMobileNetwork` Submodule <a name="`dataAzurermMobileNetwork` Submodule" id="@cdktf/provider-azurerm.dataAzurermMobileNetwork"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

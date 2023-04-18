@@ -1,3 +1,7 @@
+# `azurerm_eventhub_namespace_schema_group`
+
+Refer to the Terraform Registory for docs: [`azurerm_eventhub_namespace_schema_group`](https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_schema_group).
+
 # `eventhubNamespaceSchemaGroup` Submodule <a name="`eventhubNamespaceSchemaGroup` Submodule" id="@cdktf/provider-azurerm.eventhubNamespaceSchemaGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_log_analytics_solution`
+
+Refer to the Terraform Registory for docs: [`azurerm_log_analytics_solution`](https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution).
+
 # `logAnalyticsSolution` Submodule <a name="`logAnalyticsSolution` Submodule" id="@cdktf/provider-azurerm.logAnalyticsSolution"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

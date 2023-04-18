@@ -1,3 +1,7 @@
+# `azurerm_log_analytics_data_export_rule`
+
+Refer to the Terraform Registory for docs: [`azurerm_log_analytics_data_export_rule`](https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule).
+
 # `logAnalyticsDataExportRule` Submodule <a name="`logAnalyticsDataExportRule` Submodule" id="@cdktf/provider-azurerm.logAnalyticsDataExportRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

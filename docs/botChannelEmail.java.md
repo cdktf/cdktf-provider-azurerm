@@ -1,3 +1,7 @@
+# `azurerm_bot_channel_email`
+
+Refer to the Terraform Registory for docs: [`azurerm_bot_channel_email`](https://www.terraform.io/docs/providers/azurerm/r/bot_channel_email).
+
 # `botChannelEmail` Submodule <a name="`botChannelEmail` Submodule" id="@cdktf/provider-azurerm.botChannelEmail"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_dns_zone`
+
+Refer to the Terraform Registory for docs: [`azurerm_dns_zone`](https://www.terraform.io/docs/providers/azurerm/r/dns_zone).
+
 # `dnsZone` Submodule <a name="`dnsZone` Submodule" id="@cdktf/provider-azurerm.dnsZone"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

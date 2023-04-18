@@ -1,3 +1,7 @@
+# `azurerm_snapshot`
+
+Refer to the Terraform Registory for docs: [`azurerm_snapshot`](https://www.terraform.io/docs/providers/azurerm/r/snapshot).
+
 # `snapshot` Submodule <a name="`snapshot` Submodule" id="@cdktf/provider-azurerm.snapshot"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

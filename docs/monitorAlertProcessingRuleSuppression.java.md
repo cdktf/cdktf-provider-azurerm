@@ -1,3 +1,7 @@
+# `azurerm_monitor_alert_processing_rule_suppression`
+
+Refer to the Terraform Registory for docs: [`azurerm_monitor_alert_processing_rule_suppression`](https://www.terraform.io/docs/providers/azurerm/r/monitor_alert_processing_rule_suppression).
+
 # `monitorAlertProcessingRuleSuppression` Submodule <a name="`monitorAlertProcessingRuleSuppression` Submodule" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

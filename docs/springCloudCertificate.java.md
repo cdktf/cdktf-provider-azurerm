@@ -1,3 +1,7 @@
+# `azurerm_spring_cloud_certificate`
+
+Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_certificate`](https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_certificate).
+
 # `springCloudCertificate` Submodule <a name="`springCloudCertificate` Submodule" id="@cdktf/provider-azurerm.springCloudCertificate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

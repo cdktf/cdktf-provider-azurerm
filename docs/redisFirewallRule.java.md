@@ -1,3 +1,7 @@
+# `azurerm_redis_firewall_rule`
+
+Refer to the Terraform Registory for docs: [`azurerm_redis_firewall_rule`](https://www.terraform.io/docs/providers/azurerm/r/redis_firewall_rule).
+
 # `redisFirewallRule` Submodule <a name="`redisFirewallRule` Submodule" id="@cdktf/provider-azurerm.redisFirewallRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

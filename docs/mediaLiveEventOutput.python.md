@@ -1,3 +1,7 @@
+# `azurerm_media_live_event_output`
+
+Refer to the Terraform Registory for docs: [`azurerm_media_live_event_output`](https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output).
+
 # `mediaLiveEventOutput` Submodule <a name="`mediaLiveEventOutput` Submodule" id="@cdktf/provider-azurerm.mediaLiveEventOutput"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_iothub_fallback_route`
+
+Refer to the Terraform Registory for docs: [`azurerm_iothub_fallback_route`](https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route).
+
 # `iothubFallbackRoute` Submodule <a name="`iothubFallbackRoute` Submodule" id="@cdktf/provider-azurerm.iothubFallbackRoute"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

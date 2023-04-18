@@ -1,3 +1,7 @@
+# `data_azurerm_batch_account`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_batch_account`](https://www.terraform.io/docs/providers/azurerm/d/batch_account).
+
 # `dataAzurermBatchAccount` Submodule <a name="`dataAzurermBatchAccount` Submodule" id="@cdktf/provider-azurerm.dataAzurermBatchAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

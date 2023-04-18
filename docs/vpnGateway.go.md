@@ -1,3 +1,7 @@
+# `azurerm_vpn_gateway`
+
+Refer to the Terraform Registory for docs: [`azurerm_vpn_gateway`](https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway).
+
 # `vpnGateway` Submodule <a name="`vpnGateway` Submodule" id="@cdktf/provider-azurerm.vpnGateway"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

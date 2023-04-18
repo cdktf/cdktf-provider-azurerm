@@ -1,3 +1,7 @@
+# `azurerm_monitor_action_group`
+
+Refer to the Terraform Registory for docs: [`azurerm_monitor_action_group`](https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group).
+
 # `monitorActionGroup` Submodule <a name="`monitorActionGroup` Submodule" id="@cdktf/provider-azurerm.monitorActionGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

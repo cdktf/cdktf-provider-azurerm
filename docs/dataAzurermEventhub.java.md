@@ -1,3 +1,7 @@
+# `data_azurerm_eventhub`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_eventhub`](https://www.terraform.io/docs/providers/azurerm/d/eventhub).
+
 # `dataAzurermEventhub` Submodule <a name="`dataAzurermEventhub` Submodule" id="@cdktf/provider-azurerm.dataAzurermEventhub"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

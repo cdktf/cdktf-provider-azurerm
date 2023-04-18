@@ -1,3 +1,7 @@
+# `azurerm_network_manager_connectivity_configuration`
+
+Refer to the Terraform Registory for docs: [`azurerm_network_manager_connectivity_configuration`](https://www.terraform.io/docs/providers/azurerm/r/network_manager_connectivity_configuration).
+
 # `networkManagerConnectivityConfiguration` Submodule <a name="`networkManagerConnectivityConfiguration` Submodule" id="@cdktf/provider-azurerm.networkManagerConnectivityConfiguration"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

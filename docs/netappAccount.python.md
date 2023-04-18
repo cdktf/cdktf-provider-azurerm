@@ -1,3 +1,7 @@
+# `azurerm_netapp_account`
+
+Refer to the Terraform Registory for docs: [`azurerm_netapp_account`](https://www.terraform.io/docs/providers/azurerm/r/netapp_account).
+
 # `netappAccount` Submodule <a name="`netappAccount` Submodule" id="@cdktf/provider-azurerm.netappAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

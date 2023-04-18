@@ -1,3 +1,7 @@
+# `azurerm_api_connection`
+
+Refer to the Terraform Registory for docs: [`azurerm_api_connection`](https://www.terraform.io/docs/providers/azurerm/r/api_connection).
+
 # `apiConnection` Submodule <a name="`apiConnection` Submodule" id="@cdktf/provider-azurerm.apiConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

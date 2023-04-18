@@ -1,3 +1,7 @@
+# `azurerm_data_factory_managed_private_endpoint`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_factory_managed_private_endpoint`](https://www.terraform.io/docs/providers/azurerm/r/data_factory_managed_private_endpoint).
+
 # `dataFactoryManagedPrivateEndpoint` Submodule <a name="`dataFactoryManagedPrivateEndpoint` Submodule" id="@cdktf/provider-azurerm.dataFactoryManagedPrivateEndpoint"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

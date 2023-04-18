@@ -1,3 +1,7 @@
+# `azurerm_sentinel_metadata`
+
+Refer to the Terraform Registory for docs: [`azurerm_sentinel_metadata`](https://www.terraform.io/docs/providers/azurerm/r/sentinel_metadata).
+
 # `sentinelMetadata` Submodule <a name="`sentinelMetadata` Submodule" id="@cdktf/provider-azurerm.sentinelMetadata"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

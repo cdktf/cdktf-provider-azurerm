@@ -1,3 +1,7 @@
+# `azurerm_resource_group_policy_assignment`
+
+Refer to the Terraform Registory for docs: [`azurerm_resource_group_policy_assignment`](https://www.terraform.io/docs/providers/azurerm/r/resource_group_policy_assignment).
+
 # `resourceGroupPolicyAssignment` Submodule <a name="`resourceGroupPolicyAssignment` Submodule" id="@cdktf/provider-azurerm.resourceGroupPolicyAssignment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

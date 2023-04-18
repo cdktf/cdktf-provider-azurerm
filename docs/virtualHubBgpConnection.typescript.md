@@ -1,3 +1,7 @@
+# `azurerm_virtual_hub_bgp_connection`
+
+Refer to the Terraform Registory for docs: [`azurerm_virtual_hub_bgp_connection`](https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_bgp_connection).
+
 # `virtualHubBgpConnection` Submodule <a name="`virtualHubBgpConnection` Submodule" id="@cdktf/provider-azurerm.virtualHubBgpConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

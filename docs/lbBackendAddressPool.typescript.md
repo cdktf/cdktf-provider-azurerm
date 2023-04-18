@@ -1,3 +1,7 @@
+# `azurerm_lb_backend_address_pool`
+
+Refer to the Terraform Registory for docs: [`azurerm_lb_backend_address_pool`](https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool).
+
 # `lbBackendAddressPool` Submodule <a name="`lbBackendAddressPool` Submodule" id="@cdktf/provider-azurerm.lbBackendAddressPool"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

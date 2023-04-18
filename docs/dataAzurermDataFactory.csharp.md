@@ -1,3 +1,7 @@
+# `data_azurerm_data_factory`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_data_factory`](https://www.terraform.io/docs/providers/azurerm/d/data_factory).
+
 # `dataAzurermDataFactory` Submodule <a name="`dataAzurermDataFactory` Submodule" id="@cdktf/provider-azurerm.dataAzurermDataFactory"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

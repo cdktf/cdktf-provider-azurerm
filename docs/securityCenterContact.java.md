@@ -1,3 +1,7 @@
+# `azurerm_security_center_contact`
+
+Refer to the Terraform Registory for docs: [`azurerm_security_center_contact`](https://www.terraform.io/docs/providers/azurerm/r/security_center_contact).
+
 # `securityCenterContact` Submodule <a name="`securityCenterContact` Submodule" id="@cdktf/provider-azurerm.securityCenterContact"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

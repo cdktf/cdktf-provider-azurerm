@@ -1,3 +1,7 @@
+# `data_azurerm_network_watcher`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_network_watcher`](https://www.terraform.io/docs/providers/azurerm/d/network_watcher).
+
 # `dataAzurermNetworkWatcher` Submodule <a name="`dataAzurermNetworkWatcher` Submodule" id="@cdktf/provider-azurerm.dataAzurermNetworkWatcher"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_sentinel_data_connector_microsoft_threat_intelligence`
+
+Refer to the Terraform Registory for docs: [`azurerm_sentinel_data_connector_microsoft_threat_intelligence`](https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_threat_intelligence).
+
 # `sentinelDataConnectorMicrosoftThreatIntelligence` Submodule <a name="`sentinelDataConnectorMicrosoftThreatIntelligence` Submodule" id="@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatIntelligence"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

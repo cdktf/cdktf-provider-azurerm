@@ -1,3 +1,7 @@
+# `azurerm_eventhub_consumer_group`
+
+Refer to the Terraform Registory for docs: [`azurerm_eventhub_consumer_group`](https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group).
+
 # `eventhubConsumerGroup` Submodule <a name="`eventhubConsumerGroup` Submodule" id="@cdktf/provider-azurerm.eventhubConsumerGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

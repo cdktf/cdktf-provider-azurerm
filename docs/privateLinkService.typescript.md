@@ -1,3 +1,7 @@
+# `azurerm_private_link_service`
+
+Refer to the Terraform Registory for docs: [`azurerm_private_link_service`](https://www.terraform.io/docs/providers/azurerm/r/private_link_service).
+
 # `privateLinkService` Submodule <a name="`privateLinkService` Submodule" id="@cdktf/provider-azurerm.privateLinkService"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

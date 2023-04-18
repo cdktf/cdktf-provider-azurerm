@@ -1,3 +1,7 @@
+# `azurerm_video_analyzer`
+
+Refer to the Terraform Registory for docs: [`azurerm_video_analyzer`](https://www.terraform.io/docs/providers/azurerm/r/video_analyzer).
+
 # `videoAnalyzer` Submodule <a name="`videoAnalyzer` Submodule" id="@cdktf/provider-azurerm.videoAnalyzer"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_mssql_managed_instance_transparent_data_encryption`
+
+Refer to the Terraform Registory for docs: [`azurerm_mssql_managed_instance_transparent_data_encryption`](https://www.terraform.io/docs/providers/azurerm/r/mssql_managed_instance_transparent_data_encryption).
+
 # `mssqlManagedInstanceTransparentDataEncryption` Submodule <a name="`mssqlManagedInstanceTransparentDataEncryption` Submodule" id="@cdktf/provider-azurerm.mssqlManagedInstanceTransparentDataEncryption"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

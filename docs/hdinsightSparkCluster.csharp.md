@@ -1,3 +1,7 @@
+# `azurerm_hdinsight_spark_cluster`
+
+Refer to the Terraform Registory for docs: [`azurerm_hdinsight_spark_cluster`](https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster).
+
 # `hdinsightSparkCluster` Submodule <a name="`hdinsightSparkCluster` Submodule" id="@cdktf/provider-azurerm.hdinsightSparkCluster"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

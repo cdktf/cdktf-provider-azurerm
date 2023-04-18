@@ -1,3 +1,7 @@
+# `azurerm_automation_schedule`
+
+Refer to the Terraform Registory for docs: [`azurerm_automation_schedule`](https://www.terraform.io/docs/providers/azurerm/r/automation_schedule).
+
 # `automationSchedule` Submodule <a name="`automationSchedule` Submodule" id="@cdktf/provider-azurerm.automationSchedule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

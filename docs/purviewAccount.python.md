@@ -1,3 +1,7 @@
+# `azurerm_purview_account`
+
+Refer to the Terraform Registory for docs: [`azurerm_purview_account`](https://www.terraform.io/docs/providers/azurerm/r/purview_account).
+
 # `purviewAccount` Submodule <a name="`purviewAccount` Submodule" id="@cdktf/provider-azurerm.purviewAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

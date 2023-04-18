@@ -1,3 +1,7 @@
+# `azurerm_iothub_route`
+
+Refer to the Terraform Registory for docs: [`azurerm_iothub_route`](https://www.terraform.io/docs/providers/azurerm/r/iothub_route).
+
 # `iothubRoute` Submodule <a name="`iothubRoute` Submodule" id="@cdktf/provider-azurerm.iothubRoute"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

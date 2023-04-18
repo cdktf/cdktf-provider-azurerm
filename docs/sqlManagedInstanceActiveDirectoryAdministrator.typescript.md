@@ -1,3 +1,7 @@
+# `azurerm_sql_managed_instance_active_directory_administrator`
+
+Refer to the Terraform Registory for docs: [`azurerm_sql_managed_instance_active_directory_administrator`](https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator).
+
 # `sqlManagedInstanceActiveDirectoryAdministrator` Submodule <a name="`sqlManagedInstanceActiveDirectoryAdministrator` Submodule" id="@cdktf/provider-azurerm.sqlManagedInstanceActiveDirectoryAdministrator"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

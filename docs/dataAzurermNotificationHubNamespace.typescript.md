@@ -1,3 +1,7 @@
+# `data_azurerm_notification_hub_namespace`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_notification_hub_namespace`](https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace).
+
 # `dataAzurermNotificationHubNamespace` Submodule <a name="`dataAzurermNotificationHubNamespace` Submodule" id="@cdktf/provider-azurerm.dataAzurermNotificationHubNamespace"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

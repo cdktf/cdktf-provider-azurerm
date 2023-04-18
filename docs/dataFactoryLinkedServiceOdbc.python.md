@@ -1,3 +1,7 @@
+# `azurerm_data_factory_linked_service_odbc`
+
+Refer to the Terraform Registory for docs: [`azurerm_data_factory_linked_service_odbc`](https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc).
+
 # `dataFactoryLinkedServiceOdbc` Submodule <a name="`dataFactoryLinkedServiceOdbc` Submodule" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceOdbc"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

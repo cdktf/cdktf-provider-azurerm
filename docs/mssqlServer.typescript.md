@@ -1,3 +1,7 @@
+# `azurerm_mssql_server`
+
+Refer to the Terraform Registory for docs: [`azurerm_mssql_server`](https://www.terraform.io/docs/providers/azurerm/r/mssql_server).
+
 # `mssqlServer` Submodule <a name="`mssqlServer` Submodule" id="@cdktf/provider-azurerm.mssqlServer"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

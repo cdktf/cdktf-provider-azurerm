@@ -1,3 +1,7 @@
+# `azurerm_spring_cloud_dev_tool_portal`
+
+Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_dev_tool_portal`](https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_dev_tool_portal).
+
 # `springCloudDevToolPortal` Submodule <a name="`springCloudDevToolPortal` Submodule" id="@cdktf/provider-azurerm.springCloudDevToolPortal"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

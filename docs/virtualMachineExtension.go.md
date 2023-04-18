@@ -1,3 +1,7 @@
+# `azurerm_virtual_machine_extension`
+
+Refer to the Terraform Registory for docs: [`azurerm_virtual_machine_extension`](https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension).
+
 # `virtualMachineExtension` Submodule <a name="`virtualMachineExtension` Submodule" id="@cdktf/provider-azurerm.virtualMachineExtension"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `data_azurerm_site_recovery_fabric`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_site_recovery_fabric`](https://www.terraform.io/docs/providers/azurerm/d/site_recovery_fabric).
+
 # `dataAzurermSiteRecoveryFabric` Submodule <a name="`dataAzurermSiteRecoveryFabric` Submodule" id="@cdktf/provider-azurerm.dataAzurermSiteRecoveryFabric"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

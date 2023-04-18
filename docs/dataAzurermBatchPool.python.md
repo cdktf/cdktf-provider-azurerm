@@ -1,3 +1,7 @@
+# `data_azurerm_batch_pool`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_batch_pool`](https://www.terraform.io/docs/providers/azurerm/d/batch_pool).
+
 # `dataAzurermBatchPool` Submodule <a name="`dataAzurermBatchPool` Submodule" id="@cdktf/provider-azurerm.dataAzurermBatchPool"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

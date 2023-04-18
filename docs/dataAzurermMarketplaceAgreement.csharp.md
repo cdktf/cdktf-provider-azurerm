@@ -1,3 +1,7 @@
+# `data_azurerm_marketplace_agreement`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_marketplace_agreement`](https://www.terraform.io/docs/providers/azurerm/d/marketplace_agreement).
+
 # `dataAzurermMarketplaceAgreement` Submodule <a name="`dataAzurermMarketplaceAgreement` Submodule" id="@cdktf/provider-azurerm.dataAzurermMarketplaceAgreement"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

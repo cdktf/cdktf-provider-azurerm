@@ -1,3 +1,7 @@
+# `data_azurerm_servicebus_queue`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_servicebus_queue`](https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue).
+
 # `dataAzurermServicebusQueue` Submodule <a name="`dataAzurermServicebusQueue` Submodule" id="@cdktf/provider-azurerm.dataAzurermServicebusQueue"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

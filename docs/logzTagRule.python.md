@@ -1,3 +1,7 @@
+# `azurerm_logz_tag_rule`
+
+Refer to the Terraform Registory for docs: [`azurerm_logz_tag_rule`](https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule).
+
 # `logzTagRule` Submodule <a name="`logzTagRule` Submodule" id="@cdktf/provider-azurerm.logzTagRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

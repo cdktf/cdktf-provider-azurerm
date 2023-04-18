@@ -1,3 +1,7 @@
+# `data_azurerm_route_filter`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_route_filter`](https://www.terraform.io/docs/providers/azurerm/d/route_filter).
+
 # `dataAzurermRouteFilter` Submodule <a name="`dataAzurermRouteFilter` Submodule" id="@cdktf/provider-azurerm.dataAzurermRouteFilter"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

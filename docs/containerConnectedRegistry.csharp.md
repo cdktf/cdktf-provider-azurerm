@@ -1,3 +1,7 @@
+# `azurerm_container_connected_registry`
+
+Refer to the Terraform Registory for docs: [`azurerm_container_connected_registry`](https://www.terraform.io/docs/providers/azurerm/r/container_connected_registry).
+
 # `containerConnectedRegistry` Submodule <a name="`containerConnectedRegistry` Submodule" id="@cdktf/provider-azurerm.containerConnectedRegistry"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_api_management_subscription`
+
+Refer to the Terraform Registory for docs: [`azurerm_api_management_subscription`](https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription).
+
 # `apiManagementSubscription` Submodule <a name="`apiManagementSubscription` Submodule" id="@cdktf/provider-azurerm.apiManagementSubscription"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

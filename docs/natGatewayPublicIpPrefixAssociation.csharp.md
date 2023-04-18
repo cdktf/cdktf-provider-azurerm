@@ -1,3 +1,7 @@
+# `azurerm_nat_gateway_public_ip_prefix_association`
+
+Refer to the Terraform Registory for docs: [`azurerm_nat_gateway_public_ip_prefix_association`](https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association).
+
 # `natGatewayPublicIpPrefixAssociation` Submodule <a name="`natGatewayPublicIpPrefixAssociation` Submodule" id="@cdktf/provider-azurerm.natGatewayPublicIpPrefixAssociation"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

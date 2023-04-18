@@ -1,3 +1,7 @@
+# `azurerm_batch_application`
+
+Refer to the Terraform Registory for docs: [`azurerm_batch_application`](https://www.terraform.io/docs/providers/azurerm/r/batch_application).
+
 # `batchApplication` Submodule <a name="`batchApplication` Submodule" id="@cdktf/provider-azurerm.batchApplication"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

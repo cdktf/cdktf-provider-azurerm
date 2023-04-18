@@ -1,3 +1,7 @@
+# `azurerm_kusto_cluster_managed_private_endpoint`
+
+Refer to the Terraform Registory for docs: [`azurerm_kusto_cluster_managed_private_endpoint`](https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_managed_private_endpoint).
+
 # `kustoClusterManagedPrivateEndpoint` Submodule <a name="`kustoClusterManagedPrivateEndpoint` Submodule" id="@cdktf/provider-azurerm.kustoClusterManagedPrivateEndpoint"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

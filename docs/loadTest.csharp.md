@@ -1,3 +1,7 @@
+# `azurerm_load_test`
+
+Refer to the Terraform Registory for docs: [`azurerm_load_test`](https://www.terraform.io/docs/providers/azurerm/r/load_test).
+
 # `loadTest` Submodule <a name="`loadTest` Submodule" id="@cdktf/provider-azurerm.loadTest"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

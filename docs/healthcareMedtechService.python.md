@@ -1,3 +1,7 @@
+# `azurerm_healthcare_medtech_service`
+
+Refer to the Terraform Registory for docs: [`azurerm_healthcare_medtech_service`](https://www.terraform.io/docs/providers/azurerm/r/healthcare_medtech_service).
+
 # `healthcareMedtechService` Submodule <a name="`healthcareMedtechService` Submodule" id="@cdktf/provider-azurerm.healthcareMedtechService"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

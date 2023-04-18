@@ -1,3 +1,7 @@
+# `azurerm_container_registry_task`
+
+Refer to the Terraform Registory for docs: [`azurerm_container_registry_task`](https://www.terraform.io/docs/providers/azurerm/r/container_registry_task).
+
 # `containerRegistryTask` Submodule <a name="`containerRegistryTask` Submodule" id="@cdktf/provider-azurerm.containerRegistryTask"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

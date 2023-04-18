@@ -1,3 +1,7 @@
+# `azurerm_application_insights_workbook_template`
+
+Refer to the Terraform Registory for docs: [`azurerm_application_insights_workbook_template`](https://www.terraform.io/docs/providers/azurerm/r/application_insights_workbook_template).
+
 # `applicationInsightsWorkbookTemplate` Submodule <a name="`applicationInsightsWorkbookTemplate` Submodule" id="@cdktf/provider-azurerm.applicationInsightsWorkbookTemplate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

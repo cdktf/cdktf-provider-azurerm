@@ -1,3 +1,7 @@
+# `azurerm_machine_learning_inference_cluster`
+
+Refer to the Terraform Registory for docs: [`azurerm_machine_learning_inference_cluster`](https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster).
+
 # `machineLearningInferenceCluster` Submodule <a name="`machineLearningInferenceCluster` Submodule" id="@cdktf/provider-azurerm.machineLearningInferenceCluster"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_spring_cloud_api_portal`
+
+Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_api_portal`](https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_api_portal).
+
 # `springCloudApiPortal` Submodule <a name="`springCloudApiPortal` Submodule" id="@cdktf/provider-azurerm.springCloudApiPortal"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `azurerm_synapse_sql_pool_workload_classifier`
+
+Refer to the Terraform Registory for docs: [`azurerm_synapse_sql_pool_workload_classifier`](https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier).
+
 # `synapseSqlPoolWorkloadClassifier` Submodule <a name="`synapseSqlPoolWorkloadClassifier` Submodule" id="@cdktf/provider-azurerm.synapseSqlPoolWorkloadClassifier"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

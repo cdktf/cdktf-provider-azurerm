@@ -1,3 +1,7 @@
+# `data_azurerm_redis_cache`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_redis_cache`](https://www.terraform.io/docs/providers/azurerm/d/redis_cache).
+
 # `dataAzurermRedisCache` Submodule <a name="`dataAzurermRedisCache` Submodule" id="@cdktf/provider-azurerm.dataAzurermRedisCache"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

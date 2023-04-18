@@ -1,3 +1,7 @@
+# `azurerm_mssql_managed_instance_failover_group`
+
+Refer to the Terraform Registory for docs: [`azurerm_mssql_managed_instance_failover_group`](https://www.terraform.io/docs/providers/azurerm/r/mssql_managed_instance_failover_group).
+
 # `mssqlManagedInstanceFailoverGroup` Submodule <a name="`mssqlManagedInstanceFailoverGroup` Submodule" id="@cdktf/provider-azurerm.mssqlManagedInstanceFailoverGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

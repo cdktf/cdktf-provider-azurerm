@@ -1,3 +1,7 @@
+# `data_azurerm_dns_soa_record`
+
+Refer to the Terraform Registory for docs: [`data_azurerm_dns_soa_record`](https://www.terraform.io/docs/providers/azurerm/d/dns_soa_record).
+
 # `dataAzurermDnsSoaRecord` Submodule <a name="`dataAzurermDnsSoaRecord` Submodule" id="@cdktf/provider-azurerm.dataAzurermDnsSoaRecord"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
