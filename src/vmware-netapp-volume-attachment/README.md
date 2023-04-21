@@ -1,3 +1,3 @@
 # `azurerm_vmware_netapp_volume_attachment`
 
-Refer to the Terraform Registory for docs: [`azurerm_vmware_netapp_volume_attachment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/vmware_netapp_volume_attachment).
+Refer to the Terraform Registory for docs: [`azurerm_vmware_netapp_volume_attachment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/vmware_netapp_volume_attachment).
