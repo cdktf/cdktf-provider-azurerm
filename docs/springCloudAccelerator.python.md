@@ -1,6 +1,6 @@
 # `azurerm_spring_cloud_accelerator`
 
-Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_accelerator`](https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator).
+Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_accelerator`](https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator).
 
 # `springCloudAccelerator` Submodule <a name="`springCloudAccelerator` Submodule" id="@cdktf/provider-azurerm.springCloudAccelerator"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_accelerator`](
 
 ### SpringCloudAccelerator <a name="SpringCloudAccelerator" id="@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator azurerm_spring_cloud_accelerator}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator azurerm_spring_cloud_accelerator}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.Initializer"></a>
 
@@ -43,9 +43,9 @@ springCloudAccelerator.SpringCloudAccelerator(
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#name SpringCloudAccelerator#name}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.Initializer.parameter.springCloudServiceId">spring_cloud_service_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#spring_cloud_service_id SpringCloudAccelerator#spring_cloud_service_id}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#id SpringCloudAccelerator#id}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#name SpringCloudAccelerator#name}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.Initializer.parameter.springCloudServiceId">spring_cloud_service_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#spring_cloud_service_id SpringCloudAccelerator#spring_cloud_service_id}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#id SpringCloudAccelerator#id}. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts">SpringCloudAcceleratorTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#name SpringCloudAccelerator#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#name SpringCloudAccelerator#name}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#spring_cloud_service_id SpringCloudAccelerator#spring_cloud_service_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#spring_cloud_service_id SpringCloudAccelerator#spring_cloud_service_id}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#id SpringCloudAccelerator#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#id SpringCloudAccelerator#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -143,7 +143,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#timeouts SpringCloudAccelerator#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#timeouts SpringCloudAccelerator#timeouts}
 
 ---
 
@@ -396,7 +396,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#create SpringCloudAccelerator#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#create SpringCloudAccelerator#create}.
 
 ---
 
@@ -404,7 +404,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#delete SpringCloudAccelerator#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#delete SpringCloudAccelerator#delete}.
 
 ---
 
@@ -412,7 +412,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#read SpringCloudAccelerator#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#read SpringCloudAccelerator#read}.
 
 ---
 
@@ -808,9 +808,9 @@ springCloudAccelerator.SpringCloudAcceleratorConfig(
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#name SpringCloudAccelerator#name}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorConfig.property.springCloudServiceId">spring_cloud_service_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#spring_cloud_service_id SpringCloudAccelerator#spring_cloud_service_id}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#id SpringCloudAccelerator#id}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#name SpringCloudAccelerator#name}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorConfig.property.springCloudServiceId">spring_cloud_service_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#spring_cloud_service_id SpringCloudAccelerator#spring_cloud_service_id}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#id SpringCloudAccelerator#id}. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts">SpringCloudAcceleratorTimeouts</a></code> | timeouts block. |
 
 ---
@@ -893,7 +893,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#name SpringCloudAccelerator#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#name SpringCloudAccelerator#name}.
 
 ---
 
@@ -905,7 +905,7 @@ spring_cloud_service_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#spring_cloud_service_id SpringCloudAccelerator#spring_cloud_service_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#spring_cloud_service_id SpringCloudAccelerator#spring_cloud_service_id}.
 
 ---
 
@@ -917,7 +917,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#id SpringCloudAccelerator#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#id SpringCloudAccelerator#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -934,7 +934,7 @@ timeouts: SpringCloudAcceleratorTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#timeouts SpringCloudAccelerator#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#timeouts SpringCloudAccelerator#timeouts}
 
 ---
 
@@ -956,9 +956,9 @@ springCloudAccelerator.SpringCloudAcceleratorTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#create SpringCloudAccelerator#create}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#delete SpringCloudAccelerator#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#read SpringCloudAccelerator#read}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#create SpringCloudAccelerator#create}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#delete SpringCloudAccelerator#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#read SpringCloudAccelerator#read}. |
 
 ---
 
@@ -970,7 +970,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#create SpringCloudAccelerator#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#create SpringCloudAccelerator#create}.
 
 ---
 
@@ -982,7 +982,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#delete SpringCloudAccelerator#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#delete SpringCloudAccelerator#delete}.
 
 ---
 
@@ -994,7 +994,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/resources/spring_cloud_accelerator#read SpringCloudAccelerator#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/spring_cloud_accelerator#read SpringCloudAccelerator#read}.
 
 ---
 

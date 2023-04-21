@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/automation_variable_int
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/automation_variable_int
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,34 +8,34 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAutomationVariableIntConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/automation_variable_int#automation_account_name DataAzurermAutomationVariableInt#automation_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/automation_variable_int#automation_account_name DataAzurermAutomationVariableInt#automation_account_name}
   */
   readonly automationAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/automation_variable_int#id DataAzurermAutomationVariableInt#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/automation_variable_int#id DataAzurermAutomationVariableInt#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/automation_variable_int#name DataAzurermAutomationVariableInt#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/automation_variable_int#name DataAzurermAutomationVariableInt#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/automation_variable_int#resource_group_name DataAzurermAutomationVariableInt#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/automation_variable_int#resource_group_name DataAzurermAutomationVariableInt#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/automation_variable_int#timeouts DataAzurermAutomationVariableInt#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/automation_variable_int#timeouts DataAzurermAutomationVariableInt#timeouts}
   */
   readonly timeouts?: DataAzurermAutomationVariableIntTimeouts;
 }
 export interface DataAzurermAutomationVariableIntTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/automation_variable_int#read DataAzurermAutomationVariableInt#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/automation_variable_int#read DataAzurermAutomationVariableInt#read}
   */
   readonly read?: string;
 }
@@ -110,7 +110,7 @@ export class DataAzurermAutomationVariableIntTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/automation_variable_int azurerm_automation_variable_int}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/automation_variable_int azurerm_automation_variable_int}
 */
 export class DataAzurermAutomationVariableInt extends cdktf.TerraformDataSource {
 
@@ -124,7 +124,7 @@ export class DataAzurermAutomationVariableInt extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.52.0/docs/data-sources/automation_variable_int azurerm_automation_variable_int} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/automation_variable_int azurerm_automation_variable_int} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -135,7 +135,7 @@ export class DataAzurermAutomationVariableInt extends cdktf.TerraformDataSource 
       terraformResourceType: 'azurerm_automation_variable_int',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.52.0',
+        providerVersion: '3.53.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
