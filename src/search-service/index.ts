@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,58 +8,74 @@ import * as cdktf from 'cdktf';
 
 export interface SearchServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#allowed_ips SearchService#allowed_ips}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#allowed_ips SearchService#allowed_ips}
   */
   readonly allowedIps?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#id SearchService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#authentication_failure_mode SearchService#authentication_failure_mode}
+  */
+  readonly authenticationFailureMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#customer_managed_key_enforcement_enabled SearchService#customer_managed_key_enforcement_enabled}
+  */
+  readonly customerManagedKeyEnforcementEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#hosting_mode SearchService#hosting_mode}
+  */
+  readonly hostingMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#id SearchService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#location SearchService#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#local_authentication_enabled SearchService#local_authentication_enabled}
+  */
+  readonly localAuthenticationEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#location SearchService#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#name SearchService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#name SearchService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#partition_count SearchService#partition_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#partition_count SearchService#partition_count}
   */
   readonly partitionCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#public_network_access_enabled SearchService#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#public_network_access_enabled SearchService#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#replica_count SearchService#replica_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#replica_count SearchService#replica_count}
   */
   readonly replicaCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#resource_group_name SearchService#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#resource_group_name SearchService#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#sku SearchService#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#sku SearchService#sku}
   */
   readonly sku: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#tags SearchService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#tags SearchService#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#identity SearchService#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#identity SearchService#identity}
   */
   readonly identity?: SearchServiceIdentity;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#timeouts SearchService#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#timeouts SearchService#timeouts}
   */
   readonly timeouts?: SearchServiceTimeouts;
 }
@@ -134,7 +150,7 @@ export class SearchServiceQueryKeysList extends cdktf.ComplexList {
 }
 export interface SearchServiceIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#type SearchService#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#type SearchService#type}
   */
   readonly type: string;
 }
@@ -206,19 +222,19 @@ export class SearchServiceIdentityOutputReference extends cdktf.ComplexObject {
 }
 export interface SearchServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#create SearchService#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#create SearchService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#delete SearchService#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#delete SearchService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#read SearchService#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#read SearchService#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service#update SearchService#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service#update SearchService#update}
   */
   readonly update?: string;
 }
@@ -362,7 +378,7 @@ export class SearchServiceTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service azurerm_search_service}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service azurerm_search_service}
 */
 export class SearchService extends cdktf.TerraformResource {
 
@@ -376,7 +392,7 @@ export class SearchService extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/search_service azurerm_search_service} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/search_service azurerm_search_service} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -387,7 +403,7 @@ export class SearchService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_search_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.53.0',
+        providerVersion: '3.54.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -399,7 +415,11 @@ export class SearchService extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._allowedIps = config.allowedIps;
+    this._authenticationFailureMode = config.authenticationFailureMode;
+    this._customerManagedKeyEnforcementEnabled = config.customerManagedKeyEnforcementEnabled;
+    this._hostingMode = config.hostingMode;
     this._id = config.id;
+    this._localAuthenticationEnabled = config.localAuthenticationEnabled;
     this._location = config.location;
     this._name = config.name;
     this._partitionCount = config.partitionCount;
@@ -419,7 +439,7 @@ export class SearchService extends cdktf.TerraformResource {
   // allowed_ips - computed: false, optional: true, required: false
   private _allowedIps?: string[]; 
   public get allowedIps() {
-    return this.getListAttribute('allowed_ips');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_ips'));
   }
   public set allowedIps(value: string[]) {
     this._allowedIps = value;
@@ -430,6 +450,54 @@ export class SearchService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get allowedIpsInput() {
     return this._allowedIps;
+  }
+
+  // authentication_failure_mode - computed: false, optional: true, required: false
+  private _authenticationFailureMode?: string; 
+  public get authenticationFailureMode() {
+    return this.getStringAttribute('authentication_failure_mode');
+  }
+  public set authenticationFailureMode(value: string) {
+    this._authenticationFailureMode = value;
+  }
+  public resetAuthenticationFailureMode() {
+    this._authenticationFailureMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationFailureModeInput() {
+    return this._authenticationFailureMode;
+  }
+
+  // customer_managed_key_enforcement_enabled - computed: false, optional: true, required: false
+  private _customerManagedKeyEnforcementEnabled?: boolean | cdktf.IResolvable; 
+  public get customerManagedKeyEnforcementEnabled() {
+    return this.getBooleanAttribute('customer_managed_key_enforcement_enabled');
+  }
+  public set customerManagedKeyEnforcementEnabled(value: boolean | cdktf.IResolvable) {
+    this._customerManagedKeyEnforcementEnabled = value;
+  }
+  public resetCustomerManagedKeyEnforcementEnabled() {
+    this._customerManagedKeyEnforcementEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedKeyEnforcementEnabledInput() {
+    return this._customerManagedKeyEnforcementEnabled;
+  }
+
+  // hosting_mode - computed: false, optional: true, required: false
+  private _hostingMode?: string; 
+  public get hostingMode() {
+    return this.getStringAttribute('hosting_mode');
+  }
+  public set hostingMode(value: string) {
+    this._hostingMode = value;
+  }
+  public resetHostingMode() {
+    this._hostingMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostingModeInput() {
+    return this._hostingMode;
   }
 
   // id - computed: true, optional: true, required: false
@@ -446,6 +514,22 @@ export class SearchService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // local_authentication_enabled - computed: false, optional: true, required: false
+  private _localAuthenticationEnabled?: boolean | cdktf.IResolvable; 
+  public get localAuthenticationEnabled() {
+    return this.getBooleanAttribute('local_authentication_enabled');
+  }
+  public set localAuthenticationEnabled(value: boolean | cdktf.IResolvable) {
+    this._localAuthenticationEnabled = value;
+  }
+  public resetLocalAuthenticationEnabled() {
+    this._localAuthenticationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAuthenticationEnabledInput() {
+    return this._localAuthenticationEnabled;
   }
 
   // location - computed: false, optional: false, required: true
@@ -474,7 +558,7 @@ export class SearchService extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // partition_count - computed: true, optional: true, required: false
+  // partition_count - computed: false, optional: true, required: false
   private _partitionCount?: number; 
   public get partitionCount() {
     return this.getNumberAttribute('partition_count');
@@ -517,7 +601,7 @@ export class SearchService extends cdktf.TerraformResource {
     return this._queryKeys;
   }
 
-  // replica_count - computed: true, optional: true, required: false
+  // replica_count - computed: false, optional: true, required: false
   private _replicaCount?: number; 
   public get replicaCount() {
     return this.getNumberAttribute('replica_count');
@@ -619,7 +703,11 @@ export class SearchService extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allowed_ips: cdktf.listMapper(cdktf.stringToTerraform, false)(this._allowedIps),
+      authentication_failure_mode: cdktf.stringToTerraform(this._authenticationFailureMode),
+      customer_managed_key_enforcement_enabled: cdktf.booleanToTerraform(this._customerManagedKeyEnforcementEnabled),
+      hosting_mode: cdktf.stringToTerraform(this._hostingMode),
       id: cdktf.stringToTerraform(this._id),
+      local_authentication_enabled: cdktf.booleanToTerraform(this._localAuthenticationEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       partition_count: cdktf.numberToTerraform(this._partitionCount),
