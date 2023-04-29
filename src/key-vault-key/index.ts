@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,68 +8,68 @@ import * as cdktf from 'cdktf';
 
 export interface KeyVaultKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#curve KeyVaultKey#curve}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#curve KeyVaultKey#curve}
   */
   readonly curve?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#expiration_date KeyVaultKey#expiration_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#expiration_date KeyVaultKey#expiration_date}
   */
   readonly expirationDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#id KeyVaultKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#id KeyVaultKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#key_opts KeyVaultKey#key_opts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#key_opts KeyVaultKey#key_opts}
   */
   readonly keyOpts: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#key_size KeyVaultKey#key_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#key_size KeyVaultKey#key_size}
   */
   readonly keySize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#key_type KeyVaultKey#key_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#key_type KeyVaultKey#key_type}
   */
   readonly keyType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#key_vault_id KeyVaultKey#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#key_vault_id KeyVaultKey#key_vault_id}
   */
   readonly keyVaultId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#name KeyVaultKey#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#name KeyVaultKey#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#not_before_date KeyVaultKey#not_before_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#not_before_date KeyVaultKey#not_before_date}
   */
   readonly notBeforeDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#tags KeyVaultKey#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#tags KeyVaultKey#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * rotation_policy block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#rotation_policy KeyVaultKey#rotation_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#rotation_policy KeyVaultKey#rotation_policy}
   */
   readonly rotationPolicy?: KeyVaultKeyRotationPolicy;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#timeouts KeyVaultKey#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#timeouts KeyVaultKey#timeouts}
   */
   readonly timeouts?: KeyVaultKeyTimeouts;
 }
 export interface KeyVaultKeyRotationPolicyAutomatic {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#time_after_creation KeyVaultKey#time_after_creation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#time_after_creation KeyVaultKey#time_after_creation}
   */
   readonly timeAfterCreation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#time_before_expiry KeyVaultKey#time_before_expiry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#time_before_expiry KeyVaultKey#time_before_expiry}
   */
   readonly timeBeforeExpiry?: string;
 }
@@ -157,17 +157,17 @@ export class KeyVaultKeyRotationPolicyAutomaticOutputReference extends cdktf.Com
 }
 export interface KeyVaultKeyRotationPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#expire_after KeyVaultKey#expire_after}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#expire_after KeyVaultKey#expire_after}
   */
   readonly expireAfter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#notify_before_expiry KeyVaultKey#notify_before_expiry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#notify_before_expiry KeyVaultKey#notify_before_expiry}
   */
   readonly notifyBeforeExpiry?: string;
   /**
   * automatic block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#automatic KeyVaultKey#automatic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#automatic KeyVaultKey#automatic}
   */
   readonly automatic?: KeyVaultKeyRotationPolicyAutomatic;
 }
@@ -278,19 +278,19 @@ export class KeyVaultKeyRotationPolicyOutputReference extends cdktf.ComplexObjec
 }
 export interface KeyVaultKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#create KeyVaultKey#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#create KeyVaultKey#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#delete KeyVaultKey#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#delete KeyVaultKey#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#read KeyVaultKey#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#read KeyVaultKey#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key#update KeyVaultKey#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key#update KeyVaultKey#update}
   */
   readonly update?: string;
 }
@@ -434,7 +434,7 @@ export class KeyVaultKeyTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key azurerm_key_vault_key}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key azurerm_key_vault_key}
 */
 export class KeyVaultKey extends cdktf.TerraformResource {
 
@@ -448,7 +448,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/key_vault_key azurerm_key_vault_key} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/key_vault_key azurerm_key_vault_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -459,7 +459,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_key_vault_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.53.0',
+        providerVersion: '3.54.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

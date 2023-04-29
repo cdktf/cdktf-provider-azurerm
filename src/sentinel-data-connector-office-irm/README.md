@@ -1,3 +1,3 @@
 # `azurerm_sentinel_data_connector_office_irm`
 
-Refer to the Terraform Registory for docs: [`azurerm_sentinel_data_connector_office_irm`](https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/resources/sentinel_data_connector_office_irm).
+Refer to the Terraform Registory for docs: [`azurerm_sentinel_data_connector_office_irm`](https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/sentinel_data_connector_office_irm).

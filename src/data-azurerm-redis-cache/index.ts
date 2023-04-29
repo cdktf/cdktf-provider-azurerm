@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/redis_cache
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/redis_cache
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermRedisCacheConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/redis_cache#id DataAzurermRedisCache#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/redis_cache#id DataAzurermRedisCache#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/redis_cache#name DataAzurermRedisCache#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/redis_cache#name DataAzurermRedisCache#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/redis_cache#resource_group_name DataAzurermRedisCache#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/redis_cache#resource_group_name DataAzurermRedisCache#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/redis_cache#timeouts DataAzurermRedisCache#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/redis_cache#timeouts DataAzurermRedisCache#timeouts}
   */
   readonly timeouts?: DataAzurermRedisCacheTimeouts;
 }
@@ -234,7 +234,7 @@ export class DataAzurermRedisCacheRedisConfigurationList extends cdktf.ComplexLi
 }
 export interface DataAzurermRedisCacheTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/redis_cache#read DataAzurermRedisCache#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/redis_cache#read DataAzurermRedisCache#read}
   */
   readonly read?: string;
 }
@@ -309,7 +309,7 @@ export class DataAzurermRedisCacheTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/redis_cache azurerm_redis_cache}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/redis_cache azurerm_redis_cache}
 */
 export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
 
@@ -323,7 +323,7 @@ export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/redis_cache azurerm_redis_cache} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/redis_cache azurerm_redis_cache} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -334,7 +334,7 @@ export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_redis_cache',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.53.0',
+        providerVersion: '3.54.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

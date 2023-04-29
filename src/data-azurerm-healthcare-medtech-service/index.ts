@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/healthcare_medtech_service
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/healthcare_medtech_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermHealthcareMedtechServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/healthcare_medtech_service#id DataAzurermHealthcareMedtechService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/healthcare_medtech_service#id DataAzurermHealthcareMedtechService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/healthcare_medtech_service#name DataAzurermHealthcareMedtechService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/healthcare_medtech_service#name DataAzurermHealthcareMedtechService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/healthcare_medtech_service#workspace_id DataAzurermHealthcareMedtechService#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/healthcare_medtech_service#workspace_id DataAzurermHealthcareMedtechService#workspace_id}
   */
   readonly workspaceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/healthcare_medtech_service#timeouts DataAzurermHealthcareMedtechService#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/healthcare_medtech_service#timeouts DataAzurermHealthcareMedtechService#timeouts}
   */
   readonly timeouts?: DataAzurermHealthcareMedtechServiceTimeouts;
 }
@@ -105,7 +105,7 @@ export class DataAzurermHealthcareMedtechServiceIdentityList extends cdktf.Compl
 }
 export interface DataAzurermHealthcareMedtechServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/healthcare_medtech_service#read DataAzurermHealthcareMedtechService#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/healthcare_medtech_service#read DataAzurermHealthcareMedtechService#read}
   */
   readonly read?: string;
 }
@@ -180,7 +180,7 @@ export class DataAzurermHealthcareMedtechServiceTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/healthcare_medtech_service azurerm_healthcare_medtech_service}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/healthcare_medtech_service azurerm_healthcare_medtech_service}
 */
 export class DataAzurermHealthcareMedtechService extends cdktf.TerraformDataSource {
 
@@ -194,7 +194,7 @@ export class DataAzurermHealthcareMedtechService extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.53.0/docs/data-sources/healthcare_medtech_service azurerm_healthcare_medtech_service} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/healthcare_medtech_service azurerm_healthcare_medtech_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -205,7 +205,7 @@ export class DataAzurermHealthcareMedtechService extends cdktf.TerraformDataSour
       terraformResourceType: 'azurerm_healthcare_medtech_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.53.0',
+        providerVersion: '3.54.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
