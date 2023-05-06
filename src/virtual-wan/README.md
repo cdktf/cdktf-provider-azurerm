@@ -1,3 +1,3 @@
 # `azurerm_virtual_wan`
 
-Refer to the Terraform Registory for docs: [`azurerm_virtual_wan`](https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/virtual_wan).
+Refer to the Terraform Registory for docs: [`azurerm_virtual_wan`](https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/virtual_wan).
