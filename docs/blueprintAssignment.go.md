@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.blueprintAssignment.BlueprintAssignment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/blueprintassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/blueprintassignment"
 
 blueprintassignment.NewBlueprintAssignment(scope Construct, id *string, config BlueprintAssignmentConfig) BlueprintAssignment
 ```
@@ -345,7 +345,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.blueprintAssignment.BlueprintAssignment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/blueprintassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/blueprintassignment"
 
 blueprintassignment.BlueprintAssignment_IsConstruct(x interface{}) *bool
 ```
@@ -377,7 +377,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.blueprintAssignment.BlueprintAssignment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/blueprintassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/blueprintassignment"
 
 blueprintassignment.BlueprintAssignment_IsTerraformElement(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ blueprintassignment.BlueprintAssignment_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.blueprintAssignment.BlueprintAssignment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/blueprintassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/blueprintassignment"
 
 blueprintassignment.BlueprintAssignment_IsTerraformResource(x interface{}) *bool
 ```
@@ -898,7 +898,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.blueprintAssignment.BlueprintAssignmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/blueprintassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/blueprintassignment"
 
 &blueprintassignment.BlueprintAssignmentConfig {
 	Connection: interface{},
@@ -908,7 +908,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/blueprintassignmen
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.blueprintAssignment.BlueprintAssignmentIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.blueprintAssignment.BlueprintAssignmentIdentity,
 	Location: *string,
 	Name: *string,
 	TargetSubscriptionId: *string,
@@ -919,7 +919,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/blueprintassignmen
 	LockMode: *string,
 	ParameterValues: *string,
 	ResourceGroups: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.blueprintAssignment.BlueprintAssignmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.blueprintAssignment.BlueprintAssignmentTimeouts,
 }
 ```
 
@@ -1175,7 +1175,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.blueprintAssignment.BlueprintAssignmentIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/blueprintassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/blueprintassignment"
 
 &blueprintassignment.BlueprintAssignmentIdentity {
 	IdentityIds: *[]*string,
@@ -1221,7 +1221,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.blueprintAssignment.BlueprintAssignmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/blueprintassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/blueprintassignment"
 
 &blueprintassignment.BlueprintAssignmentTimeouts {
 	Create: *string,
@@ -1297,7 +1297,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.blueprintAssignment.BlueprintAssignmentIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/blueprintassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/blueprintassignment"
 
 blueprintassignment.NewBlueprintAssignmentIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BlueprintAssignmentIdentityOutputReference
 ```
@@ -1590,7 +1590,7 @@ func InternalValue() BlueprintAssignmentIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.blueprintAssignment.BlueprintAssignmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/blueprintassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/blueprintassignment"
 
 blueprintassignment.NewBlueprintAssignmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BlueprintAssignmentTimeoutsOutputReference
 ```
