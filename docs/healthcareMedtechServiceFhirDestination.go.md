@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.healthcareMedtechServiceFhirDestination.HealthcareMedtechServiceFhirDestination.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcaremedtechservicefhirdestination"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/healthcaremedtechservicefhirdestination"
 
 healthcaremedtechservicefhirdestination.NewHealthcareMedtechServiceFhirDestination(scope Construct, id *string, config HealthcareMedtechServiceFhirDestinationConfig) HealthcareMedtechServiceFhirDestination
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.healthcareMedtechServiceFhirDestination.HealthcareMedtechServiceFhirDestination.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcaremedtechservicefhirdestination"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/healthcaremedtechservicefhirdestination"
 
 healthcaremedtechservicefhirdestination.HealthcareMedtechServiceFhirDestination_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.healthcareMedtechServiceFhirDestination.HealthcareMedtechServiceFhirDestination.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcaremedtechservicefhirdestination"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/healthcaremedtechservicefhirdestination"
 
 healthcaremedtechservicefhirdestination.HealthcareMedtechServiceFhirDestination_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ healthcaremedtechservicefhirdestination.HealthcareMedtechServiceFhirDestination_
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.healthcareMedtechServiceFhirDestination.HealthcareMedtechServiceFhirDestination.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcaremedtechservicefhirdestination"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/healthcaremedtechservicefhirdestination"
 
 healthcaremedtechservicefhirdestination.HealthcareMedtechServiceFhirDestination_IsTerraformResource(x interface{}) *bool
 ```
@@ -718,7 +718,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.healthcareMedtechServiceFhirDestination.HealthcareMedtechServiceFhirDestinationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcaremedtechservicefhirdestination"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/healthcaremedtechservicefhirdestination"
 
 &healthcaremedtechservicefhirdestination.HealthcareMedtechServiceFhirDestinationConfig {
 	Connection: interface{},
@@ -735,7 +735,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcaremedtechserv
 	MedtechServiceId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.healthcareMedtechServiceFhirDestination.HealthcareMedtechServiceFhirDestinationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.healthcareMedtechServiceFhirDestination.HealthcareMedtechServiceFhirDestinationTimeouts,
 }
 ```
 
@@ -937,7 +937,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.healthcareMedtechServiceFhirDestination.HealthcareMedtechServiceFhirDestinationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcaremedtechservicefhirdestination"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/healthcaremedtechservicefhirdestination"
 
 &healthcaremedtechservicefhirdestination.HealthcareMedtechServiceFhirDestinationTimeouts {
 	Create: *string,
@@ -1013,7 +1013,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.healthcareMedtechServiceFhirDestination.HealthcareMedtechServiceFhirDestinationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcaremedtechservicefhirdestination"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/healthcaremedtechservicefhirdestination"
 
 healthcaremedtechservicefhirdestination.NewHealthcareMedtechServiceFhirDestinationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareMedtechServiceFhirDestinationTimeoutsOutputReference
 ```

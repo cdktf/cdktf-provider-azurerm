@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSharedImageVersions.DataAzurermSharedImageVersions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimageversions"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimageversions"
 
 dataazurermsharedimageversions.NewDataAzurermSharedImageVersions(scope Construct, id *string, config DataAzurermSharedImageVersionsConfig) DataAzurermSharedImageVersions
 ```
@@ -304,7 +304,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermSharedImageVersions.DataAzurermSharedImageVersions.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimageversions"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimageversions"
 
 dataazurermsharedimageversions.DataAzurermSharedImageVersions_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermSharedImageVersions.DataAzurermSharedImageVersions.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimageversions"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimageversions"
 
 dataazurermsharedimageversions.DataAzurermSharedImageVersions_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ dataazurermsharedimageversions.DataAzurermSharedImageVersions_IsTerraformElement
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermSharedImageVersions.DataAzurermSharedImageVersions.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimageversions"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimageversions"
 
 dataazurermsharedimageversions.DataAzurermSharedImageVersions_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -670,7 +670,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSharedImageVersions.DataAzurermSharedImageVersionsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimageversions"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimageversions"
 
 &dataazurermsharedimageversions.DataAzurermSharedImageVersionsConfig {
 	Connection: interface{},
@@ -685,7 +685,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimag
 	ResourceGroupName: *string,
 	Id: *string,
 	TagsFilter: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermSharedImageVersions.DataAzurermSharedImageVersionsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.dataAzurermSharedImageVersions.DataAzurermSharedImageVersionsTimeouts,
 }
 ```
 
@@ -861,7 +861,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSharedImageVersions.DataAzurermSharedImageVersionsImages.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimageversions"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimageversions"
 
 &dataazurermsharedimageversions.DataAzurermSharedImageVersionsImages {
 
@@ -874,7 +874,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimag
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSharedImageVersions.DataAzurermSharedImageVersionsImagesTargetRegion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimageversions"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimageversions"
 
 &dataazurermsharedimageversions.DataAzurermSharedImageVersionsImagesTargetRegion {
 
@@ -887,7 +887,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimag
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSharedImageVersions.DataAzurermSharedImageVersionsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimageversions"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimageversions"
 
 &dataazurermsharedimageversions.DataAzurermSharedImageVersionsTimeouts {
 	Read: *string,
@@ -921,7 +921,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSharedImageVersions.DataAzurermSharedImageVersionsImagesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimageversions"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimageversions"
 
 dataazurermsharedimageversions.NewDataAzurermSharedImageVersionsImagesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermSharedImageVersionsImagesList
 ```
@@ -1053,7 +1053,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSharedImageVersions.DataAzurermSharedImageVersionsImagesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimageversions"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimageversions"
 
 dataazurermsharedimageversions.NewDataAzurermSharedImageVersionsImagesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermSharedImageVersionsImagesOutputReference
 ```
@@ -1386,7 +1386,7 @@ func InternalValue() DataAzurermSharedImageVersionsImages
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSharedImageVersions.DataAzurermSharedImageVersionsImagesTargetRegionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimageversions"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimageversions"
 
 dataazurermsharedimageversions.NewDataAzurermSharedImageVersionsImagesTargetRegionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermSharedImageVersionsImagesTargetRegionList
 ```
@@ -1518,7 +1518,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSharedImageVersions.DataAzurermSharedImageVersionsImagesTargetRegionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimageversions"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimageversions"
 
 dataazurermsharedimageversions.NewDataAzurermSharedImageVersionsImagesTargetRegionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermSharedImageVersionsImagesTargetRegionOutputReference
 ```
@@ -1818,7 +1818,7 @@ func InternalValue() DataAzurermSharedImageVersionsImagesTargetRegion
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSharedImageVersions.DataAzurermSharedImageVersionsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimageversions"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimageversions"
 
 dataazurermsharedimageversions.NewDataAzurermSharedImageVersionsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermSharedImageVersionsTimeoutsOutputReference
 ```
