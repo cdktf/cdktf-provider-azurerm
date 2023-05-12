@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/mobile_network_service
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mobile_network_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMobileNetworkServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/mobile_network_service#id DataAzurermMobileNetworkService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mobile_network_service#id DataAzurermMobileNetworkService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/mobile_network_service#mobile_network_id DataAzurermMobileNetworkService#mobile_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mobile_network_service#mobile_network_id DataAzurermMobileNetworkService#mobile_network_id}
   */
   readonly mobileNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/mobile_network_service#name DataAzurermMobileNetworkService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mobile_network_service#name DataAzurermMobileNetworkService#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/mobile_network_service#timeouts DataAzurermMobileNetworkService#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mobile_network_service#timeouts DataAzurermMobileNetworkService#timeouts}
   */
   readonly timeouts?: DataAzurermMobileNetworkServiceTimeouts;
 }
@@ -584,7 +584,7 @@ export class DataAzurermMobileNetworkServiceServiceQosPolicyList extends cdktf.C
 }
 export interface DataAzurermMobileNetworkServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/mobile_network_service#read DataAzurermMobileNetworkService#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mobile_network_service#read DataAzurermMobileNetworkService#read}
   */
   readonly read?: string;
 }
@@ -659,7 +659,7 @@ export class DataAzurermMobileNetworkServiceTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/mobile_network_service azurerm_mobile_network_service}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mobile_network_service azurerm_mobile_network_service}
 */
 export class DataAzurermMobileNetworkService extends cdktf.TerraformDataSource {
 
@@ -673,7 +673,7 @@ export class DataAzurermMobileNetworkService extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/mobile_network_service azurerm_mobile_network_service} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mobile_network_service azurerm_mobile_network_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -684,7 +684,7 @@ export class DataAzurermMobileNetworkService extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_mobile_network_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.55.0',
+        providerVersion: '3.56.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

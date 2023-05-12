@@ -1,6 +1,6 @@
 # `data_azurerm_bastion_host`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_bastion_host`](https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/bastion_host).
+Refer to the Terraform Registory for docs: [`data_azurerm_bastion_host`](https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/bastion_host).
 
 # `dataAzurermBastionHost` Submodule <a name="`dataAzurermBastionHost` Submodule" id="@cdktf/provider-azurerm.dataAzurermBastionHost"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_bastion_host`](https:/
 
 ### DataAzurermBastionHost <a name="DataAzurermBastionHost" id="@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHost"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/bastion_host azurerm_bastion_host}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/bastion_host azurerm_bastion_host}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHost.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermbastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbastionhost"
 
 dataazurermbastionhost.NewDataAzurermBastionHost(scope Construct, id *string, config DataAzurermBastionHostConfig) DataAzurermBastionHost
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHost.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermbastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbastionhost"
 
 dataazurermbastionhost.DataAzurermBastionHost_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHost.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermbastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbastionhost"
 
 dataazurermbastionhost.DataAzurermBastionHost_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermbastionhost.DataAzurermBastionHost_IsTerraformElement(x interface{}) 
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHost.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermbastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbastionhost"
 
 dataazurermbastionhost.DataAzurermBastionHost_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -729,7 +729,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermbastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbastionhost"
 
 &dataazurermbastionhost.DataAzurermBastionHostConfig {
 	Connection: interface{},
@@ -742,7 +742,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermbastion
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.dataAzurermBastionHost.DataAzurermBastionHostTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermBastionHost.DataAzurermBastionHostTimeouts,
 }
 ```
 
@@ -757,9 +757,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermbastion
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/bastion_host#name DataAzurermBastionHost#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/bastion_host#resource_group_name DataAzurermBastionHost#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/bastion_host#id DataAzurermBastionHost#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/bastion_host#name DataAzurermBastionHost#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/bastion_host#resource_group_name DataAzurermBastionHost#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/bastion_host#id DataAzurermBastionHost#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostTimeouts">DataAzurermBastionHostTimeouts</a></code> | timeouts block. |
 
 ---
@@ -842,7 +842,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/bastion_host#name DataAzurermBastionHost#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/bastion_host#name DataAzurermBastionHost#name}.
 
 ---
 
@@ -854,7 +854,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/bastion_host#resource_group_name DataAzurermBastionHost#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/bastion_host#resource_group_name DataAzurermBastionHost#resource_group_name}.
 
 ---
 
@@ -866,7 +866,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/bastion_host#id DataAzurermBastionHost#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/bastion_host#id DataAzurermBastionHost#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -883,7 +883,7 @@ Timeouts DataAzurermBastionHostTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/bastion_host#timeouts DataAzurermBastionHost#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/bastion_host#timeouts DataAzurermBastionHost#timeouts}
 
 ---
 
@@ -892,7 +892,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostIpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermbastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbastionhost"
 
 &dataazurermbastionhost.DataAzurermBastionHostIpConfiguration {
 
@@ -905,7 +905,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermbastion
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermbastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbastionhost"
 
 &dataazurermbastionhost.DataAzurermBastionHostTimeouts {
 	Read: *string,
@@ -916,7 +916,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermbastion
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/bastion_host#read DataAzurermBastionHost#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/bastion_host#read DataAzurermBastionHost#read}. |
 
 ---
 
@@ -928,7 +928,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/bastion_host#read DataAzurermBastionHost#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/bastion_host#read DataAzurermBastionHost#read}.
 
 ---
 
@@ -939,7 +939,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostIpConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermbastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbastionhost"
 
 dataazurermbastionhost.NewDataAzurermBastionHostIpConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBastionHostIpConfigurationList
 ```
@@ -1071,7 +1071,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostIpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermbastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbastionhost"
 
 dataazurermbastionhost.NewDataAzurermBastionHostIpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBastionHostIpConfigurationOutputReference
 ```
@@ -1371,7 +1371,7 @@ func InternalValue() DataAzurermBastionHostIpConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBastionHost.DataAzurermBastionHostTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermbastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbastionhost"
 
 dataazurermbastionhost.NewDataAzurermBastionHostTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermBastionHostTimeoutsOutputReference
 ```

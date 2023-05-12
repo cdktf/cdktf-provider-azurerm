@@ -1,3 +1,3 @@
 # `azurerm_network_watcher`
 
-Refer to the Terraform Registory for docs: [`azurerm_network_watcher`](https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher).
+Refer to the Terraform Registory for docs: [`azurerm_network_watcher`](https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher).

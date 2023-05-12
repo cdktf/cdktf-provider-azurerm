@@ -1,6 +1,6 @@
 # `azurerm_network_watcher`
 
-Refer to the Terraform Registory for docs: [`azurerm_network_watcher`](https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher).
+Refer to the Terraform Registory for docs: [`azurerm_network_watcher`](https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher).
 
 # `networkWatcher` Submodule <a name="`networkWatcher` Submodule" id="@cdktf/provider-azurerm.networkWatcher"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_network_watcher`](https://r
 
 ### NetworkWatcher <a name="NetworkWatcher" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcher"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher azurerm_network_watcher}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher azurerm_network_watcher}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer"></a>
 
@@ -45,11 +45,11 @@ networkWatcher.NetworkWatcher(
 | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#location NetworkWatcher#location}. |
-| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#name NetworkWatcher#name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#resource_group_name NetworkWatcher#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#id NetworkWatcher#id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#tags NetworkWatcher#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#location NetworkWatcher#location}. |
+| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#name NetworkWatcher#name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#resource_group_name NetworkWatcher#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#id NetworkWatcher#id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#tags NetworkWatcher#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherTimeouts">NetworkWatcherTimeouts</a></code> | timeouts block. |
 
 ---
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#location NetworkWatcher#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#location NetworkWatcher#location}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#name NetworkWatcher#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#name NetworkWatcher#name}.
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#resource_group_name NetworkWatcher#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#resource_group_name NetworkWatcher#resource_group_name}.
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#id NetworkWatcher#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#id NetworkWatcher#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -153,7 +153,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#tags NetworkWatcher#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#tags NetworkWatcher#tags}.
 
 ---
 
@@ -163,7 +163,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#timeouts NetworkWatcher#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#timeouts NetworkWatcher#timeouts}
 
 ---
 
@@ -418,7 +418,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#create NetworkWatcher#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#create NetworkWatcher#create}.
 
 ---
 
@@ -426,7 +426,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#delete NetworkWatcher#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#delete NetworkWatcher#delete}.
 
 ---
 
@@ -434,7 +434,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#read NetworkWatcher#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#read NetworkWatcher#read}.
 
 ---
 
@@ -442,7 +442,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#update NetworkWatcher#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#update NetworkWatcher#update}.
 
 ---
 
@@ -890,11 +890,11 @@ networkWatcher.NetworkWatcherConfig(
 | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#location NetworkWatcher#location}. |
-| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#name NetworkWatcher#name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#resource_group_name NetworkWatcher#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#id NetworkWatcher#id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#tags NetworkWatcher#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#location NetworkWatcher#location}. |
+| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#name NetworkWatcher#name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#resource_group_name NetworkWatcher#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#id NetworkWatcher#id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#tags NetworkWatcher#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherTimeouts">NetworkWatcherTimeouts</a></code> | timeouts block. |
 
 ---
@@ -977,7 +977,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#location NetworkWatcher#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#location NetworkWatcher#location}.
 
 ---
 
@@ -989,7 +989,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#name NetworkWatcher#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#name NetworkWatcher#name}.
 
 ---
 
@@ -1001,7 +1001,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#resource_group_name NetworkWatcher#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#resource_group_name NetworkWatcher#resource_group_name}.
 
 ---
 
@@ -1013,7 +1013,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#id NetworkWatcher#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#id NetworkWatcher#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1028,7 +1028,7 @@ tags: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#tags NetworkWatcher#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#tags NetworkWatcher#tags}.
 
 ---
 
@@ -1042,7 +1042,7 @@ timeouts: NetworkWatcherTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#timeouts NetworkWatcher#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#timeouts NetworkWatcher#timeouts}
 
 ---
 
@@ -1065,10 +1065,10 @@ networkWatcher.NetworkWatcherTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#create NetworkWatcher#create}. |
-| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#delete NetworkWatcher#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#read NetworkWatcher#read}. |
-| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#update NetworkWatcher#update}. |
+| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#create NetworkWatcher#create}. |
+| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#delete NetworkWatcher#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#read NetworkWatcher#read}. |
+| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcherTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#update NetworkWatcher#update}. |
 
 ---
 
@@ -1080,7 +1080,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#create NetworkWatcher#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#create NetworkWatcher#create}.
 
 ---
 
@@ -1092,7 +1092,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#delete NetworkWatcher#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#delete NetworkWatcher#delete}.
 
 ---
 
@@ -1104,7 +1104,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#read NetworkWatcher#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#read NetworkWatcher#read}.
 
 ---
 
@@ -1116,7 +1116,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/resources/network_watcher#update NetworkWatcher#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/network_watcher#update NetworkWatcher#update}.
 
 ---
 

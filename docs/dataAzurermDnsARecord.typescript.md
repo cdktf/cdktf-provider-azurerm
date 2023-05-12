@@ -1,6 +1,6 @@
 # `data_azurerm_dns_a_record`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_dns_a_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/dns_a_record).
+Refer to the Terraform Registory for docs: [`data_azurerm_dns_a_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/dns_a_record).
 
 # `dataAzurermDnsARecord` Submodule <a name="`dataAzurermDnsARecord` Submodule" id="@cdktf/provider-azurerm.dataAzurermDnsARecord"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_dns_a_record`](https:/
 
 ### DataAzurermDnsARecord <a name="DataAzurermDnsARecord" id="@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecord"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/dns_a_record azurerm_dns_a_record}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/dns_a_record azurerm_dns_a_record}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecord.Initializer"></a>
 
@@ -701,10 +701,10 @@ const dataAzurermDnsARecordConfig: dataAzurermDnsARecord.DataAzurermDnsARecordCo
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/dns_a_record#name DataAzurermDnsARecord#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/dns_a_record#resource_group_name DataAzurermDnsARecord#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordConfig.property.zoneName">zoneName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/dns_a_record#zone_name DataAzurermDnsARecord#zone_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/dns_a_record#id DataAzurermDnsARecord#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/dns_a_record#name DataAzurermDnsARecord#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/dns_a_record#resource_group_name DataAzurermDnsARecord#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordConfig.property.zoneName">zoneName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/dns_a_record#zone_name DataAzurermDnsARecord#zone_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/dns_a_record#id DataAzurermDnsARecord#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeouts">DataAzurermDnsARecordTimeouts</a></code> | timeouts block. |
 
 ---
@@ -787,7 +787,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/dns_a_record#name DataAzurermDnsARecord#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/dns_a_record#name DataAzurermDnsARecord#name}.
 
 ---
 
@@ -799,7 +799,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/dns_a_record#resource_group_name DataAzurermDnsARecord#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/dns_a_record#resource_group_name DataAzurermDnsARecord#resource_group_name}.
 
 ---
 
@@ -811,7 +811,7 @@ public readonly zoneName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/dns_a_record#zone_name DataAzurermDnsARecord#zone_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/dns_a_record#zone_name DataAzurermDnsARecord#zone_name}.
 
 ---
 
@@ -823,7 +823,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/dns_a_record#id DataAzurermDnsARecord#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/dns_a_record#id DataAzurermDnsARecord#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -840,7 +840,7 @@ public readonly timeouts: DataAzurermDnsARecordTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/dns_a_record#timeouts DataAzurermDnsARecord#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/dns_a_record#timeouts DataAzurermDnsARecord#timeouts}
 
 ---
 
@@ -858,7 +858,7 @@ const dataAzurermDnsARecordTimeouts: dataAzurermDnsARecord.DataAzurermDnsARecord
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/dns_a_record#read DataAzurermDnsARecord#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/dns_a_record#read DataAzurermDnsARecord#read}. |
 
 ---
 
@@ -870,7 +870,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/dns_a_record#read DataAzurermDnsARecord#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/dns_a_record#read DataAzurermDnsARecord#read}.
 
 ---
 
