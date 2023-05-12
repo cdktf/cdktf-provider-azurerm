@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyBlobStorage.DataProtectionBackupPolicyBlobStorage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicyblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataprotectionbackuppolicyblobstorage"
 
 dataprotectionbackuppolicyblobstorage.NewDataProtectionBackupPolicyBlobStorage(scope Construct, id *string, config DataProtectionBackupPolicyBlobStorageConfig) DataProtectionBackupPolicyBlobStorage
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyBlobStorage.DataProtectionBackupPolicyBlobStorage.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicyblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataprotectionbackuppolicyblobstorage"
 
 dataprotectionbackuppolicyblobstorage.DataProtectionBackupPolicyBlobStorage_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyBlobStorage.DataProtectionBackupPolicyBlobStorage.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicyblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataprotectionbackuppolicyblobstorage"
 
 dataprotectionbackuppolicyblobstorage.DataProtectionBackupPolicyBlobStorage_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataprotectionbackuppolicyblobstorage.DataProtectionBackupPolicyBlobStorage_IsTe
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyBlobStorage.DataProtectionBackupPolicyBlobStorage.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicyblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataprotectionbackuppolicyblobstorage"
 
 dataprotectionbackuppolicyblobstorage.DataProtectionBackupPolicyBlobStorage_IsTerraformResource(x interface{}) *bool
 ```
@@ -652,7 +652,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyBlobStorage.DataProtectionBackupPolicyBlobStorageConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicyblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataprotectionbackuppolicyblobstorage"
 
 &dataprotectionbackuppolicyblobstorage.DataProtectionBackupPolicyBlobStorageConfig {
 	Connection: interface{},
@@ -666,7 +666,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupp
 	RetentionDuration: *string,
 	VaultId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataProtectionBackupPolicyBlobStorage.DataProtectionBackupPolicyBlobStorageTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.dataProtectionBackupPolicyBlobStorage.DataProtectionBackupPolicyBlobStorageTimeouts,
 }
 ```
 
@@ -829,7 +829,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyBlobStorage.DataProtectionBackupPolicyBlobStorageTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicyblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataprotectionbackuppolicyblobstorage"
 
 &dataprotectionbackuppolicyblobstorage.DataProtectionBackupPolicyBlobStorageTimeouts {
 	Create: *string,
@@ -905,7 +905,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyBlobStorage.DataProtectionBackupPolicyBlobStorageTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicyblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataprotectionbackuppolicyblobstorage"
 
 dataprotectionbackuppolicyblobstorage.NewDataProtectionBackupPolicyBlobStorageTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataProtectionBackupPolicyBlobStorageTimeoutsOutputReference
 ```
