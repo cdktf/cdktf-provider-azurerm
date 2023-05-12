@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/batch_application
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/batch_application
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,34 +8,34 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermBatchApplicationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/batch_application#account_name DataAzurermBatchApplication#account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/batch_application#account_name DataAzurermBatchApplication#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/batch_application#id DataAzurermBatchApplication#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/batch_application#id DataAzurermBatchApplication#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/batch_application#name DataAzurermBatchApplication#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/batch_application#name DataAzurermBatchApplication#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/batch_application#resource_group_name DataAzurermBatchApplication#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/batch_application#resource_group_name DataAzurermBatchApplication#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/batch_application#timeouts DataAzurermBatchApplication#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/batch_application#timeouts DataAzurermBatchApplication#timeouts}
   */
   readonly timeouts?: DataAzurermBatchApplicationTimeouts;
 }
 export interface DataAzurermBatchApplicationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/batch_application#read DataAzurermBatchApplication#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/batch_application#read DataAzurermBatchApplication#read}
   */
   readonly read?: string;
 }
@@ -110,7 +110,7 @@ export class DataAzurermBatchApplicationTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/batch_application azurerm_batch_application}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/batch_application azurerm_batch_application}
 */
 export class DataAzurermBatchApplication extends cdktf.TerraformDataSource {
 
@@ -124,7 +124,7 @@ export class DataAzurermBatchApplication extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.55.0/docs/data-sources/batch_application azurerm_batch_application} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/batch_application azurerm_batch_application} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -135,7 +135,7 @@ export class DataAzurermBatchApplication extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_batch_application',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.55.0',
+        providerVersion: '3.56.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
