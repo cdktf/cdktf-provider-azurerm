@@ -1,6 +1,6 @@
 # `data_azurerm_key_vault_key`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_key_vault_key`](https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_key).
+Refer to the Terraform Registory for docs: [`data_azurerm_key_vault_key`](https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_key).
 
 # `dataAzurermKeyVaultKey` Submodule <a name="`dataAzurermKeyVaultKey` Submodule" id="@cdktf/provider-azurerm.dataAzurermKeyVaultKey"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_key_vault_key`](https:
 
 ### DataAzurermKeyVaultKey <a name="DataAzurermKeyVaultKey" id="@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKey"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_key azurerm_key_vault_key}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_key azurerm_key_vault_key}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermkeyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultkey"
 
 dataazurermkeyvaultkey.NewDataAzurermKeyVaultKey(scope Construct, id *string, config DataAzurermKeyVaultKeyConfig) DataAzurermKeyVaultKey
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermkeyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultkey"
 
 dataazurermkeyvaultkey.DataAzurermKeyVaultKey_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermkeyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultkey"
 
 dataazurermkeyvaultkey.DataAzurermKeyVaultKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermkeyvaultkey.DataAzurermKeyVaultKey_IsTerraformElement(x interface{}) 
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKey.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermkeyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultkey"
 
 dataazurermkeyvaultkey.DataAzurermKeyVaultKey_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -773,7 +773,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermkeyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultkey"
 
 &dataazurermkeyvaultkey.DataAzurermKeyVaultKeyConfig {
 	Connection: interface{},
@@ -786,7 +786,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermkeyvaul
 	KeyVaultId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyTimeouts,
 }
 ```
 
@@ -801,9 +801,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermkeyvaul
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyConfig.property.keyVaultId">KeyVaultId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_key#key_vault_id DataAzurermKeyVaultKey#key_vault_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_key#name DataAzurermKeyVaultKey#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_key#id DataAzurermKeyVaultKey#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyConfig.property.keyVaultId">KeyVaultId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_key#key_vault_id DataAzurermKeyVaultKey#key_vault_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_key#name DataAzurermKeyVaultKey#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_key#id DataAzurermKeyVaultKey#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyTimeouts">DataAzurermKeyVaultKeyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -886,7 +886,7 @@ KeyVaultId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_key#key_vault_id DataAzurermKeyVaultKey#key_vault_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_key#key_vault_id DataAzurermKeyVaultKey#key_vault_id}.
 
 ---
 
@@ -898,7 +898,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_key#name DataAzurermKeyVaultKey#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_key#name DataAzurermKeyVaultKey#name}.
 
 ---
 
@@ -910,7 +910,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_key#id DataAzurermKeyVaultKey#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_key#id DataAzurermKeyVaultKey#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -927,7 +927,7 @@ Timeouts DataAzurermKeyVaultKeyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_key#timeouts DataAzurermKeyVaultKey#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_key#timeouts DataAzurermKeyVaultKey#timeouts}
 
 ---
 
@@ -936,7 +936,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermkeyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultkey"
 
 &dataazurermkeyvaultkey.DataAzurermKeyVaultKeyTimeouts {
 	Read: *string,
@@ -947,7 +947,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermkeyvaul
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_key#read DataAzurermKeyVaultKey#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_key#read DataAzurermKeyVaultKey#read}. |
 
 ---
 
@@ -959,7 +959,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_key#read DataAzurermKeyVaultKey#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_key#read DataAzurermKeyVaultKey#read}.
 
 ---
 
@@ -970,7 +970,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultKey.DataAzurermKeyVaultKeyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermkeyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultkey"
 
 dataazurermkeyvaultkey.NewDataAzurermKeyVaultKeyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermKeyVaultKeyTimeoutsOutputReference
 ```

@@ -1,6 +1,6 @@
 # `azurerm_private_dns_txt_record`
 
-Refer to the Terraform Registory for docs: [`azurerm_private_dns_txt_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record).
+Refer to the Terraform Registory for docs: [`azurerm_private_dns_txt_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record).
 
 # `privateDnsTxtRecord` Submodule <a name="`privateDnsTxtRecord` Submodule" id="@cdktf/provider-azurerm.privateDnsTxtRecord"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_private_dns_txt_record`](ht
 
 ### PrivateDnsTxtRecord <a name="PrivateDnsTxtRecord" id="@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecord"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record azurerm_private_dns_txt_record}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record azurerm_private_dns_txt_record}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecord.Initializer"></a>
 
@@ -781,13 +781,13 @@ new PrivateDnsTxtRecordConfig {
 | <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#name PrivateDnsTxtRecord#name}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#name PrivateDnsTxtRecord#name}. |
 | <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.record">Record</a></code> | <code>object</code> | record block. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#resource_group_name PrivateDnsTxtRecord#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.ttl">Ttl</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#ttl PrivateDnsTxtRecord#ttl}. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.zoneName">ZoneName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#zone_name PrivateDnsTxtRecord#zone_name}. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#id PrivateDnsTxtRecord#id}. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#tags PrivateDnsTxtRecord#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#resource_group_name PrivateDnsTxtRecord#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.ttl">Ttl</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#ttl PrivateDnsTxtRecord#ttl}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.zoneName">ZoneName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#zone_name PrivateDnsTxtRecord#zone_name}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#id PrivateDnsTxtRecord#id}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#tags PrivateDnsTxtRecord#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordTimeouts">PrivateDnsTxtRecordTimeouts</a></code> | timeouts block. |
 
 ---
@@ -870,7 +870,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#name PrivateDnsTxtRecord#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#name PrivateDnsTxtRecord#name}.
 
 ---
 
@@ -884,7 +884,7 @@ public object Record { get; set; }
 
 record block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#record PrivateDnsTxtRecord#record}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#record PrivateDnsTxtRecord#record}
 
 ---
 
@@ -896,7 +896,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#resource_group_name PrivateDnsTxtRecord#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#resource_group_name PrivateDnsTxtRecord#resource_group_name}.
 
 ---
 
@@ -908,7 +908,7 @@ public double Ttl { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#ttl PrivateDnsTxtRecord#ttl}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#ttl PrivateDnsTxtRecord#ttl}.
 
 ---
 
@@ -920,7 +920,7 @@ public string ZoneName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#zone_name PrivateDnsTxtRecord#zone_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#zone_name PrivateDnsTxtRecord#zone_name}.
 
 ---
 
@@ -932,7 +932,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#id PrivateDnsTxtRecord#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#id PrivateDnsTxtRecord#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -947,7 +947,7 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#tags PrivateDnsTxtRecord#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#tags PrivateDnsTxtRecord#tags}.
 
 ---
 
@@ -961,7 +961,7 @@ public PrivateDnsTxtRecordTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#timeouts PrivateDnsTxtRecord#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#timeouts PrivateDnsTxtRecord#timeouts}
 
 ---
 
@@ -981,7 +981,7 @@ new PrivateDnsTxtRecordRecord {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordRecord.property.value">Value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#value PrivateDnsTxtRecord#value}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordRecord.property.value">Value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#value PrivateDnsTxtRecord#value}. |
 
 ---
 
@@ -993,7 +993,7 @@ public string Value { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#value PrivateDnsTxtRecord#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#value PrivateDnsTxtRecord#value}.
 
 ---
 
@@ -1016,10 +1016,10 @@ new PrivateDnsTxtRecordTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#create PrivateDnsTxtRecord#create}. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#delete PrivateDnsTxtRecord#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#read PrivateDnsTxtRecord#read}. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#update PrivateDnsTxtRecord#update}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#create PrivateDnsTxtRecord#create}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#delete PrivateDnsTxtRecord#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#read PrivateDnsTxtRecord#read}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsTxtRecord.PrivateDnsTxtRecordTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#update PrivateDnsTxtRecord#update}. |
 
 ---
 
@@ -1031,7 +1031,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#create PrivateDnsTxtRecord#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#create PrivateDnsTxtRecord#create}.
 
 ---
 
@@ -1043,7 +1043,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#delete PrivateDnsTxtRecord#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#delete PrivateDnsTxtRecord#delete}.
 
 ---
 
@@ -1055,7 +1055,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#read PrivateDnsTxtRecord#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#read PrivateDnsTxtRecord#read}.
 
 ---
 
@@ -1067,7 +1067,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/private_dns_txt_record#update PrivateDnsTxtRecord#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/private_dns_txt_record#update PrivateDnsTxtRecord#update}.
 
 ---
 

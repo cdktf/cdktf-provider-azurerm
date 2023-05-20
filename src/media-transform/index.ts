@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,52 +8,52 @@ import * as cdktf from 'cdktf';
 
 export interface MediaTransformConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#description MediaTransform#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#description MediaTransform#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#id MediaTransform#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#id MediaTransform#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#media_services_account_name MediaTransform#media_services_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#media_services_account_name MediaTransform#media_services_account_name}
   */
   readonly mediaServicesAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#name MediaTransform#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#name MediaTransform#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#resource_group_name MediaTransform#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#resource_group_name MediaTransform#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * output block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#output MediaTransform#output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#output MediaTransform#output}
   */
   readonly output?: MediaTransformOutput[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#timeouts MediaTransform#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#timeouts MediaTransform#timeouts}
   */
   readonly timeouts?: MediaTransformTimeouts;
 }
 export interface MediaTransformOutputAudioAnalyzerPreset {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}
   */
   readonly audioAnalysisMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}
   */
   readonly audioLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}
   */
   readonly experimentalOptions?: { [key: string]: string };
 }
@@ -164,35 +164,35 @@ export class MediaTransformOutputAudioAnalyzerPresetOutputReference extends cdkt
 }
 export interface MediaTransformOutputBuiltinPresetPresetConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#complexity MediaTransform#complexity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#complexity MediaTransform#complexity}
   */
   readonly complexity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#interleave_output MediaTransform#interleave_output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#interleave_output MediaTransform#interleave_output}
   */
   readonly interleaveOutput?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#key_frame_interval_in_seconds MediaTransform#key_frame_interval_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#key_frame_interval_in_seconds MediaTransform#key_frame_interval_in_seconds}
   */
   readonly keyFrameIntervalInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#max_bitrate_bps MediaTransform#max_bitrate_bps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#max_bitrate_bps MediaTransform#max_bitrate_bps}
   */
   readonly maxBitrateBps?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#max_height MediaTransform#max_height}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#max_height MediaTransform#max_height}
   */
   readonly maxHeight?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#max_layers MediaTransform#max_layers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#max_layers MediaTransform#max_layers}
   */
   readonly maxLayers?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#min_bitrate_bps MediaTransform#min_bitrate_bps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#min_bitrate_bps MediaTransform#min_bitrate_bps}
   */
   readonly minBitrateBps?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#min_height MediaTransform#min_height}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#min_height MediaTransform#min_height}
   */
   readonly minHeight?: number;
 }
@@ -418,13 +418,13 @@ export class MediaTransformOutputBuiltinPresetPresetConfigurationOutputReference
 }
 export interface MediaTransformOutputBuiltinPreset {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#preset_name MediaTransform#preset_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#preset_name MediaTransform#preset_name}
   */
   readonly presetName: string;
   /**
   * preset_configuration block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#preset_configuration MediaTransform#preset_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#preset_configuration MediaTransform#preset_configuration}
   */
   readonly presetConfiguration?: MediaTransformOutputBuiltinPresetPresetConfiguration;
 }
@@ -509,23 +509,23 @@ export class MediaTransformOutputBuiltinPresetOutputReference extends cdktf.Comp
 }
 export interface MediaTransformOutputCustomPresetCodecAacAudio {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}
   */
   readonly bitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#channels MediaTransform#channels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#channels MediaTransform#channels}
   */
   readonly channels?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#profile MediaTransform#profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#profile MediaTransform#profile}
   */
   readonly profile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}
   */
   readonly samplingRate?: number;
 }
@@ -682,7 +682,7 @@ export class MediaTransformOutputCustomPresetCodecAacAudioOutputReference extend
 }
 export interface MediaTransformOutputCustomPresetCodecCopyAudio {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}
   */
   readonly label?: string;
 }
@@ -747,7 +747,7 @@ export class MediaTransformOutputCustomPresetCodecCopyAudioOutputReference exten
 }
 export interface MediaTransformOutputCustomPresetCodecCopyVideo {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}
   */
   readonly label?: string;
 }
@@ -812,19 +812,19 @@ export class MediaTransformOutputCustomPresetCodecCopyVideoOutputReference exten
 }
 export interface MediaTransformOutputCustomPresetCodecDdAudio {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}
   */
   readonly bitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#channels MediaTransform#channels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#channels MediaTransform#channels}
   */
   readonly channels?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}
   */
   readonly samplingRate?: number;
 }
@@ -958,63 +958,63 @@ export class MediaTransformOutputCustomPresetCodecDdAudioOutputReference extends
 }
 export interface MediaTransformOutputCustomPresetCodecH264VideoLayer {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}
   */
   readonly adaptiveBFrameEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}
   */
   readonly bFrames?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}
   */
   readonly bitrate: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}
   */
   readonly bufferWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#crf MediaTransform#crf}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#crf MediaTransform#crf}
   */
   readonly crf?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#entropy_mode MediaTransform#entropy_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#entropy_mode MediaTransform#entropy_mode}
   */
   readonly entropyMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}
   */
   readonly frameRate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#height MediaTransform#height}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}
   */
   readonly height?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#level MediaTransform#level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#level MediaTransform#level}
   */
   readonly level?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}
   */
   readonly maxBitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#profile MediaTransform#profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#profile MediaTransform#profile}
   */
   readonly profile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}
   */
   readonly referenceFrames?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#slices MediaTransform#slices}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#slices MediaTransform#slices}
   */
   readonly slices?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#width MediaTransform#width}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}
   */
   readonly width?: string;
 }
@@ -1430,37 +1430,37 @@ export class MediaTransformOutputCustomPresetCodecH264VideoLayerList extends cdk
 }
 export interface MediaTransformOutputCustomPresetCodecH264Video {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#complexity MediaTransform#complexity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#complexity MediaTransform#complexity}
   */
   readonly complexity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}
   */
   readonly keyFrameInterval?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#rate_control_mode MediaTransform#rate_control_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#rate_control_mode MediaTransform#rate_control_mode}
   */
   readonly rateControlMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}
   */
   readonly sceneChangeDetectionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}
   */
   readonly stretchMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}
   */
   readonly syncMode?: string;
   /**
   * layer block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#layer MediaTransform#layer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#layer MediaTransform#layer}
   */
   readonly layer?: MediaTransformOutputCustomPresetCodecH264VideoLayer[] | cdktf.IResolvable;
 }
@@ -1686,59 +1686,59 @@ export class MediaTransformOutputCustomPresetCodecH264VideoOutputReference exten
 }
 export interface MediaTransformOutputCustomPresetCodecH265VideoLayer {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}
   */
   readonly adaptiveBFrameEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}
   */
   readonly bFrames?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}
   */
   readonly bitrate: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}
   */
   readonly bufferWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#crf MediaTransform#crf}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#crf MediaTransform#crf}
   */
   readonly crf?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}
   */
   readonly frameRate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#height MediaTransform#height}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}
   */
   readonly height?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#level MediaTransform#level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#level MediaTransform#level}
   */
   readonly level?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}
   */
   readonly maxBitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#profile MediaTransform#profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#profile MediaTransform#profile}
   */
   readonly profile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}
   */
   readonly referenceFrames?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#slices MediaTransform#slices}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#slices MediaTransform#slices}
   */
   readonly slices?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#width MediaTransform#width}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}
   */
   readonly width?: string;
 }
@@ -2131,33 +2131,33 @@ export class MediaTransformOutputCustomPresetCodecH265VideoLayerList extends cdk
 }
 export interface MediaTransformOutputCustomPresetCodecH265Video {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#complexity MediaTransform#complexity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#complexity MediaTransform#complexity}
   */
   readonly complexity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}
   */
   readonly keyFrameInterval?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}
   */
   readonly sceneChangeDetectionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}
   */
   readonly stretchMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}
   */
   readonly syncMode?: string;
   /**
   * layer block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#layer MediaTransform#layer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#layer MediaTransform#layer}
   */
   readonly layer?: MediaTransformOutputCustomPresetCodecH265VideoLayer[] | cdktf.IResolvable;
 }
@@ -2358,43 +2358,917 @@ export class MediaTransformOutputCustomPresetCodecH265VideoOutputReference exten
     return this._layer.internalValue;
   }
 }
+export interface MediaTransformOutputCustomPresetCodecJpgImageLayer {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}
+  */
+  readonly height?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}
+  */
+  readonly label?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#quality MediaTransform#quality}
+  */
+  readonly quality?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}
+  */
+  readonly width?: string;
+}
+
+export function mediaTransformOutputCustomPresetCodecJpgImageLayerToTerraform(struct?: MediaTransformOutputCustomPresetCodecJpgImageLayer | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    height: cdktf.stringToTerraform(struct!.height),
+    label: cdktf.stringToTerraform(struct!.label),
+    quality: cdktf.numberToTerraform(struct!.quality),
+    width: cdktf.stringToTerraform(struct!.width),
+  }
+}
+
+export class MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaTransformOutputCustomPresetCodecJpgImageLayer | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._height !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.height = this._height;
+    }
+    if (this._label !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.label = this._label;
+    }
+    if (this._quality !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.quality = this._quality;
+    }
+    if (this._width !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.width = this._width;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaTransformOutputCustomPresetCodecJpgImageLayer | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._height = undefined;
+      this._label = undefined;
+      this._quality = undefined;
+      this._width = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._height = value.height;
+      this._label = value.label;
+      this._quality = value.quality;
+      this._width = value.width;
+    }
+  }
+
+  // height - computed: false, optional: true, required: false
+  private _height?: string; 
+  public get height() {
+    return this.getStringAttribute('height');
+  }
+  public set height(value: string) {
+    this._height = value;
+  }
+  public resetHeight() {
+    this._height = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get heightInput() {
+    return this._height;
+  }
+
+  // label - computed: false, optional: true, required: false
+  private _label?: string; 
+  public get label() {
+    return this.getStringAttribute('label');
+  }
+  public set label(value: string) {
+    this._label = value;
+  }
+  public resetLabel() {
+    this._label = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelInput() {
+    return this._label;
+  }
+
+  // quality - computed: false, optional: true, required: false
+  private _quality?: number; 
+  public get quality() {
+    return this.getNumberAttribute('quality');
+  }
+  public set quality(value: number) {
+    this._quality = value;
+  }
+  public resetQuality() {
+    this._quality = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get qualityInput() {
+    return this._quality;
+  }
+
+  // width - computed: false, optional: true, required: false
+  private _width?: string; 
+  public get width() {
+    return this.getStringAttribute('width');
+  }
+  public set width(value: string) {
+    this._width = value;
+  }
+  public resetWidth() {
+    this._width = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get widthInput() {
+    return this._width;
+  }
+}
+
+export class MediaTransformOutputCustomPresetCodecJpgImageLayerList extends cdktf.ComplexList {
+  public internalValue? : MediaTransformOutputCustomPresetCodecJpgImageLayer[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference {
+    return new MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MediaTransformOutputCustomPresetCodecJpgImage {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}
+  */
+  readonly keyFrameInterval?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}
+  */
+  readonly label?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#range MediaTransform#range}
+  */
+  readonly range?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sprite_column MediaTransform#sprite_column}
+  */
+  readonly spriteColumn?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}
+  */
+  readonly start: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#step MediaTransform#step}
+  */
+  readonly step?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}
+  */
+  readonly stretchMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}
+  */
+  readonly syncMode?: string;
+  /**
+  * layer block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#layer MediaTransform#layer}
+  */
+  readonly layer?: MediaTransformOutputCustomPresetCodecJpgImageLayer[] | cdktf.IResolvable;
+}
+
+export function mediaTransformOutputCustomPresetCodecJpgImageToTerraform(struct?: MediaTransformOutputCustomPresetCodecJpgImageOutputReference | MediaTransformOutputCustomPresetCodecJpgImage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_frame_interval: cdktf.stringToTerraform(struct!.keyFrameInterval),
+    label: cdktf.stringToTerraform(struct!.label),
+    range: cdktf.stringToTerraform(struct!.range),
+    sprite_column: cdktf.numberToTerraform(struct!.spriteColumn),
+    start: cdktf.stringToTerraform(struct!.start),
+    step: cdktf.stringToTerraform(struct!.step),
+    stretch_mode: cdktf.stringToTerraform(struct!.stretchMode),
+    sync_mode: cdktf.stringToTerraform(struct!.syncMode),
+    layer: cdktf.listMapper(mediaTransformOutputCustomPresetCodecJpgImageLayerToTerraform, true)(struct!.layer),
+  }
+}
+
+export class MediaTransformOutputCustomPresetCodecJpgImageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MediaTransformOutputCustomPresetCodecJpgImage | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyFrameInterval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyFrameInterval = this._keyFrameInterval;
+    }
+    if (this._label !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.label = this._label;
+    }
+    if (this._range !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.range = this._range;
+    }
+    if (this._spriteColumn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.spriteColumn = this._spriteColumn;
+    }
+    if (this._start !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.start = this._start;
+    }
+    if (this._step !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.step = this._step;
+    }
+    if (this._stretchMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.stretchMode = this._stretchMode;
+    }
+    if (this._syncMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.syncMode = this._syncMode;
+    }
+    if (this._layer?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.layer = this._layer?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaTransformOutputCustomPresetCodecJpgImage | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._keyFrameInterval = undefined;
+      this._label = undefined;
+      this._range = undefined;
+      this._spriteColumn = undefined;
+      this._start = undefined;
+      this._step = undefined;
+      this._stretchMode = undefined;
+      this._syncMode = undefined;
+      this._layer.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._keyFrameInterval = value.keyFrameInterval;
+      this._label = value.label;
+      this._range = value.range;
+      this._spriteColumn = value.spriteColumn;
+      this._start = value.start;
+      this._step = value.step;
+      this._stretchMode = value.stretchMode;
+      this._syncMode = value.syncMode;
+      this._layer.internalValue = value.layer;
+    }
+  }
+
+  // key_frame_interval - computed: false, optional: true, required: false
+  private _keyFrameInterval?: string; 
+  public get keyFrameInterval() {
+    return this.getStringAttribute('key_frame_interval');
+  }
+  public set keyFrameInterval(value: string) {
+    this._keyFrameInterval = value;
+  }
+  public resetKeyFrameInterval() {
+    this._keyFrameInterval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyFrameIntervalInput() {
+    return this._keyFrameInterval;
+  }
+
+  // label - computed: false, optional: true, required: false
+  private _label?: string; 
+  public get label() {
+    return this.getStringAttribute('label');
+  }
+  public set label(value: string) {
+    this._label = value;
+  }
+  public resetLabel() {
+    this._label = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelInput() {
+    return this._label;
+  }
+
+  // range - computed: false, optional: true, required: false
+  private _range?: string; 
+  public get range() {
+    return this.getStringAttribute('range');
+  }
+  public set range(value: string) {
+    this._range = value;
+  }
+  public resetRange() {
+    this._range = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangeInput() {
+    return this._range;
+  }
+
+  // sprite_column - computed: false, optional: true, required: false
+  private _spriteColumn?: number; 
+  public get spriteColumn() {
+    return this.getNumberAttribute('sprite_column');
+  }
+  public set spriteColumn(value: number) {
+    this._spriteColumn = value;
+  }
+  public resetSpriteColumn() {
+    this._spriteColumn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get spriteColumnInput() {
+    return this._spriteColumn;
+  }
+
+  // start - computed: false, optional: false, required: true
+  private _start?: string; 
+  public get start() {
+    return this.getStringAttribute('start');
+  }
+  public set start(value: string) {
+    this._start = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startInput() {
+    return this._start;
+  }
+
+  // step - computed: false, optional: true, required: false
+  private _step?: string; 
+  public get step() {
+    return this.getStringAttribute('step');
+  }
+  public set step(value: string) {
+    this._step = value;
+  }
+  public resetStep() {
+    this._step = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stepInput() {
+    return this._step;
+  }
+
+  // stretch_mode - computed: false, optional: true, required: false
+  private _stretchMode?: string; 
+  public get stretchMode() {
+    return this.getStringAttribute('stretch_mode');
+  }
+  public set stretchMode(value: string) {
+    this._stretchMode = value;
+  }
+  public resetStretchMode() {
+    this._stretchMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stretchModeInput() {
+    return this._stretchMode;
+  }
+
+  // sync_mode - computed: false, optional: true, required: false
+  private _syncMode?: string; 
+  public get syncMode() {
+    return this.getStringAttribute('sync_mode');
+  }
+  public set syncMode(value: string) {
+    this._syncMode = value;
+  }
+  public resetSyncMode() {
+    this._syncMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get syncModeInput() {
+    return this._syncMode;
+  }
+
+  // layer - computed: false, optional: true, required: false
+  private _layer = new MediaTransformOutputCustomPresetCodecJpgImageLayerList(this, "layer", false);
+  public get layer() {
+    return this._layer;
+  }
+  public putLayer(value: MediaTransformOutputCustomPresetCodecJpgImageLayer[] | cdktf.IResolvable) {
+    this._layer.internalValue = value;
+  }
+  public resetLayer() {
+    this._layer.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get layerInput() {
+    return this._layer.internalValue;
+  }
+}
+export interface MediaTransformOutputCustomPresetCodecPngImageLayer {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}
+  */
+  readonly height?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}
+  */
+  readonly label?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}
+  */
+  readonly width?: string;
+}
+
+export function mediaTransformOutputCustomPresetCodecPngImageLayerToTerraform(struct?: MediaTransformOutputCustomPresetCodecPngImageLayer | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    height: cdktf.stringToTerraform(struct!.height),
+    label: cdktf.stringToTerraform(struct!.label),
+    width: cdktf.stringToTerraform(struct!.width),
+  }
+}
+
+export class MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaTransformOutputCustomPresetCodecPngImageLayer | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._height !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.height = this._height;
+    }
+    if (this._label !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.label = this._label;
+    }
+    if (this._width !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.width = this._width;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaTransformOutputCustomPresetCodecPngImageLayer | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._height = undefined;
+      this._label = undefined;
+      this._width = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._height = value.height;
+      this._label = value.label;
+      this._width = value.width;
+    }
+  }
+
+  // height - computed: false, optional: true, required: false
+  private _height?: string; 
+  public get height() {
+    return this.getStringAttribute('height');
+  }
+  public set height(value: string) {
+    this._height = value;
+  }
+  public resetHeight() {
+    this._height = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get heightInput() {
+    return this._height;
+  }
+
+  // label - computed: false, optional: true, required: false
+  private _label?: string; 
+  public get label() {
+    return this.getStringAttribute('label');
+  }
+  public set label(value: string) {
+    this._label = value;
+  }
+  public resetLabel() {
+    this._label = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelInput() {
+    return this._label;
+  }
+
+  // width - computed: false, optional: true, required: false
+  private _width?: string; 
+  public get width() {
+    return this.getStringAttribute('width');
+  }
+  public set width(value: string) {
+    this._width = value;
+  }
+  public resetWidth() {
+    this._width = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get widthInput() {
+    return this._width;
+  }
+}
+
+export class MediaTransformOutputCustomPresetCodecPngImageLayerList extends cdktf.ComplexList {
+  public internalValue? : MediaTransformOutputCustomPresetCodecPngImageLayer[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference {
+    return new MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MediaTransformOutputCustomPresetCodecPngImage {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}
+  */
+  readonly keyFrameInterval?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}
+  */
+  readonly label?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#range MediaTransform#range}
+  */
+  readonly range?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}
+  */
+  readonly start: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#step MediaTransform#step}
+  */
+  readonly step?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}
+  */
+  readonly stretchMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}
+  */
+  readonly syncMode?: string;
+  /**
+  * layer block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#layer MediaTransform#layer}
+  */
+  readonly layer?: MediaTransformOutputCustomPresetCodecPngImageLayer[] | cdktf.IResolvable;
+}
+
+export function mediaTransformOutputCustomPresetCodecPngImageToTerraform(struct?: MediaTransformOutputCustomPresetCodecPngImageOutputReference | MediaTransformOutputCustomPresetCodecPngImage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_frame_interval: cdktf.stringToTerraform(struct!.keyFrameInterval),
+    label: cdktf.stringToTerraform(struct!.label),
+    range: cdktf.stringToTerraform(struct!.range),
+    start: cdktf.stringToTerraform(struct!.start),
+    step: cdktf.stringToTerraform(struct!.step),
+    stretch_mode: cdktf.stringToTerraform(struct!.stretchMode),
+    sync_mode: cdktf.stringToTerraform(struct!.syncMode),
+    layer: cdktf.listMapper(mediaTransformOutputCustomPresetCodecPngImageLayerToTerraform, true)(struct!.layer),
+  }
+}
+
+export class MediaTransformOutputCustomPresetCodecPngImageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MediaTransformOutputCustomPresetCodecPngImage | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyFrameInterval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyFrameInterval = this._keyFrameInterval;
+    }
+    if (this._label !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.label = this._label;
+    }
+    if (this._range !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.range = this._range;
+    }
+    if (this._start !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.start = this._start;
+    }
+    if (this._step !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.step = this._step;
+    }
+    if (this._stretchMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.stretchMode = this._stretchMode;
+    }
+    if (this._syncMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.syncMode = this._syncMode;
+    }
+    if (this._layer?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.layer = this._layer?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaTransformOutputCustomPresetCodecPngImage | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._keyFrameInterval = undefined;
+      this._label = undefined;
+      this._range = undefined;
+      this._start = undefined;
+      this._step = undefined;
+      this._stretchMode = undefined;
+      this._syncMode = undefined;
+      this._layer.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._keyFrameInterval = value.keyFrameInterval;
+      this._label = value.label;
+      this._range = value.range;
+      this._start = value.start;
+      this._step = value.step;
+      this._stretchMode = value.stretchMode;
+      this._syncMode = value.syncMode;
+      this._layer.internalValue = value.layer;
+    }
+  }
+
+  // key_frame_interval - computed: false, optional: true, required: false
+  private _keyFrameInterval?: string; 
+  public get keyFrameInterval() {
+    return this.getStringAttribute('key_frame_interval');
+  }
+  public set keyFrameInterval(value: string) {
+    this._keyFrameInterval = value;
+  }
+  public resetKeyFrameInterval() {
+    this._keyFrameInterval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyFrameIntervalInput() {
+    return this._keyFrameInterval;
+  }
+
+  // label - computed: false, optional: true, required: false
+  private _label?: string; 
+  public get label() {
+    return this.getStringAttribute('label');
+  }
+  public set label(value: string) {
+    this._label = value;
+  }
+  public resetLabel() {
+    this._label = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelInput() {
+    return this._label;
+  }
+
+  // range - computed: false, optional: true, required: false
+  private _range?: string; 
+  public get range() {
+    return this.getStringAttribute('range');
+  }
+  public set range(value: string) {
+    this._range = value;
+  }
+  public resetRange() {
+    this._range = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangeInput() {
+    return this._range;
+  }
+
+  // start - computed: false, optional: false, required: true
+  private _start?: string; 
+  public get start() {
+    return this.getStringAttribute('start');
+  }
+  public set start(value: string) {
+    this._start = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startInput() {
+    return this._start;
+  }
+
+  // step - computed: false, optional: true, required: false
+  private _step?: string; 
+  public get step() {
+    return this.getStringAttribute('step');
+  }
+  public set step(value: string) {
+    this._step = value;
+  }
+  public resetStep() {
+    this._step = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stepInput() {
+    return this._step;
+  }
+
+  // stretch_mode - computed: false, optional: true, required: false
+  private _stretchMode?: string; 
+  public get stretchMode() {
+    return this.getStringAttribute('stretch_mode');
+  }
+  public set stretchMode(value: string) {
+    this._stretchMode = value;
+  }
+  public resetStretchMode() {
+    this._stretchMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stretchModeInput() {
+    return this._stretchMode;
+  }
+
+  // sync_mode - computed: false, optional: true, required: false
+  private _syncMode?: string; 
+  public get syncMode() {
+    return this.getStringAttribute('sync_mode');
+  }
+  public set syncMode(value: string) {
+    this._syncMode = value;
+  }
+  public resetSyncMode() {
+    this._syncMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get syncModeInput() {
+    return this._syncMode;
+  }
+
+  // layer - computed: false, optional: true, required: false
+  private _layer = new MediaTransformOutputCustomPresetCodecPngImageLayerList(this, "layer", false);
+  public get layer() {
+    return this._layer;
+  }
+  public putLayer(value: MediaTransformOutputCustomPresetCodecPngImageLayer[] | cdktf.IResolvable) {
+    this._layer.internalValue = value;
+  }
+  public resetLayer() {
+    this._layer.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get layerInput() {
+    return this._layer.internalValue;
+  }
+}
 export interface MediaTransformOutputCustomPresetCodec {
   /**
   * aac_audio block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#aac_audio MediaTransform#aac_audio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#aac_audio MediaTransform#aac_audio}
   */
   readonly aacAudio?: MediaTransformOutputCustomPresetCodecAacAudio;
   /**
   * copy_audio block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#copy_audio MediaTransform#copy_audio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#copy_audio MediaTransform#copy_audio}
   */
   readonly copyAudio?: MediaTransformOutputCustomPresetCodecCopyAudio;
   /**
   * copy_video block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#copy_video MediaTransform#copy_video}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#copy_video MediaTransform#copy_video}
   */
   readonly copyVideo?: MediaTransformOutputCustomPresetCodecCopyVideo;
   /**
   * dd_audio block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#dd_audio MediaTransform#dd_audio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#dd_audio MediaTransform#dd_audio}
   */
   readonly ddAudio?: MediaTransformOutputCustomPresetCodecDdAudio;
   /**
   * h264_video block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#h264_video MediaTransform#h264_video}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#h264_video MediaTransform#h264_video}
   */
   readonly h264Video?: MediaTransformOutputCustomPresetCodecH264Video;
   /**
   * h265_video block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#h265_video MediaTransform#h265_video}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#h265_video MediaTransform#h265_video}
   */
   readonly h265Video?: MediaTransformOutputCustomPresetCodecH265Video;
+  /**
+  * jpg_image block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#jpg_image MediaTransform#jpg_image}
+  */
+  readonly jpgImage?: MediaTransformOutputCustomPresetCodecJpgImage;
+  /**
+  * png_image block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#png_image MediaTransform#png_image}
+  */
+  readonly pngImage?: MediaTransformOutputCustomPresetCodecPngImage;
 }
 
 export function mediaTransformOutputCustomPresetCodecToTerraform(struct?: MediaTransformOutputCustomPresetCodec | cdktf.IResolvable): any {
@@ -2409,6 +3283,8 @@ export function mediaTransformOutputCustomPresetCodecToTerraform(struct?: MediaT
     dd_audio: mediaTransformOutputCustomPresetCodecDdAudioToTerraform(struct!.ddAudio),
     h264_video: mediaTransformOutputCustomPresetCodecH264VideoToTerraform(struct!.h264Video),
     h265_video: mediaTransformOutputCustomPresetCodecH265VideoToTerraform(struct!.h265Video),
+    jpg_image: mediaTransformOutputCustomPresetCodecJpgImageToTerraform(struct!.jpgImage),
+    png_image: mediaTransformOutputCustomPresetCodecPngImageToTerraform(struct!.pngImage),
   }
 }
 
@@ -2456,6 +3332,14 @@ export class MediaTransformOutputCustomPresetCodecOutputReference extends cdktf.
       hasAnyValues = true;
       internalValueResult.h265Video = this._h265Video?.internalValue;
     }
+    if (this._jpgImage?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.jpgImage = this._jpgImage?.internalValue;
+    }
+    if (this._pngImage?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pngImage = this._pngImage?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -2469,6 +3353,8 @@ export class MediaTransformOutputCustomPresetCodecOutputReference extends cdktf.
       this._ddAudio.internalValue = undefined;
       this._h264Video.internalValue = undefined;
       this._h265Video.internalValue = undefined;
+      this._jpgImage.internalValue = undefined;
+      this._pngImage.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -2483,6 +3369,8 @@ export class MediaTransformOutputCustomPresetCodecOutputReference extends cdktf.
       this._ddAudio.internalValue = value.ddAudio;
       this._h264Video.internalValue = value.h264Video;
       this._h265Video.internalValue = value.h265Video;
+      this._jpgImage.internalValue = value.jpgImage;
+      this._pngImage.internalValue = value.pngImage;
     }
   }
 
@@ -2581,6 +3469,38 @@ export class MediaTransformOutputCustomPresetCodecOutputReference extends cdktf.
   public get h265VideoInput() {
     return this._h265Video.internalValue;
   }
+
+  // jpg_image - computed: false, optional: true, required: false
+  private _jpgImage = new MediaTransformOutputCustomPresetCodecJpgImageOutputReference(this, "jpg_image");
+  public get jpgImage() {
+    return this._jpgImage;
+  }
+  public putJpgImage(value: MediaTransformOutputCustomPresetCodecJpgImage) {
+    this._jpgImage.internalValue = value;
+  }
+  public resetJpgImage() {
+    this._jpgImage.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jpgImageInput() {
+    return this._jpgImage.internalValue;
+  }
+
+  // png_image - computed: false, optional: true, required: false
+  private _pngImage = new MediaTransformOutputCustomPresetCodecPngImageOutputReference(this, "png_image");
+  public get pngImage() {
+    return this._pngImage;
+  }
+  public putPngImage(value: MediaTransformOutputCustomPresetCodecPngImage) {
+    this._pngImage.internalValue = value;
+  }
+  public resetPngImage() {
+    this._pngImage.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pngImageInput() {
+    return this._pngImage.internalValue;
+  }
 }
 
 export class MediaTransformOutputCustomPresetCodecList extends cdktf.ComplexList {
@@ -2604,19 +3524,19 @@ export class MediaTransformOutputCustomPresetCodecList extends cdktf.ComplexList
 }
 export interface MediaTransformOutputCustomPresetFilterCropRectangle {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#height MediaTransform#height}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}
   */
   readonly height?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#left MediaTransform#left}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#left MediaTransform#left}
   */
   readonly left?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#top MediaTransform#top}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#top MediaTransform#top}
   */
   readonly top?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#width MediaTransform#width}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}
   */
   readonly width?: string;
 }
@@ -2750,11 +3670,11 @@ export class MediaTransformOutputCustomPresetFilterCropRectangleOutputReference 
 }
 export interface MediaTransformOutputCustomPresetFilterDeinterlace {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#mode MediaTransform#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#mode MediaTransform#mode}
   */
   readonly mode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#parity MediaTransform#parity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#parity MediaTransform#parity}
   */
   readonly parity?: string;
 }
@@ -2842,15 +3762,15 @@ export class MediaTransformOutputCustomPresetFilterDeinterlaceOutputReference ex
 }
 export interface MediaTransformOutputCustomPresetFilterFadeIn {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#duration MediaTransform#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#duration MediaTransform#duration}
   */
   readonly duration: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}
   */
   readonly fadeColor: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#start MediaTransform#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}
   */
   readonly start?: string;
 }
@@ -2955,15 +3875,15 @@ export class MediaTransformOutputCustomPresetFilterFadeInOutputReference extends
 }
 export interface MediaTransformOutputCustomPresetFilterFadeOut {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#duration MediaTransform#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#duration MediaTransform#duration}
   */
   readonly duration: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}
   */
   readonly fadeColor: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#start MediaTransform#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}
   */
   readonly start?: string;
 }
@@ -3068,27 +3988,27 @@ export class MediaTransformOutputCustomPresetFilterFadeOutOutputReference extend
 }
 export interface MediaTransformOutputCustomPresetFilterOverlayAudio {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}
   */
   readonly audioGainLevel?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#end MediaTransform#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#end MediaTransform#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}
   */
   readonly fadeInDuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}
   */
   readonly fadeOutDuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#input_label MediaTransform#input_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#input_label MediaTransform#input_label}
   */
   readonly inputLabel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#start MediaTransform#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}
   */
   readonly start?: string;
 }
@@ -3265,19 +4185,19 @@ export class MediaTransformOutputCustomPresetFilterOverlayAudioOutputReference e
 }
 export interface MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#height MediaTransform#height}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}
   */
   readonly height?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#left MediaTransform#left}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#left MediaTransform#left}
   */
   readonly left?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#top MediaTransform#top}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#top MediaTransform#top}
   */
   readonly top?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#width MediaTransform#width}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}
   */
   readonly width?: string;
 }
@@ -3411,19 +4331,19 @@ export class MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangleOutp
 }
 export interface MediaTransformOutputCustomPresetFilterOverlayVideoPosition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#height MediaTransform#height}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}
   */
   readonly height?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#left MediaTransform#left}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#left MediaTransform#left}
   */
   readonly left?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#top MediaTransform#top}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#top MediaTransform#top}
   */
   readonly top?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#width MediaTransform#width}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}
   */
   readonly width?: string;
 }
@@ -3557,43 +4477,43 @@ export class MediaTransformOutputCustomPresetFilterOverlayVideoPositionOutputRef
 }
 export interface MediaTransformOutputCustomPresetFilterOverlayVideo {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}
   */
   readonly audioGainLevel?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#end MediaTransform#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#end MediaTransform#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}
   */
   readonly fadeInDuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}
   */
   readonly fadeOutDuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#input_label MediaTransform#input_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#input_label MediaTransform#input_label}
   */
   readonly inputLabel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#opacity MediaTransform#opacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#opacity MediaTransform#opacity}
   */
   readonly opacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#start MediaTransform#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}
   */
   readonly start?: string;
   /**
   * crop_rectangle block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#crop_rectangle MediaTransform#crop_rectangle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#crop_rectangle MediaTransform#crop_rectangle}
   */
   readonly cropRectangle?: MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle;
   /**
   * position block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#position MediaTransform#position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#position MediaTransform#position}
   */
   readonly position?: MediaTransformOutputCustomPresetFilterOverlayVideoPosition;
 }
@@ -3841,13 +4761,13 @@ export interface MediaTransformOutputCustomPresetFilterOverlay {
   /**
   * audio block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio MediaTransform#audio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio MediaTransform#audio}
   */
   readonly audio?: MediaTransformOutputCustomPresetFilterOverlayAudio;
   /**
   * video block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#video MediaTransform#video}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#video MediaTransform#video}
   */
   readonly video?: MediaTransformOutputCustomPresetFilterOverlayVideo;
 }
@@ -3967,37 +4887,37 @@ export class MediaTransformOutputCustomPresetFilterOverlayList extends cdktf.Com
 }
 export interface MediaTransformOutputCustomPresetFilter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#rotation MediaTransform#rotation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#rotation MediaTransform#rotation}
   */
   readonly rotation?: string;
   /**
   * crop_rectangle block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#crop_rectangle MediaTransform#crop_rectangle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#crop_rectangle MediaTransform#crop_rectangle}
   */
   readonly cropRectangle?: MediaTransformOutputCustomPresetFilterCropRectangle;
   /**
   * deinterlace block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#deinterlace MediaTransform#deinterlace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#deinterlace MediaTransform#deinterlace}
   */
   readonly deinterlace?: MediaTransformOutputCustomPresetFilterDeinterlace;
   /**
   * fade_in block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_in MediaTransform#fade_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_in MediaTransform#fade_in}
   */
   readonly fadeIn?: MediaTransformOutputCustomPresetFilterFadeIn;
   /**
   * fade_out block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_out MediaTransform#fade_out}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_out MediaTransform#fade_out}
   */
   readonly fadeOut?: MediaTransformOutputCustomPresetFilterFadeOut;
   /**
   * overlay block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#overlay MediaTransform#overlay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#overlay MediaTransform#overlay}
   */
   readonly overlay?: MediaTransformOutputCustomPresetFilterOverlay[] | cdktf.IResolvable;
 }
@@ -4175,9 +5095,71 @@ export class MediaTransformOutputCustomPresetFilterOutputReference extends cdktf
     return this._overlay.internalValue;
   }
 }
+export interface MediaTransformOutputCustomPresetFormatJpg {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}
+  */
+  readonly filenamePattern: string;
+}
+
+export function mediaTransformOutputCustomPresetFormatJpgToTerraform(struct?: MediaTransformOutputCustomPresetFormatJpgOutputReference | MediaTransformOutputCustomPresetFormatJpg): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    filename_pattern: cdktf.stringToTerraform(struct!.filenamePattern),
+  }
+}
+
+export class MediaTransformOutputCustomPresetFormatJpgOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MediaTransformOutputCustomPresetFormatJpg | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._filenamePattern !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filenamePattern = this._filenamePattern;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaTransformOutputCustomPresetFormatJpg | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._filenamePattern = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._filenamePattern = value.filenamePattern;
+    }
+  }
+
+  // filename_pattern - computed: false, optional: false, required: true
+  private _filenamePattern?: string; 
+  public get filenamePattern() {
+    return this.getStringAttribute('filename_pattern');
+  }
+  public set filenamePattern(value: string) {
+    this._filenamePattern = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filenamePatternInput() {
+    return this._filenamePattern;
+  }
+}
 export interface MediaTransformOutputCustomPresetFormatMp4OutputFile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#labels MediaTransform#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#labels MediaTransform#labels}
   */
   readonly labels: string[];
 }
@@ -4271,13 +5253,13 @@ export class MediaTransformOutputCustomPresetFormatMp4OutputFileList extends cdk
 }
 export interface MediaTransformOutputCustomPresetFormatMp4 {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}
   */
   readonly filenamePattern: string;
   /**
   * output_file block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#output_file MediaTransform#output_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#output_file MediaTransform#output_file}
   */
   readonly outputFile?: MediaTransformOutputCustomPresetFormatMp4OutputFile[] | cdktf.IResolvable;
 }
@@ -4360,9 +5342,71 @@ export class MediaTransformOutputCustomPresetFormatMp4OutputReference extends cd
     return this._outputFile.internalValue;
   }
 }
+export interface MediaTransformOutputCustomPresetFormatPng {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}
+  */
+  readonly filenamePattern: string;
+}
+
+export function mediaTransformOutputCustomPresetFormatPngToTerraform(struct?: MediaTransformOutputCustomPresetFormatPngOutputReference | MediaTransformOutputCustomPresetFormatPng): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    filename_pattern: cdktf.stringToTerraform(struct!.filenamePattern),
+  }
+}
+
+export class MediaTransformOutputCustomPresetFormatPngOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MediaTransformOutputCustomPresetFormatPng | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._filenamePattern !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filenamePattern = this._filenamePattern;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaTransformOutputCustomPresetFormatPng | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._filenamePattern = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._filenamePattern = value.filenamePattern;
+    }
+  }
+
+  // filename_pattern - computed: false, optional: false, required: true
+  private _filenamePattern?: string; 
+  public get filenamePattern() {
+    return this.getStringAttribute('filename_pattern');
+  }
+  public set filenamePattern(value: string) {
+    this._filenamePattern = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filenamePatternInput() {
+    return this._filenamePattern;
+  }
+}
 export interface MediaTransformOutputCustomPresetFormatTransportStreamOutputFile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#labels MediaTransform#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#labels MediaTransform#labels}
   */
   readonly labels: string[];
 }
@@ -4456,13 +5500,13 @@ export class MediaTransformOutputCustomPresetFormatTransportStreamOutputFileList
 }
 export interface MediaTransformOutputCustomPresetFormatTransportStream {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}
   */
   readonly filenamePattern: string;
   /**
   * output_file block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#output_file MediaTransform#output_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#output_file MediaTransform#output_file}
   */
   readonly outputFile?: MediaTransformOutputCustomPresetFormatTransportStreamOutputFile[] | cdktf.IResolvable;
 }
@@ -4547,15 +5591,27 @@ export class MediaTransformOutputCustomPresetFormatTransportStreamOutputReferenc
 }
 export interface MediaTransformOutputCustomPresetFormat {
   /**
+  * jpg block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#jpg MediaTransform#jpg}
+  */
+  readonly jpg?: MediaTransformOutputCustomPresetFormatJpg;
+  /**
   * mp4 block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#mp4 MediaTransform#mp4}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#mp4 MediaTransform#mp4}
   */
   readonly mp4?: MediaTransformOutputCustomPresetFormatMp4;
   /**
+  * png block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#png MediaTransform#png}
+  */
+  readonly png?: MediaTransformOutputCustomPresetFormatPng;
+  /**
   * transport_stream block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#transport_stream MediaTransform#transport_stream}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#transport_stream MediaTransform#transport_stream}
   */
   readonly transportStream?: MediaTransformOutputCustomPresetFormatTransportStream;
 }
@@ -4566,7 +5622,9 @@ export function mediaTransformOutputCustomPresetFormatToTerraform(struct?: Media
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    jpg: mediaTransformOutputCustomPresetFormatJpgToTerraform(struct!.jpg),
     mp4: mediaTransformOutputCustomPresetFormatMp4ToTerraform(struct!.mp4),
+    png: mediaTransformOutputCustomPresetFormatPngToTerraform(struct!.png),
     transport_stream: mediaTransformOutputCustomPresetFormatTransportStreamToTerraform(struct!.transportStream),
   }
 }
@@ -4591,9 +5649,17 @@ export class MediaTransformOutputCustomPresetFormatOutputReference extends cdktf
     }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._jpg?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.jpg = this._jpg?.internalValue;
+    }
     if (this._mp4?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.mp4 = this._mp4?.internalValue;
+    }
+    if (this._png?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.png = this._png?.internalValue;
     }
     if (this._transportStream?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -4606,7 +5672,9 @@ export class MediaTransformOutputCustomPresetFormatOutputReference extends cdktf
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
+      this._jpg.internalValue = undefined;
       this._mp4.internalValue = undefined;
+      this._png.internalValue = undefined;
       this._transportStream.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -4616,9 +5684,27 @@ export class MediaTransformOutputCustomPresetFormatOutputReference extends cdktf
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
+      this._jpg.internalValue = value.jpg;
       this._mp4.internalValue = value.mp4;
+      this._png.internalValue = value.png;
       this._transportStream.internalValue = value.transportStream;
     }
+  }
+
+  // jpg - computed: false, optional: true, required: false
+  private _jpg = new MediaTransformOutputCustomPresetFormatJpgOutputReference(this, "jpg");
+  public get jpg() {
+    return this._jpg;
+  }
+  public putJpg(value: MediaTransformOutputCustomPresetFormatJpg) {
+    this._jpg.internalValue = value;
+  }
+  public resetJpg() {
+    this._jpg.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jpgInput() {
+    return this._jpg.internalValue;
   }
 
   // mp4 - computed: false, optional: true, required: false
@@ -4635,6 +5721,22 @@ export class MediaTransformOutputCustomPresetFormatOutputReference extends cdktf
   // Temporarily expose input value. Use with caution.
   public get mp4Input() {
     return this._mp4.internalValue;
+  }
+
+  // png - computed: false, optional: true, required: false
+  private _png = new MediaTransformOutputCustomPresetFormatPngOutputReference(this, "png");
+  public get png() {
+    return this._png;
+  }
+  public putPng(value: MediaTransformOutputCustomPresetFormatPng) {
+    this._png.internalValue = value;
+  }
+  public resetPng() {
+    this._png.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pngInput() {
+    return this._png.internalValue;
   }
 
   // transport_stream - computed: false, optional: true, required: false
@@ -4677,19 +5779,19 @@ export interface MediaTransformOutputCustomPreset {
   /**
   * codec block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#codec MediaTransform#codec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#codec MediaTransform#codec}
   */
   readonly codec: MediaTransformOutputCustomPresetCodec[] | cdktf.IResolvable;
   /**
   * filter block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#filter MediaTransform#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#filter MediaTransform#filter}
   */
   readonly filter?: MediaTransformOutputCustomPresetFilter;
   /**
   * format block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#format MediaTransform#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#format MediaTransform#format}
   */
   readonly format: MediaTransformOutputCustomPresetFormat[] | cdktf.IResolvable;
 }
@@ -4794,19 +5896,19 @@ export class MediaTransformOutputCustomPresetOutputReference extends cdktf.Compl
 }
 export interface MediaTransformOutputFaceDetectorPreset {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#analysis_resolution MediaTransform#analysis_resolution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#analysis_resolution MediaTransform#analysis_resolution}
   */
   readonly analysisResolution?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#blur_type MediaTransform#blur_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#blur_type MediaTransform#blur_type}
   */
   readonly blurType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}
   */
   readonly experimentalOptions?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#face_redactor_mode MediaTransform#face_redactor_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#face_redactor_mode MediaTransform#face_redactor_mode}
   */
   readonly faceRedactorMode?: string;
 }
@@ -4940,19 +6042,19 @@ export class MediaTransformOutputFaceDetectorPresetOutputReference extends cdktf
 }
 export interface MediaTransformOutputVideoAnalyzerPreset {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}
   */
   readonly audioAnalysisMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}
   */
   readonly audioLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}
   */
   readonly experimentalOptions?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#insights_type MediaTransform#insights_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#insights_type MediaTransform#insights_type}
   */
   readonly insightsType?: string;
 }
@@ -5086,41 +6188,41 @@ export class MediaTransformOutputVideoAnalyzerPresetOutputReference extends cdkt
 }
 export interface MediaTransformOutput {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#on_error_action MediaTransform#on_error_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#on_error_action MediaTransform#on_error_action}
   */
   readonly onErrorAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#relative_priority MediaTransform#relative_priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#relative_priority MediaTransform#relative_priority}
   */
   readonly relativePriority?: string;
   /**
   * audio_analyzer_preset block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_analyzer_preset MediaTransform#audio_analyzer_preset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_analyzer_preset MediaTransform#audio_analyzer_preset}
   */
   readonly audioAnalyzerPreset?: MediaTransformOutputAudioAnalyzerPreset;
   /**
   * builtin_preset block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#builtin_preset MediaTransform#builtin_preset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#builtin_preset MediaTransform#builtin_preset}
   */
   readonly builtinPreset?: MediaTransformOutputBuiltinPreset;
   /**
   * custom_preset block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#custom_preset MediaTransform#custom_preset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#custom_preset MediaTransform#custom_preset}
   */
   readonly customPreset?: MediaTransformOutputCustomPreset;
   /**
   * face_detector_preset block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#face_detector_preset MediaTransform#face_detector_preset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#face_detector_preset MediaTransform#face_detector_preset}
   */
   readonly faceDetectorPreset?: MediaTransformOutputFaceDetectorPreset;
   /**
   * video_analyzer_preset block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#video_analyzer_preset MediaTransform#video_analyzer_preset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#video_analyzer_preset MediaTransform#video_analyzer_preset}
   */
   readonly videoAnalyzerPreset?: MediaTransformOutputVideoAnalyzerPreset;
 }
@@ -5355,19 +6457,19 @@ export class MediaTransformOutputList extends cdktf.ComplexList {
 }
 export interface MediaTransformTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#create MediaTransform#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#create MediaTransform#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#delete MediaTransform#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#delete MediaTransform#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#read MediaTransform#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#read MediaTransform#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#update MediaTransform#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#update MediaTransform#update}
   */
   readonly update?: string;
 }
@@ -5511,7 +6613,7 @@ export class MediaTransformTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform azurerm_media_transform}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform azurerm_media_transform}
 */
 export class MediaTransform extends cdktf.TerraformResource {
 
@@ -5525,7 +6627,7 @@ export class MediaTransform extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform azurerm_media_transform} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform azurerm_media_transform} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -5536,7 +6638,7 @@ export class MediaTransform extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_transform',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.56.0',
+        providerVersion: '3.57.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

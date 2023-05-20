@@ -1,6 +1,6 @@
 # `azurerm_app_service_source_control_token`
 
-Refer to the Terraform Registory for docs: [`azurerm_app_service_source_control_token`](https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token).
+Refer to the Terraform Registory for docs: [`azurerm_app_service_source_control_token`](https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token).
 
 # `appServiceSourceControlToken` Submodule <a name="`appServiceSourceControlToken` Submodule" id="@cdktf/provider-azurerm.appServiceSourceControlToken"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_app_service_source_control_
 
 ### AppServiceSourceControlToken <a name="AppServiceSourceControlToken" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token azurerm_app_service_source_control_token}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token azurerm_app_service_source_control_token}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.Initializer"></a>
 
@@ -46,11 +46,11 @@ AppServiceSourceControlToken.Builder.create(Construct scope, java.lang.String id
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.Initializer.parameter.token">token</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#token AppServiceSourceControlToken#token}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.Initializer.parameter.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#type AppServiceSourceControlToken#type}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#id AppServiceSourceControlToken#id}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.Initializer.parameter.token">token</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#token AppServiceSourceControlToken#token}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.Initializer.parameter.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#type AppServiceSourceControlToken#type}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#id AppServiceSourceControlToken#id}. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts">AppServiceSourceControlTokenTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.Initializer.parameter.tokenSecret">tokenSecret</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#token_secret AppServiceSourceControlToken#token_secret}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.Initializer.parameter.tokenSecret">tokenSecret</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#token_secret AppServiceSourceControlToken#token_secret}. |
 
 ---
 
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#token AppServiceSourceControlToken#token}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#token AppServiceSourceControlToken#token}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#type AppServiceSourceControlToken#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#type AppServiceSourceControlToken#type}.
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#id AppServiceSourceControlToken#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#id AppServiceSourceControlToken#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -147,7 +147,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#timeouts AppServiceSourceControlToken#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#timeouts AppServiceSourceControlToken#timeouts}
 
 ---
 
@@ -155,7 +155,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#token_secret AppServiceSourceControlToken#token_secret}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#token_secret AppServiceSourceControlToken#token_secret}.
 
 ---
 
@@ -801,11 +801,11 @@ AppServiceSourceControlTokenConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenConfig.property.token">token</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#token AppServiceSourceControlToken#token}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenConfig.property.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#type AppServiceSourceControlToken#type}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#id AppServiceSourceControlToken#id}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenConfig.property.token">token</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#token AppServiceSourceControlToken#token}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenConfig.property.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#type AppServiceSourceControlToken#type}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#id AppServiceSourceControlToken#id}. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts">AppServiceSourceControlTokenTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenConfig.property.tokenSecret">tokenSecret</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#token_secret AppServiceSourceControlToken#token_secret}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenConfig.property.tokenSecret">tokenSecret</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#token_secret AppServiceSourceControlToken#token_secret}. |
 
 ---
 
@@ -887,7 +887,7 @@ public java.lang.String getToken();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#token AppServiceSourceControlToken#token}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#token AppServiceSourceControlToken#token}.
 
 ---
 
@@ -899,7 +899,7 @@ public java.lang.String getType();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#type AppServiceSourceControlToken#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#type AppServiceSourceControlToken#type}.
 
 ---
 
@@ -911,7 +911,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#id AppServiceSourceControlToken#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#id AppServiceSourceControlToken#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -928,7 +928,7 @@ public AppServiceSourceControlTokenTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#timeouts AppServiceSourceControlToken#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#timeouts AppServiceSourceControlToken#timeouts}
 
 ---
 
@@ -940,7 +940,7 @@ public java.lang.String getTokenSecret();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#token_secret AppServiceSourceControlToken#token_secret}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#token_secret AppServiceSourceControlToken#token_secret}.
 
 ---
 
@@ -963,10 +963,10 @@ AppServiceSourceControlTokenTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#create AppServiceSourceControlToken#create}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#delete AppServiceSourceControlToken#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#read AppServiceSourceControlToken#read}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#update AppServiceSourceControlToken#update}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#create AppServiceSourceControlToken#create}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#delete AppServiceSourceControlToken#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#read AppServiceSourceControlToken#read}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#update AppServiceSourceControlToken#update}. |
 
 ---
 
@@ -978,7 +978,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#create AppServiceSourceControlToken#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#create AppServiceSourceControlToken#create}.
 
 ---
 
@@ -990,7 +990,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#delete AppServiceSourceControlToken#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#delete AppServiceSourceControlToken#delete}.
 
 ---
 
@@ -1002,7 +1002,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#read AppServiceSourceControlToken#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#read AppServiceSourceControlToken#read}.
 
 ---
 
@@ -1014,7 +1014,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/app_service_source_control_token#update AppServiceSourceControlToken#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/app_service_source_control_token#update AppServiceSourceControlToken#update}.
 
 ---
 

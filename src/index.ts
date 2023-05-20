@@ -1271,6 +1271,7 @@ export * as dataAzurermTrafficManagerProfile from './data-azurerm-traffic-manage
 export * as dataAzurermUserAssignedIdentity from './data-azurerm-user-assigned-identity';
 export * as dataAzurermVirtualDesktopHostPool from './data-azurerm-virtual-desktop-host-pool';
 export * as dataAzurermVirtualHub from './data-azurerm-virtual-hub';
+export * as dataAzurermVirtualHubConnection from './data-azurerm-virtual-hub-connection';
 export * as dataAzurermVirtualHubRouteTable from './data-azurerm-virtual-hub-route-table';
 export * as dataAzurermVirtualMachine from './data-azurerm-virtual-machine';
 export * as dataAzurermVirtualMachineScaleSet from './data-azurerm-virtual-machine-scale-set';

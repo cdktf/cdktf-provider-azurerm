@@ -1,6 +1,6 @@
 # `data_azurerm_source_control_token`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_source_control_token`](https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/source_control_token).
+Refer to the Terraform Registory for docs: [`data_azurerm_source_control_token`](https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/source_control_token).
 
 # `dataAzurermSourceControlToken` Submodule <a name="`dataAzurermSourceControlToken` Submodule" id="@cdktf/provider-azurerm.dataAzurermSourceControlToken"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_source_control_token`]
 
 ### DataAzurermSourceControlToken <a name="DataAzurermSourceControlToken" id="@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlToken"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/source_control_token azurerm_source_control_token}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/source_control_token azurerm_source_control_token}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlToken.Initializer"></a>
 
@@ -635,8 +635,8 @@ new DataAzurermSourceControlTokenConfig {
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlTokenConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlTokenConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlTokenConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlTokenConfig.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/source_control_token#type DataAzurermSourceControlToken#type}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlTokenConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/source_control_token#id DataAzurermSourceControlToken#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlTokenConfig.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/source_control_token#type DataAzurermSourceControlToken#type}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlTokenConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/source_control_token#id DataAzurermSourceControlToken#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlTokenConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlTokenTimeouts">DataAzurermSourceControlTokenTimeouts</a></code> | timeouts block. |
 
 ---
@@ -719,7 +719,7 @@ public string Type { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/source_control_token#type DataAzurermSourceControlToken#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/source_control_token#type DataAzurermSourceControlToken#type}.
 
 ---
 
@@ -731,7 +731,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/source_control_token#id DataAzurermSourceControlToken#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/source_control_token#id DataAzurermSourceControlToken#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -748,7 +748,7 @@ public DataAzurermSourceControlTokenTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/source_control_token#timeouts DataAzurermSourceControlToken#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/source_control_token#timeouts DataAzurermSourceControlToken#timeouts}
 
 ---
 
@@ -768,7 +768,7 @@ new DataAzurermSourceControlTokenTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlTokenTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/source_control_token#read DataAzurermSourceControlToken#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSourceControlToken.DataAzurermSourceControlTokenTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/source_control_token#read DataAzurermSourceControlToken#read}. |
 
 ---
 
@@ -780,7 +780,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/source_control_token#read DataAzurermSourceControlToken#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/source_control_token#read DataAzurermSourceControlToken#read}.
 
 ---
 

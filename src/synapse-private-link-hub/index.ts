@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/synapse_private_link_hub
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/synapse_private_link_hub
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,50 +8,50 @@ import * as cdktf from 'cdktf';
 
 export interface SynapsePrivateLinkHubConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/synapse_private_link_hub#id SynapsePrivateLinkHub#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/synapse_private_link_hub#id SynapsePrivateLinkHub#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/synapse_private_link_hub#location SynapsePrivateLinkHub#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/synapse_private_link_hub#location SynapsePrivateLinkHub#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/synapse_private_link_hub#name SynapsePrivateLinkHub#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/synapse_private_link_hub#name SynapsePrivateLinkHub#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/synapse_private_link_hub#resource_group_name SynapsePrivateLinkHub#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/synapse_private_link_hub#resource_group_name SynapsePrivateLinkHub#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/synapse_private_link_hub#tags SynapsePrivateLinkHub#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/synapse_private_link_hub#tags SynapsePrivateLinkHub#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/synapse_private_link_hub#timeouts SynapsePrivateLinkHub#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/synapse_private_link_hub#timeouts SynapsePrivateLinkHub#timeouts}
   */
   readonly timeouts?: SynapsePrivateLinkHubTimeouts;
 }
 export interface SynapsePrivateLinkHubTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/synapse_private_link_hub#create SynapsePrivateLinkHub#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/synapse_private_link_hub#create SynapsePrivateLinkHub#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/synapse_private_link_hub#delete SynapsePrivateLinkHub#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/synapse_private_link_hub#delete SynapsePrivateLinkHub#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/synapse_private_link_hub#read SynapsePrivateLinkHub#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/synapse_private_link_hub#read SynapsePrivateLinkHub#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/synapse_private_link_hub#update SynapsePrivateLinkHub#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/synapse_private_link_hub#update SynapsePrivateLinkHub#update}
   */
   readonly update?: string;
 }
@@ -195,7 +195,7 @@ export class SynapsePrivateLinkHubTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/synapse_private_link_hub azurerm_synapse_private_link_hub}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/synapse_private_link_hub azurerm_synapse_private_link_hub}
 */
 export class SynapsePrivateLinkHub extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class SynapsePrivateLinkHub extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/synapse_private_link_hub azurerm_synapse_private_link_hub} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/synapse_private_link_hub azurerm_synapse_private_link_hub} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -220,7 +220,7 @@ export class SynapsePrivateLinkHub extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_synapse_private_link_hub',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.56.0',
+        providerVersion: '3.57.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

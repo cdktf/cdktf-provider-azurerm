@@ -512,6 +512,7 @@ The following submodules are available:
 - [dataAzurermUserAssignedIdentity](./dataAzurermUserAssignedIdentity.typescript.md)
 - [dataAzurermVirtualDesktopHostPool](./dataAzurermVirtualDesktopHostPool.typescript.md)
 - [dataAzurermVirtualHub](./dataAzurermVirtualHub.typescript.md)
+- [dataAzurermVirtualHubConnection](./dataAzurermVirtualHubConnection.typescript.md)
 - [dataAzurermVirtualHubRouteTable](./dataAzurermVirtualHubRouteTable.typescript.md)
 - [dataAzurermVirtualMachine](./dataAzurermVirtualMachine.typescript.md)
 - [dataAzurermVirtualMachineScaleSet](./dataAzurermVirtualMachineScaleSet.typescript.md)

@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mssql_database
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/mssql_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,30 +8,30 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mssql_database#id DataAzurermMssqlDatabase#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/mssql_database#id DataAzurermMssqlDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mssql_database#name DataAzurermMssqlDatabase#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/mssql_database#name DataAzurermMssqlDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mssql_database#server_id DataAzurermMssqlDatabase#server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/mssql_database#server_id DataAzurermMssqlDatabase#server_id}
   */
   readonly serverId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mssql_database#timeouts DataAzurermMssqlDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/mssql_database#timeouts DataAzurermMssqlDatabase#timeouts}
   */
   readonly timeouts?: DataAzurermMssqlDatabaseTimeouts;
 }
 export interface DataAzurermMssqlDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mssql_database#read DataAzurermMssqlDatabase#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/mssql_database#read DataAzurermMssqlDatabase#read}
   */
   readonly read?: string;
 }
@@ -106,7 +106,7 @@ export class DataAzurermMssqlDatabaseTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mssql_database azurerm_mssql_database}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/mssql_database azurerm_mssql_database}
 */
 export class DataAzurermMssqlDatabase extends cdktf.TerraformDataSource {
 
@@ -120,7 +120,7 @@ export class DataAzurermMssqlDatabase extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/mssql_database azurerm_mssql_database} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/mssql_database azurerm_mssql_database} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -131,7 +131,7 @@ export class DataAzurermMssqlDatabase extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_mssql_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.56.0',
+        providerVersion: '3.57.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

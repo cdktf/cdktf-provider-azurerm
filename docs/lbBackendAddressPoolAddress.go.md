@@ -1,6 +1,6 @@
 # `azurerm_lb_backend_address_pool_address`
 
-Refer to the Terraform Registory for docs: [`azurerm_lb_backend_address_pool_address`](https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address).
+Refer to the Terraform Registory for docs: [`azurerm_lb_backend_address_pool_address`](https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address).
 
 # `lbBackendAddressPoolAddress` Submodule <a name="`lbBackendAddressPoolAddress` Submodule" id="@cdktf/provider-azurerm.lbBackendAddressPoolAddress"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_lb_backend_address_pool_add
 
 ### LbBackendAddressPoolAddress <a name="LbBackendAddressPoolAddress" id="@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddress"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address azurerm_lb_backend_address_pool_address}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address azurerm_lb_backend_address_pool_address}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/lbbackendaddresspooladdress"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbbackendaddresspooladdress"
 
 lbbackendaddresspooladdress.NewLbBackendAddressPoolAddress(scope Construct, id *string, config LbBackendAddressPoolAddressConfig) LbBackendAddressPoolAddress
 ```
@@ -318,7 +318,7 @@ func ResetVirtualNetworkId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddress.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/lbbackendaddresspooladdress"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbbackendaddresspooladdress"
 
 lbbackendaddresspooladdress.LbBackendAddressPoolAddress_IsConstruct(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddress.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/lbbackendaddresspooladdress"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbbackendaddresspooladdress"
 
 lbbackendaddresspooladdress.LbBackendAddressPoolAddress_IsTerraformElement(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ lbbackendaddresspooladdress.LbBackendAddressPoolAddress_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddress.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/lbbackendaddresspooladdress"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbbackendaddresspooladdress"
 
 lbbackendaddresspooladdress.LbBackendAddressPoolAddress_IsTerraformResource(x interface{}) *bool
 ```
@@ -728,7 +728,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/lbbackendaddresspooladdress"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbbackendaddresspooladdress"
 
 &lbbackendaddresspooladdress.LbBackendAddressPoolAddressConfig {
 	Connection: interface{},
@@ -743,7 +743,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/lbbackendaddresspo
 	BackendAddressIpConfigurationId: *string,
 	Id: *string,
 	IpAddress: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressTimeouts,
 	VirtualNetworkId: *string,
 }
 ```
@@ -759,11 +759,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/lbbackendaddresspo
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressConfig.property.backendAddressPoolId">BackendAddressPoolId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#backend_address_pool_id LbBackendAddressPoolAddress#backend_address_pool_id}. |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#name LbBackendAddressPoolAddress#name}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressConfig.property.backendAddressPoolId">BackendAddressPoolId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#backend_address_pool_id LbBackendAddressPoolAddress#backend_address_pool_id}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#name LbBackendAddressPoolAddress#name}. |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressConfig.property.backendAddressIpConfigurationId">BackendAddressIpConfigurationId</a></code> | <code>*string</code> | For global load balancer, user needs to specify the `backend_address_ip_configuration_id` of the added regional load balancers. |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#id LbBackendAddressPoolAddress#id}. |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressConfig.property.ipAddress">IpAddress</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#ip_address LbBackendAddressPoolAddress#ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#id LbBackendAddressPoolAddress#id}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressConfig.property.ipAddress">IpAddress</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#ip_address LbBackendAddressPoolAddress#ip_address}. |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressTimeouts">LbBackendAddressPoolAddressTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressConfig.property.virtualNetworkId">VirtualNetworkId</a></code> | <code>*string</code> | For regional load balancer, user needs to specify `virtual_network_id` and `ip_address`. |
 
@@ -847,7 +847,7 @@ BackendAddressPoolId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#backend_address_pool_id LbBackendAddressPoolAddress#backend_address_pool_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#backend_address_pool_id LbBackendAddressPoolAddress#backend_address_pool_id}.
 
 ---
 
@@ -859,7 +859,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#name LbBackendAddressPoolAddress#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#name LbBackendAddressPoolAddress#name}.
 
 ---
 
@@ -873,7 +873,7 @@ BackendAddressIpConfigurationId *string
 
 For global load balancer, user needs to specify the `backend_address_ip_configuration_id` of the added regional load balancers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#backend_address_ip_configuration_id LbBackendAddressPoolAddress#backend_address_ip_configuration_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#backend_address_ip_configuration_id LbBackendAddressPoolAddress#backend_address_ip_configuration_id}
 
 ---
 
@@ -885,7 +885,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#id LbBackendAddressPoolAddress#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#id LbBackendAddressPoolAddress#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -900,7 +900,7 @@ IpAddress *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#ip_address LbBackendAddressPoolAddress#ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#ip_address LbBackendAddressPoolAddress#ip_address}.
 
 ---
 
@@ -914,7 +914,7 @@ Timeouts LbBackendAddressPoolAddressTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#timeouts LbBackendAddressPoolAddress#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#timeouts LbBackendAddressPoolAddress#timeouts}
 
 ---
 
@@ -928,7 +928,7 @@ VirtualNetworkId *string
 
 For regional load balancer, user needs to specify `virtual_network_id` and `ip_address`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#virtual_network_id LbBackendAddressPoolAddress#virtual_network_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#virtual_network_id LbBackendAddressPoolAddress#virtual_network_id}
 
 ---
 
@@ -937,7 +937,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressInboundNatRulePortMapping.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/lbbackendaddresspooladdress"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbbackendaddresspooladdress"
 
 &lbbackendaddresspooladdress.LbBackendAddressPoolAddressInboundNatRulePortMapping {
 
@@ -950,7 +950,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/lbbackendaddresspo
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/lbbackendaddresspooladdress"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbbackendaddresspooladdress"
 
 &lbbackendaddresspooladdress.LbBackendAddressPoolAddressTimeouts {
 	Create: *string,
@@ -964,10 +964,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/lbbackendaddresspo
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#create LbBackendAddressPoolAddress#create}. |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#delete LbBackendAddressPoolAddress#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#read LbBackendAddressPoolAddress#read}. |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#update LbBackendAddressPoolAddress#update}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#create LbBackendAddressPoolAddress#create}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#delete LbBackendAddressPoolAddress#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#read LbBackendAddressPoolAddress#read}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#update LbBackendAddressPoolAddress#update}. |
 
 ---
 
@@ -979,7 +979,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#create LbBackendAddressPoolAddress#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#create LbBackendAddressPoolAddress#create}.
 
 ---
 
@@ -991,7 +991,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#delete LbBackendAddressPoolAddress#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#delete LbBackendAddressPoolAddress#delete}.
 
 ---
 
@@ -1003,7 +1003,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#read LbBackendAddressPoolAddress#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#read LbBackendAddressPoolAddress#read}.
 
 ---
 
@@ -1015,7 +1015,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/lb_backend_address_pool_address#update LbBackendAddressPoolAddress#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/lb_backend_address_pool_address#update LbBackendAddressPoolAddress#update}.
 
 ---
 
@@ -1026,7 +1026,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressInboundNatRulePortMappingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/lbbackendaddresspooladdress"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbbackendaddresspooladdress"
 
 lbbackendaddresspooladdress.NewLbBackendAddressPoolAddressInboundNatRulePortMappingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LbBackendAddressPoolAddressInboundNatRulePortMappingList
 ```
@@ -1158,7 +1158,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressInboundNatRulePortMappingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/lbbackendaddresspooladdress"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbbackendaddresspooladdress"
 
 lbbackendaddresspooladdress.NewLbBackendAddressPoolAddressInboundNatRulePortMappingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LbBackendAddressPoolAddressInboundNatRulePortMappingOutputReference
 ```
@@ -1458,7 +1458,7 @@ func InternalValue() LbBackendAddressPoolAddressInboundNatRulePortMapping
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lbBackendAddressPoolAddress.LbBackendAddressPoolAddressTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/lbbackendaddresspooladdress"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lbbackendaddresspooladdress"
 
 lbbackendaddresspooladdress.NewLbBackendAddressPoolAddressTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LbBackendAddressPoolAddressTimeoutsOutputReference
 ```
