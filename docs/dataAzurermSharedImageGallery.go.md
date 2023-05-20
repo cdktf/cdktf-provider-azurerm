@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGallery.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimagegallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimagegallery"
 
 dataazurermsharedimagegallery.NewDataAzurermSharedImageGallery(scope Construct, id *string, config DataAzurermSharedImageGalleryConfig) DataAzurermSharedImageGallery
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGallery.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimagegallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimagegallery"
 
 dataazurermsharedimagegallery.DataAzurermSharedImageGallery_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGallery.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimagegallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimagegallery"
 
 dataazurermsharedimagegallery.DataAzurermSharedImageGallery_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermsharedimagegallery.DataAzurermSharedImageGallery_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGallery.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimagegallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimagegallery"
 
 dataazurermsharedimagegallery.DataAzurermSharedImageGallery_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -652,7 +652,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimagegallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimagegallery"
 
 &dataazurermsharedimagegallery.DataAzurermSharedImageGalleryConfig {
 	Connection: interface{},
@@ -665,7 +665,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimag
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryTimeouts,
 }
 ```
 
@@ -815,7 +815,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimagegallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimagegallery"
 
 &dataazurermsharedimagegallery.DataAzurermSharedImageGalleryTimeouts {
 	Read: *string,
@@ -849,7 +849,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimagegallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/dataazurermsharedimagegallery"
 
 dataazurermsharedimagegallery.NewDataAzurermSharedImageGalleryTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermSharedImageGalleryTimeoutsOutputReference
 ```
