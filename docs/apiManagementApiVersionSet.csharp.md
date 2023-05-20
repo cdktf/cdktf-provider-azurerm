@@ -1,6 +1,6 @@
 # `azurerm_api_management_api_version_set`
 
-Refer to the Terraform Registory for docs: [`azurerm_api_management_api_version_set`](https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set).
+Refer to the Terraform Registory for docs: [`azurerm_api_management_api_version_set`](https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set).
 
 # `apiManagementApiVersionSet` Submodule <a name="`apiManagementApiVersionSet` Submodule" id="@cdktf/provider-azurerm.apiManagementApiVersionSet"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_api_management_api_version_
 
 ### ApiManagementApiVersionSet <a name="ApiManagementApiVersionSet" id="@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSet"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set azurerm_api_management_api_version_set}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set azurerm_api_management_api_version_set}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSet.Initializer"></a>
 
@@ -817,16 +817,16 @@ new ApiManagementApiVersionSetConfig {
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.apiManagementName">ApiManagementName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#api_management_name ApiManagementApiVersionSet#api_management_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.displayName">DisplayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#display_name ApiManagementApiVersionSet#display_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#name ApiManagementApiVersionSet#name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#resource_group_name ApiManagementApiVersionSet#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.versioningScheme">VersioningScheme</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#versioning_scheme ApiManagementApiVersionSet#versioning_scheme}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#description ApiManagementApiVersionSet#description}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#id ApiManagementApiVersionSet#id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.apiManagementName">ApiManagementName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#api_management_name ApiManagementApiVersionSet#api_management_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.displayName">DisplayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#display_name ApiManagementApiVersionSet#display_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#name ApiManagementApiVersionSet#name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#resource_group_name ApiManagementApiVersionSet#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.versioningScheme">VersioningScheme</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#versioning_scheme ApiManagementApiVersionSet#versioning_scheme}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#description ApiManagementApiVersionSet#description}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#id ApiManagementApiVersionSet#id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetTimeouts">ApiManagementApiVersionSetTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.versionHeaderName">VersionHeaderName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#version_header_name ApiManagementApiVersionSet#version_header_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.versionQueryName">VersionQueryName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#version_query_name ApiManagementApiVersionSet#version_query_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.versionHeaderName">VersionHeaderName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#version_header_name ApiManagementApiVersionSet#version_header_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetConfig.property.versionQueryName">VersionQueryName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#version_query_name ApiManagementApiVersionSet#version_query_name}. |
 
 ---
 
@@ -908,7 +908,7 @@ public string ApiManagementName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#api_management_name ApiManagementApiVersionSet#api_management_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#api_management_name ApiManagementApiVersionSet#api_management_name}.
 
 ---
 
@@ -920,7 +920,7 @@ public string DisplayName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#display_name ApiManagementApiVersionSet#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#display_name ApiManagementApiVersionSet#display_name}.
 
 ---
 
@@ -932,7 +932,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#name ApiManagementApiVersionSet#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#name ApiManagementApiVersionSet#name}.
 
 ---
 
@@ -944,7 +944,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#resource_group_name ApiManagementApiVersionSet#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#resource_group_name ApiManagementApiVersionSet#resource_group_name}.
 
 ---
 
@@ -956,7 +956,7 @@ public string VersioningScheme { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#versioning_scheme ApiManagementApiVersionSet#versioning_scheme}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#versioning_scheme ApiManagementApiVersionSet#versioning_scheme}.
 
 ---
 
@@ -968,7 +968,7 @@ public string Description { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#description ApiManagementApiVersionSet#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#description ApiManagementApiVersionSet#description}.
 
 ---
 
@@ -980,7 +980,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#id ApiManagementApiVersionSet#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#id ApiManagementApiVersionSet#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -997,7 +997,7 @@ public ApiManagementApiVersionSetTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#timeouts ApiManagementApiVersionSet#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#timeouts ApiManagementApiVersionSet#timeouts}
 
 ---
 
@@ -1009,7 +1009,7 @@ public string VersionHeaderName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#version_header_name ApiManagementApiVersionSet#version_header_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#version_header_name ApiManagementApiVersionSet#version_header_name}.
 
 ---
 
@@ -1021,7 +1021,7 @@ public string VersionQueryName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#version_query_name ApiManagementApiVersionSet#version_query_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#version_query_name ApiManagementApiVersionSet#version_query_name}.
 
 ---
 
@@ -1044,10 +1044,10 @@ new ApiManagementApiVersionSetTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#create ApiManagementApiVersionSet#create}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#delete ApiManagementApiVersionSet#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#read ApiManagementApiVersionSet#read}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#update ApiManagementApiVersionSet#update}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#create ApiManagementApiVersionSet#create}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#delete ApiManagementApiVersionSet#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#read ApiManagementApiVersionSet#read}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiVersionSet.ApiManagementApiVersionSetTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#update ApiManagementApiVersionSet#update}. |
 
 ---
 
@@ -1059,7 +1059,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#create ApiManagementApiVersionSet#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#create ApiManagementApiVersionSet#create}.
 
 ---
 
@@ -1071,7 +1071,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#delete ApiManagementApiVersionSet#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#delete ApiManagementApiVersionSet#delete}.
 
 ---
 
@@ -1083,7 +1083,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#read ApiManagementApiVersionSet#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#read ApiManagementApiVersionSet#read}.
 
 ---
 
@@ -1095,7 +1095,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/api_management_api_version_set#update ApiManagementApiVersionSet#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/api_management_api_version_set#update ApiManagementApiVersionSet#update}.
 
 ---
 

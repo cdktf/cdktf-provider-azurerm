@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_encrypted_value
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_encrypted_value
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,38 +8,38 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermKeyVaultEncryptedValueConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_encrypted_value#algorithm DataAzurermKeyVaultEncryptedValue#algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_encrypted_value#algorithm DataAzurermKeyVaultEncryptedValue#algorithm}
   */
   readonly algorithm: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_encrypted_value#encrypted_data DataAzurermKeyVaultEncryptedValue#encrypted_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_encrypted_value#encrypted_data DataAzurermKeyVaultEncryptedValue#encrypted_data}
   */
   readonly encryptedData?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_encrypted_value#id DataAzurermKeyVaultEncryptedValue#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_encrypted_value#id DataAzurermKeyVaultEncryptedValue#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_encrypted_value#key_vault_key_id DataAzurermKeyVaultEncryptedValue#key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_encrypted_value#key_vault_key_id DataAzurermKeyVaultEncryptedValue#key_vault_key_id}
   */
   readonly keyVaultKeyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_encrypted_value#plain_text_value DataAzurermKeyVaultEncryptedValue#plain_text_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_encrypted_value#plain_text_value DataAzurermKeyVaultEncryptedValue#plain_text_value}
   */
   readonly plainTextValue?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_encrypted_value#timeouts DataAzurermKeyVaultEncryptedValue#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_encrypted_value#timeouts DataAzurermKeyVaultEncryptedValue#timeouts}
   */
   readonly timeouts?: DataAzurermKeyVaultEncryptedValueTimeouts;
 }
 export interface DataAzurermKeyVaultEncryptedValueTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_encrypted_value#read DataAzurermKeyVaultEncryptedValue#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_encrypted_value#read DataAzurermKeyVaultEncryptedValue#read}
   */
   readonly read?: string;
 }
@@ -114,7 +114,7 @@ export class DataAzurermKeyVaultEncryptedValueTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_encrypted_value azurerm_key_vault_encrypted_value}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_encrypted_value azurerm_key_vault_encrypted_value}
 */
 export class DataAzurermKeyVaultEncryptedValue extends cdktf.TerraformDataSource {
 
@@ -128,7 +128,7 @@ export class DataAzurermKeyVaultEncryptedValue extends cdktf.TerraformDataSource
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/key_vault_encrypted_value azurerm_key_vault_encrypted_value} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/key_vault_encrypted_value azurerm_key_vault_encrypted_value} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -139,7 +139,7 @@ export class DataAzurermKeyVaultEncryptedValue extends cdktf.TerraformDataSource
       terraformResourceType: 'azurerm_key_vault_encrypted_value',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.56.0',
+        providerVersion: '3.57.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

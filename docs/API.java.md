@@ -512,6 +512,7 @@ The following submodules are available:
 - [dataAzurermUserAssignedIdentity](./dataAzurermUserAssignedIdentity.java.md)
 - [dataAzurermVirtualDesktopHostPool](./dataAzurermVirtualDesktopHostPool.java.md)
 - [dataAzurermVirtualHub](./dataAzurermVirtualHub.java.md)
+- [dataAzurermVirtualHubConnection](./dataAzurermVirtualHubConnection.java.md)
 - [dataAzurermVirtualHubRouteTable](./dataAzurermVirtualHubRouteTable.java.md)
 - [dataAzurermVirtualMachine](./dataAzurermVirtualMachine.java.md)
 - [dataAzurermVirtualMachineScaleSet](./dataAzurermVirtualMachineScaleSet.java.md)

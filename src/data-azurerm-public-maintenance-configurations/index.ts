@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/public_maintenance_configurations
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/public_maintenance_configurations
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,28 +8,28 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermPublicMaintenanceConfigurationsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/public_maintenance_configurations#id DataAzurermPublicMaintenanceConfigurations#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/public_maintenance_configurations#id DataAzurermPublicMaintenanceConfigurations#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/public_maintenance_configurations#location DataAzurermPublicMaintenanceConfigurations#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/public_maintenance_configurations#location DataAzurermPublicMaintenanceConfigurations#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/public_maintenance_configurations#recur_every DataAzurermPublicMaintenanceConfigurations#recur_every}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/public_maintenance_configurations#recur_every DataAzurermPublicMaintenanceConfigurations#recur_every}
   */
   readonly recurEvery?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/public_maintenance_configurations#scope DataAzurermPublicMaintenanceConfigurations#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/public_maintenance_configurations#scope DataAzurermPublicMaintenanceConfigurations#scope}
   */
   readonly scope?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/public_maintenance_configurations#timeouts DataAzurermPublicMaintenanceConfigurations#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/public_maintenance_configurations#timeouts DataAzurermPublicMaintenanceConfigurations#timeouts}
   */
   readonly timeouts?: DataAzurermPublicMaintenanceConfigurationsTimeouts;
 }
@@ -134,7 +134,7 @@ export class DataAzurermPublicMaintenanceConfigurationsConfigsList extends cdktf
 }
 export interface DataAzurermPublicMaintenanceConfigurationsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/public_maintenance_configurations#read DataAzurermPublicMaintenanceConfigurations#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/public_maintenance_configurations#read DataAzurermPublicMaintenanceConfigurations#read}
   */
   readonly read?: string;
 }
@@ -209,7 +209,7 @@ export class DataAzurermPublicMaintenanceConfigurationsTimeoutsOutputReference e
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/public_maintenance_configurations azurerm_public_maintenance_configurations}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/public_maintenance_configurations azurerm_public_maintenance_configurations}
 */
 export class DataAzurermPublicMaintenanceConfigurations extends cdktf.TerraformDataSource {
 
@@ -223,7 +223,7 @@ export class DataAzurermPublicMaintenanceConfigurations extends cdktf.TerraformD
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/data-sources/public_maintenance_configurations azurerm_public_maintenance_configurations} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/data-sources/public_maintenance_configurations azurerm_public_maintenance_configurations} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -234,7 +234,7 @@ export class DataAzurermPublicMaintenanceConfigurations extends cdktf.TerraformD
       terraformResourceType: 'azurerm_public_maintenance_configurations',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.56.0',
+        providerVersion: '3.57.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

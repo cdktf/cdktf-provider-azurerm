@@ -1,6 +1,6 @@
 # `azurerm_media_transform`
 
-Refer to the Terraform Registory for docs: [`azurerm_media_transform`](https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform).
+Refer to the Terraform Registory for docs: [`azurerm_media_transform`](https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform).
 
 # `mediaTransform` Submodule <a name="`mediaTransform` Submodule" id="@cdktf/provider-azurerm.mediaTransform"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_media_transform`](https://r
 
 ### MediaTransform <a name="MediaTransform" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform azurerm_media_transform}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform azurerm_media_transform}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform.Initializer"></a>
 
@@ -754,11 +754,11 @@ new MediaTransformConfig {
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.mediaServicesAccountName">MediaServicesAccountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#media_services_account_name MediaTransform#media_services_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#name MediaTransform#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#resource_group_name MediaTransform#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#description MediaTransform#description}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#id MediaTransform#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.mediaServicesAccountName">MediaServicesAccountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#media_services_account_name MediaTransform#media_services_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#name MediaTransform#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#resource_group_name MediaTransform#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#description MediaTransform#description}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#id MediaTransform#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.output">Output</a></code> | <code>object</code> | output block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts">MediaTransformTimeouts</a></code> | timeouts block. |
 
@@ -842,7 +842,7 @@ public string MediaServicesAccountName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#media_services_account_name MediaTransform#media_services_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#media_services_account_name MediaTransform#media_services_account_name}.
 
 ---
 
@@ -854,7 +854,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#name MediaTransform#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#name MediaTransform#name}.
 
 ---
 
@@ -866,7 +866,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#resource_group_name MediaTransform#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#resource_group_name MediaTransform#resource_group_name}.
 
 ---
 
@@ -878,7 +878,7 @@ public string Description { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#description MediaTransform#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#description MediaTransform#description}.
 
 ---
 
@@ -890,7 +890,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#id MediaTransform#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#id MediaTransform#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -907,7 +907,7 @@ public object Output { get; set; }
 
 output block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#output MediaTransform#output}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#output MediaTransform#output}
 
 ---
 
@@ -921,7 +921,7 @@ public MediaTransformTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#timeouts MediaTransform#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#timeouts MediaTransform#timeouts}
 
 ---
 
@@ -951,8 +951,8 @@ new MediaTransformOutput {
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.builtinPreset">BuiltinPreset</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPreset">MediaTransformOutputBuiltinPreset</a></code> | builtin_preset block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.customPreset">CustomPreset</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPreset">MediaTransformOutputCustomPreset</a></code> | custom_preset block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.faceDetectorPreset">FaceDetectorPreset</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset">MediaTransformOutputFaceDetectorPreset</a></code> | face_detector_preset block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.onErrorAction">OnErrorAction</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#on_error_action MediaTransform#on_error_action}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.relativePriority">RelativePriority</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#relative_priority MediaTransform#relative_priority}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.onErrorAction">OnErrorAction</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#on_error_action MediaTransform#on_error_action}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.relativePriority">RelativePriority</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#relative_priority MediaTransform#relative_priority}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.videoAnalyzerPreset">VideoAnalyzerPreset</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset">MediaTransformOutputVideoAnalyzerPreset</a></code> | video_analyzer_preset block. |
 
 ---
@@ -967,7 +967,7 @@ public MediaTransformOutputAudioAnalyzerPreset AudioAnalyzerPreset { get; set; }
 
 audio_analyzer_preset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_analyzer_preset MediaTransform#audio_analyzer_preset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_analyzer_preset MediaTransform#audio_analyzer_preset}
 
 ---
 
@@ -981,7 +981,7 @@ public MediaTransformOutputBuiltinPreset BuiltinPreset { get; set; }
 
 builtin_preset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#builtin_preset MediaTransform#builtin_preset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#builtin_preset MediaTransform#builtin_preset}
 
 ---
 
@@ -995,7 +995,7 @@ public MediaTransformOutputCustomPreset CustomPreset { get; set; }
 
 custom_preset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#custom_preset MediaTransform#custom_preset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#custom_preset MediaTransform#custom_preset}
 
 ---
 
@@ -1009,7 +1009,7 @@ public MediaTransformOutputFaceDetectorPreset FaceDetectorPreset { get; set; }
 
 face_detector_preset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#face_detector_preset MediaTransform#face_detector_preset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#face_detector_preset MediaTransform#face_detector_preset}
 
 ---
 
@@ -1021,7 +1021,7 @@ public string OnErrorAction { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#on_error_action MediaTransform#on_error_action}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#on_error_action MediaTransform#on_error_action}.
 
 ---
 
@@ -1033,7 +1033,7 @@ public string RelativePriority { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#relative_priority MediaTransform#relative_priority}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#relative_priority MediaTransform#relative_priority}.
 
 ---
 
@@ -1047,7 +1047,7 @@ public MediaTransformOutputVideoAnalyzerPreset VideoAnalyzerPreset { get; set; }
 
 video_analyzer_preset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#video_analyzer_preset MediaTransform#video_analyzer_preset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#video_analyzer_preset MediaTransform#video_analyzer_preset}
 
 ---
 
@@ -1069,9 +1069,9 @@ new MediaTransformOutputAudioAnalyzerPreset {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPreset.property.audioAnalysisMode">AudioAnalysisMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPreset.property.audioLanguage">AudioLanguage</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPreset.property.experimentalOptions">ExperimentalOptions</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPreset.property.audioAnalysisMode">AudioAnalysisMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPreset.property.audioLanguage">AudioLanguage</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPreset.property.experimentalOptions">ExperimentalOptions</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}. |
 
 ---
 
@@ -1083,7 +1083,7 @@ public string AudioAnalysisMode { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}.
 
 ---
 
@@ -1095,7 +1095,7 @@ public string AudioLanguage { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}.
 
 ---
 
@@ -1107,7 +1107,7 @@ public System.Collections.Generic.IDictionary<string, string> ExperimentalOption
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}.
 
 ---
 
@@ -1128,7 +1128,7 @@ new MediaTransformOutputBuiltinPreset {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPreset.property.presetName">PresetName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#preset_name MediaTransform#preset_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPreset.property.presetName">PresetName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#preset_name MediaTransform#preset_name}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPreset.property.presetConfiguration">PresetConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration">MediaTransformOutputBuiltinPresetPresetConfiguration</a></code> | preset_configuration block. |
 
 ---
@@ -1141,7 +1141,7 @@ public string PresetName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#preset_name MediaTransform#preset_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#preset_name MediaTransform#preset_name}.
 
 ---
 
@@ -1155,7 +1155,7 @@ public MediaTransformOutputBuiltinPresetPresetConfiguration PresetConfiguration 
 
 preset_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#preset_configuration MediaTransform#preset_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#preset_configuration MediaTransform#preset_configuration}
 
 ---
 
@@ -1182,14 +1182,14 @@ new MediaTransformOutputBuiltinPresetPresetConfiguration {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.complexity">Complexity</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#complexity MediaTransform#complexity}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.interleaveOutput">InterleaveOutput</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#interleave_output MediaTransform#interleave_output}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.keyFrameIntervalInSeconds">KeyFrameIntervalInSeconds</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#key_frame_interval_in_seconds MediaTransform#key_frame_interval_in_seconds}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.maxBitrateBps">MaxBitrateBps</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#max_bitrate_bps MediaTransform#max_bitrate_bps}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.maxHeight">MaxHeight</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#max_height MediaTransform#max_height}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.maxLayers">MaxLayers</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#max_layers MediaTransform#max_layers}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.minBitrateBps">MinBitrateBps</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#min_bitrate_bps MediaTransform#min_bitrate_bps}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.minHeight">MinHeight</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#min_height MediaTransform#min_height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.complexity">Complexity</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#complexity MediaTransform#complexity}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.interleaveOutput">InterleaveOutput</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#interleave_output MediaTransform#interleave_output}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.keyFrameIntervalInSeconds">KeyFrameIntervalInSeconds</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#key_frame_interval_in_seconds MediaTransform#key_frame_interval_in_seconds}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.maxBitrateBps">MaxBitrateBps</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#max_bitrate_bps MediaTransform#max_bitrate_bps}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.maxHeight">MaxHeight</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#max_height MediaTransform#max_height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.maxLayers">MaxLayers</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#max_layers MediaTransform#max_layers}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.minBitrateBps">MinBitrateBps</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#min_bitrate_bps MediaTransform#min_bitrate_bps}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.minHeight">MinHeight</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#min_height MediaTransform#min_height}. |
 
 ---
 
@@ -1201,7 +1201,7 @@ public string Complexity { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#complexity MediaTransform#complexity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#complexity MediaTransform#complexity}.
 
 ---
 
@@ -1213,7 +1213,7 @@ public string InterleaveOutput { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#interleave_output MediaTransform#interleave_output}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#interleave_output MediaTransform#interleave_output}.
 
 ---
 
@@ -1225,7 +1225,7 @@ public double KeyFrameIntervalInSeconds { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#key_frame_interval_in_seconds MediaTransform#key_frame_interval_in_seconds}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#key_frame_interval_in_seconds MediaTransform#key_frame_interval_in_seconds}.
 
 ---
 
@@ -1237,7 +1237,7 @@ public double MaxBitrateBps { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#max_bitrate_bps MediaTransform#max_bitrate_bps}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#max_bitrate_bps MediaTransform#max_bitrate_bps}.
 
 ---
 
@@ -1249,7 +1249,7 @@ public double MaxHeight { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#max_height MediaTransform#max_height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#max_height MediaTransform#max_height}.
 
 ---
 
@@ -1261,7 +1261,7 @@ public double MaxLayers { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#max_layers MediaTransform#max_layers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#max_layers MediaTransform#max_layers}.
 
 ---
 
@@ -1273,7 +1273,7 @@ public double MinBitrateBps { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#min_bitrate_bps MediaTransform#min_bitrate_bps}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#min_bitrate_bps MediaTransform#min_bitrate_bps}.
 
 ---
 
@@ -1285,7 +1285,7 @@ public double MinHeight { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#min_height MediaTransform#min_height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#min_height MediaTransform#min_height}.
 
 ---
 
@@ -1323,7 +1323,7 @@ public object Codec { get; set; }
 
 codec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#codec MediaTransform#codec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#codec MediaTransform#codec}
 
 ---
 
@@ -1337,7 +1337,7 @@ public object Format { get; set; }
 
 format block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#format MediaTransform#format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#format MediaTransform#format}
 
 ---
 
@@ -1351,7 +1351,7 @@ public MediaTransformOutputCustomPresetFilter Filter { get; set; }
 
 filter block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#filter MediaTransform#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#filter MediaTransform#filter}
 
 ---
 
@@ -1368,7 +1368,9 @@ new MediaTransformOutputCustomPresetCodec {
     MediaTransformOutputCustomPresetCodecCopyVideo CopyVideo = null,
     MediaTransformOutputCustomPresetCodecDdAudio DdAudio = null,
     MediaTransformOutputCustomPresetCodecH264Video H264Video = null,
-    MediaTransformOutputCustomPresetCodecH265Video H265Video = null
+    MediaTransformOutputCustomPresetCodecH265Video H265Video = null,
+    MediaTransformOutputCustomPresetCodecJpgImage JpgImage = null,
+    MediaTransformOutputCustomPresetCodecPngImage PngImage = null
 };
 ```
 
@@ -1382,6 +1384,8 @@ new MediaTransformOutputCustomPresetCodec {
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodec.property.ddAudio">DdAudio</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio">MediaTransformOutputCustomPresetCodecDdAudio</a></code> | dd_audio block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodec.property.h264Video">H264Video</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video">MediaTransformOutputCustomPresetCodecH264Video</a></code> | h264_video block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodec.property.h265Video">H265Video</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video">MediaTransformOutputCustomPresetCodecH265Video</a></code> | h265_video block. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodec.property.jpgImage">JpgImage</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage">MediaTransformOutputCustomPresetCodecJpgImage</a></code> | jpg_image block. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodec.property.pngImage">PngImage</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage">MediaTransformOutputCustomPresetCodecPngImage</a></code> | png_image block. |
 
 ---
 
@@ -1395,7 +1399,7 @@ public MediaTransformOutputCustomPresetCodecAacAudio AacAudio { get; set; }
 
 aac_audio block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#aac_audio MediaTransform#aac_audio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#aac_audio MediaTransform#aac_audio}
 
 ---
 
@@ -1409,7 +1413,7 @@ public MediaTransformOutputCustomPresetCodecCopyAudio CopyAudio { get; set; }
 
 copy_audio block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#copy_audio MediaTransform#copy_audio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#copy_audio MediaTransform#copy_audio}
 
 ---
 
@@ -1423,7 +1427,7 @@ public MediaTransformOutputCustomPresetCodecCopyVideo CopyVideo { get; set; }
 
 copy_video block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#copy_video MediaTransform#copy_video}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#copy_video MediaTransform#copy_video}
 
 ---
 
@@ -1437,7 +1441,7 @@ public MediaTransformOutputCustomPresetCodecDdAudio DdAudio { get; set; }
 
 dd_audio block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#dd_audio MediaTransform#dd_audio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#dd_audio MediaTransform#dd_audio}
 
 ---
 
@@ -1451,7 +1455,7 @@ public MediaTransformOutputCustomPresetCodecH264Video H264Video { get; set; }
 
 h264_video block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#h264_video MediaTransform#h264_video}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#h264_video MediaTransform#h264_video}
 
 ---
 
@@ -1465,7 +1469,35 @@ public MediaTransformOutputCustomPresetCodecH265Video H265Video { get; set; }
 
 h265_video block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#h265_video MediaTransform#h265_video}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#h265_video MediaTransform#h265_video}
+
+---
+
+##### `JpgImage`<sup>Optional</sup> <a name="JpgImage" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodec.property.jpgImage"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetCodecJpgImage JpgImage { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage">MediaTransformOutputCustomPresetCodecJpgImage</a>
+
+jpg_image block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#jpg_image MediaTransform#jpg_image}
+
+---
+
+##### `PngImage`<sup>Optional</sup> <a name="PngImage" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodec.property.pngImage"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetCodecPngImage PngImage { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage">MediaTransformOutputCustomPresetCodecPngImage</a>
+
+png_image block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#png_image MediaTransform#png_image}
 
 ---
 
@@ -1489,11 +1521,11 @@ new MediaTransformOutputCustomPresetCodecAacAudio {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.bitrate">Bitrate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.channels">Channels</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#channels MediaTransform#channels}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.profile">Profile</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#profile MediaTransform#profile}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.samplingRate">SamplingRate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.bitrate">Bitrate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.channels">Channels</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#channels MediaTransform#channels}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.profile">Profile</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#profile MediaTransform#profile}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.samplingRate">SamplingRate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}. |
 
 ---
 
@@ -1505,7 +1537,7 @@ public double Bitrate { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
 
 ---
 
@@ -1517,7 +1549,7 @@ public double Channels { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#channels MediaTransform#channels}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#channels MediaTransform#channels}.
 
 ---
 
@@ -1529,7 +1561,7 @@ public string Label { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -1541,7 +1573,7 @@ public string Profile { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#profile MediaTransform#profile}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#profile MediaTransform#profile}.
 
 ---
 
@@ -1553,7 +1585,7 @@ public double SamplingRate { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}.
 
 ---
 
@@ -1573,7 +1605,7 @@ new MediaTransformOutputCustomPresetCodecCopyAudio {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecCopyAudio.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecCopyAudio.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}. |
 
 ---
 
@@ -1585,7 +1617,7 @@ public string Label { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -1605,7 +1637,7 @@ new MediaTransformOutputCustomPresetCodecCopyVideo {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecCopyVideo.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecCopyVideo.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}. |
 
 ---
 
@@ -1617,7 +1649,7 @@ public string Label { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -1640,10 +1672,10 @@ new MediaTransformOutputCustomPresetCodecDdAudio {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.bitrate">Bitrate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.channels">Channels</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#channels MediaTransform#channels}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.samplingRate">SamplingRate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.bitrate">Bitrate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.channels">Channels</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#channels MediaTransform#channels}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.samplingRate">SamplingRate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}. |
 
 ---
 
@@ -1655,7 +1687,7 @@ public double Bitrate { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
 
 ---
 
@@ -1667,7 +1699,7 @@ public double Channels { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#channels MediaTransform#channels}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#channels MediaTransform#channels}.
 
 ---
 
@@ -1679,7 +1711,7 @@ public string Label { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -1691,7 +1723,7 @@ public double SamplingRate { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}.
 
 ---
 
@@ -1718,14 +1750,14 @@ new MediaTransformOutputCustomPresetCodecH264Video {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.complexity">Complexity</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#complexity MediaTransform#complexity}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.complexity">Complexity</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#complexity MediaTransform#complexity}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.layer">Layer</a></code> | <code>object</code> | layer block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.rateControlMode">RateControlMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#rate_control_mode MediaTransform#rate_control_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.sceneChangeDetectionEnabled">SceneChangeDetectionEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.stretchMode">StretchMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.syncMode">SyncMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.rateControlMode">RateControlMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#rate_control_mode MediaTransform#rate_control_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.sceneChangeDetectionEnabled">SceneChangeDetectionEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.stretchMode">StretchMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.syncMode">SyncMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}. |
 
 ---
 
@@ -1737,7 +1769,7 @@ public string Complexity { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#complexity MediaTransform#complexity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#complexity MediaTransform#complexity}.
 
 ---
 
@@ -1749,7 +1781,7 @@ public string KeyFrameInterval { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}.
 
 ---
 
@@ -1761,7 +1793,7 @@ public string Label { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -1775,7 +1807,7 @@ public object Layer { get; set; }
 
 layer block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#layer MediaTransform#layer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#layer MediaTransform#layer}
 
 ---
 
@@ -1787,7 +1819,7 @@ public string RateControlMode { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#rate_control_mode MediaTransform#rate_control_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#rate_control_mode MediaTransform#rate_control_mode}.
 
 ---
 
@@ -1799,7 +1831,7 @@ public object SceneChangeDetectionEnabled { get; set; }
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}.
 
 ---
 
@@ -1811,7 +1843,7 @@ public string StretchMode { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}.
 
 ---
 
@@ -1823,7 +1855,7 @@ public string SyncMode { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}.
 
 ---
 
@@ -1857,21 +1889,21 @@ new MediaTransformOutputCustomPresetCodecH264VideoLayer {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.bitrate">Bitrate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.adaptiveBFrameEnabled">AdaptiveBFrameEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.bFrames">BFrames</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.bufferWindow">BufferWindow</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.crf">Crf</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#crf MediaTransform#crf}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.entropyMode">EntropyMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#entropy_mode MediaTransform#entropy_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.frameRate">FrameRate</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.height">Height</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#height MediaTransform#height}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.level">Level</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#level MediaTransform#level}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.maxBitrate">MaxBitrate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.profile">Profile</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#profile MediaTransform#profile}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.referenceFrames">ReferenceFrames</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.slices">Slices</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#slices MediaTransform#slices}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.width">Width</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#width MediaTransform#width}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.bitrate">Bitrate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.adaptiveBFrameEnabled">AdaptiveBFrameEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.bFrames">BFrames</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.bufferWindow">BufferWindow</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.crf">Crf</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#crf MediaTransform#crf}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.entropyMode">EntropyMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#entropy_mode MediaTransform#entropy_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.frameRate">FrameRate</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.height">Height</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.level">Level</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#level MediaTransform#level}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.maxBitrate">MaxBitrate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.profile">Profile</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#profile MediaTransform#profile}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.referenceFrames">ReferenceFrames</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.slices">Slices</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#slices MediaTransform#slices}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.width">Width</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}. |
 
 ---
 
@@ -1883,7 +1915,7 @@ public double Bitrate { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
 
 ---
 
@@ -1895,7 +1927,7 @@ public object AdaptiveBFrameEnabled { get; set; }
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}.
 
 ---
 
@@ -1907,7 +1939,7 @@ public double BFrames { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}.
 
 ---
 
@@ -1919,7 +1951,7 @@ public string BufferWindow { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}.
 
 ---
 
@@ -1931,7 +1963,7 @@ public double Crf { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#crf MediaTransform#crf}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#crf MediaTransform#crf}.
 
 ---
 
@@ -1943,7 +1975,7 @@ public string EntropyMode { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#entropy_mode MediaTransform#entropy_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#entropy_mode MediaTransform#entropy_mode}.
 
 ---
 
@@ -1955,7 +1987,7 @@ public string FrameRate { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}.
 
 ---
 
@@ -1967,7 +1999,7 @@ public string Height { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#height MediaTransform#height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}.
 
 ---
 
@@ -1979,7 +2011,7 @@ public string Label { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -1991,7 +2023,7 @@ public string Level { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#level MediaTransform#level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#level MediaTransform#level}.
 
 ---
 
@@ -2003,7 +2035,7 @@ public double MaxBitrate { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}.
 
 ---
 
@@ -2015,7 +2047,7 @@ public string Profile { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#profile MediaTransform#profile}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#profile MediaTransform#profile}.
 
 ---
 
@@ -2027,7 +2059,7 @@ public double ReferenceFrames { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}.
 
 ---
 
@@ -2039,7 +2071,7 @@ public double Slices { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#slices MediaTransform#slices}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#slices MediaTransform#slices}.
 
 ---
 
@@ -2051,7 +2083,7 @@ public string Width { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#width MediaTransform#width}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}.
 
 ---
 
@@ -2077,13 +2109,13 @@ new MediaTransformOutputCustomPresetCodecH265Video {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.complexity">Complexity</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#complexity MediaTransform#complexity}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.complexity">Complexity</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#complexity MediaTransform#complexity}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.layer">Layer</a></code> | <code>object</code> | layer block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.sceneChangeDetectionEnabled">SceneChangeDetectionEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.stretchMode">StretchMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.syncMode">SyncMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.sceneChangeDetectionEnabled">SceneChangeDetectionEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.stretchMode">StretchMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.syncMode">SyncMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}. |
 
 ---
 
@@ -2095,7 +2127,7 @@ public string Complexity { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#complexity MediaTransform#complexity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#complexity MediaTransform#complexity}.
 
 ---
 
@@ -2107,7 +2139,7 @@ public string KeyFrameInterval { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}.
 
 ---
 
@@ -2119,7 +2151,7 @@ public string Label { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -2133,7 +2165,7 @@ public object Layer { get; set; }
 
 layer block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#layer MediaTransform#layer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#layer MediaTransform#layer}
 
 ---
 
@@ -2145,7 +2177,7 @@ public object SceneChangeDetectionEnabled { get; set; }
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}.
 
 ---
 
@@ -2157,7 +2189,7 @@ public string StretchMode { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}.
 
 ---
 
@@ -2169,7 +2201,7 @@ public string SyncMode { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}.
 
 ---
 
@@ -2202,20 +2234,20 @@ new MediaTransformOutputCustomPresetCodecH265VideoLayer {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.bitrate">Bitrate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.adaptiveBFrameEnabled">AdaptiveBFrameEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.bFrames">BFrames</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.bufferWindow">BufferWindow</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.crf">Crf</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#crf MediaTransform#crf}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.frameRate">FrameRate</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.height">Height</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#height MediaTransform#height}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.level">Level</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#level MediaTransform#level}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.maxBitrate">MaxBitrate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.profile">Profile</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#profile MediaTransform#profile}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.referenceFrames">ReferenceFrames</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.slices">Slices</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#slices MediaTransform#slices}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.width">Width</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#width MediaTransform#width}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.bitrate">Bitrate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.adaptiveBFrameEnabled">AdaptiveBFrameEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.bFrames">BFrames</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.bufferWindow">BufferWindow</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.crf">Crf</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#crf MediaTransform#crf}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.frameRate">FrameRate</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.height">Height</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.level">Level</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#level MediaTransform#level}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.maxBitrate">MaxBitrate</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.profile">Profile</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#profile MediaTransform#profile}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.referenceFrames">ReferenceFrames</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.slices">Slices</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#slices MediaTransform#slices}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.width">Width</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}. |
 
 ---
 
@@ -2227,7 +2259,7 @@ public double Bitrate { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
 
 ---
 
@@ -2239,7 +2271,7 @@ public object AdaptiveBFrameEnabled { get; set; }
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}.
 
 ---
 
@@ -2251,7 +2283,7 @@ public double BFrames { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}.
 
 ---
 
@@ -2263,7 +2295,7 @@ public string BufferWindow { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}.
 
 ---
 
@@ -2275,7 +2307,7 @@ public double Crf { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#crf MediaTransform#crf}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#crf MediaTransform#crf}.
 
 ---
 
@@ -2287,7 +2319,7 @@ public string FrameRate { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}.
 
 ---
 
@@ -2299,7 +2331,7 @@ public string Height { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#height MediaTransform#height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}.
 
 ---
 
@@ -2311,7 +2343,7 @@ public string Label { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -2323,7 +2355,7 @@ public string Level { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#level MediaTransform#level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#level MediaTransform#level}.
 
 ---
 
@@ -2335,7 +2367,7 @@ public double MaxBitrate { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}.
 
 ---
 
@@ -2347,7 +2379,7 @@ public string Profile { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#profile MediaTransform#profile}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#profile MediaTransform#profile}.
 
 ---
 
@@ -2359,7 +2391,7 @@ public double ReferenceFrames { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}.
 
 ---
 
@@ -2371,7 +2403,7 @@ public double Slices { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#slices MediaTransform#slices}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#slices MediaTransform#slices}.
 
 ---
 
@@ -2383,7 +2415,419 @@ public string Width { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#width MediaTransform#width}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}.
+
+---
+
+### MediaTransformOutputCustomPresetCodecJpgImage <a name="MediaTransformOutputCustomPresetCodecJpgImage" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new MediaTransformOutputCustomPresetCodecJpgImage {
+    string Start,
+    string KeyFrameInterval = null,
+    string Label = null,
+    object Layer = null,
+    string Range = null,
+    double SpriteColumn = null,
+    string Step = null,
+    string StretchMode = null,
+    string SyncMode = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.start">Start</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.layer">Layer</a></code> | <code>object</code> | layer block. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.range">Range</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#range MediaTransform#range}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.spriteColumn">SpriteColumn</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sprite_column MediaTransform#sprite_column}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.step">Step</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#step MediaTransform#step}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.stretchMode">StretchMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.syncMode">SyncMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}. |
+
+---
+
+##### `Start`<sup>Required</sup> <a name="Start" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.start"></a>
+
+```csharp
+public string Start { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}.
+
+---
+
+##### `KeyFrameInterval`<sup>Optional</sup> <a name="KeyFrameInterval" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.keyFrameInterval"></a>
+
+```csharp
+public string KeyFrameInterval { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}.
+
+---
+
+##### `Label`<sup>Optional</sup> <a name="Label" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.label"></a>
+
+```csharp
+public string Label { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}.
+
+---
+
+##### `Layer`<sup>Optional</sup> <a name="Layer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.layer"></a>
+
+```csharp
+public object Layer { get; set; }
+```
+
+- *Type:* object
+
+layer block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#layer MediaTransform#layer}
+
+---
+
+##### `Range`<sup>Optional</sup> <a name="Range" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.range"></a>
+
+```csharp
+public string Range { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#range MediaTransform#range}.
+
+---
+
+##### `SpriteColumn`<sup>Optional</sup> <a name="SpriteColumn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.spriteColumn"></a>
+
+```csharp
+public double SpriteColumn { get; set; }
+```
+
+- *Type:* double
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sprite_column MediaTransform#sprite_column}.
+
+---
+
+##### `Step`<sup>Optional</sup> <a name="Step" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.step"></a>
+
+```csharp
+public string Step { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#step MediaTransform#step}.
+
+---
+
+##### `StretchMode`<sup>Optional</sup> <a name="StretchMode" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.stretchMode"></a>
+
+```csharp
+public string StretchMode { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}.
+
+---
+
+##### `SyncMode`<sup>Optional</sup> <a name="SyncMode" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.syncMode"></a>
+
+```csharp
+public string SyncMode { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}.
+
+---
+
+### MediaTransformOutputCustomPresetCodecJpgImageLayer <a name="MediaTransformOutputCustomPresetCodecJpgImageLayer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new MediaTransformOutputCustomPresetCodecJpgImageLayer {
+    string Height = null,
+    string Label = null,
+    double Quality = null,
+    string Width = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.height">Height</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.quality">Quality</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#quality MediaTransform#quality}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.width">Width</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}. |
+
+---
+
+##### `Height`<sup>Optional</sup> <a name="Height" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.height"></a>
+
+```csharp
+public string Height { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}.
+
+---
+
+##### `Label`<sup>Optional</sup> <a name="Label" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.label"></a>
+
+```csharp
+public string Label { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}.
+
+---
+
+##### `Quality`<sup>Optional</sup> <a name="Quality" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.quality"></a>
+
+```csharp
+public double Quality { get; set; }
+```
+
+- *Type:* double
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#quality MediaTransform#quality}.
+
+---
+
+##### `Width`<sup>Optional</sup> <a name="Width" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.width"></a>
+
+```csharp
+public string Width { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}.
+
+---
+
+### MediaTransformOutputCustomPresetCodecPngImage <a name="MediaTransformOutputCustomPresetCodecPngImage" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new MediaTransformOutputCustomPresetCodecPngImage {
+    string Start,
+    string KeyFrameInterval = null,
+    string Label = null,
+    object Layer = null,
+    string Range = null,
+    string Step = null,
+    string StretchMode = null,
+    string SyncMode = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.start">Start</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.layer">Layer</a></code> | <code>object</code> | layer block. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.range">Range</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#range MediaTransform#range}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.step">Step</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#step MediaTransform#step}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.stretchMode">StretchMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.syncMode">SyncMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}. |
+
+---
+
+##### `Start`<sup>Required</sup> <a name="Start" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.start"></a>
+
+```csharp
+public string Start { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}.
+
+---
+
+##### `KeyFrameInterval`<sup>Optional</sup> <a name="KeyFrameInterval" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.keyFrameInterval"></a>
+
+```csharp
+public string KeyFrameInterval { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}.
+
+---
+
+##### `Label`<sup>Optional</sup> <a name="Label" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.label"></a>
+
+```csharp
+public string Label { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}.
+
+---
+
+##### `Layer`<sup>Optional</sup> <a name="Layer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.layer"></a>
+
+```csharp
+public object Layer { get; set; }
+```
+
+- *Type:* object
+
+layer block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#layer MediaTransform#layer}
+
+---
+
+##### `Range`<sup>Optional</sup> <a name="Range" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.range"></a>
+
+```csharp
+public string Range { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#range MediaTransform#range}.
+
+---
+
+##### `Step`<sup>Optional</sup> <a name="Step" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.step"></a>
+
+```csharp
+public string Step { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#step MediaTransform#step}.
+
+---
+
+##### `StretchMode`<sup>Optional</sup> <a name="StretchMode" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.stretchMode"></a>
+
+```csharp
+public string StretchMode { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}.
+
+---
+
+##### `SyncMode`<sup>Optional</sup> <a name="SyncMode" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.syncMode"></a>
+
+```csharp
+public string SyncMode { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}.
+
+---
+
+### MediaTransformOutputCustomPresetCodecPngImageLayer <a name="MediaTransformOutputCustomPresetCodecPngImageLayer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new MediaTransformOutputCustomPresetCodecPngImageLayer {
+    string Height = null,
+    string Label = null,
+    string Width = null
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer.property.height">Height</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer.property.label">Label</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer.property.width">Width</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}. |
+
+---
+
+##### `Height`<sup>Optional</sup> <a name="Height" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer.property.height"></a>
+
+```csharp
+public string Height { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}.
+
+---
+
+##### `Label`<sup>Optional</sup> <a name="Label" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer.property.label"></a>
+
+```csharp
+public string Label { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#label MediaTransform#label}.
+
+---
+
+##### `Width`<sup>Optional</sup> <a name="Width" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer.property.width"></a>
+
+```csharp
+public string Width { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}.
 
 ---
 
@@ -2413,7 +2857,7 @@ new MediaTransformOutputCustomPresetFilter {
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilter.property.fadeIn">FadeIn</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn">MediaTransformOutputCustomPresetFilterFadeIn</a></code> | fade_in block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilter.property.fadeOut">FadeOut</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut">MediaTransformOutputCustomPresetFilterFadeOut</a></code> | fade_out block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilter.property.overlay">Overlay</a></code> | <code>object</code> | overlay block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilter.property.rotation">Rotation</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#rotation MediaTransform#rotation}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilter.property.rotation">Rotation</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#rotation MediaTransform#rotation}. |
 
 ---
 
@@ -2427,7 +2871,7 @@ public MediaTransformOutputCustomPresetFilterCropRectangle CropRectangle { get; 
 
 crop_rectangle block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#crop_rectangle MediaTransform#crop_rectangle}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#crop_rectangle MediaTransform#crop_rectangle}
 
 ---
 
@@ -2441,7 +2885,7 @@ public MediaTransformOutputCustomPresetFilterDeinterlace Deinterlace { get; set;
 
 deinterlace block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#deinterlace MediaTransform#deinterlace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#deinterlace MediaTransform#deinterlace}
 
 ---
 
@@ -2455,7 +2899,7 @@ public MediaTransformOutputCustomPresetFilterFadeIn FadeIn { get; set; }
 
 fade_in block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_in MediaTransform#fade_in}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_in MediaTransform#fade_in}
 
 ---
 
@@ -2469,7 +2913,7 @@ public MediaTransformOutputCustomPresetFilterFadeOut FadeOut { get; set; }
 
 fade_out block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_out MediaTransform#fade_out}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_out MediaTransform#fade_out}
 
 ---
 
@@ -2483,7 +2927,7 @@ public object Overlay { get; set; }
 
 overlay block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#overlay MediaTransform#overlay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#overlay MediaTransform#overlay}
 
 ---
 
@@ -2495,7 +2939,7 @@ public string Rotation { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#rotation MediaTransform#rotation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#rotation MediaTransform#rotation}.
 
 ---
 
@@ -2518,10 +2962,10 @@ new MediaTransformOutputCustomPresetFilterCropRectangle {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.height">Height</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#height MediaTransform#height}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.left">Left</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#left MediaTransform#left}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.top">Top</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#top MediaTransform#top}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.width">Width</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#width MediaTransform#width}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.height">Height</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.left">Left</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#left MediaTransform#left}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.top">Top</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#top MediaTransform#top}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.width">Width</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}. |
 
 ---
 
@@ -2533,7 +2977,7 @@ public string Height { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#height MediaTransform#height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}.
 
 ---
 
@@ -2545,7 +2989,7 @@ public string Left { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#left MediaTransform#left}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#left MediaTransform#left}.
 
 ---
 
@@ -2557,7 +3001,7 @@ public string Top { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#top MediaTransform#top}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#top MediaTransform#top}.
 
 ---
 
@@ -2569,7 +3013,7 @@ public string Width { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#width MediaTransform#width}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}.
 
 ---
 
@@ -2590,8 +3034,8 @@ new MediaTransformOutputCustomPresetFilterDeinterlace {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterDeinterlace.property.mode">Mode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#mode MediaTransform#mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterDeinterlace.property.parity">Parity</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#parity MediaTransform#parity}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterDeinterlace.property.mode">Mode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#mode MediaTransform#mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterDeinterlace.property.parity">Parity</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#parity MediaTransform#parity}. |
 
 ---
 
@@ -2603,7 +3047,7 @@ public string Mode { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#mode MediaTransform#mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#mode MediaTransform#mode}.
 
 ---
 
@@ -2615,7 +3059,7 @@ public string Parity { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#parity MediaTransform#parity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#parity MediaTransform#parity}.
 
 ---
 
@@ -2637,9 +3081,9 @@ new MediaTransformOutputCustomPresetFilterFadeIn {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn.property.duration">Duration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#duration MediaTransform#duration}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn.property.fadeColor">FadeColor</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn.property.start">Start</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#start MediaTransform#start}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn.property.duration">Duration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#duration MediaTransform#duration}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn.property.fadeColor">FadeColor</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn.property.start">Start</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}. |
 
 ---
 
@@ -2651,7 +3095,7 @@ public string Duration { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#duration MediaTransform#duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#duration MediaTransform#duration}.
 
 ---
 
@@ -2663,7 +3107,7 @@ public string FadeColor { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}.
 
 ---
 
@@ -2675,7 +3119,7 @@ public string Start { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#start MediaTransform#start}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}.
 
 ---
 
@@ -2697,9 +3141,9 @@ new MediaTransformOutputCustomPresetFilterFadeOut {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut.property.duration">Duration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#duration MediaTransform#duration}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut.property.fadeColor">FadeColor</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut.property.start">Start</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#start MediaTransform#start}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut.property.duration">Duration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#duration MediaTransform#duration}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut.property.fadeColor">FadeColor</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut.property.start">Start</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}. |
 
 ---
 
@@ -2711,7 +3155,7 @@ public string Duration { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#duration MediaTransform#duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#duration MediaTransform#duration}.
 
 ---
 
@@ -2723,7 +3167,7 @@ public string FadeColor { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}.
 
 ---
 
@@ -2735,7 +3179,7 @@ public string Start { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#start MediaTransform#start}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}.
 
 ---
 
@@ -2771,7 +3215,7 @@ public MediaTransformOutputCustomPresetFilterOverlayAudio Audio { get; set; }
 
 audio block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio MediaTransform#audio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio MediaTransform#audio}
 
 ---
 
@@ -2785,7 +3229,7 @@ public MediaTransformOutputCustomPresetFilterOverlayVideo Video { get; set; }
 
 video block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#video MediaTransform#video}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#video MediaTransform#video}
 
 ---
 
@@ -2810,12 +3254,12 @@ new MediaTransformOutputCustomPresetFilterOverlayAudio {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.inputLabel">InputLabel</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#input_label MediaTransform#input_label}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.audioGainLevel">AudioGainLevel</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.end">End</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#end MediaTransform#end}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.fadeInDuration">FadeInDuration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.fadeOutDuration">FadeOutDuration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.start">Start</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#start MediaTransform#start}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.inputLabel">InputLabel</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#input_label MediaTransform#input_label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.audioGainLevel">AudioGainLevel</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.end">End</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#end MediaTransform#end}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.fadeInDuration">FadeInDuration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.fadeOutDuration">FadeOutDuration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.start">Start</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}. |
 
 ---
 
@@ -2827,7 +3271,7 @@ public string InputLabel { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#input_label MediaTransform#input_label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#input_label MediaTransform#input_label}.
 
 ---
 
@@ -2839,7 +3283,7 @@ public double AudioGainLevel { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}.
 
 ---
 
@@ -2851,7 +3295,7 @@ public string End { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#end MediaTransform#end}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#end MediaTransform#end}.
 
 ---
 
@@ -2863,7 +3307,7 @@ public string FadeInDuration { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}.
 
 ---
 
@@ -2875,7 +3319,7 @@ public string FadeOutDuration { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}.
 
 ---
 
@@ -2887,7 +3331,7 @@ public string Start { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#start MediaTransform#start}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}.
 
 ---
 
@@ -2915,15 +3359,15 @@ new MediaTransformOutputCustomPresetFilterOverlayVideo {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.inputLabel">InputLabel</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#input_label MediaTransform#input_label}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.audioGainLevel">AudioGainLevel</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.inputLabel">InputLabel</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#input_label MediaTransform#input_label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.audioGainLevel">AudioGainLevel</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.cropRectangle">CropRectangle</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle">MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle</a></code> | crop_rectangle block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.end">End</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#end MediaTransform#end}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.fadeInDuration">FadeInDuration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.fadeOutDuration">FadeOutDuration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.opacity">Opacity</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#opacity MediaTransform#opacity}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.end">End</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#end MediaTransform#end}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.fadeInDuration">FadeInDuration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.fadeOutDuration">FadeOutDuration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.opacity">Opacity</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#opacity MediaTransform#opacity}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.position">Position</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition">MediaTransformOutputCustomPresetFilterOverlayVideoPosition</a></code> | position block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.start">Start</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#start MediaTransform#start}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.start">Start</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}. |
 
 ---
 
@@ -2935,7 +3379,7 @@ public string InputLabel { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#input_label MediaTransform#input_label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#input_label MediaTransform#input_label}.
 
 ---
 
@@ -2947,7 +3391,7 @@ public double AudioGainLevel { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}.
 
 ---
 
@@ -2961,7 +3405,7 @@ public MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle CropRecta
 
 crop_rectangle block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#crop_rectangle MediaTransform#crop_rectangle}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#crop_rectangle MediaTransform#crop_rectangle}
 
 ---
 
@@ -2973,7 +3417,7 @@ public string End { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#end MediaTransform#end}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#end MediaTransform#end}.
 
 ---
 
@@ -2985,7 +3429,7 @@ public string FadeInDuration { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}.
 
 ---
 
@@ -2997,7 +3441,7 @@ public string FadeOutDuration { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}.
 
 ---
 
@@ -3009,7 +3453,7 @@ public double Opacity { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#opacity MediaTransform#opacity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#opacity MediaTransform#opacity}.
 
 ---
 
@@ -3023,7 +3467,7 @@ public MediaTransformOutputCustomPresetFilterOverlayVideoPosition Position { get
 
 position block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#position MediaTransform#position}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#position MediaTransform#position}
 
 ---
 
@@ -3035,7 +3479,7 @@ public string Start { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#start MediaTransform#start}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#start MediaTransform#start}.
 
 ---
 
@@ -3058,10 +3502,10 @@ new MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.height">Height</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#height MediaTransform#height}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.left">Left</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#left MediaTransform#left}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.top">Top</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#top MediaTransform#top}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.width">Width</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#width MediaTransform#width}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.height">Height</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.left">Left</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#left MediaTransform#left}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.top">Top</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#top MediaTransform#top}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.width">Width</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}. |
 
 ---
 
@@ -3073,7 +3517,7 @@ public string Height { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#height MediaTransform#height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}.
 
 ---
 
@@ -3085,7 +3529,7 @@ public string Left { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#left MediaTransform#left}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#left MediaTransform#left}.
 
 ---
 
@@ -3097,7 +3541,7 @@ public string Top { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#top MediaTransform#top}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#top MediaTransform#top}.
 
 ---
 
@@ -3109,7 +3553,7 @@ public string Width { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#width MediaTransform#width}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}.
 
 ---
 
@@ -3132,10 +3576,10 @@ new MediaTransformOutputCustomPresetFilterOverlayVideoPosition {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.height">Height</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#height MediaTransform#height}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.left">Left</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#left MediaTransform#left}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.top">Top</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#top MediaTransform#top}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.width">Width</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#width MediaTransform#width}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.height">Height</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.left">Left</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#left MediaTransform#left}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.top">Top</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#top MediaTransform#top}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.width">Width</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}. |
 
 ---
 
@@ -3147,7 +3591,7 @@ public string Height { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#height MediaTransform#height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#height MediaTransform#height}.
 
 ---
 
@@ -3159,7 +3603,7 @@ public string Left { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#left MediaTransform#left}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#left MediaTransform#left}.
 
 ---
 
@@ -3171,7 +3615,7 @@ public string Top { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#top MediaTransform#top}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#top MediaTransform#top}.
 
 ---
 
@@ -3183,7 +3627,7 @@ public string Width { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#width MediaTransform#width}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#width MediaTransform#width}.
 
 ---
 
@@ -3195,7 +3639,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new MediaTransformOutputCustomPresetFormat {
+    MediaTransformOutputCustomPresetFormatJpg Jpg = null,
     MediaTransformOutputCustomPresetFormatMp4 Mp4 = null,
+    MediaTransformOutputCustomPresetFormatPng Png = null,
     MediaTransformOutputCustomPresetFormatTransportStream TransportStream = null
 };
 ```
@@ -3204,8 +3650,24 @@ new MediaTransformOutputCustomPresetFormat {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormat.property.jpg">Jpg</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpg">MediaTransformOutputCustomPresetFormatJpg</a></code> | jpg block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormat.property.mp4">Mp4</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4">MediaTransformOutputCustomPresetFormatMp4</a></code> | mp4 block. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormat.property.png">Png</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPng">MediaTransformOutputCustomPresetFormatPng</a></code> | png block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormat.property.transportStream">TransportStream</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStream">MediaTransformOutputCustomPresetFormatTransportStream</a></code> | transport_stream block. |
+
+---
+
+##### `Jpg`<sup>Optional</sup> <a name="Jpg" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormat.property.jpg"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetFormatJpg Jpg { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpg">MediaTransformOutputCustomPresetFormatJpg</a>
+
+jpg block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#jpg MediaTransform#jpg}
 
 ---
 
@@ -3219,7 +3681,21 @@ public MediaTransformOutputCustomPresetFormatMp4 Mp4 { get; set; }
 
 mp4 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#mp4 MediaTransform#mp4}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#mp4 MediaTransform#mp4}
+
+---
+
+##### `Png`<sup>Optional</sup> <a name="Png" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormat.property.png"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetFormatPng Png { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPng">MediaTransformOutputCustomPresetFormatPng</a>
+
+png block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#png MediaTransform#png}
 
 ---
 
@@ -3233,7 +3709,39 @@ public MediaTransformOutputCustomPresetFormatTransportStream TransportStream { g
 
 transport_stream block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#transport_stream MediaTransform#transport_stream}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#transport_stream MediaTransform#transport_stream}
+
+---
+
+### MediaTransformOutputCustomPresetFormatJpg <a name="MediaTransformOutputCustomPresetFormatJpg" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpg"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpg.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new MediaTransformOutputCustomPresetFormatJpg {
+    string FilenamePattern
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpg.property.filenamePattern">FilenamePattern</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}. |
+
+---
+
+##### `FilenamePattern`<sup>Required</sup> <a name="FilenamePattern" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpg.property.filenamePattern"></a>
+
+```csharp
+public string FilenamePattern { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}.
 
 ---
 
@@ -3254,7 +3762,7 @@ new MediaTransformOutputCustomPresetFormatMp4 {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4.property.filenamePattern">FilenamePattern</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4.property.filenamePattern">FilenamePattern</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4.property.outputFile">OutputFile</a></code> | <code>object</code> | output_file block. |
 
 ---
@@ -3267,7 +3775,7 @@ public string FilenamePattern { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}.
 
 ---
 
@@ -3281,7 +3789,7 @@ public object OutputFile { get; set; }
 
 output_file block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#output_file MediaTransform#output_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#output_file MediaTransform#output_file}
 
 ---
 
@@ -3301,7 +3809,7 @@ new MediaTransformOutputCustomPresetFormatMp4OutputFile {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFile.property.labels">Labels</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#labels MediaTransform#labels}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFile.property.labels">Labels</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#labels MediaTransform#labels}. |
 
 ---
 
@@ -3313,7 +3821,39 @@ public string[] Labels { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#labels MediaTransform#labels}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#labels MediaTransform#labels}.
+
+---
+
+### MediaTransformOutputCustomPresetFormatPng <a name="MediaTransformOutputCustomPresetFormatPng" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPng"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPng.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new MediaTransformOutputCustomPresetFormatPng {
+    string FilenamePattern
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPng.property.filenamePattern">FilenamePattern</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}. |
+
+---
+
+##### `FilenamePattern`<sup>Required</sup> <a name="FilenamePattern" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPng.property.filenamePattern"></a>
+
+```csharp
+public string FilenamePattern { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}.
 
 ---
 
@@ -3334,7 +3874,7 @@ new MediaTransformOutputCustomPresetFormatTransportStream {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStream.property.filenamePattern">FilenamePattern</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStream.property.filenamePattern">FilenamePattern</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStream.property.outputFile">OutputFile</a></code> | <code>object</code> | output_file block. |
 
 ---
@@ -3347,7 +3887,7 @@ public string FilenamePattern { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}.
 
 ---
 
@@ -3361,7 +3901,7 @@ public object OutputFile { get; set; }
 
 output_file block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#output_file MediaTransform#output_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#output_file MediaTransform#output_file}
 
 ---
 
@@ -3381,7 +3921,7 @@ new MediaTransformOutputCustomPresetFormatTransportStreamOutputFile {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFile.property.labels">Labels</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#labels MediaTransform#labels}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFile.property.labels">Labels</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#labels MediaTransform#labels}. |
 
 ---
 
@@ -3393,7 +3933,7 @@ public string[] Labels { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#labels MediaTransform#labels}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#labels MediaTransform#labels}.
 
 ---
 
@@ -3416,10 +3956,10 @@ new MediaTransformOutputFaceDetectorPreset {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.analysisResolution">AnalysisResolution</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#analysis_resolution MediaTransform#analysis_resolution}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.blurType">BlurType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#blur_type MediaTransform#blur_type}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.experimentalOptions">ExperimentalOptions</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.faceRedactorMode">FaceRedactorMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#face_redactor_mode MediaTransform#face_redactor_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.analysisResolution">AnalysisResolution</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#analysis_resolution MediaTransform#analysis_resolution}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.blurType">BlurType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#blur_type MediaTransform#blur_type}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.experimentalOptions">ExperimentalOptions</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.faceRedactorMode">FaceRedactorMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#face_redactor_mode MediaTransform#face_redactor_mode}. |
 
 ---
 
@@ -3431,7 +3971,7 @@ public string AnalysisResolution { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#analysis_resolution MediaTransform#analysis_resolution}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#analysis_resolution MediaTransform#analysis_resolution}.
 
 ---
 
@@ -3443,7 +3983,7 @@ public string BlurType { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#blur_type MediaTransform#blur_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#blur_type MediaTransform#blur_type}.
 
 ---
 
@@ -3455,7 +3995,7 @@ public System.Collections.Generic.IDictionary<string, string> ExperimentalOption
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}.
 
 ---
 
@@ -3467,7 +4007,7 @@ public string FaceRedactorMode { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#face_redactor_mode MediaTransform#face_redactor_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#face_redactor_mode MediaTransform#face_redactor_mode}.
 
 ---
 
@@ -3490,10 +4030,10 @@ new MediaTransformOutputVideoAnalyzerPreset {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.audioAnalysisMode">AudioAnalysisMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.audioLanguage">AudioLanguage</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.experimentalOptions">ExperimentalOptions</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.insightsType">InsightsType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#insights_type MediaTransform#insights_type}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.audioAnalysisMode">AudioAnalysisMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.audioLanguage">AudioLanguage</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.experimentalOptions">ExperimentalOptions</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.insightsType">InsightsType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#insights_type MediaTransform#insights_type}. |
 
 ---
 
@@ -3505,7 +4045,7 @@ public string AudioAnalysisMode { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}.
 
 ---
 
@@ -3517,7 +4057,7 @@ public string AudioLanguage { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}.
 
 ---
 
@@ -3529,7 +4069,7 @@ public System.Collections.Generic.IDictionary<string, string> ExperimentalOption
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}.
 
 ---
 
@@ -3541,7 +4081,7 @@ public string InsightsType { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#insights_type MediaTransform#insights_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#insights_type MediaTransform#insights_type}.
 
 ---
 
@@ -3564,10 +4104,10 @@ new MediaTransformTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#create MediaTransform#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#delete MediaTransform#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#read MediaTransform#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#update MediaTransform#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#create MediaTransform#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#delete MediaTransform#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#read MediaTransform#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#update MediaTransform#update}. |
 
 ---
 
@@ -3579,7 +4119,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#create MediaTransform#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#create MediaTransform#create}.
 
 ---
 
@@ -3591,7 +4131,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#delete MediaTransform#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#delete MediaTransform#delete}.
 
 ---
 
@@ -3603,7 +4143,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#read MediaTransform#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#read MediaTransform#read}.
 
 ---
 
@@ -3615,7 +4155,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.56.0/docs/resources/media_transform#update MediaTransform#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/media_transform#update MediaTransform#update}.
 
 ---
 
@@ -8672,6 +9212,1048 @@ public MediaTransformOutputCustomPresetCodecH265Video InternalValue { get; }
 ---
 
 
+### MediaTransformOutputCustomPresetCodecJpgImageLayerList <a name="MediaTransformOutputCustomPresetCodecJpgImageLayerList" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new MediaTransformOutputCustomPresetCodecJpgImageLayerList(IInterpolatingParent TerraformResource, string TerraformAttribute, bool WrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.Initializer.parameter.wrapsSet">WrapsSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `WrapsSet`<sup>Required</sup> <a name="WrapsSet" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `Get` <a name="Get" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.get"></a>
+
+```csharp
+private MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference Get(double Index)
+```
+
+###### `Index`<sup>Required</sup> <a name="Index" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.get.parameter.index"></a>
+
+- *Type:* double
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.property.internalValue"></a>
+
+```csharp
+public object InternalValue { get; }
+```
+
+- *Type:* object
+
+---
+
+
+### MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference <a name="MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute, double ComplexObjectIndex, bool ComplexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.Initializer.parameter.complexObjectIndex">ComplexObjectIndex</a></code> | <code>double</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.Initializer.parameter.complexObjectIsFromSet">ComplexObjectIsFromSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `ComplexObjectIndex`<sup>Required</sup> <a name="ComplexObjectIndex" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* double
+
+the index of this item in the list.
+
+---
+
+##### `ComplexObjectIsFromSet`<sup>Required</sup> <a name="ComplexObjectIsFromSet" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.resetHeight">ResetHeight</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.resetLabel">ResetLabel</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.resetQuality">ResetQuality</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.resetWidth">ResetWidth</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetHeight` <a name="ResetHeight" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.resetHeight"></a>
+
+```csharp
+private void ResetHeight()
+```
+
+##### `ResetLabel` <a name="ResetLabel" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.resetLabel"></a>
+
+```csharp
+private void ResetLabel()
+```
+
+##### `ResetQuality` <a name="ResetQuality" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.resetQuality"></a>
+
+```csharp
+private void ResetQuality()
+```
+
+##### `ResetWidth` <a name="ResetWidth" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.resetWidth"></a>
+
+```csharp
+private void ResetWidth()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.heightInput">HeightInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.labelInput">LabelInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.qualityInput">QualityInput</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.widthInput">WidthInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.height">Height</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.label">Label</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.quality">Quality</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.width">Width</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `HeightInput`<sup>Optional</sup> <a name="HeightInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.heightInput"></a>
+
+```csharp
+public string HeightInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LabelInput`<sup>Optional</sup> <a name="LabelInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.labelInput"></a>
+
+```csharp
+public string LabelInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `QualityInput`<sup>Optional</sup> <a name="QualityInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.qualityInput"></a>
+
+```csharp
+public double QualityInput { get; }
+```
+
+- *Type:* double
+
+---
+
+##### `WidthInput`<sup>Optional</sup> <a name="WidthInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.widthInput"></a>
+
+```csharp
+public string WidthInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Height`<sup>Required</sup> <a name="Height" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.height"></a>
+
+```csharp
+public string Height { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Label`<sup>Required</sup> <a name="Label" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.label"></a>
+
+```csharp
+public string Label { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Quality`<sup>Required</sup> <a name="Quality" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.quality"></a>
+
+```csharp
+public double Quality { get; }
+```
+
+- *Type:* double
+
+---
+
+##### `Width`<sup>Required</sup> <a name="Width" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.width"></a>
+
+```csharp
+public string Width { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.internalValue"></a>
+
+```csharp
+public object InternalValue { get; }
+```
+
+- *Type:* object
+
+---
+
+
+### MediaTransformOutputCustomPresetCodecJpgImageOutputReference <a name="MediaTransformOutputCustomPresetCodecJpgImageOutputReference" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new MediaTransformOutputCustomPresetCodecJpgImageOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.putLayer">PutLayer</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetKeyFrameInterval">ResetKeyFrameInterval</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetLabel">ResetLabel</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetLayer">ResetLayer</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetRange">ResetRange</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetSpriteColumn">ResetSpriteColumn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetStep">ResetStep</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetStretchMode">ResetStretchMode</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetSyncMode">ResetSyncMode</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `PutLayer` <a name="PutLayer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.putLayer"></a>
+
+```csharp
+private void PutLayer(object Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.putLayer.parameter.value"></a>
+
+- *Type:* object
+
+---
+
+##### `ResetKeyFrameInterval` <a name="ResetKeyFrameInterval" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetKeyFrameInterval"></a>
+
+```csharp
+private void ResetKeyFrameInterval()
+```
+
+##### `ResetLabel` <a name="ResetLabel" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetLabel"></a>
+
+```csharp
+private void ResetLabel()
+```
+
+##### `ResetLayer` <a name="ResetLayer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetLayer"></a>
+
+```csharp
+private void ResetLayer()
+```
+
+##### `ResetRange` <a name="ResetRange" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetRange"></a>
+
+```csharp
+private void ResetRange()
+```
+
+##### `ResetSpriteColumn` <a name="ResetSpriteColumn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetSpriteColumn"></a>
+
+```csharp
+private void ResetSpriteColumn()
+```
+
+##### `ResetStep` <a name="ResetStep" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetStep"></a>
+
+```csharp
+private void ResetStep()
+```
+
+##### `ResetStretchMode` <a name="ResetStretchMode" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetStretchMode"></a>
+
+```csharp
+private void ResetStretchMode()
+```
+
+##### `ResetSyncMode` <a name="ResetSyncMode" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.resetSyncMode"></a>
+
+```csharp
+private void ResetSyncMode()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.layer">Layer</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList">MediaTransformOutputCustomPresetCodecJpgImageLayerList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.keyFrameIntervalInput">KeyFrameIntervalInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.labelInput">LabelInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.layerInput">LayerInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.rangeInput">RangeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.spriteColumnInput">SpriteColumnInput</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.startInput">StartInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.stepInput">StepInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.stretchModeInput">StretchModeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.syncModeInput">SyncModeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.label">Label</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.range">Range</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.spriteColumn">SpriteColumn</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.start">Start</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.step">Step</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.stretchMode">StretchMode</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.syncMode">SyncMode</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage">MediaTransformOutputCustomPresetCodecJpgImage</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Layer`<sup>Required</sup> <a name="Layer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.layer"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetCodecJpgImageLayerList Layer { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList">MediaTransformOutputCustomPresetCodecJpgImageLayerList</a>
+
+---
+
+##### `KeyFrameIntervalInput`<sup>Optional</sup> <a name="KeyFrameIntervalInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.keyFrameIntervalInput"></a>
+
+```csharp
+public string KeyFrameIntervalInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LabelInput`<sup>Optional</sup> <a name="LabelInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.labelInput"></a>
+
+```csharp
+public string LabelInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LayerInput`<sup>Optional</sup> <a name="LayerInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.layerInput"></a>
+
+```csharp
+public object LayerInput { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `RangeInput`<sup>Optional</sup> <a name="RangeInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.rangeInput"></a>
+
+```csharp
+public string RangeInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `SpriteColumnInput`<sup>Optional</sup> <a name="SpriteColumnInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.spriteColumnInput"></a>
+
+```csharp
+public double SpriteColumnInput { get; }
+```
+
+- *Type:* double
+
+---
+
+##### `StartInput`<sup>Optional</sup> <a name="StartInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.startInput"></a>
+
+```csharp
+public string StartInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `StepInput`<sup>Optional</sup> <a name="StepInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.stepInput"></a>
+
+```csharp
+public string StepInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `StretchModeInput`<sup>Optional</sup> <a name="StretchModeInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.stretchModeInput"></a>
+
+```csharp
+public string StretchModeInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `SyncModeInput`<sup>Optional</sup> <a name="SyncModeInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.syncModeInput"></a>
+
+```csharp
+public string SyncModeInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `KeyFrameInterval`<sup>Required</sup> <a name="KeyFrameInterval" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.keyFrameInterval"></a>
+
+```csharp
+public string KeyFrameInterval { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Label`<sup>Required</sup> <a name="Label" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.label"></a>
+
+```csharp
+public string Label { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Range`<sup>Required</sup> <a name="Range" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.range"></a>
+
+```csharp
+public string Range { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `SpriteColumn`<sup>Required</sup> <a name="SpriteColumn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.spriteColumn"></a>
+
+```csharp
+public double SpriteColumn { get; }
+```
+
+- *Type:* double
+
+---
+
+##### `Start`<sup>Required</sup> <a name="Start" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.start"></a>
+
+```csharp
+public string Start { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Step`<sup>Required</sup> <a name="Step" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.step"></a>
+
+```csharp
+public string Step { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `StretchMode`<sup>Required</sup> <a name="StretchMode" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.stretchMode"></a>
+
+```csharp
+public string StretchMode { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `SyncMode`<sup>Required</sup> <a name="SyncMode" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.syncMode"></a>
+
+```csharp
+public string SyncMode { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.property.internalValue"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetCodecJpgImage InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage">MediaTransformOutputCustomPresetCodecJpgImage</a>
+
+---
+
+
 ### MediaTransformOutputCustomPresetCodecList <a name="MediaTransformOutputCustomPresetCodecList" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecList"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecList.Initializer"></a>
@@ -8889,12 +10471,16 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.putDdAudio">PutDdAudio</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.putH264Video">PutH264Video</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.putH265Video">PutH265Video</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.putJpgImage">PutJpgImage</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.putPngImage">PutPngImage</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.resetAacAudio">ResetAacAudio</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.resetCopyAudio">ResetCopyAudio</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.resetCopyVideo">ResetCopyVideo</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.resetDdAudio">ResetDdAudio</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.resetH264Video">ResetH264Video</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.resetH265Video">ResetH265Video</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.resetJpgImage">ResetJpgImage</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.resetPngImage">ResetPngImage</a></code> | *No description.* |
 
 ---
 
@@ -9120,6 +10706,30 @@ private void PutH265Video(MediaTransformOutputCustomPresetCodecH265Video Value)
 
 ---
 
+##### `PutJpgImage` <a name="PutJpgImage" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.putJpgImage"></a>
+
+```csharp
+private void PutJpgImage(MediaTransformOutputCustomPresetCodecJpgImage Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.putJpgImage.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage">MediaTransformOutputCustomPresetCodecJpgImage</a>
+
+---
+
+##### `PutPngImage` <a name="PutPngImage" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.putPngImage"></a>
+
+```csharp
+private void PutPngImage(MediaTransformOutputCustomPresetCodecPngImage Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.putPngImage.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage">MediaTransformOutputCustomPresetCodecPngImage</a>
+
+---
+
 ##### `ResetAacAudio` <a name="ResetAacAudio" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.resetAacAudio"></a>
 
 ```csharp
@@ -9156,6 +10766,18 @@ private void ResetH264Video()
 private void ResetH265Video()
 ```
 
+##### `ResetJpgImage` <a name="ResetJpgImage" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.resetJpgImage"></a>
+
+```csharp
+private void ResetJpgImage()
+```
+
+##### `ResetPngImage` <a name="ResetPngImage" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.resetPngImage"></a>
+
+```csharp
+private void ResetPngImage()
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -9169,12 +10791,16 @@ private void ResetH265Video()
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.ddAudio">DdAudio</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudioOutputReference">MediaTransformOutputCustomPresetCodecDdAudioOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.h264Video">H264Video</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoOutputReference">MediaTransformOutputCustomPresetCodecH264VideoOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.h265Video">H265Video</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoOutputReference">MediaTransformOutputCustomPresetCodecH265VideoOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.jpgImage">JpgImage</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference">MediaTransformOutputCustomPresetCodecJpgImageOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.pngImage">PngImage</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference">MediaTransformOutputCustomPresetCodecPngImageOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.aacAudioInput">AacAudioInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio">MediaTransformOutputCustomPresetCodecAacAudio</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.copyAudioInput">CopyAudioInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecCopyAudio">MediaTransformOutputCustomPresetCodecCopyAudio</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.copyVideoInput">CopyVideoInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecCopyVideo">MediaTransformOutputCustomPresetCodecCopyVideo</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.ddAudioInput">DdAudioInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio">MediaTransformOutputCustomPresetCodecDdAudio</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.h264VideoInput">H264VideoInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video">MediaTransformOutputCustomPresetCodecH264Video</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.h265VideoInput">H265VideoInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video">MediaTransformOutputCustomPresetCodecH265Video</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.jpgImageInput">JpgImageInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage">MediaTransformOutputCustomPresetCodecJpgImage</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.pngImageInput">PngImageInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage">MediaTransformOutputCustomPresetCodecPngImage</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
 
 ---
@@ -9263,6 +10889,26 @@ public MediaTransformOutputCustomPresetCodecH265VideoOutputReference H265Video {
 
 ---
 
+##### `JpgImage`<sup>Required</sup> <a name="JpgImage" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.jpgImage"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetCodecJpgImageOutputReference JpgImage { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference">MediaTransformOutputCustomPresetCodecJpgImageOutputReference</a>
+
+---
+
+##### `PngImage`<sup>Required</sup> <a name="PngImage" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.pngImage"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetCodecPngImageOutputReference PngImage { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference">MediaTransformOutputCustomPresetCodecPngImageOutputReference</a>
+
+---
+
 ##### `AacAudioInput`<sup>Optional</sup> <a name="AacAudioInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.aacAudioInput"></a>
 
 ```csharp
@@ -9323,6 +10969,26 @@ public MediaTransformOutputCustomPresetCodecH265Video H265VideoInput { get; }
 
 ---
 
+##### `JpgImageInput`<sup>Optional</sup> <a name="JpgImageInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.jpgImageInput"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetCodecJpgImage JpgImageInput { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage">MediaTransformOutputCustomPresetCodecJpgImage</a>
+
+---
+
+##### `PngImageInput`<sup>Optional</sup> <a name="PngImageInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.pngImageInput"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetCodecPngImage PngImageInput { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage">MediaTransformOutputCustomPresetCodecPngImage</a>
+
+---
+
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.internalValue"></a>
 
 ```csharp
@@ -9330,6 +10996,990 @@ public object InternalValue { get; }
 ```
 
 - *Type:* object
+
+---
+
+
+### MediaTransformOutputCustomPresetCodecPngImageLayerList <a name="MediaTransformOutputCustomPresetCodecPngImageLayerList" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new MediaTransformOutputCustomPresetCodecPngImageLayerList(IInterpolatingParent TerraformResource, string TerraformAttribute, bool WrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.Initializer.parameter.wrapsSet">WrapsSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `WrapsSet`<sup>Required</sup> <a name="WrapsSet" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `Get` <a name="Get" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.get"></a>
+
+```csharp
+private MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference Get(double Index)
+```
+
+###### `Index`<sup>Required</sup> <a name="Index" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.get.parameter.index"></a>
+
+- *Type:* double
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.property.internalValue"></a>
+
+```csharp
+public object InternalValue { get; }
+```
+
+- *Type:* object
+
+---
+
+
+### MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference <a name="MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute, double ComplexObjectIndex, bool ComplexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.Initializer.parameter.complexObjectIndex">ComplexObjectIndex</a></code> | <code>double</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.Initializer.parameter.complexObjectIsFromSet">ComplexObjectIsFromSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `ComplexObjectIndex`<sup>Required</sup> <a name="ComplexObjectIndex" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* double
+
+the index of this item in the list.
+
+---
+
+##### `ComplexObjectIsFromSet`<sup>Required</sup> <a name="ComplexObjectIsFromSet" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.resetHeight">ResetHeight</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.resetLabel">ResetLabel</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.resetWidth">ResetWidth</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetHeight` <a name="ResetHeight" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.resetHeight"></a>
+
+```csharp
+private void ResetHeight()
+```
+
+##### `ResetLabel` <a name="ResetLabel" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.resetLabel"></a>
+
+```csharp
+private void ResetLabel()
+```
+
+##### `ResetWidth` <a name="ResetWidth" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.resetWidth"></a>
+
+```csharp
+private void ResetWidth()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.heightInput">HeightInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.labelInput">LabelInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.widthInput">WidthInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.height">Height</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.label">Label</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.width">Width</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `HeightInput`<sup>Optional</sup> <a name="HeightInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.heightInput"></a>
+
+```csharp
+public string HeightInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LabelInput`<sup>Optional</sup> <a name="LabelInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.labelInput"></a>
+
+```csharp
+public string LabelInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `WidthInput`<sup>Optional</sup> <a name="WidthInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.widthInput"></a>
+
+```csharp
+public string WidthInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Height`<sup>Required</sup> <a name="Height" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.height"></a>
+
+```csharp
+public string Height { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Label`<sup>Required</sup> <a name="Label" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.label"></a>
+
+```csharp
+public string Label { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Width`<sup>Required</sup> <a name="Width" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.width"></a>
+
+```csharp
+public string Width { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.internalValue"></a>
+
+```csharp
+public object InternalValue { get; }
+```
+
+- *Type:* object
+
+---
+
+
+### MediaTransformOutputCustomPresetCodecPngImageOutputReference <a name="MediaTransformOutputCustomPresetCodecPngImageOutputReference" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new MediaTransformOutputCustomPresetCodecPngImageOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.putLayer">PutLayer</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resetKeyFrameInterval">ResetKeyFrameInterval</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resetLabel">ResetLabel</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resetLayer">ResetLayer</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resetRange">ResetRange</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resetStep">ResetStep</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resetStretchMode">ResetStretchMode</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resetSyncMode">ResetSyncMode</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `PutLayer` <a name="PutLayer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.putLayer"></a>
+
+```csharp
+private void PutLayer(object Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.putLayer.parameter.value"></a>
+
+- *Type:* object
+
+---
+
+##### `ResetKeyFrameInterval` <a name="ResetKeyFrameInterval" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resetKeyFrameInterval"></a>
+
+```csharp
+private void ResetKeyFrameInterval()
+```
+
+##### `ResetLabel` <a name="ResetLabel" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resetLabel"></a>
+
+```csharp
+private void ResetLabel()
+```
+
+##### `ResetLayer` <a name="ResetLayer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resetLayer"></a>
+
+```csharp
+private void ResetLayer()
+```
+
+##### `ResetRange` <a name="ResetRange" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resetRange"></a>
+
+```csharp
+private void ResetRange()
+```
+
+##### `ResetStep` <a name="ResetStep" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resetStep"></a>
+
+```csharp
+private void ResetStep()
+```
+
+##### `ResetStretchMode` <a name="ResetStretchMode" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resetStretchMode"></a>
+
+```csharp
+private void ResetStretchMode()
+```
+
+##### `ResetSyncMode` <a name="ResetSyncMode" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.resetSyncMode"></a>
+
+```csharp
+private void ResetSyncMode()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.layer">Layer</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList">MediaTransformOutputCustomPresetCodecPngImageLayerList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.keyFrameIntervalInput">KeyFrameIntervalInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.labelInput">LabelInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.layerInput">LayerInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.rangeInput">RangeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.startInput">StartInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.stepInput">StepInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.stretchModeInput">StretchModeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.syncModeInput">SyncModeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.label">Label</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.range">Range</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.start">Start</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.step">Step</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.stretchMode">StretchMode</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.syncMode">SyncMode</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage">MediaTransformOutputCustomPresetCodecPngImage</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Layer`<sup>Required</sup> <a name="Layer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.layer"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetCodecPngImageLayerList Layer { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList">MediaTransformOutputCustomPresetCodecPngImageLayerList</a>
+
+---
+
+##### `KeyFrameIntervalInput`<sup>Optional</sup> <a name="KeyFrameIntervalInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.keyFrameIntervalInput"></a>
+
+```csharp
+public string KeyFrameIntervalInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LabelInput`<sup>Optional</sup> <a name="LabelInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.labelInput"></a>
+
+```csharp
+public string LabelInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `LayerInput`<sup>Optional</sup> <a name="LayerInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.layerInput"></a>
+
+```csharp
+public object LayerInput { get; }
+```
+
+- *Type:* object
+
+---
+
+##### `RangeInput`<sup>Optional</sup> <a name="RangeInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.rangeInput"></a>
+
+```csharp
+public string RangeInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `StartInput`<sup>Optional</sup> <a name="StartInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.startInput"></a>
+
+```csharp
+public string StartInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `StepInput`<sup>Optional</sup> <a name="StepInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.stepInput"></a>
+
+```csharp
+public string StepInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `StretchModeInput`<sup>Optional</sup> <a name="StretchModeInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.stretchModeInput"></a>
+
+```csharp
+public string StretchModeInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `SyncModeInput`<sup>Optional</sup> <a name="SyncModeInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.syncModeInput"></a>
+
+```csharp
+public string SyncModeInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `KeyFrameInterval`<sup>Required</sup> <a name="KeyFrameInterval" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.keyFrameInterval"></a>
+
+```csharp
+public string KeyFrameInterval { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Label`<sup>Required</sup> <a name="Label" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.label"></a>
+
+```csharp
+public string Label { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Range`<sup>Required</sup> <a name="Range" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.range"></a>
+
+```csharp
+public string Range { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Start`<sup>Required</sup> <a name="Start" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.start"></a>
+
+```csharp
+public string Start { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Step`<sup>Required</sup> <a name="Step" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.step"></a>
+
+```csharp
+public string Step { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `StretchMode`<sup>Required</sup> <a name="StretchMode" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.stretchMode"></a>
+
+```csharp
+public string StretchMode { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `SyncMode`<sup>Required</sup> <a name="SyncMode" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.syncMode"></a>
+
+```csharp
+public string SyncMode { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.property.internalValue"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetCodecPngImage InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage">MediaTransformOutputCustomPresetCodecPngImage</a>
 
 ---
 
@@ -13307,6 +15957,277 @@ public MediaTransformOutputCustomPresetFilterOverlayVideoPosition InternalValue 
 ---
 
 
+### MediaTransformOutputCustomPresetFormatJpgOutputReference <a name="MediaTransformOutputCustomPresetFormatJpgOutputReference" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new MediaTransformOutputCustomPresetFormatJpgOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.property.filenamePatternInput">FilenamePatternInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.property.filenamePattern">FilenamePattern</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpg">MediaTransformOutputCustomPresetFormatJpg</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `FilenamePatternInput`<sup>Optional</sup> <a name="FilenamePatternInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.property.filenamePatternInput"></a>
+
+```csharp
+public string FilenamePatternInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `FilenamePattern`<sup>Required</sup> <a name="FilenamePattern" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.property.filenamePattern"></a>
+
+```csharp
+public string FilenamePattern { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.property.internalValue"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetFormatJpg InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpg">MediaTransformOutputCustomPresetFormatJpg</a>
+
+---
+
+
 ### MediaTransformOutputCustomPresetFormatList <a name="MediaTransformOutputCustomPresetFormatList" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatList"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatList.Initializer"></a>
@@ -14263,9 +17184,13 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.putJpg">PutJpg</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.putMp4">PutMp4</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.putPng">PutPng</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.putTransportStream">PutTransportStream</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.resetJpg">ResetJpg</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.resetMp4">ResetMp4</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.resetPng">ResetPng</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.resetTransportStream">ResetTransportStream</a></code> | *No description.* |
 
 ---
@@ -14420,6 +17345,18 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `PutJpg` <a name="PutJpg" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.putJpg"></a>
+
+```csharp
+private void PutJpg(MediaTransformOutputCustomPresetFormatJpg Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.putJpg.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpg">MediaTransformOutputCustomPresetFormatJpg</a>
+
+---
+
 ##### `PutMp4` <a name="PutMp4" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.putMp4"></a>
 
 ```csharp
@@ -14429,6 +17366,18 @@ private void PutMp4(MediaTransformOutputCustomPresetFormatMp4 Value)
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.putMp4.parameter.value"></a>
 
 - *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4">MediaTransformOutputCustomPresetFormatMp4</a>
+
+---
+
+##### `PutPng` <a name="PutPng" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.putPng"></a>
+
+```csharp
+private void PutPng(MediaTransformOutputCustomPresetFormatPng Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.putPng.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPng">MediaTransformOutputCustomPresetFormatPng</a>
 
 ---
 
@@ -14444,10 +17393,22 @@ private void PutTransportStream(MediaTransformOutputCustomPresetFormatTransportS
 
 ---
 
+##### `ResetJpg` <a name="ResetJpg" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.resetJpg"></a>
+
+```csharp
+private void ResetJpg()
+```
+
 ##### `ResetMp4` <a name="ResetMp4" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.resetMp4"></a>
 
 ```csharp
 private void ResetMp4()
+```
+
+##### `ResetPng` <a name="ResetPng" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.resetPng"></a>
+
+```csharp
+private void ResetPng()
 ```
 
 ##### `ResetTransportStream` <a name="ResetTransportStream" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.resetTransportStream"></a>
@@ -14463,9 +17424,13 @@ private void ResetTransportStream()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.jpg">Jpg</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference">MediaTransformOutputCustomPresetFormatJpgOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.mp4">Mp4</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputReference">MediaTransformOutputCustomPresetFormatMp4OutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.png">Png</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference">MediaTransformOutputCustomPresetFormatPngOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.transportStream">TransportStream</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputReference">MediaTransformOutputCustomPresetFormatTransportStreamOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.jpgInput">JpgInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpg">MediaTransformOutputCustomPresetFormatJpg</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.mp4Input">Mp4Input</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4">MediaTransformOutputCustomPresetFormatMp4</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.pngInput">PngInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPng">MediaTransformOutputCustomPresetFormatPng</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.transportStreamInput">TransportStreamInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStream">MediaTransformOutputCustomPresetFormatTransportStream</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
 
@@ -14495,6 +17460,16 @@ public string Fqn { get; }
 
 ---
 
+##### `Jpg`<sup>Required</sup> <a name="Jpg" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.jpg"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetFormatJpgOutputReference Jpg { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference">MediaTransformOutputCustomPresetFormatJpgOutputReference</a>
+
+---
+
 ##### `Mp4`<sup>Required</sup> <a name="Mp4" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.mp4"></a>
 
 ```csharp
@@ -14502,6 +17477,16 @@ public MediaTransformOutputCustomPresetFormatMp4OutputReference Mp4 { get; }
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputReference">MediaTransformOutputCustomPresetFormatMp4OutputReference</a>
+
+---
+
+##### `Png`<sup>Required</sup> <a name="Png" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.png"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetFormatPngOutputReference Png { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference">MediaTransformOutputCustomPresetFormatPngOutputReference</a>
 
 ---
 
@@ -14515,6 +17500,16 @@ public MediaTransformOutputCustomPresetFormatTransportStreamOutputReference Tran
 
 ---
 
+##### `JpgInput`<sup>Optional</sup> <a name="JpgInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.jpgInput"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetFormatJpg JpgInput { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpg">MediaTransformOutputCustomPresetFormatJpg</a>
+
+---
+
 ##### `Mp4Input`<sup>Optional</sup> <a name="Mp4Input" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.mp4Input"></a>
 
 ```csharp
@@ -14522,6 +17517,16 @@ public MediaTransformOutputCustomPresetFormatMp4 Mp4Input { get; }
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4">MediaTransformOutputCustomPresetFormatMp4</a>
+
+---
+
+##### `PngInput`<sup>Optional</sup> <a name="PngInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.pngInput"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetFormatPng PngInput { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPng">MediaTransformOutputCustomPresetFormatPng</a>
 
 ---
 
@@ -14542,6 +17547,277 @@ public object InternalValue { get; }
 ```
 
 - *Type:* object
+
+---
+
+
+### MediaTransformOutputCustomPresetFormatPngOutputReference <a name="MediaTransformOutputCustomPresetFormatPngOutputReference" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new MediaTransformOutputCustomPresetFormatPngOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.property.filenamePatternInput">FilenamePatternInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.property.filenamePattern">FilenamePattern</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPng">MediaTransformOutputCustomPresetFormatPng</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `FilenamePatternInput`<sup>Optional</sup> <a name="FilenamePatternInput" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.property.filenamePatternInput"></a>
+
+```csharp
+public string FilenamePatternInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `FilenamePattern`<sup>Required</sup> <a name="FilenamePattern" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.property.filenamePattern"></a>
+
+```csharp
+public string FilenamePattern { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.property.internalValue"></a>
+
+```csharp
+public MediaTransformOutputCustomPresetFormatPng InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPng">MediaTransformOutputCustomPresetFormatPng</a>
 
 ---
 

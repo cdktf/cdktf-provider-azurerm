@@ -512,6 +512,7 @@ The following submodules are available:
 - [dataAzurermUserAssignedIdentity](./dataAzurermUserAssignedIdentity.python.md)
 - [dataAzurermVirtualDesktopHostPool](./dataAzurermVirtualDesktopHostPool.python.md)
 - [dataAzurermVirtualHub](./dataAzurermVirtualHub.python.md)
+- [dataAzurermVirtualHubConnection](./dataAzurermVirtualHubConnection.python.md)
 - [dataAzurermVirtualHubRouteTable](./dataAzurermVirtualHubRouteTable.python.md)
 - [dataAzurermVirtualMachine](./dataAzurermVirtualMachine.python.md)
 - [dataAzurermVirtualMachineScaleSet](./dataAzurermVirtualMachineScaleSet.python.md)
