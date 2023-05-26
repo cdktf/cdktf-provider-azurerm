@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,62 +8,62 @@ import * as cdktf from 'cdktf';
 
 export interface MonitorActivityLogAlertConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#description MonitorActivityLogAlert#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#description MonitorActivityLogAlert#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#enabled MonitorActivityLogAlert#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#enabled MonitorActivityLogAlert#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#id MonitorActivityLogAlert#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#id MonitorActivityLogAlert#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#name MonitorActivityLogAlert#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#name MonitorActivityLogAlert#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#resource_group_name MonitorActivityLogAlert#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#resource_group_name MonitorActivityLogAlert#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#scopes MonitorActivityLogAlert#scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#scopes MonitorActivityLogAlert#scopes}
   */
   readonly scopes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#tags MonitorActivityLogAlert#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#tags MonitorActivityLogAlert#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * action block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#action MonitorActivityLogAlert#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#action MonitorActivityLogAlert#action}
   */
   readonly action?: MonitorActivityLogAlertAction[] | cdktf.IResolvable;
   /**
   * criteria block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#criteria MonitorActivityLogAlert#criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#criteria MonitorActivityLogAlert#criteria}
   */
   readonly criteria: MonitorActivityLogAlertCriteria;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#timeouts MonitorActivityLogAlert#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#timeouts MonitorActivityLogAlert#timeouts}
   */
   readonly timeouts?: MonitorActivityLogAlertTimeouts;
 }
 export interface MonitorActivityLogAlertAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#action_group_id MonitorActivityLogAlert#action_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#action_group_id MonitorActivityLogAlert#action_group_id}
   */
   readonly actionGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#webhook_properties MonitorActivityLogAlert#webhook_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#webhook_properties MonitorActivityLogAlert#webhook_properties}
   */
   readonly webhookProperties?: { [key: string]: string };
 }
@@ -180,15 +180,15 @@ export class MonitorActivityLogAlertActionList extends cdktf.ComplexList {
 }
 export interface MonitorActivityLogAlertCriteriaResourceHealth {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#current MonitorActivityLogAlert#current}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#current MonitorActivityLogAlert#current}
   */
   readonly current?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#previous MonitorActivityLogAlert#previous}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#previous MonitorActivityLogAlert#previous}
   */
   readonly previous?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#reason MonitorActivityLogAlert#reason}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#reason MonitorActivityLogAlert#reason}
   */
   readonly reason?: string[];
 }
@@ -331,15 +331,15 @@ export class MonitorActivityLogAlertCriteriaResourceHealthList extends cdktf.Com
 }
 export interface MonitorActivityLogAlertCriteriaServiceHealth {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#events MonitorActivityLogAlert#events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#events MonitorActivityLogAlert#events}
   */
   readonly events?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#locations MonitorActivityLogAlert#locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#locations MonitorActivityLogAlert#locations}
   */
   readonly locations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#services MonitorActivityLogAlert#services}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#services MonitorActivityLogAlert#services}
   */
   readonly services?: string[];
 }
@@ -482,67 +482,95 @@ export class MonitorActivityLogAlertCriteriaServiceHealthList extends cdktf.Comp
 }
 export interface MonitorActivityLogAlertCriteria {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#caller MonitorActivityLogAlert#caller}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#caller MonitorActivityLogAlert#caller}
   */
   readonly caller?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#category MonitorActivityLogAlert#category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#category MonitorActivityLogAlert#category}
   */
   readonly category: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#level MonitorActivityLogAlert#level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#level MonitorActivityLogAlert#level}
   */
   readonly level?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#operation_name MonitorActivityLogAlert#operation_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#levels MonitorActivityLogAlert#levels}
+  */
+  readonly levels?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#operation_name MonitorActivityLogAlert#operation_name}
   */
   readonly operationName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#recommendation_category MonitorActivityLogAlert#recommendation_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#recommendation_category MonitorActivityLogAlert#recommendation_category}
   */
   readonly recommendationCategory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#recommendation_impact MonitorActivityLogAlert#recommendation_impact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#recommendation_impact MonitorActivityLogAlert#recommendation_impact}
   */
   readonly recommendationImpact?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#recommendation_type MonitorActivityLogAlert#recommendation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#recommendation_type MonitorActivityLogAlert#recommendation_type}
   */
   readonly recommendationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#resource_group MonitorActivityLogAlert#resource_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#resource_group MonitorActivityLogAlert#resource_group}
   */
   readonly resourceGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#resource_id MonitorActivityLogAlert#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#resource_groups MonitorActivityLogAlert#resource_groups}
+  */
+  readonly resourceGroups?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#resource_id MonitorActivityLogAlert#resource_id}
   */
   readonly resourceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#resource_provider MonitorActivityLogAlert#resource_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#resource_ids MonitorActivityLogAlert#resource_ids}
+  */
+  readonly resourceIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#resource_provider MonitorActivityLogAlert#resource_provider}
   */
   readonly resourceProvider?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#resource_type MonitorActivityLogAlert#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#resource_providers MonitorActivityLogAlert#resource_providers}
+  */
+  readonly resourceProviders?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#resource_type MonitorActivityLogAlert#resource_type}
   */
   readonly resourceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#status MonitorActivityLogAlert#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#resource_types MonitorActivityLogAlert#resource_types}
+  */
+  readonly resourceTypes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#status MonitorActivityLogAlert#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#sub_status MonitorActivityLogAlert#sub_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#statuses MonitorActivityLogAlert#statuses}
+  */
+  readonly statuses?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#sub_status MonitorActivityLogAlert#sub_status}
   */
   readonly subStatus?: string;
   /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#sub_statuses MonitorActivityLogAlert#sub_statuses}
+  */
+  readonly subStatuses?: string[];
+  /**
   * resource_health block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#resource_health MonitorActivityLogAlert#resource_health}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#resource_health MonitorActivityLogAlert#resource_health}
   */
   readonly resourceHealth?: MonitorActivityLogAlertCriteriaResourceHealth[] | cdktf.IResolvable;
   /**
   * service_health block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#service_health MonitorActivityLogAlert#service_health}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#service_health MonitorActivityLogAlert#service_health}
   */
   readonly serviceHealth?: MonitorActivityLogAlertCriteriaServiceHealth[] | cdktf.IResolvable;
 }
@@ -556,16 +584,23 @@ export function monitorActivityLogAlertCriteriaToTerraform(struct?: MonitorActiv
     caller: cdktf.stringToTerraform(struct!.caller),
     category: cdktf.stringToTerraform(struct!.category),
     level: cdktf.stringToTerraform(struct!.level),
+    levels: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.levels),
     operation_name: cdktf.stringToTerraform(struct!.operationName),
     recommendation_category: cdktf.stringToTerraform(struct!.recommendationCategory),
     recommendation_impact: cdktf.stringToTerraform(struct!.recommendationImpact),
     recommendation_type: cdktf.stringToTerraform(struct!.recommendationType),
     resource_group: cdktf.stringToTerraform(struct!.resourceGroup),
+    resource_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.resourceGroups),
     resource_id: cdktf.stringToTerraform(struct!.resourceId),
+    resource_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.resourceIds),
     resource_provider: cdktf.stringToTerraform(struct!.resourceProvider),
+    resource_providers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.resourceProviders),
     resource_type: cdktf.stringToTerraform(struct!.resourceType),
+    resource_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.resourceTypes),
     status: cdktf.stringToTerraform(struct!.status),
+    statuses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.statuses),
     sub_status: cdktf.stringToTerraform(struct!.subStatus),
+    sub_statuses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.subStatuses),
     resource_health: cdktf.listMapper(monitorActivityLogAlertCriteriaResourceHealthToTerraform, true)(struct!.resourceHealth),
     service_health: cdktf.listMapper(monitorActivityLogAlertCriteriaServiceHealthToTerraform, true)(struct!.serviceHealth),
   }
@@ -597,6 +632,10 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.level = this._level;
     }
+    if (this._levels !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.levels = this._levels;
+    }
     if (this._operationName !== undefined) {
       hasAnyValues = true;
       internalValueResult.operationName = this._operationName;
@@ -617,25 +656,49 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.resourceGroup = this._resourceGroup;
     }
+    if (this._resourceGroups !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceGroups = this._resourceGroups;
+    }
     if (this._resourceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.resourceId = this._resourceId;
+    }
+    if (this._resourceIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceIds = this._resourceIds;
     }
     if (this._resourceProvider !== undefined) {
       hasAnyValues = true;
       internalValueResult.resourceProvider = this._resourceProvider;
     }
+    if (this._resourceProviders !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceProviders = this._resourceProviders;
+    }
     if (this._resourceType !== undefined) {
       hasAnyValues = true;
       internalValueResult.resourceType = this._resourceType;
+    }
+    if (this._resourceTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceTypes = this._resourceTypes;
     }
     if (this._status !== undefined) {
       hasAnyValues = true;
       internalValueResult.status = this._status;
     }
+    if (this._statuses !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.statuses = this._statuses;
+    }
     if (this._subStatus !== undefined) {
       hasAnyValues = true;
       internalValueResult.subStatus = this._subStatus;
+    }
+    if (this._subStatuses !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subStatuses = this._subStatuses;
     }
     if (this._resourceHealth?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -654,16 +717,23 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
       this._caller = undefined;
       this._category = undefined;
       this._level = undefined;
+      this._levels = undefined;
       this._operationName = undefined;
       this._recommendationCategory = undefined;
       this._recommendationImpact = undefined;
       this._recommendationType = undefined;
       this._resourceGroup = undefined;
+      this._resourceGroups = undefined;
       this._resourceId = undefined;
+      this._resourceIds = undefined;
       this._resourceProvider = undefined;
+      this._resourceProviders = undefined;
       this._resourceType = undefined;
+      this._resourceTypes = undefined;
       this._status = undefined;
+      this._statuses = undefined;
       this._subStatus = undefined;
+      this._subStatuses = undefined;
       this._resourceHealth.internalValue = undefined;
       this._serviceHealth.internalValue = undefined;
     }
@@ -672,16 +742,23 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
       this._caller = value.caller;
       this._category = value.category;
       this._level = value.level;
+      this._levels = value.levels;
       this._operationName = value.operationName;
       this._recommendationCategory = value.recommendationCategory;
       this._recommendationImpact = value.recommendationImpact;
       this._recommendationType = value.recommendationType;
       this._resourceGroup = value.resourceGroup;
+      this._resourceGroups = value.resourceGroups;
       this._resourceId = value.resourceId;
+      this._resourceIds = value.resourceIds;
       this._resourceProvider = value.resourceProvider;
+      this._resourceProviders = value.resourceProviders;
       this._resourceType = value.resourceType;
+      this._resourceTypes = value.resourceTypes;
       this._status = value.status;
+      this._statuses = value.statuses;
       this._subStatus = value.subStatus;
+      this._subStatuses = value.subStatuses;
       this._resourceHealth.internalValue = value.resourceHealth;
       this._serviceHealth.internalValue = value.serviceHealth;
     }
@@ -730,6 +807,22 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get levelInput() {
     return this._level;
+  }
+
+  // levels - computed: false, optional: true, required: false
+  private _levels?: string[]; 
+  public get levels() {
+    return this.getListAttribute('levels');
+  }
+  public set levels(value: string[]) {
+    this._levels = value;
+  }
+  public resetLevels() {
+    this._levels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get levelsInput() {
+    return this._levels;
   }
 
   // operation_name - computed: false, optional: true, required: false
@@ -812,6 +905,22 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
     return this._resourceGroup;
   }
 
+  // resource_groups - computed: false, optional: true, required: false
+  private _resourceGroups?: string[]; 
+  public get resourceGroups() {
+    return this.getListAttribute('resource_groups');
+  }
+  public set resourceGroups(value: string[]) {
+    this._resourceGroups = value;
+  }
+  public resetResourceGroups() {
+    this._resourceGroups = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupsInput() {
+    return this._resourceGroups;
+  }
+
   // resource_id - computed: false, optional: true, required: false
   private _resourceId?: string; 
   public get resourceId() {
@@ -826,6 +935,22 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get resourceIdInput() {
     return this._resourceId;
+  }
+
+  // resource_ids - computed: false, optional: true, required: false
+  private _resourceIds?: string[]; 
+  public get resourceIds() {
+    return this.getListAttribute('resource_ids');
+  }
+  public set resourceIds(value: string[]) {
+    this._resourceIds = value;
+  }
+  public resetResourceIds() {
+    this._resourceIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceIdsInput() {
+    return this._resourceIds;
   }
 
   // resource_provider - computed: false, optional: true, required: false
@@ -844,6 +969,22 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
     return this._resourceProvider;
   }
 
+  // resource_providers - computed: false, optional: true, required: false
+  private _resourceProviders?: string[]; 
+  public get resourceProviders() {
+    return this.getListAttribute('resource_providers');
+  }
+  public set resourceProviders(value: string[]) {
+    this._resourceProviders = value;
+  }
+  public resetResourceProviders() {
+    this._resourceProviders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceProvidersInput() {
+    return this._resourceProviders;
+  }
+
   // resource_type - computed: false, optional: true, required: false
   private _resourceType?: string; 
   public get resourceType() {
@@ -858,6 +999,22 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get resourceTypeInput() {
     return this._resourceType;
+  }
+
+  // resource_types - computed: false, optional: true, required: false
+  private _resourceTypes?: string[]; 
+  public get resourceTypes() {
+    return this.getListAttribute('resource_types');
+  }
+  public set resourceTypes(value: string[]) {
+    this._resourceTypes = value;
+  }
+  public resetResourceTypes() {
+    this._resourceTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceTypesInput() {
+    return this._resourceTypes;
   }
 
   // status - computed: false, optional: true, required: false
@@ -876,6 +1033,22 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
     return this._status;
   }
 
+  // statuses - computed: false, optional: true, required: false
+  private _statuses?: string[]; 
+  public get statuses() {
+    return this.getListAttribute('statuses');
+  }
+  public set statuses(value: string[]) {
+    this._statuses = value;
+  }
+  public resetStatuses() {
+    this._statuses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusesInput() {
+    return this._statuses;
+  }
+
   // sub_status - computed: false, optional: true, required: false
   private _subStatus?: string; 
   public get subStatus() {
@@ -890,6 +1063,22 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get subStatusInput() {
     return this._subStatus;
+  }
+
+  // sub_statuses - computed: false, optional: true, required: false
+  private _subStatuses?: string[]; 
+  public get subStatuses() {
+    return this.getListAttribute('sub_statuses');
+  }
+  public set subStatuses(value: string[]) {
+    this._subStatuses = value;
+  }
+  public resetSubStatuses() {
+    this._subStatuses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subStatusesInput() {
+    return this._subStatuses;
   }
 
   // resource_health - computed: false, optional: true, required: false
@@ -926,19 +1115,19 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
 }
 export interface MonitorActivityLogAlertTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#create MonitorActivityLogAlert#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#create MonitorActivityLogAlert#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#delete MonitorActivityLogAlert#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#delete MonitorActivityLogAlert#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#read MonitorActivityLogAlert#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#read MonitorActivityLogAlert#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert#update MonitorActivityLogAlert#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert#update MonitorActivityLogAlert#update}
   */
   readonly update?: string;
 }
@@ -1082,7 +1271,7 @@ export class MonitorActivityLogAlertTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert azurerm_monitor_activity_log_alert}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert azurerm_monitor_activity_log_alert}
 */
 export class MonitorActivityLogAlert extends cdktf.TerraformResource {
 
@@ -1096,7 +1285,7 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/monitor_activity_log_alert azurerm_monitor_activity_log_alert} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/monitor_activity_log_alert azurerm_monitor_activity_log_alert} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1107,7 +1296,7 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_activity_log_alert',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.57.0',
+        providerVersion: '3.58.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

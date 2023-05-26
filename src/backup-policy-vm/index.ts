@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,98 +8,98 @@ import * as cdktf from 'cdktf';
 
 export interface BackupPolicyVmConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#id BackupPolicyVm#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#id BackupPolicyVm#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#instant_restore_retention_days BackupPolicyVm#instant_restore_retention_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#instant_restore_retention_days BackupPolicyVm#instant_restore_retention_days}
   */
   readonly instantRestoreRetentionDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#name BackupPolicyVm#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#name BackupPolicyVm#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#policy_type BackupPolicyVm#policy_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#policy_type BackupPolicyVm#policy_type}
   */
   readonly policyType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#recovery_vault_name BackupPolicyVm#recovery_vault_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#recovery_vault_name BackupPolicyVm#recovery_vault_name}
   */
   readonly recoveryVaultName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#resource_group_name BackupPolicyVm#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#resource_group_name BackupPolicyVm#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#timezone BackupPolicyVm#timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#timezone BackupPolicyVm#timezone}
   */
   readonly timezone?: string;
   /**
   * backup block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#backup BackupPolicyVm#backup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#backup BackupPolicyVm#backup}
   */
   readonly backup: BackupPolicyVmBackup;
   /**
   * instant_restore_resource_group block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#instant_restore_resource_group BackupPolicyVm#instant_restore_resource_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#instant_restore_resource_group BackupPolicyVm#instant_restore_resource_group}
   */
   readonly instantRestoreResourceGroup?: BackupPolicyVmInstantRestoreResourceGroup;
   /**
   * retention_daily block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#retention_daily BackupPolicyVm#retention_daily}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#retention_daily BackupPolicyVm#retention_daily}
   */
   readonly retentionDaily?: BackupPolicyVmRetentionDaily;
   /**
   * retention_monthly block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#retention_monthly BackupPolicyVm#retention_monthly}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#retention_monthly BackupPolicyVm#retention_monthly}
   */
   readonly retentionMonthly?: BackupPolicyVmRetentionMonthly;
   /**
   * retention_weekly block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#retention_weekly BackupPolicyVm#retention_weekly}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#retention_weekly BackupPolicyVm#retention_weekly}
   */
   readonly retentionWeekly?: BackupPolicyVmRetentionWeekly;
   /**
   * retention_yearly block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#retention_yearly BackupPolicyVm#retention_yearly}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#retention_yearly BackupPolicyVm#retention_yearly}
   */
   readonly retentionYearly?: BackupPolicyVmRetentionYearly;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#timeouts BackupPolicyVm#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#timeouts BackupPolicyVm#timeouts}
   */
   readonly timeouts?: BackupPolicyVmTimeouts;
 }
 export interface BackupPolicyVmBackup {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#frequency BackupPolicyVm#frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#frequency BackupPolicyVm#frequency}
   */
   readonly frequency: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#hour_duration BackupPolicyVm#hour_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#hour_duration BackupPolicyVm#hour_duration}
   */
   readonly hourDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#hour_interval BackupPolicyVm#hour_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#hour_interval BackupPolicyVm#hour_interval}
   */
   readonly hourInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#time BackupPolicyVm#time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#time BackupPolicyVm#time}
   */
   readonly time: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#weekdays BackupPolicyVm#weekdays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#weekdays BackupPolicyVm#weekdays}
   */
   readonly weekdays?: string[];
 }
@@ -250,11 +250,11 @@ export class BackupPolicyVmBackupOutputReference extends cdktf.ComplexObject {
 }
 export interface BackupPolicyVmInstantRestoreResourceGroup {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#prefix BackupPolicyVm#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#prefix BackupPolicyVm#prefix}
   */
   readonly prefix: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#suffix BackupPolicyVm#suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#suffix BackupPolicyVm#suffix}
   */
   readonly suffix?: string;
 }
@@ -339,7 +339,7 @@ export class BackupPolicyVmInstantRestoreResourceGroupOutputReference extends cd
 }
 export interface BackupPolicyVmRetentionDaily {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#count BackupPolicyVm#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#count BackupPolicyVm#count}
   */
   readonly count: number;
 }
@@ -401,17 +401,25 @@ export class BackupPolicyVmRetentionDailyOutputReference extends cdktf.ComplexOb
 }
 export interface BackupPolicyVmRetentionMonthly {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#count BackupPolicyVm#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#count BackupPolicyVm#count}
   */
   readonly count: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#weekdays BackupPolicyVm#weekdays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#days BackupPolicyVm#days}
   */
-  readonly weekdays: string[];
+  readonly days?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#weeks BackupPolicyVm#weeks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#include_last_days BackupPolicyVm#include_last_days}
   */
-  readonly weeks: string[];
+  readonly includeLastDays?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#weekdays BackupPolicyVm#weekdays}
+  */
+  readonly weekdays?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#weeks BackupPolicyVm#weeks}
+  */
+  readonly weeks?: string[];
 }
 
 export function backupPolicyVmRetentionMonthlyToTerraform(struct?: BackupPolicyVmRetentionMonthlyOutputReference | BackupPolicyVmRetentionMonthly): any {
@@ -421,6 +429,8 @@ export function backupPolicyVmRetentionMonthlyToTerraform(struct?: BackupPolicyV
   }
   return {
     count: cdktf.numberToTerraform(struct!.count),
+    days: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.days),
+    include_last_days: cdktf.booleanToTerraform(struct!.includeLastDays),
     weekdays: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weekdays),
     weeks: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weeks),
   }
@@ -444,6 +454,14 @@ export class BackupPolicyVmRetentionMonthlyOutputReference extends cdktf.Complex
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
+    if (this._days !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.days = this._days;
+    }
+    if (this._includeLastDays !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.includeLastDays = this._includeLastDays;
+    }
     if (this._weekdays !== undefined) {
       hasAnyValues = true;
       internalValueResult.weekdays = this._weekdays;
@@ -459,12 +477,16 @@ export class BackupPolicyVmRetentionMonthlyOutputReference extends cdktf.Complex
     if (value === undefined) {
       this.isEmptyObject = false;
       this._count = undefined;
+      this._days = undefined;
+      this._includeLastDays = undefined;
       this._weekdays = undefined;
       this._weeks = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
+      this._days = value.days;
+      this._includeLastDays = value.includeLastDays;
       this._weekdays = value.weekdays;
       this._weeks = value.weeks;
     }
@@ -483,7 +505,39 @@ export class BackupPolicyVmRetentionMonthlyOutputReference extends cdktf.Complex
     return this._count;
   }
 
-  // weekdays - computed: false, optional: false, required: true
+  // days - computed: false, optional: true, required: false
+  private _days?: number[]; 
+  public get days() {
+    return cdktf.Token.asNumberList(cdktf.Fn.tolist(this.getNumberListAttribute('days')));
+  }
+  public set days(value: number[]) {
+    this._days = value;
+  }
+  public resetDays() {
+    this._days = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysInput() {
+    return this._days;
+  }
+
+  // include_last_days - computed: false, optional: true, required: false
+  private _includeLastDays?: boolean | cdktf.IResolvable; 
+  public get includeLastDays() {
+    return this.getBooleanAttribute('include_last_days');
+  }
+  public set includeLastDays(value: boolean | cdktf.IResolvable) {
+    this._includeLastDays = value;
+  }
+  public resetIncludeLastDays() {
+    this._includeLastDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeLastDaysInput() {
+    return this._includeLastDays;
+  }
+
+  // weekdays - computed: false, optional: true, required: false
   private _weekdays?: string[]; 
   public get weekdays() {
     return cdktf.Fn.tolist(this.getListAttribute('weekdays'));
@@ -491,18 +545,24 @@ export class BackupPolicyVmRetentionMonthlyOutputReference extends cdktf.Complex
   public set weekdays(value: string[]) {
     this._weekdays = value;
   }
+  public resetWeekdays() {
+    this._weekdays = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get weekdaysInput() {
     return this._weekdays;
   }
 
-  // weeks - computed: false, optional: false, required: true
+  // weeks - computed: false, optional: true, required: false
   private _weeks?: string[]; 
   public get weeks() {
     return cdktf.Fn.tolist(this.getListAttribute('weeks'));
   }
   public set weeks(value: string[]) {
     this._weeks = value;
+  }
+  public resetWeeks() {
+    this._weeks = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get weeksInput() {
@@ -511,11 +571,11 @@ export class BackupPolicyVmRetentionMonthlyOutputReference extends cdktf.Complex
 }
 export interface BackupPolicyVmRetentionWeekly {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#count BackupPolicyVm#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#count BackupPolicyVm#count}
   */
   readonly count: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#weekdays BackupPolicyVm#weekdays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#weekdays BackupPolicyVm#weekdays}
   */
   readonly weekdays: string[];
 }
@@ -597,21 +657,29 @@ export class BackupPolicyVmRetentionWeeklyOutputReference extends cdktf.ComplexO
 }
 export interface BackupPolicyVmRetentionYearly {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#count BackupPolicyVm#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#count BackupPolicyVm#count}
   */
   readonly count: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#months BackupPolicyVm#months}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#days BackupPolicyVm#days}
+  */
+  readonly days?: number[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#include_last_days BackupPolicyVm#include_last_days}
+  */
+  readonly includeLastDays?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#months BackupPolicyVm#months}
   */
   readonly months: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#weekdays BackupPolicyVm#weekdays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#weekdays BackupPolicyVm#weekdays}
   */
-  readonly weekdays: string[];
+  readonly weekdays?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#weeks BackupPolicyVm#weeks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#weeks BackupPolicyVm#weeks}
   */
-  readonly weeks: string[];
+  readonly weeks?: string[];
 }
 
 export function backupPolicyVmRetentionYearlyToTerraform(struct?: BackupPolicyVmRetentionYearlyOutputReference | BackupPolicyVmRetentionYearly): any {
@@ -621,6 +689,8 @@ export function backupPolicyVmRetentionYearlyToTerraform(struct?: BackupPolicyVm
   }
   return {
     count: cdktf.numberToTerraform(struct!.count),
+    days: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.days),
+    include_last_days: cdktf.booleanToTerraform(struct!.includeLastDays),
     months: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.months),
     weekdays: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weekdays),
     weeks: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weeks),
@@ -645,6 +715,14 @@ export class BackupPolicyVmRetentionYearlyOutputReference extends cdktf.ComplexO
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
+    if (this._days !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.days = this._days;
+    }
+    if (this._includeLastDays !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.includeLastDays = this._includeLastDays;
+    }
     if (this._months !== undefined) {
       hasAnyValues = true;
       internalValueResult.months = this._months;
@@ -664,6 +742,8 @@ export class BackupPolicyVmRetentionYearlyOutputReference extends cdktf.ComplexO
     if (value === undefined) {
       this.isEmptyObject = false;
       this._count = undefined;
+      this._days = undefined;
+      this._includeLastDays = undefined;
       this._months = undefined;
       this._weekdays = undefined;
       this._weeks = undefined;
@@ -671,6 +751,8 @@ export class BackupPolicyVmRetentionYearlyOutputReference extends cdktf.ComplexO
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
+      this._days = value.days;
+      this._includeLastDays = value.includeLastDays;
       this._months = value.months;
       this._weekdays = value.weekdays;
       this._weeks = value.weeks;
@@ -690,6 +772,38 @@ export class BackupPolicyVmRetentionYearlyOutputReference extends cdktf.ComplexO
     return this._count;
   }
 
+  // days - computed: false, optional: true, required: false
+  private _days?: number[]; 
+  public get days() {
+    return cdktf.Token.asNumberList(cdktf.Fn.tolist(this.getNumberListAttribute('days')));
+  }
+  public set days(value: number[]) {
+    this._days = value;
+  }
+  public resetDays() {
+    this._days = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysInput() {
+    return this._days;
+  }
+
+  // include_last_days - computed: false, optional: true, required: false
+  private _includeLastDays?: boolean | cdktf.IResolvable; 
+  public get includeLastDays() {
+    return this.getBooleanAttribute('include_last_days');
+  }
+  public set includeLastDays(value: boolean | cdktf.IResolvable) {
+    this._includeLastDays = value;
+  }
+  public resetIncludeLastDays() {
+    this._includeLastDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeLastDaysInput() {
+    return this._includeLastDays;
+  }
+
   // months - computed: false, optional: false, required: true
   private _months?: string[]; 
   public get months() {
@@ -703,7 +817,7 @@ export class BackupPolicyVmRetentionYearlyOutputReference extends cdktf.ComplexO
     return this._months;
   }
 
-  // weekdays - computed: false, optional: false, required: true
+  // weekdays - computed: false, optional: true, required: false
   private _weekdays?: string[]; 
   public get weekdays() {
     return cdktf.Fn.tolist(this.getListAttribute('weekdays'));
@@ -711,18 +825,24 @@ export class BackupPolicyVmRetentionYearlyOutputReference extends cdktf.ComplexO
   public set weekdays(value: string[]) {
     this._weekdays = value;
   }
+  public resetWeekdays() {
+    this._weekdays = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get weekdaysInput() {
     return this._weekdays;
   }
 
-  // weeks - computed: false, optional: false, required: true
+  // weeks - computed: false, optional: true, required: false
   private _weeks?: string[]; 
   public get weeks() {
     return cdktf.Fn.tolist(this.getListAttribute('weeks'));
   }
   public set weeks(value: string[]) {
     this._weeks = value;
+  }
+  public resetWeeks() {
+    this._weeks = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get weeksInput() {
@@ -731,19 +851,19 @@ export class BackupPolicyVmRetentionYearlyOutputReference extends cdktf.ComplexO
 }
 export interface BackupPolicyVmTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#create BackupPolicyVm#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#create BackupPolicyVm#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#delete BackupPolicyVm#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#delete BackupPolicyVm#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#read BackupPolicyVm#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#read BackupPolicyVm#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm#update BackupPolicyVm#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm#update BackupPolicyVm#update}
   */
   readonly update?: string;
 }
@@ -887,7 +1007,7 @@ export class BackupPolicyVmTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm azurerm_backup_policy_vm}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm azurerm_backup_policy_vm}
 */
 export class BackupPolicyVm extends cdktf.TerraformResource {
 
@@ -901,7 +1021,7 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/backup_policy_vm azurerm_backup_policy_vm} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/backup_policy_vm azurerm_backup_policy_vm} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -912,7 +1032,7 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_backup_policy_vm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.57.0',
+        providerVersion: '3.58.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
