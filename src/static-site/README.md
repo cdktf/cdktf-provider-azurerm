@@ -1,3 +1,3 @@
 # `azurerm_static_site`
 
-Refer to the Terraform Registory for docs: [`azurerm_static_site`](https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/static_site).
+Refer to the Terraform Registory for docs: [`azurerm_static_site`](https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/static_site).
