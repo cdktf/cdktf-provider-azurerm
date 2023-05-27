@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,72 +8,224 @@ import * as cdktf from 'cdktf';
 
 export interface SiteRecoveryReplicationRecoveryPlanConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#id SiteRecoveryReplicationRecoveryPlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#id SiteRecoveryReplicationRecoveryPlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#recovery_vault_id SiteRecoveryReplicationRecoveryPlan#recovery_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#recovery_vault_id SiteRecoveryReplicationRecoveryPlan#recovery_vault_id}
   */
   readonly recoveryVaultId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#source_recovery_fabric_id SiteRecoveryReplicationRecoveryPlan#source_recovery_fabric_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#source_recovery_fabric_id SiteRecoveryReplicationRecoveryPlan#source_recovery_fabric_id}
   */
   readonly sourceRecoveryFabricId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#target_recovery_fabric_id SiteRecoveryReplicationRecoveryPlan#target_recovery_fabric_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#target_recovery_fabric_id SiteRecoveryReplicationRecoveryPlan#target_recovery_fabric_id}
   */
   readonly targetRecoveryFabricId: string;
   /**
+  * azure_to_azure_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#azure_to_azure_settings SiteRecoveryReplicationRecoveryPlan#azure_to_azure_settings}
+  */
+  readonly azureToAzureSettings?: SiteRecoveryReplicationRecoveryPlanAzureToAzureSettings;
+  /**
   * recovery_group block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#recovery_group SiteRecoveryReplicationRecoveryPlan#recovery_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#recovery_group SiteRecoveryReplicationRecoveryPlan#recovery_group}
   */
   readonly recoveryGroup?: SiteRecoveryReplicationRecoveryPlanRecoveryGroup[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#timeouts SiteRecoveryReplicationRecoveryPlan#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#timeouts SiteRecoveryReplicationRecoveryPlan#timeouts}
   */
   readonly timeouts?: SiteRecoveryReplicationRecoveryPlanTimeouts;
 }
+export interface SiteRecoveryReplicationRecoveryPlanAzureToAzureSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#primary_edge_zone SiteRecoveryReplicationRecoveryPlan#primary_edge_zone}
+  */
+  readonly primaryEdgeZone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#primary_zone SiteRecoveryReplicationRecoveryPlan#primary_zone}
+  */
+  readonly primaryZone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#recovery_edge_zone SiteRecoveryReplicationRecoveryPlan#recovery_edge_zone}
+  */
+  readonly recoveryEdgeZone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#recovery_zone SiteRecoveryReplicationRecoveryPlan#recovery_zone}
+  */
+  readonly recoveryZone?: string;
+}
+
+export function siteRecoveryReplicationRecoveryPlanAzureToAzureSettingsToTerraform(struct?: SiteRecoveryReplicationRecoveryPlanAzureToAzureSettingsOutputReference | SiteRecoveryReplicationRecoveryPlanAzureToAzureSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    primary_edge_zone: cdktf.stringToTerraform(struct!.primaryEdgeZone),
+    primary_zone: cdktf.stringToTerraform(struct!.primaryZone),
+    recovery_edge_zone: cdktf.stringToTerraform(struct!.recoveryEdgeZone),
+    recovery_zone: cdktf.stringToTerraform(struct!.recoveryZone),
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanAzureToAzureSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SiteRecoveryReplicationRecoveryPlanAzureToAzureSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._primaryEdgeZone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primaryEdgeZone = this._primaryEdgeZone;
+    }
+    if (this._primaryZone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primaryZone = this._primaryZone;
+    }
+    if (this._recoveryEdgeZone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.recoveryEdgeZone = this._recoveryEdgeZone;
+    }
+    if (this._recoveryZone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.recoveryZone = this._recoveryZone;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SiteRecoveryReplicationRecoveryPlanAzureToAzureSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._primaryEdgeZone = undefined;
+      this._primaryZone = undefined;
+      this._recoveryEdgeZone = undefined;
+      this._recoveryZone = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._primaryEdgeZone = value.primaryEdgeZone;
+      this._primaryZone = value.primaryZone;
+      this._recoveryEdgeZone = value.recoveryEdgeZone;
+      this._recoveryZone = value.recoveryZone;
+    }
+  }
+
+  // primary_edge_zone - computed: false, optional: true, required: false
+  private _primaryEdgeZone?: string; 
+  public get primaryEdgeZone() {
+    return this.getStringAttribute('primary_edge_zone');
+  }
+  public set primaryEdgeZone(value: string) {
+    this._primaryEdgeZone = value;
+  }
+  public resetPrimaryEdgeZone() {
+    this._primaryEdgeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryEdgeZoneInput() {
+    return this._primaryEdgeZone;
+  }
+
+  // primary_zone - computed: false, optional: true, required: false
+  private _primaryZone?: string; 
+  public get primaryZone() {
+    return this.getStringAttribute('primary_zone');
+  }
+  public set primaryZone(value: string) {
+    this._primaryZone = value;
+  }
+  public resetPrimaryZone() {
+    this._primaryZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryZoneInput() {
+    return this._primaryZone;
+  }
+
+  // recovery_edge_zone - computed: false, optional: true, required: false
+  private _recoveryEdgeZone?: string; 
+  public get recoveryEdgeZone() {
+    return this.getStringAttribute('recovery_edge_zone');
+  }
+  public set recoveryEdgeZone(value: string) {
+    this._recoveryEdgeZone = value;
+  }
+  public resetRecoveryEdgeZone() {
+    this._recoveryEdgeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recoveryEdgeZoneInput() {
+    return this._recoveryEdgeZone;
+  }
+
+  // recovery_zone - computed: false, optional: true, required: false
+  private _recoveryZone?: string; 
+  public get recoveryZone() {
+    return this.getStringAttribute('recovery_zone');
+  }
+  public set recoveryZone(value: string) {
+    this._recoveryZone = value;
+  }
+  public resetRecoveryZone() {
+    this._recoveryZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recoveryZoneInput() {
+    return this._recoveryZone;
+  }
+}
 export interface SiteRecoveryReplicationRecoveryPlanRecoveryGroupPostAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#fabric_location SiteRecoveryReplicationRecoveryPlan#fabric_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#fabric_location SiteRecoveryReplicationRecoveryPlan#fabric_location}
   */
   readonly fabricLocation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_directions SiteRecoveryReplicationRecoveryPlan#fail_over_directions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_directions SiteRecoveryReplicationRecoveryPlan#fail_over_directions}
   */
   readonly failOverDirections: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_types SiteRecoveryReplicationRecoveryPlan#fail_over_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_types SiteRecoveryReplicationRecoveryPlan#fail_over_types}
   */
   readonly failOverTypes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#manual_action_instruction SiteRecoveryReplicationRecoveryPlan#manual_action_instruction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#manual_action_instruction SiteRecoveryReplicationRecoveryPlan#manual_action_instruction}
   */
   readonly manualActionInstruction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#runbook_id SiteRecoveryReplicationRecoveryPlan#runbook_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#runbook_id SiteRecoveryReplicationRecoveryPlan#runbook_id}
   */
   readonly runbookId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#script_path SiteRecoveryReplicationRecoveryPlan#script_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#script_path SiteRecoveryReplicationRecoveryPlan#script_path}
   */
   readonly scriptPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
   */
   readonly type: string;
 }
@@ -319,35 +471,35 @@ export class SiteRecoveryReplicationRecoveryPlanRecoveryGroupPostActionList exte
 }
 export interface SiteRecoveryReplicationRecoveryPlanRecoveryGroupPreAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#fabric_location SiteRecoveryReplicationRecoveryPlan#fabric_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#fabric_location SiteRecoveryReplicationRecoveryPlan#fabric_location}
   */
   readonly fabricLocation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_directions SiteRecoveryReplicationRecoveryPlan#fail_over_directions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_directions SiteRecoveryReplicationRecoveryPlan#fail_over_directions}
   */
   readonly failOverDirections: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_types SiteRecoveryReplicationRecoveryPlan#fail_over_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_types SiteRecoveryReplicationRecoveryPlan#fail_over_types}
   */
   readonly failOverTypes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#manual_action_instruction SiteRecoveryReplicationRecoveryPlan#manual_action_instruction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#manual_action_instruction SiteRecoveryReplicationRecoveryPlan#manual_action_instruction}
   */
   readonly manualActionInstruction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#runbook_id SiteRecoveryReplicationRecoveryPlan#runbook_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#runbook_id SiteRecoveryReplicationRecoveryPlan#runbook_id}
   */
   readonly runbookId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#script_path SiteRecoveryReplicationRecoveryPlan#script_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#script_path SiteRecoveryReplicationRecoveryPlan#script_path}
   */
   readonly scriptPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
   */
   readonly type: string;
 }
@@ -593,23 +745,23 @@ export class SiteRecoveryReplicationRecoveryPlanRecoveryGroupPreActionList exten
 }
 export interface SiteRecoveryReplicationRecoveryPlanRecoveryGroup {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#replicated_protected_items SiteRecoveryReplicationRecoveryPlan#replicated_protected_items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#replicated_protected_items SiteRecoveryReplicationRecoveryPlan#replicated_protected_items}
   */
   readonly replicatedProtectedItems?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
   */
   readonly type: string;
   /**
   * post_action block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#post_action SiteRecoveryReplicationRecoveryPlan#post_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#post_action SiteRecoveryReplicationRecoveryPlan#post_action}
   */
   readonly postAction?: SiteRecoveryReplicationRecoveryPlanRecoveryGroupPostAction[] | cdktf.IResolvable;
   /**
   * pre_action block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#pre_action SiteRecoveryReplicationRecoveryPlan#pre_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#pre_action SiteRecoveryReplicationRecoveryPlan#pre_action}
   */
   readonly preAction?: SiteRecoveryReplicationRecoveryPlanRecoveryGroupPreAction[] | cdktf.IResolvable;
 }
@@ -772,19 +924,19 @@ export class SiteRecoveryReplicationRecoveryPlanRecoveryGroupList extends cdktf.
 }
 export interface SiteRecoveryReplicationRecoveryPlanTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#create SiteRecoveryReplicationRecoveryPlan#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#create SiteRecoveryReplicationRecoveryPlan#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#delete SiteRecoveryReplicationRecoveryPlan#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#delete SiteRecoveryReplicationRecoveryPlan#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#read SiteRecoveryReplicationRecoveryPlan#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#read SiteRecoveryReplicationRecoveryPlan#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan#update SiteRecoveryReplicationRecoveryPlan#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan#update SiteRecoveryReplicationRecoveryPlan#update}
   */
   readonly update?: string;
 }
@@ -928,7 +1080,7 @@ export class SiteRecoveryReplicationRecoveryPlanTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan azurerm_site_recovery_replication_recovery_plan}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan azurerm_site_recovery_replication_recovery_plan}
 */
 export class SiteRecoveryReplicationRecoveryPlan extends cdktf.TerraformResource {
 
@@ -942,7 +1094,7 @@ export class SiteRecoveryReplicationRecoveryPlan extends cdktf.TerraformResource
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.57.0/docs/resources/site_recovery_replication_recovery_plan azurerm_site_recovery_replication_recovery_plan} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/site_recovery_replication_recovery_plan azurerm_site_recovery_replication_recovery_plan} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -953,7 +1105,7 @@ export class SiteRecoveryReplicationRecoveryPlan extends cdktf.TerraformResource
       terraformResourceType: 'azurerm_site_recovery_replication_recovery_plan',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.57.0',
+        providerVersion: '3.58.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -969,6 +1121,7 @@ export class SiteRecoveryReplicationRecoveryPlan extends cdktf.TerraformResource
     this._recoveryVaultId = config.recoveryVaultId;
     this._sourceRecoveryFabricId = config.sourceRecoveryFabricId;
     this._targetRecoveryFabricId = config.targetRecoveryFabricId;
+    this._azureToAzureSettings.internalValue = config.azureToAzureSettings;
     this._recoveryGroup.internalValue = config.recoveryGroup;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -1045,6 +1198,22 @@ export class SiteRecoveryReplicationRecoveryPlan extends cdktf.TerraformResource
     return this._targetRecoveryFabricId;
   }
 
+  // azure_to_azure_settings - computed: false, optional: true, required: false
+  private _azureToAzureSettings = new SiteRecoveryReplicationRecoveryPlanAzureToAzureSettingsOutputReference(this, "azure_to_azure_settings");
+  public get azureToAzureSettings() {
+    return this._azureToAzureSettings;
+  }
+  public putAzureToAzureSettings(value: SiteRecoveryReplicationRecoveryPlanAzureToAzureSettings) {
+    this._azureToAzureSettings.internalValue = value;
+  }
+  public resetAzureToAzureSettings() {
+    this._azureToAzureSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureToAzureSettingsInput() {
+    return this._azureToAzureSettings.internalValue;
+  }
+
   // recovery_group - computed: false, optional: true, required: false
   private _recoveryGroup = new SiteRecoveryReplicationRecoveryPlanRecoveryGroupList(this, "recovery_group", true);
   public get recoveryGroup() {
@@ -1088,6 +1257,7 @@ export class SiteRecoveryReplicationRecoveryPlan extends cdktf.TerraformResource
       recovery_vault_id: cdktf.stringToTerraform(this._recoveryVaultId),
       source_recovery_fabric_id: cdktf.stringToTerraform(this._sourceRecoveryFabricId),
       target_recovery_fabric_id: cdktf.stringToTerraform(this._targetRecoveryFabricId),
+      azure_to_azure_settings: siteRecoveryReplicationRecoveryPlanAzureToAzureSettingsToTerraform(this._azureToAzureSettings.internalValue),
       recovery_group: cdktf.listMapper(siteRecoveryReplicationRecoveryPlanRecoveryGroupToTerraform, true)(this._recoveryGroup.internalValue),
       timeouts: siteRecoveryReplicationRecoveryPlanTimeoutsToTerraform(this._timeouts.internalValue),
     };
