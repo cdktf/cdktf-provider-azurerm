@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/firewall_policy
 // generated from terraform resource schema
 
@@ -94,7 +89,7 @@ export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/firewall_policy#threat_intelligence_allowlist FirewallPolicy#threat_intelligence_allowlist}
   */
-  readonly threatIntelligenceAllowlist?: FirewallPolicyThreatIntelligenceAllowlist;
+  readonly threatIntelligenceAllowlist?: FirewallPolicyThreatIntelligenceAllowlistStruct;
   /**
   * timeouts block
   * 
@@ -1306,7 +1301,7 @@ export class FirewallPolicyIntrusionDetectionOutputReference extends cdktf.Compl
     return this._trafficBypass.internalValue;
   }
 }
-export interface FirewallPolicyThreatIntelligenceAllowlist {
+export interface FirewallPolicyThreatIntelligenceAllowlistStruct {
   /**
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/firewall_policy#fqdns FirewallPolicy#fqdns}
   */
@@ -1317,7 +1312,7 @@ export interface FirewallPolicyThreatIntelligenceAllowlist {
   readonly ipAddresses?: string[];
 }
 
-export function firewallPolicyThreatIntelligenceAllowlistToTerraform(struct?: FirewallPolicyThreatIntelligenceAllowlistOutputReference | FirewallPolicyThreatIntelligenceAllowlist): any {
+export function firewallPolicyThreatIntelligenceAllowlistStructToTerraform(struct?: FirewallPolicyThreatIntelligenceAllowlistStructOutputReference | FirewallPolicyThreatIntelligenceAllowlistStruct): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1328,7 +1323,7 @@ export function firewallPolicyThreatIntelligenceAllowlistToTerraform(struct?: Fi
   }
 }
 
-export class FirewallPolicyThreatIntelligenceAllowlistOutputReference extends cdktf.ComplexObject {
+export class FirewallPolicyThreatIntelligenceAllowlistStructOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
   /**
@@ -1339,7 +1334,7 @@ export class FirewallPolicyThreatIntelligenceAllowlistOutputReference extends cd
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): FirewallPolicyThreatIntelligenceAllowlist | undefined {
+  public get internalValue(): FirewallPolicyThreatIntelligenceAllowlistStruct | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._fqdns !== undefined) {
@@ -1353,7 +1348,7 @@ export class FirewallPolicyThreatIntelligenceAllowlistOutputReference extends cd
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: FirewallPolicyThreatIntelligenceAllowlist | undefined) {
+  public set internalValue(value: FirewallPolicyThreatIntelligenceAllowlistStruct | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
       this._fqdns = undefined;
@@ -1966,11 +1961,11 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // threat_intelligence_allowlist - computed: false, optional: true, required: false
-  private _threatIntelligenceAllowlist = new FirewallPolicyThreatIntelligenceAllowlistOutputReference(this, "threat_intelligence_allowlist");
+  private _threatIntelligenceAllowlist = new FirewallPolicyThreatIntelligenceAllowlistStructOutputReference(this, "threat_intelligence_allowlist");
   public get threatIntelligenceAllowlist() {
     return this._threatIntelligenceAllowlist;
   }
-  public putThreatIntelligenceAllowlist(value: FirewallPolicyThreatIntelligenceAllowlist) {
+  public putThreatIntelligenceAllowlist(value: FirewallPolicyThreatIntelligenceAllowlistStruct) {
     this._threatIntelligenceAllowlist.internalValue = value;
   }
   public resetThreatIntelligenceAllowlist() {
@@ -2035,7 +2030,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       identity: firewallPolicyIdentityToTerraform(this._identity.internalValue),
       insights: firewallPolicyInsightsToTerraform(this._insights.internalValue),
       intrusion_detection: firewallPolicyIntrusionDetectionToTerraform(this._intrusionDetection.internalValue),
-      threat_intelligence_allowlist: firewallPolicyThreatIntelligenceAllowlistToTerraform(this._threatIntelligenceAllowlist.internalValue),
+      threat_intelligence_allowlist: firewallPolicyThreatIntelligenceAllowlistStructToTerraform(this._threatIntelligenceAllowlist.internalValue),
       timeouts: firewallPolicyTimeoutsToTerraform(this._timeouts.internalValue),
       tls_certificate: firewallPolicyTlsCertificateToTerraform(this._tlsCertificate.internalValue),
     };

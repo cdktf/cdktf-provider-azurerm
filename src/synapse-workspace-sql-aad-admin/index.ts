@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/resources/synapse_workspace_sql_aad_admin
 // generated from terraform resource schema
 

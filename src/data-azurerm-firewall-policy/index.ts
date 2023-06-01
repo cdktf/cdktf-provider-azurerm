@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/data-sources/firewall_policy
 // generated from terraform resource schema
 
@@ -108,10 +103,10 @@ export class DataAzurermFirewallPolicyDnsList extends cdktf.ComplexList {
     return new DataAzurermFirewallPolicyDnsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
-export interface DataAzurermFirewallPolicyThreatIntelligenceAllowlist {
+export interface DataAzurermFirewallPolicyThreatIntelligenceAllowlistStruct {
 }
 
-export function dataAzurermFirewallPolicyThreatIntelligenceAllowlistToTerraform(struct?: DataAzurermFirewallPolicyThreatIntelligenceAllowlist): any {
+export function dataAzurermFirewallPolicyThreatIntelligenceAllowlistStructToTerraform(struct?: DataAzurermFirewallPolicyThreatIntelligenceAllowlistStruct): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -120,7 +115,7 @@ export function dataAzurermFirewallPolicyThreatIntelligenceAllowlistToTerraform(
   }
 }
 
-export class DataAzurermFirewallPolicyThreatIntelligenceAllowlistOutputReference extends cdktf.ComplexObject {
+export class DataAzurermFirewallPolicyThreatIntelligenceAllowlistStructOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
   /**
@@ -133,13 +128,13 @@ export class DataAzurermFirewallPolicyThreatIntelligenceAllowlistOutputReference
     super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): DataAzurermFirewallPolicyThreatIntelligenceAllowlist | undefined {
+  public get internalValue(): DataAzurermFirewallPolicyThreatIntelligenceAllowlistStruct | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermFirewallPolicyThreatIntelligenceAllowlist | undefined) {
+  public set internalValue(value: DataAzurermFirewallPolicyThreatIntelligenceAllowlistStruct | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
     }
@@ -159,7 +154,7 @@ export class DataAzurermFirewallPolicyThreatIntelligenceAllowlistOutputReference
   }
 }
 
-export class DataAzurermFirewallPolicyThreatIntelligenceAllowlistList extends cdktf.ComplexList {
+export class DataAzurermFirewallPolicyThreatIntelligenceAllowlistStructList extends cdktf.ComplexList {
 
   /**
   * @param terraformResource The parent resource
@@ -173,8 +168,8 @@ export class DataAzurermFirewallPolicyThreatIntelligenceAllowlistList extends cd
   /**
   * @param index the index of the item to return
   */
-  public get(index: number): DataAzurermFirewallPolicyThreatIntelligenceAllowlistOutputReference {
-    return new DataAzurermFirewallPolicyThreatIntelligenceAllowlistOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  public get(index: number): DataAzurermFirewallPolicyThreatIntelligenceAllowlistStructOutputReference {
+    return new DataAzurermFirewallPolicyThreatIntelligenceAllowlistStructOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermFirewallPolicyTimeouts {
@@ -380,7 +375,7 @@ export class DataAzurermFirewallPolicy extends cdktf.TerraformDataSource {
   }
 
   // threat_intelligence_allowlist - computed: true, optional: false, required: false
-  private _threatIntelligenceAllowlist = new DataAzurermFirewallPolicyThreatIntelligenceAllowlistList(this, "threat_intelligence_allowlist", false);
+  private _threatIntelligenceAllowlist = new DataAzurermFirewallPolicyThreatIntelligenceAllowlistStructList(this, "threat_intelligence_allowlist", false);
   public get threatIntelligenceAllowlist() {
     return this._threatIntelligenceAllowlist;
   }
