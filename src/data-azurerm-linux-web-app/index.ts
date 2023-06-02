@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/data-sources/linux_web_app
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/linux_web_app
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermLinuxWebAppConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/data-sources/linux_web_app#id DataAzurermLinuxWebApp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/linux_web_app#id DataAzurermLinuxWebApp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/data-sources/linux_web_app#name DataAzurermLinuxWebApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/linux_web_app#name DataAzurermLinuxWebApp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/data-sources/linux_web_app#resource_group_name DataAzurermLinuxWebApp#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/linux_web_app#resource_group_name DataAzurermLinuxWebApp#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/data-sources/linux_web_app#timeouts DataAzurermLinuxWebApp#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/linux_web_app#timeouts DataAzurermLinuxWebApp#timeouts}
   */
   readonly timeouts?: DataAzurermLinuxWebAppTimeouts;
 }
@@ -3883,7 +3883,7 @@ export class DataAzurermLinuxWebAppStorageAccountList extends cdktf.ComplexList 
 }
 export interface DataAzurermLinuxWebAppTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/data-sources/linux_web_app#read DataAzurermLinuxWebApp#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/linux_web_app#read DataAzurermLinuxWebApp#read}
   */
   readonly read?: string;
 }
@@ -3958,7 +3958,7 @@ export class DataAzurermLinuxWebAppTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/data-sources/linux_web_app azurerm_linux_web_app}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/linux_web_app azurerm_linux_web_app}
 */
 export class DataAzurermLinuxWebApp extends cdktf.TerraformDataSource {
 
@@ -3972,7 +3972,7 @@ export class DataAzurermLinuxWebApp extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/data-sources/linux_web_app azurerm_linux_web_app} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/linux_web_app azurerm_linux_web_app} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3983,7 +3983,7 @@ export class DataAzurermLinuxWebApp extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_linux_web_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.58.0',
+        providerVersion: '3.59.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -4026,6 +4026,11 @@ export class DataAzurermLinuxWebApp extends cdktf.TerraformDataSource {
   private _authSettingsV2 = new DataAzurermLinuxWebAppAuthSettingsV2List(this, "auth_settings_v2", false);
   public get authSettingsV2() {
     return this._authSettingsV2;
+  }
+
+  // availability - computed: true, optional: false, required: false
+  public get availability() {
+    return this.getStringAttribute('availability');
   }
 
   // backup - computed: true, optional: false, required: false
@@ -4207,6 +4212,11 @@ export class DataAzurermLinuxWebApp extends cdktf.TerraformDataSource {
   private _tags = new cdktf.StringMap(this, "tags");
   public get tags() {
     return this._tags;
+  }
+
+  // usage - computed: true, optional: false, required: false
+  public get usage() {
+    return this.getStringAttribute('usage');
   }
 
   // virtual_network_subnet_id - computed: true, optional: false, required: false

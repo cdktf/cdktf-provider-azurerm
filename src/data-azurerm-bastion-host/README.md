@@ -1,3 +1,3 @@
 # `data_azurerm_bastion_host`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_bastion_host`](https://registry.terraform.io/providers/hashicorp/azurerm/3.58.0/docs/data-sources/bastion_host).
+Refer to the Terraform Registory for docs: [`data_azurerm_bastion_host`](https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/bastion_host).
