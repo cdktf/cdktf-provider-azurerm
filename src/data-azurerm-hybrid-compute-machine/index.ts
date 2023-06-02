@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/hybrid_compute_machine
 // generated from terraform resource schema
 
@@ -34,10 +29,10 @@ export interface DataAzurermHybridComputeMachineConfig extends cdktf.TerraformMe
   */
   readonly timeouts?: DataAzurermHybridComputeMachineTimeouts;
 }
-export interface DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowList {
+export interface DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStruct {
 }
 
-export function dataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListToTerraform(struct?: DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowList): any {
+export function dataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStructToTerraform(struct?: DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStruct): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -46,7 +41,7 @@ export function dataAzurermHybridComputeMachineAgentConfigurationExtensionsAllow
   }
 }
 
-export class DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListOutputReference extends cdktf.ComplexObject {
+export class DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStructOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
   /**
@@ -59,13 +54,13 @@ export class DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowLis
     super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowList | undefined {
+  public get internalValue(): DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStruct | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowList | undefined) {
+  public set internalValue(value: DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStruct | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
     }
@@ -85,7 +80,7 @@ export class DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowLis
   }
 }
 
-export class DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListList extends cdktf.ComplexList {
+export class DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStructList extends cdktf.ComplexList {
 
   /**
   * @param terraformResource The parent resource
@@ -99,14 +94,14 @@ export class DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowLis
   /**
   * @param index the index of the item to return
   */
-  public get(index: number): DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListOutputReference {
-    return new DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  public get(index: number): DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStructOutputReference {
+    return new DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStructOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
-export interface DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockList {
+export interface DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStruct {
 }
 
-export function dataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListToTerraform(struct?: DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockList): any {
+export function dataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStructToTerraform(struct?: DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStruct): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -115,7 +110,7 @@ export function dataAzurermHybridComputeMachineAgentConfigurationExtensionsBlock
   }
 }
 
-export class DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListOutputReference extends cdktf.ComplexObject {
+export class DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStructOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
   /**
@@ -128,13 +123,13 @@ export class DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockLis
     super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockList | undefined {
+  public get internalValue(): DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStruct | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockList | undefined) {
+  public set internalValue(value: DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStruct | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
     }
@@ -154,7 +149,7 @@ export class DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockLis
   }
 }
 
-export class DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListList extends cdktf.ComplexList {
+export class DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStructList extends cdktf.ComplexList {
 
   /**
   * @param terraformResource The parent resource
@@ -168,8 +163,8 @@ export class DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockLis
   /**
   * @param index the index of the item to return
   */
-  public get(index: number): DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListOutputReference {
-    return new DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  public get(index: number): DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStructOutputReference {
+    return new DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStructOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermHybridComputeMachineAgentConfiguration {
@@ -213,13 +208,13 @@ export class DataAzurermHybridComputeMachineAgentConfigurationOutputReference ex
   }
 
   // extensions_allow_list - computed: true, optional: false, required: false
-  private _extensionsAllowList = new DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListList(this, "extensions_allow_list", false);
+  private _extensionsAllowList = new DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStructList(this, "extensions_allow_list", false);
   public get extensionsAllowList() {
     return this._extensionsAllowList;
   }
 
   // extensions_block_list - computed: true, optional: false, required: false
-  private _extensionsBlockList = new DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListList(this, "extensions_block_list", false);
+  private _extensionsBlockList = new DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStructList(this, "extensions_block_list", false);
   public get extensionsBlockList() {
     return this._extensionsBlockList;
   }
