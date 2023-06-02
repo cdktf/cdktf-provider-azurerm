@@ -34,10 +34,10 @@ export interface DataAzurermArcMachineConfig extends cdktf.TerraformMetaArgument
   */
   readonly timeouts?: DataAzurermArcMachineTimeouts;
 }
-export interface DataAzurermArcMachineAgentExtensionsAllowList {
+export interface DataAzurermArcMachineAgentExtensionsAllowListStruct {
 }
 
-export function dataAzurermArcMachineAgentExtensionsAllowListToTerraform(struct?: DataAzurermArcMachineAgentExtensionsAllowList): any {
+export function dataAzurermArcMachineAgentExtensionsAllowListStructToTerraform(struct?: DataAzurermArcMachineAgentExtensionsAllowListStruct): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -46,7 +46,7 @@ export function dataAzurermArcMachineAgentExtensionsAllowListToTerraform(struct?
   }
 }
 
-export class DataAzurermArcMachineAgentExtensionsAllowListOutputReference extends cdktf.ComplexObject {
+export class DataAzurermArcMachineAgentExtensionsAllowListStructOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
   /**
@@ -59,13 +59,13 @@ export class DataAzurermArcMachineAgentExtensionsAllowListOutputReference extend
     super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): DataAzurermArcMachineAgentExtensionsAllowList | undefined {
+  public get internalValue(): DataAzurermArcMachineAgentExtensionsAllowListStruct | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermArcMachineAgentExtensionsAllowList | undefined) {
+  public set internalValue(value: DataAzurermArcMachineAgentExtensionsAllowListStruct | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
     }
@@ -85,7 +85,7 @@ export class DataAzurermArcMachineAgentExtensionsAllowListOutputReference extend
   }
 }
 
-export class DataAzurermArcMachineAgentExtensionsAllowListList extends cdktf.ComplexList {
+export class DataAzurermArcMachineAgentExtensionsAllowListStructList extends cdktf.ComplexList {
 
   /**
   * @param terraformResource The parent resource
@@ -99,14 +99,14 @@ export class DataAzurermArcMachineAgentExtensionsAllowListList extends cdktf.Com
   /**
   * @param index the index of the item to return
   */
-  public get(index: number): DataAzurermArcMachineAgentExtensionsAllowListOutputReference {
-    return new DataAzurermArcMachineAgentExtensionsAllowListOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  public get(index: number): DataAzurermArcMachineAgentExtensionsAllowListStructOutputReference {
+    return new DataAzurermArcMachineAgentExtensionsAllowListStructOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
-export interface DataAzurermArcMachineAgentExtensionsBlockList {
+export interface DataAzurermArcMachineAgentExtensionsBlockListStruct {
 }
 
-export function dataAzurermArcMachineAgentExtensionsBlockListToTerraform(struct?: DataAzurermArcMachineAgentExtensionsBlockList): any {
+export function dataAzurermArcMachineAgentExtensionsBlockListStructToTerraform(struct?: DataAzurermArcMachineAgentExtensionsBlockListStruct): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -115,7 +115,7 @@ export function dataAzurermArcMachineAgentExtensionsBlockListToTerraform(struct?
   }
 }
 
-export class DataAzurermArcMachineAgentExtensionsBlockListOutputReference extends cdktf.ComplexObject {
+export class DataAzurermArcMachineAgentExtensionsBlockListStructOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
   /**
@@ -128,13 +128,13 @@ export class DataAzurermArcMachineAgentExtensionsBlockListOutputReference extend
     super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): DataAzurermArcMachineAgentExtensionsBlockList | undefined {
+  public get internalValue(): DataAzurermArcMachineAgentExtensionsBlockListStruct | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermArcMachineAgentExtensionsBlockList | undefined) {
+  public set internalValue(value: DataAzurermArcMachineAgentExtensionsBlockListStruct | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
     }
@@ -154,7 +154,7 @@ export class DataAzurermArcMachineAgentExtensionsBlockListOutputReference extend
   }
 }
 
-export class DataAzurermArcMachineAgentExtensionsBlockListList extends cdktf.ComplexList {
+export class DataAzurermArcMachineAgentExtensionsBlockListStructList extends cdktf.ComplexList {
 
   /**
   * @param terraformResource The parent resource
@@ -168,8 +168,8 @@ export class DataAzurermArcMachineAgentExtensionsBlockListList extends cdktf.Com
   /**
   * @param index the index of the item to return
   */
-  public get(index: number): DataAzurermArcMachineAgentExtensionsBlockListOutputReference {
-    return new DataAzurermArcMachineAgentExtensionsBlockListOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  public get(index: number): DataAzurermArcMachineAgentExtensionsBlockListStructOutputReference {
+    return new DataAzurermArcMachineAgentExtensionsBlockListStructOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermArcMachineAgent {
@@ -213,13 +213,13 @@ export class DataAzurermArcMachineAgentOutputReference extends cdktf.ComplexObje
   }
 
   // extensions_allow_list - computed: true, optional: false, required: false
-  private _extensionsAllowList = new DataAzurermArcMachineAgentExtensionsAllowListList(this, "extensions_allow_list", false);
+  private _extensionsAllowList = new DataAzurermArcMachineAgentExtensionsAllowListStructList(this, "extensions_allow_list", false);
   public get extensionsAllowList() {
     return this._extensionsAllowList;
   }
 
   // extensions_block_list - computed: true, optional: false, required: false
-  private _extensionsBlockList = new DataAzurermArcMachineAgentExtensionsBlockListList(this, "extensions_block_list", false);
+  private _extensionsBlockList = new DataAzurermArcMachineAgentExtensionsBlockListStructList(this, "extensions_block_list", false);
   public get extensionsBlockList() {
     return this._extensionsBlockList;
   }
