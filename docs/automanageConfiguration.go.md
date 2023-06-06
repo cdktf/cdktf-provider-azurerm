@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfiguration(scope Construct, id *string, config AutomanageConfigurationConfig) AutomanageConfiguration
 ```
@@ -359,7 +359,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.AutomanageConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.AutomanageConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ automanageconfiguration.AutomanageConfiguration_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.AutomanageConfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -868,10 +868,10 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationAntimalware.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationAntimalware {
-	Exclusions: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.automanageConfiguration.AutomanageConfigurationAntimalwareExclusions,
+	Exclusions: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automanageConfiguration.AutomanageConfigurationAntimalwareExclusions,
 	RealTimeProtectionEnabled: interface{},
 	ScheduledScanDay: *f64,
 	ScheduledScanEnabled: interface{},
@@ -972,7 +972,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationAntimalwareExclusions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationAntimalwareExclusions {
 	Extensions: *string,
@@ -1032,7 +1032,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationConfig {
 	Connection: interface{},
@@ -1045,7 +1045,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automanageconfigur
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	Antimalware: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.automanageConfiguration.AutomanageConfigurationAntimalware,
+	Antimalware: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automanageConfiguration.AutomanageConfigurationAntimalware,
 	AutomationAccountEnabled: interface{},
 	BootDiagnosticsEnabled: interface{},
 	DefenderForCloudEnabled: interface{},
@@ -1053,7 +1053,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automanageconfigur
 	Id: *string,
 	StatusChangeAlertEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.automanageConfiguration.AutomanageConfigurationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automanageConfiguration.AutomanageConfigurationTimeouts,
 }
 ```
 
@@ -1309,7 +1309,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationTimeouts {
 	Create: *string,
@@ -1385,7 +1385,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationAntimalwareExclusionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfigurationAntimalwareExclusionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomanageConfigurationAntimalwareExclusionsOutputReference
 ```
@@ -1721,7 +1721,7 @@ func InternalValue() AutomanageConfigurationAntimalwareExclusions
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationAntimalwareOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfigurationAntimalwareOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomanageConfigurationAntimalwareOutputReference
 ```
@@ -2157,7 +2157,7 @@ func InternalValue() AutomanageConfigurationAntimalware
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomanageConfigurationTimeoutsOutputReference
 ```
