@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +13,54 @@ import * as cdktf from 'cdktf';
 
 export interface MssqlFailoverGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#databases MssqlFailoverGroup#databases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#databases MssqlFailoverGroup#databases}
   */
   readonly databases?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#id MssqlFailoverGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#id MssqlFailoverGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#name MssqlFailoverGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#name MssqlFailoverGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#readonly_endpoint_failover_policy_enabled MssqlFailoverGroup#readonly_endpoint_failover_policy_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#readonly_endpoint_failover_policy_enabled MssqlFailoverGroup#readonly_endpoint_failover_policy_enabled}
   */
   readonly readonlyEndpointFailoverPolicyEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#server_id MssqlFailoverGroup#server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#server_id MssqlFailoverGroup#server_id}
   */
   readonly serverId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#tags MssqlFailoverGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#tags MssqlFailoverGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * partner_server block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#partner_server MssqlFailoverGroup#partner_server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#partner_server MssqlFailoverGroup#partner_server}
   */
   readonly partnerServer: MssqlFailoverGroupPartnerServer[] | cdktf.IResolvable;
   /**
   * read_write_endpoint_failover_policy block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#read_write_endpoint_failover_policy MssqlFailoverGroup#read_write_endpoint_failover_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#read_write_endpoint_failover_policy MssqlFailoverGroup#read_write_endpoint_failover_policy}
   */
   readonly readWriteEndpointFailoverPolicy: MssqlFailoverGroupReadWriteEndpointFailoverPolicy;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#timeouts MssqlFailoverGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#timeouts MssqlFailoverGroup#timeouts}
   */
   readonly timeouts?: MssqlFailoverGroupTimeouts;
 }
 export interface MssqlFailoverGroupPartnerServer {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#id MssqlFailoverGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#id MssqlFailoverGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -167,11 +167,11 @@ export class MssqlFailoverGroupPartnerServerList extends cdktf.ComplexList {
 }
 export interface MssqlFailoverGroupReadWriteEndpointFailoverPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#grace_minutes MssqlFailoverGroup#grace_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#grace_minutes MssqlFailoverGroup#grace_minutes}
   */
   readonly graceMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#mode MssqlFailoverGroup#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#mode MssqlFailoverGroup#mode}
   */
   readonly mode: string;
 }
@@ -256,19 +256,19 @@ export class MssqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference ex
 }
 export interface MssqlFailoverGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#create MssqlFailoverGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#create MssqlFailoverGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#delete MssqlFailoverGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#delete MssqlFailoverGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#read MssqlFailoverGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#read MssqlFailoverGroup#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group#update MssqlFailoverGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group#update MssqlFailoverGroup#update}
   */
   readonly update?: string;
 }
@@ -412,7 +412,7 @@ export class MssqlFailoverGroupTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group azurerm_mssql_failover_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group azurerm_mssql_failover_group}
 */
 export class MssqlFailoverGroup extends cdktf.TerraformResource {
 
@@ -426,7 +426,7 @@ export class MssqlFailoverGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/mssql_failover_group azurerm_mssql_failover_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/mssql_failover_group azurerm_mssql_failover_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -437,7 +437,7 @@ export class MssqlFailoverGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_failover_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.59.0',
+        providerVersion: '3.60.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

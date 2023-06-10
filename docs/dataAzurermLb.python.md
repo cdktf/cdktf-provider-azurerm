@@ -1,6 +1,6 @@
 # `data_azurerm_lb`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_lb`](https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb).
+Refer to the Terraform Registory for docs: [`data_azurerm_lb`](https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb).
 
 # `dataAzurermLb` Submodule <a name="`dataAzurermLb` Submodule" id="@cdktf/provider-azurerm.dataAzurermLb"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_lb`](https://registry.
 
 ### DataAzurermLb <a name="DataAzurermLb" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb azurerm_lb}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb azurerm_lb}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.Initializer"></a>
 
@@ -43,9 +43,9 @@ dataAzurermLb.DataAzurermLb(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#name DataAzurermLb#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#resource_group_name DataAzurermLb#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#id DataAzurermLb#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#name DataAzurermLb#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#resource_group_name DataAzurermLb#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#id DataAzurermLb#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbTimeouts">DataAzurermLbTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#name DataAzurermLb#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#name DataAzurermLb#name}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#resource_group_name DataAzurermLb#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#resource_group_name DataAzurermLb#resource_group_name}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#id DataAzurermLb#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#id DataAzurermLb#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -143,7 +143,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#timeouts DataAzurermLb#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#timeouts DataAzurermLb#timeouts}
 
 ---
 
@@ -394,7 +394,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#read DataAzurermLb#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#read DataAzurermLb#read}.
 
 ---
 
@@ -834,9 +834,9 @@ dataAzurermLb.DataAzurermLbConfig(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#name DataAzurermLb#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#resource_group_name DataAzurermLb#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#id DataAzurermLb#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#name DataAzurermLb#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#resource_group_name DataAzurermLb#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#id DataAzurermLb#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbTimeouts">DataAzurermLbTimeouts</a></code> | timeouts block. |
 
 ---
@@ -919,7 +919,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#name DataAzurermLb#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#name DataAzurermLb#name}.
 
 ---
 
@@ -931,7 +931,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#resource_group_name DataAzurermLb#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#resource_group_name DataAzurermLb#resource_group_name}.
 
 ---
 
@@ -943,7 +943,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#id DataAzurermLb#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#id DataAzurermLb#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -960,7 +960,7 @@ timeouts: DataAzurermLbTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#timeouts DataAzurermLb#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#timeouts DataAzurermLb#timeouts}
 
 ---
 
@@ -991,7 +991,7 @@ dataAzurermLb.DataAzurermLbTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#read DataAzurermLb#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#read DataAzurermLb#read}. |
 
 ---
 
@@ -1003,7 +1003,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/data-sources/lb#read DataAzurermLb#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/lb#read DataAzurermLb#read}.
 
 ---
 

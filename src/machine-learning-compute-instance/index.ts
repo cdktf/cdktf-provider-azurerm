@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,80 +13,84 @@ import * as cdktf from 'cdktf';
 
 export interface MachineLearningComputeInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#authorization_type MachineLearningComputeInstance#authorization_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#authorization_type MachineLearningComputeInstance#authorization_type}
   */
   readonly authorizationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#description MachineLearningComputeInstance#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#description MachineLearningComputeInstance#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#id MachineLearningComputeInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#id MachineLearningComputeInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#local_auth_enabled MachineLearningComputeInstance#local_auth_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#local_auth_enabled MachineLearningComputeInstance#local_auth_enabled}
   */
   readonly localAuthEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#location MachineLearningComputeInstance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#location MachineLearningComputeInstance#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#machine_learning_workspace_id MachineLearningComputeInstance#machine_learning_workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#machine_learning_workspace_id MachineLearningComputeInstance#machine_learning_workspace_id}
   */
   readonly machineLearningWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#name MachineLearningComputeInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#name MachineLearningComputeInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#subnet_resource_id MachineLearningComputeInstance#subnet_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#node_public_ip_enabled MachineLearningComputeInstance#node_public_ip_enabled}
+  */
+  readonly nodePublicIpEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#subnet_resource_id MachineLearningComputeInstance#subnet_resource_id}
   */
   readonly subnetResourceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#tags MachineLearningComputeInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#tags MachineLearningComputeInstance#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#virtual_machine_size MachineLearningComputeInstance#virtual_machine_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#virtual_machine_size MachineLearningComputeInstance#virtual_machine_size}
   */
   readonly virtualMachineSize: string;
   /**
   * assign_to_user block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#assign_to_user MachineLearningComputeInstance#assign_to_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#assign_to_user MachineLearningComputeInstance#assign_to_user}
   */
   readonly assignToUser?: MachineLearningComputeInstanceAssignToUser;
   /**
   * identity block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#identity MachineLearningComputeInstance#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#identity MachineLearningComputeInstance#identity}
   */
   readonly identity?: MachineLearningComputeInstanceIdentity;
   /**
   * ssh block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#ssh MachineLearningComputeInstance#ssh}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#ssh MachineLearningComputeInstance#ssh}
   */
   readonly ssh?: MachineLearningComputeInstanceSsh;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#timeouts MachineLearningComputeInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#timeouts MachineLearningComputeInstance#timeouts}
   */
   readonly timeouts?: MachineLearningComputeInstanceTimeouts;
 }
 export interface MachineLearningComputeInstanceAssignToUser {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#object_id MachineLearningComputeInstance#object_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#object_id MachineLearningComputeInstance#object_id}
   */
   readonly objectId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#tenant_id MachineLearningComputeInstance#tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#tenant_id MachineLearningComputeInstance#tenant_id}
   */
   readonly tenantId?: string;
 }
@@ -174,11 +178,11 @@ export class MachineLearningComputeInstanceAssignToUserOutputReference extends c
 }
 export interface MachineLearningComputeInstanceIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#identity_ids MachineLearningComputeInstance#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#identity_ids MachineLearningComputeInstance#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#type MachineLearningComputeInstance#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#type MachineLearningComputeInstance#type}
   */
   readonly type: string;
 }
@@ -273,7 +277,7 @@ export class MachineLearningComputeInstanceIdentityOutputReference extends cdktf
 }
 export interface MachineLearningComputeInstanceSsh {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#public_key MachineLearningComputeInstance#public_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#public_key MachineLearningComputeInstance#public_key}
   */
   readonly publicKey: string;
 }
@@ -345,15 +349,15 @@ export class MachineLearningComputeInstanceSshOutputReference extends cdktf.Comp
 }
 export interface MachineLearningComputeInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#create MachineLearningComputeInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#create MachineLearningComputeInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#delete MachineLearningComputeInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#delete MachineLearningComputeInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance#read MachineLearningComputeInstance#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance#read MachineLearningComputeInstance#read}
   */
   readonly read?: string;
 }
@@ -474,7 +478,7 @@ export class MachineLearningComputeInstanceTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance azurerm_machine_learning_compute_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance azurerm_machine_learning_compute_instance}
 */
 export class MachineLearningComputeInstance extends cdktf.TerraformResource {
 
@@ -488,7 +492,7 @@ export class MachineLearningComputeInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/machine_learning_compute_instance azurerm_machine_learning_compute_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/machine_learning_compute_instance azurerm_machine_learning_compute_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -499,7 +503,7 @@ export class MachineLearningComputeInstance extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_machine_learning_compute_instance',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.59.0',
+        providerVersion: '3.60.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -517,6 +521,7 @@ export class MachineLearningComputeInstance extends cdktf.TerraformResource {
     this._location = config.location;
     this._machineLearningWorkspaceId = config.machineLearningWorkspaceId;
     this._name = config.name;
+    this._nodePublicIpEnabled = config.nodePublicIpEnabled;
     this._subnetResourceId = config.subnetResourceId;
     this._tags = config.tags;
     this._virtualMachineSize = config.virtualMachineSize;
@@ -631,6 +636,22 @@ export class MachineLearningComputeInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // node_public_ip_enabled - computed: false, optional: true, required: false
+  private _nodePublicIpEnabled?: boolean | cdktf.IResolvable; 
+  public get nodePublicIpEnabled() {
+    return this.getBooleanAttribute('node_public_ip_enabled');
+  }
+  public set nodePublicIpEnabled(value: boolean | cdktf.IResolvable) {
+    this._nodePublicIpEnabled = value;
+  }
+  public resetNodePublicIpEnabled() {
+    this._nodePublicIpEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodePublicIpEnabledInput() {
+    return this._nodePublicIpEnabled;
   }
 
   // subnet_resource_id - computed: false, optional: true, required: false
@@ -755,6 +776,7 @@ export class MachineLearningComputeInstance extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       machine_learning_workspace_id: cdktf.stringToTerraform(this._machineLearningWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
+      node_public_ip_enabled: cdktf.booleanToTerraform(this._nodePublicIpEnabled),
       subnet_resource_id: cdktf.stringToTerraform(this._subnetResourceId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_machine_size: cdktf.stringToTerraform(this._virtualMachineSize),
