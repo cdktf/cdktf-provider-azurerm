@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleFusion.SentinelAlertRuleFusion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulefusion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentinelalertrulefusion"
 
 sentinelalertrulefusion.NewSentinelAlertRuleFusion(scope Construct, id *string, config SentinelAlertRuleFusionConfig) SentinelAlertRuleFusion
 ```
@@ -324,7 +324,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sentinelAlertRuleFusion.SentinelAlertRuleFusion.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulefusion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentinelalertrulefusion"
 
 sentinelalertrulefusion.SentinelAlertRuleFusion_IsConstruct(x interface{}) *bool
 ```
@@ -356,7 +356,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sentinelAlertRuleFusion.SentinelAlertRuleFusion.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulefusion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentinelalertrulefusion"
 
 sentinelalertrulefusion.SentinelAlertRuleFusion_IsTerraformElement(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ sentinelalertrulefusion.SentinelAlertRuleFusion_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sentinelAlertRuleFusion.SentinelAlertRuleFusion.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulefusion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentinelalertrulefusion"
 
 sentinelalertrulefusion.SentinelAlertRuleFusion_IsTerraformResource(x interface{}) *bool
 ```
@@ -723,7 +723,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleFusion.SentinelAlertRuleFusionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulefusion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentinelalertrulefusion"
 
 &sentinelalertrulefusion.SentinelAlertRuleFusionConfig {
 	Connection: interface{},
@@ -739,7 +739,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulefusi
 	Enabled: interface{},
 	Id: *string,
 	Source: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelAlertRuleFusion.SentinelAlertRuleFusionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.sentinelAlertRuleFusion.SentinelAlertRuleFusionTimeouts,
 }
 ```
 
@@ -930,7 +930,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleFusion.SentinelAlertRuleFusionSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulefusion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentinelalertrulefusion"
 
 &sentinelalertrulefusion.SentinelAlertRuleFusionSource {
 	Name: *string,
@@ -992,7 +992,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleFusion.SentinelAlertRuleFusionSourceSubType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulefusion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentinelalertrulefusion"
 
 &sentinelalertrulefusion.SentinelAlertRuleFusionSourceSubType {
 	Name: *string,
@@ -1052,7 +1052,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleFusion.SentinelAlertRuleFusionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulefusion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentinelalertrulefusion"
 
 &sentinelalertrulefusion.SentinelAlertRuleFusionTimeouts {
 	Create: *string,
@@ -1128,7 +1128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleFusion.SentinelAlertRuleFusionSourceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulefusion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentinelalertrulefusion"
 
 sentinelalertrulefusion.NewSentinelAlertRuleFusionSourceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleFusionSourceList
 ```
@@ -1271,7 +1271,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleFusion.SentinelAlertRuleFusionSourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulefusion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentinelalertrulefusion"
 
 sentinelalertrulefusion.NewSentinelAlertRuleFusionSourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleFusionSourceOutputReference
 ```
@@ -1631,7 +1631,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleFusion.SentinelAlertRuleFusionSourceSubTypeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulefusion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentinelalertrulefusion"
 
 sentinelalertrulefusion.NewSentinelAlertRuleFusionSourceSubTypeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleFusionSourceSubTypeList
 ```
@@ -1774,7 +1774,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleFusion.SentinelAlertRuleFusionSourceSubTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulefusion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentinelalertrulefusion"
 
 sentinelalertrulefusion.NewSentinelAlertRuleFusionSourceSubTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleFusionSourceSubTypeOutputReference
 ```
@@ -2114,7 +2114,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleFusion.SentinelAlertRuleFusionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulefusion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentinelalertrulefusion"
 
 sentinelalertrulefusion.NewSentinelAlertRuleFusionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelAlertRuleFusionTimeoutsOutputReference
 ```
