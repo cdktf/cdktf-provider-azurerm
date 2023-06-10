@@ -1,3 +1,3 @@
 # `azurerm_virtual_machine_packet_capture`
 
-Refer to the Terraform Registory for docs: [`azurerm_virtual_machine_packet_capture`](https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/virtual_machine_packet_capture).
+Refer to the Terraform Registory for docs: [`azurerm_virtual_machine_packet_capture`](https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/virtual_machine_packet_capture).

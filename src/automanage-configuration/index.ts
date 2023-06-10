@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,72 +8,84 @@ import * as cdktf from 'cdktf';
 
 export interface AutomanageConfigurationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#automation_account_enabled AutomanageConfiguration#automation_account_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#automation_account_enabled AutomanageConfiguration#automation_account_enabled}
   */
   readonly automationAccountEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#boot_diagnostics_enabled AutomanageConfiguration#boot_diagnostics_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#boot_diagnostics_enabled AutomanageConfiguration#boot_diagnostics_enabled}
   */
   readonly bootDiagnosticsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#defender_for_cloud_enabled AutomanageConfiguration#defender_for_cloud_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#defender_for_cloud_enabled AutomanageConfiguration#defender_for_cloud_enabled}
   */
   readonly defenderForCloudEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#guest_configuration_enabled AutomanageConfiguration#guest_configuration_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#guest_configuration_enabled AutomanageConfiguration#guest_configuration_enabled}
   */
   readonly guestConfigurationEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#id AutomanageConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#id AutomanageConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#location AutomanageConfiguration#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#location AutomanageConfiguration#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#name AutomanageConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#name AutomanageConfiguration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#resource_group_name AutomanageConfiguration#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#resource_group_name AutomanageConfiguration#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#status_change_alert_enabled AutomanageConfiguration#status_change_alert_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#status_change_alert_enabled AutomanageConfiguration#status_change_alert_enabled}
   */
   readonly statusChangeAlertEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#tags AutomanageConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#tags AutomanageConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * antimalware block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#antimalware AutomanageConfiguration#antimalware}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#antimalware AutomanageConfiguration#antimalware}
   */
   readonly antimalware?: AutomanageConfigurationAntimalware;
   /**
+  * azure_security_baseline block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#azure_security_baseline AutomanageConfiguration#azure_security_baseline}
+  */
+  readonly azureSecurityBaseline?: AutomanageConfigurationAzureSecurityBaseline;
+  /**
+  * backup block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#backup AutomanageConfiguration#backup}
+  */
+  readonly backup?: AutomanageConfigurationBackup;
+  /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#timeouts AutomanageConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#timeouts AutomanageConfiguration#timeouts}
   */
   readonly timeouts?: AutomanageConfigurationTimeouts;
 }
 export interface AutomanageConfigurationAntimalwareExclusions {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#extensions AutomanageConfiguration#extensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#extensions AutomanageConfiguration#extensions}
   */
   readonly extensions?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#paths AutomanageConfiguration#paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#paths AutomanageConfiguration#paths}
   */
   readonly paths?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#processes AutomanageConfiguration#processes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#processes AutomanageConfiguration#processes}
   */
   readonly processes?: string;
 }
@@ -189,29 +196,29 @@ export class AutomanageConfigurationAntimalwareExclusionsOutputReference extends
 }
 export interface AutomanageConfigurationAntimalware {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#real_time_protection_enabled AutomanageConfiguration#real_time_protection_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#real_time_protection_enabled AutomanageConfiguration#real_time_protection_enabled}
   */
   readonly realTimeProtectionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#scheduled_scan_day AutomanageConfiguration#scheduled_scan_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#scheduled_scan_day AutomanageConfiguration#scheduled_scan_day}
   */
   readonly scheduledScanDay?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#scheduled_scan_enabled AutomanageConfiguration#scheduled_scan_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#scheduled_scan_enabled AutomanageConfiguration#scheduled_scan_enabled}
   */
   readonly scheduledScanEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#scheduled_scan_time_in_minutes AutomanageConfiguration#scheduled_scan_time_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#scheduled_scan_time_in_minutes AutomanageConfiguration#scheduled_scan_time_in_minutes}
   */
   readonly scheduledScanTimeInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#scheduled_scan_type AutomanageConfiguration#scheduled_scan_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#scheduled_scan_type AutomanageConfiguration#scheduled_scan_type}
   */
   readonly scheduledScanType?: string;
   /**
   * exclusions block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#exclusions AutomanageConfiguration#exclusions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#exclusions AutomanageConfiguration#exclusions}
   */
   readonly exclusions?: AutomanageConfigurationAntimalwareExclusions;
 }
@@ -389,21 +396,904 @@ export class AutomanageConfigurationAntimalwareOutputReference extends cdktf.Com
     return this._exclusions.internalValue;
   }
 }
+export interface AutomanageConfigurationAzureSecurityBaseline {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#assignment_type AutomanageConfiguration#assignment_type}
+  */
+  readonly assignmentType?: string;
+}
+
+export function automanageConfigurationAzureSecurityBaselineToTerraform(struct?: AutomanageConfigurationAzureSecurityBaselineOutputReference | AutomanageConfigurationAzureSecurityBaseline): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    assignment_type: cdktf.stringToTerraform(struct!.assignmentType),
+  }
+}
+
+export class AutomanageConfigurationAzureSecurityBaselineOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AutomanageConfigurationAzureSecurityBaseline | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._assignmentType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.assignmentType = this._assignmentType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomanageConfigurationAzureSecurityBaseline | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._assignmentType = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._assignmentType = value.assignmentType;
+    }
+  }
+
+  // assignment_type - computed: false, optional: true, required: false
+  private _assignmentType?: string; 
+  public get assignmentType() {
+    return this.getStringAttribute('assignment_type');
+  }
+  public set assignmentType(value: string) {
+    this._assignmentType = value;
+  }
+  public resetAssignmentType() {
+    this._assignmentType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get assignmentTypeInput() {
+    return this._assignmentType;
+  }
+}
+export interface AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDuration {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#count AutomanageConfiguration#count}
+  */
+  readonly count?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#duration_type AutomanageConfiguration#duration_type}
+  */
+  readonly durationType?: string;
+}
+
+export function automanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDurationToTerraform(struct?: AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDurationOutputReference | AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDuration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    count: cdktf.numberToTerraform(struct!.count),
+    duration_type: cdktf.stringToTerraform(struct!.durationType),
+  }
+}
+
+export class AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDuration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._count !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.count = this._count;
+    }
+    if (this._durationType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.durationType = this._durationType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDuration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._count = undefined;
+      this._durationType = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._count = value.count;
+      this._durationType = value.durationType;
+    }
+  }
+
+  // count - computed: false, optional: true, required: false
+  private _count?: number; 
+  public get count() {
+    return this.getNumberAttribute('count');
+  }
+  public set count(value: number) {
+    this._count = value;
+  }
+  public resetCount() {
+    this._count = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countInput() {
+    return this._count;
+  }
+
+  // duration_type - computed: false, optional: true, required: false
+  private _durationType?: string; 
+  public get durationType() {
+    return this.getStringAttribute('duration_type');
+  }
+  public set durationType(value: string) {
+    this._durationType = value;
+  }
+  public resetDurationType() {
+    this._durationType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get durationTypeInput() {
+    return this._durationType;
+  }
+}
+export interface AutomanageConfigurationBackupRetentionPolicyDailySchedule {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#retention_times AutomanageConfiguration#retention_times}
+  */
+  readonly retentionTimes?: string[];
+  /**
+  * retention_duration block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#retention_duration AutomanageConfiguration#retention_duration}
+  */
+  readonly retentionDuration?: AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDuration;
+}
+
+export function automanageConfigurationBackupRetentionPolicyDailyScheduleToTerraform(struct?: AutomanageConfigurationBackupRetentionPolicyDailyScheduleOutputReference | AutomanageConfigurationBackupRetentionPolicyDailySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    retention_times: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.retentionTimes),
+    retention_duration: automanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDurationToTerraform(struct!.retentionDuration),
+  }
+}
+
+export class AutomanageConfigurationBackupRetentionPolicyDailyScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AutomanageConfigurationBackupRetentionPolicyDailySchedule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._retentionTimes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.retentionTimes = this._retentionTimes;
+    }
+    if (this._retentionDuration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.retentionDuration = this._retentionDuration?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomanageConfigurationBackupRetentionPolicyDailySchedule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._retentionTimes = undefined;
+      this._retentionDuration.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._retentionTimes = value.retentionTimes;
+      this._retentionDuration.internalValue = value.retentionDuration;
+    }
+  }
+
+  // retention_times - computed: false, optional: true, required: false
+  private _retentionTimes?: string[]; 
+  public get retentionTimes() {
+    return this.getListAttribute('retention_times');
+  }
+  public set retentionTimes(value: string[]) {
+    this._retentionTimes = value;
+  }
+  public resetRetentionTimes() {
+    this._retentionTimes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionTimesInput() {
+    return this._retentionTimes;
+  }
+
+  // retention_duration - computed: false, optional: true, required: false
+  private _retentionDuration = new AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDurationOutputReference(this, "retention_duration");
+  public get retentionDuration() {
+    return this._retentionDuration;
+  }
+  public putRetentionDuration(value: AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDuration) {
+    this._retentionDuration.internalValue = value;
+  }
+  public resetRetentionDuration() {
+    this._retentionDuration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionDurationInput() {
+    return this._retentionDuration.internalValue;
+  }
+}
+export interface AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDuration {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#count AutomanageConfiguration#count}
+  */
+  readonly count?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#duration_type AutomanageConfiguration#duration_type}
+  */
+  readonly durationType?: string;
+}
+
+export function automanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDurationToTerraform(struct?: AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDurationOutputReference | AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDuration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    count: cdktf.numberToTerraform(struct!.count),
+    duration_type: cdktf.stringToTerraform(struct!.durationType),
+  }
+}
+
+export class AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDuration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._count !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.count = this._count;
+    }
+    if (this._durationType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.durationType = this._durationType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDuration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._count = undefined;
+      this._durationType = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._count = value.count;
+      this._durationType = value.durationType;
+    }
+  }
+
+  // count - computed: false, optional: true, required: false
+  private _count?: number; 
+  public get count() {
+    return this.getNumberAttribute('count');
+  }
+  public set count(value: number) {
+    this._count = value;
+  }
+  public resetCount() {
+    this._count = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countInput() {
+    return this._count;
+  }
+
+  // duration_type - computed: false, optional: true, required: false
+  private _durationType?: string; 
+  public get durationType() {
+    return this.getStringAttribute('duration_type');
+  }
+  public set durationType(value: string) {
+    this._durationType = value;
+  }
+  public resetDurationType() {
+    this._durationType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get durationTypeInput() {
+    return this._durationType;
+  }
+}
+export interface AutomanageConfigurationBackupRetentionPolicyWeeklySchedule {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#retention_times AutomanageConfiguration#retention_times}
+  */
+  readonly retentionTimes?: string[];
+  /**
+  * retention_duration block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#retention_duration AutomanageConfiguration#retention_duration}
+  */
+  readonly retentionDuration?: AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDuration;
+}
+
+export function automanageConfigurationBackupRetentionPolicyWeeklyScheduleToTerraform(struct?: AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleOutputReference | AutomanageConfigurationBackupRetentionPolicyWeeklySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    retention_times: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.retentionTimes),
+    retention_duration: automanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDurationToTerraform(struct!.retentionDuration),
+  }
+}
+
+export class AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AutomanageConfigurationBackupRetentionPolicyWeeklySchedule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._retentionTimes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.retentionTimes = this._retentionTimes;
+    }
+    if (this._retentionDuration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.retentionDuration = this._retentionDuration?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomanageConfigurationBackupRetentionPolicyWeeklySchedule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._retentionTimes = undefined;
+      this._retentionDuration.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._retentionTimes = value.retentionTimes;
+      this._retentionDuration.internalValue = value.retentionDuration;
+    }
+  }
+
+  // retention_times - computed: false, optional: true, required: false
+  private _retentionTimes?: string[]; 
+  public get retentionTimes() {
+    return this.getListAttribute('retention_times');
+  }
+  public set retentionTimes(value: string[]) {
+    this._retentionTimes = value;
+  }
+  public resetRetentionTimes() {
+    this._retentionTimes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionTimesInput() {
+    return this._retentionTimes;
+  }
+
+  // retention_duration - computed: false, optional: true, required: false
+  private _retentionDuration = new AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDurationOutputReference(this, "retention_duration");
+  public get retentionDuration() {
+    return this._retentionDuration;
+  }
+  public putRetentionDuration(value: AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDuration) {
+    this._retentionDuration.internalValue = value;
+  }
+  public resetRetentionDuration() {
+    this._retentionDuration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionDurationInput() {
+    return this._retentionDuration.internalValue;
+  }
+}
+export interface AutomanageConfigurationBackupRetentionPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#retention_policy_type AutomanageConfiguration#retention_policy_type}
+  */
+  readonly retentionPolicyType?: string;
+  /**
+  * daily_schedule block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#daily_schedule AutomanageConfiguration#daily_schedule}
+  */
+  readonly dailySchedule?: AutomanageConfigurationBackupRetentionPolicyDailySchedule;
+  /**
+  * weekly_schedule block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#weekly_schedule AutomanageConfiguration#weekly_schedule}
+  */
+  readonly weeklySchedule?: AutomanageConfigurationBackupRetentionPolicyWeeklySchedule;
+}
+
+export function automanageConfigurationBackupRetentionPolicyToTerraform(struct?: AutomanageConfigurationBackupRetentionPolicyOutputReference | AutomanageConfigurationBackupRetentionPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    retention_policy_type: cdktf.stringToTerraform(struct!.retentionPolicyType),
+    daily_schedule: automanageConfigurationBackupRetentionPolicyDailyScheduleToTerraform(struct!.dailySchedule),
+    weekly_schedule: automanageConfigurationBackupRetentionPolicyWeeklyScheduleToTerraform(struct!.weeklySchedule),
+  }
+}
+
+export class AutomanageConfigurationBackupRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AutomanageConfigurationBackupRetentionPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._retentionPolicyType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.retentionPolicyType = this._retentionPolicyType;
+    }
+    if (this._dailySchedule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dailySchedule = this._dailySchedule?.internalValue;
+    }
+    if (this._weeklySchedule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weeklySchedule = this._weeklySchedule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomanageConfigurationBackupRetentionPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._retentionPolicyType = undefined;
+      this._dailySchedule.internalValue = undefined;
+      this._weeklySchedule.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._retentionPolicyType = value.retentionPolicyType;
+      this._dailySchedule.internalValue = value.dailySchedule;
+      this._weeklySchedule.internalValue = value.weeklySchedule;
+    }
+  }
+
+  // retention_policy_type - computed: false, optional: true, required: false
+  private _retentionPolicyType?: string; 
+  public get retentionPolicyType() {
+    return this.getStringAttribute('retention_policy_type');
+  }
+  public set retentionPolicyType(value: string) {
+    this._retentionPolicyType = value;
+  }
+  public resetRetentionPolicyType() {
+    this._retentionPolicyType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionPolicyTypeInput() {
+    return this._retentionPolicyType;
+  }
+
+  // daily_schedule - computed: false, optional: true, required: false
+  private _dailySchedule = new AutomanageConfigurationBackupRetentionPolicyDailyScheduleOutputReference(this, "daily_schedule");
+  public get dailySchedule() {
+    return this._dailySchedule;
+  }
+  public putDailySchedule(value: AutomanageConfigurationBackupRetentionPolicyDailySchedule) {
+    this._dailySchedule.internalValue = value;
+  }
+  public resetDailySchedule() {
+    this._dailySchedule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dailyScheduleInput() {
+    return this._dailySchedule.internalValue;
+  }
+
+  // weekly_schedule - computed: false, optional: true, required: false
+  private _weeklySchedule = new AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleOutputReference(this, "weekly_schedule");
+  public get weeklySchedule() {
+    return this._weeklySchedule;
+  }
+  public putWeeklySchedule(value: AutomanageConfigurationBackupRetentionPolicyWeeklySchedule) {
+    this._weeklySchedule.internalValue = value;
+  }
+  public resetWeeklySchedule() {
+    this._weeklySchedule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weeklyScheduleInput() {
+    return this._weeklySchedule.internalValue;
+  }
+}
+export interface AutomanageConfigurationBackupSchedulePolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#schedule_policy_type AutomanageConfiguration#schedule_policy_type}
+  */
+  readonly schedulePolicyType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#schedule_run_days AutomanageConfiguration#schedule_run_days}
+  */
+  readonly scheduleRunDays?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#schedule_run_frequency AutomanageConfiguration#schedule_run_frequency}
+  */
+  readonly scheduleRunFrequency?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#schedule_run_times AutomanageConfiguration#schedule_run_times}
+  */
+  readonly scheduleRunTimes?: string[];
+}
+
+export function automanageConfigurationBackupSchedulePolicyToTerraform(struct?: AutomanageConfigurationBackupSchedulePolicyOutputReference | AutomanageConfigurationBackupSchedulePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    schedule_policy_type: cdktf.stringToTerraform(struct!.schedulePolicyType),
+    schedule_run_days: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.scheduleRunDays),
+    schedule_run_frequency: cdktf.stringToTerraform(struct!.scheduleRunFrequency),
+    schedule_run_times: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.scheduleRunTimes),
+  }
+}
+
+export class AutomanageConfigurationBackupSchedulePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AutomanageConfigurationBackupSchedulePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._schedulePolicyType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schedulePolicyType = this._schedulePolicyType;
+    }
+    if (this._scheduleRunDays !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scheduleRunDays = this._scheduleRunDays;
+    }
+    if (this._scheduleRunFrequency !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scheduleRunFrequency = this._scheduleRunFrequency;
+    }
+    if (this._scheduleRunTimes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scheduleRunTimes = this._scheduleRunTimes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomanageConfigurationBackupSchedulePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._schedulePolicyType = undefined;
+      this._scheduleRunDays = undefined;
+      this._scheduleRunFrequency = undefined;
+      this._scheduleRunTimes = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._schedulePolicyType = value.schedulePolicyType;
+      this._scheduleRunDays = value.scheduleRunDays;
+      this._scheduleRunFrequency = value.scheduleRunFrequency;
+      this._scheduleRunTimes = value.scheduleRunTimes;
+    }
+  }
+
+  // schedule_policy_type - computed: false, optional: true, required: false
+  private _schedulePolicyType?: string; 
+  public get schedulePolicyType() {
+    return this.getStringAttribute('schedule_policy_type');
+  }
+  public set schedulePolicyType(value: string) {
+    this._schedulePolicyType = value;
+  }
+  public resetSchedulePolicyType() {
+    this._schedulePolicyType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schedulePolicyTypeInput() {
+    return this._schedulePolicyType;
+  }
+
+  // schedule_run_days - computed: false, optional: true, required: false
+  private _scheduleRunDays?: string[]; 
+  public get scheduleRunDays() {
+    return this.getListAttribute('schedule_run_days');
+  }
+  public set scheduleRunDays(value: string[]) {
+    this._scheduleRunDays = value;
+  }
+  public resetScheduleRunDays() {
+    this._scheduleRunDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleRunDaysInput() {
+    return this._scheduleRunDays;
+  }
+
+  // schedule_run_frequency - computed: false, optional: true, required: false
+  private _scheduleRunFrequency?: string; 
+  public get scheduleRunFrequency() {
+    return this.getStringAttribute('schedule_run_frequency');
+  }
+  public set scheduleRunFrequency(value: string) {
+    this._scheduleRunFrequency = value;
+  }
+  public resetScheduleRunFrequency() {
+    this._scheduleRunFrequency = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleRunFrequencyInput() {
+    return this._scheduleRunFrequency;
+  }
+
+  // schedule_run_times - computed: false, optional: true, required: false
+  private _scheduleRunTimes?: string[]; 
+  public get scheduleRunTimes() {
+    return this.getListAttribute('schedule_run_times');
+  }
+  public set scheduleRunTimes(value: string[]) {
+    this._scheduleRunTimes = value;
+  }
+  public resetScheduleRunTimes() {
+    this._scheduleRunTimes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleRunTimesInput() {
+    return this._scheduleRunTimes;
+  }
+}
+export interface AutomanageConfigurationBackup {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#instant_rp_retention_range_in_days AutomanageConfiguration#instant_rp_retention_range_in_days}
+  */
+  readonly instantRpRetentionRangeInDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#policy_name AutomanageConfiguration#policy_name}
+  */
+  readonly policyName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#time_zone AutomanageConfiguration#time_zone}
+  */
+  readonly timeZone?: string;
+  /**
+  * retention_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#retention_policy AutomanageConfiguration#retention_policy}
+  */
+  readonly retentionPolicy?: AutomanageConfigurationBackupRetentionPolicy;
+  /**
+  * schedule_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#schedule_policy AutomanageConfiguration#schedule_policy}
+  */
+  readonly schedulePolicy?: AutomanageConfigurationBackupSchedulePolicy;
+}
+
+export function automanageConfigurationBackupToTerraform(struct?: AutomanageConfigurationBackupOutputReference | AutomanageConfigurationBackup): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    instant_rp_retention_range_in_days: cdktf.numberToTerraform(struct!.instantRpRetentionRangeInDays),
+    policy_name: cdktf.stringToTerraform(struct!.policyName),
+    time_zone: cdktf.stringToTerraform(struct!.timeZone),
+    retention_policy: automanageConfigurationBackupRetentionPolicyToTerraform(struct!.retentionPolicy),
+    schedule_policy: automanageConfigurationBackupSchedulePolicyToTerraform(struct!.schedulePolicy),
+  }
+}
+
+export class AutomanageConfigurationBackupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AutomanageConfigurationBackup | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._instantRpRetentionRangeInDays !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.instantRpRetentionRangeInDays = this._instantRpRetentionRangeInDays;
+    }
+    if (this._policyName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.policyName = this._policyName;
+    }
+    if (this._timeZone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeZone = this._timeZone;
+    }
+    if (this._retentionPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.retentionPolicy = this._retentionPolicy?.internalValue;
+    }
+    if (this._schedulePolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schedulePolicy = this._schedulePolicy?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomanageConfigurationBackup | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._instantRpRetentionRangeInDays = undefined;
+      this._policyName = undefined;
+      this._timeZone = undefined;
+      this._retentionPolicy.internalValue = undefined;
+      this._schedulePolicy.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._instantRpRetentionRangeInDays = value.instantRpRetentionRangeInDays;
+      this._policyName = value.policyName;
+      this._timeZone = value.timeZone;
+      this._retentionPolicy.internalValue = value.retentionPolicy;
+      this._schedulePolicy.internalValue = value.schedulePolicy;
+    }
+  }
+
+  // instant_rp_retention_range_in_days - computed: false, optional: true, required: false
+  private _instantRpRetentionRangeInDays?: number; 
+  public get instantRpRetentionRangeInDays() {
+    return this.getNumberAttribute('instant_rp_retention_range_in_days');
+  }
+  public set instantRpRetentionRangeInDays(value: number) {
+    this._instantRpRetentionRangeInDays = value;
+  }
+  public resetInstantRpRetentionRangeInDays() {
+    this._instantRpRetentionRangeInDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instantRpRetentionRangeInDaysInput() {
+    return this._instantRpRetentionRangeInDays;
+  }
+
+  // policy_name - computed: false, optional: true, required: false
+  private _policyName?: string; 
+  public get policyName() {
+    return this.getStringAttribute('policy_name');
+  }
+  public set policyName(value: string) {
+    this._policyName = value;
+  }
+  public resetPolicyName() {
+    this._policyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyNameInput() {
+    return this._policyName;
+  }
+
+  // time_zone - computed: false, optional: true, required: false
+  private _timeZone?: string; 
+  public get timeZone() {
+    return this.getStringAttribute('time_zone');
+  }
+  public set timeZone(value: string) {
+    this._timeZone = value;
+  }
+  public resetTimeZone() {
+    this._timeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeZoneInput() {
+    return this._timeZone;
+  }
+
+  // retention_policy - computed: false, optional: true, required: false
+  private _retentionPolicy = new AutomanageConfigurationBackupRetentionPolicyOutputReference(this, "retention_policy");
+  public get retentionPolicy() {
+    return this._retentionPolicy;
+  }
+  public putRetentionPolicy(value: AutomanageConfigurationBackupRetentionPolicy) {
+    this._retentionPolicy.internalValue = value;
+  }
+  public resetRetentionPolicy() {
+    this._retentionPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionPolicyInput() {
+    return this._retentionPolicy.internalValue;
+  }
+
+  // schedule_policy - computed: false, optional: true, required: false
+  private _schedulePolicy = new AutomanageConfigurationBackupSchedulePolicyOutputReference(this, "schedule_policy");
+  public get schedulePolicy() {
+    return this._schedulePolicy;
+  }
+  public putSchedulePolicy(value: AutomanageConfigurationBackupSchedulePolicy) {
+    this._schedulePolicy.internalValue = value;
+  }
+  public resetSchedulePolicy() {
+    this._schedulePolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schedulePolicyInput() {
+    return this._schedulePolicy.internalValue;
+  }
+}
 export interface AutomanageConfigurationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#create AutomanageConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#create AutomanageConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#delete AutomanageConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#delete AutomanageConfiguration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#read AutomanageConfiguration#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#read AutomanageConfiguration#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration#update AutomanageConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration#update AutomanageConfiguration#update}
   */
   readonly update?: string;
 }
@@ -547,7 +1437,7 @@ export class AutomanageConfigurationTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration azurerm_automanage_configuration}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration azurerm_automanage_configuration}
 */
 export class AutomanageConfiguration extends cdktf.TerraformResource {
 
@@ -561,7 +1451,7 @@ export class AutomanageConfiguration extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/automanage_configuration azurerm_automanage_configuration} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/automanage_configuration azurerm_automanage_configuration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -572,7 +1462,7 @@ export class AutomanageConfiguration extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_automanage_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.59.0',
+        providerVersion: '3.60.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -594,6 +1484,8 @@ export class AutomanageConfiguration extends cdktf.TerraformResource {
     this._statusChangeAlertEnabled = config.statusChangeAlertEnabled;
     this._tags = config.tags;
     this._antimalware.internalValue = config.antimalware;
+    this._azureSecurityBaseline.internalValue = config.azureSecurityBaseline;
+    this._backup.internalValue = config.backup;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -768,6 +1660,38 @@ export class AutomanageConfiguration extends cdktf.TerraformResource {
     return this._antimalware.internalValue;
   }
 
+  // azure_security_baseline - computed: false, optional: true, required: false
+  private _azureSecurityBaseline = new AutomanageConfigurationAzureSecurityBaselineOutputReference(this, "azure_security_baseline");
+  public get azureSecurityBaseline() {
+    return this._azureSecurityBaseline;
+  }
+  public putAzureSecurityBaseline(value: AutomanageConfigurationAzureSecurityBaseline) {
+    this._azureSecurityBaseline.internalValue = value;
+  }
+  public resetAzureSecurityBaseline() {
+    this._azureSecurityBaseline.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureSecurityBaselineInput() {
+    return this._azureSecurityBaseline.internalValue;
+  }
+
+  // backup - computed: false, optional: true, required: false
+  private _backup = new AutomanageConfigurationBackupOutputReference(this, "backup");
+  public get backup() {
+    return this._backup;
+  }
+  public putBackup(value: AutomanageConfigurationBackup) {
+    this._backup.internalValue = value;
+  }
+  public resetBackup() {
+    this._backup.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backupInput() {
+    return this._backup.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new AutomanageConfigurationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -801,6 +1725,8 @@ export class AutomanageConfiguration extends cdktf.TerraformResource {
       status_change_alert_enabled: cdktf.booleanToTerraform(this._statusChangeAlertEnabled),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       antimalware: automanageConfigurationAntimalwareToTerraform(this._antimalware.internalValue),
+      azure_security_baseline: automanageConfigurationAzureSecurityBaselineToTerraform(this._azureSecurityBaseline.internalValue),
+      backup: automanageConfigurationBackupToTerraform(this._backup.internalValue),
       timeouts: automanageConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

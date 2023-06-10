@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,74 +8,190 @@ import * as cdktf from 'cdktf';
 
 export interface BackupPolicyFileShareConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#id BackupPolicyFileShare#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#id BackupPolicyFileShare#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#name BackupPolicyFileShare#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#name BackupPolicyFileShare#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#recovery_vault_name BackupPolicyFileShare#recovery_vault_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#recovery_vault_name BackupPolicyFileShare#recovery_vault_name}
   */
   readonly recoveryVaultName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#resource_group_name BackupPolicyFileShare#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#resource_group_name BackupPolicyFileShare#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#timezone BackupPolicyFileShare#timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#timezone BackupPolicyFileShare#timezone}
   */
   readonly timezone?: string;
   /**
   * backup block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#backup BackupPolicyFileShare#backup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#backup BackupPolicyFileShare#backup}
   */
   readonly backup: BackupPolicyFileShareBackup;
   /**
   * retention_daily block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#retention_daily BackupPolicyFileShare#retention_daily}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#retention_daily BackupPolicyFileShare#retention_daily}
   */
   readonly retentionDaily: BackupPolicyFileShareRetentionDaily;
   /**
   * retention_monthly block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#retention_monthly BackupPolicyFileShare#retention_monthly}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#retention_monthly BackupPolicyFileShare#retention_monthly}
   */
   readonly retentionMonthly?: BackupPolicyFileShareRetentionMonthly;
   /**
   * retention_weekly block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#retention_weekly BackupPolicyFileShare#retention_weekly}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#retention_weekly BackupPolicyFileShare#retention_weekly}
   */
   readonly retentionWeekly?: BackupPolicyFileShareRetentionWeekly;
   /**
   * retention_yearly block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#retention_yearly BackupPolicyFileShare#retention_yearly}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#retention_yearly BackupPolicyFileShare#retention_yearly}
   */
   readonly retentionYearly?: BackupPolicyFileShareRetentionYearly;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#timeouts BackupPolicyFileShare#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#timeouts BackupPolicyFileShare#timeouts}
   */
   readonly timeouts?: BackupPolicyFileShareTimeouts;
 }
+export interface BackupPolicyFileShareBackupHourly {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#interval BackupPolicyFileShare#interval}
+  */
+  readonly interval: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#start_time BackupPolicyFileShare#start_time}
+  */
+  readonly startTime: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#window_duration BackupPolicyFileShare#window_duration}
+  */
+  readonly windowDuration: number;
+}
+
+export function backupPolicyFileShareBackupHourlyToTerraform(struct?: BackupPolicyFileShareBackupHourlyOutputReference | BackupPolicyFileShareBackupHourly): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    interval: cdktf.numberToTerraform(struct!.interval),
+    start_time: cdktf.stringToTerraform(struct!.startTime),
+    window_duration: cdktf.numberToTerraform(struct!.windowDuration),
+  }
+}
+
+export class BackupPolicyFileShareBackupHourlyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BackupPolicyFileShareBackupHourly | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._interval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.interval = this._interval;
+    }
+    if (this._startTime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.startTime = this._startTime;
+    }
+    if (this._windowDuration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.windowDuration = this._windowDuration;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BackupPolicyFileShareBackupHourly | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._interval = undefined;
+      this._startTime = undefined;
+      this._windowDuration = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._interval = value.interval;
+      this._startTime = value.startTime;
+      this._windowDuration = value.windowDuration;
+    }
+  }
+
+  // interval - computed: false, optional: false, required: true
+  private _interval?: number; 
+  public get interval() {
+    return this.getNumberAttribute('interval');
+  }
+  public set interval(value: number) {
+    this._interval = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intervalInput() {
+    return this._interval;
+  }
+
+  // start_time - computed: false, optional: false, required: true
+  private _startTime?: string; 
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+  public set startTime(value: string) {
+    this._startTime = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTimeInput() {
+    return this._startTime;
+  }
+
+  // window_duration - computed: false, optional: false, required: true
+  private _windowDuration?: number; 
+  public get windowDuration() {
+    return this.getNumberAttribute('window_duration');
+  }
+  public set windowDuration(value: number) {
+    this._windowDuration = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get windowDurationInput() {
+    return this._windowDuration;
+  }
+}
 export interface BackupPolicyFileShareBackup {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#frequency BackupPolicyFileShare#frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#frequency BackupPolicyFileShare#frequency}
   */
   readonly frequency: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#time BackupPolicyFileShare#time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#time BackupPolicyFileShare#time}
   */
-  readonly time: string;
+  readonly time?: string;
+  /**
+  * hourly block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#hourly BackupPolicyFileShare#hourly}
+  */
+  readonly hourly?: BackupPolicyFileShareBackupHourly;
 }
 
 export function backupPolicyFileShareBackupToTerraform(struct?: BackupPolicyFileShareBackupOutputReference | BackupPolicyFileShareBackup): any {
@@ -91,6 +202,7 @@ export function backupPolicyFileShareBackupToTerraform(struct?: BackupPolicyFile
   return {
     frequency: cdktf.stringToTerraform(struct!.frequency),
     time: cdktf.stringToTerraform(struct!.time),
+    hourly: backupPolicyFileShareBackupHourlyToTerraform(struct!.hourly),
   }
 }
 
@@ -116,6 +228,10 @@ export class BackupPolicyFileShareBackupOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.time = this._time;
     }
+    if (this._hourly?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hourly = this._hourly?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -124,11 +240,13 @@ export class BackupPolicyFileShareBackupOutputReference extends cdktf.ComplexObj
       this.isEmptyObject = false;
       this._frequency = undefined;
       this._time = undefined;
+      this._hourly.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._frequency = value.frequency;
       this._time = value.time;
+      this._hourly.internalValue = value.hourly;
     }
   }
 
@@ -145,7 +263,7 @@ export class BackupPolicyFileShareBackupOutputReference extends cdktf.ComplexObj
     return this._frequency;
   }
 
-  // time - computed: false, optional: false, required: true
+  // time - computed: false, optional: true, required: false
   private _time?: string; 
   public get time() {
     return this.getStringAttribute('time');
@@ -153,14 +271,33 @@ export class BackupPolicyFileShareBackupOutputReference extends cdktf.ComplexObj
   public set time(value: string) {
     this._time = value;
   }
+  public resetTime() {
+    this._time = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get timeInput() {
     return this._time;
   }
+
+  // hourly - computed: false, optional: true, required: false
+  private _hourly = new BackupPolicyFileShareBackupHourlyOutputReference(this, "hourly");
+  public get hourly() {
+    return this._hourly;
+  }
+  public putHourly(value: BackupPolicyFileShareBackupHourly) {
+    this._hourly.internalValue = value;
+  }
+  public resetHourly() {
+    this._hourly.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hourlyInput() {
+    return this._hourly.internalValue;
+  }
 }
 export interface BackupPolicyFileShareRetentionDaily {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}
   */
   readonly count: number;
 }
@@ -222,17 +359,25 @@ export class BackupPolicyFileShareRetentionDailyOutputReference extends cdktf.Co
 }
 export interface BackupPolicyFileShareRetentionMonthly {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}
   */
   readonly count: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#days BackupPolicyFileShare#days}
   */
-  readonly weekdays: string[];
+  readonly days?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#weeks BackupPolicyFileShare#weeks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#include_last_days BackupPolicyFileShare#include_last_days}
   */
-  readonly weeks: string[];
+  readonly includeLastDays?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}
+  */
+  readonly weekdays?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#weeks BackupPolicyFileShare#weeks}
+  */
+  readonly weeks?: string[];
 }
 
 export function backupPolicyFileShareRetentionMonthlyToTerraform(struct?: BackupPolicyFileShareRetentionMonthlyOutputReference | BackupPolicyFileShareRetentionMonthly): any {
@@ -242,6 +387,8 @@ export function backupPolicyFileShareRetentionMonthlyToTerraform(struct?: Backup
   }
   return {
     count: cdktf.numberToTerraform(struct!.count),
+    days: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.days),
+    include_last_days: cdktf.booleanToTerraform(struct!.includeLastDays),
     weekdays: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weekdays),
     weeks: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weeks),
   }
@@ -265,6 +412,14 @@ export class BackupPolicyFileShareRetentionMonthlyOutputReference extends cdktf.
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
+    if (this._days !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.days = this._days;
+    }
+    if (this._includeLastDays !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.includeLastDays = this._includeLastDays;
+    }
     if (this._weekdays !== undefined) {
       hasAnyValues = true;
       internalValueResult.weekdays = this._weekdays;
@@ -280,12 +435,16 @@ export class BackupPolicyFileShareRetentionMonthlyOutputReference extends cdktf.
     if (value === undefined) {
       this.isEmptyObject = false;
       this._count = undefined;
+      this._days = undefined;
+      this._includeLastDays = undefined;
       this._weekdays = undefined;
       this._weeks = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
+      this._days = value.days;
+      this._includeLastDays = value.includeLastDays;
       this._weekdays = value.weekdays;
       this._weeks = value.weeks;
     }
@@ -304,7 +463,39 @@ export class BackupPolicyFileShareRetentionMonthlyOutputReference extends cdktf.
     return this._count;
   }
 
-  // weekdays - computed: false, optional: false, required: true
+  // days - computed: false, optional: true, required: false
+  private _days?: number[]; 
+  public get days() {
+    return cdktf.Token.asNumberList(cdktf.Fn.tolist(this.getNumberListAttribute('days')));
+  }
+  public set days(value: number[]) {
+    this._days = value;
+  }
+  public resetDays() {
+    this._days = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysInput() {
+    return this._days;
+  }
+
+  // include_last_days - computed: false, optional: true, required: false
+  private _includeLastDays?: boolean | cdktf.IResolvable; 
+  public get includeLastDays() {
+    return this.getBooleanAttribute('include_last_days');
+  }
+  public set includeLastDays(value: boolean | cdktf.IResolvable) {
+    this._includeLastDays = value;
+  }
+  public resetIncludeLastDays() {
+    this._includeLastDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeLastDaysInput() {
+    return this._includeLastDays;
+  }
+
+  // weekdays - computed: false, optional: true, required: false
   private _weekdays?: string[]; 
   public get weekdays() {
     return cdktf.Fn.tolist(this.getListAttribute('weekdays'));
@@ -312,18 +503,24 @@ export class BackupPolicyFileShareRetentionMonthlyOutputReference extends cdktf.
   public set weekdays(value: string[]) {
     this._weekdays = value;
   }
+  public resetWeekdays() {
+    this._weekdays = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get weekdaysInput() {
     return this._weekdays;
   }
 
-  // weeks - computed: false, optional: false, required: true
+  // weeks - computed: false, optional: true, required: false
   private _weeks?: string[]; 
   public get weeks() {
     return cdktf.Fn.tolist(this.getListAttribute('weeks'));
   }
   public set weeks(value: string[]) {
     this._weeks = value;
+  }
+  public resetWeeks() {
+    this._weeks = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get weeksInput() {
@@ -332,11 +529,11 @@ export class BackupPolicyFileShareRetentionMonthlyOutputReference extends cdktf.
 }
 export interface BackupPolicyFileShareRetentionWeekly {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}
   */
   readonly count: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}
   */
   readonly weekdays: string[];
 }
@@ -418,21 +615,29 @@ export class BackupPolicyFileShareRetentionWeeklyOutputReference extends cdktf.C
 }
 export interface BackupPolicyFileShareRetentionYearly {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#count BackupPolicyFileShare#count}
   */
   readonly count: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#months BackupPolicyFileShare#months}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#days BackupPolicyFileShare#days}
+  */
+  readonly days?: number[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#include_last_days BackupPolicyFileShare#include_last_days}
+  */
+  readonly includeLastDays?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#months BackupPolicyFileShare#months}
   */
   readonly months: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#weekdays BackupPolicyFileShare#weekdays}
   */
-  readonly weekdays: string[];
+  readonly weekdays?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#weeks BackupPolicyFileShare#weeks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#weeks BackupPolicyFileShare#weeks}
   */
-  readonly weeks: string[];
+  readonly weeks?: string[];
 }
 
 export function backupPolicyFileShareRetentionYearlyToTerraform(struct?: BackupPolicyFileShareRetentionYearlyOutputReference | BackupPolicyFileShareRetentionYearly): any {
@@ -442,6 +647,8 @@ export function backupPolicyFileShareRetentionYearlyToTerraform(struct?: BackupP
   }
   return {
     count: cdktf.numberToTerraform(struct!.count),
+    days: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.days),
+    include_last_days: cdktf.booleanToTerraform(struct!.includeLastDays),
     months: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.months),
     weekdays: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weekdays),
     weeks: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weeks),
@@ -466,6 +673,14 @@ export class BackupPolicyFileShareRetentionYearlyOutputReference extends cdktf.C
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
+    if (this._days !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.days = this._days;
+    }
+    if (this._includeLastDays !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.includeLastDays = this._includeLastDays;
+    }
     if (this._months !== undefined) {
       hasAnyValues = true;
       internalValueResult.months = this._months;
@@ -485,6 +700,8 @@ export class BackupPolicyFileShareRetentionYearlyOutputReference extends cdktf.C
     if (value === undefined) {
       this.isEmptyObject = false;
       this._count = undefined;
+      this._days = undefined;
+      this._includeLastDays = undefined;
       this._months = undefined;
       this._weekdays = undefined;
       this._weeks = undefined;
@@ -492,6 +709,8 @@ export class BackupPolicyFileShareRetentionYearlyOutputReference extends cdktf.C
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
+      this._days = value.days;
+      this._includeLastDays = value.includeLastDays;
       this._months = value.months;
       this._weekdays = value.weekdays;
       this._weeks = value.weeks;
@@ -511,6 +730,38 @@ export class BackupPolicyFileShareRetentionYearlyOutputReference extends cdktf.C
     return this._count;
   }
 
+  // days - computed: false, optional: true, required: false
+  private _days?: number[]; 
+  public get days() {
+    return cdktf.Token.asNumberList(cdktf.Fn.tolist(this.getNumberListAttribute('days')));
+  }
+  public set days(value: number[]) {
+    this._days = value;
+  }
+  public resetDays() {
+    this._days = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysInput() {
+    return this._days;
+  }
+
+  // include_last_days - computed: false, optional: true, required: false
+  private _includeLastDays?: boolean | cdktf.IResolvable; 
+  public get includeLastDays() {
+    return this.getBooleanAttribute('include_last_days');
+  }
+  public set includeLastDays(value: boolean | cdktf.IResolvable) {
+    this._includeLastDays = value;
+  }
+  public resetIncludeLastDays() {
+    this._includeLastDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeLastDaysInput() {
+    return this._includeLastDays;
+  }
+
   // months - computed: false, optional: false, required: true
   private _months?: string[]; 
   public get months() {
@@ -524,7 +775,7 @@ export class BackupPolicyFileShareRetentionYearlyOutputReference extends cdktf.C
     return this._months;
   }
 
-  // weekdays - computed: false, optional: false, required: true
+  // weekdays - computed: false, optional: true, required: false
   private _weekdays?: string[]; 
   public get weekdays() {
     return cdktf.Fn.tolist(this.getListAttribute('weekdays'));
@@ -532,18 +783,24 @@ export class BackupPolicyFileShareRetentionYearlyOutputReference extends cdktf.C
   public set weekdays(value: string[]) {
     this._weekdays = value;
   }
+  public resetWeekdays() {
+    this._weekdays = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get weekdaysInput() {
     return this._weekdays;
   }
 
-  // weeks - computed: false, optional: false, required: true
+  // weeks - computed: false, optional: true, required: false
   private _weeks?: string[]; 
   public get weeks() {
     return cdktf.Fn.tolist(this.getListAttribute('weeks'));
   }
   public set weeks(value: string[]) {
     this._weeks = value;
+  }
+  public resetWeeks() {
+    this._weeks = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get weeksInput() {
@@ -552,19 +809,19 @@ export class BackupPolicyFileShareRetentionYearlyOutputReference extends cdktf.C
 }
 export interface BackupPolicyFileShareTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#create BackupPolicyFileShare#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#create BackupPolicyFileShare#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#delete BackupPolicyFileShare#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#delete BackupPolicyFileShare#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#read BackupPolicyFileShare#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#read BackupPolicyFileShare#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share#update BackupPolicyFileShare#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share#update BackupPolicyFileShare#update}
   */
   readonly update?: string;
 }
@@ -708,7 +965,7 @@ export class BackupPolicyFileShareTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share azurerm_backup_policy_file_share}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share azurerm_backup_policy_file_share}
 */
 export class BackupPolicyFileShare extends cdktf.TerraformResource {
 
@@ -722,7 +979,7 @@ export class BackupPolicyFileShare extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.59.0/docs/resources/backup_policy_file_share azurerm_backup_policy_file_share} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/backup_policy_file_share azurerm_backup_policy_file_share} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -733,7 +990,7 @@ export class BackupPolicyFileShare extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_backup_policy_file_share',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.59.0',
+        providerVersion: '3.60.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
