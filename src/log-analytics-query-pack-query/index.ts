@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,74 +13,74 @@ import * as cdktf from 'cdktf';
 
 export interface LogAnalyticsQueryPackQueryConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#additional_settings_json LogAnalyticsQueryPackQuery#additional_settings_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#additional_settings_json LogAnalyticsQueryPackQuery#additional_settings_json}
   */
   readonly additionalSettingsJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#body LogAnalyticsQueryPackQuery#body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#body LogAnalyticsQueryPackQuery#body}
   */
   readonly body: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#categories LogAnalyticsQueryPackQuery#categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#categories LogAnalyticsQueryPackQuery#categories}
   */
   readonly categories?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#description LogAnalyticsQueryPackQuery#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#description LogAnalyticsQueryPackQuery#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#display_name LogAnalyticsQueryPackQuery#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#display_name LogAnalyticsQueryPackQuery#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#id LogAnalyticsQueryPackQuery#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#id LogAnalyticsQueryPackQuery#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#name LogAnalyticsQueryPackQuery#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#name LogAnalyticsQueryPackQuery#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#query_pack_id LogAnalyticsQueryPackQuery#query_pack_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#query_pack_id LogAnalyticsQueryPackQuery#query_pack_id}
   */
   readonly queryPackId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#resource_types LogAnalyticsQueryPackQuery#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#resource_types LogAnalyticsQueryPackQuery#resource_types}
   */
   readonly resourceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#solutions LogAnalyticsQueryPackQuery#solutions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#solutions LogAnalyticsQueryPackQuery#solutions}
   */
   readonly solutions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#tags LogAnalyticsQueryPackQuery#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#tags LogAnalyticsQueryPackQuery#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#timeouts LogAnalyticsQueryPackQuery#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#timeouts LogAnalyticsQueryPackQuery#timeouts}
   */
   readonly timeouts?: LogAnalyticsQueryPackQueryTimeouts;
 }
 export interface LogAnalyticsQueryPackQueryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#create LogAnalyticsQueryPackQuery#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#create LogAnalyticsQueryPackQuery#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#delete LogAnalyticsQueryPackQuery#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#delete LogAnalyticsQueryPackQuery#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#read LogAnalyticsQueryPackQuery#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#read LogAnalyticsQueryPackQuery#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query#update LogAnalyticsQueryPackQuery#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query#update LogAnalyticsQueryPackQuery#update}
   */
   readonly update?: string;
 }
@@ -224,7 +224,7 @@ export class LogAnalyticsQueryPackQueryTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query azurerm_log_analytics_query_pack_query}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query azurerm_log_analytics_query_pack_query}
 */
 export class LogAnalyticsQueryPackQuery extends cdktf.TerraformResource {
 
@@ -238,7 +238,7 @@ export class LogAnalyticsQueryPackQuery extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/log_analytics_query_pack_query azurerm_log_analytics_query_pack_query} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/log_analytics_query_pack_query azurerm_log_analytics_query_pack_query} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -249,7 +249,7 @@ export class LogAnalyticsQueryPackQuery extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_log_analytics_query_pack_query',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.60.0',
+        providerVersion: '3.61.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

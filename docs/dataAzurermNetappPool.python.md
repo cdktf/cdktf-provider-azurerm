@@ -1,6 +1,6 @@
 # `data_azurerm_netapp_pool`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_netapp_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool).
+Refer to the Terraform Registory for docs: [`data_azurerm_netapp_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool).
 
 # `dataAzurermNetappPool` Submodule <a name="`dataAzurermNetappPool` Submodule" id="@cdktf/provider-azurerm.dataAzurermNetappPool"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_netapp_pool`](https://
 
 ### DataAzurermNetappPool <a name="DataAzurermNetappPool" id="@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPool"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool azurerm_netapp_pool}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool azurerm_netapp_pool}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPool.Initializer"></a>
 
@@ -44,10 +44,10 @@ dataAzurermNetappPool.DataAzurermNetappPool(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPool.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPool.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPool.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPool.Initializer.parameter.accountName">account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#account_name DataAzurermNetappPool#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPool.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#name DataAzurermNetappPool#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPool.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#resource_group_name DataAzurermNetappPool#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPool.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#id DataAzurermNetappPool#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPool.Initializer.parameter.accountName">account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#account_name DataAzurermNetappPool#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPool.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#name DataAzurermNetappPool#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPool.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#resource_group_name DataAzurermNetappPool#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPool.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#id DataAzurermNetappPool#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPool.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolTimeouts">DataAzurermNetappPoolTimeouts</a></code> | timeouts block. |
 
 ---
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#account_name DataAzurermNetappPool#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#account_name DataAzurermNetappPool#account_name}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#name DataAzurermNetappPool#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#name DataAzurermNetappPool#name}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#resource_group_name DataAzurermNetappPool#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#resource_group_name DataAzurermNetappPool#resource_group_name}.
 
 ---
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#id DataAzurermNetappPool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#id DataAzurermNetappPool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -153,7 +153,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#timeouts DataAzurermNetappPool#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#timeouts DataAzurermNetappPool#timeouts}
 
 ---
 
@@ -404,7 +404,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#read DataAzurermNetappPool#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#read DataAzurermNetappPool#read}.
 
 ---
 
@@ -834,10 +834,10 @@ dataAzurermNetappPool.DataAzurermNetappPoolConfig(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolConfig.property.accountName">account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#account_name DataAzurermNetappPool#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#name DataAzurermNetappPool#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#resource_group_name DataAzurermNetappPool#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#id DataAzurermNetappPool#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolConfig.property.accountName">account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#account_name DataAzurermNetappPool#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#name DataAzurermNetappPool#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#resource_group_name DataAzurermNetappPool#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#id DataAzurermNetappPool#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolTimeouts">DataAzurermNetappPoolTimeouts</a></code> | timeouts block. |
 
 ---
@@ -920,7 +920,7 @@ account_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#account_name DataAzurermNetappPool#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#account_name DataAzurermNetappPool#account_name}.
 
 ---
 
@@ -932,7 +932,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#name DataAzurermNetappPool#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#name DataAzurermNetappPool#name}.
 
 ---
 
@@ -944,7 +944,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#resource_group_name DataAzurermNetappPool#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#resource_group_name DataAzurermNetappPool#resource_group_name}.
 
 ---
 
@@ -956,7 +956,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#id DataAzurermNetappPool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#id DataAzurermNetappPool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -973,7 +973,7 @@ timeouts: DataAzurermNetappPoolTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#timeouts DataAzurermNetappPool#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#timeouts DataAzurermNetappPool#timeouts}
 
 ---
 
@@ -993,7 +993,7 @@ dataAzurermNetappPool.DataAzurermNetappPoolTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#read DataAzurermNetappPool#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappPool.DataAzurermNetappPoolTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#read DataAzurermNetappPool#read}. |
 
 ---
 
@@ -1005,7 +1005,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/netapp_pool#read DataAzurermNetappPool#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/netapp_pool#read DataAzurermNetappPool#read}.
 
 ---
 

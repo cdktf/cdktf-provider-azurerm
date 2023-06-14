@@ -1,6 +1,6 @@
 # `azurerm_nginx_certificate`
 
-Refer to the Terraform Registory for docs: [`azurerm_nginx_certificate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate).
+Refer to the Terraform Registory for docs: [`azurerm_nginx_certificate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate).
 
 # `nginxCertificate` Submodule <a name="`nginxCertificate` Submodule" id="@cdktf/provider-azurerm.nginxCertificate"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_nginx_certificate`](https:/
 
 ### NginxCertificate <a name="NginxCertificate" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificate"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate azurerm_nginx_certificate}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate azurerm_nginx_certificate}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer"></a>
 
@@ -46,12 +46,12 @@ nginxCertificate.NginxCertificate(
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.certificateVirtualPath">certificate_virtual_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#certificate_virtual_path NginxCertificate#certificate_virtual_path}. |
-| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.keyVaultSecretId">key_vault_secret_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#key_vault_secret_id NginxCertificate#key_vault_secret_id}. |
-| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.keyVirtualPath">key_virtual_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#key_virtual_path NginxCertificate#key_virtual_path}. |
-| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#name NginxCertificate#name}. |
-| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.nginxDeploymentId">nginx_deployment_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#nginx_deployment_id NginxCertificate#nginx_deployment_id}. |
-| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#id NginxCertificate#id}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.certificateVirtualPath">certificate_virtual_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#certificate_virtual_path NginxCertificate#certificate_virtual_path}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.keyVaultSecretId">key_vault_secret_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#key_vault_secret_id NginxCertificate#key_vault_secret_id}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.keyVirtualPath">key_virtual_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#key_virtual_path NginxCertificate#key_virtual_path}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#name NginxCertificate#name}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.nginxDeploymentId">nginx_deployment_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#nginx_deployment_id NginxCertificate#nginx_deployment_id}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#id NginxCertificate#id}. |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeouts">NginxCertificateTimeouts</a></code> | timeouts block. |
 
 ---
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#certificate_virtual_path NginxCertificate#certificate_virtual_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#certificate_virtual_path NginxCertificate#certificate_virtual_path}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#key_vault_secret_id NginxCertificate#key_vault_secret_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#key_vault_secret_id NginxCertificate#key_vault_secret_id}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#key_virtual_path NginxCertificate#key_virtual_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#key_virtual_path NginxCertificate#key_virtual_path}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#name NginxCertificate#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#name NginxCertificate#name}.
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#nginx_deployment_id NginxCertificate#nginx_deployment_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#nginx_deployment_id NginxCertificate#nginx_deployment_id}.
 
 ---
 
@@ -160,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#id NginxCertificate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#id NginxCertificate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -173,7 +173,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#timeouts NginxCertificate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#timeouts NginxCertificate#timeouts}
 
 ---
 
@@ -418,7 +418,8 @@ def interpolation_for_attribute(
 def put_timeouts(
   create: str = None,
   delete: str = None,
-  read: str = None
+  read: str = None,
+  update: str = None
 ) -> None
 ```
 
@@ -426,7 +427,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#create NginxCertificate#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#create NginxCertificate#create}.
 
 ---
 
@@ -434,7 +435,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#delete NginxCertificate#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#delete NginxCertificate#delete}.
 
 ---
 
@@ -442,7 +443,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#read NginxCertificate#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#read NginxCertificate#read}.
+
+---
+
+###### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.putTimeouts.parameter.update"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#update NginxCertificate#update}.
 
 ---
 
@@ -907,12 +916,12 @@ nginxCertificate.NginxCertificateConfig(
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.certificateVirtualPath">certificate_virtual_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#certificate_virtual_path NginxCertificate#certificate_virtual_path}. |
-| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.keyVaultSecretId">key_vault_secret_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#key_vault_secret_id NginxCertificate#key_vault_secret_id}. |
-| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.keyVirtualPath">key_virtual_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#key_virtual_path NginxCertificate#key_virtual_path}. |
-| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#name NginxCertificate#name}. |
-| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.nginxDeploymentId">nginx_deployment_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#nginx_deployment_id NginxCertificate#nginx_deployment_id}. |
-| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#id NginxCertificate#id}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.certificateVirtualPath">certificate_virtual_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#certificate_virtual_path NginxCertificate#certificate_virtual_path}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.keyVaultSecretId">key_vault_secret_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#key_vault_secret_id NginxCertificate#key_vault_secret_id}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.keyVirtualPath">key_virtual_path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#key_virtual_path NginxCertificate#key_virtual_path}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#name NginxCertificate#name}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.nginxDeploymentId">nginx_deployment_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#nginx_deployment_id NginxCertificate#nginx_deployment_id}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#id NginxCertificate#id}. |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeouts">NginxCertificateTimeouts</a></code> | timeouts block. |
 
 ---
@@ -995,7 +1004,7 @@ certificate_virtual_path: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#certificate_virtual_path NginxCertificate#certificate_virtual_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#certificate_virtual_path NginxCertificate#certificate_virtual_path}.
 
 ---
 
@@ -1007,7 +1016,7 @@ key_vault_secret_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#key_vault_secret_id NginxCertificate#key_vault_secret_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#key_vault_secret_id NginxCertificate#key_vault_secret_id}.
 
 ---
 
@@ -1019,7 +1028,7 @@ key_virtual_path: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#key_virtual_path NginxCertificate#key_virtual_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#key_virtual_path NginxCertificate#key_virtual_path}.
 
 ---
 
@@ -1031,7 +1040,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#name NginxCertificate#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#name NginxCertificate#name}.
 
 ---
 
@@ -1043,7 +1052,7 @@ nginx_deployment_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#nginx_deployment_id NginxCertificate#nginx_deployment_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#nginx_deployment_id NginxCertificate#nginx_deployment_id}.
 
 ---
 
@@ -1055,7 +1064,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#id NginxCertificate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#id NginxCertificate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1072,7 +1081,7 @@ timeouts: NginxCertificateTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#timeouts NginxCertificate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#timeouts NginxCertificate#timeouts}
 
 ---
 
@@ -1086,7 +1095,8 @@ from cdktf_cdktf_provider_azurerm import nginx_certificate
 nginxCertificate.NginxCertificateTimeouts(
   create: str = None,
   delete: str = None,
-  read: str = None
+  read: str = None,
+  update: str = None
 )
 ```
 
@@ -1094,9 +1104,10 @@ nginxCertificate.NginxCertificateTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#create NginxCertificate#create}. |
-| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#delete NginxCertificate#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#read NginxCertificate#read}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#create NginxCertificate#create}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#delete NginxCertificate#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#read NginxCertificate#read}. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#update NginxCertificate#update}. |
 
 ---
 
@@ -1108,7 +1119,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#create NginxCertificate#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#create NginxCertificate#create}.
 
 ---
 
@@ -1120,7 +1131,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#delete NginxCertificate#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#delete NginxCertificate#delete}.
 
 ---
 
@@ -1132,7 +1143,19 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/nginx_certificate#read NginxCertificate#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#read NginxCertificate#read}.
+
+---
+
+##### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeouts.property.update"></a>
+
+```python
+update: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/nginx_certificate#update NginxCertificate#update}.
 
 ---
 
@@ -1194,6 +1217,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.resetCreate">reset_create</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.resetDelete">reset_delete</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.resetRead">reset_read</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.resetUpdate">reset_update</a></code> | *No description.* |
 
 ---
 
@@ -1387,6 +1411,12 @@ def reset_delete() -> None
 def reset_read() -> None
 ```
 
+##### `reset_update` <a name="reset_update" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.resetUpdate"></a>
+
+```python
+def reset_update() -> None
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -1397,9 +1427,11 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.property.createInput">create_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.property.deleteInput">delete_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.property.readInput">read_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.property.updateInput">update_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeouts">NginxCertificateTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
 
 ---
@@ -1458,6 +1490,16 @@ read_input: str
 
 ---
 
+##### `update_input`<sup>Optional</sup> <a name="update_input" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.property.updateInput"></a>
+
+```python
+update_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `create`<sup>Required</sup> <a name="create" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.property.create"></a>
 
 ```python
@@ -1482,6 +1524,16 @@ delete: str
 
 ```python
 read: str
+```
+
+- *Type:* str
+
+---
+
+##### `update`<sup>Required</sup> <a name="update" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.property.update"></a>
+
+```python
+update: str
 ```
 
 - *Type:* str

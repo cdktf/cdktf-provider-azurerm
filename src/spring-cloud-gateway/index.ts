@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,94 +13,100 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#application_performance_monitoring_types SpringCloudGateway#application_performance_monitoring_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#application_performance_monitoring_types SpringCloudGateway#application_performance_monitoring_types}
   */
   readonly applicationPerformanceMonitoringTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#environment_variables SpringCloudGateway#environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#environment_variables SpringCloudGateway#environment_variables}
   */
   readonly environmentVariables?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#https_only SpringCloudGateway#https_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#https_only SpringCloudGateway#https_only}
   */
   readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#id SpringCloudGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#id SpringCloudGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#instance_count SpringCloudGateway#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#instance_count SpringCloudGateway#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#name SpringCloudGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#name SpringCloudGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#public_network_access_enabled SpringCloudGateway#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#public_network_access_enabled SpringCloudGateway#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#sensitive_environment_variables SpringCloudGateway#sensitive_environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#sensitive_environment_variables SpringCloudGateway#sensitive_environment_variables}
   */
   readonly sensitiveEnvironmentVariables?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#spring_cloud_service_id SpringCloudGateway#spring_cloud_service_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#spring_cloud_service_id SpringCloudGateway#spring_cloud_service_id}
   */
   readonly springCloudServiceId: string;
   /**
   * api_metadata block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#api_metadata SpringCloudGateway#api_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#api_metadata SpringCloudGateway#api_metadata}
   */
   readonly apiMetadata?: SpringCloudGatewayApiMetadata;
   /**
+  * client_authorization block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#client_authorization SpringCloudGateway#client_authorization}
+  */
+  readonly clientAuthorization?: SpringCloudGatewayClientAuthorization;
+  /**
   * cors block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#cors SpringCloudGateway#cors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#cors SpringCloudGateway#cors}
   */
   readonly cors?: SpringCloudGatewayCors;
   /**
   * quota block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#quota SpringCloudGateway#quota}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#quota SpringCloudGateway#quota}
   */
   readonly quota?: SpringCloudGatewayQuota;
   /**
   * sso block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#sso SpringCloudGateway#sso}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#sso SpringCloudGateway#sso}
   */
   readonly sso?: SpringCloudGatewaySso;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#timeouts SpringCloudGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#timeouts SpringCloudGateway#timeouts}
   */
   readonly timeouts?: SpringCloudGatewayTimeouts;
 }
 export interface SpringCloudGatewayApiMetadata {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#description SpringCloudGateway#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#description SpringCloudGateway#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#documentation_url SpringCloudGateway#documentation_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#documentation_url SpringCloudGateway#documentation_url}
   */
   readonly documentationUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#server_url SpringCloudGateway#server_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#server_url SpringCloudGateway#server_url}
   */
   readonly serverUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#title SpringCloudGateway#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#title SpringCloudGateway#title}
   */
   readonly title?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#version SpringCloudGateway#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#version SpringCloudGateway#version}
   */
   readonly version?: string;
 }
@@ -255,29 +261,121 @@ export class SpringCloudGatewayApiMetadataOutputReference extends cdktf.ComplexO
     return this._version;
   }
 }
+export interface SpringCloudGatewayClientAuthorization {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#certificate_ids SpringCloudGateway#certificate_ids}
+  */
+  readonly certificateIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#verification_enabled SpringCloudGateway#verification_enabled}
+  */
+  readonly verificationEnabled?: boolean | cdktf.IResolvable;
+}
+
+export function springCloudGatewayClientAuthorizationToTerraform(struct?: SpringCloudGatewayClientAuthorizationOutputReference | SpringCloudGatewayClientAuthorization): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    certificate_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.certificateIds),
+    verification_enabled: cdktf.booleanToTerraform(struct!.verificationEnabled),
+  }
+}
+
+export class SpringCloudGatewayClientAuthorizationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SpringCloudGatewayClientAuthorization | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._certificateIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificateIds = this._certificateIds;
+    }
+    if (this._verificationEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.verificationEnabled = this._verificationEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudGatewayClientAuthorization | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._certificateIds = undefined;
+      this._verificationEnabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._certificateIds = value.certificateIds;
+      this._verificationEnabled = value.verificationEnabled;
+    }
+  }
+
+  // certificate_ids - computed: false, optional: true, required: false
+  private _certificateIds?: string[]; 
+  public get certificateIds() {
+    return this.getListAttribute('certificate_ids');
+  }
+  public set certificateIds(value: string[]) {
+    this._certificateIds = value;
+  }
+  public resetCertificateIds() {
+    this._certificateIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateIdsInput() {
+    return this._certificateIds;
+  }
+
+  // verification_enabled - computed: false, optional: true, required: false
+  private _verificationEnabled?: boolean | cdktf.IResolvable; 
+  public get verificationEnabled() {
+    return this.getBooleanAttribute('verification_enabled');
+  }
+  public set verificationEnabled(value: boolean | cdktf.IResolvable) {
+    this._verificationEnabled = value;
+  }
+  public resetVerificationEnabled() {
+    this._verificationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get verificationEnabledInput() {
+    return this._verificationEnabled;
+  }
+}
 export interface SpringCloudGatewayCors {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#allowed_headers SpringCloudGateway#allowed_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#allowed_headers SpringCloudGateway#allowed_headers}
   */
   readonly allowedHeaders?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#allowed_methods SpringCloudGateway#allowed_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#allowed_methods SpringCloudGateway#allowed_methods}
   */
   readonly allowedMethods?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#allowed_origins SpringCloudGateway#allowed_origins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#allowed_origins SpringCloudGateway#allowed_origins}
   */
   readonly allowedOrigins?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#credentials_allowed SpringCloudGateway#credentials_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#credentials_allowed SpringCloudGateway#credentials_allowed}
   */
   readonly credentialsAllowed?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#exposed_headers SpringCloudGateway#exposed_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#exposed_headers SpringCloudGateway#exposed_headers}
   */
   readonly exposedHeaders?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#max_age_seconds SpringCloudGateway#max_age_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#max_age_seconds SpringCloudGateway#max_age_seconds}
   */
   readonly maxAgeSeconds?: number;
 }
@@ -457,11 +555,11 @@ export class SpringCloudGatewayCorsOutputReference extends cdktf.ComplexObject {
 }
 export interface SpringCloudGatewayQuota {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#cpu SpringCloudGateway#cpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#cpu SpringCloudGateway#cpu}
   */
   readonly cpu?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#memory SpringCloudGateway#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#memory SpringCloudGateway#memory}
   */
   readonly memory?: string;
 }
@@ -549,19 +647,19 @@ export class SpringCloudGatewayQuotaOutputReference extends cdktf.ComplexObject 
 }
 export interface SpringCloudGatewaySso {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#client_id SpringCloudGateway#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#client_id SpringCloudGateway#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#client_secret SpringCloudGateway#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#client_secret SpringCloudGateway#client_secret}
   */
   readonly clientSecret?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#issuer_uri SpringCloudGateway#issuer_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#issuer_uri SpringCloudGateway#issuer_uri}
   */
   readonly issuerUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#scope SpringCloudGateway#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#scope SpringCloudGateway#scope}
   */
   readonly scope?: string[];
 }
@@ -695,19 +793,19 @@ export class SpringCloudGatewaySsoOutputReference extends cdktf.ComplexObject {
 }
 export interface SpringCloudGatewayTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#create SpringCloudGateway#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#create SpringCloudGateway#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#delete SpringCloudGateway#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#delete SpringCloudGateway#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#read SpringCloudGateway#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#read SpringCloudGateway#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway#update SpringCloudGateway#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway#update SpringCloudGateway#update}
   */
   readonly update?: string;
 }
@@ -851,7 +949,7 @@ export class SpringCloudGatewayTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway azurerm_spring_cloud_gateway}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway azurerm_spring_cloud_gateway}
 */
 export class SpringCloudGateway extends cdktf.TerraformResource {
 
@@ -865,7 +963,7 @@ export class SpringCloudGateway extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/spring_cloud_gateway azurerm_spring_cloud_gateway} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/spring_cloud_gateway azurerm_spring_cloud_gateway} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -876,7 +974,7 @@ export class SpringCloudGateway extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.60.0',
+        providerVersion: '3.61.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -897,6 +995,7 @@ export class SpringCloudGateway extends cdktf.TerraformResource {
     this._sensitiveEnvironmentVariables = config.sensitiveEnvironmentVariables;
     this._springCloudServiceId = config.springCloudServiceId;
     this._apiMetadata.internalValue = config.apiMetadata;
+    this._clientAuthorization.internalValue = config.clientAuthorization;
     this._cors.internalValue = config.cors;
     this._quota.internalValue = config.quota;
     this._sso.internalValue = config.sso;
@@ -1066,6 +1165,22 @@ export class SpringCloudGateway extends cdktf.TerraformResource {
     return this._apiMetadata.internalValue;
   }
 
+  // client_authorization - computed: false, optional: true, required: false
+  private _clientAuthorization = new SpringCloudGatewayClientAuthorizationOutputReference(this, "client_authorization");
+  public get clientAuthorization() {
+    return this._clientAuthorization;
+  }
+  public putClientAuthorization(value: SpringCloudGatewayClientAuthorization) {
+    this._clientAuthorization.internalValue = value;
+  }
+  public resetClientAuthorization() {
+    this._clientAuthorization.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientAuthorizationInput() {
+    return this._clientAuthorization.internalValue;
+  }
+
   // cors - computed: false, optional: true, required: false
   private _cors = new SpringCloudGatewayCorsOutputReference(this, "cors");
   public get cors() {
@@ -1146,6 +1261,7 @@ export class SpringCloudGateway extends cdktf.TerraformResource {
       sensitive_environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._sensitiveEnvironmentVariables),
       spring_cloud_service_id: cdktf.stringToTerraform(this._springCloudServiceId),
       api_metadata: springCloudGatewayApiMetadataToTerraform(this._apiMetadata.internalValue),
+      client_authorization: springCloudGatewayClientAuthorizationToTerraform(this._clientAuthorization.internalValue),
       cors: springCloudGatewayCorsToTerraform(this._cors.internalValue),
       quota: springCloudGatewayQuotaToTerraform(this._quota.internalValue),
       sso: springCloudGatewaySsoToTerraform(this._sso.internalValue),

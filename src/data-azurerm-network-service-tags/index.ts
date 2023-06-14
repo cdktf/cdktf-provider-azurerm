@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/network_service_tags
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/network_service_tags
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,34 +13,34 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermNetworkServiceTagsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/network_service_tags#id DataAzurermNetworkServiceTags#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/network_service_tags#id DataAzurermNetworkServiceTags#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/network_service_tags#location DataAzurermNetworkServiceTags#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/network_service_tags#location DataAzurermNetworkServiceTags#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/network_service_tags#location_filter DataAzurermNetworkServiceTags#location_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/network_service_tags#location_filter DataAzurermNetworkServiceTags#location_filter}
   */
   readonly locationFilter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/network_service_tags#service DataAzurermNetworkServiceTags#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/network_service_tags#service DataAzurermNetworkServiceTags#service}
   */
   readonly service: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/network_service_tags#timeouts DataAzurermNetworkServiceTags#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/network_service_tags#timeouts DataAzurermNetworkServiceTags#timeouts}
   */
   readonly timeouts?: DataAzurermNetworkServiceTagsTimeouts;
 }
 export interface DataAzurermNetworkServiceTagsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/network_service_tags#read DataAzurermNetworkServiceTags#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/network_service_tags#read DataAzurermNetworkServiceTags#read}
   */
   readonly read?: string;
 }
@@ -115,7 +115,7 @@ export class DataAzurermNetworkServiceTagsTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/network_service_tags azurerm_network_service_tags}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/network_service_tags azurerm_network_service_tags}
 */
 export class DataAzurermNetworkServiceTags extends cdktf.TerraformDataSource {
 
@@ -129,7 +129,7 @@ export class DataAzurermNetworkServiceTags extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/data-sources/network_service_tags azurerm_network_service_tags} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/network_service_tags azurerm_network_service_tags} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -140,7 +140,7 @@ export class DataAzurermNetworkServiceTags extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_network_service_tags',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.60.0',
+        providerVersion: '3.61.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -1,3 +1,3 @@
 # `azurerm_route`
 
-Refer to the Terraform Registory for docs: [`azurerm_route`](https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/route).
+Refer to the Terraform Registory for docs: [`azurerm_route`](https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/route).

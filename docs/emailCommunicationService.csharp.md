@@ -1,6 +1,6 @@
 # `azurerm_email_communication_service`
 
-Refer to the Terraform Registory for docs: [`azurerm_email_communication_service`](https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service).
+Refer to the Terraform Registory for docs: [`azurerm_email_communication_service`](https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service).
 
 # `emailCommunicationService` Submodule <a name="`emailCommunicationService` Submodule" id="@cdktf/provider-azurerm.emailCommunicationService"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_email_communication_service
 
 ### EmailCommunicationService <a name="EmailCommunicationService" id="@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationService"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service azurerm_email_communication_service}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service azurerm_email_communication_service}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationService.Initializer"></a>
 
@@ -711,11 +711,11 @@ new EmailCommunicationServiceConfig {
 | <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceConfig.property.dataLocation">DataLocation</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#data_location EmailCommunicationService#data_location}. |
-| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#name EmailCommunicationService#name}. |
-| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#resource_group_name EmailCommunicationService#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#id EmailCommunicationService#id}. |
-| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#tags EmailCommunicationService#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceConfig.property.dataLocation">DataLocation</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#data_location EmailCommunicationService#data_location}. |
+| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#name EmailCommunicationService#name}. |
+| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#resource_group_name EmailCommunicationService#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#id EmailCommunicationService#id}. |
+| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#tags EmailCommunicationService#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts">EmailCommunicationServiceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -798,7 +798,7 @@ public string DataLocation { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#data_location EmailCommunicationService#data_location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#data_location EmailCommunicationService#data_location}.
 
 ---
 
@@ -810,7 +810,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#name EmailCommunicationService#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#name EmailCommunicationService#name}.
 
 ---
 
@@ -822,7 +822,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#resource_group_name EmailCommunicationService#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#resource_group_name EmailCommunicationService#resource_group_name}.
 
 ---
 
@@ -834,7 +834,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#id EmailCommunicationService#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#id EmailCommunicationService#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -849,7 +849,7 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#tags EmailCommunicationService#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#tags EmailCommunicationService#tags}.
 
 ---
 
@@ -863,7 +863,7 @@ public EmailCommunicationServiceTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#timeouts EmailCommunicationService#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#timeouts EmailCommunicationService#timeouts}
 
 ---
 
@@ -886,10 +886,10 @@ new EmailCommunicationServiceTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#create EmailCommunicationService#create}. |
-| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#delete EmailCommunicationService#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#read EmailCommunicationService#read}. |
-| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#update EmailCommunicationService#update}. |
+| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#create EmailCommunicationService#create}. |
+| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#delete EmailCommunicationService#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#read EmailCommunicationService#read}. |
+| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#update EmailCommunicationService#update}. |
 
 ---
 
@@ -901,7 +901,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#create EmailCommunicationService#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#create EmailCommunicationService#create}.
 
 ---
 
@@ -913,7 +913,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#delete EmailCommunicationService#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#delete EmailCommunicationService#delete}.
 
 ---
 
@@ -925,7 +925,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#read EmailCommunicationService#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#read EmailCommunicationService#read}.
 
 ---
 
@@ -937,7 +937,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/email_communication_service#update EmailCommunicationService#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/email_communication_service#update EmailCommunicationService#update}.
 
 ---
 
