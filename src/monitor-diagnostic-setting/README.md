@@ -1,3 +1,3 @@
 # `azurerm_monitor_diagnostic_setting`
 
-Refer to the Terraform Registory for docs: [`azurerm_monitor_diagnostic_setting`](https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting).
+Refer to the Terraform Registory for docs: [`azurerm_monitor_diagnostic_setting`](https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting).

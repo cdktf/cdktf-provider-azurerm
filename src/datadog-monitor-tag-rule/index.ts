@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +8,50 @@ import * as cdktf from 'cdktf';
 
 export interface DatadogMonitorTagRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#datadog_monitor_id DatadogMonitorTagRule#datadog_monitor_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#datadog_monitor_id DatadogMonitorTagRule#datadog_monitor_id}
   */
   readonly datadogMonitorId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#id DatadogMonitorTagRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#id DatadogMonitorTagRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#name DatadogMonitorTagRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#name DatadogMonitorTagRule#name}
   */
   readonly name?: string;
   /**
   * log block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#log DatadogMonitorTagRule#log}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#log DatadogMonitorTagRule#log}
   */
   readonly log?: DatadogMonitorTagRuleLog[] | cdktf.IResolvable;
   /**
   * metric block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#metric DatadogMonitorTagRule#metric}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#metric DatadogMonitorTagRule#metric}
   */
   readonly metric?: DatadogMonitorTagRuleMetric[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#timeouts DatadogMonitorTagRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#timeouts DatadogMonitorTagRule#timeouts}
   */
   readonly timeouts?: DatadogMonitorTagRuleTimeouts;
 }
 export interface DatadogMonitorTagRuleLogFilter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#action DatadogMonitorTagRule#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#action DatadogMonitorTagRule#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#name DatadogMonitorTagRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#name DatadogMonitorTagRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#value DatadogMonitorTagRule#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#value DatadogMonitorTagRule#value}
   */
   readonly value: string;
 }
@@ -190,21 +185,21 @@ export class DatadogMonitorTagRuleLogFilterList extends cdktf.ComplexList {
 }
 export interface DatadogMonitorTagRuleLog {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#aad_log_enabled DatadogMonitorTagRule#aad_log_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#aad_log_enabled DatadogMonitorTagRule#aad_log_enabled}
   */
   readonly aadLogEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#resource_log_enabled DatadogMonitorTagRule#resource_log_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#resource_log_enabled DatadogMonitorTagRule#resource_log_enabled}
   */
   readonly resourceLogEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#subscription_log_enabled DatadogMonitorTagRule#subscription_log_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#subscription_log_enabled DatadogMonitorTagRule#subscription_log_enabled}
   */
   readonly subscriptionLogEnabled?: boolean | cdktf.IResolvable;
   /**
   * filter block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#filter DatadogMonitorTagRule#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#filter DatadogMonitorTagRule#filter}
   */
   readonly filter?: DatadogMonitorTagRuleLogFilter[] | cdktf.IResolvable;
 }
@@ -370,15 +365,15 @@ export class DatadogMonitorTagRuleLogList extends cdktf.ComplexList {
 }
 export interface DatadogMonitorTagRuleMetricFilter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#action DatadogMonitorTagRule#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#action DatadogMonitorTagRule#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#name DatadogMonitorTagRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#name DatadogMonitorTagRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#value DatadogMonitorTagRule#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#value DatadogMonitorTagRule#value}
   */
   readonly value: string;
 }
@@ -514,7 +509,7 @@ export interface DatadogMonitorTagRuleMetric {
   /**
   * filter block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#filter DatadogMonitorTagRule#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#filter DatadogMonitorTagRule#filter}
   */
   readonly filter?: DatadogMonitorTagRuleMetricFilter[] | cdktf.IResolvable;
 }
@@ -611,19 +606,19 @@ export class DatadogMonitorTagRuleMetricList extends cdktf.ComplexList {
 }
 export interface DatadogMonitorTagRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#create DatadogMonitorTagRule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#create DatadogMonitorTagRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#delete DatadogMonitorTagRule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#delete DatadogMonitorTagRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#read DatadogMonitorTagRule#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#read DatadogMonitorTagRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule#update DatadogMonitorTagRule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule#update DatadogMonitorTagRule#update}
   */
   readonly update?: string;
 }
@@ -767,7 +762,7 @@ export class DatadogMonitorTagRuleTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule azurerm_datadog_monitor_tag_rule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule azurerm_datadog_monitor_tag_rule}
 */
 export class DatadogMonitorTagRule extends cdktf.TerraformResource {
 
@@ -781,7 +776,7 @@ export class DatadogMonitorTagRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/datadog_monitor_tag_rule azurerm_datadog_monitor_tag_rule} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/datadog_monitor_tag_rule azurerm_datadog_monitor_tag_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -792,7 +787,7 @@ export class DatadogMonitorTagRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_datadog_monitor_tag_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.60.0',
+        providerVersion: '3.61.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

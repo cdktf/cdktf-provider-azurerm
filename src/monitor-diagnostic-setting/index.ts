@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,76 +8,76 @@ import * as cdktf from 'cdktf';
 
 export interface MonitorDiagnosticSettingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#eventhub_authorization_rule_id MonitorDiagnosticSetting#eventhub_authorization_rule_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#eventhub_authorization_rule_id MonitorDiagnosticSetting#eventhub_authorization_rule_id}
   */
   readonly eventhubAuthorizationRuleId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#eventhub_name MonitorDiagnosticSetting#eventhub_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#eventhub_name MonitorDiagnosticSetting#eventhub_name}
   */
   readonly eventhubName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#id MonitorDiagnosticSetting#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#id MonitorDiagnosticSetting#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#log_analytics_destination_type MonitorDiagnosticSetting#log_analytics_destination_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#log_analytics_destination_type MonitorDiagnosticSetting#log_analytics_destination_type}
   */
   readonly logAnalyticsDestinationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#log_analytics_workspace_id MonitorDiagnosticSetting#log_analytics_workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#log_analytics_workspace_id MonitorDiagnosticSetting#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#name MonitorDiagnosticSetting#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#name MonitorDiagnosticSetting#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#partner_solution_id MonitorDiagnosticSetting#partner_solution_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#partner_solution_id MonitorDiagnosticSetting#partner_solution_id}
   */
   readonly partnerSolutionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#storage_account_id MonitorDiagnosticSetting#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#storage_account_id MonitorDiagnosticSetting#storage_account_id}
   */
   readonly storageAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#target_resource_id MonitorDiagnosticSetting#target_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#target_resource_id MonitorDiagnosticSetting#target_resource_id}
   */
   readonly targetResourceId: string;
   /**
   * enabled_log block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#enabled_log MonitorDiagnosticSetting#enabled_log}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#enabled_log MonitorDiagnosticSetting#enabled_log}
   */
   readonly enabledLog?: MonitorDiagnosticSettingEnabledLog[] | cdktf.IResolvable;
   /**
   * log block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#log MonitorDiagnosticSetting#log}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#log MonitorDiagnosticSetting#log}
   */
   readonly log?: MonitorDiagnosticSettingLog[] | cdktf.IResolvable;
   /**
   * metric block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#metric MonitorDiagnosticSetting#metric}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#metric MonitorDiagnosticSetting#metric}
   */
   readonly metric?: MonitorDiagnosticSettingMetric[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#timeouts MonitorDiagnosticSetting#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#timeouts MonitorDiagnosticSetting#timeouts}
   */
   readonly timeouts?: MonitorDiagnosticSettingTimeouts;
 }
 export interface MonitorDiagnosticSettingEnabledLogRetentionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#days MonitorDiagnosticSetting#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#days MonitorDiagnosticSetting#days}
   */
   readonly days?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -167,17 +162,17 @@ export class MonitorDiagnosticSettingEnabledLogRetentionPolicyOutputReference ex
 }
 export interface MonitorDiagnosticSettingEnabledLog {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#category MonitorDiagnosticSetting#category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#category MonitorDiagnosticSetting#category}
   */
   readonly category?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#category_group MonitorDiagnosticSetting#category_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#category_group MonitorDiagnosticSetting#category_group}
   */
   readonly categoryGroup?: string;
   /**
   * retention_policy block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#retention_policy MonitorDiagnosticSetting#retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#retention_policy MonitorDiagnosticSetting#retention_policy}
   */
   readonly retentionPolicy?: MonitorDiagnosticSettingEnabledLogRetentionPolicy;
 }
@@ -320,11 +315,11 @@ export class MonitorDiagnosticSettingEnabledLogList extends cdktf.ComplexList {
 }
 export interface MonitorDiagnosticSettingLogRetentionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#days MonitorDiagnosticSetting#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#days MonitorDiagnosticSetting#days}
   */
   readonly days?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -409,21 +404,21 @@ export class MonitorDiagnosticSettingLogRetentionPolicyOutputReference extends c
 }
 export interface MonitorDiagnosticSettingLog {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#category MonitorDiagnosticSetting#category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#category MonitorDiagnosticSetting#category}
   */
   readonly category?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#category_group MonitorDiagnosticSetting#category_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#category_group MonitorDiagnosticSetting#category_group}
   */
   readonly categoryGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * retention_policy block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#retention_policy MonitorDiagnosticSetting#retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#retention_policy MonitorDiagnosticSetting#retention_policy}
   */
   readonly retentionPolicy?: MonitorDiagnosticSettingLogRetentionPolicy;
 }
@@ -589,11 +584,11 @@ export class MonitorDiagnosticSettingLogList extends cdktf.ComplexList {
 }
 export interface MonitorDiagnosticSettingMetricRetentionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#days MonitorDiagnosticSetting#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#days MonitorDiagnosticSetting#days}
   */
   readonly days?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -678,17 +673,17 @@ export class MonitorDiagnosticSettingMetricRetentionPolicyOutputReference extend
 }
 export interface MonitorDiagnosticSettingMetric {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#category MonitorDiagnosticSetting#category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#category MonitorDiagnosticSetting#category}
   */
   readonly category: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * retention_policy block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#retention_policy MonitorDiagnosticSetting#retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#retention_policy MonitorDiagnosticSetting#retention_policy}
   */
   readonly retentionPolicy?: MonitorDiagnosticSettingMetricRetentionPolicy;
 }
@@ -828,19 +823,19 @@ export class MonitorDiagnosticSettingMetricList extends cdktf.ComplexList {
 }
 export interface MonitorDiagnosticSettingTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#create MonitorDiagnosticSetting#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#create MonitorDiagnosticSetting#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#delete MonitorDiagnosticSetting#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#delete MonitorDiagnosticSetting#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#read MonitorDiagnosticSetting#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#read MonitorDiagnosticSetting#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting#update MonitorDiagnosticSetting#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting#update MonitorDiagnosticSetting#update}
   */
   readonly update?: string;
 }
@@ -984,7 +979,7 @@ export class MonitorDiagnosticSettingTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting azurerm_monitor_diagnostic_setting}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting azurerm_monitor_diagnostic_setting}
 */
 export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
 
@@ -998,7 +993,7 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.60.0/docs/resources/monitor_diagnostic_setting azurerm_monitor_diagnostic_setting} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/monitor_diagnostic_setting azurerm_monitor_diagnostic_setting} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1009,7 +1004,7 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_diagnostic_setting',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.60.0',
+        providerVersion: '3.61.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
