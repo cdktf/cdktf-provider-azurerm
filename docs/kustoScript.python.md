@@ -624,7 +624,7 @@ kustoScript.KustoScript.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScript.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScript.property.sasTokenInput">sas_token_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScript.property.scriptContentInput">script_content_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScript.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts">KustoScriptTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScript.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts">KustoScriptTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScript.property.urlInput">url_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScript.property.continueOnErrorsEnabled">continue_on_errors_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScript.property.databaseId">database_id</a></code> | <code>str</code> | *No description.* |
@@ -862,10 +862,10 @@ script_content_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.kustoScript.KustoScript.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[KustoScriptTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, KustoScriptTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts">KustoScriptTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts">KustoScriptTimeouts</a>]
 
 ---
 
@@ -1559,7 +1559,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts">KustoScriptTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts">KustoScriptTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1670,10 +1670,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.kustoScript.KustoScriptTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[KustoScriptTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, KustoScriptTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts">KustoScriptTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts">KustoScriptTimeouts</a>]
 
 ---
 

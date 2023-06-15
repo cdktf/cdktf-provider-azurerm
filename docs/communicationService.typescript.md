@@ -396,7 +396,7 @@ communicationService.CommunicationService.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationService.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationService.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationService.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationService.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeouts">CommunicationServiceTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationService.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeouts">CommunicationServiceTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationService.property.dataLocation">dataLocation</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationService.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationService.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -650,10 +650,10 @@ public readonly tagsInput: {[ key: string ]: string};
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.communicationService.CommunicationService.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: CommunicationServiceTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | CommunicationServiceTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeouts">CommunicationServiceTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeouts">CommunicationServiceTimeouts</a>
 
 ---
 
@@ -1221,7 +1221,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeouts">CommunicationServiceTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeouts">CommunicationServiceTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1332,10 +1332,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: CommunicationServiceTimeouts | IResolvable;
+public readonly internalValue: IResolvable | CommunicationServiceTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeouts">CommunicationServiceTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeouts">CommunicationServiceTimeouts</a>
 
 ---
 

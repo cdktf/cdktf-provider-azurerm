@@ -638,7 +638,7 @@ dataShare.DataShare.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShare.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShare.property.snapshotScheduleInput">snapshot_schedule_input</a></code> | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareSnapshotSchedule">DataShareSnapshotSchedule</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShare.property.termsInput">terms_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShare.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts">DataShareTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShare.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts">DataShareTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShare.property.accountId">account_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShare.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShare.property.id">id</a></code> | <code>str</code> | *No description.* |
@@ -883,10 +883,10 @@ terms_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.dataShare.DataShare.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[DataShareTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, DataShareTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts">DataShareTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts">DataShareTimeouts</a>]
 
 ---
 
@@ -1938,7 +1938,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts">DataShareTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts">DataShareTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -2049,10 +2049,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dataShare.DataShareTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DataShareTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, DataShareTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts">DataShareTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts">DataShareTimeouts</a>]
 
 ---
 

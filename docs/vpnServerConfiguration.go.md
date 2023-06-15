@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfiguration(scope Construct, id *string, config VpnServerConfigurationConfig) VpnServerConfiguration
 ```
@@ -411,7 +411,7 @@ func ResetVpnProtocols()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.VpnServerConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -443,7 +443,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.VpnServerConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ vpnserverconfiguration.VpnServerConfiguration_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.VpnServerConfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -942,7 +942,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationAzureActiveDirectoryAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 &vpnserverconfiguration.VpnServerConfigurationAzureActiveDirectoryAuthentication {
 	Audience: *string,
@@ -1002,7 +1002,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationClientRevokedCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 &vpnserverconfiguration.VpnServerConfigurationClientRevokedCertificate {
 	Name: *string,
@@ -1048,7 +1048,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationClientRootCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 &vpnserverconfiguration.VpnServerConfigurationClientRootCertificate {
 	Name: *string,
@@ -1094,7 +1094,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 &vpnserverconfiguration.VpnServerConfigurationConfig {
 	Connection: interface{},
@@ -1112,10 +1112,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfigura
 	ClientRevokedCertificate: interface{},
 	ClientRootCertificate: interface{},
 	Id: *string,
-	IpsecPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.vpnServerConfiguration.VpnServerConfigurationIpsecPolicy,
-	Radius: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.vpnServerConfiguration.VpnServerConfigurationRadius,
+	IpsecPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.vpnServerConfiguration.VpnServerConfigurationIpsecPolicy,
+	Radius: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.vpnServerConfiguration.VpnServerConfigurationRadius,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.vpnServerConfiguration.VpnServerConfigurationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.vpnServerConfiguration.VpnServerConfigurationTimeouts,
 	VpnProtocols: *[]*string,
 }
 ```
@@ -1393,7 +1393,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationIpsecPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 &vpnserverconfiguration.VpnServerConfigurationIpsecPolicy {
 	DhGroup: *string,
@@ -1523,7 +1523,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationRadius.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 &vpnserverconfiguration.VpnServerConfigurationRadius {
 	ClientRootCertificate: interface{},
@@ -1589,7 +1589,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationRadiusClientRootCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 &vpnserverconfiguration.VpnServerConfigurationRadiusClientRootCertificate {
 	Name: *string,
@@ -1635,7 +1635,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationRadiusServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 &vpnserverconfiguration.VpnServerConfigurationRadiusServer {
 	Address: *string,
@@ -1695,7 +1695,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationRadiusServerRootCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 &vpnserverconfiguration.VpnServerConfigurationRadiusServerRootCertificate {
 	Name: *string,
@@ -1741,7 +1741,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 &vpnserverconfiguration.VpnServerConfigurationTimeouts {
 	Create: *string,
@@ -1817,7 +1817,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationAzureActiveDirectoryAuthenticationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfigurationAzureActiveDirectoryAuthenticationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VpnServerConfigurationAzureActiveDirectoryAuthenticationList
 ```
@@ -1960,7 +1960,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationAzureActiveDirectoryAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfigurationAzureActiveDirectoryAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VpnServerConfigurationAzureActiveDirectoryAuthenticationOutputReference
 ```
@@ -2293,7 +2293,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationClientRevokedCertificateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfigurationClientRevokedCertificateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VpnServerConfigurationClientRevokedCertificateList
 ```
@@ -2436,7 +2436,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationClientRevokedCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfigurationClientRevokedCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VpnServerConfigurationClientRevokedCertificateOutputReference
 ```
@@ -2747,7 +2747,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationClientRootCertificateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfigurationClientRootCertificateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VpnServerConfigurationClientRootCertificateList
 ```
@@ -2890,7 +2890,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationClientRootCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfigurationClientRootCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VpnServerConfigurationClientRootCertificateOutputReference
 ```
@@ -3201,7 +3201,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationIpsecPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfigurationIpsecPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpnServerConfigurationIpsecPolicyOutputReference
 ```
@@ -3626,7 +3626,7 @@ func InternalValue() VpnServerConfigurationIpsecPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationRadiusClientRootCertificateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfigurationRadiusClientRootCertificateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VpnServerConfigurationRadiusClientRootCertificateList
 ```
@@ -3769,7 +3769,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationRadiusClientRootCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfigurationRadiusClientRootCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VpnServerConfigurationRadiusClientRootCertificateOutputReference
 ```
@@ -4080,7 +4080,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationRadiusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfigurationRadiusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpnServerConfigurationRadiusOutputReference
 ```
@@ -4455,7 +4455,7 @@ func InternalValue() VpnServerConfigurationRadius
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationRadiusServerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfigurationRadiusServerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VpnServerConfigurationRadiusServerList
 ```
@@ -4598,7 +4598,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationRadiusServerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfigurationRadiusServerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VpnServerConfigurationRadiusServerOutputReference
 ```
@@ -4931,7 +4931,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationRadiusServerRootCertificateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfigurationRadiusServerRootCertificateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VpnServerConfigurationRadiusServerRootCertificateList
 ```
@@ -5074,7 +5074,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationRadiusServerRootCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfigurationRadiusServerRootCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VpnServerConfigurationRadiusServerRootCertificateOutputReference
 ```
@@ -5385,7 +5385,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnServerConfiguration.VpnServerConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/vpnserverconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/vpnserverconfiguration"
 
 vpnserverconfiguration.NewVpnServerConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpnServerConfigurationTimeoutsOutputReference
 ```

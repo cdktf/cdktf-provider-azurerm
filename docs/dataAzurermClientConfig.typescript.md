@@ -376,7 +376,7 @@ dataAzurermClientConfig.DataAzurermClientConfig.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.tenantId">tenantId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeoutsOutputReference">DataAzurermClientConfigTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.id">id</a></code> | <code>string</code> | *No description.* |
 
 ---
@@ -566,10 +566,10 @@ public readonly idInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermClientConfigTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermClientConfigTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a>
 
 ---
 
@@ -979,7 +979,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1030,10 +1030,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermClientConfigTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermClientConfigTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a>
 
 ---
 

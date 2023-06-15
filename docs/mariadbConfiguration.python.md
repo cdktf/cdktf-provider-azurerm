@@ -556,7 +556,7 @@ mariadbConfiguration.MariadbConfiguration.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.property.serverNameInput">server_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts">MariadbConfigurationTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts">MariadbConfigurationTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.property.name">name</a></code> | <code>str</code> | *No description.* |
@@ -761,10 +761,10 @@ server_name_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[MariadbConfigurationTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, MariadbConfigurationTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts">MariadbConfigurationTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts">MariadbConfigurationTimeouts</a>]
 
 ---
 
@@ -1386,7 +1386,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts">MariadbConfigurationTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts">MariadbConfigurationTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1497,10 +1497,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[MariadbConfigurationTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, MariadbConfigurationTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts">MariadbConfigurationTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts">MariadbConfigurationTimeouts</a>]
 
 ---
 

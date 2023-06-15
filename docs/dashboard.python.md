@@ -582,7 +582,7 @@ dashboard.Dashboard.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts">DashboardTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts">DashboardTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.dashboardProperties">dashboard_properties</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.Dashboard.property.location">location</a></code> | <code>str</code> | *No description.* |
@@ -807,10 +807,10 @@ tags_input: typing.Mapping[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.dashboard.Dashboard.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[DashboardTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, DashboardTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts">DashboardTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts">DashboardTimeouts</a>]
 
 ---
 
@@ -1446,7 +1446,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts">DashboardTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts">DashboardTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1557,10 +1557,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dashboard.DashboardTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DashboardTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, DashboardTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts">DashboardTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts">DashboardTimeouts</a>]
 
 ---
 

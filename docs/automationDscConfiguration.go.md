@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/automationdscconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/automationdscconfiguration"
 
 automationdscconfiguration.NewAutomationDscConfiguration(scope Construct, id *string, config AutomationDscConfigurationConfig) AutomationDscConfiguration
 ```
@@ -318,7 +318,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/automationdscconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/automationdscconfiguration"
 
 automationdscconfiguration.AutomationDscConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/automationdscconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/automationdscconfiguration"
 
 automationdscconfiguration.AutomationDscConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ automationdscconfiguration.AutomationDscConfiguration_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/automationdscconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/automationdscconfiguration"
 
 automationdscconfiguration.AutomationDscConfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -794,7 +794,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/automationdscconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/automationdscconfiguration"
 
 &automationdscconfiguration.AutomationDscConfigurationConfig {
 	Connection: interface{},
@@ -813,7 +813,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/automationdscconfi
 	Id: *string,
 	LogVerbose: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.automationDscConfiguration.AutomationDscConfigurationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.automationDscConfiguration.AutomationDscConfigurationTimeouts,
 }
 ```
 
@@ -1041,7 +1041,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/automationdscconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/automationdscconfiguration"
 
 &automationdscconfiguration.AutomationDscConfigurationTimeouts {
 	Create: *string,
@@ -1117,7 +1117,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/automationdscconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/automationdscconfiguration"
 
 automationdscconfiguration.NewAutomationDscConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationDscConfigurationTimeoutsOutputReference
 ```

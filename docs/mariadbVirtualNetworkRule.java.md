@@ -497,7 +497,7 @@ MariadbVirtualNetworkRule.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.serverNameInput">serverNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.subnetIdInput">subnetIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -714,7 +714,7 @@ public java.lang.String getSubnetIdInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a>
 
 ---
 
@@ -1305,7 +1305,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1419,7 +1419,7 @@ public java.lang.String getUpdate();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a>
 
 ---
 

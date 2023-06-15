@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermbatchapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermbatchapplication"
 
 dataazurermbatchapplication.NewDataAzurermBatchApplication(scope Construct, id *string, config DataAzurermBatchApplicationConfig) DataAzurermBatchApplication
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermbatchapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermbatchapplication"
 
 dataazurermbatchapplication.DataAzurermBatchApplication_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermbatchapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermbatchapplication"
 
 dataazurermbatchapplication.DataAzurermBatchApplication_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermbatchapplication.DataAzurermBatchApplication_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermbatchapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermbatchapplication"
 
 dataazurermbatchapplication.DataAzurermBatchApplication_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -663,7 +663,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermbatchapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermbatchapplication"
 
 &dataazurermbatchapplication.DataAzurermBatchApplicationConfig {
 	Connection: interface{},
@@ -677,7 +677,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermbatchap
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts,
 }
 ```
 
@@ -840,7 +840,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermbatchapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermbatchapplication"
 
 &dataazurermbatchapplication.DataAzurermBatchApplicationTimeouts {
 	Read: *string,
@@ -874,7 +874,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermbatchapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermbatchapplication"
 
 dataazurermbatchapplication.NewDataAzurermBatchApplicationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermBatchApplicationTimeoutsOutputReference
 ```

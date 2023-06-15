@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageShare.StorageShare.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/storageshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storageshare"
 
 storageshare.NewStorageShare(scope Construct, id *string, config StorageShareConfig) StorageShare
 ```
@@ -338,7 +338,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageShare.StorageShare.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/storageshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storageshare"
 
 storageshare.StorageShare_IsConstruct(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageShare.StorageShare.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/storageshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storageshare"
 
 storageshare.StorageShare_IsTerraformElement(x interface{}) *bool
 ```
@@ -384,7 +384,7 @@ storageshare.StorageShare_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageShare.StorageShare.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/storageshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storageshare"
 
 storageshare.StorageShare_IsTerraformResource(x interface{}) *bool
 ```
@@ -803,7 +803,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageShare.StorageShareAcl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/storageshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storageshare"
 
 &storageshare.StorageShareAcl {
 	Id: *string,
@@ -854,7 +854,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageShare.StorageShareAclAccessPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/storageshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storageshare"
 
 &storageshare.StorageShareAclAccessPolicy {
 	Permissions: *string,
@@ -914,7 +914,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageShare.StorageShareConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/storageshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storageshare"
 
 &storageshare.StorageShareConfig {
 	Connection: interface{},
@@ -932,7 +932,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/storageshare"
 	EnabledProtocol: *string,
 	Id: *string,
 	Metadata: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.storageShare.StorageShareTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.storageShare.StorageShareTimeouts,
 }
 ```
 
@@ -1149,7 +1149,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageShare.StorageShareTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/storageshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storageshare"
 
 &storageshare.StorageShareTimeouts {
 	Create: *string,
@@ -1225,7 +1225,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageShare.StorageShareAclAccessPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/storageshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storageshare"
 
 storageshare.NewStorageShareAclAccessPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageShareAclAccessPolicyList
 ```
@@ -1368,7 +1368,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageShare.StorageShareAclAccessPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/storageshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storageshare"
 
 storageshare.NewStorageShareAclAccessPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageShareAclAccessPolicyOutputReference
 ```
@@ -1715,7 +1715,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageShare.StorageShareAclList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/storageshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storageshare"
 
 storageshare.NewStorageShareAclList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageShareAclList
 ```
@@ -1858,7 +1858,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageShare.StorageShareAclOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/storageshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storageshare"
 
 storageshare.NewStorageShareAclOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageShareAclOutputReference
 ```
@@ -2189,7 +2189,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageShare.StorageShareTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/storageshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storageshare"
 
 storageshare.NewStorageShareTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageShareTimeoutsOutputReference
 ```

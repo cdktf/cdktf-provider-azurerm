@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermApplicationSecurityGroup.DataAzurermApplicationSecurityGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermapplicationsecuritygroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermapplicationsecuritygroup"
 
 dataazurermapplicationsecuritygroup.NewDataAzurermApplicationSecurityGroup(scope Construct, id *string, config DataAzurermApplicationSecurityGroupConfig) DataAzurermApplicationSecurityGroup
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermApplicationSecurityGroup.DataAzurermApplicationSecurityGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermapplicationsecuritygroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermapplicationsecuritygroup"
 
 dataazurermapplicationsecuritygroup.DataAzurermApplicationSecurityGroup_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermApplicationSecurityGroup.DataAzurermApplicationSecurityGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermapplicationsecuritygroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermapplicationsecuritygroup"
 
 dataazurermapplicationsecuritygroup.DataAzurermApplicationSecurityGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermapplicationsecuritygroup.DataAzurermApplicationSecurityGroup_IsTerraf
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermApplicationSecurityGroup.DataAzurermApplicationSecurityGroup.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermapplicationsecuritygroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermapplicationsecuritygroup"
 
 dataazurermapplicationsecuritygroup.DataAzurermApplicationSecurityGroup_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -630,7 +630,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermApplicationSecurityGroup.DataAzurermApplicationSecurityGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermapplicationsecuritygroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermapplicationsecuritygroup"
 
 &dataazurermapplicationsecuritygroup.DataAzurermApplicationSecurityGroupConfig {
 	Connection: interface{},
@@ -643,7 +643,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermapplica
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.dataAzurermApplicationSecurityGroup.DataAzurermApplicationSecurityGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.dataAzurermApplicationSecurityGroup.DataAzurermApplicationSecurityGroupTimeouts,
 }
 ```
 
@@ -793,7 +793,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermApplicationSecurityGroup.DataAzurermApplicationSecurityGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermapplicationsecuritygroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermapplicationsecuritygroup"
 
 &dataazurermapplicationsecuritygroup.DataAzurermApplicationSecurityGroupTimeouts {
 	Read: *string,
@@ -827,7 +827,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermApplicationSecurityGroup.DataAzurermApplicationSecurityGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermapplicationsecuritygroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermapplicationsecuritygroup"
 
 dataazurermapplicationsecuritygroup.NewDataAzurermApplicationSecurityGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermApplicationSecurityGroupTimeoutsOutputReference
 ```

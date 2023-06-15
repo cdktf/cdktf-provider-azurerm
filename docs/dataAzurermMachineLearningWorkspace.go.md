@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMachineLearningWorkspace.DataAzurermMachineLearningWorkspace.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermmachinelearningworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmachinelearningworkspace"
 
 dataazurermmachinelearningworkspace.NewDataAzurermMachineLearningWorkspace(scope Construct, id *string, config DataAzurermMachineLearningWorkspaceConfig) DataAzurermMachineLearningWorkspace
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMachineLearningWorkspace.DataAzurermMachineLearningWorkspace.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermmachinelearningworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmachinelearningworkspace"
 
 dataazurermmachinelearningworkspace.DataAzurermMachineLearningWorkspace_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMachineLearningWorkspace.DataAzurermMachineLearningWorkspace.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermmachinelearningworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmachinelearningworkspace"
 
 dataazurermmachinelearningworkspace.DataAzurermMachineLearningWorkspace_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermmachinelearningworkspace.DataAzurermMachineLearningWorkspace_IsTerraf
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMachineLearningWorkspace.DataAzurermMachineLearningWorkspace.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermmachinelearningworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmachinelearningworkspace"
 
 dataazurermmachinelearningworkspace.DataAzurermMachineLearningWorkspace_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -641,7 +641,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMachineLearningWorkspace.DataAzurermMachineLearningWorkspaceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermmachinelearningworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmachinelearningworkspace"
 
 &dataazurermmachinelearningworkspace.DataAzurermMachineLearningWorkspaceConfig {
 	Connection: interface{},
@@ -654,7 +654,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermmachine
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.dataAzurermMachineLearningWorkspace.DataAzurermMachineLearningWorkspaceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.dataAzurermMachineLearningWorkspace.DataAzurermMachineLearningWorkspaceTimeouts,
 }
 ```
 
@@ -804,7 +804,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMachineLearningWorkspace.DataAzurermMachineLearningWorkspaceIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermmachinelearningworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmachinelearningworkspace"
 
 &dataazurermmachinelearningworkspace.DataAzurermMachineLearningWorkspaceIdentity {
 
@@ -817,7 +817,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermmachine
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMachineLearningWorkspace.DataAzurermMachineLearningWorkspaceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermmachinelearningworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmachinelearningworkspace"
 
 &dataazurermmachinelearningworkspace.DataAzurermMachineLearningWorkspaceTimeouts {
 	Read: *string,
@@ -851,7 +851,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMachineLearningWorkspace.DataAzurermMachineLearningWorkspaceIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermmachinelearningworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmachinelearningworkspace"
 
 dataazurermmachinelearningworkspace.NewDataAzurermMachineLearningWorkspaceIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMachineLearningWorkspaceIdentityList
 ```
@@ -983,7 +983,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMachineLearningWorkspace.DataAzurermMachineLearningWorkspaceIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermmachinelearningworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmachinelearningworkspace"
 
 dataazurermmachinelearningworkspace.NewDataAzurermMachineLearningWorkspaceIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMachineLearningWorkspaceIdentityOutputReference
 ```
@@ -1294,7 +1294,7 @@ func InternalValue() DataAzurermMachineLearningWorkspaceIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMachineLearningWorkspace.DataAzurermMachineLearningWorkspaceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermmachinelearningworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmachinelearningworkspace"
 
 dataazurermmachinelearningworkspace.NewDataAzurermMachineLearningWorkspaceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMachineLearningWorkspaceTimeoutsOutputReference
 ```

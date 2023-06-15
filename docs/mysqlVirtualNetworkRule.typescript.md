@@ -378,7 +378,7 @@ mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.property.serverNameInput">serverNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.property.subnetIdInput">subnetIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts">MysqlVirtualNetworkRuleTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts">MysqlVirtualNetworkRuleTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
@@ -592,10 +592,10 @@ public readonly subnetIdInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: MysqlVirtualNetworkRuleTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | MysqlVirtualNetworkRuleTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts">MysqlVirtualNetworkRuleTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts">MysqlVirtualNetworkRuleTimeouts</a>
 
 ---
 
@@ -1163,7 +1163,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts">MysqlVirtualNetworkRuleTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts">MysqlVirtualNetworkRuleTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1274,10 +1274,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: MysqlVirtualNetworkRuleTimeouts | IResolvable;
+public readonly internalValue: IResolvable | MysqlVirtualNetworkRuleTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts">MysqlVirtualNetworkRuleTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts">MysqlVirtualNetworkRuleTimeouts</a>
 
 ---
 
