@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermuserassignedidentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermuserassignedidentity"
 
 dataazurermuserassignedidentity.NewDataAzurermUserAssignedIdentity(scope Construct, id *string, config DataAzurermUserAssignedIdentityConfig) DataAzurermUserAssignedIdentity
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermuserassignedidentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermuserassignedidentity"
 
 dataazurermuserassignedidentity.DataAzurermUserAssignedIdentity_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermuserassignedidentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermuserassignedidentity"
 
 dataazurermuserassignedidentity.DataAzurermUserAssignedIdentity_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermuserassignedidentity.DataAzurermUserAssignedIdentity_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermuserassignedidentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermuserassignedidentity"
 
 dataazurermuserassignedidentity.DataAzurermUserAssignedIdentity_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -663,7 +663,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermuserassignedidentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermuserassignedidentity"
 
 &dataazurermuserassignedidentity.DataAzurermUserAssignedIdentityConfig {
 	Connection: interface{},
@@ -676,7 +676,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermuserassign
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts,
 }
 ```
 
@@ -826,7 +826,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermuserassignedidentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermuserassignedidentity"
 
 &dataazurermuserassignedidentity.DataAzurermUserAssignedIdentityTimeouts {
 	Read: *string,
@@ -860,7 +860,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermuserassignedidentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermuserassignedidentity"
 
 dataazurermuserassignedidentity.NewDataAzurermUserAssignedIdentityTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermUserAssignedIdentityTimeoutsOutputReference
 ```

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrder.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrder(scope Construct, id *string, config DataboxEdgeOrderConfig) DataboxEdgeOrder
 ```
@@ -323,7 +323,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrder.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 databoxedgeorder.DataboxEdgeOrder_IsConstruct(x interface{}) *bool
 ```
@@ -355,7 +355,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrder.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 databoxedgeorder.DataboxEdgeOrder_IsTerraformElement(x interface{}) *bool
 ```
@@ -369,7 +369,7 @@ databoxedgeorder.DataboxEdgeOrder_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrder.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 databoxedgeorder.DataboxEdgeOrder_IsTerraformResource(x interface{}) *bool
 ```
@@ -766,7 +766,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderConfig {
 	Connection: interface{},
@@ -776,12 +776,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Contact: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.databoxEdgeOrder.DataboxEdgeOrderContact,
+	Contact: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.databoxEdgeOrder.DataboxEdgeOrderContact,
 	DeviceName: *string,
 	ResourceGroupName: *string,
-	ShipmentAddress: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress,
+	ShipmentAddress: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.databoxEdgeOrder.DataboxEdgeOrderTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.databoxEdgeOrder.DataboxEdgeOrderTimeouts,
 }
 ```
 
@@ -961,7 +961,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderContact.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderContact {
 	CompanyName: *string,
@@ -1035,7 +1035,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderReturnTracking.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderReturnTracking {
 
@@ -1048,7 +1048,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderShipmentAddress {
 	Address: *[]*string,
@@ -1136,7 +1136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentHistory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderShipmentHistory {
 
@@ -1149,7 +1149,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentTracking.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderShipmentTracking {
 
@@ -1162,7 +1162,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderStatus {
 
@@ -1175,7 +1175,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderTimeouts {
 	Create: *string,
@@ -1251,7 +1251,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderContactOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderContactOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataboxEdgeOrderContactOutputReference
 ```
@@ -1588,7 +1588,7 @@ func InternalValue() DataboxEdgeOrderContact
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderReturnTrackingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderReturnTrackingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataboxEdgeOrderReturnTrackingList
 ```
@@ -1720,7 +1720,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderReturnTrackingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderReturnTrackingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataboxEdgeOrderReturnTrackingOutputReference
 ```
@@ -2031,7 +2031,7 @@ func InternalValue() DataboxEdgeOrderReturnTracking
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddressOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderShipmentAddressOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataboxEdgeOrderShipmentAddressOutputReference
 ```
@@ -2390,7 +2390,7 @@ func InternalValue() DataboxEdgeOrderShipmentAddress
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentHistoryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderShipmentHistoryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataboxEdgeOrderShipmentHistoryList
 ```
@@ -2522,7 +2522,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentHistoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderShipmentHistoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataboxEdgeOrderShipmentHistoryOutputReference
 ```
@@ -2822,7 +2822,7 @@ func InternalValue() DataboxEdgeOrderShipmentHistory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentTrackingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderShipmentTrackingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataboxEdgeOrderShipmentTrackingList
 ```
@@ -2954,7 +2954,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentTrackingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderShipmentTrackingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataboxEdgeOrderShipmentTrackingOutputReference
 ```
@@ -3265,7 +3265,7 @@ func InternalValue() DataboxEdgeOrderShipmentTracking
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataboxEdgeOrderStatusList
 ```
@@ -3397,7 +3397,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataboxEdgeOrderStatusOutputReference
 ```
@@ -3708,7 +3708,7 @@ func InternalValue() DataboxEdgeOrderStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataboxEdgeOrderTimeoutsOutputReference
 ```

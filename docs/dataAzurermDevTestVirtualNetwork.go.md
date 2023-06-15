@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDevTestVirtualNetwork.DataAzurermDevTestVirtualNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermdevtestvirtualnetwork"
 
 dataazurermdevtestvirtualnetwork.NewDataAzurermDevTestVirtualNetwork(scope Construct, id *string, config DataAzurermDevTestVirtualNetworkConfig) DataAzurermDevTestVirtualNetwork
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermDevTestVirtualNetwork.DataAzurermDevTestVirtualNetwork.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermdevtestvirtualnetwork"
 
 dataazurermdevtestvirtualnetwork.DataAzurermDevTestVirtualNetwork_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermDevTestVirtualNetwork.DataAzurermDevTestVirtualNetwork.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermdevtestvirtualnetwork"
 
 dataazurermdevtestvirtualnetwork.DataAzurermDevTestVirtualNetwork_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermdevtestvirtualnetwork.DataAzurermDevTestVirtualNetwork_IsTerraformEle
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermDevTestVirtualNetwork.DataAzurermDevTestVirtualNetwork.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermdevtestvirtualnetwork"
 
 dataazurermdevtestvirtualnetwork.DataAzurermDevTestVirtualNetwork_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -663,7 +663,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDevTestVirtualNetwork.DataAzurermDevTestVirtualNetworkAllowedSubnets.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermdevtestvirtualnetwork"
 
 &dataazurermdevtestvirtualnetwork.DataAzurermDevTestVirtualNetworkAllowedSubnets {
 
@@ -676,7 +676,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvir
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDevTestVirtualNetwork.DataAzurermDevTestVirtualNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermdevtestvirtualnetwork"
 
 &dataazurermdevtestvirtualnetwork.DataAzurermDevTestVirtualNetworkConfig {
 	Connection: interface{},
@@ -690,7 +690,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvir
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermDevTestVirtualNetwork.DataAzurermDevTestVirtualNetworkTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.dataAzurermDevTestVirtualNetwork.DataAzurermDevTestVirtualNetworkTimeouts,
 }
 ```
 
@@ -853,7 +853,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDevTestVirtualNetwork.DataAzurermDevTestVirtualNetworkSubnetOverrides.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermdevtestvirtualnetwork"
 
 &dataazurermdevtestvirtualnetwork.DataAzurermDevTestVirtualNetworkSubnetOverrides {
 
@@ -866,7 +866,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvir
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDevTestVirtualNetwork.DataAzurermDevTestVirtualNetworkTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermdevtestvirtualnetwork"
 
 &dataazurermdevtestvirtualnetwork.DataAzurermDevTestVirtualNetworkTimeouts {
 	Read: *string,
@@ -900,7 +900,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDevTestVirtualNetwork.DataAzurermDevTestVirtualNetworkAllowedSubnetsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermdevtestvirtualnetwork"
 
 dataazurermdevtestvirtualnetwork.NewDataAzurermDevTestVirtualNetworkAllowedSubnetsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermDevTestVirtualNetworkAllowedSubnetsList
 ```
@@ -1032,7 +1032,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDevTestVirtualNetwork.DataAzurermDevTestVirtualNetworkAllowedSubnetsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermdevtestvirtualnetwork"
 
 dataazurermdevtestvirtualnetwork.NewDataAzurermDevTestVirtualNetworkAllowedSubnetsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermDevTestVirtualNetworkAllowedSubnetsOutputReference
 ```
@@ -1332,7 +1332,7 @@ func InternalValue() DataAzurermDevTestVirtualNetworkAllowedSubnets
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDevTestVirtualNetwork.DataAzurermDevTestVirtualNetworkSubnetOverridesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermdevtestvirtualnetwork"
 
 dataazurermdevtestvirtualnetwork.NewDataAzurermDevTestVirtualNetworkSubnetOverridesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermDevTestVirtualNetworkSubnetOverridesList
 ```
@@ -1464,7 +1464,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDevTestVirtualNetwork.DataAzurermDevTestVirtualNetworkSubnetOverridesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermdevtestvirtualnetwork"
 
 dataazurermdevtestvirtualnetwork.NewDataAzurermDevTestVirtualNetworkSubnetOverridesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermDevTestVirtualNetworkSubnetOverridesOutputReference
 ```
@@ -1786,7 +1786,7 @@ func InternalValue() DataAzurermDevTestVirtualNetworkSubnetOverrides
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDevTestVirtualNetwork.DataAzurermDevTestVirtualNetworkTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdevtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermdevtestvirtualnetwork"
 
 dataazurermdevtestvirtualnetwork.NewDataAzurermDevTestVirtualNetworkTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDevTestVirtualNetworkTimeoutsOutputReference
 ```

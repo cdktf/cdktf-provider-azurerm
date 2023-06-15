@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudBuildPackBinding.SpringCloudBuildPackBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuildpackbinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/springcloudbuildpackbinding"
 
 springcloudbuildpackbinding.NewSpringCloudBuildPackBinding(scope Construct, id *string, config SpringCloudBuildPackBindingConfig) SpringCloudBuildPackBinding
 ```
@@ -324,7 +324,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.springCloudBuildPackBinding.SpringCloudBuildPackBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuildpackbinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/springcloudbuildpackbinding"
 
 springcloudbuildpackbinding.SpringCloudBuildPackBinding_IsConstruct(x interface{}) *bool
 ```
@@ -356,7 +356,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.springCloudBuildPackBinding.SpringCloudBuildPackBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuildpackbinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/springcloudbuildpackbinding"
 
 springcloudbuildpackbinding.SpringCloudBuildPackBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ springcloudbuildpackbinding.SpringCloudBuildPackBinding_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.springCloudBuildPackBinding.SpringCloudBuildPackBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuildpackbinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/springcloudbuildpackbinding"
 
 springcloudbuildpackbinding.SpringCloudBuildPackBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -701,7 +701,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudBuildPackBinding.SpringCloudBuildPackBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuildpackbinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/springcloudbuildpackbinding"
 
 &springcloudbuildpackbinding.SpringCloudBuildPackBindingConfig {
 	Connection: interface{},
@@ -715,8 +715,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuildpackb
 	SpringCloudBuilderId: *string,
 	BindingType: *string,
 	Id: *string,
-	Launch: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudBuildPackBinding.SpringCloudBuildPackBindingLaunch,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudBuildPackBinding.SpringCloudBuildPackBindingTimeouts,
+	Launch: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.springCloudBuildPackBinding.SpringCloudBuildPackBindingLaunch,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.springCloudBuildPackBinding.SpringCloudBuildPackBindingTimeouts,
 }
 ```
 
@@ -894,7 +894,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudBuildPackBinding.SpringCloudBuildPackBindingLaunch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuildpackbinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/springcloudbuildpackbinding"
 
 &springcloudbuildpackbinding.SpringCloudBuildPackBindingLaunch {
 	Properties: *map[string]*string,
@@ -940,7 +940,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudBuildPackBinding.SpringCloudBuildPackBindingTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuildpackbinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/springcloudbuildpackbinding"
 
 &springcloudbuildpackbinding.SpringCloudBuildPackBindingTimeouts {
 	Create: *string,
@@ -1016,7 +1016,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudBuildPackBinding.SpringCloudBuildPackBindingLaunchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuildpackbinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/springcloudbuildpackbinding"
 
 springcloudbuildpackbinding.NewSpringCloudBuildPackBindingLaunchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudBuildPackBindingLaunchOutputReference
 ```
@@ -1323,7 +1323,7 @@ func InternalValue() SpringCloudBuildPackBindingLaunch
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudBuildPackBinding.SpringCloudBuildPackBindingTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuildpackbinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/springcloudbuildpackbinding"
 
 springcloudbuildpackbinding.NewSpringCloudBuildPackBindingTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudBuildPackBindingTimeoutsOutputReference
 ```

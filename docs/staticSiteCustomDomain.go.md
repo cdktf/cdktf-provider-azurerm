@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.staticSiteCustomDomain.StaticSiteCustomDomain.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsitecustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/staticsitecustomdomain"
 
 staticsitecustomdomain.NewStaticSiteCustomDomain(scope Construct, id *string, config StaticSiteCustomDomainConfig) StaticSiteCustomDomain
 ```
@@ -304,7 +304,7 @@ func ResetValidationType()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.staticSiteCustomDomain.StaticSiteCustomDomain.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsitecustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/staticsitecustomdomain"
 
 staticsitecustomdomain.StaticSiteCustomDomain_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.staticSiteCustomDomain.StaticSiteCustomDomain.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsitecustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/staticsitecustomdomain"
 
 staticsitecustomdomain.StaticSiteCustomDomain_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ staticsitecustomdomain.StaticSiteCustomDomain_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.staticSiteCustomDomain.StaticSiteCustomDomain.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsitecustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/staticsitecustomdomain"
 
 staticsitecustomdomain.StaticSiteCustomDomain_IsTerraformResource(x interface{}) *bool
 ```
@@ -670,7 +670,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.staticSiteCustomDomain.StaticSiteCustomDomainConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsitecustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/staticsitecustomdomain"
 
 &staticsitecustomdomain.StaticSiteCustomDomainConfig {
 	Connection: interface{},
@@ -683,7 +683,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsitecustomdomai
 	DomainName: *string,
 	StaticSiteId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.staticSiteCustomDomain.StaticSiteCustomDomainTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.staticSiteCustomDomain.StaticSiteCustomDomainTimeouts,
 	ValidationType: *string,
 }
 ```
@@ -847,7 +847,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.staticSiteCustomDomain.StaticSiteCustomDomainTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsitecustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/staticsitecustomdomain"
 
 &staticsitecustomdomain.StaticSiteCustomDomainTimeouts {
 	Create: *string,
@@ -923,7 +923,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.staticSiteCustomDomain.StaticSiteCustomDomainTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/staticsitecustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/staticsitecustomdomain"
 
 staticsitecustomdomain.NewStaticSiteCustomDomainTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StaticSiteCustomDomainTimeoutsOutputReference
 ```

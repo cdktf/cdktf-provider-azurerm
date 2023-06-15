@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVmwarePrivateCloud.DataAzurermVmwarePrivateCloud.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwareprivatecloud"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermvmwareprivatecloud"
 
 dataazurermvmwareprivatecloud.NewDataAzurermVmwarePrivateCloud(scope Construct, id *string, config DataAzurermVmwarePrivateCloudConfig) DataAzurermVmwarePrivateCloud
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermVmwarePrivateCloud.DataAzurermVmwarePrivateCloud.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwareprivatecloud"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermvmwareprivatecloud"
 
 dataazurermvmwareprivatecloud.DataAzurermVmwarePrivateCloud_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermVmwarePrivateCloud.DataAzurermVmwarePrivateCloud.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwareprivatecloud"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermvmwareprivatecloud"
 
 dataazurermvmwareprivatecloud.DataAzurermVmwarePrivateCloud_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermvmwareprivatecloud.DataAzurermVmwarePrivateCloud_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermVmwarePrivateCloud.DataAzurermVmwarePrivateCloud.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwareprivatecloud"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermvmwareprivatecloud"
 
 dataazurermvmwareprivatecloud.DataAzurermVmwarePrivateCloud_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -773,7 +773,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVmwarePrivateCloud.DataAzurermVmwarePrivateCloudCircuit.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwareprivatecloud"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermvmwareprivatecloud"
 
 &dataazurermvmwareprivatecloud.DataAzurermVmwarePrivateCloudCircuit {
 
@@ -786,7 +786,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwarepriv
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVmwarePrivateCloud.DataAzurermVmwarePrivateCloudConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwareprivatecloud"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermvmwareprivatecloud"
 
 &dataazurermvmwareprivatecloud.DataAzurermVmwarePrivateCloudConfig {
 	Connection: interface{},
@@ -799,7 +799,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwarepriv
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermVmwarePrivateCloud.DataAzurermVmwarePrivateCloudTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.dataAzurermVmwarePrivateCloud.DataAzurermVmwarePrivateCloudTimeouts,
 }
 ```
 
@@ -949,7 +949,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVmwarePrivateCloud.DataAzurermVmwarePrivateCloudManagementCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwareprivatecloud"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermvmwareprivatecloud"
 
 &dataazurermvmwareprivatecloud.DataAzurermVmwarePrivateCloudManagementCluster {
 
@@ -962,7 +962,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwarepriv
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVmwarePrivateCloud.DataAzurermVmwarePrivateCloudTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwareprivatecloud"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermvmwareprivatecloud"
 
 &dataazurermvmwareprivatecloud.DataAzurermVmwarePrivateCloudTimeouts {
 	Read: *string,
@@ -996,7 +996,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVmwarePrivateCloud.DataAzurermVmwarePrivateCloudCircuitList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwareprivatecloud"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermvmwareprivatecloud"
 
 dataazurermvmwareprivatecloud.NewDataAzurermVmwarePrivateCloudCircuitList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermVmwarePrivateCloudCircuitList
 ```
@@ -1128,7 +1128,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVmwarePrivateCloud.DataAzurermVmwarePrivateCloudCircuitOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwareprivatecloud"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermvmwareprivatecloud"
 
 dataazurermvmwareprivatecloud.NewDataAzurermVmwarePrivateCloudCircuitOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermVmwarePrivateCloudCircuitOutputReference
 ```
@@ -1439,7 +1439,7 @@ func InternalValue() DataAzurermVmwarePrivateCloudCircuit
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVmwarePrivateCloud.DataAzurermVmwarePrivateCloudManagementClusterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwareprivatecloud"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermvmwareprivatecloud"
 
 dataazurermvmwareprivatecloud.NewDataAzurermVmwarePrivateCloudManagementClusterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermVmwarePrivateCloudManagementClusterList
 ```
@@ -1571,7 +1571,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVmwarePrivateCloud.DataAzurermVmwarePrivateCloudManagementClusterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwareprivatecloud"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermvmwareprivatecloud"
 
 dataazurermvmwareprivatecloud.NewDataAzurermVmwarePrivateCloudManagementClusterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermVmwarePrivateCloudManagementClusterOutputReference
 ```
@@ -1871,7 +1871,7 @@ func InternalValue() DataAzurermVmwarePrivateCloudManagementCluster
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVmwarePrivateCloud.DataAzurermVmwarePrivateCloudTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvmwareprivatecloud"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/dataazurermvmwareprivatecloud"
 
 dataazurermvmwareprivatecloud.NewDataAzurermVmwarePrivateCloudTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermVmwarePrivateCloudTimeoutsOutputReference
 ```
