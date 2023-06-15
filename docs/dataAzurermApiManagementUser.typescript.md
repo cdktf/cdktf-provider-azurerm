@@ -379,7 +379,7 @@ dataAzurermApiManagementUser.DataAzurermApiManagementUser.isTerraformDataSource(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.apiManagementNameInput">apiManagementNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.userIdInput">userIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.apiManagementName">apiManagementName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.id">id</a></code> | <code>string</code> | *No description.* |
@@ -603,10 +603,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermApiManagementUserTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermApiManagementUserTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a>
 
 ---
 
@@ -1095,7 +1095,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1146,10 +1146,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermApiManagementUserTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermApiManagementUserTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a>
 
 ---
 

@@ -893,7 +893,7 @@ applicationGateway.ApplicationGateway.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.sslPolicyInput">sslPolicyInput</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslPolicy">ApplicationGatewaySslPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.sslProfileInput">sslProfileInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.trustedClientCertificateInput">trustedClientCertificateInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.trustedRootCertificateInput">trustedRootCertificateInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.urlPathMapInput">urlPathMapInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>[]</code> | *No description.* |
@@ -1607,10 +1607,10 @@ public readonly tagsInput: {[ key: string ]: string};
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: ApplicationGatewayTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | ApplicationGatewayTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>
 
 ---
 
@@ -5598,7 +5598,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.data">data</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a></code> | *No description.* |
 
 ---
 
@@ -5679,10 +5679,10 @@ public readonly name: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayAuthenticationCertificate | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayAuthenticationCertificate;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>
 
 ---
 
@@ -6379,7 +6379,7 @@ public resetIpAddresses(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.fqdns">fqdns</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.ipAddresses">ipAddresses</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a></code> | *No description.* |
 
 ---
 
@@ -6480,10 +6480,10 @@ public readonly name: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayBackendAddressPool | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayBackendAddressPool;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>
 
 ---
 
@@ -6862,7 +6862,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a></code> | *No description.* |
 
 ---
 
@@ -6923,10 +6923,10 @@ public readonly name: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayBackendHttpSettingsAuthenticationCertificate | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayBackendHttpSettingsAuthenticationCertificate;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>
 
 ---
 
@@ -7712,7 +7712,7 @@ public resetTrustedRootCertificateNames(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.protocol">protocol</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.requestTimeout">requestTimeout</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.trustedRootCertificateNames">trustedRootCertificateNames</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a></code> | *No description.* |
 
 ---
 
@@ -8023,10 +8023,10 @@ public readonly trustedRootCertificateNames: string[];
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayBackendHttpSettings | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayBackendHttpSettings;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>
 
 ---
 
@@ -8407,7 +8407,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.statusCodeInput">statusCodeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.customErrorPageUrl">customErrorPageUrl</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.statusCode">statusCode</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -8488,10 +8488,10 @@ public readonly statusCode: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayCustomErrorConfiguration | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayCustomErrorConfiguration;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>
 
 ---
 
@@ -8916,7 +8916,7 @@ public resetSubnetId(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.privateLinkConfigurationName">privateLinkConfigurationName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.publicIpAddressId">publicIpAddressId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.subnetId">subnetId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -9087,10 +9087,10 @@ public readonly subnetId: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayFrontendIpConfiguration | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayFrontendIpConfiguration;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>
 
 ---
 
@@ -9471,7 +9471,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.portInput">portInput</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.port">port</a></code> | <code>number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a></code> | *No description.* |
 
 ---
 
@@ -9552,10 +9552,10 @@ public readonly port: number;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayFrontendPort | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayFrontendPort;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>
 
 ---
 
@@ -9936,7 +9936,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.subnetIdInput">subnetIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.subnetId">subnetId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -10017,10 +10017,10 @@ public readonly subnetId: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayGatewayIpConfiguration | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayGatewayIpConfiguration;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>
 
 ---
 
@@ -10694,7 +10694,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.statusCodeInput">statusCodeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.customErrorPageUrl">customErrorPageUrl</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.statusCode">statusCode</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -10775,10 +10775,10 @@ public readonly statusCode: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayHttpListenerCustomErrorConfiguration | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayHttpListenerCustomErrorConfiguration;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>
 
 ---
 
@@ -11243,7 +11243,7 @@ public resetSslProfileName(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.requireSni">requireSni</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.sslCertificateName">sslCertificateName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.sslProfileName">sslProfileName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a></code> | *No description.* |
 
 ---
 
@@ -11544,10 +11544,10 @@ public readonly sslProfileName: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayHttpListener | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayHttpListener;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>
 
 ---
 
@@ -12654,7 +12654,7 @@ public resetPrivateIpAddress(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.privateIpAddress">privateIpAddress</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.privateIpAddressAllocation">privateIpAddressAllocation</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.subnetId">subnetId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -12785,10 +12785,10 @@ public readonly subnetId: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayPrivateLinkConfigurationIpConfiguration | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayPrivateLinkConfigurationIpConfiguration;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>
 
 ---
 
@@ -13182,7 +13182,7 @@ public putIpConfiguration(value: IResolvable | ApplicationGatewayPrivateLinkConf
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.ipConfigurationInput">ipConfigurationInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -13263,10 +13263,10 @@ public readonly name: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayPrivateLinkConfiguration | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayPrivateLinkConfiguration;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>
 
 ---
 
@@ -14013,7 +14013,7 @@ public resetPort(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.protocol">protocol</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.timeout">timeout</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.unhealthyThreshold">unhealthyThreshold</a></code> | <code>number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a></code> | *No description.* |
 
 ---
 
@@ -14274,10 +14274,10 @@ public readonly unhealthyThreshold: number;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayProbe | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayProbe;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>
 
 ---
 
@@ -14695,7 +14695,7 @@ public resetTargetUrl(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.redirectType">redirectType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.targetListenerName">targetListenerName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.targetUrl">targetUrl</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -14866,10 +14866,10 @@ public readonly targetUrl: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayRedirectConfiguration | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayRedirectConfiguration;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>
 
 ---
 
@@ -15312,7 +15312,7 @@ public resetUrlPathMapName(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.rewriteRuleSetName">rewriteRuleSetName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.ruleType">ruleType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.urlPathMapName">urlPathMapName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a></code> | *No description.* |
 
 ---
 
@@ -15593,10 +15593,10 @@ public readonly urlPathMapName: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayRequestRoutingRule | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayRequestRoutingRule;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>
 
 ---
 
@@ -15997,7 +15997,7 @@ public resetRewriteRule(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.rewriteRuleInput">rewriteRuleInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a></code> | *No description.* |
 
 ---
 
@@ -16078,10 +16078,10 @@ public readonly name: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayRewriteRuleSet | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayRewriteRuleSet;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>
 
 ---
 
@@ -16479,7 +16479,7 @@ public resetNegate(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.negate">negate</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.pattern">pattern</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.variable">variable</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a></code> | *No description.* |
 
 ---
 
@@ -16590,10 +16590,10 @@ public readonly variable: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayRewriteRuleSetRewriteRuleCondition | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayRewriteRuleSetRewriteRuleCondition;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>
 
 ---
 
@@ -17061,7 +17061,7 @@ public resetUrl(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.urlInput">urlInput</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrl">ApplicationGatewayRewriteRuleSetRewriteRuleUrl</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.ruleSequence">ruleSequence</a></code> | <code>number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a></code> | *No description.* |
 
 ---
 
@@ -17212,10 +17212,10 @@ public readonly ruleSequence: number;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayRewriteRuleSetRewriteRule | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayRewriteRuleSetRewriteRule;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>
 
 ---
 
@@ -17595,7 +17595,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.headerValueInput">headerValueInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.headerName">headerName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.headerValue">headerValue</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -17666,10 +17666,10 @@ public readonly headerValue: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>
 
 ---
 
@@ -18049,7 +18049,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.headerValueInput">headerValueInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.headerName">headerName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.headerValue">headerValue</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -18120,10 +18120,10 @@ public readonly headerValue: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>
 
 ---
 
@@ -19217,7 +19217,7 @@ public resetPassword(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.keyVaultSecretId">keyVaultSecretId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.password">password</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a></code> | *No description.* |
 
 ---
 
@@ -19348,10 +19348,10 @@ public readonly password: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewaySslCertificate | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewaySslCertificate;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>
 
 ---
 
@@ -20164,7 +20164,7 @@ public resetVerifyClientCertIssuerDn(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.trustedClientCertificateNames">trustedClientCertificateNames</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.verifyClientCertIssuerDn">verifyClientCertIssuerDn</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a></code> | *No description.* |
 
 ---
 
@@ -20285,10 +20285,10 @@ public readonly verifyClientCertIssuerDn: boolean | IResolvable;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewaySslProfile | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewaySslProfile;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>
 
 ---
 
@@ -20933,7 +20933,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -21044,10 +21044,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayTimeouts | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>
 
 ---
 
@@ -21428,7 +21428,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.data">data</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a></code> | *No description.* |
 
 ---
 
@@ -21509,10 +21509,10 @@ public readonly name: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayTrustedClientCertificate | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayTrustedClientCertificate;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>
 
 ---
 
@@ -21909,7 +21909,7 @@ public resetKeyVaultSecretId(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.data">data</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.keyVaultSecretId">keyVaultSecretId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a></code> | *No description.* |
 
 ---
 
@@ -22010,10 +22010,10 @@ public readonly name: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayTrustedRootCertificate | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayTrustedRootCertificate;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>
 
 ---
 
@@ -22447,7 +22447,7 @@ public resetDefaultRewriteRuleSetName(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.defaultRedirectConfigurationName">defaultRedirectConfigurationName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.defaultRewriteRuleSetName">defaultRewriteRuleSetName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a></code> | *No description.* |
 
 ---
 
@@ -22648,10 +22648,10 @@ public readonly name: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayUrlPathMap | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayUrlPathMap;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>
 
 ---
 
@@ -23081,7 +23081,7 @@ public resetRewriteRuleSetName(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.paths">paths</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.redirectConfigurationName">redirectConfigurationName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.rewriteRuleSetName">rewriteRuleSetName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a></code> | *No description.* |
 
 ---
 
@@ -23302,10 +23302,10 @@ public readonly rewriteRuleSetName: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayUrlPathMapPathRule | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayUrlPathMapPathRule;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>
 
 ---
 
@@ -23692,7 +23692,7 @@ public resetRules(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.rulesInput">rulesInput</a></code> | <code>number[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.ruleGroupName">ruleGroupName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.rules">rules</a></code> | <code>number[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a></code> | *No description.* |
 
 ---
 
@@ -23763,10 +23763,10 @@ public readonly rules: number[];
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayWafConfigurationDisabledRuleGroup | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayWafConfigurationDisabledRuleGroup;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>
 
 ---
 
@@ -24162,7 +24162,7 @@ public resetSelectorMatchOperator(): void
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.matchVariable">matchVariable</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.selector">selector</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.selectorMatchOperator">selectorMatchOperator</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a></code> | *No description.* |
 
 ---
 
@@ -24253,10 +24253,10 @@ public readonly selectorMatchOperator: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApplicationGatewayWafConfigurationExclusion | IResolvable;
+public readonly internalValue: IResolvable | ApplicationGatewayWafConfigurationExclusion;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>
 
 ---
 

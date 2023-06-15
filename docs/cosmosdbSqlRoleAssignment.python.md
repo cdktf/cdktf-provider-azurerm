@@ -586,7 +586,7 @@ cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.property.roleDefinitionIdInput">role_definition_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.property.scopeInput">scope_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeouts">CosmosdbSqlRoleAssignmentTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeouts">CosmosdbSqlRoleAssignmentTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.property.accountName">account_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.property.name">name</a></code> | <code>str</code> | *No description.* |
@@ -822,10 +822,10 @@ scope_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[CosmosdbSqlRoleAssignmentTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, CosmosdbSqlRoleAssignmentTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeouts">CosmosdbSqlRoleAssignmentTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeouts">CosmosdbSqlRoleAssignmentTimeouts</a>]
 
 ---
 
@@ -1485,7 +1485,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeouts">CosmosdbSqlRoleAssignmentTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeouts">CosmosdbSqlRoleAssignmentTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1596,10 +1596,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[CosmosdbSqlRoleAssignmentTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, CosmosdbSqlRoleAssignmentTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeouts">CosmosdbSqlRoleAssignmentTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeouts">CosmosdbSqlRoleAssignmentTimeouts</a>]
 
 ---
 

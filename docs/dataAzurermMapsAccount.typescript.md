@@ -386,7 +386,7 @@ dataAzurermMapsAccount.DataAzurermMapsAccount.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
@@ -609,10 +609,10 @@ public readonly tagsInput: {[ key: string ]: string};
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermMapsAccountTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermMapsAccountTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a>
 
 ---
 
@@ -1091,7 +1091,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1142,10 +1142,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermMapsAccountTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermMapsAccountTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a>
 
 ---
 

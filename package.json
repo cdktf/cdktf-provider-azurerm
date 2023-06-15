@@ -51,13 +51,13 @@
     "cdktf-cli": "^0.17.0",
     "constructs": "^10.0.0",
     "dot-prop": "^5.2.0",
-    "jsii": "^1.53.0",
+    "jsii": "^5.0.1",
     "jsii-diff": "^1.84.0",
     "jsii-docgen": ">=7.1.2",
     "jsii-pacmak": "^1.84.0",
     "node-fetch": "cjs",
     "npm-check-updates": "^16",
-    "projen": "^0.71.96",
+    "projen": "^0.71.97",
     "standard-version": "^9",
     "typescript": "^3.9.10"
   },
@@ -66,8 +66,6 @@
     "constructs": "^10.0.0"
   },
   "resolutions": {
-    "@types/babel__traverse": "7.18.2",
-    "@types/prettier": "2.6.0",
     "@types/yargs": "17.0.13"
   },
   "keywords": [

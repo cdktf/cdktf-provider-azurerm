@@ -378,7 +378,7 @@ cosmosdbSqlTrigger.CosmosdbSqlTrigger.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTrigger.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTrigger.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTrigger.property.operationInput">operationInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTrigger.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTriggerTimeouts">CosmosdbSqlTriggerTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTrigger.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTriggerTimeouts">CosmosdbSqlTriggerTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTrigger.property.typeInput">typeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTrigger.property.body">body</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTrigger.property.containerId">containerId</a></code> | <code>string</code> | *No description.* |
@@ -594,10 +594,10 @@ public readonly operationInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTrigger.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: CosmosdbSqlTriggerTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | CosmosdbSqlTriggerTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTriggerTimeouts">CosmosdbSqlTriggerTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTriggerTimeouts">CosmosdbSqlTriggerTimeouts</a>
 
 ---
 
@@ -1198,7 +1198,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTriggerTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTriggerTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTriggerTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTriggerTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTriggerTimeouts">CosmosdbSqlTriggerTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTriggerTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTriggerTimeouts">CosmosdbSqlTriggerTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1309,10 +1309,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTriggerTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: CosmosdbSqlTriggerTimeouts | IResolvable;
+public readonly internalValue: IResolvable | CosmosdbSqlTriggerTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTriggerTimeouts">CosmosdbSqlTriggerTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cosmosdbSqlTrigger.CosmosdbSqlTriggerTimeouts">CosmosdbSqlTriggerTimeouts</a>
 
 ---
 

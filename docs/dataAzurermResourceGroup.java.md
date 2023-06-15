@@ -464,7 +464,7 @@ DataAzurermResourceGroup.isTerraformDataSource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference">DataAzurermResourceGroupTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
 
@@ -648,7 +648,7 @@ public java.lang.String getNameInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a>
 
 ---
 
@@ -1098,7 +1098,7 @@ public void resetRead()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1152,7 +1152,7 @@ public java.lang.String getRead();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a>
 
 ---
 

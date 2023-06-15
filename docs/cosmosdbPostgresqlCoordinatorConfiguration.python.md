@@ -545,7 +545,7 @@ cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfigur
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfiguration.property.clusterIdInput">cluster_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfiguration.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfiguration.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfiguration.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfigurationTimeouts">CosmosdbPostgresqlCoordinatorConfigurationTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfiguration.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfigurationTimeouts">CosmosdbPostgresqlCoordinatorConfigurationTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfiguration.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfiguration.property.clusterId">cluster_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfiguration.property.id">id</a></code> | <code>str</code> | *No description.* |
@@ -739,10 +739,10 @@ name_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfiguration.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[CosmosdbPostgresqlCoordinatorConfigurationTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, CosmosdbPostgresqlCoordinatorConfigurationTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfigurationTimeouts">CosmosdbPostgresqlCoordinatorConfigurationTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfigurationTimeouts">CosmosdbPostgresqlCoordinatorConfigurationTimeouts</a>]
 
 ---
 
@@ -1340,7 +1340,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfigurationTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfigurationTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfigurationTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfigurationTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfigurationTimeouts">CosmosdbPostgresqlCoordinatorConfigurationTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfigurationTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfigurationTimeouts">CosmosdbPostgresqlCoordinatorConfigurationTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1451,10 +1451,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfigurationTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[CosmosdbPostgresqlCoordinatorConfigurationTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, CosmosdbPostgresqlCoordinatorConfigurationTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfigurationTimeouts">CosmosdbPostgresqlCoordinatorConfigurationTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cosmosdbPostgresqlCoordinatorConfiguration.CosmosdbPostgresqlCoordinatorConfigurationTimeouts">CosmosdbPostgresqlCoordinatorConfigurationTimeouts</a>]
 
 ---
 

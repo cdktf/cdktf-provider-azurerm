@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachine.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/devtestlinuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlinuxvirtualmachine"
 
 devtestlinuxvirtualmachine.NewDevTestLinuxVirtualMachine(scope Construct, id *string, config DevTestLinuxVirtualMachineConfig) DevTestLinuxVirtualMachine
 ```
@@ -372,7 +372,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachine.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/devtestlinuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlinuxvirtualmachine"
 
 devtestlinuxvirtualmachine.DevTestLinuxVirtualMachine_IsConstruct(x interface{}) *bool
 ```
@@ -404,7 +404,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachine.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/devtestlinuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlinuxvirtualmachine"
 
 devtestlinuxvirtualmachine.DevTestLinuxVirtualMachine_IsTerraformElement(x interface{}) *bool
 ```
@@ -418,7 +418,7 @@ devtestlinuxvirtualmachine.DevTestLinuxVirtualMachine_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachine.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/devtestlinuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlinuxvirtualmachine"
 
 devtestlinuxvirtualmachine.DevTestLinuxVirtualMachine_IsTerraformResource(x interface{}) *bool
 ```
@@ -1057,7 +1057,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachineConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/devtestlinuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlinuxvirtualmachine"
 
 &devtestlinuxvirtualmachine.DevTestLinuxVirtualMachineConfig {
 	Connection: interface{},
@@ -1067,7 +1067,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/devtestlinuxvirtua
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	GalleryImageReference: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachineGalleryImageReference,
+	GalleryImageReference: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachineGalleryImageReference,
 	LabName: *string,
 	LabSubnetName: *string,
 	LabVirtualNetworkId: *string,
@@ -1085,7 +1085,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/devtestlinuxvirtua
 	Password: *string,
 	SshKey: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachineTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachineTimeouts,
 }
 ```
 
@@ -1434,7 +1434,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachineGalleryImageReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/devtestlinuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlinuxvirtualmachine"
 
 &devtestlinuxvirtualmachine.DevTestLinuxVirtualMachineGalleryImageReference {
 	Offer: *string,
@@ -1508,7 +1508,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachineInboundNatRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/devtestlinuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlinuxvirtualmachine"
 
 &devtestlinuxvirtualmachine.DevTestLinuxVirtualMachineInboundNatRule {
 	BackendPort: *f64,
@@ -1554,7 +1554,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachineTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/devtestlinuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlinuxvirtualmachine"
 
 &devtestlinuxvirtualmachine.DevTestLinuxVirtualMachineTimeouts {
 	Create: *string,
@@ -1630,7 +1630,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachineGalleryImageReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/devtestlinuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlinuxvirtualmachine"
 
 devtestlinuxvirtualmachine.NewDevTestLinuxVirtualMachineGalleryImageReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DevTestLinuxVirtualMachineGalleryImageReferenceOutputReference
 ```
@@ -1967,7 +1967,7 @@ func InternalValue() DevTestLinuxVirtualMachineGalleryImageReference
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachineInboundNatRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/devtestlinuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlinuxvirtualmachine"
 
 devtestlinuxvirtualmachine.NewDevTestLinuxVirtualMachineInboundNatRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DevTestLinuxVirtualMachineInboundNatRuleList
 ```
@@ -2110,7 +2110,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachineInboundNatRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/devtestlinuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlinuxvirtualmachine"
 
 devtestlinuxvirtualmachine.NewDevTestLinuxVirtualMachineInboundNatRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DevTestLinuxVirtualMachineInboundNatRuleOutputReference
 ```
@@ -2432,7 +2432,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestLinuxVirtualMachine.DevTestLinuxVirtualMachineTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/devtestlinuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlinuxvirtualmachine"
 
 devtestlinuxvirtualmachine.NewDevTestLinuxVirtualMachineTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DevTestLinuxVirtualMachineTimeoutsOutputReference
 ```

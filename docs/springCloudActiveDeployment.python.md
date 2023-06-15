@@ -535,7 +535,7 @@ springCloudActiveDeployment.SpringCloudActiveDeployment.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeployment.property.deploymentNameInput">deployment_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeployment.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeployment.property.springCloudAppIdInput">spring_cloud_app_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeployment.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeploymentTimeouts">SpringCloudActiveDeploymentTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeployment.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeploymentTimeouts">SpringCloudActiveDeploymentTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeployment.property.deploymentName">deployment_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeployment.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeployment.property.springCloudAppId">spring_cloud_app_id</a></code> | <code>str</code> | *No description.* |
@@ -727,10 +727,10 @@ spring_cloud_app_id_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeployment.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[SpringCloudActiveDeploymentTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, SpringCloudActiveDeploymentTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeploymentTimeouts">SpringCloudActiveDeploymentTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeploymentTimeouts">SpringCloudActiveDeploymentTimeouts</a>]
 
 ---
 
@@ -1294,7 +1294,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeploymentTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeploymentTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeploymentTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeploymentTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeploymentTimeouts">SpringCloudActiveDeploymentTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeploymentTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeploymentTimeouts">SpringCloudActiveDeploymentTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1405,10 +1405,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeploymentTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[SpringCloudActiveDeploymentTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, SpringCloudActiveDeploymentTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeploymentTimeouts">SpringCloudActiveDeploymentTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudActiveDeployment.SpringCloudActiveDeploymentTimeouts">SpringCloudActiveDeploymentTimeouts</a>]
 
 ---
 

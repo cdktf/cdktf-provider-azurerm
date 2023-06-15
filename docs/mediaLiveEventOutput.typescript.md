@@ -418,7 +418,7 @@ mediaLiveEventOutput.MediaLiveEventOutput.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutput.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutput.property.outputSnapTimeInSecondsInput">outputSnapTimeInSecondsInput</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutput.property.rewindWindowDurationInput">rewindWindowDurationInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutput.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts">MediaLiveEventOutputTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutput.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts">MediaLiveEventOutputTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutput.property.archiveWindowDuration">archiveWindowDuration</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutput.property.assetName">assetName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutput.property.description">description</a></code> | <code>string</code> | *No description.* |
@@ -687,10 +687,10 @@ public readonly rewindWindowDurationInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutput.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: MediaLiveEventOutputTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | MediaLiveEventOutputTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts">MediaLiveEventOutputTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts">MediaLiveEventOutputTimeouts</a>
 
 ---
 
@@ -1373,7 +1373,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts">MediaLiveEventOutputTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts">MediaLiveEventOutputTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1484,10 +1484,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: MediaLiveEventOutputTimeouts | IResolvable;
+public readonly internalValue: IResolvable | MediaLiveEventOutputTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts">MediaLiveEventOutputTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts">MediaLiveEventOutputTimeouts</a>
 
 ---
 

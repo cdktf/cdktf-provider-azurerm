@@ -526,7 +526,7 @@ ipGroupCidr.IpGroupCidr.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr.property.cidrInput">cidr_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr.property.ipGroupIdInput">ip_group_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts">IpGroupCidrTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts">IpGroupCidrTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr.property.cidr">cidr</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr.property.ipGroupId">ip_group_id</a></code> | <code>str</code> | *No description.* |
@@ -718,10 +718,10 @@ ip_group_id_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IpGroupCidrTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, IpGroupCidrTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts">IpGroupCidrTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts">IpGroupCidrTimeouts</a>]
 
 ---
 
@@ -1262,7 +1262,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts">IpGroupCidrTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts">IpGroupCidrTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1353,10 +1353,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IpGroupCidrTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, IpGroupCidrTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts">IpGroupCidrTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts">IpGroupCidrTimeouts</a>]
 
 ---
 

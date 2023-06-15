@@ -526,7 +526,7 @@ springCloudAccelerator.SpringCloudAccelerator.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.property.springCloudServiceIdInput">spring_cloud_service_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts">SpringCloudAcceleratorTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts">SpringCloudAcceleratorTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.property.springCloudServiceId">spring_cloud_service_id</a></code> | <code>str</code> | *No description.* |
@@ -718,10 +718,10 @@ spring_cloud_service_id_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAccelerator.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[SpringCloudAcceleratorTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, SpringCloudAcceleratorTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts">SpringCloudAcceleratorTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts">SpringCloudAcceleratorTimeouts</a>]
 
 ---
 
@@ -1262,7 +1262,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts">SpringCloudAcceleratorTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts">SpringCloudAcceleratorTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1353,10 +1353,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[SpringCloudAcceleratorTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, SpringCloudAcceleratorTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts">SpringCloudAcceleratorTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudAccelerator.SpringCloudAcceleratorTimeouts">SpringCloudAcceleratorTimeouts</a>]
 
 ---
 

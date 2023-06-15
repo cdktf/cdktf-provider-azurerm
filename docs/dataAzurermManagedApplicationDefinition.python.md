@@ -507,7 +507,7 @@ dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeouts">DataAzurermManagedApplicationDefinitionTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeouts">DataAzurermManagedApplicationDefinitionTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | *No description.* |
@@ -689,10 +689,10 @@ resource_group_name_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[DataAzurermManagedApplicationDefinitionTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, DataAzurermManagedApplicationDefinitionTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeouts">DataAzurermManagedApplicationDefinitionTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeouts">DataAzurermManagedApplicationDefinitionTimeouts</a>]
 
 ---
 
@@ -1187,7 +1187,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeoutsOutputReference.property.readInput">read_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeouts">DataAzurermManagedApplicationDefinitionTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeouts">DataAzurermManagedApplicationDefinitionTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1238,10 +1238,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DataAzurermManagedApplicationDefinitionTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, DataAzurermManagedApplicationDefinitionTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeouts">DataAzurermManagedApplicationDefinitionTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeouts">DataAzurermManagedApplicationDefinitionTimeouts</a>]
 
 ---
 

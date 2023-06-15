@@ -375,7 +375,7 @@ dataAzurermResourceGroup.DataAzurermResourceGroup.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference">DataAzurermResourceGroupTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.name">name</a></code> | <code>string</code> | *No description.* |
 
@@ -556,10 +556,10 @@ public readonly nameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermResourceGroupTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermResourceGroupTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a>
 
 ---
 
@@ -992,7 +992,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1043,10 +1043,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermResourceGroupTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermResourceGroupTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a>
 
 ---
 

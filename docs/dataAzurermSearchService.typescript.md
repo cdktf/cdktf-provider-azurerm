@@ -381,7 +381,7 @@ dataAzurermSearchService.DataAzurermSearchService.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchService.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchService.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchService.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchService.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeouts">DataAzurermSearchServiceTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchService.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeouts">DataAzurermSearchServiceTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchService.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchService.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchService.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
@@ -623,10 +623,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchService.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermSearchServiceTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermSearchServiceTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeouts">DataAzurermSearchServiceTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeouts">DataAzurermSearchServiceTimeouts</a>
 
 ---
 
@@ -1957,7 +1957,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeouts">DataAzurermSearchServiceTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeouts">DataAzurermSearchServiceTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -2008,10 +2008,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermSearchServiceTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermSearchServiceTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeouts">DataAzurermSearchServiceTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeouts">DataAzurermSearchServiceTimeouts</a>
 
 ---
 

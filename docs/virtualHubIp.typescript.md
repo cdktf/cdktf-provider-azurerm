@@ -393,7 +393,7 @@ virtualHubIp.VirtualHubIp.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp.property.privateIpAllocationMethodInput">privateIpAllocationMethodInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp.property.publicIpAddressIdInput">publicIpAddressIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp.property.subnetIdInput">subnetIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts">VirtualHubIpTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts">VirtualHubIpTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp.property.virtualHubIdInput">virtualHubIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -620,10 +620,10 @@ public readonly subnetIdInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: VirtualHubIpTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | VirtualHubIpTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts">VirtualHubIpTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts">VirtualHubIpTimeouts</a>
 
 ---
 
@@ -1247,7 +1247,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts">VirtualHubIpTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts">VirtualHubIpTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1358,10 +1358,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: VirtualHubIpTimeouts | IResolvable;
+public readonly internalValue: IResolvable | VirtualHubIpTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts">VirtualHubIpTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts">VirtualHubIpTimeouts</a>
 
 ---
 

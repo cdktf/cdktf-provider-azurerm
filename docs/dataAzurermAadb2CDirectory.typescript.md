@@ -380,7 +380,7 @@ dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectory.isTerraformDataSource(x: a
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectory.property.domainNameInput">domainNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectory.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectory.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectory.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectoryTimeouts">DataAzurermAadb2CDirectoryTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectory.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectoryTimeouts">DataAzurermAadb2CDirectoryTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectory.property.domainName">domainName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectory.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectory.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
@@ -612,10 +612,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectory.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermAadb2CDirectoryTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermAadb2CDirectoryTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectoryTimeouts">DataAzurermAadb2CDirectoryTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectoryTimeouts">DataAzurermAadb2CDirectoryTimeouts</a>
 
 ---
 
@@ -1073,7 +1073,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectoryTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectoryTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectoryTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectoryTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectoryTimeouts">DataAzurermAadb2CDirectoryTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectoryTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectoryTimeouts">DataAzurermAadb2CDirectoryTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1124,10 +1124,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectoryTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermAadb2CDirectoryTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermAadb2CDirectoryTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectoryTimeouts">DataAzurermAadb2CDirectoryTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermAadb2CDirectory.DataAzurermAadb2CDirectoryTimeouts">DataAzurermAadb2CDirectoryTimeouts</a>
 
 ---
 

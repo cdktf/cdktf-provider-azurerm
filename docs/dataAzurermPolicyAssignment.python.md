@@ -516,7 +516,7 @@ dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.is_terraform_data_source
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.scopeIdInput">scope_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.scopeId">scope_id</a></code> | <code>str</code> | *No description.* |
@@ -788,10 +788,10 @@ scope_id_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[DataAzurermPolicyAssignmentTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, DataAzurermPolicyAssignmentTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a>]
 
 ---
 
@@ -2242,7 +2242,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeoutsOutputReference.property.readInput">read_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -2293,10 +2293,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DataAzurermPolicyAssignmentTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, DataAzurermPolicyAssignmentTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a>]
 
 ---
 

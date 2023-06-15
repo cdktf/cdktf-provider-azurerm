@@ -557,7 +557,7 @@ mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.serverNameInput">server_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.subnetIdInput">subnet_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | *No description.* |
@@ -771,10 +771,10 @@ subnet_id_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRule.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[MariadbVirtualNetworkRuleTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, MariadbVirtualNetworkRuleTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a>]
 
 ---
 
@@ -1386,7 +1386,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1497,10 +1497,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[MariadbVirtualNetworkRuleTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, MariadbVirtualNetworkRuleTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mariadbVirtualNetworkRule.MariadbVirtualNetworkRuleTimeouts">MariadbVirtualNetworkRuleTimeouts</a>]
 
 ---
 

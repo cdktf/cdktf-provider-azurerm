@@ -382,7 +382,7 @@ dataAzurermVirtualNetwork.DataAzurermVirtualNetwork.isTerraformDataSource(x: any
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetwork.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetwork.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetwork.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetwork.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetworkTimeouts">DataAzurermVirtualNetworkTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetwork.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetworkTimeouts">DataAzurermVirtualNetworkTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetwork.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetwork.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetwork.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
@@ -634,10 +634,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetwork.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermVirtualNetworkTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermVirtualNetworkTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetworkTimeouts">DataAzurermVirtualNetworkTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetworkTimeouts">DataAzurermVirtualNetworkTimeouts</a>
 
 ---
 
@@ -1093,7 +1093,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetworkTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetworkTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetworkTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetworkTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetworkTimeouts">DataAzurermVirtualNetworkTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetworkTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetworkTimeouts">DataAzurermVirtualNetworkTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1144,10 +1144,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetworkTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermVirtualNetworkTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermVirtualNetworkTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetworkTimeouts">DataAzurermVirtualNetworkTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermVirtualNetwork.DataAzurermVirtualNetworkTimeouts">DataAzurermVirtualNetworkTimeouts</a>
 
 ---
 

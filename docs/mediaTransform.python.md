@@ -600,7 +600,7 @@ mediaTransform.MediaTransform.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransform.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransform.property.outputInput">output_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput">MediaTransformOutput</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransform.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransform.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts">MediaTransformTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransform.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts">MediaTransformTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransform.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransform.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransform.property.mediaServicesAccountName">media_services_account_name</a></code> | <code>str</code> | *No description.* |
@@ -834,10 +834,10 @@ resource_group_name_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[MediaTransformTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, MediaTransformTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts">MediaTransformTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts">MediaTransformTimeouts</a>]
 
 ---
 
@@ -7589,7 +7589,7 @@ def reset_width() -> None
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayerOutputReference.property.referenceFrames">reference_frames</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayerOutputReference.property.slices">slices</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayerOutputReference.property.width">width</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayerOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer">MediaTransformOutputCustomPresetCodecH264VideoLayer</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayerOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer">MediaTransformOutputCustomPresetCodecH264VideoLayer</a>]</code> | *No description.* |
 
 ---
 
@@ -7920,10 +7920,10 @@ width: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayerOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[MediaTransformOutputCustomPresetCodecH264VideoLayer, IResolvable]
+internal_value: typing.Union[IResolvable, MediaTransformOutputCustomPresetCodecH264VideoLayer]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer">MediaTransformOutputCustomPresetCodecH264VideoLayer</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer">MediaTransformOutputCustomPresetCodecH264VideoLayer</a>]
 
 ---
 
@@ -8974,7 +8974,7 @@ def reset_width() -> None
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayerOutputReference.property.referenceFrames">reference_frames</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayerOutputReference.property.slices">slices</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayerOutputReference.property.width">width</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayerOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer">MediaTransformOutputCustomPresetCodecH265VideoLayer</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayerOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer">MediaTransformOutputCustomPresetCodecH265VideoLayer</a>]</code> | *No description.* |
 
 ---
 
@@ -9285,10 +9285,10 @@ width: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayerOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[MediaTransformOutputCustomPresetCodecH265VideoLayer, IResolvable]
+internal_value: typing.Union[IResolvable, MediaTransformOutputCustomPresetCodecH265VideoLayer]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer">MediaTransformOutputCustomPresetCodecH265VideoLayer</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer">MediaTransformOutputCustomPresetCodecH265VideoLayer</a>]
 
 ---
 
@@ -10227,7 +10227,7 @@ def reset_width() -> None
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.label">label</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.quality">quality</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.width">width</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer">MediaTransformOutputCustomPresetCodecJpgImageLayer</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer">MediaTransformOutputCustomPresetCodecJpgImageLayer</a>]</code> | *No description.* |
 
 ---
 
@@ -10338,10 +10338,10 @@ width: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[MediaTransformOutputCustomPresetCodecJpgImageLayer, IResolvable]
+internal_value: typing.Union[IResolvable, MediaTransformOutputCustomPresetCodecJpgImageLayer]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer">MediaTransformOutputCustomPresetCodecJpgImageLayer</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer">MediaTransformOutputCustomPresetCodecJpgImageLayer</a>]
 
 ---
 
@@ -11826,7 +11826,7 @@ def reset_png_image() -> None
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.h265VideoInput">h265_video_input</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video">MediaTransformOutputCustomPresetCodecH265Video</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.jpgImageInput">jpg_image_input</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage">MediaTransformOutputCustomPresetCodecJpgImage</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.pngImageInput">png_image_input</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage">MediaTransformOutputCustomPresetCodecPngImage</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodec">MediaTransformOutputCustomPresetCodec</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodec">MediaTransformOutputCustomPresetCodec</a>]</code> | *No description.* |
 
 ---
 
@@ -12017,10 +12017,10 @@ png_image_input: MediaTransformOutputCustomPresetCodecPngImage
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[MediaTransformOutputCustomPresetCodec, IResolvable]
+internal_value: typing.Union[IResolvable, MediaTransformOutputCustomPresetCodec]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodec">MediaTransformOutputCustomPresetCodec</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodec">MediaTransformOutputCustomPresetCodec</a>]
 
 ---
 
@@ -12458,7 +12458,7 @@ def reset_width() -> None
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.height">height</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.label">label</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.width">width</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer">MediaTransformOutputCustomPresetCodecPngImageLayer</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer">MediaTransformOutputCustomPresetCodecPngImageLayer</a>]</code> | *No description.* |
 
 ---
 
@@ -12549,10 +12549,10 @@ width: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[MediaTransformOutputCustomPresetCodecPngImageLayer, IResolvable]
+internal_value: typing.Union[IResolvable, MediaTransformOutputCustomPresetCodecPngImageLayer]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer">MediaTransformOutputCustomPresetCodecPngImageLayer</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer">MediaTransformOutputCustomPresetCodecPngImageLayer</a>]
 
 ---
 
@@ -16110,7 +16110,7 @@ def reset_video() -> None
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayOutputReference.property.video">video</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoOutputReference">MediaTransformOutputCustomPresetFilterOverlayVideoOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayOutputReference.property.audioInput">audio_input</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio">MediaTransformOutputCustomPresetFilterOverlayAudio</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayOutputReference.property.videoInput">video_input</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo">MediaTransformOutputCustomPresetFilterOverlayVideo</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlay">MediaTransformOutputCustomPresetFilterOverlay</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlay">MediaTransformOutputCustomPresetFilterOverlay</a>]</code> | *No description.* |
 
 ---
 
@@ -16181,10 +16181,10 @@ video_input: MediaTransformOutputCustomPresetFilterOverlayVideo
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[MediaTransformOutputCustomPresetFilterOverlay, IResolvable]
+internal_value: typing.Union[IResolvable, MediaTransformOutputCustomPresetFilterOverlay]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlay">MediaTransformOutputCustomPresetFilterOverlay</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlay">MediaTransformOutputCustomPresetFilterOverlay</a>]
 
 ---
 
@@ -18440,7 +18440,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFileOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFileOutputReference.property.labelsInput">labels_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFileOutputReference.property.labels">labels</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFileOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFile">MediaTransformOutputCustomPresetFormatMp4OutputFile</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFileOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFile">MediaTransformOutputCustomPresetFormatMp4OutputFile</a>]</code> | *No description.* |
 
 ---
 
@@ -18491,10 +18491,10 @@ labels: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFileOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[MediaTransformOutputCustomPresetFormatMp4OutputFile, IResolvable]
+internal_value: typing.Union[IResolvable, MediaTransformOutputCustomPresetFormatMp4OutputFile]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFile">MediaTransformOutputCustomPresetFormatMp4OutputFile</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFile">MediaTransformOutputCustomPresetFormatMp4OutputFile</a>]
 
 ---
 
@@ -19220,7 +19220,7 @@ def reset_transport_stream() -> None
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.mp4Input">mp4_input</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4">MediaTransformOutputCustomPresetFormatMp4</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.pngInput">png_input</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPng">MediaTransformOutputCustomPresetFormatPng</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.transportStreamInput">transport_stream_input</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStream">MediaTransformOutputCustomPresetFormatTransportStream</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormat">MediaTransformOutputCustomPresetFormat</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormat">MediaTransformOutputCustomPresetFormat</a>]</code> | *No description.* |
 
 ---
 
@@ -19331,10 +19331,10 @@ transport_stream_input: MediaTransformOutputCustomPresetFormatTransportStream
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[MediaTransformOutputCustomPresetFormat, IResolvable]
+internal_value: typing.Union[IResolvable, MediaTransformOutputCustomPresetFormat]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormat">MediaTransformOutputCustomPresetFormat</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormat">MediaTransformOutputCustomPresetFormat</a>]
 
 ---
 
@@ -20043,7 +20043,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFileOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFileOutputReference.property.labelsInput">labels_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFileOutputReference.property.labels">labels</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFileOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFile">MediaTransformOutputCustomPresetFormatTransportStreamOutputFile</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFileOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFile">MediaTransformOutputCustomPresetFormatTransportStreamOutputFile</a>]</code> | *No description.* |
 
 ---
 
@@ -20094,10 +20094,10 @@ labels: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFileOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[MediaTransformOutputCustomPresetFormatTransportStreamOutputFile, IResolvable]
+internal_value: typing.Union[IResolvable, MediaTransformOutputCustomPresetFormatTransportStreamOutputFile]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFile">MediaTransformOutputCustomPresetFormatTransportStreamOutputFile</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFile">MediaTransformOutputCustomPresetFormatTransportStreamOutputFile</a>]
 
 ---
 
@@ -21980,7 +21980,7 @@ def reset_video_analyzer_preset() -> None
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputOutputReference.property.videoAnalyzerPresetInput">video_analyzer_preset_input</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset">MediaTransformOutputVideoAnalyzerPreset</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputOutputReference.property.onErrorAction">on_error_action</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputOutputReference.property.relativePriority">relative_priority</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput">MediaTransformOutput</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput">MediaTransformOutput</a>]</code> | *No description.* |
 
 ---
 
@@ -22151,10 +22151,10 @@ relative_priority: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[MediaTransformOutput, IResolvable]
+internal_value: typing.Union[IResolvable, MediaTransformOutput]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput">MediaTransformOutput</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput">MediaTransformOutput</a>]
 
 ---
 
@@ -22820,7 +22820,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts">MediaTransformTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts">MediaTransformTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -22931,10 +22931,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[MediaTransformTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, MediaTransformTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts">MediaTransformTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts">MediaTransformTimeouts</a>]
 
 ---
 

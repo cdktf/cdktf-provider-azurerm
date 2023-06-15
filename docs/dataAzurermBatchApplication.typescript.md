@@ -378,7 +378,7 @@ dataAzurermBatchApplication.DataAzurermBatchApplication.isTerraformDataSource(x:
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts">DataAzurermBatchApplicationTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts">DataAzurermBatchApplicationTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.property.accountName">accountName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -591,10 +591,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermBatchApplicationTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermBatchApplicationTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts">DataAzurermBatchApplicationTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts">DataAzurermBatchApplicationTimeouts</a>
 
 ---
 
@@ -1073,7 +1073,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts">DataAzurermBatchApplicationTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts">DataAzurermBatchApplicationTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1124,10 +1124,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermBatchApplicationTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermBatchApplicationTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts">DataAzurermBatchApplicationTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts">DataAzurermBatchApplicationTimeouts</a>
 
 ---
 

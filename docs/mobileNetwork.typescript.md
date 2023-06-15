@@ -388,7 +388,7 @@ mobileNetwork.MobileNetwork.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetwork.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetwork.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetwork.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetwork.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeouts">MobileNetworkTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetwork.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeouts">MobileNetworkTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetwork.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetwork.property.location">location</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetwork.property.mobileCountryCode">mobileCountryCode</a></code> | <code>string</code> | *No description.* |
@@ -634,10 +634,10 @@ public readonly tagsInput: {[ key: string ]: string};
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.mobileNetwork.MobileNetwork.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: MobileNetworkTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | MobileNetworkTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeouts">MobileNetworkTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeouts">MobileNetworkTimeouts</a>
 
 ---
 
@@ -1251,7 +1251,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeouts">MobileNetworkTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeouts">MobileNetworkTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1362,10 +1362,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: MobileNetworkTimeouts | IResolvable;
+public readonly internalValue: IResolvable | MobileNetworkTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeouts">MobileNetworkTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeouts">MobileNetworkTimeouts</a>
 
 ---
 

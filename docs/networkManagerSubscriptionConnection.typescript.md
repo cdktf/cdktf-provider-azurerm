@@ -386,7 +386,7 @@ networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnection.isTerr
 | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnection.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnection.property.networkManagerIdInput">networkManagerIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnection.property.subscriptionIdInput">subscriptionIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnection.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts">NetworkManagerSubscriptionConnectionTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnection.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts">NetworkManagerSubscriptionConnectionTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnection.property.description">description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnection.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnection.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -610,10 +610,10 @@ public readonly subscriptionIdInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnection.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: NetworkManagerSubscriptionConnectionTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | NetworkManagerSubscriptionConnectionTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts">NetworkManagerSubscriptionConnectionTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts">NetworkManagerSubscriptionConnectionTimeouts</a>
 
 ---
 
@@ -1181,7 +1181,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts">NetworkManagerSubscriptionConnectionTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts">NetworkManagerSubscriptionConnectionTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1292,10 +1292,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: NetworkManagerSubscriptionConnectionTimeouts | IResolvable;
+public readonly internalValue: IResolvable | NetworkManagerSubscriptionConnectionTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts">NetworkManagerSubscriptionConnectionTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts">NetworkManagerSubscriptionConnectionTimeouts</a>
 
 ---
 

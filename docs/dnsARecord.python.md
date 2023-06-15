@@ -610,7 +610,7 @@ dnsARecord.DnsARecord.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecord.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecord.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecord.property.targetResourceIdInput">target_resource_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecord.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecordTimeouts">DnsARecordTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecord.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecordTimeouts">DnsARecordTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecord.property.ttlInput">ttl_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecord.property.zoneNameInput">zone_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecord.property.id">id</a></code> | <code>str</code> | *No description.* |
@@ -849,10 +849,10 @@ target_resource_id_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.dnsARecord.DnsARecord.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[DnsARecordTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, DnsARecordTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecordTimeouts">DnsARecordTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecordTimeouts">DnsARecordTimeouts</a>]
 
 ---
 
@@ -1556,7 +1556,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecordTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecordTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecordTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecordTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecordTimeouts">DnsARecordTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecordTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecordTimeouts">DnsARecordTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1667,10 +1667,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dnsARecord.DnsARecordTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DnsARecordTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, DnsARecordTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecordTimeouts">DnsARecordTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dnsARecord.DnsARecordTimeouts">DnsARecordTimeouts</a>]
 
 ---
 

@@ -378,7 +378,7 @@ dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecord.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecord.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecord.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecord.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecord.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecordTimeouts">DataAzurermDnsTxtRecordTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecord.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecordTimeouts">DataAzurermDnsTxtRecordTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecord.property.zoneNameInput">zoneNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecord.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecord.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -592,10 +592,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecord.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermDnsTxtRecordTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermDnsTxtRecordTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecordTimeouts">DataAzurermDnsTxtRecordTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecordTimeouts">DataAzurermDnsTxtRecordTimeouts</a>
 
 ---
 
@@ -1505,7 +1505,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecordTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecordTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecordTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecordTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecordTimeouts">DataAzurermDnsTxtRecordTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecordTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecordTimeouts">DataAzurermDnsTxtRecordTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1556,10 +1556,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecordTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermDnsTxtRecordTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermDnsTxtRecordTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecordTimeouts">DataAzurermDnsTxtRecordTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermDnsTxtRecord.DataAzurermDnsTxtRecordTimeouts">DataAzurermDnsTxtRecordTimeouts</a>
 
 ---
 

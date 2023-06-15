@@ -550,7 +550,7 @@ sourceControlToken.SourceControlToken.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlToken.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlToken.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeoutsOutputReference">SourceControlTokenTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlToken.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlToken.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts">SourceControlTokenTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlToken.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts">SourceControlTokenTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlToken.property.tokenInput">token_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlToken.property.tokenSecretInput">token_secret_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlToken.property.typeInput">type_input</a></code> | <code>str</code> | *No description.* |
@@ -726,10 +726,10 @@ id_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.sourceControlToken.SourceControlToken.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[SourceControlTokenTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, SourceControlTokenTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts">SourceControlTokenTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts">SourceControlTokenTimeouts</a>]
 
 ---
 
@@ -1347,7 +1347,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts">SourceControlTokenTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts">SourceControlTokenTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1458,10 +1458,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[SourceControlTokenTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, SourceControlTokenTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts">SourceControlTokenTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts">SourceControlTokenTimeouts</a>]
 
 ---
 

@@ -377,7 +377,7 @@ dataAzurermEventhub.DataAzurermEventhub.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhub.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhub.property.namespaceNameInput">namespaceNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhub.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhub.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeouts">DataAzurermEventhubTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhub.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeouts">DataAzurermEventhubTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhub.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhub.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhub.property.namespaceName">namespaceName</a></code> | <code>string</code> | *No description.* |
@@ -580,10 +580,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhub.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermEventhubTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermEventhubTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeouts">DataAzurermEventhubTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeouts">DataAzurermEventhubTimeouts</a>
 
 ---
 
@@ -1062,7 +1062,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeouts">DataAzurermEventhubTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeouts">DataAzurermEventhubTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1113,10 +1113,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermEventhubTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermEventhubTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeouts">DataAzurermEventhubTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeouts">DataAzurermEventhubTimeouts</a>
 
 ---
 

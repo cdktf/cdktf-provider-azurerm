@@ -388,7 +388,7 @@ dataAzurermPublicIp.DataAzurermPublicIp.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIp.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIp.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIp.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIp.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeouts">DataAzurermPublicIpTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIp.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeouts">DataAzurermPublicIpTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIp.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIp.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIp.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
@@ -700,10 +700,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIp.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermPublicIpTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermPublicIpTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeouts">DataAzurermPublicIpTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeouts">DataAzurermPublicIpTimeouts</a>
 
 ---
 
@@ -1159,7 +1159,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeouts">DataAzurermPublicIpTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeouts">DataAzurermPublicIpTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1210,10 +1210,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermPublicIpTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermPublicIpTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeouts">DataAzurermPublicIpTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermPublicIp.DataAzurermPublicIpTimeouts">DataAzurermPublicIpTimeouts</a>
 
 ---
 

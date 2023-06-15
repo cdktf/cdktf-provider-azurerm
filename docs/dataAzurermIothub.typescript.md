@@ -384,7 +384,7 @@ dataAzurermIothub.DataAzurermIothub.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothub.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothub.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothub.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothub.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeouts">DataAzurermIothubTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothub.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeouts">DataAzurermIothubTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothub.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothub.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothub.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
@@ -587,10 +587,10 @@ public readonly tagsInput: {[ key: string ]: string};
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothub.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermIothubTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermIothubTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeouts">DataAzurermIothubTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeouts">DataAzurermIothubTimeouts</a>
 
 ---
 
@@ -1523,7 +1523,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeouts">DataAzurermIothubTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeouts">DataAzurermIothubTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1574,10 +1574,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermIothubTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermIothubTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeouts">DataAzurermIothubTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeouts">DataAzurermIothubTimeouts</a>
 
 ---
 

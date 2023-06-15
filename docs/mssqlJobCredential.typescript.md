@@ -377,7 +377,7 @@ mssqlJobCredential.MssqlJobCredential.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.jobAgentIdInput">jobAgentIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.passwordInput">passwordInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts">MssqlJobCredentialTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts">MssqlJobCredentialTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.usernameInput">usernameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.jobAgentId">jobAgentId</a></code> | <code>string</code> | *No description.* |
@@ -582,10 +582,10 @@ public readonly passwordInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredential.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: MssqlJobCredentialTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | MssqlJobCredentialTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts">MssqlJobCredentialTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts">MssqlJobCredentialTimeouts</a>
 
 ---
 
@@ -1163,7 +1163,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts">MssqlJobCredentialTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts">MssqlJobCredentialTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1274,10 +1274,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: MssqlJobCredentialTimeouts | IResolvable;
+public readonly internalValue: IResolvable | MssqlJobCredentialTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts">MssqlJobCredentialTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.mssqlJobCredential.MssqlJobCredentialTimeouts">MssqlJobCredentialTimeouts</a>
 
 ---
 

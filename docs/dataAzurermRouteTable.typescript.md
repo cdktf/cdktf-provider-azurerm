@@ -378,7 +378,7 @@ dataAzurermRouteTable.DataAzurermRouteTable.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTable.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTable.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTable.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTable.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTableTimeouts">DataAzurermRouteTableTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTable.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTableTimeouts">DataAzurermRouteTableTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTable.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTable.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTable.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
@@ -590,10 +590,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTable.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermRouteTableTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermRouteTableTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTableTimeouts">DataAzurermRouteTableTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTableTimeouts">DataAzurermRouteTableTimeouts</a>
 
 ---
 
@@ -1503,7 +1503,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTableTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTableTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTableTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTableTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTableTimeouts">DataAzurermRouteTableTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTableTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTableTimeouts">DataAzurermRouteTableTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1554,10 +1554,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTableTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermRouteTableTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermRouteTableTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTableTimeouts">DataAzurermRouteTableTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermRouteTable.DataAzurermRouteTableTimeouts">DataAzurermRouteTableTimeouts</a>
 
 ---
 

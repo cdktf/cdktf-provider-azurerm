@@ -384,7 +384,7 @@ storageMoverProject.StorageMoverProject.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProject.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProject.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProject.property.storageMoverIdInput">storageMoverIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProject.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts">StorageMoverProjectTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProject.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts">StorageMoverProjectTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProject.property.description">description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProject.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProject.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -587,10 +587,10 @@ public readonly storageMoverIdInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.storageMoverProject.StorageMoverProject.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: StorageMoverProjectTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | StorageMoverProjectTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts">StorageMoverProjectTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts">StorageMoverProjectTimeouts</a>
 
 ---
 
@@ -1135,7 +1135,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts">StorageMoverProjectTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts">StorageMoverProjectTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1246,10 +1246,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: StorageMoverProjectTimeouts | IResolvable;
+public readonly internalValue: IResolvable | StorageMoverProjectTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts">StorageMoverProjectTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts">StorageMoverProjectTimeouts</a>
 
 ---
 

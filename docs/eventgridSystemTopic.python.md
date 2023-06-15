@@ -633,7 +633,7 @@ eventgridSystemTopic.EventgridSystemTopic.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.property.sourceArmResourceIdInput">source_arm_resource_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts">EventgridSystemTopicTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts">EventgridSystemTopicTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.property.topicTypeInput">topic_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.property.location">location</a></code> | <code>str</code> | *No description.* |
@@ -890,10 +890,10 @@ tags_input: typing.Mapping[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[EventgridSystemTopicTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, EventgridSystemTopicTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts">EventgridSystemTopicTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts">EventgridSystemTopicTimeouts</a>]
 
 ---
 
@@ -1972,7 +1972,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts">EventgridSystemTopicTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts">EventgridSystemTopicTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -2083,10 +2083,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[EventgridSystemTopicTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, EventgridSystemTopicTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts">EventgridSystemTopicTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts">EventgridSystemTopicTimeouts</a>]
 
 ---
 

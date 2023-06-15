@@ -557,7 +557,7 @@ logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.is_terraform
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.integrationAccountNameInput">integration_account_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.content">content</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.integrationAccountName">integration_account_name</a></code> | <code>str</code> | *No description.* |
@@ -771,10 +771,10 @@ resource_group_name_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[LogicAppIntegrationAccountSessionTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, LogicAppIntegrationAccountSessionTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a>]
 
 ---
 
@@ -1386,7 +1386,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1497,10 +1497,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[LogicAppIntegrationAccountSessionTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, LogicAppIntegrationAccountSessionTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a>]
 
 ---
 

@@ -528,7 +528,7 @@ dataAzurermMapsAccount.DataAzurermMapsAccount.is_terraform_data_source(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | *No description.* |
@@ -751,10 +751,10 @@ tags_input: typing.Mapping[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[DataAzurermMapsAccountTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, DataAzurermMapsAccountTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a>]
 
 ---
 
@@ -1273,7 +1273,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeoutsOutputReference.property.readInput">read_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1324,10 +1324,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DataAzurermMapsAccountTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, DataAzurermMapsAccountTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a>]
 
 ---
 

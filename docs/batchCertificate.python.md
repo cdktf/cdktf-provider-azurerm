@@ -599,7 +599,7 @@ batchCertificate.BatchCertificate.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificate.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificate.property.thumbprintAlgorithmInput">thumbprint_algorithm_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificate.property.thumbprintInput">thumbprint_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificate.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificateTimeouts">BatchCertificateTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificate.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificateTimeouts">BatchCertificateTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificate.property.accountName">account_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificate.property.certificate">certificate</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificate.property.format">format</a></code> | <code>str</code> | *No description.* |
@@ -866,10 +866,10 @@ thumbprint_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.batchCertificate.BatchCertificate.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[BatchCertificateTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, BatchCertificateTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificateTimeouts">BatchCertificateTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificateTimeouts">BatchCertificateTimeouts</a>]
 
 ---
 
@@ -1553,7 +1553,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificateTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificateTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificateTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificateTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificateTimeouts">BatchCertificateTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificateTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificateTimeouts">BatchCertificateTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1664,10 +1664,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.batchCertificate.BatchCertificateTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[BatchCertificateTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, BatchCertificateTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificateTimeouts">BatchCertificateTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.batchCertificate.BatchCertificateTimeouts">BatchCertificateTimeouts</a>]
 
 ---
 

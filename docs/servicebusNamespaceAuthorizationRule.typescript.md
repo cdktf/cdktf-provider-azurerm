@@ -406,7 +406,7 @@ servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.isTerr
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.namespaceIdInput">namespaceIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.sendInput">sendInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.listen">listen</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.manage">manage</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
@@ -691,10 +691,10 @@ public readonly sendInput: boolean | IResolvable;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: ServicebusNamespaceAuthorizationRuleTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | ServicebusNamespaceAuthorizationRuleTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a>
 
 ---
 
@@ -1285,7 +1285,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1396,10 +1396,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ServicebusNamespaceAuthorizationRuleTimeouts | IResolvable;
+public readonly internalValue: IResolvable | ServicebusNamespaceAuthorizationRuleTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a>
 
 ---
 

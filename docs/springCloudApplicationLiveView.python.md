@@ -526,7 +526,7 @@ springCloudApplicationLiveView.SpringCloudApplicationLiveView.is_terraform_resou
 | <code><a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveView.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveView.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveView.property.springCloudServiceIdInput">spring_cloud_service_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveView.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveViewTimeouts">SpringCloudApplicationLiveViewTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveView.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveViewTimeouts">SpringCloudApplicationLiveViewTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveView.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveView.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveView.property.springCloudServiceId">spring_cloud_service_id</a></code> | <code>str</code> | *No description.* |
@@ -718,10 +718,10 @@ spring_cloud_service_id_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveView.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[SpringCloudApplicationLiveViewTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, SpringCloudApplicationLiveViewTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveViewTimeouts">SpringCloudApplicationLiveViewTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveViewTimeouts">SpringCloudApplicationLiveViewTimeouts</a>]
 
 ---
 
@@ -1262,7 +1262,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveViewTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveViewTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveViewTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveViewTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveViewTimeouts">SpringCloudApplicationLiveViewTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveViewTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveViewTimeouts">SpringCloudApplicationLiveViewTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1353,10 +1353,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveViewTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[SpringCloudApplicationLiveViewTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, SpringCloudApplicationLiveViewTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveViewTimeouts">SpringCloudApplicationLiveViewTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudApplicationLiveView.SpringCloudApplicationLiveViewTimeouts">SpringCloudApplicationLiveViewTimeouts</a>]
 
 ---
 

@@ -379,7 +379,7 @@ postgresqlFirewallRule.PostgresqlFirewallRule.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.property.serverNameInput">serverNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.property.startIpAddressInput">startIpAddressInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts">PostgresqlFirewallRuleTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts">PostgresqlFirewallRuleTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.property.endIpAddress">endIpAddress</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -604,10 +604,10 @@ public readonly startIpAddressInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: PostgresqlFirewallRuleTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | PostgresqlFirewallRuleTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts">PostgresqlFirewallRuleTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts">PostgresqlFirewallRuleTimeouts</a>
 
 ---
 
@@ -1198,7 +1198,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts">PostgresqlFirewallRuleTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts">PostgresqlFirewallRuleTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1309,10 +1309,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: PostgresqlFirewallRuleTimeouts | IResolvable;
+public readonly internalValue: IResolvable | PostgresqlFirewallRuleTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts">PostgresqlFirewallRuleTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts">PostgresqlFirewallRuleTimeouts</a>
 
 ---
 

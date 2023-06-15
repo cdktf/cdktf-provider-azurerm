@@ -546,7 +546,7 @@ logicAppTriggerCustom.LogicAppTriggerCustom.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustom.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustom.property.logicAppIdInput">logic_app_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustom.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustom.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustomTimeouts">LogicAppTriggerCustomTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustom.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustomTimeouts">LogicAppTriggerCustomTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustom.property.body">body</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustom.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustom.property.logicAppId">logic_app_id</a></code> | <code>str</code> | *No description.* |
@@ -749,10 +749,10 @@ name_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustom.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[LogicAppTriggerCustomTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, LogicAppTriggerCustomTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustomTimeouts">LogicAppTriggerCustomTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustomTimeouts">LogicAppTriggerCustomTimeouts</a>]
 
 ---
 
@@ -1340,7 +1340,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustomTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustomTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustomTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustomTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustomTimeouts">LogicAppTriggerCustomTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustomTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustomTimeouts">LogicAppTriggerCustomTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1451,10 +1451,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustomTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[LogicAppTriggerCustomTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, LogicAppTriggerCustomTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustomTimeouts">LogicAppTriggerCustomTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.logicAppTriggerCustom.LogicAppTriggerCustomTimeouts">LogicAppTriggerCustomTimeouts</a>]
 
 ---
 

@@ -495,7 +495,7 @@ DataAzurermEventgridTopic.isTerraformDataSource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopic.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopic.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopic.property.tagsInput">tagsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopic.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeouts">DataAzurermEventgridTopicTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopic.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeouts">DataAzurermEventgridTopicTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopic.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopic.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopic.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -721,7 +721,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTagsInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeouts">DataAzurermEventgridTopicTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeouts">DataAzurermEventgridTopicTimeouts</a>
 
 ---
 
@@ -1219,7 +1219,7 @@ public void resetRead()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeouts">DataAzurermEventgridTopicTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeouts">DataAzurermEventgridTopicTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1273,7 +1273,7 @@ public java.lang.String getRead();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeouts">DataAzurermEventgridTopicTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeouts">DataAzurermEventgridTopicTimeouts</a>
 
 ---
 

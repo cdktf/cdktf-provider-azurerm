@@ -488,7 +488,7 @@ DataAzurermApiManagementUser.isTerraformDataSource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.apiManagementNameInput">apiManagementNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.userIdInput">userIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.apiManagementName">apiManagementName</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUser.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -715,7 +715,7 @@ public java.lang.String getResourceGroupNameInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a>
 
 ---
 
@@ -1223,7 +1223,7 @@ public void resetRead()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1277,7 +1277,7 @@ public java.lang.String getRead();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementUser.DataAzurermApiManagementUserTimeouts">DataAzurermApiManagementUserTimeouts</a>
 
 ---
 

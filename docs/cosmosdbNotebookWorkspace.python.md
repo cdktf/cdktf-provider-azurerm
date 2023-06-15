@@ -538,7 +538,7 @@ cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.accountName">account_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.name">name</a></code> | <code>str</code> | *No description.* |
@@ -751,10 +751,10 @@ resource_group_name_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[CosmosdbNotebookWorkspaceTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, CosmosdbNotebookWorkspaceTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a>]
 
 ---
 
@@ -1319,7 +1319,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1410,10 +1410,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[CosmosdbNotebookWorkspaceTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, CosmosdbNotebookWorkspaceTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a>]
 
 ---
 

@@ -521,7 +521,7 @@ CapacityReservationGroup.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroup.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroup.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroup.property.tagsInput">tagsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroup.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroupTimeouts">CapacityReservationGroupTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroup.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroupTimeouts">CapacityReservationGroupTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroup.property.zonesInput">zonesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroup.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroup.property.location">location</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -740,7 +740,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTagsInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroupTimeouts">CapacityReservationGroupTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroupTimeouts">CapacityReservationGroupTimeouts</a>
 
 ---
 
@@ -1365,7 +1365,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroupTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroupTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroupTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroupTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroupTimeouts">CapacityReservationGroupTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroupTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroupTimeouts">CapacityReservationGroupTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1479,7 +1479,7 @@ public java.lang.String getUpdate();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroupTimeouts">CapacityReservationGroupTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.capacityReservationGroup.CapacityReservationGroupTimeouts">CapacityReservationGroupTimeouts</a>
 
 ---
 

@@ -497,7 +497,7 @@ LogicAppIntegrationAccountSession.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.integrationAccountNameInput">integrationAccountNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.content">content</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.property.integrationAccountName">integrationAccountName</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -714,7 +714,7 @@ public java.lang.String getResourceGroupNameInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a>
 
 ---
 
@@ -1305,7 +1305,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1419,7 +1419,7 @@ public java.lang.String getUpdate();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a>
 
 ---
 

@@ -664,7 +664,7 @@ linuxWebApp.LinuxWebApp.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.stickySettingsInput">stickySettingsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppStickySettings">LinuxWebAppStickySettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.storageAccountInput">storageAccountInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppStorageAccount">LinuxWebAppStorageAccount</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeouts">LinuxWebAppTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeouts">LinuxWebAppTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.virtualNetworkSubnetIdInput">virtualNetworkSubnetIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.zipDeployFileInput">zipDeployFileInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.appSettings">appSettings</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
@@ -1251,10 +1251,10 @@ public readonly tagsInput: {[ key: string ]: string};
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebApp.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: LinuxWebAppTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | LinuxWebAppTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeouts">LinuxWebAppTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeouts">LinuxWebAppTimeouts</a>
 
 ---
 
@@ -10451,7 +10451,7 @@ public resetScopes(): void
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimType">nameClaimType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpoint">openidConfigurationEndpoint</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.scopes">scopes</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2">LinuxWebAppAuthSettingsV2CustomOidcV2</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2">LinuxWebAppAuthSettingsV2CustomOidcV2</a></code> | *No description.* |
 
 ---
 
@@ -10642,10 +10642,10 @@ public readonly scopes: string[];
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: LinuxWebAppAuthSettingsV2CustomOidcV2 | IResolvable;
+public readonly internalValue: IResolvable | LinuxWebAppAuthSettingsV2CustomOidcV2;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2">LinuxWebAppAuthSettingsV2CustomOidcV2</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppAuthSettingsV2CustomOidcV2">LinuxWebAppAuthSettingsV2CustomOidcV2</a>
 
 ---
 
@@ -15021,7 +15021,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConnectionStringOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConnectionStringOutputReference.property.type">type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConnectionStringOutputReference.property.value">value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConnectionStringOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConnectionString">LinuxWebAppConnectionString</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConnectionStringOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConnectionString">LinuxWebAppConnectionString</a></code> | *No description.* |
 
 ---
 
@@ -15112,10 +15112,10 @@ public readonly value: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConnectionStringOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: LinuxWebAppConnectionString | IResolvable;
+public readonly internalValue: IResolvable | LinuxWebAppConnectionString;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConnectionString">LinuxWebAppConnectionString</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppConnectionString">LinuxWebAppConnectionString</a>
 
 ---
 
@@ -20004,7 +20004,7 @@ public resetWin32Status(): void
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.statusCodeRange">statusCodeRange</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.subStatus">subStatus</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.win32Status">win32Status</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode">LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode">LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode</a></code> | *No description.* |
 
 ---
 
@@ -20155,10 +20155,10 @@ public readonly win32Status: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode | IResolvable;
+public readonly internalValue: IResolvable | LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode">LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode">LinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode</a>
 
 ---
 
@@ -20877,7 +20877,7 @@ public resetXForwardedHost(): void
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionHeadersOutputReference.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedFor">xForwardedFor</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedHost">xForwardedHost</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionHeaders">LinuxWebAppSiteConfigIpRestrictionHeaders</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionHeaders">LinuxWebAppSiteConfigIpRestrictionHeaders</a></code> | *No description.* |
 
 ---
 
@@ -20988,10 +20988,10 @@ public readonly xForwardedHost: string[];
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionHeadersOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: LinuxWebAppSiteConfigIpRestrictionHeaders | IResolvable;
+public readonly internalValue: IResolvable | LinuxWebAppSiteConfigIpRestrictionHeaders;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionHeaders">LinuxWebAppSiteConfigIpRestrictionHeaders</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionHeaders">LinuxWebAppSiteConfigIpRestrictionHeaders</a>
 
 ---
 
@@ -21443,7 +21443,7 @@ public resetVirtualNetworkSubnetId(): void
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionOutputReference.property.priority">priority</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionOutputReference.property.serviceTag">serviceTag</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionOutputReference.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestriction">LinuxWebAppSiteConfigIpRestriction</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestriction">LinuxWebAppSiteConfigIpRestriction</a></code> | *No description.* |
 
 ---
 
@@ -21614,10 +21614,10 @@ public readonly virtualNetworkSubnetId: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestrictionOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: LinuxWebAppSiteConfigIpRestriction | IResolvable;
+public readonly internalValue: IResolvable | LinuxWebAppSiteConfigIpRestriction;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestriction">LinuxWebAppSiteConfigIpRestriction</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigIpRestriction">LinuxWebAppSiteConfigIpRestriction</a>
 
 ---
 
@@ -23217,7 +23217,7 @@ public resetXForwardedHost(): void
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionHeadersOutputReference.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedFor">xForwardedFor</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedHost">xForwardedHost</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionHeaders">LinuxWebAppSiteConfigScmIpRestrictionHeaders</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionHeaders">LinuxWebAppSiteConfigScmIpRestrictionHeaders</a></code> | *No description.* |
 
 ---
 
@@ -23328,10 +23328,10 @@ public readonly xForwardedHost: string[];
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: LinuxWebAppSiteConfigScmIpRestrictionHeaders | IResolvable;
+public readonly internalValue: IResolvable | LinuxWebAppSiteConfigScmIpRestrictionHeaders;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionHeaders">LinuxWebAppSiteConfigScmIpRestrictionHeaders</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionHeaders">LinuxWebAppSiteConfigScmIpRestrictionHeaders</a>
 
 ---
 
@@ -23783,7 +23783,7 @@ public resetVirtualNetworkSubnetId(): void
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionOutputReference.property.priority">priority</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionOutputReference.property.serviceTag">serviceTag</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionOutputReference.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestriction">LinuxWebAppSiteConfigScmIpRestriction</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestriction">LinuxWebAppSiteConfigScmIpRestriction</a></code> | *No description.* |
 
 ---
 
@@ -23954,10 +23954,10 @@ public readonly virtualNetworkSubnetId: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestrictionOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: LinuxWebAppSiteConfigScmIpRestriction | IResolvable;
+public readonly internalValue: IResolvable | LinuxWebAppSiteConfigScmIpRestriction;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestriction">LinuxWebAppSiteConfigScmIpRestriction</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppSiteConfigScmIpRestriction">LinuxWebAppSiteConfigScmIpRestriction</a>
 
 ---
 
@@ -25080,7 +25080,7 @@ public resetMountPath(): void
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppStorageAccountOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppStorageAccountOutputReference.property.shareName">shareName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppStorageAccountOutputReference.property.type">type</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppStorageAccountOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppStorageAccount">LinuxWebAppStorageAccount</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppStorageAccountOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppStorageAccount">LinuxWebAppStorageAccount</a></code> | *No description.* |
 
 ---
 
@@ -25231,10 +25231,10 @@ public readonly type: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppStorageAccountOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: LinuxWebAppStorageAccount | IResolvable;
+public readonly internalValue: IResolvable | LinuxWebAppStorageAccount;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppStorageAccount">LinuxWebAppStorageAccount</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppStorageAccount">LinuxWebAppStorageAccount</a>
 
 ---
 
@@ -25485,7 +25485,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeouts">LinuxWebAppTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeouts">LinuxWebAppTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -25596,10 +25596,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: LinuxWebAppTimeouts | IResolvable;
+public readonly internalValue: IResolvable | LinuxWebAppTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeouts">LinuxWebAppTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxWebApp.LinuxWebAppTimeouts">LinuxWebAppTimeouts</a>
 
 ---
 

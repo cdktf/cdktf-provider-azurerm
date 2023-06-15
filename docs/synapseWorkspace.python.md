@@ -1093,7 +1093,7 @@ synapseWorkspace.SynapseWorkspace.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspace.property.sqlIdentityControlEnabledInput">sql_identity_control_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspace.property.storageDataLakeGen2FilesystemIdInput">storage_data_lake_gen2_filesystem_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspace.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspace.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeouts">SynapseWorkspaceTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspace.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeouts">SynapseWorkspaceTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspace.property.computeSubnetId">compute_subnet_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspace.property.dataExfiltrationProtectionEnabled">data_exfiltration_protection_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspace.property.id">id</a></code> | <code>str</code> | *No description.* |
@@ -1558,10 +1558,10 @@ tags_input: typing.Mapping[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspace.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[SynapseWorkspaceTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, SynapseWorkspaceTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeouts">SynapseWorkspaceTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeouts">SynapseWorkspaceTimeouts</a>]
 
 ---
 
@@ -3121,7 +3121,7 @@ def reset_tenant_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceAadAdminOutputReference.property.login">login</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceAadAdminOutputReference.property.objectId">object_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceAadAdminOutputReference.property.tenantId">tenant_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceAadAdminOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceAadAdmin">SynapseWorkspaceAadAdmin</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceAadAdminOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceAadAdmin">SynapseWorkspaceAadAdmin</a>]</code> | *No description.* |
 
 ---
 
@@ -3212,10 +3212,10 @@ tenant_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceAadAdminOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[SynapseWorkspaceAadAdmin, IResolvable]
+internal_value: typing.Union[IResolvable, SynapseWorkspaceAadAdmin]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceAadAdmin">SynapseWorkspaceAadAdmin</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceAadAdmin">SynapseWorkspaceAadAdmin</a>]
 
 ---
 
@@ -5187,7 +5187,7 @@ def reset_tenant_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceSqlAadAdminOutputReference.property.login">login</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceSqlAadAdminOutputReference.property.objectId">object_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceSqlAadAdminOutputReference.property.tenantId">tenant_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceSqlAadAdminOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceSqlAadAdmin">SynapseWorkspaceSqlAadAdmin</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceSqlAadAdminOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceSqlAadAdmin">SynapseWorkspaceSqlAadAdmin</a>]</code> | *No description.* |
 
 ---
 
@@ -5278,10 +5278,10 @@ tenant_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceSqlAadAdminOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[SynapseWorkspaceSqlAadAdmin, IResolvable]
+internal_value: typing.Union[IResolvable, SynapseWorkspaceSqlAadAdmin]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceSqlAadAdmin">SynapseWorkspaceSqlAadAdmin</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceSqlAadAdmin">SynapseWorkspaceSqlAadAdmin</a>]
 
 ---
 
@@ -5557,7 +5557,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeouts">SynapseWorkspaceTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeouts">SynapseWorkspaceTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -5668,10 +5668,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[SynapseWorkspaceTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, SynapseWorkspaceTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeouts">SynapseWorkspaceTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeouts">SynapseWorkspaceTimeouts</a>]
 
 ---
 

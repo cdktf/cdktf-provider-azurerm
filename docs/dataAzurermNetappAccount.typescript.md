@@ -375,7 +375,7 @@ dataAzurermNetappAccount.DataAzurermNetappAccount.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeouts">DataAzurermNetappAccountTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeouts">DataAzurermNetappAccountTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
@@ -557,10 +557,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermNetappAccountTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermNetappAccountTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeouts">DataAzurermNetappAccountTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeouts">DataAzurermNetappAccountTimeouts</a>
 
 ---
 
@@ -1016,7 +1016,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeouts">DataAzurermNetappAccountTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeouts">DataAzurermNetappAccountTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1067,10 +1067,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermNetappAccountTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermNetappAccountTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeouts">DataAzurermNetappAccountTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeouts">DataAzurermNetappAccountTimeouts</a>
 
 ---
 

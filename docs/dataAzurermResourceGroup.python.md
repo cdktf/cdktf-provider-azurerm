@@ -497,7 +497,7 @@ dataAzurermResourceGroup.DataAzurermResourceGroup.is_terraform_data_source(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference">DataAzurermResourceGroupTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.name">name</a></code> | <code>str</code> | *No description.* |
 
@@ -678,10 +678,10 @@ name_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[DataAzurermResourceGroupTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, DataAzurermResourceGroupTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a>]
 
 ---
 
@@ -1152,7 +1152,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.readInput">read_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1203,10 +1203,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DataAzurermResourceGroupTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, DataAzurermResourceGroupTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts">DataAzurermResourceGroupTimeouts</a>]
 
 ---
 

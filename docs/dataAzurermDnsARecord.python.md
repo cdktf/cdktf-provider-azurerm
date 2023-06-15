@@ -521,7 +521,7 @@ dataAzurermDnsARecord.DataAzurermDnsARecord.is_terraform_data_source(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecord.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecord.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecord.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecord.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeouts">DataAzurermDnsARecordTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecord.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeouts">DataAzurermDnsARecordTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecord.property.zoneNameInput">zone_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecord.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecord.property.name">name</a></code> | <code>str</code> | *No description.* |
@@ -745,10 +745,10 @@ resource_group_name_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecord.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[DataAzurermDnsARecordTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, DataAzurermDnsARecordTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeouts">DataAzurermDnsARecordTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeouts">DataAzurermDnsARecordTimeouts</a>]
 
 ---
 
@@ -1277,7 +1277,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeoutsOutputReference.property.readInput">read_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeouts">DataAzurermDnsARecordTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeouts">DataAzurermDnsARecordTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1328,10 +1328,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DataAzurermDnsARecordTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, DataAzurermDnsARecordTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeouts">DataAzurermDnsARecordTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermDnsARecord.DataAzurermDnsARecordTimeouts">DataAzurermDnsARecordTimeouts</a>]
 
 ---
 

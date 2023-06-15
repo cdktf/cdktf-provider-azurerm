@@ -378,7 +378,7 @@ synapseFirewallRule.SynapseFirewallRule.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRule.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRule.property.startIpAddressInput">startIpAddressInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRule.property.synapseWorkspaceIdInput">synapseWorkspaceIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRule.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts">SynapseFirewallRuleTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRule.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts">SynapseFirewallRuleTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRule.property.endIpAddress">endIpAddress</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRule.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRule.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -592,10 +592,10 @@ public readonly synapseWorkspaceIdInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRule.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: SynapseFirewallRuleTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | SynapseFirewallRuleTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts">SynapseFirewallRuleTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts">SynapseFirewallRuleTimeouts</a>
 
 ---
 
@@ -1163,7 +1163,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts">SynapseFirewallRuleTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts">SynapseFirewallRuleTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1274,10 +1274,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: SynapseFirewallRuleTimeouts | IResolvable;
+public readonly internalValue: IResolvable | SynapseFirewallRuleTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts">SynapseFirewallRuleTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts">SynapseFirewallRuleTimeouts</a>
 
 ---
 

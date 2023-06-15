@@ -416,7 +416,7 @@ virtualWan.VirtualWan.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.virtualWan.VirtualWan.property.office365LocalBreakoutCategoryInput">office365LocalBreakoutCategoryInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualWan.VirtualWan.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualWan.VirtualWan.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.virtualWan.VirtualWan.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.virtualWan.VirtualWanTimeouts">VirtualWanTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.virtualWan.VirtualWan.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.virtualWan.VirtualWanTimeouts">VirtualWanTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualWan.VirtualWan.property.typeInput">typeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualWan.VirtualWan.property.allowBranchToBranchTraffic">allowBranchToBranchTraffic</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualWan.VirtualWan.property.disableVpnEncryption">disableVpnEncryption</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
@@ -665,10 +665,10 @@ public readonly tagsInput: {[ key: string ]: string};
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.virtualWan.VirtualWan.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: VirtualWanTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | VirtualWanTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.virtualWan.VirtualWanTimeouts">VirtualWanTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.virtualWan.VirtualWanTimeouts">VirtualWanTimeouts</a>
 
 ---
 
@@ -1338,7 +1338,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.virtualWan.VirtualWanTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualWan.VirtualWanTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualWan.VirtualWanTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.virtualWan.VirtualWanTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.virtualWan.VirtualWanTimeouts">VirtualWanTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.virtualWan.VirtualWanTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.virtualWan.VirtualWanTimeouts">VirtualWanTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1449,10 +1449,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.virtualWan.VirtualWanTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: VirtualWanTimeouts | IResolvable;
+public readonly internalValue: IResolvable | VirtualWanTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.virtualWan.VirtualWanTimeouts">VirtualWanTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.virtualWan.VirtualWanTimeouts">VirtualWanTimeouts</a>
 
 ---
 

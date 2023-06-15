@@ -378,7 +378,7 @@ apiManagementProductApi.ApiManagementProductApi.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApi.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApi.property.productIdInput">productIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApi.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApi.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeouts">ApiManagementProductApiTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApi.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeouts">ApiManagementProductApiTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApi.property.apiManagementName">apiManagementName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApi.property.apiName">apiName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApi.property.id">id</a></code> | <code>string</code> | *No description.* |
@@ -592,10 +592,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApi.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: ApiManagementProductApiTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | ApiManagementProductApiTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeouts">ApiManagementProductApiTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeouts">ApiManagementProductApiTimeouts</a>
 
 ---
 
@@ -1163,7 +1163,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeouts">ApiManagementProductApiTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeouts">ApiManagementProductApiTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1274,10 +1274,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApiManagementProductApiTimeouts | IResolvable;
+public readonly internalValue: IResolvable | ApiManagementProductApiTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeouts">ApiManagementProductApiTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeouts">ApiManagementProductApiTimeouts</a>
 
 ---
 

@@ -480,7 +480,7 @@ DataAzurermPostgresqlServer.isTerraformDataSource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeouts">DataAzurermPostgresqlServerTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeouts">DataAzurermPostgresqlServerTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServer.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -725,7 +725,7 @@ public java.lang.String getResourceGroupNameInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeouts">DataAzurermPostgresqlServerTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeouts">DataAzurermPostgresqlServerTimeouts</a>
 
 ---
 
@@ -1643,7 +1643,7 @@ public void resetRead()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeouts">DataAzurermPostgresqlServerTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeouts">DataAzurermPostgresqlServerTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1697,7 +1697,7 @@ public java.lang.String getRead();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeouts">DataAzurermPostgresqlServerTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermPostgresqlServer.DataAzurermPostgresqlServerTimeouts">DataAzurermPostgresqlServerTimeouts</a>
 
 ---
 

@@ -450,7 +450,7 @@ customProvider.CustomProvider.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProvider.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProvider.property.resourceTypeInput">resourceTypeInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderResourceType">CustomProviderResourceType</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProvider.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProvider.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderTimeouts">CustomProviderTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProvider.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderTimeouts">CustomProviderTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProvider.property.validationInput">validationInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderValidation">CustomProviderValidation</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProvider.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProvider.property.location">location</a></code> | <code>string</code> | *No description.* |
@@ -715,10 +715,10 @@ public readonly tagsInput: {[ key: string ]: string};
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.customProvider.CustomProvider.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: CustomProviderTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | CustomProviderTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderTimeouts">CustomProviderTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderTimeouts">CustomProviderTimeouts</a>
 
 ---
 
@@ -1599,7 +1599,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderActionOutputReference.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderActionOutputReference.property.endpoint">endpoint</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderActionOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderActionOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderAction">CustomProviderAction</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderActionOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderAction">CustomProviderAction</a></code> | *No description.* |
 
 ---
 
@@ -1670,10 +1670,10 @@ public readonly name: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.customProvider.CustomProviderActionOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: CustomProviderAction | IResolvable;
+public readonly internalValue: IResolvable | CustomProviderAction;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderAction">CustomProviderAction</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderAction">CustomProviderAction</a>
 
 ---
 
@@ -2062,7 +2062,7 @@ public resetRoutingType(): void
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderResourceTypeOutputReference.property.endpoint">endpoint</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderResourceTypeOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderResourceTypeOutputReference.property.routingType">routingType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderResourceTypeOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderResourceType">CustomProviderResourceType</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderResourceTypeOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderResourceType">CustomProviderResourceType</a></code> | *No description.* |
 
 ---
 
@@ -2153,10 +2153,10 @@ public readonly routingType: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.customProvider.CustomProviderResourceTypeOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: CustomProviderResourceType | IResolvable;
+public readonly internalValue: IResolvable | CustomProviderResourceType;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderResourceType">CustomProviderResourceType</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderResourceType">CustomProviderResourceType</a>
 
 ---
 
@@ -2407,7 +2407,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderTimeouts">CustomProviderTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderTimeouts">CustomProviderTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -2518,10 +2518,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.customProvider.CustomProviderTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: CustomProviderTimeouts | IResolvable;
+public readonly internalValue: IResolvable | CustomProviderTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderTimeouts">CustomProviderTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderTimeouts">CustomProviderTimeouts</a>
 
 ---
 
@@ -2899,7 +2899,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderValidationOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderValidationOutputReference.property.specificationInput">specificationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderValidationOutputReference.property.specification">specification</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderValidationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderValidation">CustomProviderValidation</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.customProvider.CustomProviderValidationOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderValidation">CustomProviderValidation</a></code> | *No description.* |
 
 ---
 
@@ -2950,10 +2950,10 @@ public readonly specification: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.customProvider.CustomProviderValidationOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: CustomProviderValidation | IResolvable;
+public readonly internalValue: IResolvable | CustomProviderValidation;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderValidation">CustomProviderValidation</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.customProvider.CustomProviderValidation">CustomProviderValidation</a>
 
 ---
 

@@ -510,7 +510,7 @@ dataAzurermDataShare.DataAzurermDataShare.is_terraform_data_source(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShare.property.accountIdInput">account_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShare.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShare.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShare.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeouts">DataAzurermDataShareTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShare.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeouts">DataAzurermDataShareTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShare.property.accountId">account_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShare.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShare.property.name">name</a></code> | <code>str</code> | *No description.* |
@@ -722,10 +722,10 @@ name_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShare.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[DataAzurermDataShareTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, DataAzurermDataShareTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeouts">DataAzurermDataShareTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeouts">DataAzurermDataShareTimeouts</a>]
 
 ---
 
@@ -1698,7 +1698,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeoutsOutputReference.property.readInput">read_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeouts">DataAzurermDataShareTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeouts">DataAzurermDataShareTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1749,10 +1749,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DataAzurermDataShareTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, DataAzurermDataShareTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeouts">DataAzurermDataShareTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeouts">DataAzurermDataShareTimeouts</a>]
 
 ---
 

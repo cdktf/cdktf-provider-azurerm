@@ -521,7 +521,7 @@ KustoClusterCustomerManagedKey.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKey.property.keyNameInput">keyNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKey.property.keyVaultIdInput">keyVaultIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKey.property.keyVersionInput">keyVersionInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKey.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKeyTimeouts">KustoClusterCustomerManagedKeyTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKey.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKeyTimeouts">KustoClusterCustomerManagedKeyTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKey.property.userIdentityInput">userIdentityInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKey.property.clusterId">clusterId</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKey.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -740,7 +740,7 @@ public java.lang.String getKeyVersionInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKeyTimeouts">KustoClusterCustomerManagedKeyTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKeyTimeouts">KustoClusterCustomerManagedKeyTimeouts</a>
 
 ---
 
@@ -1365,7 +1365,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKeyTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKeyTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKeyTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKeyTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKeyTimeouts">KustoClusterCustomerManagedKeyTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKeyTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKeyTimeouts">KustoClusterCustomerManagedKeyTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1479,7 +1479,7 @@ public java.lang.String getUpdate();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKeyTimeouts">KustoClusterCustomerManagedKeyTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.kustoClusterCustomerManagedKey.KustoClusterCustomerManagedKeyTimeouts">KustoClusterCustomerManagedKeyTimeouts</a>
 
 ---
 

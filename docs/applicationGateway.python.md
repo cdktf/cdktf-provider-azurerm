@@ -1627,7 +1627,7 @@ applicationGateway.ApplicationGateway.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.sslPolicyInput">ssl_policy_input</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslPolicy">ApplicationGatewaySslPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.sslProfileInput">ssl_profile_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.trustedClientCertificateInput">trusted_client_certificate_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.trustedRootCertificateInput">trusted_root_certificate_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.urlPathMapInput">url_path_map_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]]</code> | *No description.* |
@@ -2341,10 +2341,10 @@ tags_input: typing.Mapping[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[ApplicationGatewayTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, ApplicationGatewayTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>]
 
 ---
 
@@ -6613,7 +6613,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.data">data</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]</code> | *No description.* |
 
 ---
 
@@ -6694,10 +6694,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayAuthenticationCertificate, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayAuthenticationCertificate]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]
 
 ---
 
@@ -7454,7 +7454,7 @@ def reset_ip_addresses() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.fqdns">fqdns</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.ipAddresses">ip_addresses</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]</code> | *No description.* |
 
 ---
 
@@ -7555,10 +7555,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayBackendAddressPool, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayBackendAddressPool]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]
 
 ---
 
@@ -7972,7 +7972,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]</code> | *No description.* |
 
 ---
 
@@ -8033,10 +8033,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayBackendHttpSettingsAuthenticationCertificate, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayBackendHttpSettingsAuthenticationCertificate]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]
 
 ---
 
@@ -8897,7 +8897,7 @@ def reset_trusted_root_certificate_names() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.protocol">protocol</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.requestTimeout">request_timeout</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.trustedRootCertificateNames">trusted_root_certificate_names</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]</code> | *No description.* |
 
 ---
 
@@ -9208,10 +9208,10 @@ trusted_root_certificate_names: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayBackendHttpSettings, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayBackendHttpSettings]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]
 
 ---
 
@@ -9627,7 +9627,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.statusCodeInput">status_code_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.customErrorPageUrl">custom_error_page_url</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.statusCode">status_code</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -9708,10 +9708,10 @@ status_code: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayCustomErrorConfiguration, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayCustomErrorConfiguration]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]
 
 ---
 
@@ -10171,7 +10171,7 @@ def reset_subnet_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.privateLinkConfigurationName">private_link_configuration_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.publicIpAddressId">public_ip_address_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.subnetId">subnet_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -10342,10 +10342,10 @@ subnet_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayFrontendIpConfiguration, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayFrontendIpConfiguration]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]
 
 ---
 
@@ -10761,7 +10761,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.portInput">port_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.port">port</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]</code> | *No description.* |
 
 ---
 
@@ -10842,10 +10842,10 @@ port: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayFrontendPort, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayFrontendPort]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]
 
 ---
 
@@ -11261,7 +11261,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.subnetIdInput">subnet_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.subnetId">subnet_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -11342,10 +11342,10 @@ subnet_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayGatewayIpConfiguration, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayGatewayIpConfiguration]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]
 
 ---
 
@@ -12079,7 +12079,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.statusCodeInput">status_code_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.customErrorPageUrl">custom_error_page_url</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.statusCode">status_code</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -12160,10 +12160,10 @@ status_code: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayHttpListenerCustomErrorConfiguration, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayHttpListenerCustomErrorConfiguration]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]
 
 ---
 
@@ -12665,7 +12665,7 @@ def reset_ssl_profile_name() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.requireSni">require_sni</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.sslCertificateName">ssl_certificate_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.sslProfileName">ssl_profile_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]</code> | *No description.* |
 
 ---
 
@@ -12966,10 +12966,10 @@ ssl_profile_name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayHttpListener, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayHttpListener]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]
 
 ---
 
@@ -14171,7 +14171,7 @@ def reset_private_ip_address() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.privateIpAddress">private_ip_address</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.privateIpAddressAllocation">private_ip_address_allocation</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.subnetId">subnet_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -14302,10 +14302,10 @@ subnet_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayPrivateLinkConfigurationIpConfiguration, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayPrivateLinkConfigurationIpConfiguration]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]
 
 ---
 
@@ -14736,7 +14736,7 @@ def put_ip_configuration(
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.ipConfigurationInput">ip_configuration_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -14817,10 +14817,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayPrivateLinkConfiguration, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayPrivateLinkConfiguration]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]
 
 ---
 
@@ -15640,7 +15640,7 @@ def reset_port() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.protocol">protocol</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.timeout">timeout</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.unhealthyThreshold">unhealthy_threshold</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]</code> | *No description.* |
 
 ---
 
@@ -15901,10 +15901,10 @@ unhealthy_threshold: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayProbe, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayProbe]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]
 
 ---
 
@@ -16357,7 +16357,7 @@ def reset_target_url() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.redirectType">redirect_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.targetListenerName">target_listener_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.targetUrl">target_url</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -16528,10 +16528,10 @@ target_url: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayRedirectConfiguration, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayRedirectConfiguration]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]
 
 ---
 
@@ -17009,7 +17009,7 @@ def reset_url_path_map_name() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.rewriteRuleSetName">rewrite_rule_set_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.ruleType">rule_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.urlPathMapName">url_path_map_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]</code> | *No description.* |
 
 ---
 
@@ -17290,10 +17290,10 @@ url_path_map_name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayRequestRoutingRule, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayRequestRoutingRule]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]
 
 ---
 
@@ -17731,7 +17731,7 @@ def reset_rewrite_rule() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.rewriteRuleInput">rewrite_rule_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]</code> | *No description.* |
 
 ---
 
@@ -17812,10 +17812,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayRewriteRuleSet, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayRewriteRuleSet]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]
 
 ---
 
@@ -18248,7 +18248,7 @@ def reset_negate() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.negate">negate</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.pattern">pattern</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.variable">variable</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -18359,10 +18359,10 @@ variable: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayRewriteRuleSetRewriteRuleCondition, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayRewriteRuleSetRewriteRuleCondition]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]
 
 ---
 
@@ -18902,7 +18902,7 @@ def reset_url() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.urlInput">url_input</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrl">ApplicationGatewayRewriteRuleSetRewriteRuleUrl</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.ruleSequence">rule_sequence</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]</code> | *No description.* |
 
 ---
 
@@ -19053,10 +19053,10 @@ rule_sequence: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayRewriteRuleSetRewriteRule, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayRewriteRuleSetRewriteRule]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]
 
 ---
 
@@ -19471,7 +19471,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.headerValueInput">header_value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -19542,10 +19542,10 @@ header_value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]
 
 ---
 
@@ -19960,7 +19960,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.headerValueInput">header_value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -20031,10 +20031,10 @@ header_value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]
 
 ---
 
@@ -21213,7 +21213,7 @@ def reset_password() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.keyVaultSecretId">key_vault_secret_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.password">password</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]</code> | *No description.* |
 
 ---
 
@@ -21344,10 +21344,10 @@ password: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewaySslCertificate, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewaySslCertificate]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]
 
 ---
 
@@ -22260,7 +22260,7 @@ def reset_verify_client_cert_issuer_dn() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.trustedClientCertificateNames">trusted_client_certificate_names</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.verifyClientCertIssuerDn">verify_client_cert_issuer_dn</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]</code> | *No description.* |
 
 ---
 
@@ -22381,10 +22381,10 @@ verify_client_cert_issuer_dn: typing.Union[bool, IResolvable]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewaySslProfile, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewaySslProfile]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]
 
 ---
 
@@ -23079,7 +23079,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -23190,10 +23190,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>]
 
 ---
 
@@ -23609,7 +23609,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.data">data</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]</code> | *No description.* |
 
 ---
 
@@ -23690,10 +23690,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayTrustedClientCertificate, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayTrustedClientCertificate]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]
 
 ---
 
@@ -24125,7 +24125,7 @@ def reset_key_vault_secret_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.data">data</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.keyVaultSecretId">key_vault_secret_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]</code> | *No description.* |
 
 ---
 
@@ -24226,10 +24226,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayTrustedRootCertificate, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayTrustedRootCertificate]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]
 
 ---
 
@@ -24700,7 +24700,7 @@ def reset_default_rewrite_rule_set_name() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.defaultRedirectConfigurationName">default_redirect_configuration_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.defaultRewriteRuleSetName">default_rewrite_rule_set_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]</code> | *No description.* |
 
 ---
 
@@ -24901,10 +24901,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayUrlPathMap, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayUrlPathMap]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]
 
 ---
 
@@ -25369,7 +25369,7 @@ def reset_rewrite_rule_set_name() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.paths">paths</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.redirectConfigurationName">redirect_configuration_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.rewriteRuleSetName">rewrite_rule_set_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]</code> | *No description.* |
 
 ---
 
@@ -25590,10 +25590,10 @@ rewrite_rule_set_name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayUrlPathMapPathRule, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayUrlPathMapPathRule]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]
 
 ---
 
@@ -26015,7 +26015,7 @@ def reset_rules() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.rulesInput">rules_input</a></code> | <code>typing.List[typing.Union[int, float]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.ruleGroupName">rule_group_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.rules">rules</a></code> | <code>typing.List[typing.Union[int, float]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]</code> | *No description.* |
 
 ---
 
@@ -26086,10 +26086,10 @@ rules: typing.List[typing.Union[int, float]]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayWafConfigurationDisabledRuleGroup, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayWafConfigurationDisabledRuleGroup]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]
 
 ---
 
@@ -26520,7 +26520,7 @@ def reset_selector_match_operator() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.matchVariable">match_variable</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.selector">selector</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.selectorMatchOperator">selector_match_operator</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]</code> | *No description.* |
 
 ---
 
@@ -26611,10 +26611,10 @@ selector_match_operator: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApplicationGatewayWafConfigurationExclusion, IResolvable]
+internal_value: typing.Union[IResolvable, ApplicationGatewayWafConfigurationExclusion]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]
 
 ---
 

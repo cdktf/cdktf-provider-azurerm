@@ -975,7 +975,7 @@ WindowsWebAppSlot.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlot.property.siteConfigInput">siteConfigInput</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfig">WindowsWebAppSlotSiteConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlot.property.storageAccountInput">storageAccountInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotStorageAccount">WindowsWebAppSlotStorageAccount</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlot.property.tagsInput">tagsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlot.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotTimeouts">WindowsWebAppSlotTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlot.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotTimeouts">WindowsWebAppSlotTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlot.property.virtualNetworkSubnetIdInput">virtualNetworkSubnetIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlot.property.zipDeployFileInput">zipDeployFileInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlot.property.appServiceId">appServiceId</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -1534,7 +1534,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTagsInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotTimeouts">WindowsWebAppSlotTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotTimeouts">WindowsWebAppSlotTimeouts</a>
 
 ---
 
@@ -11289,7 +11289,7 @@ public void resetScopes()
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimType">nameClaimType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpoint">openidConfigurationEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.scopes">scopes</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotAuthSettingsV2CustomOidcV2">WindowsWebAppSlotAuthSettingsV2CustomOidcV2</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotAuthSettingsV2CustomOidcV2">WindowsWebAppSlotAuthSettingsV2CustomOidcV2</a></code> | *No description.* |
 
 ---
 
@@ -11483,7 +11483,7 @@ public java.util.List<java.lang.String> getScopes();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotAuthSettingsV2CustomOidcV2">WindowsWebAppSlotAuthSettingsV2CustomOidcV2</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotAuthSettingsV2CustomOidcV2">WindowsWebAppSlotAuthSettingsV2CustomOidcV2</a>
 
 ---
 
@@ -15859,7 +15859,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotConnectionStringOutputReference.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotConnectionStringOutputReference.property.type">type</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotConnectionStringOutputReference.property.value">value</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotConnectionStringOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotConnectionString">WindowsWebAppSlotConnectionString</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotConnectionStringOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotConnectionString">WindowsWebAppSlotConnectionString</a></code> | *No description.* |
 
 ---
 
@@ -15953,7 +15953,7 @@ public java.lang.String getValue();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotConnectionString">WindowsWebAppSlotConnectionString</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotConnectionString">WindowsWebAppSlotConnectionString</a>
 
 ---
 
@@ -21315,7 +21315,7 @@ public void resetWin32Status()
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.statusCodeRange">statusCodeRange</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.subStatus">subStatus</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.win32Status">win32Status</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode">WindowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode">WindowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode</a></code> | *No description.* |
 
 ---
 
@@ -21469,7 +21469,7 @@ public java.lang.String getWin32Status();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode">WindowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode">WindowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode</a>
 
 ---
 
@@ -22188,7 +22188,7 @@ public void resetXForwardedHost()
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedFor">xForwardedFor</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedHost">xForwardedHost</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestrictionHeaders">WindowsWebAppSlotSiteConfigIpRestrictionHeaders</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestrictionHeaders">WindowsWebAppSlotSiteConfigIpRestrictionHeaders</a></code> | *No description.* |
 
 ---
 
@@ -22302,7 +22302,7 @@ public java.util.List<java.lang.String> getXForwardedHost();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestrictionHeaders">WindowsWebAppSlotSiteConfigIpRestrictionHeaders</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestrictionHeaders">WindowsWebAppSlotSiteConfigIpRestrictionHeaders</a>
 
 ---
 
@@ -22754,7 +22754,7 @@ public void resetVirtualNetworkSubnetId()
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestrictionOutputReference.property.priority">priority</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestrictionOutputReference.property.serviceTag">serviceTag</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestrictionOutputReference.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestriction">WindowsWebAppSlotSiteConfigIpRestriction</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestriction">WindowsWebAppSlotSiteConfigIpRestriction</a></code> | *No description.* |
 
 ---
 
@@ -22928,7 +22928,7 @@ public java.lang.String getVirtualNetworkSubnetId();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestriction">WindowsWebAppSlotSiteConfigIpRestriction</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigIpRestriction">WindowsWebAppSlotSiteConfigIpRestriction</a>
 
 ---
 
@@ -24599,7 +24599,7 @@ public void resetXForwardedHost()
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedFor">xForwardedFor</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedHost">xForwardedHost</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders">WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders">WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders</a></code> | *No description.* |
 
 ---
 
@@ -24713,7 +24713,7 @@ public java.util.List<java.lang.String> getXForwardedHost();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders">WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders">WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders</a>
 
 ---
 
@@ -25165,7 +25165,7 @@ public void resetVirtualNetworkSubnetId()
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestrictionOutputReference.property.priority">priority</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestrictionOutputReference.property.serviceTag">serviceTag</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestrictionOutputReference.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestriction">WindowsWebAppSlotSiteConfigScmIpRestriction</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestriction">WindowsWebAppSlotSiteConfigScmIpRestriction</a></code> | *No description.* |
 
 ---
 
@@ -25339,7 +25339,7 @@ public java.lang.String getVirtualNetworkSubnetId();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestriction">WindowsWebAppSlotSiteConfigScmIpRestriction</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigScmIpRestriction">WindowsWebAppSlotSiteConfigScmIpRestriction</a>
 
 ---
 
@@ -25743,7 +25743,7 @@ public void resetVirtualDirectory()
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplicationOutputReference.property.physicalPath">physicalPath</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplicationOutputReference.property.preload">preload</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplicationOutputReference.property.virtualPath">virtualPath</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplicationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplication">WindowsWebAppSlotSiteConfigVirtualApplication</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplicationOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplication">WindowsWebAppSlotSiteConfigVirtualApplication</a></code> | *No description.* |
 
 ---
 
@@ -25857,7 +25857,7 @@ public java.lang.String getVirtualPath();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplication">WindowsWebAppSlotSiteConfigVirtualApplication</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplication">WindowsWebAppSlotSiteConfigVirtualApplication</a>
 
 ---
 
@@ -26251,7 +26251,7 @@ public void resetVirtualPath()
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplicationVirtualDirectoryOutputReference.property.virtualPathInput">virtualPathInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplicationVirtualDirectoryOutputReference.property.physicalPath">physicalPath</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplicationVirtualDirectoryOutputReference.property.virtualPath">virtualPath</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplicationVirtualDirectoryOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplicationVirtualDirectory">WindowsWebAppSlotSiteConfigVirtualApplicationVirtualDirectory</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplicationVirtualDirectoryOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplicationVirtualDirectory">WindowsWebAppSlotSiteConfigVirtualApplicationVirtualDirectory</a></code> | *No description.* |
 
 ---
 
@@ -26325,7 +26325,7 @@ public java.lang.String getVirtualPath();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplicationVirtualDirectory">WindowsWebAppSlotSiteConfigVirtualApplicationVirtualDirectory</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotSiteConfigVirtualApplicationVirtualDirectory">WindowsWebAppSlotSiteConfigVirtualApplicationVirtualDirectory</a>
 
 ---
 
@@ -27141,7 +27141,7 @@ public void resetMountPath()
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotStorageAccountOutputReference.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotStorageAccountOutputReference.property.shareName">shareName</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotStorageAccountOutputReference.property.type">type</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotStorageAccountOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotStorageAccount">WindowsWebAppSlotStorageAccount</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotStorageAccountOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotStorageAccount">WindowsWebAppSlotStorageAccount</a></code> | *No description.* |
 
 ---
 
@@ -27295,7 +27295,7 @@ public java.lang.String getType();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotStorageAccount">WindowsWebAppSlotStorageAccount</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotStorageAccount">WindowsWebAppSlotStorageAccount</a>
 
 ---
 
@@ -27546,7 +27546,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotTimeouts">WindowsWebAppSlotTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotTimeouts">WindowsWebAppSlotTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -27660,7 +27660,7 @@ public java.lang.String getUpdate();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotTimeouts">WindowsWebAppSlotTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.windowsWebAppSlot.WindowsWebAppSlotTimeouts">WindowsWebAppSlotTimeouts</a>
 
 ---
 

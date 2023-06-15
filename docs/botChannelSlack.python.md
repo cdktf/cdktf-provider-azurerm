@@ -614,7 +614,7 @@ botChannelSlack.BotChannelSlack.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.signingSecretInput">signing_secret_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts">BotChannelSlackTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts">BotChannelSlackTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.verificationTokenInput">verification_token_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.botName">bot_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.clientId">client_id</a></code> | <code>str</code> | *No description.* |
@@ -863,10 +863,10 @@ signing_secret_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[BotChannelSlackTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, BotChannelSlackTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts">BotChannelSlackTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts">BotChannelSlackTimeouts</a>]
 
 ---
 
@@ -1584,7 +1584,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts">BotChannelSlackTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts">BotChannelSlackTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1695,10 +1695,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[BotChannelSlackTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, BotChannelSlackTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts">BotChannelSlackTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts">BotChannelSlackTimeouts</a>]
 
 ---
 

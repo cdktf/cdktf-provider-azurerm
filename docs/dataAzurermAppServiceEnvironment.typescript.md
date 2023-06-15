@@ -382,7 +382,7 @@ dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.isTerraformDat
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeouts">DataAzurermAppServiceEnvironmentTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeouts">DataAzurermAppServiceEnvironmentTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
@@ -634,10 +634,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironment.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermAppServiceEnvironmentTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermAppServiceEnvironmentTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeouts">DataAzurermAppServiceEnvironmentTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeouts">DataAzurermAppServiceEnvironmentTimeouts</a>
 
 ---
 
@@ -1525,7 +1525,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeouts">DataAzurermAppServiceEnvironmentTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeouts">DataAzurermAppServiceEnvironmentTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1576,10 +1576,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermAppServiceEnvironmentTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermAppServiceEnvironmentTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeouts">DataAzurermAppServiceEnvironmentTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermAppServiceEnvironment.DataAzurermAppServiceEnvironmentTimeouts">DataAzurermAppServiceEnvironmentTimeouts</a>
 
 ---
 

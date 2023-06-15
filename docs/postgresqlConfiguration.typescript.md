@@ -377,7 +377,7 @@ postgresqlConfiguration.PostgresqlConfiguration.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfiguration.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfiguration.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfiguration.property.serverNameInput">serverNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfiguration.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfigurationTimeouts">PostgresqlConfigurationTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfiguration.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfigurationTimeouts">PostgresqlConfigurationTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfiguration.property.valueInput">valueInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfiguration.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfiguration.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -582,10 +582,10 @@ public readonly serverNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfiguration.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: PostgresqlConfigurationTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | PostgresqlConfigurationTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfigurationTimeouts">PostgresqlConfigurationTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfigurationTimeouts">PostgresqlConfigurationTimeouts</a>
 
 ---
 
@@ -1163,7 +1163,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfigurationTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfigurationTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfigurationTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfigurationTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfigurationTimeouts">PostgresqlConfigurationTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfigurationTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfigurationTimeouts">PostgresqlConfigurationTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1274,10 +1274,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfigurationTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: PostgresqlConfigurationTimeouts | IResolvable;
+public readonly internalValue: IResolvable | PostgresqlConfigurationTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfigurationTimeouts">PostgresqlConfigurationTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.postgresqlConfiguration.PostgresqlConfigurationTimeouts">PostgresqlConfigurationTimeouts</a>
 
 ---
 

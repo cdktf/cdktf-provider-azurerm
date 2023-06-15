@@ -377,7 +377,7 @@ webPubsubCustomCertificate.WebPubsubCustomCertificate.isTerraformResource(x: any
 | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificate.property.customCertificateIdInput">customCertificateIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificate.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificate.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificate.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificateTimeouts">WebPubsubCustomCertificateTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificate.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificateTimeouts">WebPubsubCustomCertificateTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificate.property.webPubsubIdInput">webPubsubIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificate.property.customCertificateId">customCertificateId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificate.property.id">id</a></code> | <code>string</code> | *No description.* |
@@ -581,10 +581,10 @@ public readonly nameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificate.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: WebPubsubCustomCertificateTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | WebPubsubCustomCertificateTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificateTimeouts">WebPubsubCustomCertificateTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificateTimeouts">WebPubsubCustomCertificateTimeouts</a>
 
 ---
 
@@ -1117,7 +1117,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificateTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificateTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificateTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificateTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificateTimeouts">WebPubsubCustomCertificateTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificateTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificateTimeouts">WebPubsubCustomCertificateTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1208,10 +1208,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificateTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WebPubsubCustomCertificateTimeouts | IResolvable;
+public readonly internalValue: IResolvable | WebPubsubCustomCertificateTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificateTimeouts">WebPubsubCustomCertificateTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.webPubsubCustomCertificate.WebPubsubCustomCertificateTimeouts">WebPubsubCustomCertificateTimeouts</a>
 
 ---
 

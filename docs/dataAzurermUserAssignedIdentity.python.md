@@ -511,7 +511,7 @@ dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.is_terraform_dat
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | *No description.* |
@@ -733,10 +733,10 @@ resource_group_name_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[DataAzurermUserAssignedIdentityTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, DataAzurermUserAssignedIdentityTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a>]
 
 ---
 
@@ -1231,7 +1231,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeoutsOutputReference.property.readInput">read_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1282,10 +1282,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DataAzurermUserAssignedIdentityTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, DataAzurermUserAssignedIdentityTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a>]
 
 ---
 

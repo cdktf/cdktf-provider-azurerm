@@ -474,7 +474,7 @@ DatabricksWorkspaceCustomerManagedKey.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKey.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKeyTimeoutsOutputReference">DatabricksWorkspaceCustomerManagedKeyTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKey.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKey.property.keyVaultKeyIdInput">keyVaultKeyIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKey.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKeyTimeouts">DatabricksWorkspaceCustomerManagedKeyTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKey.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKeyTimeouts">DatabricksWorkspaceCustomerManagedKeyTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKey.property.workspaceIdInput">workspaceIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKey.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKey.property.keyVaultKeyId">keyVaultKeyId</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -660,7 +660,7 @@ public java.lang.String getKeyVaultKeyIdInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKeyTimeouts">DatabricksWorkspaceCustomerManagedKeyTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKeyTimeouts">DatabricksWorkspaceCustomerManagedKeyTimeouts</a>
 
 ---
 
@@ -1213,7 +1213,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKeyTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKeyTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKeyTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKeyTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKeyTimeouts">DatabricksWorkspaceCustomerManagedKeyTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKeyTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKeyTimeouts">DatabricksWorkspaceCustomerManagedKeyTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1327,7 +1327,7 @@ public java.lang.String getUpdate();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKeyTimeouts">DatabricksWorkspaceCustomerManagedKeyTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.databricksWorkspaceCustomerManagedKey.DatabricksWorkspaceCustomerManagedKeyTimeouts">DatabricksWorkspaceCustomerManagedKeyTimeouts</a>
 
 ---
 

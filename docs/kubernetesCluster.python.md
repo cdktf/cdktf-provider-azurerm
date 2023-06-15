@@ -2818,7 +2818,7 @@ kubernetesCluster.KubernetesCluster.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.skuTierInput">sku_tier_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.storageProfileInput">storage_profile_input</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile">KubernetesClusterStorageProfile</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts">KubernetesClusterTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts">KubernetesClusterTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.webAppRoutingInput">web_app_routing_input</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWebAppRouting">KubernetesClusterWebAppRouting</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.windowsProfileInput">windows_profile_input</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfile">KubernetesClusterWindowsProfile</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.workloadAutoscalerProfileInput">workload_autoscaler_profile_input</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile">KubernetesClusterWorkloadAutoscalerProfile</a></code> | *No description.* |
@@ -3840,10 +3840,10 @@ tags_input: typing.Mapping[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[KubernetesClusterTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, KubernetesClusterTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts">KubernetesClusterTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts">KubernetesClusterTimeouts</a>]
 
 ---
 
@@ -20740,7 +20740,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedOutputReference.property.hoursInput">hours_input</a></code> | <code>typing.List[typing.Union[int, float]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedOutputReference.property.day">day</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedOutputReference.property.hours">hours</a></code> | <code>typing.List[typing.Union[int, float]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed">KubernetesClusterMaintenanceWindowAllowed</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed">KubernetesClusterMaintenanceWindowAllowed</a>]</code> | *No description.* |
 
 ---
 
@@ -20811,10 +20811,10 @@ hours: typing.List[typing.Union[int, float]]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[KubernetesClusterMaintenanceWindowAllowed, IResolvable]
+internal_value: typing.Union[IResolvable, KubernetesClusterMaintenanceWindowAllowed]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed">KubernetesClusterMaintenanceWindowAllowed</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed">KubernetesClusterMaintenanceWindowAllowed</a>]
 
 ---
 
@@ -21229,7 +21229,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedOutputReference.property.startInput">start_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedOutputReference.property.end">end</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedOutputReference.property.start">start</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed">KubernetesClusterMaintenanceWindowNotAllowed</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed">KubernetesClusterMaintenanceWindowNotAllowed</a>]</code> | *No description.* |
 
 ---
 
@@ -21300,10 +21300,10 @@ start: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[KubernetesClusterMaintenanceWindowNotAllowed, IResolvable]
+internal_value: typing.Union[IResolvable, KubernetesClusterMaintenanceWindowNotAllowed]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed">KubernetesClusterMaintenanceWindowNotAllowed</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed">KubernetesClusterMaintenanceWindowNotAllowed</a>]
 
 ---
 
@@ -26026,7 +26026,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts">KubernetesClusterTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts">KubernetesClusterTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -26137,10 +26137,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[KubernetesClusterTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, KubernetesClusterTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts">KubernetesClusterTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts">KubernetesClusterTimeouts</a>]
 
 ---
 

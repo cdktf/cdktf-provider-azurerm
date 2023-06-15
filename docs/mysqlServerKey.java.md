@@ -475,7 +475,7 @@ MysqlServerKey.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.keyVaultKeyIdInput">keyVaultKeyIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.serverIdInput">serverIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.keyVaultKeyId">keyVaultKeyId</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.serverId">serverId</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -670,7 +670,7 @@ public java.lang.String getServerIdInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a>
 
 ---
 
@@ -1213,7 +1213,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1327,7 +1327,7 @@ public java.lang.String getUpdate();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a>
 
 ---
 

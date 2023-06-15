@@ -536,7 +536,7 @@ vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachment.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachment.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachment.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachment.property.netappVolumeIdInput">netapp_volume_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachment.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachmentTimeouts">VmwareNetappVolumeAttachmentTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachment.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachmentTimeouts">VmwareNetappVolumeAttachmentTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachment.property.vmwareClusterIdInput">vmware_cluster_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachment.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachment.property.name">name</a></code> | <code>str</code> | *No description.* |
@@ -730,10 +730,10 @@ netapp_volume_id_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachment.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[VmwareNetappVolumeAttachmentTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, VmwareNetappVolumeAttachmentTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachmentTimeouts">VmwareNetappVolumeAttachmentTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachmentTimeouts">VmwareNetappVolumeAttachmentTimeouts</a>]
 
 ---
 
@@ -1308,7 +1308,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachmentTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachmentTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachmentTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachmentTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachmentTimeouts">VmwareNetappVolumeAttachmentTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachmentTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachmentTimeouts">VmwareNetappVolumeAttachmentTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1399,10 +1399,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachmentTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[VmwareNetappVolumeAttachmentTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, VmwareNetappVolumeAttachmentTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachmentTimeouts">VmwareNetappVolumeAttachmentTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.vmwareNetappVolumeAttachment.VmwareNetappVolumeAttachmentTimeouts">VmwareNetappVolumeAttachmentTimeouts</a>]
 
 ---
 

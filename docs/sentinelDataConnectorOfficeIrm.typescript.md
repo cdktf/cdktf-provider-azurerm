@@ -384,7 +384,7 @@ sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrm.isTerraformResourc
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrm.property.logAnalyticsWorkspaceIdInput">logAnalyticsWorkspaceIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrm.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrm.property.tenantIdInput">tenantIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrm.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrmTimeouts">SentinelDataConnectorOfficeIrmTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrm.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrmTimeouts">SentinelDataConnectorOfficeIrmTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrm.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrm.property.logAnalyticsWorkspaceId">logAnalyticsWorkspaceId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrm.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -587,10 +587,10 @@ public readonly tenantIdInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrm.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: SentinelDataConnectorOfficeIrmTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | SentinelDataConnectorOfficeIrmTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrmTimeouts">SentinelDataConnectorOfficeIrmTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrmTimeouts">SentinelDataConnectorOfficeIrmTimeouts</a>
 
 ---
 
@@ -1113,7 +1113,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrmTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrmTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrmTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrmTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrmTimeouts">SentinelDataConnectorOfficeIrmTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrmTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrmTimeouts">SentinelDataConnectorOfficeIrmTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1204,10 +1204,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrmTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: SentinelDataConnectorOfficeIrmTimeouts | IResolvable;
+public readonly internalValue: IResolvable | SentinelDataConnectorOfficeIrmTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrmTimeouts">SentinelDataConnectorOfficeIrmTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficeIrm.SentinelDataConnectorOfficeIrmTimeouts">SentinelDataConnectorOfficeIrmTimeouts</a>
 
 ---
 

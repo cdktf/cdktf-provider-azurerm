@@ -384,7 +384,7 @@ resourceGroup.ResourceGroup.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroup.property.locationInput">locationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroup.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroup.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroup.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts">ResourceGroupTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroup.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts">ResourceGroupTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroup.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroup.property.location">location</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroup.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -587,10 +587,10 @@ public readonly tagsInput: {[ key: string ]: string};
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.resourceGroup.ResourceGroup.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: ResourceGroupTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | ResourceGroupTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts">ResourceGroupTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts">ResourceGroupTimeouts</a>
 
 ---
 
@@ -1135,7 +1135,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts">ResourceGroupTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts">ResourceGroupTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1246,10 +1246,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ResourceGroupTimeouts | IResolvable;
+public readonly internalValue: IResolvable | ResourceGroupTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts">ResourceGroupTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts">ResourceGroupTimeouts</a>
 
 ---
 

@@ -377,7 +377,7 @@ dataAzurermCdnProfile.DataAzurermCdnProfile.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfile.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfile.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfile.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfile.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeouts">DataAzurermCdnProfileTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfile.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeouts">DataAzurermCdnProfileTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfile.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfile.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfile.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
@@ -579,10 +579,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfile.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermCdnProfileTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermCdnProfileTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeouts">DataAzurermCdnProfileTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeouts">DataAzurermCdnProfileTimeouts</a>
 
 ---
 
@@ -1038,7 +1038,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeouts">DataAzurermCdnProfileTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeouts">DataAzurermCdnProfileTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1089,10 +1089,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermCdnProfileTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermCdnProfileTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeouts">DataAzurermCdnProfileTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeouts">DataAzurermCdnProfileTimeouts</a>
 
 ---
 

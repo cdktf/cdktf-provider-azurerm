@@ -564,7 +564,7 @@ emailCommunicationService.EmailCommunicationService.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationService.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationService.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationService.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationService.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts">EmailCommunicationServiceTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationService.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts">EmailCommunicationServiceTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationService.property.dataLocation">data_location</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationService.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationService.property.name">name</a></code> | <code>str</code> | *No description.* |
@@ -778,10 +778,10 @@ tags_input: typing.Mapping[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationService.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[EmailCommunicationServiceTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, EmailCommunicationServiceTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts">EmailCommunicationServiceTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts">EmailCommunicationServiceTimeouts</a>]
 
 ---
 
@@ -1393,7 +1393,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts">EmailCommunicationServiceTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts">EmailCommunicationServiceTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1504,10 +1504,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[EmailCommunicationServiceTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, EmailCommunicationServiceTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts">EmailCommunicationServiceTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.emailCommunicationService.EmailCommunicationServiceTimeouts">EmailCommunicationServiceTimeouts</a>]
 
 ---
 

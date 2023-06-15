@@ -1809,7 +1809,7 @@ linuxWebAppSlot.LinuxWebAppSlot.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.siteConfigInput">site_config_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfig">LinuxWebAppSlotSiteConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.storageAccountInput">storage_account_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount">LinuxWebAppSlotStorageAccount</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts">LinuxWebAppSlotTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts">LinuxWebAppSlotTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.virtualNetworkSubnetIdInput">virtual_network_subnet_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.zipDeployFileInput">zip_deploy_file_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.appServiceId">app_service_id</a></code> | <code>str</code> | *No description.* |
@@ -2375,10 +2375,10 @@ tags_input: typing.Mapping[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlot.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[LinuxWebAppSlotTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, LinuxWebAppSlotTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts">LinuxWebAppSlotTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts">LinuxWebAppSlotTimeouts</a>]
 
 ---
 
@@ -12321,7 +12321,7 @@ def reset_scopes() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimType">name_claim_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpoint">openid_configuration_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.scopes">scopes</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotAuthSettingsV2CustomOidcV2">LinuxWebAppSlotAuthSettingsV2CustomOidcV2</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotAuthSettingsV2CustomOidcV2">LinuxWebAppSlotAuthSettingsV2CustomOidcV2</a>]</code> | *No description.* |
 
 ---
 
@@ -12512,10 +12512,10 @@ scopes: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[LinuxWebAppSlotAuthSettingsV2CustomOidcV2, IResolvable]
+internal_value: typing.Union[IResolvable, LinuxWebAppSlotAuthSettingsV2CustomOidcV2]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotAuthSettingsV2CustomOidcV2">LinuxWebAppSlotAuthSettingsV2CustomOidcV2</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotAuthSettingsV2CustomOidcV2">LinuxWebAppSlotAuthSettingsV2CustomOidcV2</a>]
 
 ---
 
@@ -17635,7 +17635,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConnectionStringOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConnectionStringOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConnectionStringOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConnectionStringOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConnectionString">LinuxWebAppSlotConnectionString</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConnectionStringOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConnectionString">LinuxWebAppSlotConnectionString</a>]</code> | *No description.* |
 
 ---
 
@@ -17726,10 +17726,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConnectionStringOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[LinuxWebAppSlotConnectionString, IResolvable]
+internal_value: typing.Union[IResolvable, LinuxWebAppSlotConnectionString]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConnectionString">LinuxWebAppSlotConnectionString</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotConnectionString">LinuxWebAppSlotConnectionString</a>]
 
 ---
 
@@ -23145,7 +23145,7 @@ def reset_win32_status() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.statusCodeRange">status_code_range</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.subStatus">sub_status</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.win32Status">win32_status</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode">LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode">LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode</a>]</code> | *No description.* |
 
 ---
 
@@ -23296,10 +23296,10 @@ win32_status: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode, IResolvable]
+internal_value: typing.Union[IResolvable, LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode">LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode">LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode</a>]
 
 ---
 
@@ -24078,7 +24078,7 @@ def reset_x_forwarded_host() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.xFdHealthProbe">x_fd_health_probe</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedFor">x_forwarded_for</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedHost">x_forwarded_host</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders">LinuxWebAppSlotSiteConfigIpRestrictionHeaders</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders">LinuxWebAppSlotSiteConfigIpRestrictionHeaders</a>]</code> | *No description.* |
 
 ---
 
@@ -24189,10 +24189,10 @@ x_forwarded_host: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[LinuxWebAppSlotSiteConfigIpRestrictionHeaders, IResolvable]
+internal_value: typing.Union[IResolvable, LinuxWebAppSlotSiteConfigIpRestrictionHeaders]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders">LinuxWebAppSlotSiteConfigIpRestrictionHeaders</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionHeaders">LinuxWebAppSlotSiteConfigIpRestrictionHeaders</a>]
 
 ---
 
@@ -24681,7 +24681,7 @@ def reset_virtual_network_subnet_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionOutputReference.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionOutputReference.property.serviceTag">service_tag</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionOutputReference.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestriction">LinuxWebAppSlotSiteConfigIpRestriction</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestriction">LinuxWebAppSlotSiteConfigIpRestriction</a>]</code> | *No description.* |
 
 ---
 
@@ -24852,10 +24852,10 @@ virtual_network_subnet_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestrictionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[LinuxWebAppSlotSiteConfigIpRestriction, IResolvable]
+internal_value: typing.Union[IResolvable, LinuxWebAppSlotSiteConfigIpRestriction]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestriction">LinuxWebAppSlotSiteConfigIpRestriction</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigIpRestriction">LinuxWebAppSlotSiteConfigIpRestriction</a>]
 
 ---
 
@@ -26676,7 +26676,7 @@ def reset_x_forwarded_host() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.xFdHealthProbe">x_fd_health_probe</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedFor">x_forwarded_for</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedHost">x_forwarded_host</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders">LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders">LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders</a>]</code> | *No description.* |
 
 ---
 
@@ -26787,10 +26787,10 @@ x_forwarded_host: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders, IResolvable]
+internal_value: typing.Union[IResolvable, LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders">LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders">LinuxWebAppSlotSiteConfigScmIpRestrictionHeaders</a>]
 
 ---
 
@@ -27279,7 +27279,7 @@ def reset_virtual_network_subnet_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionOutputReference.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionOutputReference.property.serviceTag">service_tag</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionOutputReference.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestriction">LinuxWebAppSlotSiteConfigScmIpRestriction</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestriction">LinuxWebAppSlotSiteConfigScmIpRestriction</a>]</code> | *No description.* |
 
 ---
 
@@ -27450,10 +27450,10 @@ virtual_network_subnet_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestrictionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[LinuxWebAppSlotSiteConfigScmIpRestriction, IResolvable]
+internal_value: typing.Union[IResolvable, LinuxWebAppSlotSiteConfigScmIpRestriction]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestriction">LinuxWebAppSlotSiteConfigScmIpRestriction</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotSiteConfigScmIpRestriction">LinuxWebAppSlotSiteConfigScmIpRestriction</a>]
 
 ---
 
@@ -28339,7 +28339,7 @@ def reset_mount_path() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccountOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccountOutputReference.property.shareName">share_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccountOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccountOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount">LinuxWebAppSlotStorageAccount</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccountOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount">LinuxWebAppSlotStorageAccount</a>]</code> | *No description.* |
 
 ---
 
@@ -28490,10 +28490,10 @@ type: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccountOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[LinuxWebAppSlotStorageAccount, IResolvable]
+internal_value: typing.Union[IResolvable, LinuxWebAppSlotStorageAccount]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount">LinuxWebAppSlotStorageAccount</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotStorageAccount">LinuxWebAppSlotStorageAccount</a>]
 
 ---
 
@@ -28769,7 +28769,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts">LinuxWebAppSlotTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts">LinuxWebAppSlotTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -28880,10 +28880,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[LinuxWebAppSlotTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, LinuxWebAppSlotTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts">LinuxWebAppSlotTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxWebAppSlot.LinuxWebAppSlotTimeouts">LinuxWebAppSlotTimeouts</a>]
 
 ---
 

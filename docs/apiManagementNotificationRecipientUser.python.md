@@ -536,7 +536,7 @@ apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUser.is
 | <code><a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUser.property.apiManagementIdInput">api_management_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUser.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUser.property.notificationTypeInput">notification_type_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUser.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUserTimeouts">ApiManagementNotificationRecipientUserTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUser.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUserTimeouts">ApiManagementNotificationRecipientUserTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUser.property.userIdInput">user_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUser.property.apiManagementId">api_management_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUser.property.id">id</a></code> | <code>str</code> | *No description.* |
@@ -730,10 +730,10 @@ notification_type_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUser.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[ApiManagementNotificationRecipientUserTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, ApiManagementNotificationRecipientUserTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUserTimeouts">ApiManagementNotificationRecipientUserTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUserTimeouts">ApiManagementNotificationRecipientUserTimeouts</a>]
 
 ---
 
@@ -1308,7 +1308,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUserTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUserTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUserTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUserTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUserTimeouts">ApiManagementNotificationRecipientUserTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUserTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUserTimeouts">ApiManagementNotificationRecipientUserTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1399,10 +1399,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUserTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ApiManagementNotificationRecipientUserTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, ApiManagementNotificationRecipientUserTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUserTimeouts">ApiManagementNotificationRecipientUserTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagementNotificationRecipientUser.ApiManagementNotificationRecipientUserTimeouts">ApiManagementNotificationRecipientUserTimeouts</a>]
 
 ---
 

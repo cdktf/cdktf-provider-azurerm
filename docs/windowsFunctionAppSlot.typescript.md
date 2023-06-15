@@ -675,7 +675,7 @@ windowsFunctionAppSlot.WindowsFunctionAppSlot.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlot.property.storageKeyVaultSecretIdInput">storageKeyVaultSecretIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlot.property.storageUsesManagedIdentityInput">storageUsesManagedIdentityInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlot.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlot.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeouts">WindowsFunctionAppSlotTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlot.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeouts">WindowsFunctionAppSlotTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlot.property.virtualNetworkSubnetIdInput">virtualNetworkSubnetIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlot.property.appSettings">appSettings</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlot.property.builtinLoggingEnabled">builtinLoggingEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
@@ -1286,10 +1286,10 @@ public readonly tagsInput: {[ key: string ]: string};
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlot.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: WindowsFunctionAppSlotTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | WindowsFunctionAppSlotTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeouts">WindowsFunctionAppSlotTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeouts">WindowsFunctionAppSlotTimeouts</a>
 
 ---
 
@@ -9971,7 +9971,7 @@ public resetScopes(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimType">nameClaimType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpoint">openidConfigurationEndpoint</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.scopes">scopes</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2">WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2">WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2</a></code> | *No description.* |
 
 ---
 
@@ -10162,10 +10162,10 @@ public readonly scopes: string[];
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2OutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2 | IResolvable;
+public readonly internalValue: IResolvable | WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2">WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2">WindowsFunctionAppSlotAuthSettingsV2CustomOidcV2</a>
 
 ---
 
@@ -14541,7 +14541,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotConnectionStringOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotConnectionStringOutputReference.property.type">type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotConnectionStringOutputReference.property.value">value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotConnectionStringOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotConnectionString">WindowsFunctionAppSlotConnectionString</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotConnectionStringOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotConnectionString">WindowsFunctionAppSlotConnectionString</a></code> | *No description.* |
 
 ---
 
@@ -14632,10 +14632,10 @@ public readonly value: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotConnectionStringOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsFunctionAppSlotConnectionString | IResolvable;
+public readonly internalValue: IResolvable | WindowsFunctionAppSlotConnectionString;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotConnectionString">WindowsFunctionAppSlotConnectionString</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotConnectionString">WindowsFunctionAppSlotConnectionString</a>
 
 ---
 
@@ -16406,7 +16406,7 @@ public resetXForwardedHost(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedFor">xForwardedFor</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedHost">xForwardedHost</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionHeaders">WindowsFunctionAppSlotSiteConfigIpRestrictionHeaders</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionHeaders">WindowsFunctionAppSlotSiteConfigIpRestrictionHeaders</a></code> | *No description.* |
 
 ---
 
@@ -16517,10 +16517,10 @@ public readonly xForwardedHost: string[];
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionHeadersOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsFunctionAppSlotSiteConfigIpRestrictionHeaders | IResolvable;
+public readonly internalValue: IResolvable | WindowsFunctionAppSlotSiteConfigIpRestrictionHeaders;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionHeaders">WindowsFunctionAppSlotSiteConfigIpRestrictionHeaders</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionHeaders">WindowsFunctionAppSlotSiteConfigIpRestrictionHeaders</a>
 
 ---
 
@@ -16972,7 +16972,7 @@ public resetVirtualNetworkSubnetId(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionOutputReference.property.priority">priority</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionOutputReference.property.serviceTag">serviceTag</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionOutputReference.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction">WindowsFunctionAppSlotSiteConfigIpRestriction</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction">WindowsFunctionAppSlotSiteConfigIpRestriction</a></code> | *No description.* |
 
 ---
 
@@ -17143,10 +17143,10 @@ public readonly virtualNetworkSubnetId: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestrictionOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsFunctionAppSlotSiteConfigIpRestriction | IResolvable;
+public readonly internalValue: IResolvable | WindowsFunctionAppSlotSiteConfigIpRestriction;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction">WindowsFunctionAppSlotSiteConfigIpRestriction</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigIpRestriction">WindowsFunctionAppSlotSiteConfigIpRestriction</a>
 
 ---
 
@@ -18833,7 +18833,7 @@ public resetXForwardedHost(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedFor">xForwardedFor</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedHost">xForwardedHost</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeaders">WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeaders</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeaders">WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeaders</a></code> | *No description.* |
 
 ---
 
@@ -18944,10 +18944,10 @@ public readonly xForwardedHost: string[];
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeaders | IResolvable;
+public readonly internalValue: IResolvable | WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeaders;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeaders">WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeaders</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeaders">WindowsFunctionAppSlotSiteConfigScmIpRestrictionHeaders</a>
 
 ---
 
@@ -19399,7 +19399,7 @@ public resetVirtualNetworkSubnetId(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionOutputReference.property.priority">priority</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionOutputReference.property.serviceTag">serviceTag</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionOutputReference.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction">WindowsFunctionAppSlotSiteConfigScmIpRestriction</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction">WindowsFunctionAppSlotSiteConfigScmIpRestriction</a></code> | *No description.* |
 
 ---
 
@@ -19570,10 +19570,10 @@ public readonly virtualNetworkSubnetId: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestrictionOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsFunctionAppSlotSiteConfigScmIpRestriction | IResolvable;
+public readonly internalValue: IResolvable | WindowsFunctionAppSlotSiteConfigScmIpRestriction;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction">WindowsFunctionAppSlotSiteConfigScmIpRestriction</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotSiteConfigScmIpRestriction">WindowsFunctionAppSlotSiteConfigScmIpRestriction</a>
 
 ---
 
@@ -20389,7 +20389,7 @@ public resetMountPath(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotStorageAccountOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotStorageAccountOutputReference.property.shareName">shareName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotStorageAccountOutputReference.property.type">type</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotStorageAccountOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotStorageAccount">WindowsFunctionAppSlotStorageAccount</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotStorageAccountOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotStorageAccount">WindowsFunctionAppSlotStorageAccount</a></code> | *No description.* |
 
 ---
 
@@ -20540,10 +20540,10 @@ public readonly type: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotStorageAccountOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsFunctionAppSlotStorageAccount | IResolvable;
+public readonly internalValue: IResolvable | WindowsFunctionAppSlotStorageAccount;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotStorageAccount">WindowsFunctionAppSlotStorageAccount</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotStorageAccount">WindowsFunctionAppSlotStorageAccount</a>
 
 ---
 
@@ -20794,7 +20794,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeouts">WindowsFunctionAppSlotTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeouts">WindowsFunctionAppSlotTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -20905,10 +20905,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsFunctionAppSlotTimeouts | IResolvable;
+public readonly internalValue: IResolvable | WindowsFunctionAppSlotTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeouts">WindowsFunctionAppSlotTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsFunctionAppSlot.WindowsFunctionAppSlotTimeouts">WindowsFunctionAppSlotTimeouts</a>
 
 ---
 

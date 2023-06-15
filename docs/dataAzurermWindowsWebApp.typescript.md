@@ -403,7 +403,7 @@ dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeouts">DataAzurermWindowsWebAppTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeouts">DataAzurermWindowsWebAppTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
@@ -865,10 +865,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermWindowsWebAppTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermWindowsWebAppTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeouts">DataAzurermWindowsWebAppTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeouts">DataAzurermWindowsWebAppTimeouts</a>
 
 ---
 
@@ -23432,7 +23432,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeouts">DataAzurermWindowsWebAppTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeouts">DataAzurermWindowsWebAppTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -23483,10 +23483,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermWindowsWebAppTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermWindowsWebAppTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeouts">DataAzurermWindowsWebAppTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeouts">DataAzurermWindowsWebAppTimeouts</a>
 
 ---
 

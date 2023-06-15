@@ -376,7 +376,7 @@ diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.isTerraformResource(
 | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.property.diskPoolIdInput">diskPoolIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.property.managedDiskIdInput">managedDiskIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeouts">DiskPoolManagedDiskAttachmentTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeouts">DiskPoolManagedDiskAttachmentTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.property.diskPoolId">diskPoolId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.property.managedDiskId">managedDiskId</a></code> | <code>string</code> | *No description.* |
@@ -568,10 +568,10 @@ public readonly managedDiskIdInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DiskPoolManagedDiskAttachmentTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DiskPoolManagedDiskAttachmentTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeouts">DiskPoolManagedDiskAttachmentTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeouts">DiskPoolManagedDiskAttachmentTimeouts</a>
 
 ---
 
@@ -1071,7 +1071,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeouts">DiskPoolManagedDiskAttachmentTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeouts">DiskPoolManagedDiskAttachmentTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1162,10 +1162,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DiskPoolManagedDiskAttachmentTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DiskPoolManagedDiskAttachmentTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeouts">DiskPoolManagedDiskAttachmentTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeouts">DiskPoolManagedDiskAttachmentTimeouts</a>
 
 ---
 

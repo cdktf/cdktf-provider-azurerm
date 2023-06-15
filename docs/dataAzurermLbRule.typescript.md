@@ -385,7 +385,7 @@ dataAzurermLbRule.DataAzurermLbRule.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRule.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRule.property.loadbalancerIdInput">loadbalancerIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRule.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRule.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeouts">DataAzurermLbRuleTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRule.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeouts">DataAzurermLbRuleTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRule.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRule.property.loadbalancerId">loadbalancerId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRule.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -667,10 +667,10 @@ public readonly nameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRule.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermLbRuleTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermLbRuleTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeouts">DataAzurermLbRuleTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeouts">DataAzurermLbRuleTimeouts</a>
 
 ---
 
@@ -1126,7 +1126,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeouts">DataAzurermLbRuleTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeouts">DataAzurermLbRuleTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1177,10 +1177,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermLbRuleTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermLbRuleTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeouts">DataAzurermLbRuleTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeouts">DataAzurermLbRuleTimeouts</a>
 
 ---
 

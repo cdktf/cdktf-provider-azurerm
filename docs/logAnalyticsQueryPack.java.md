@@ -504,7 +504,7 @@ LogAnalyticsQueryPack.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPack.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPack.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPack.property.tagsInput">tagsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPack.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPackTimeouts">LogAnalyticsQueryPackTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPack.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPackTimeouts">LogAnalyticsQueryPackTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPack.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPack.property.location">location</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPack.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -721,7 +721,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTagsInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPackTimeouts">LogAnalyticsQueryPackTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPackTimeouts">LogAnalyticsQueryPackTimeouts</a>
 
 ---
 
@@ -1312,7 +1312,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPackTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPackTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPackTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPackTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPackTimeouts">LogAnalyticsQueryPackTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPackTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPackTimeouts">LogAnalyticsQueryPackTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1426,7 +1426,7 @@ public java.lang.String getUpdate();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPackTimeouts">LogAnalyticsQueryPackTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.logAnalyticsQueryPack.LogAnalyticsQueryPackTimeouts">LogAnalyticsQueryPackTimeouts</a>
 
 ---
 

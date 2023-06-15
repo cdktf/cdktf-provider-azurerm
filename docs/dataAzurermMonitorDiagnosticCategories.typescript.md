@@ -377,7 +377,7 @@ dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategories.is
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategories.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategoriesTimeoutsOutputReference">DataAzurermMonitorDiagnosticCategoriesTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategories.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategories.property.resourceIdInput">resourceIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategories.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategoriesTimeouts">DataAzurermMonitorDiagnosticCategoriesTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategories.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategoriesTimeouts">DataAzurermMonitorDiagnosticCategoriesTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategories.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategories.property.resourceId">resourceId</a></code> | <code>string</code> | *No description.* |
 
@@ -578,10 +578,10 @@ public readonly resourceIdInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategories.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermMonitorDiagnosticCategoriesTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermMonitorDiagnosticCategoriesTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategoriesTimeouts">DataAzurermMonitorDiagnosticCategoriesTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategoriesTimeouts">DataAzurermMonitorDiagnosticCategoriesTimeouts</a>
 
 ---
 
@@ -1014,7 +1014,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategoriesTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategoriesTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategoriesTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategoriesTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategoriesTimeouts">DataAzurermMonitorDiagnosticCategoriesTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategoriesTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategoriesTimeouts">DataAzurermMonitorDiagnosticCategoriesTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1065,10 +1065,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategoriesTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermMonitorDiagnosticCategoriesTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermMonitorDiagnosticCategoriesTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategoriesTimeouts">DataAzurermMonitorDiagnosticCategoriesTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermMonitorDiagnosticCategories.DataAzurermMonitorDiagnosticCategoriesTimeouts">DataAzurermMonitorDiagnosticCategoriesTimeouts</a>
 
 ---
 

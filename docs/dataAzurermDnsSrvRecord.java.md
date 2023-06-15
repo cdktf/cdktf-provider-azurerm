@@ -487,7 +487,7 @@ DataAzurermDnsSrvRecord.isTerraformDataSource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts">DataAzurermDnsSrvRecordTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts">DataAzurermDnsSrvRecordTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.property.zoneNameInput">zoneNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -704,7 +704,7 @@ public java.lang.String getResourceGroupNameInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts">DataAzurermDnsSrvRecordTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts">DataAzurermDnsSrvRecordTimeouts</a>
 
 ---
 
@@ -1667,7 +1667,7 @@ public void resetRead()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts">DataAzurermDnsSrvRecordTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts">DataAzurermDnsSrvRecordTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1721,7 +1721,7 @@ public java.lang.String getRead();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts">DataAzurermDnsSrvRecordTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts">DataAzurermDnsSrvRecordTimeouts</a>
 
 ---
 

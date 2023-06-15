@@ -628,7 +628,7 @@ logzSubAccount.LogzSubAccount.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.property.logzMonitorIdInput">logz_monitor_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts">LogzSubAccountTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts">LogzSubAccountTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.property.userInput">user_input</a></code> | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountUser">LogzSubAccountUser</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.property.id">id</a></code> | <code>str</code> | *No description.* |
@@ -853,10 +853,10 @@ tags_input: typing.Mapping[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[LogzSubAccountTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, LogzSubAccountTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts">LogzSubAccountTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts">LogzSubAccountTimeouts</a>]
 
 ---
 
@@ -1568,7 +1568,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts">LogzSubAccountTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts">LogzSubAccountTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1679,10 +1679,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[LogzSubAccountTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, LogzSubAccountTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts">LogzSubAccountTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts">LogzSubAccountTimeouts</a>]
 
 ---
 

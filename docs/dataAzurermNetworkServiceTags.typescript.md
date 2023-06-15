@@ -385,7 +385,7 @@ dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTags.isTerraformDataSourc
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTags.property.locationFilterInput">locationFilterInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTags.property.locationInput">locationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTags.property.serviceInput">serviceInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTags.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeouts">DataAzurermNetworkServiceTagsTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTags.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeouts">DataAzurermNetworkServiceTagsTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTags.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTags.property.location">location</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTags.property.locationFilter">locationFilter</a></code> | <code>string</code> | *No description.* |
@@ -598,10 +598,10 @@ public readonly serviceInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTags.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermNetworkServiceTagsTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermNetworkServiceTagsTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeouts">DataAzurermNetworkServiceTagsTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeouts">DataAzurermNetworkServiceTagsTimeouts</a>
 
 ---
 
@@ -1080,7 +1080,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeouts">DataAzurermNetworkServiceTagsTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeouts">DataAzurermNetworkServiceTagsTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1131,10 +1131,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermNetworkServiceTagsTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermNetworkServiceTagsTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeouts">DataAzurermNetworkServiceTagsTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeouts">DataAzurermNetworkServiceTagsTimeouts</a>
 
 ---
 

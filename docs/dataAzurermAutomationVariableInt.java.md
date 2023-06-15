@@ -487,7 +487,7 @@ DataAzurermAutomationVariableInt.isTerraformDataSource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableInt.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableInt.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableInt.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableInt.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableIntTimeouts">DataAzurermAutomationVariableIntTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableInt.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableIntTimeouts">DataAzurermAutomationVariableIntTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableInt.property.automationAccountName">automationAccountName</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableInt.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableInt.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -703,7 +703,7 @@ public java.lang.String getResourceGroupNameInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableIntTimeouts">DataAzurermAutomationVariableIntTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableIntTimeouts">DataAzurermAutomationVariableIntTimeouts</a>
 
 ---
 
@@ -1201,7 +1201,7 @@ public void resetRead()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableIntTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableIntTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableIntTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableIntTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableIntTimeouts">DataAzurermAutomationVariableIntTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableIntTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableIntTimeouts">DataAzurermAutomationVariableIntTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1255,7 +1255,7 @@ public java.lang.String getRead();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableIntTimeouts">DataAzurermAutomationVariableIntTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermAutomationVariableInt.DataAzurermAutomationVariableIntTimeouts">DataAzurermAutomationVariableIntTimeouts</a>
 
 ---
 

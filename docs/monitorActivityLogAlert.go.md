@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlert.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 monitoractivitylogalert.NewMonitorActivityLogAlert(scope Construct, id *string, config MonitorActivityLogAlertConfig) MonitorActivityLogAlert
 ```
@@ -351,7 +351,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlert.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 monitoractivitylogalert.MonitorActivityLogAlert_IsConstruct(x interface{}) *bool
 ```
@@ -383,7 +383,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlert.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 monitoractivitylogalert.MonitorActivityLogAlert_IsTerraformElement(x interface{}) *bool
 ```
@@ -397,7 +397,7 @@ monitoractivitylogalert.MonitorActivityLogAlert_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlert.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 monitoractivitylogalert.MonitorActivityLogAlert_IsTerraformResource(x interface{}) *bool
 ```
@@ -816,7 +816,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlertAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 &monitoractivitylogalert.MonitorActivityLogAlertAction {
 	ActionGroupId: *string,
@@ -862,7 +862,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlertConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 &monitoractivitylogalert.MonitorActivityLogAlertConfig {
 	Connection: interface{},
@@ -872,7 +872,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylog
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Criteria: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.monitorActivityLogAlert.MonitorActivityLogAlertCriteria,
+	Criteria: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActivityLogAlert.MonitorActivityLogAlertCriteria,
 	Name: *string,
 	ResourceGroupName: *string,
 	Scopes: *[]*string,
@@ -881,7 +881,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylog
 	Enabled: interface{},
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.monitorActivityLogAlert.MonitorActivityLogAlertTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActivityLogAlert.MonitorActivityLogAlertTimeouts,
 }
 ```
 
@@ -1113,7 +1113,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlertCriteria.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 &monitoractivitylogalert.MonitorActivityLogAlertCriteria {
 	Category: *string,
@@ -1126,14 +1126,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylog
 	RecommendationType: *string,
 	ResourceGroup: *string,
 	ResourceGroups: *[]*string,
-	ResourceHealth: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.monitorActivityLogAlert.MonitorActivityLogAlertCriteriaResourceHealth,
+	ResourceHealth: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActivityLogAlert.MonitorActivityLogAlertCriteriaResourceHealth,
 	ResourceId: *string,
 	ResourceIds: *[]*string,
 	ResourceProvider: *string,
 	ResourceProviders: *[]*string,
 	ResourceType: *string,
 	ResourceTypes: *[]*string,
-	ServiceHealth: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.monitorActivityLogAlert.MonitorActivityLogAlertCriteriaServiceHealth,
+	ServiceHealth: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActivityLogAlert.MonitorActivityLogAlertCriteriaServiceHealth,
 	Status: *string,
 	Statuses: *[]*string,
 	SubStatus: *string,
@@ -1443,7 +1443,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlertCriteriaResourceHealth.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 &monitoractivitylogalert.MonitorActivityLogAlertCriteriaResourceHealth {
 	Current: *[]*string,
@@ -1503,7 +1503,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlertCriteriaServiceHealth.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 &monitoractivitylogalert.MonitorActivityLogAlertCriteriaServiceHealth {
 	Events: *[]*string,
@@ -1563,7 +1563,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlertTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 &monitoractivitylogalert.MonitorActivityLogAlertTimeouts {
 	Create: *string,
@@ -1639,7 +1639,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlertActionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 monitoractivitylogalert.NewMonitorActivityLogAlertActionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitorActivityLogAlertActionList
 ```
@@ -1782,7 +1782,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlertActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 monitoractivitylogalert.NewMonitorActivityLogAlertActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitorActivityLogAlertActionOutputReference
 ```
@@ -2100,7 +2100,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlertCriteriaOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 monitoractivitylogalert.NewMonitorActivityLogAlertCriteriaOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActivityLogAlertCriteriaOutputReference
 ```
@@ -3006,7 +3006,7 @@ func InternalValue() MonitorActivityLogAlertCriteria
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlertCriteriaResourceHealthOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 monitoractivitylogalert.NewMonitorActivityLogAlertCriteriaResourceHealthOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActivityLogAlertCriteriaResourceHealthOutputReference
 ```
@@ -3342,7 +3342,7 @@ func InternalValue() MonitorActivityLogAlertCriteriaResourceHealth
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlertCriteriaServiceHealthOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 monitoractivitylogalert.NewMonitorActivityLogAlertCriteriaServiceHealthOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActivityLogAlertCriteriaServiceHealthOutputReference
 ```
@@ -3678,7 +3678,7 @@ func InternalValue() MonitorActivityLogAlertCriteriaServiceHealth
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActivityLogAlert.MonitorActivityLogAlertTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/monitoractivitylogalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractivitylogalert"
 
 monitoractivitylogalert.NewMonitorActivityLogAlertTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActivityLogAlertTimeoutsOutputReference
 ```

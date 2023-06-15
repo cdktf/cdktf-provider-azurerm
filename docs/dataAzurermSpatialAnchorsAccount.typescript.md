@@ -378,7 +378,7 @@ dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.isTerraformDat
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeouts">DataAzurermSpatialAnchorsAccountTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeouts">DataAzurermSpatialAnchorsAccountTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
@@ -590,10 +590,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccount.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermSpatialAnchorsAccountTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermSpatialAnchorsAccountTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeouts">DataAzurermSpatialAnchorsAccountTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeouts">DataAzurermSpatialAnchorsAccountTimeouts</a>
 
 ---
 
@@ -1049,7 +1049,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeouts">DataAzurermSpatialAnchorsAccountTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeouts">DataAzurermSpatialAnchorsAccountTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1100,10 +1100,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermSpatialAnchorsAccountTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermSpatialAnchorsAccountTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeouts">DataAzurermSpatialAnchorsAccountTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermSpatialAnchorsAccount.DataAzurermSpatialAnchorsAccountTimeouts">DataAzurermSpatialAnchorsAccountTimeouts</a>
 
 ---
 

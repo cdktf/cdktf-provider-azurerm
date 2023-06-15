@@ -521,7 +521,7 @@ dataAzurermApiManagementGroup.DataAzurermApiManagementGroup.is_terraform_data_so
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroup.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroup.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroup.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroup.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroupTimeouts">DataAzurermApiManagementGroupTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroup.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroupTimeouts">DataAzurermApiManagementGroupTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroup.property.apiManagementName">api_management_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroup.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroup.property.name">name</a></code> | <code>str</code> | *No description.* |
@@ -744,10 +744,10 @@ resource_group_name_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroup.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[DataAzurermApiManagementGroupTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, DataAzurermApiManagementGroupTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroupTimeouts">DataAzurermApiManagementGroupTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroupTimeouts">DataAzurermApiManagementGroupTimeouts</a>]
 
 ---
 
@@ -1266,7 +1266,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroupTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroupTimeoutsOutputReference.property.readInput">read_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroupTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroupTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroupTimeouts">DataAzurermApiManagementGroupTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroupTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroupTimeouts">DataAzurermApiManagementGroupTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1317,10 +1317,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroupTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DataAzurermApiManagementGroupTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, DataAzurermApiManagementGroupTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroupTimeouts">DataAzurermApiManagementGroupTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermApiManagementGroup.DataAzurermApiManagementGroupTimeouts">DataAzurermApiManagementGroupTimeouts</a>]
 
 ---
 

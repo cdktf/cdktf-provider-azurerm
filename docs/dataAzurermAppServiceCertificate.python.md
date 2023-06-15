@@ -532,7 +532,7 @@ dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificate.is_terraform_d
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificate.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificate.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificate.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificate.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeouts">DataAzurermAppServiceCertificateTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificate.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeouts">DataAzurermAppServiceCertificateTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificate.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificate.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificate.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | *No description.* |
@@ -795,10 +795,10 @@ tags_input: typing.Mapping[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificate.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[DataAzurermAppServiceCertificateTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, DataAzurermAppServiceCertificateTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeouts">DataAzurermAppServiceCertificateTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeouts">DataAzurermAppServiceCertificateTimeouts</a>]
 
 ---
 
@@ -1317,7 +1317,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeoutsOutputReference.property.readInput">read_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeouts">DataAzurermAppServiceCertificateTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeouts">DataAzurermAppServiceCertificateTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1368,10 +1368,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DataAzurermAppServiceCertificateTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, DataAzurermAppServiceCertificateTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeouts">DataAzurermAppServiceCertificateTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermAppServiceCertificate.DataAzurermAppServiceCertificateTimeouts">DataAzurermAppServiceCertificateTimeouts</a>]
 
 ---
 

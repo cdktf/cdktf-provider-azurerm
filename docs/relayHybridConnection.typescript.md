@@ -392,7 +392,7 @@ relayHybridConnection.RelayHybridConnection.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnection.property.relayNamespaceNameInput">relayNamespaceNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnection.property.requiresClientAuthorizationInput">requiresClientAuthorizationInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnection.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnection.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnectionTimeouts">RelayHybridConnectionTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnection.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnectionTimeouts">RelayHybridConnectionTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnection.property.userMetadataInput">userMetadataInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnection.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnection.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -608,10 +608,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnection.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: RelayHybridConnectionTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | RelayHybridConnectionTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnectionTimeouts">RelayHybridConnectionTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnectionTimeouts">RelayHybridConnectionTimeouts</a>
 
 ---
 
@@ -1212,7 +1212,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnectionTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnectionTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnectionTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnectionTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnectionTimeouts">RelayHybridConnectionTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnectionTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnectionTimeouts">RelayHybridConnectionTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1323,10 +1323,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnectionTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: RelayHybridConnectionTimeouts | IResolvable;
+public readonly internalValue: IResolvable | RelayHybridConnectionTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnectionTimeouts">RelayHybridConnectionTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.relayHybridConnection.RelayHybridConnectionTimeouts">RelayHybridConnectionTimeouts</a>
 
 ---
 

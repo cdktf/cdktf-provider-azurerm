@@ -401,7 +401,7 @@ apiManagementGroup.ApiManagementGroup.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroup.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroup.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroup.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroup.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts">ApiManagementGroupTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroup.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts">ApiManagementGroupTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroup.property.typeInput">typeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroup.property.apiManagementName">apiManagementName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroup.property.description">description</a></code> | <code>string</code> | *No description.* |
@@ -639,10 +639,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroup.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: ApiManagementGroupTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | ApiManagementGroupTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts">ApiManagementGroupTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts">ApiManagementGroupTimeouts</a>
 
 ---
 
@@ -1289,7 +1289,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts">ApiManagementGroupTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts">ApiManagementGroupTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1400,10 +1400,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ApiManagementGroupTimeouts | IResolvable;
+public readonly internalValue: IResolvable | ApiManagementGroupTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts">ApiManagementGroupTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts">ApiManagementGroupTimeouts</a>
 
 ---
 

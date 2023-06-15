@@ -455,7 +455,7 @@ DataAzurermClientConfig.isTerraformDataSource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.tenantId">tenantId</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeoutsOutputReference">DataAzurermClientConfigTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfig.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 
 ---
@@ -648,7 +648,7 @@ public java.lang.String getIdInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a>
 
 ---
 
@@ -1074,7 +1074,7 @@ public void resetRead()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1128,7 +1128,7 @@ public java.lang.String getRead();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermClientConfig.DataAzurermClientConfigTimeouts">DataAzurermClientConfigTimeouts</a>
 
 ---
 

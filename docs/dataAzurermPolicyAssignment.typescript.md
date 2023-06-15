@@ -384,7 +384,7 @@ dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.isTerraformDataSource(x:
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.scopeIdInput">scopeIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.scopeId">scopeId</a></code> | <code>string</code> | *No description.* |
@@ -656,10 +656,10 @@ public readonly scopeIdInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermPolicyAssignmentTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermPolicyAssignmentTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a>
 
 ---
 
@@ -2001,7 +2001,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -2052,10 +2052,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermPolicyAssignmentTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermPolicyAssignmentTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts">DataAzurermPolicyAssignmentTimeouts</a>
 
 ---
 

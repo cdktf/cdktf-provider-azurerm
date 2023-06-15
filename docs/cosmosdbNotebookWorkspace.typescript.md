@@ -378,7 +378,7 @@ cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.accountName">accountName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -591,10 +591,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspace.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: CosmosdbNotebookWorkspaceTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | CosmosdbNotebookWorkspaceTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a>
 
 ---
 
@@ -1117,7 +1117,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1208,10 +1208,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: CosmosdbNotebookWorkspaceTimeouts | IResolvable;
+public readonly internalValue: IResolvable | CosmosdbNotebookWorkspaceTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cosmosdbNotebookWorkspace.CosmosdbNotebookWorkspaceTimeouts">CosmosdbNotebookWorkspaceTimeouts</a>
 
 ---
 

@@ -518,7 +518,7 @@ dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSet.is_terraform_data_
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSet.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSet.property.profileNameInput">profile_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSet.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSet.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeouts">DataAzurermCdnFrontdoorRuleSetTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSet.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeouts">DataAzurermCdnFrontdoorRuleSetTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSet.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSet.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSet.property.profileName">profile_name</a></code> | <code>str</code> | *No description.* |
@@ -711,10 +711,10 @@ resource_group_name_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSet.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[DataAzurermCdnFrontdoorRuleSetTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, DataAzurermCdnFrontdoorRuleSetTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeouts">DataAzurermCdnFrontdoorRuleSetTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeouts">DataAzurermCdnFrontdoorRuleSetTimeouts</a>]
 
 ---
 
@@ -1233,7 +1233,7 @@ def reset_read() -> None
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeoutsOutputReference.property.readInput">read_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeouts">DataAzurermCdnFrontdoorRuleSetTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeouts">DataAzurermCdnFrontdoorRuleSetTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1284,10 +1284,10 @@ read: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DataAzurermCdnFrontdoorRuleSetTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, DataAzurermCdnFrontdoorRuleSetTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeouts">DataAzurermCdnFrontdoorRuleSetTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeouts">DataAzurermCdnFrontdoorRuleSetTimeouts</a>]
 
 ---
 

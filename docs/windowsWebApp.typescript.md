@@ -664,7 +664,7 @@ windowsWebApp.WindowsWebApp.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.stickySettingsInput">stickySettingsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStickySettings">WindowsWebAppStickySettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.storageAccountInput">storageAccountInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount">WindowsWebAppStorageAccount</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts">WindowsWebAppTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts">WindowsWebAppTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.virtualNetworkSubnetIdInput">virtualNetworkSubnetIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.zipDeployFileInput">zipDeployFileInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.appSettings">appSettings</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
@@ -1251,10 +1251,10 @@ public readonly tagsInput: {[ key: string ]: string};
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebApp.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: WindowsWebAppTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | WindowsWebAppTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts">WindowsWebAppTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts">WindowsWebAppTimeouts</a>
 
 ---
 
@@ -10707,7 +10707,7 @@ public resetScopes(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimType">nameClaimType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpoint">openidConfigurationEndpoint</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppAuthSettingsV2CustomOidcV2OutputReference.property.scopes">scopes</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppAuthSettingsV2CustomOidcV2">WindowsWebAppAuthSettingsV2CustomOidcV2</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppAuthSettingsV2CustomOidcV2">WindowsWebAppAuthSettingsV2CustomOidcV2</a></code> | *No description.* |
 
 ---
 
@@ -10898,10 +10898,10 @@ public readonly scopes: string[];
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppAuthSettingsV2CustomOidcV2OutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsWebAppAuthSettingsV2CustomOidcV2 | IResolvable;
+public readonly internalValue: IResolvable | WindowsWebAppAuthSettingsV2CustomOidcV2;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppAuthSettingsV2CustomOidcV2">WindowsWebAppAuthSettingsV2CustomOidcV2</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppAuthSettingsV2CustomOidcV2">WindowsWebAppAuthSettingsV2CustomOidcV2</a>
 
 ---
 
@@ -15277,7 +15277,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConnectionStringOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConnectionStringOutputReference.property.type">type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConnectionStringOutputReference.property.value">value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConnectionStringOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConnectionString">WindowsWebAppConnectionString</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConnectionStringOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConnectionString">WindowsWebAppConnectionString</a></code> | *No description.* |
 
 ---
 
@@ -15368,10 +15368,10 @@ public readonly value: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConnectionStringOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsWebAppConnectionString | IResolvable;
+public readonly internalValue: IResolvable | WindowsWebAppConnectionString;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConnectionString">WindowsWebAppConnectionString</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppConnectionString">WindowsWebAppConnectionString</a>
 
 ---
 
@@ -20733,7 +20733,7 @@ public resetWin32Status(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.statusCodeRange">statusCodeRange</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.subStatus">subStatus</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.win32Status">win32Status</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode">WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode">WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode</a></code> | *No description.* |
 
 ---
 
@@ -20884,10 +20884,10 @@ public readonly win32Status: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode | IResolvable;
+public readonly internalValue: IResolvable | WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode">WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode">WindowsWebAppSiteConfigAutoHealSettingTriggerStatusCode</a>
 
 ---
 
@@ -21606,7 +21606,7 @@ public resetXForwardedHost(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeadersOutputReference.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedFor">xForwardedFor</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedHost">xForwardedHost</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders">WindowsWebAppSiteConfigIpRestrictionHeaders</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders">WindowsWebAppSiteConfigIpRestrictionHeaders</a></code> | *No description.* |
 
 ---
 
@@ -21717,10 +21717,10 @@ public readonly xForwardedHost: string[];
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeadersOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsWebAppSiteConfigIpRestrictionHeaders | IResolvable;
+public readonly internalValue: IResolvable | WindowsWebAppSiteConfigIpRestrictionHeaders;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders">WindowsWebAppSiteConfigIpRestrictionHeaders</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionHeaders">WindowsWebAppSiteConfigIpRestrictionHeaders</a>
 
 ---
 
@@ -22172,7 +22172,7 @@ public resetVirtualNetworkSubnetId(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionOutputReference.property.priority">priority</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionOutputReference.property.serviceTag">serviceTag</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionOutputReference.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction">WindowsWebAppSiteConfigIpRestriction</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction">WindowsWebAppSiteConfigIpRestriction</a></code> | *No description.* |
 
 ---
 
@@ -22343,10 +22343,10 @@ public readonly virtualNetworkSubnetId: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestrictionOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsWebAppSiteConfigIpRestriction | IResolvable;
+public readonly internalValue: IResolvable | WindowsWebAppSiteConfigIpRestriction;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction">WindowsWebAppSiteConfigIpRestriction</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigIpRestriction">WindowsWebAppSiteConfigIpRestriction</a>
 
 ---
 
@@ -23999,7 +23999,7 @@ public resetXForwardedHost(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeadersOutputReference.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedFor">xForwardedFor</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedHost">xForwardedHost</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders">WindowsWebAppSiteConfigScmIpRestrictionHeaders</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders">WindowsWebAppSiteConfigScmIpRestrictionHeaders</a></code> | *No description.* |
 
 ---
 
@@ -24110,10 +24110,10 @@ public readonly xForwardedHost: string[];
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsWebAppSiteConfigScmIpRestrictionHeaders | IResolvable;
+public readonly internalValue: IResolvable | WindowsWebAppSiteConfigScmIpRestrictionHeaders;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders">WindowsWebAppSiteConfigScmIpRestrictionHeaders</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionHeaders">WindowsWebAppSiteConfigScmIpRestrictionHeaders</a>
 
 ---
 
@@ -24565,7 +24565,7 @@ public resetVirtualNetworkSubnetId(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionOutputReference.property.priority">priority</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionOutputReference.property.serviceTag">serviceTag</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionOutputReference.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction">WindowsWebAppSiteConfigScmIpRestriction</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction">WindowsWebAppSiteConfigScmIpRestriction</a></code> | *No description.* |
 
 ---
 
@@ -24736,10 +24736,10 @@ public readonly virtualNetworkSubnetId: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestrictionOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsWebAppSiteConfigScmIpRestriction | IResolvable;
+public readonly internalValue: IResolvable | WindowsWebAppSiteConfigScmIpRestriction;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction">WindowsWebAppSiteConfigScmIpRestriction</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigScmIpRestriction">WindowsWebAppSiteConfigScmIpRestriction</a>
 
 ---
 
@@ -25143,7 +25143,7 @@ public resetVirtualDirectory(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationOutputReference.property.physicalPath">physicalPath</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationOutputReference.property.preload">preload</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationOutputReference.property.virtualPath">virtualPath</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplication">WindowsWebAppSiteConfigVirtualApplication</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplication">WindowsWebAppSiteConfigVirtualApplication</a></code> | *No description.* |
 
 ---
 
@@ -25254,10 +25254,10 @@ public readonly virtualPath: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsWebAppSiteConfigVirtualApplication | IResolvable;
+public readonly internalValue: IResolvable | WindowsWebAppSiteConfigVirtualApplication;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplication">WindowsWebAppSiteConfigVirtualApplication</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplication">WindowsWebAppSiteConfigVirtualApplication</a>
 
 ---
 
@@ -25651,7 +25651,7 @@ public resetVirtualPath(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectoryOutputReference.property.virtualPathInput">virtualPathInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectoryOutputReference.property.physicalPath">physicalPath</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectoryOutputReference.property.virtualPath">virtualPath</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectoryOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory">WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectoryOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory">WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory</a></code> | *No description.* |
 
 ---
 
@@ -25722,10 +25722,10 @@ public readonly virtualPath: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectoryOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory | IResolvable;
+public readonly internalValue: IResolvable | WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory">WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory">WindowsWebAppSiteConfigVirtualApplicationVirtualDirectory</a>
 
 ---
 
@@ -26848,7 +26848,7 @@ public resetMountPath(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccountOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccountOutputReference.property.shareName">shareName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccountOutputReference.property.type">type</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccountOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount">WindowsWebAppStorageAccount</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccountOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount">WindowsWebAppStorageAccount</a></code> | *No description.* |
 
 ---
 
@@ -26999,10 +26999,10 @@ public readonly type: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccountOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsWebAppStorageAccount | IResolvable;
+public readonly internalValue: IResolvable | WindowsWebAppStorageAccount;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount">WindowsWebAppStorageAccount</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppStorageAccount">WindowsWebAppStorageAccount</a>
 
 ---
 
@@ -27253,7 +27253,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts">WindowsWebAppTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts">WindowsWebAppTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -27364,10 +27364,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: WindowsWebAppTimeouts | IResolvable;
+public readonly internalValue: IResolvable | WindowsWebAppTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts">WindowsWebAppTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.windowsWebApp.WindowsWebAppTimeouts">WindowsWebAppTimeouts</a>
 
 ---
 

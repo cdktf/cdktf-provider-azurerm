@@ -535,7 +535,7 @@ mysqlServerKey.MysqlServerKey.is_terraform_resource(
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.keyVaultKeyIdInput">key_vault_key_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.serverIdInput">server_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.keyVaultKeyId">key_vault_key_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.serverId">server_id</a></code> | <code>str</code> | *No description.* |
@@ -727,10 +727,10 @@ server_id_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[MysqlServerKeyTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, MysqlServerKeyTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a>]
 
 ---
 
@@ -1294,7 +1294,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1405,10 +1405,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[MysqlServerKeyTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, MysqlServerKeyTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a>]
 
 ---
 

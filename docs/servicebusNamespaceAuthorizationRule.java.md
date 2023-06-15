@@ -538,7 +538,7 @@ ServicebusNamespaceAuthorizationRule.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.namespaceIdInput">namespaceIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.sendInput">sendInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.listen">listen</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRule.property.manage">manage</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
@@ -826,7 +826,7 @@ public java.lang.Object getSendInput();
 public java.lang.Object getTimeoutsInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a>
 
 ---
 
@@ -1444,7 +1444,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1558,7 +1558,7 @@ public java.lang.String getUpdate();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.servicebusNamespaceAuthorizationRule.ServicebusNamespaceAuthorizationRuleTimeouts">ServicebusNamespaceAuthorizationRuleTimeouts</a>
 
 ---
 

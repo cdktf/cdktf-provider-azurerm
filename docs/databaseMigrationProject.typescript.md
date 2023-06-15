@@ -388,7 +388,7 @@ databaseMigrationProject.DatabaseMigrationProject.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProject.property.sourcePlatformInput">sourcePlatformInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProject.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProject.property.targetPlatformInput">targetPlatformInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProject.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeouts">DatabaseMigrationProjectTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProject.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeouts">DatabaseMigrationProjectTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProject.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProject.property.location">location</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProject.property.name">name</a></code> | <code>string</code> | *No description.* |
@@ -635,10 +635,10 @@ public readonly targetPlatformInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProject.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DatabaseMigrationProjectTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DatabaseMigrationProjectTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeouts">DatabaseMigrationProjectTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeouts">DatabaseMigrationProjectTimeouts</a>
 
 ---
 
@@ -1275,7 +1275,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeouts">DatabaseMigrationProjectTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeouts">DatabaseMigrationProjectTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1386,10 +1386,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DatabaseMigrationProjectTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DatabaseMigrationProjectTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeouts">DatabaseMigrationProjectTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.databaseMigrationProject.DatabaseMigrationProjectTimeouts">DatabaseMigrationProjectTimeouts</a>
 
 ---
 

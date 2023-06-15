@@ -379,7 +379,7 @@ dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.isTerraformDataS
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
@@ -601,10 +601,10 @@ public readonly resourceGroupNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentity.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataAzurermUserAssignedIdentityTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataAzurermUserAssignedIdentityTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a>
 
 ---
 
@@ -1060,7 +1060,7 @@ public resetRead(): void
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeoutsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1111,10 +1111,10 @@ public readonly read: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataAzurermUserAssignedIdentityTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataAzurermUserAssignedIdentityTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermUserAssignedIdentity.DataAzurermUserAssignedIdentityTimeouts">DataAzurermUserAssignedIdentityTimeouts</a>
 
 ---
 
