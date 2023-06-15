@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.videoAnalyzer.VideoAnalyzer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/videoanalyzer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/videoanalyzer"
 
 videoanalyzer.NewVideoAnalyzer(scope Construct, id *string, config VideoAnalyzerConfig) VideoAnalyzer
 ```
@@ -330,7 +330,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.videoAnalyzer.VideoAnalyzer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/videoanalyzer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/videoanalyzer"
 
 videoanalyzer.VideoAnalyzer_IsConstruct(x interface{}) *bool
 ```
@@ -362,7 +362,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.videoAnalyzer.VideoAnalyzer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/videoanalyzer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/videoanalyzer"
 
 videoanalyzer.VideoAnalyzer_IsTerraformElement(x interface{}) *bool
 ```
@@ -376,7 +376,7 @@ videoanalyzer.VideoAnalyzer_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.videoAnalyzer.VideoAnalyzer.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/videoanalyzer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/videoanalyzer"
 
 videoanalyzer.VideoAnalyzer_IsTerraformResource(x interface{}) *bool
 ```
@@ -751,7 +751,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.videoAnalyzer.VideoAnalyzerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/videoanalyzer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/videoanalyzer"
 
 &videoanalyzer.VideoAnalyzerConfig {
 	Connection: interface{},
@@ -761,14 +761,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/videoanalyzer"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.videoAnalyzer.VideoAnalyzerIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.videoAnalyzer.VideoAnalyzerIdentity,
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	StorageAccount: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.videoAnalyzer.VideoAnalyzerStorageAccount,
+	StorageAccount: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.videoAnalyzer.VideoAnalyzerStorageAccount,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.videoAnalyzer.VideoAnalyzerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.videoAnalyzer.VideoAnalyzerTimeouts,
 }
 ```
 
@@ -974,7 +974,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.videoAnalyzer.VideoAnalyzerIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/videoanalyzer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/videoanalyzer"
 
 &videoanalyzer.VideoAnalyzerIdentity {
 	IdentityIds: *[]*string,
@@ -1020,7 +1020,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.videoAnalyzer.VideoAnalyzerStorageAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/videoanalyzer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/videoanalyzer"
 
 &videoanalyzer.VideoAnalyzerStorageAccount {
 	Id: *string,
@@ -1069,7 +1069,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.videoAnalyzer.VideoAnalyzerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/videoanalyzer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/videoanalyzer"
 
 &videoanalyzer.VideoAnalyzerTimeouts {
 	Create: *string,
@@ -1145,7 +1145,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.videoAnalyzer.VideoAnalyzerIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/videoanalyzer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/videoanalyzer"
 
 videoanalyzer.NewVideoAnalyzerIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VideoAnalyzerIdentityOutputReference
 ```
@@ -1438,7 +1438,7 @@ func InternalValue() VideoAnalyzerIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.videoAnalyzer.VideoAnalyzerStorageAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/videoanalyzer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/videoanalyzer"
 
 videoanalyzer.NewVideoAnalyzerStorageAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VideoAnalyzerStorageAccountOutputReference
 ```
@@ -1731,7 +1731,7 @@ func InternalValue() VideoAnalyzerStorageAccount
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.videoAnalyzer.VideoAnalyzerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/videoanalyzer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/videoanalyzer"
 
 videoanalyzer.NewVideoAnalyzerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VideoAnalyzerTimeoutsOutputReference
 ```

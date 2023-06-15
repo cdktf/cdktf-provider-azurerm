@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelDataConnectorDynamics365.SentinelDataConnectorDynamics365.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentineldataconnectordynamics365"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/sentineldataconnectordynamics365"
 
 sentineldataconnectordynamics365.NewSentinelDataConnectorDynamics365(scope Construct, id *string, config SentinelDataConnectorDynamics365Config) SentinelDataConnectorDynamics365
 ```
@@ -304,7 +304,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sentinelDataConnectorDynamics365.SentinelDataConnectorDynamics365.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentineldataconnectordynamics365"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/sentineldataconnectordynamics365"
 
 sentineldataconnectordynamics365.SentinelDataConnectorDynamics365_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sentinelDataConnectorDynamics365.SentinelDataConnectorDynamics365.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentineldataconnectordynamics365"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/sentineldataconnectordynamics365"
 
 sentineldataconnectordynamics365.SentinelDataConnectorDynamics365_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ sentineldataconnectordynamics365.SentinelDataConnectorDynamics365_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sentinelDataConnectorDynamics365.SentinelDataConnectorDynamics365.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentineldataconnectordynamics365"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/sentineldataconnectordynamics365"
 
 sentineldataconnectordynamics365.SentinelDataConnectorDynamics365_IsTerraformResource(x interface{}) *bool
 ```
@@ -659,7 +659,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelDataConnectorDynamics365.SentinelDataConnectorDynamics365Config.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentineldataconnectordynamics365"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/sentineldataconnectordynamics365"
 
 &sentineldataconnectordynamics365.SentinelDataConnectorDynamics365Config {
 	Connection: interface{},
@@ -673,7 +673,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentineldataconnec
 	Name: *string,
 	Id: *string,
 	TenantId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7.sentinelDataConnectorDynamics365.SentinelDataConnectorDynamics365Timeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8.sentinelDataConnectorDynamics365.SentinelDataConnectorDynamics365Timeouts,
 }
 ```
 
@@ -836,7 +836,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelDataConnectorDynamics365.SentinelDataConnectorDynamics365Timeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentineldataconnectordynamics365"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/sentineldataconnectordynamics365"
 
 &sentineldataconnectordynamics365.SentinelDataConnectorDynamics365Timeouts {
 	Create: *string,
@@ -898,7 +898,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelDataConnectorDynamics365.SentinelDataConnectorDynamics365TimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v7/sentineldataconnectordynamics365"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v8/sentineldataconnectordynamics365"
 
 sentineldataconnectordynamics365.NewSentinelDataConnectorDynamics365TimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelDataConnectorDynamics365TimeoutsOutputReference
 ```
