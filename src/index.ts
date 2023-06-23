@@ -642,6 +642,7 @@ export * as networkSecurityGroup from './network-security-group';
 export * as networkSecurityRule from './network-security-rule';
 export * as networkWatcher from './network-watcher';
 export * as networkWatcherFlowLog from './network-watcher-flow-log';
+export * as newRelicMonitor from './new-relic-monitor';
 export * as nginxCertificate from './nginx-certificate';
 export * as nginxConfiguration from './nginx-configuration';
 export * as nginxDeployment from './nginx-deployment';

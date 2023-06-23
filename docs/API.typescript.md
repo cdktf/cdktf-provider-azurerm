@@ -956,6 +956,7 @@ The following submodules are available:
 - [networkSecurityRule](./networkSecurityRule.typescript.md)
 - [networkWatcher](./networkWatcher.typescript.md)
 - [networkWatcherFlowLog](./networkWatcherFlowLog.typescript.md)
+- [newRelicMonitor](./newRelicMonitor.typescript.md)
 - [nginxCertificate](./nginxCertificate.typescript.md)
 - [nginxConfiguration](./nginxConfiguration.typescript.md)
 - [nginxDeployment](./nginxDeployment.typescript.md)

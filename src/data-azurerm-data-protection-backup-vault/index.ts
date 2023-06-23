@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/data_protection_backup_vault
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/data_protection_backup_vault
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDataProtectionBackupVaultConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/data_protection_backup_vault#id DataAzurermDataProtectionBackupVault#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/data_protection_backup_vault#id DataAzurermDataProtectionBackupVault#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/data_protection_backup_vault#name DataAzurermDataProtectionBackupVault#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/data_protection_backup_vault#name DataAzurermDataProtectionBackupVault#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/data_protection_backup_vault#resource_group_name DataAzurermDataProtectionBackupVault#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/data_protection_backup_vault#resource_group_name DataAzurermDataProtectionBackupVault#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/data_protection_backup_vault#timeouts DataAzurermDataProtectionBackupVault#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/data_protection_backup_vault#timeouts DataAzurermDataProtectionBackupVault#timeouts}
   */
   readonly timeouts?: DataAzurermDataProtectionBackupVaultTimeouts;
 }
@@ -110,7 +110,7 @@ export class DataAzurermDataProtectionBackupVaultIdentityList extends cdktf.Comp
 }
 export interface DataAzurermDataProtectionBackupVaultTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/data_protection_backup_vault#read DataAzurermDataProtectionBackupVault#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/data_protection_backup_vault#read DataAzurermDataProtectionBackupVault#read}
   */
   readonly read?: string;
 }
@@ -185,7 +185,7 @@ export class DataAzurermDataProtectionBackupVaultTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/data_protection_backup_vault azurerm_data_protection_backup_vault}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/data_protection_backup_vault azurerm_data_protection_backup_vault}
 */
 export class DataAzurermDataProtectionBackupVault extends cdktf.TerraformDataSource {
 
@@ -199,7 +199,7 @@ export class DataAzurermDataProtectionBackupVault extends cdktf.TerraformDataSou
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/data_protection_backup_vault azurerm_data_protection_backup_vault} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/data_protection_backup_vault azurerm_data_protection_backup_vault} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -210,7 +210,7 @@ export class DataAzurermDataProtectionBackupVault extends cdktf.TerraformDataSou
       terraformResourceType: 'azurerm_data_protection_backup_vault',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.61.0',
+        providerVersion: '3.62.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

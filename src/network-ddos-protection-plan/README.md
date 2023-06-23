@@ -1,3 +1,3 @@
 # `azurerm_network_ddos_protection_plan`
 
-Refer to the Terraform Registory for docs: [`azurerm_network_ddos_protection_plan`](https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/network_ddos_protection_plan).
+Refer to the Terraform Registory for docs: [`azurerm_network_ddos_protection_plan`](https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/network_ddos_protection_plan).

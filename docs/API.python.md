@@ -956,6 +956,7 @@ The following submodules are available:
 - [networkSecurityRule](./networkSecurityRule.python.md)
 - [networkWatcher](./networkWatcher.python.md)
 - [networkWatcherFlowLog](./networkWatcherFlowLog.python.md)
+- [newRelicMonitor](./newRelicMonitor.python.md)
 - [nginxCertificate](./nginxCertificate.python.md)
 - [nginxConfiguration](./nginxConfiguration.python.md)
 - [nginxDeployment](./nginxDeployment.python.md)

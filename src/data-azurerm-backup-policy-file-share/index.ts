@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/backup_policy_file_share
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/backup_policy_file_share
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,34 +13,34 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermBackupPolicyFileShareConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/backup_policy_file_share#id DataAzurermBackupPolicyFileShare#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/backup_policy_file_share#id DataAzurermBackupPolicyFileShare#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/backup_policy_file_share#name DataAzurermBackupPolicyFileShare#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/backup_policy_file_share#name DataAzurermBackupPolicyFileShare#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/backup_policy_file_share#recovery_vault_name DataAzurermBackupPolicyFileShare#recovery_vault_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/backup_policy_file_share#recovery_vault_name DataAzurermBackupPolicyFileShare#recovery_vault_name}
   */
   readonly recoveryVaultName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/backup_policy_file_share#resource_group_name DataAzurermBackupPolicyFileShare#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/backup_policy_file_share#resource_group_name DataAzurermBackupPolicyFileShare#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/backup_policy_file_share#timeouts DataAzurermBackupPolicyFileShare#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/backup_policy_file_share#timeouts DataAzurermBackupPolicyFileShare#timeouts}
   */
   readonly timeouts?: DataAzurermBackupPolicyFileShareTimeouts;
 }
 export interface DataAzurermBackupPolicyFileShareTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/backup_policy_file_share#read DataAzurermBackupPolicyFileShare#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/backup_policy_file_share#read DataAzurermBackupPolicyFileShare#read}
   */
   readonly read?: string;
 }
@@ -115,7 +115,7 @@ export class DataAzurermBackupPolicyFileShareTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/backup_policy_file_share azurerm_backup_policy_file_share}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/backup_policy_file_share azurerm_backup_policy_file_share}
 */
 export class DataAzurermBackupPolicyFileShare extends cdktf.TerraformDataSource {
 
@@ -129,7 +129,7 @@ export class DataAzurermBackupPolicyFileShare extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/data-sources/backup_policy_file_share azurerm_backup_policy_file_share} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/data-sources/backup_policy_file_share azurerm_backup_policy_file_share} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -140,7 +140,7 @@ export class DataAzurermBackupPolicyFileShare extends cdktf.TerraformDataSource 
       terraformResourceType: 'azurerm_backup_policy_file_share',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.61.0',
+        providerVersion: '3.62.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -956,6 +956,7 @@ The following submodules are available:
 - [networkSecurityRule](./networkSecurityRule.java.md)
 - [networkWatcher](./networkWatcher.java.md)
 - [networkWatcherFlowLog](./networkWatcherFlowLog.java.md)
+- [newRelicMonitor](./newRelicMonitor.java.md)
 - [nginxCertificate](./nginxCertificate.java.md)
 - [nginxConfiguration](./nginxConfiguration.java.md)
 - [nginxDeployment](./nginxDeployment.java.md)
