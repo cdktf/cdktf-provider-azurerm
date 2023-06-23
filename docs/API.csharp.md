@@ -956,6 +956,7 @@ The following submodules are available:
 - [networkSecurityRule](./networkSecurityRule.csharp.md)
 - [networkWatcher](./networkWatcher.csharp.md)
 - [networkWatcherFlowLog](./networkWatcherFlowLog.csharp.md)
+- [newRelicMonitor](./newRelicMonitor.csharp.md)
 - [nginxCertificate](./nginxCertificate.csharp.md)
 - [nginxConfiguration](./nginxConfiguration.csharp.md)
 - [nginxDeployment](./nginxDeployment.csharp.md)

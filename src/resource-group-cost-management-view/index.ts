@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,72 +8,72 @@ import * as cdktf from 'cdktf';
 
 export interface ResourceGroupCostManagementViewConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#accumulated ResourceGroupCostManagementView#accumulated}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#accumulated ResourceGroupCostManagementView#accumulated}
   */
   readonly accumulated: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#chart_type ResourceGroupCostManagementView#chart_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#chart_type ResourceGroupCostManagementView#chart_type}
   */
   readonly chartType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#display_name ResourceGroupCostManagementView#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#display_name ResourceGroupCostManagementView#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#id ResourceGroupCostManagementView#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#id ResourceGroupCostManagementView#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#name ResourceGroupCostManagementView#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#name ResourceGroupCostManagementView#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#report_type ResourceGroupCostManagementView#report_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#report_type ResourceGroupCostManagementView#report_type}
   */
   readonly reportType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#resource_group_id ResourceGroupCostManagementView#resource_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#resource_group_id ResourceGroupCostManagementView#resource_group_id}
   */
   readonly resourceGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#timeframe ResourceGroupCostManagementView#timeframe}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#timeframe ResourceGroupCostManagementView#timeframe}
   */
   readonly timeframe: string;
   /**
   * dataset block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#dataset ResourceGroupCostManagementView#dataset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#dataset ResourceGroupCostManagementView#dataset}
   */
   readonly dataset: ResourceGroupCostManagementViewDataset;
   /**
   * kpi block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#kpi ResourceGroupCostManagementView#kpi}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#kpi ResourceGroupCostManagementView#kpi}
   */
   readonly kpi?: ResourceGroupCostManagementViewKpi[] | cdktf.IResolvable;
   /**
   * pivot block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#pivot ResourceGroupCostManagementView#pivot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#pivot ResourceGroupCostManagementView#pivot}
   */
   readonly pivot?: ResourceGroupCostManagementViewPivot[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#timeouts ResourceGroupCostManagementView#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#timeouts ResourceGroupCostManagementView#timeouts}
   */
   readonly timeouts?: ResourceGroupCostManagementViewTimeouts;
 }
 export interface ResourceGroupCostManagementViewDatasetAggregation {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#column_name ResourceGroupCostManagementView#column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#column_name ResourceGroupCostManagementView#column_name}
   */
   readonly columnName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#name ResourceGroupCostManagementView#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#name ResourceGroupCostManagementView#name}
   */
   readonly name: string;
 }
@@ -192,11 +187,11 @@ export class ResourceGroupCostManagementViewDatasetAggregationList extends cdktf
 }
 export interface ResourceGroupCostManagementViewDatasetGrouping {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#name ResourceGroupCostManagementView#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#name ResourceGroupCostManagementView#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#type ResourceGroupCostManagementView#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#type ResourceGroupCostManagementView#type}
   */
   readonly type: string;
 }
@@ -310,11 +305,11 @@ export class ResourceGroupCostManagementViewDatasetGroupingList extends cdktf.Co
 }
 export interface ResourceGroupCostManagementViewDatasetSorting {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#direction ResourceGroupCostManagementView#direction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#direction ResourceGroupCostManagementView#direction}
   */
   readonly direction: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#name ResourceGroupCostManagementView#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#name ResourceGroupCostManagementView#name}
   */
   readonly name: string;
 }
@@ -428,25 +423,25 @@ export class ResourceGroupCostManagementViewDatasetSortingList extends cdktf.Com
 }
 export interface ResourceGroupCostManagementViewDataset {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#granularity ResourceGroupCostManagementView#granularity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#granularity ResourceGroupCostManagementView#granularity}
   */
   readonly granularity: string;
   /**
   * aggregation block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#aggregation ResourceGroupCostManagementView#aggregation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#aggregation ResourceGroupCostManagementView#aggregation}
   */
   readonly aggregation: ResourceGroupCostManagementViewDatasetAggregation[] | cdktf.IResolvable;
   /**
   * grouping block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#grouping ResourceGroupCostManagementView#grouping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#grouping ResourceGroupCostManagementView#grouping}
   */
   readonly grouping?: ResourceGroupCostManagementViewDatasetGrouping[] | cdktf.IResolvable;
   /**
   * sorting block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#sorting ResourceGroupCostManagementView#sorting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#sorting ResourceGroupCostManagementView#sorting}
   */
   readonly sorting?: ResourceGroupCostManagementViewDatasetSorting[] | cdktf.IResolvable;
 }
@@ -574,7 +569,7 @@ export class ResourceGroupCostManagementViewDatasetOutputReference extends cdktf
 }
 export interface ResourceGroupCostManagementViewKpi {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#type ResourceGroupCostManagementView#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#type ResourceGroupCostManagementView#type}
   */
   readonly type: string;
 }
@@ -668,11 +663,11 @@ export class ResourceGroupCostManagementViewKpiList extends cdktf.ComplexList {
 }
 export interface ResourceGroupCostManagementViewPivot {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#name ResourceGroupCostManagementView#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#name ResourceGroupCostManagementView#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#type ResourceGroupCostManagementView#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#type ResourceGroupCostManagementView#type}
   */
   readonly type: string;
 }
@@ -786,19 +781,19 @@ export class ResourceGroupCostManagementViewPivotList extends cdktf.ComplexList 
 }
 export interface ResourceGroupCostManagementViewTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#create ResourceGroupCostManagementView#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#create ResourceGroupCostManagementView#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#delete ResourceGroupCostManagementView#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#delete ResourceGroupCostManagementView#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#read ResourceGroupCostManagementView#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#read ResourceGroupCostManagementView#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view#update ResourceGroupCostManagementView#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view#update ResourceGroupCostManagementView#update}
   */
   readonly update?: string;
 }
@@ -942,7 +937,7 @@ export class ResourceGroupCostManagementViewTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view azurerm_resource_group_cost_management_view}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view azurerm_resource_group_cost_management_view}
 */
 export class ResourceGroupCostManagementView extends cdktf.TerraformResource {
 
@@ -956,7 +951,7 @@ export class ResourceGroupCostManagementView extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.61.0/docs/resources/resource_group_cost_management_view azurerm_resource_group_cost_management_view} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/resource_group_cost_management_view azurerm_resource_group_cost_management_view} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -967,7 +962,7 @@ export class ResourceGroupCostManagementView extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_resource_group_cost_management_view',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.61.0',
+        providerVersion: '3.62.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

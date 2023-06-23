@@ -956,6 +956,7 @@ The following submodules are available:
 - [networkSecurityRule](./networkSecurityRule.go.md)
 - [networkWatcher](./networkWatcher.go.md)
 - [networkWatcherFlowLog](./networkWatcherFlowLog.go.md)
+- [newRelicMonitor](./newRelicMonitor.go.md)
 - [nginxCertificate](./nginxCertificate.go.md)
 - [nginxConfiguration](./nginxConfiguration.go.md)
 - [nginxDeployment](./nginxDeployment.go.md)
