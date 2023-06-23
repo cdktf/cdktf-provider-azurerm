@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/container_app_environment_storage
 // generated from terraform resource schema
 
