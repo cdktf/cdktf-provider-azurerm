@@ -1,6 +1,6 @@
 # `azurerm_media_job`
 
-Refer to the Terraform Registory for docs: [`azurerm_media_job`](https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job).
+Refer to the Terraform Registory for docs: [`azurerm_media_job`](https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job).
 
 # `mediaJob` Submodule <a name="`mediaJob` Submodule" id="@cdktf/provider-azurerm.mediaJob"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_media_job`](https://registr
 
 ### MediaJob <a name="MediaJob" id="@cdktf/provider-azurerm.mediaJob.MediaJob"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job azurerm_media_job}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job azurerm_media_job}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaJob.MediaJob.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.NewMediaJob(scope Construct, id *string, config MediaJobConfig) MediaJob
 ```
@@ -337,7 +337,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mediaJob.MediaJob.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.MediaJob_IsConstruct(x interface{}) *bool
 ```
@@ -369,7 +369,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mediaJob.MediaJob.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.MediaJob_IsTerraformElement(x interface{}) *bool
 ```
@@ -383,7 +383,7 @@ mediajob.MediaJob_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mediaJob.MediaJob.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.MediaJob_IsTerraformResource(x interface{}) *bool
 ```
@@ -802,7 +802,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaJob.MediaJobConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 &mediajob.MediaJobConfig {
 	Connection: interface{},
@@ -812,7 +812,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	InputAsset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.mediaJob.MediaJobInputAsset,
+	InputAsset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaJob.MediaJobInputAsset,
 	MediaServicesAccountName: *string,
 	Name: *string,
 	OutputAsset: interface{},
@@ -821,7 +821,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
 	Description: *string,
 	Id: *string,
 	Priority: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.mediaJob.MediaJobTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaJob.MediaJobTimeouts,
 }
 ```
 
@@ -837,14 +837,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
 | <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.inputAsset">InputAsset</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobInputAsset">MediaJobInputAsset</a></code> | input_asset block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.mediaServicesAccountName">MediaServicesAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#media_services_account_name MediaJob#media_services_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#name MediaJob#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.mediaServicesAccountName">MediaServicesAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#media_services_account_name MediaJob#media_services_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#name MediaJob#name}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.outputAsset">OutputAsset</a></code> | <code>interface{}</code> | output_asset block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#resource_group_name MediaJob#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.transformName">TransformName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#transform_name MediaJob#transform_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#description MediaJob#description}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#id MediaJob#id}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.priority">Priority</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#priority MediaJob#priority}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#resource_group_name MediaJob#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.transformName">TransformName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#transform_name MediaJob#transform_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#description MediaJob#description}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#id MediaJob#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.priority">Priority</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#priority MediaJob#priority}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobTimeouts">MediaJobTimeouts</a></code> | timeouts block. |
 
 ---
@@ -929,7 +929,7 @@ InputAsset MediaJobInputAsset
 
 input_asset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#input_asset MediaJob#input_asset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#input_asset MediaJob#input_asset}
 
 ---
 
@@ -941,7 +941,7 @@ MediaServicesAccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#media_services_account_name MediaJob#media_services_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#media_services_account_name MediaJob#media_services_account_name}.
 
 ---
 
@@ -953,7 +953,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#name MediaJob#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#name MediaJob#name}.
 
 ---
 
@@ -967,7 +967,7 @@ OutputAsset interface{}
 
 output_asset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#output_asset MediaJob#output_asset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#output_asset MediaJob#output_asset}
 
 ---
 
@@ -979,7 +979,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#resource_group_name MediaJob#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#resource_group_name MediaJob#resource_group_name}.
 
 ---
 
@@ -991,7 +991,7 @@ TransformName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#transform_name MediaJob#transform_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#transform_name MediaJob#transform_name}.
 
 ---
 
@@ -1003,7 +1003,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#description MediaJob#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#description MediaJob#description}.
 
 ---
 
@@ -1015,7 +1015,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#id MediaJob#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#id MediaJob#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1030,7 +1030,7 @@ Priority *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#priority MediaJob#priority}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#priority MediaJob#priority}.
 
 ---
 
@@ -1044,7 +1044,7 @@ Timeouts MediaJobTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#timeouts MediaJob#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#timeouts MediaJob#timeouts}
 
 ---
 
@@ -1053,7 +1053,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaJob.MediaJobInputAsset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 &mediajob.MediaJobInputAsset {
 	Name: *string,
@@ -1065,8 +1065,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobInputAsset.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#name MediaJob#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobInputAsset.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#label MediaJob#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobInputAsset.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#name MediaJob#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobInputAsset.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#label MediaJob#label}. |
 
 ---
 
@@ -1078,7 +1078,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#name MediaJob#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#name MediaJob#name}.
 
 ---
 
@@ -1090,7 +1090,7 @@ Label *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#label MediaJob#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#label MediaJob#label}.
 
 ---
 
@@ -1099,7 +1099,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaJob.MediaJobOutputAsset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 &mediajob.MediaJobOutputAsset {
 	Name: *string,
@@ -1111,8 +1111,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobOutputAsset.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#name MediaJob#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobOutputAsset.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#label MediaJob#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobOutputAsset.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#name MediaJob#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobOutputAsset.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#label MediaJob#label}. |
 
 ---
 
@@ -1124,7 +1124,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#name MediaJob#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#name MediaJob#name}.
 
 ---
 
@@ -1136,7 +1136,7 @@ Label *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#label MediaJob#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#label MediaJob#label}.
 
 ---
 
@@ -1145,7 +1145,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaJob.MediaJobTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 &mediajob.MediaJobTimeouts {
 	Create: *string,
@@ -1159,10 +1159,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#create MediaJob#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#delete MediaJob#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#read MediaJob#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#update MediaJob#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#create MediaJob#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#delete MediaJob#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#read MediaJob#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaJob.MediaJobTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#update MediaJob#update}. |
 
 ---
 
@@ -1174,7 +1174,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#create MediaJob#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#create MediaJob#create}.
 
 ---
 
@@ -1186,7 +1186,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#delete MediaJob#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#delete MediaJob#delete}.
 
 ---
 
@@ -1198,7 +1198,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#read MediaJob#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#read MediaJob#read}.
 
 ---
 
@@ -1210,7 +1210,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/media_job#update MediaJob#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/media_job#update MediaJob#update}.
 
 ---
 
@@ -1221,7 +1221,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaJob.MediaJobInputAssetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.NewMediaJobInputAssetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaJobInputAssetOutputReference
 ```
@@ -1521,7 +1521,7 @@ func InternalValue() MediaJobInputAsset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaJob.MediaJobOutputAssetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.NewMediaJobOutputAssetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaJobOutputAssetList
 ```
@@ -1664,7 +1664,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaJob.MediaJobOutputAssetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.NewMediaJobOutputAssetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaJobOutputAssetOutputReference
 ```
@@ -1982,7 +1982,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaJob.MediaJobTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.NewMediaJobTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaJobTimeoutsOutputReference
 ```

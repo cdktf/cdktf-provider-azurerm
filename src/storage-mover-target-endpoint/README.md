@@ -1,3 +1,3 @@
 # `azurerm_storage_mover_target_endpoint`
 
-Refer to the Terraform Registory for docs: [`azurerm_storage_mover_target_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/3.62.0/docs/resources/storage_mover_target_endpoint).
+Refer to the Terraform Registory for docs: [`azurerm_storage_mover_target_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/storage_mover_target_endpoint).
