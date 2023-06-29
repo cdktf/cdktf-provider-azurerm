@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 mobilenetworkservice.NewMobileNetworkService(scope Construct, id *string, config MobileNetworkServiceConfig) MobileNetworkService
 ```
@@ -337,7 +337,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 mobilenetworkservice.MobileNetworkService_IsConstruct(x interface{}) *bool
 ```
@@ -369,7 +369,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 mobilenetworkservice.MobileNetworkService_IsTerraformElement(x interface{}) *bool
 ```
@@ -383,7 +383,7 @@ mobilenetworkservice.MobileNetworkService_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 mobilenetworkservice.MobileNetworkService_IsTerraformResource(x interface{}) *bool
 ```
@@ -780,7 +780,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 &mobilenetworkservice.MobileNetworkServiceConfig {
 	Connection: interface{},
@@ -796,9 +796,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservi
 	PccRule: interface{},
 	ServicePrecedence: *f64,
 	Id: *string,
-	ServiceQosPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.mobileNetworkService.MobileNetworkServiceServiceQosPolicy,
+	ServiceQosPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mobileNetworkService.MobileNetworkServiceServiceQosPolicy,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.mobileNetworkService.MobileNetworkServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mobileNetworkService.MobileNetworkServiceTimeouts,
 }
 ```
 
@@ -1017,13 +1017,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServicePccRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 &mobilenetworkservice.MobileNetworkServicePccRule {
 	Name: *string,
 	Precedence: *f64,
 	ServiceDataFlowTemplate: interface{},
-	QosPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.mobileNetworkService.MobileNetworkServicePccRuleQosPolicy,
+	QosPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mobileNetworkService.MobileNetworkServicePccRuleQosPolicy,
 	TrafficControlEnabled: interface{},
 }
 ```
@@ -1109,13 +1109,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServicePccRuleQosPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 &mobilenetworkservice.MobileNetworkServicePccRuleQosPolicy {
-	MaximumBitRate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.mobileNetworkService.MobileNetworkServicePccRuleQosPolicyMaximumBitRate,
+	MaximumBitRate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mobileNetworkService.MobileNetworkServicePccRuleQosPolicyMaximumBitRate,
 	QosIndicator: *f64,
 	AllocationAndRetentionPriorityLevel: *f64,
-	GuaranteedBitRate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.mobileNetworkService.MobileNetworkServicePccRuleQosPolicyGuaranteedBitRate,
+	GuaranteedBitRate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mobileNetworkService.MobileNetworkServicePccRuleQosPolicyGuaranteedBitRate,
 	PreemptionCapability: *string,
 	PreemptionVulnerability: *string,
 }
@@ -1215,7 +1215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServicePccRuleQosPolicyGuaranteedBitRate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 &mobilenetworkservice.MobileNetworkServicePccRuleQosPolicyGuaranteedBitRate {
 	Downlink: *string,
@@ -1261,7 +1261,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServicePccRuleQosPolicyMaximumBitRate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 &mobilenetworkservice.MobileNetworkServicePccRuleQosPolicyMaximumBitRate {
 	Downlink: *string,
@@ -1307,7 +1307,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServicePccRuleServiceDataFlowTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 &mobilenetworkservice.MobileNetworkServicePccRuleServiceDataFlowTemplate {
 	Direction: *string,
@@ -1395,10 +1395,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServiceServiceQosPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 &mobilenetworkservice.MobileNetworkServiceServiceQosPolicy {
-	MaximumBitRate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.mobileNetworkService.MobileNetworkServiceServiceQosPolicyMaximumBitRate,
+	MaximumBitRate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mobileNetworkService.MobileNetworkServiceServiceQosPolicyMaximumBitRate,
 	AllocationAndRetentionPriorityLevel: *f64,
 	PreemptionCapability: *string,
 	PreemptionVulnerability: *string,
@@ -1485,7 +1485,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServiceServiceQosPolicyMaximumBitRate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 &mobilenetworkservice.MobileNetworkServiceServiceQosPolicyMaximumBitRate {
 	Downlink: *string,
@@ -1531,7 +1531,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 &mobilenetworkservice.MobileNetworkServiceTimeouts {
 	Create: *string,
@@ -1607,7 +1607,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServicePccRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 mobilenetworkservice.NewMobileNetworkServicePccRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MobileNetworkServicePccRuleList
 ```
@@ -1750,7 +1750,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServicePccRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 mobilenetworkservice.NewMobileNetworkServicePccRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MobileNetworkServicePccRuleOutputReference
 ```
@@ -2167,7 +2167,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServicePccRuleQosPolicyGuaranteedBitRateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 mobilenetworkservice.NewMobileNetworkServicePccRuleQosPolicyGuaranteedBitRateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MobileNetworkServicePccRuleQosPolicyGuaranteedBitRateOutputReference
 ```
@@ -2460,7 +2460,7 @@ func InternalValue() MobileNetworkServicePccRuleQosPolicyGuaranteedBitRate
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServicePccRuleQosPolicyMaximumBitRateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 mobilenetworkservice.NewMobileNetworkServicePccRuleQosPolicyMaximumBitRateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MobileNetworkServicePccRuleQosPolicyMaximumBitRateOutputReference
 ```
@@ -2753,7 +2753,7 @@ func InternalValue() MobileNetworkServicePccRuleQosPolicyMaximumBitRate
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServicePccRuleQosPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 mobilenetworkservice.NewMobileNetworkServicePccRuleQosPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MobileNetworkServicePccRuleQosPolicyOutputReference
 ```
@@ -3188,7 +3188,7 @@ func InternalValue() MobileNetworkServicePccRuleQosPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServicePccRuleServiceDataFlowTemplateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 mobilenetworkservice.NewMobileNetworkServicePccRuleServiceDataFlowTemplateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MobileNetworkServicePccRuleServiceDataFlowTemplateList
 ```
@@ -3331,7 +3331,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServicePccRuleServiceDataFlowTemplateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 mobilenetworkservice.NewMobileNetworkServicePccRuleServiceDataFlowTemplateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MobileNetworkServicePccRuleServiceDataFlowTemplateOutputReference
 ```
@@ -3715,7 +3715,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServiceServiceQosPolicyMaximumBitRateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 mobilenetworkservice.NewMobileNetworkServiceServiceQosPolicyMaximumBitRateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MobileNetworkServiceServiceQosPolicyMaximumBitRateOutputReference
 ```
@@ -4008,7 +4008,7 @@ func InternalValue() MobileNetworkServiceServiceQosPolicyMaximumBitRate
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServiceServiceQosPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 mobilenetworkservice.NewMobileNetworkServiceServiceQosPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MobileNetworkServiceServiceQosPolicyOutputReference
 ```
@@ -4408,7 +4408,7 @@ func InternalValue() MobileNetworkServiceServiceQosPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkService.MobileNetworkServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mobilenetworkservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkservice"
 
 mobilenetworkservice.NewMobileNetworkServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MobileNetworkServiceTimeoutsOutputReference
 ```
