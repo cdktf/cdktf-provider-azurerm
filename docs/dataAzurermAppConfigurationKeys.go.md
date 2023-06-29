@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKeys.DataAzurermAppConfigurationKeys.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermappconfigurationkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigurationkeys"
 
 dataazurermappconfigurationkeys.NewDataAzurermAppConfigurationKeys(scope Construct, id *string, config DataAzurermAppConfigurationKeysConfig) DataAzurermAppConfigurationKeys
 ```
@@ -311,7 +311,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKeys.DataAzurermAppConfigurationKeys.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermappconfigurationkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigurationkeys"
 
 dataazurermappconfigurationkeys.DataAzurermAppConfigurationKeys_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKeys.DataAzurermAppConfigurationKeys.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermappconfigurationkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigurationkeys"
 
 dataazurermappconfigurationkeys.DataAzurermAppConfigurationKeys_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ dataazurermappconfigurationkeys.DataAzurermAppConfigurationKeys_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKeys.DataAzurermAppConfigurationKeys.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermappconfigurationkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigurationkeys"
 
 dataazurermappconfigurationkeys.DataAzurermAppConfigurationKeys_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -655,7 +655,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKeys.DataAzurermAppConfigurationKeysConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermappconfigurationkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigurationkeys"
 
 &dataazurermappconfigurationkeys.DataAzurermAppConfigurationKeysConfig {
 	Connection: interface{},
@@ -669,7 +669,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermappconf
 	Id: *string,
 	Key: *string,
 	Label: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.dataAzurermAppConfigurationKeys.DataAzurermAppConfigurationKeysTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermAppConfigurationKeys.DataAzurermAppConfigurationKeysTimeouts,
 }
 ```
 
@@ -832,7 +832,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKeys.DataAzurermAppConfigurationKeysItems.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermappconfigurationkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigurationkeys"
 
 &dataazurermappconfigurationkeys.DataAzurermAppConfigurationKeysItems {
 
@@ -845,7 +845,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermappconf
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKeys.DataAzurermAppConfigurationKeysTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermappconfigurationkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigurationkeys"
 
 &dataazurermappconfigurationkeys.DataAzurermAppConfigurationKeysTimeouts {
 	Read: *string,
@@ -879,7 +879,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKeys.DataAzurermAppConfigurationKeysItemsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermappconfigurationkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigurationkeys"
 
 dataazurermappconfigurationkeys.NewDataAzurermAppConfigurationKeysItemsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppConfigurationKeysItemsList
 ```
@@ -1011,7 +1011,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKeys.DataAzurermAppConfigurationKeysItemsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermappconfigurationkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigurationkeys"
 
 dataazurermappconfigurationkeys.NewDataAzurermAppConfigurationKeysItemsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppConfigurationKeysItemsOutputReference
 ```
@@ -1377,7 +1377,7 @@ func InternalValue() DataAzurermAppConfigurationKeysItems
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfigurationKeys.DataAzurermAppConfigurationKeysTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermappconfigurationkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigurationkeys"
 
 dataazurermappconfigurationkeys.NewDataAzurermAppConfigurationKeysTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermAppConfigurationKeysTimeoutsOutputReference
 ```

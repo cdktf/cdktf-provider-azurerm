@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolver.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/privatednsresolver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privatednsresolver"
 
 privatednsresolver.NewPrivateDnsResolver(scope Construct, id *string, config PrivateDnsResolverConfig) PrivateDnsResolver
 ```
@@ -304,7 +304,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolver.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/privatednsresolver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privatednsresolver"
 
 privatednsresolver.PrivateDnsResolver_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolver.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/privatednsresolver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privatednsresolver"
 
 privatednsresolver.PrivateDnsResolver_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ privatednsresolver.PrivateDnsResolver_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolver.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/privatednsresolver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privatednsresolver"
 
 privatednsresolver.PrivateDnsResolver_IsTerraformResource(x interface{}) *bool
 ```
@@ -703,7 +703,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/privatednsresolver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privatednsresolver"
 
 &privatednsresolver.PrivateDnsResolverConfig {
 	Connection: interface{},
@@ -719,7 +719,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/privatednsresolver
 	VirtualNetworkId: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.privateDnsResolver.PrivateDnsResolverTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.privateDnsResolver.PrivateDnsResolverTimeouts,
 }
 ```
 
@@ -908,7 +908,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/privatednsresolver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privatednsresolver"
 
 &privatednsresolver.PrivateDnsResolverTimeouts {
 	Create: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/privatednsresolver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privatednsresolver"
 
 privatednsresolver.NewPrivateDnsResolverTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivateDnsResolverTimeoutsOutputReference
 ```
