@@ -1,6 +1,6 @@
 # `data_azurerm_iothub`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_iothub`](https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/iothub).
+Refer to the Terraform Registory for docs: [`data_azurerm_iothub`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/iothub).
 
 # `dataAzurermIothub` Submodule <a name="`dataAzurermIothub` Submodule" id="@cdktf/provider-azurerm.dataAzurermIothub"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_iothub`](https://regis
 
 ### DataAzurermIothub <a name="DataAzurermIothub" id="@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothub"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/iothub azurerm_iothub}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/iothub azurerm_iothub}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothub.Initializer"></a>
 
@@ -675,10 +675,10 @@ const dataAzurermIothubConfig: dataAzurermIothub.DataAzurermIothubConfig = { ...
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/iothub#name DataAzurermIothub#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/iothub#resource_group_name DataAzurermIothub#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/iothub#id DataAzurermIothub#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/iothub#tags DataAzurermIothub#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/iothub#name DataAzurermIothub#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/iothub#resource_group_name DataAzurermIothub#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/iothub#id DataAzurermIothub#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/iothub#tags DataAzurermIothub#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeouts">DataAzurermIothubTimeouts</a></code> | timeouts block. |
 
 ---
@@ -761,7 +761,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/iothub#name DataAzurermIothub#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/iothub#name DataAzurermIothub#name}.
 
 ---
 
@@ -773,7 +773,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/iothub#resource_group_name DataAzurermIothub#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/iothub#resource_group_name DataAzurermIothub#resource_group_name}.
 
 ---
 
@@ -785,7 +785,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/iothub#id DataAzurermIothub#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/iothub#id DataAzurermIothub#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -800,7 +800,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/iothub#tags DataAzurermIothub#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/iothub#tags DataAzurermIothub#tags}.
 
 ---
 
@@ -814,7 +814,7 @@ public readonly timeouts: DataAzurermIothubTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/iothub#timeouts DataAzurermIothub#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/iothub#timeouts DataAzurermIothub#timeouts}
 
 ---
 
@@ -843,7 +843,7 @@ const dataAzurermIothubTimeouts: dataAzurermIothub.DataAzurermIothubTimeouts = {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/iothub#read DataAzurermIothub#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIothub.DataAzurermIothubTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/iothub#read DataAzurermIothub#read}. |
 
 ---
 
@@ -855,7 +855,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/iothub#read DataAzurermIothub#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/iothub#read DataAzurermIothub#read}.
 
 ---
 

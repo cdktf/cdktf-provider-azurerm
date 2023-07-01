@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,105 +8,110 @@ import * as cdktf from 'cdktf';
 
 export interface AutomationSoftwareUpdateConfigurationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#automation_account_id AutomationSoftwareUpdateConfiguration#automation_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#automation_account_id AutomationSoftwareUpdateConfiguration#automation_account_id}
   */
   readonly automationAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#duration AutomationSoftwareUpdateConfiguration#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#duration AutomationSoftwareUpdateConfiguration#duration}
   */
   readonly duration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#id AutomationSoftwareUpdateConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#id AutomationSoftwareUpdateConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#name AutomationSoftwareUpdateConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#name AutomationSoftwareUpdateConfiguration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#non_azure_computer_names AutomationSoftwareUpdateConfiguration#non_azure_computer_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#non_azure_computer_names AutomationSoftwareUpdateConfiguration#non_azure_computer_names}
   */
   readonly nonAzureComputerNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#operating_system AutomationSoftwareUpdateConfiguration#operating_system}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#operating_system AutomationSoftwareUpdateConfiguration#operating_system}
   */
-  readonly operatingSystem: string;
+  readonly operatingSystem?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#virtual_machine_ids AutomationSoftwareUpdateConfiguration#virtual_machine_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#virtual_machine_ids AutomationSoftwareUpdateConfiguration#virtual_machine_ids}
   */
   readonly virtualMachineIds?: string[];
   /**
   * linux block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#linux AutomationSoftwareUpdateConfiguration#linux}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#linux AutomationSoftwareUpdateConfiguration#linux}
   */
-  readonly linux?: AutomationSoftwareUpdateConfigurationLinux[] | cdktf.IResolvable;
+  readonly linux?: AutomationSoftwareUpdateConfigurationLinux;
   /**
   * post_task block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#post_task AutomationSoftwareUpdateConfiguration#post_task}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#post_task AutomationSoftwareUpdateConfiguration#post_task}
   */
-  readonly postTask?: AutomationSoftwareUpdateConfigurationPostTask[] | cdktf.IResolvable;
+  readonly postTask?: AutomationSoftwareUpdateConfigurationPostTask;
   /**
   * pre_task block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#pre_task AutomationSoftwareUpdateConfiguration#pre_task}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#pre_task AutomationSoftwareUpdateConfiguration#pre_task}
   */
-  readonly preTask?: AutomationSoftwareUpdateConfigurationPreTask[] | cdktf.IResolvable;
+  readonly preTask?: AutomationSoftwareUpdateConfigurationPreTask;
   /**
   * schedule block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#schedule AutomationSoftwareUpdateConfiguration#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#schedule AutomationSoftwareUpdateConfiguration#schedule}
   */
-  readonly schedule?: AutomationSoftwareUpdateConfigurationSchedule[] | cdktf.IResolvable;
+  readonly schedule: AutomationSoftwareUpdateConfigurationSchedule;
   /**
   * target block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#target AutomationSoftwareUpdateConfiguration#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#target AutomationSoftwareUpdateConfiguration#target}
   */
   readonly target?: AutomationSoftwareUpdateConfigurationTarget;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#timeouts AutomationSoftwareUpdateConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#timeouts AutomationSoftwareUpdateConfiguration#timeouts}
   */
   readonly timeouts?: AutomationSoftwareUpdateConfigurationTimeouts;
   /**
   * windows block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#windows AutomationSoftwareUpdateConfiguration#windows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#windows AutomationSoftwareUpdateConfiguration#windows}
   */
   readonly windows?: AutomationSoftwareUpdateConfigurationWindows;
 }
 export interface AutomationSoftwareUpdateConfigurationLinux {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#classification_included AutomationSoftwareUpdateConfiguration#classification_included}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#classification_included AutomationSoftwareUpdateConfiguration#classification_included}
   */
   readonly classificationIncluded?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#excluded_packages AutomationSoftwareUpdateConfiguration#excluded_packages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#classifications_included AutomationSoftwareUpdateConfiguration#classifications_included}
+  */
+  readonly classificationsIncluded?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#excluded_packages AutomationSoftwareUpdateConfiguration#excluded_packages}
   */
   readonly excludedPackages?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#included_packages AutomationSoftwareUpdateConfiguration#included_packages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#included_packages AutomationSoftwareUpdateConfiguration#included_packages}
   */
   readonly includedPackages?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#reboot AutomationSoftwareUpdateConfiguration#reboot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#reboot AutomationSoftwareUpdateConfiguration#reboot}
   */
   readonly reboot?: string;
 }
 
-export function automationSoftwareUpdateConfigurationLinuxToTerraform(struct?: AutomationSoftwareUpdateConfigurationLinux | cdktf.IResolvable): any {
+export function automationSoftwareUpdateConfigurationLinuxToTerraform(struct?: AutomationSoftwareUpdateConfigurationLinuxOutputReference | AutomationSoftwareUpdateConfigurationLinux): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     classification_included: cdktf.stringToTerraform(struct!.classificationIncluded),
+    classifications_included: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.classificationsIncluded),
     excluded_packages: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludedPackages),
     included_packages: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.includedPackages),
     reboot: cdktf.stringToTerraform(struct!.reboot),
@@ -120,27 +120,25 @@ export function automationSoftwareUpdateConfigurationLinuxToTerraform(struct?: A
 
 export class AutomationSoftwareUpdateConfigurationLinuxOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AutomationSoftwareUpdateConfigurationLinux | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
+  public get internalValue(): AutomationSoftwareUpdateConfigurationLinux | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._classificationIncluded !== undefined) {
       hasAnyValues = true;
       internalValueResult.classificationIncluded = this._classificationIncluded;
+    }
+    if (this._classificationsIncluded !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.classificationsIncluded = this._classificationsIncluded;
     }
     if (this._excludedPackages !== undefined) {
       hasAnyValues = true;
@@ -157,30 +155,26 @@ export class AutomationSoftwareUpdateConfigurationLinuxOutputReference extends c
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AutomationSoftwareUpdateConfigurationLinux | cdktf.IResolvable | undefined) {
+  public set internalValue(value: AutomationSoftwareUpdateConfigurationLinux | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this.resolvableValue = undefined;
       this._classificationIncluded = undefined;
+      this._classificationsIncluded = undefined;
       this._excludedPackages = undefined;
       this._includedPackages = undefined;
       this._reboot = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
       this._classificationIncluded = value.classificationIncluded;
+      this._classificationsIncluded = value.classificationsIncluded;
       this._excludedPackages = value.excludedPackages;
       this._includedPackages = value.includedPackages;
       this._reboot = value.reboot;
     }
   }
 
-  // classification_included - computed: false, optional: true, required: false
+  // classification_included - computed: true, optional: true, required: false
   private _classificationIncluded?: string; 
   public get classificationIncluded() {
     return this.getStringAttribute('classification_included');
@@ -194,6 +188,22 @@ export class AutomationSoftwareUpdateConfigurationLinuxOutputReference extends c
   // Temporarily expose input value. Use with caution.
   public get classificationIncludedInput() {
     return this._classificationIncluded;
+  }
+
+  // classifications_included - computed: true, optional: true, required: false
+  private _classificationsIncluded?: string[]; 
+  public get classificationsIncluded() {
+    return this.getListAttribute('classifications_included');
+  }
+  public set classificationsIncluded(value: string[]) {
+    this._classificationsIncluded = value;
+  }
+  public resetClassificationsIncluded() {
+    this._classificationsIncluded = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get classificationsIncludedInput() {
+    return this._classificationsIncluded;
   }
 
   // excluded_packages - computed: false, optional: true, required: false
@@ -244,38 +254,18 @@ export class AutomationSoftwareUpdateConfigurationLinuxOutputReference extends c
     return this._reboot;
   }
 }
-
-export class AutomationSoftwareUpdateConfigurationLinuxList extends cdktf.ComplexList {
-  public internalValue? : AutomationSoftwareUpdateConfigurationLinux[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): AutomationSoftwareUpdateConfigurationLinuxOutputReference {
-    return new AutomationSoftwareUpdateConfigurationLinuxOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
 export interface AutomationSoftwareUpdateConfigurationPostTask {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#parameters AutomationSoftwareUpdateConfiguration#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#parameters AutomationSoftwareUpdateConfiguration#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#source AutomationSoftwareUpdateConfiguration#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#source AutomationSoftwareUpdateConfiguration#source}
   */
   readonly source?: string;
 }
 
-export function automationSoftwareUpdateConfigurationPostTaskToTerraform(struct?: AutomationSoftwareUpdateConfigurationPostTask | cdktf.IResolvable): any {
+export function automationSoftwareUpdateConfigurationPostTaskToTerraform(struct?: AutomationSoftwareUpdateConfigurationPostTaskOutputReference | AutomationSoftwareUpdateConfigurationPostTask): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -288,22 +278,16 @@ export function automationSoftwareUpdateConfigurationPostTaskToTerraform(struct?
 
 export class AutomationSoftwareUpdateConfigurationPostTaskOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AutomationSoftwareUpdateConfigurationPostTask | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
+  public get internalValue(): AutomationSoftwareUpdateConfigurationPostTask | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._parameters !== undefined) {
@@ -317,20 +301,14 @@ export class AutomationSoftwareUpdateConfigurationPostTaskOutputReference extend
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AutomationSoftwareUpdateConfigurationPostTask | cdktf.IResolvable | undefined) {
+  public set internalValue(value: AutomationSoftwareUpdateConfigurationPostTask | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this.resolvableValue = undefined;
       this._parameters = undefined;
       this._source = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
       this._parameters = value.parameters;
       this._source = value.source;
     }
@@ -368,38 +346,18 @@ export class AutomationSoftwareUpdateConfigurationPostTaskOutputReference extend
     return this._source;
   }
 }
-
-export class AutomationSoftwareUpdateConfigurationPostTaskList extends cdktf.ComplexList {
-  public internalValue? : AutomationSoftwareUpdateConfigurationPostTask[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): AutomationSoftwareUpdateConfigurationPostTaskOutputReference {
-    return new AutomationSoftwareUpdateConfigurationPostTaskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
 export interface AutomationSoftwareUpdateConfigurationPreTask {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#parameters AutomationSoftwareUpdateConfiguration#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#parameters AutomationSoftwareUpdateConfiguration#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#source AutomationSoftwareUpdateConfiguration#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#source AutomationSoftwareUpdateConfiguration#source}
   */
   readonly source?: string;
 }
 
-export function automationSoftwareUpdateConfigurationPreTaskToTerraform(struct?: AutomationSoftwareUpdateConfigurationPreTask | cdktf.IResolvable): any {
+export function automationSoftwareUpdateConfigurationPreTaskToTerraform(struct?: AutomationSoftwareUpdateConfigurationPreTaskOutputReference | AutomationSoftwareUpdateConfigurationPreTask): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -412,22 +370,16 @@ export function automationSoftwareUpdateConfigurationPreTaskToTerraform(struct?:
 
 export class AutomationSoftwareUpdateConfigurationPreTaskOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AutomationSoftwareUpdateConfigurationPreTask | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
+  public get internalValue(): AutomationSoftwareUpdateConfigurationPreTask | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._parameters !== undefined) {
@@ -441,20 +393,14 @@ export class AutomationSoftwareUpdateConfigurationPreTaskOutputReference extends
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AutomationSoftwareUpdateConfigurationPreTask | cdktf.IResolvable | undefined) {
+  public set internalValue(value: AutomationSoftwareUpdateConfigurationPreTask | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this.resolvableValue = undefined;
       this._parameters = undefined;
       this._source = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
       this._parameters = value.parameters;
       this._source = value.source;
     }
@@ -492,38 +438,18 @@ export class AutomationSoftwareUpdateConfigurationPreTaskOutputReference extends
     return this._source;
   }
 }
-
-export class AutomationSoftwareUpdateConfigurationPreTaskList extends cdktf.ComplexList {
-  public internalValue? : AutomationSoftwareUpdateConfigurationPreTask[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): AutomationSoftwareUpdateConfigurationPreTaskOutputReference {
-    return new AutomationSoftwareUpdateConfigurationPreTaskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
 export interface AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#day AutomationSoftwareUpdateConfiguration#day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#day AutomationSoftwareUpdateConfiguration#day}
   */
   readonly day: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#occurrence AutomationSoftwareUpdateConfiguration#occurrence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#occurrence AutomationSoftwareUpdateConfiguration#occurrence}
   */
   readonly occurrence: number;
 }
 
-export function automationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceToTerraform(struct?: AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence | cdktf.IResolvable): any {
+export function automationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceToTerraform(struct?: AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceOutputReference | AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -536,22 +462,16 @@ export function automationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceTo
 
 export class AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
+  public get internalValue(): AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._day !== undefined) {
@@ -565,20 +485,14 @@ export class AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceOutpu
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence | cdktf.IResolvable | undefined) {
+  public set internalValue(value: AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this.resolvableValue = undefined;
       this._day = undefined;
       this._occurrence = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
       this._day = value.day;
       this._occurrence = value.occurrence;
     }
@@ -610,88 +524,68 @@ export class AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceOutpu
     return this._occurrence;
   }
 }
-
-export class AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceList extends cdktf.ComplexList {
-  public internalValue? : AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceOutputReference {
-    return new AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
 export interface AutomationSoftwareUpdateConfigurationSchedule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#advanced_month_days AutomationSoftwareUpdateConfiguration#advanced_month_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#advanced_month_days AutomationSoftwareUpdateConfiguration#advanced_month_days}
   */
   readonly advancedMonthDays?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#advanced_week_days AutomationSoftwareUpdateConfiguration#advanced_week_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#advanced_week_days AutomationSoftwareUpdateConfiguration#advanced_week_days}
   */
   readonly advancedWeekDays?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#description AutomationSoftwareUpdateConfiguration#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#description AutomationSoftwareUpdateConfiguration#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#expiry_time AutomationSoftwareUpdateConfiguration#expiry_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#expiry_time AutomationSoftwareUpdateConfiguration#expiry_time}
   */
   readonly expiryTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#expiry_time_offset_minutes AutomationSoftwareUpdateConfiguration#expiry_time_offset_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#expiry_time_offset_minutes AutomationSoftwareUpdateConfiguration#expiry_time_offset_minutes}
   */
   readonly expiryTimeOffsetMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#frequency AutomationSoftwareUpdateConfiguration#frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#frequency AutomationSoftwareUpdateConfiguration#frequency}
   */
-  readonly frequency?: string;
+  readonly frequency: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#interval AutomationSoftwareUpdateConfiguration#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#interval AutomationSoftwareUpdateConfiguration#interval}
   */
   readonly interval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#is_enabled AutomationSoftwareUpdateConfiguration#is_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#is_enabled AutomationSoftwareUpdateConfiguration#is_enabled}
   */
   readonly isEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#next_run AutomationSoftwareUpdateConfiguration#next_run}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#next_run AutomationSoftwareUpdateConfiguration#next_run}
   */
   readonly nextRun?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#next_run_offset_minutes AutomationSoftwareUpdateConfiguration#next_run_offset_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#next_run_offset_minutes AutomationSoftwareUpdateConfiguration#next_run_offset_minutes}
   */
   readonly nextRunOffsetMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#start_time AutomationSoftwareUpdateConfiguration#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#start_time AutomationSoftwareUpdateConfiguration#start_time}
   */
   readonly startTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#start_time_offset_minutes AutomationSoftwareUpdateConfiguration#start_time_offset_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#start_time_offset_minutes AutomationSoftwareUpdateConfiguration#start_time_offset_minutes}
   */
   readonly startTimeOffsetMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#time_zone AutomationSoftwareUpdateConfiguration#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#time_zone AutomationSoftwareUpdateConfiguration#time_zone}
   */
   readonly timeZone?: string;
   /**
   * monthly_occurrence block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#monthly_occurrence AutomationSoftwareUpdateConfiguration#monthly_occurrence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#monthly_occurrence AutomationSoftwareUpdateConfiguration#monthly_occurrence}
   */
-  readonly monthlyOccurrence?: AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence[] | cdktf.IResolvable;
+  readonly monthlyOccurrence?: AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence;
 }
 
-export function automationSoftwareUpdateConfigurationScheduleToTerraform(struct?: AutomationSoftwareUpdateConfigurationSchedule | cdktf.IResolvable): any {
+export function automationSoftwareUpdateConfigurationScheduleToTerraform(struct?: AutomationSoftwareUpdateConfigurationScheduleOutputReference | AutomationSoftwareUpdateConfigurationSchedule): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -710,28 +604,22 @@ export function automationSoftwareUpdateConfigurationScheduleToTerraform(struct?
     start_time: cdktf.stringToTerraform(struct!.startTime),
     start_time_offset_minutes: cdktf.numberToTerraform(struct!.startTimeOffsetMinutes),
     time_zone: cdktf.stringToTerraform(struct!.timeZone),
-    monthly_occurrence: cdktf.listMapper(automationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceToTerraform, true)(struct!.monthlyOccurrence),
+    monthly_occurrence: automationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceToTerraform(struct!.monthlyOccurrence),
   }
 }
 
 export class AutomationSoftwareUpdateConfigurationScheduleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AutomationSoftwareUpdateConfigurationSchedule | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
+  public get internalValue(): AutomationSoftwareUpdateConfigurationSchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._advancedMonthDays !== undefined) {
@@ -793,10 +681,9 @@ export class AutomationSoftwareUpdateConfigurationScheduleOutputReference extend
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AutomationSoftwareUpdateConfigurationSchedule | cdktf.IResolvable | undefined) {
+  public set internalValue(value: AutomationSoftwareUpdateConfigurationSchedule | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this.resolvableValue = undefined;
       this._advancedMonthDays = undefined;
       this._advancedWeekDays = undefined;
       this._description = undefined;
@@ -812,13 +699,8 @@ export class AutomationSoftwareUpdateConfigurationScheduleOutputReference extend
       this._timeZone = undefined;
       this._monthlyOccurrence.internalValue = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
       this._advancedMonthDays = value.advancedMonthDays;
       this._advancedWeekDays = value.advancedWeekDays;
       this._description = value.description;
@@ -921,16 +803,13 @@ export class AutomationSoftwareUpdateConfigurationScheduleOutputReference extend
     return this._expiryTimeOffsetMinutes;
   }
 
-  // frequency - computed: false, optional: true, required: false
+  // frequency - computed: false, optional: false, required: true
   private _frequency?: string; 
   public get frequency() {
     return this.getStringAttribute('frequency');
   }
   public set frequency(value: string) {
     this._frequency = value;
-  }
-  public resetFrequency() {
-    this._frequency = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get frequencyInput() {
@@ -1006,7 +885,7 @@ export class AutomationSoftwareUpdateConfigurationScheduleOutputReference extend
     return this._nextRunOffsetMinutes;
   }
 
-  // start_time - computed: false, optional: true, required: false
+  // start_time - computed: true, optional: true, required: false
   private _startTime?: string; 
   public get startTime() {
     return this.getStringAttribute('start_time');
@@ -1055,11 +934,11 @@ export class AutomationSoftwareUpdateConfigurationScheduleOutputReference extend
   }
 
   // monthly_occurrence - computed: false, optional: true, required: false
-  private _monthlyOccurrence = new AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceList(this, "monthly_occurrence", false);
+  private _monthlyOccurrence = new AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceOutputReference(this, "monthly_occurrence");
   public get monthlyOccurrence() {
     return this._monthlyOccurrence;
   }
-  public putMonthlyOccurrence(value: AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence[] | cdktf.IResolvable) {
+  public putMonthlyOccurrence(value: AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence) {
     this._monthlyOccurrence.internalValue = value;
   }
   public resetMonthlyOccurrence() {
@@ -1070,33 +949,13 @@ export class AutomationSoftwareUpdateConfigurationScheduleOutputReference extend
     return this._monthlyOccurrence.internalValue;
   }
 }
-
-export class AutomationSoftwareUpdateConfigurationScheduleList extends cdktf.ComplexList {
-  public internalValue? : AutomationSoftwareUpdateConfigurationSchedule[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): AutomationSoftwareUpdateConfigurationScheduleOutputReference {
-    return new AutomationSoftwareUpdateConfigurationScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
 export interface AutomationSoftwareUpdateConfigurationTargetAzureQueryTags {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#tag AutomationSoftwareUpdateConfiguration#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#tag AutomationSoftwareUpdateConfiguration#tag}
   */
   readonly tag: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#values AutomationSoftwareUpdateConfiguration#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#values AutomationSoftwareUpdateConfiguration#values}
   */
   readonly values: string[];
 }
@@ -1210,21 +1069,21 @@ export class AutomationSoftwareUpdateConfigurationTargetAzureQueryTagsList exten
 }
 export interface AutomationSoftwareUpdateConfigurationTargetAzureQuery {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#locations AutomationSoftwareUpdateConfiguration#locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#locations AutomationSoftwareUpdateConfiguration#locations}
   */
   readonly locations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#scope AutomationSoftwareUpdateConfiguration#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#scope AutomationSoftwareUpdateConfiguration#scope}
   */
   readonly scope?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#tag_filter AutomationSoftwareUpdateConfiguration#tag_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#tag_filter AutomationSoftwareUpdateConfiguration#tag_filter}
   */
   readonly tagFilter?: string;
   /**
   * tags block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#tags AutomationSoftwareUpdateConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#tags AutomationSoftwareUpdateConfiguration#tags}
   */
   readonly tags?: AutomationSoftwareUpdateConfigurationTargetAzureQueryTags[] | cdktf.IResolvable;
 }
@@ -1390,11 +1249,11 @@ export class AutomationSoftwareUpdateConfigurationTargetAzureQueryList extends c
 }
 export interface AutomationSoftwareUpdateConfigurationTargetNonAzureQuery {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#function_alias AutomationSoftwareUpdateConfiguration#function_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#function_alias AutomationSoftwareUpdateConfiguration#function_alias}
   */
   readonly functionAlias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#workspace_id AutomationSoftwareUpdateConfiguration#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#workspace_id AutomationSoftwareUpdateConfiguration#workspace_id}
   */
   readonly workspaceId?: string;
 }
@@ -1516,13 +1375,13 @@ export interface AutomationSoftwareUpdateConfigurationTarget {
   /**
   * azure_query block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#azure_query AutomationSoftwareUpdateConfiguration#azure_query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#azure_query AutomationSoftwareUpdateConfiguration#azure_query}
   */
   readonly azureQuery?: AutomationSoftwareUpdateConfigurationTargetAzureQuery[] | cdktf.IResolvable;
   /**
   * non_azure_query block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#non_azure_query AutomationSoftwareUpdateConfiguration#non_azure_query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#non_azure_query AutomationSoftwareUpdateConfiguration#non_azure_query}
   */
   readonly nonAzureQuery?: AutomationSoftwareUpdateConfigurationTargetNonAzureQuery[] | cdktf.IResolvable;
 }
@@ -1610,19 +1469,19 @@ export class AutomationSoftwareUpdateConfigurationTargetOutputReference extends 
 }
 export interface AutomationSoftwareUpdateConfigurationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#create AutomationSoftwareUpdateConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#create AutomationSoftwareUpdateConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#delete AutomationSoftwareUpdateConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#delete AutomationSoftwareUpdateConfiguration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#read AutomationSoftwareUpdateConfiguration#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#read AutomationSoftwareUpdateConfiguration#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#update AutomationSoftwareUpdateConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#update AutomationSoftwareUpdateConfiguration#update}
   */
   readonly update?: string;
 }
@@ -1766,23 +1625,23 @@ export class AutomationSoftwareUpdateConfigurationTimeoutsOutputReference extend
 }
 export interface AutomationSoftwareUpdateConfigurationWindows {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#classification_included AutomationSoftwareUpdateConfiguration#classification_included}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#classification_included AutomationSoftwareUpdateConfiguration#classification_included}
   */
   readonly classificationIncluded?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#classifications_included AutomationSoftwareUpdateConfiguration#classifications_included}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#classifications_included AutomationSoftwareUpdateConfiguration#classifications_included}
   */
   readonly classificationsIncluded?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#excluded_knowledge_base_numbers AutomationSoftwareUpdateConfiguration#excluded_knowledge_base_numbers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#excluded_knowledge_base_numbers AutomationSoftwareUpdateConfiguration#excluded_knowledge_base_numbers}
   */
   readonly excludedKnowledgeBaseNumbers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#included_knowledge_base_numbers AutomationSoftwareUpdateConfiguration#included_knowledge_base_numbers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#included_knowledge_base_numbers AutomationSoftwareUpdateConfiguration#included_knowledge_base_numbers}
   */
   readonly includedKnowledgeBaseNumbers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration#reboot AutomationSoftwareUpdateConfiguration#reboot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration#reboot AutomationSoftwareUpdateConfiguration#reboot}
   */
   readonly reboot?: string;
 }
@@ -1939,7 +1798,7 @@ export class AutomationSoftwareUpdateConfigurationWindowsOutputReference extends
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration azurerm_automation_software_update_configuration}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration azurerm_automation_software_update_configuration}
 */
 export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResource {
 
@@ -1953,7 +1812,7 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/automation_software_update_configuration azurerm_automation_software_update_configuration} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/automation_software_update_configuration azurerm_automation_software_update_configuration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1964,7 +1823,7 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
       terraformResourceType: 'azurerm_automation_software_update_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.62.1',
+        providerVersion: '3.63.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -2084,13 +1943,16 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
     return this._nonAzureComputerNames;
   }
 
-  // operating_system - computed: false, optional: false, required: true
+  // operating_system - computed: true, optional: true, required: false
   private _operatingSystem?: string; 
   public get operatingSystem() {
     return this.getStringAttribute('operating_system');
   }
   public set operatingSystem(value: string) {
     this._operatingSystem = value;
+  }
+  public resetOperatingSystem() {
+    this._operatingSystem = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get operatingSystemInput() {
@@ -2114,11 +1976,11 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
   }
 
   // linux - computed: false, optional: true, required: false
-  private _linux = new AutomationSoftwareUpdateConfigurationLinuxList(this, "linux", false);
+  private _linux = new AutomationSoftwareUpdateConfigurationLinuxOutputReference(this, "linux");
   public get linux() {
     return this._linux;
   }
-  public putLinux(value: AutomationSoftwareUpdateConfigurationLinux[] | cdktf.IResolvable) {
+  public putLinux(value: AutomationSoftwareUpdateConfigurationLinux) {
     this._linux.internalValue = value;
   }
   public resetLinux() {
@@ -2130,11 +1992,11 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
   }
 
   // post_task - computed: false, optional: true, required: false
-  private _postTask = new AutomationSoftwareUpdateConfigurationPostTaskList(this, "post_task", false);
+  private _postTask = new AutomationSoftwareUpdateConfigurationPostTaskOutputReference(this, "post_task");
   public get postTask() {
     return this._postTask;
   }
-  public putPostTask(value: AutomationSoftwareUpdateConfigurationPostTask[] | cdktf.IResolvable) {
+  public putPostTask(value: AutomationSoftwareUpdateConfigurationPostTask) {
     this._postTask.internalValue = value;
   }
   public resetPostTask() {
@@ -2146,11 +2008,11 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
   }
 
   // pre_task - computed: false, optional: true, required: false
-  private _preTask = new AutomationSoftwareUpdateConfigurationPreTaskList(this, "pre_task", false);
+  private _preTask = new AutomationSoftwareUpdateConfigurationPreTaskOutputReference(this, "pre_task");
   public get preTask() {
     return this._preTask;
   }
-  public putPreTask(value: AutomationSoftwareUpdateConfigurationPreTask[] | cdktf.IResolvable) {
+  public putPreTask(value: AutomationSoftwareUpdateConfigurationPreTask) {
     this._preTask.internalValue = value;
   }
   public resetPreTask() {
@@ -2161,16 +2023,13 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
     return this._preTask.internalValue;
   }
 
-  // schedule - computed: false, optional: true, required: false
-  private _schedule = new AutomationSoftwareUpdateConfigurationScheduleList(this, "schedule", false);
+  // schedule - computed: false, optional: false, required: true
+  private _schedule = new AutomationSoftwareUpdateConfigurationScheduleOutputReference(this, "schedule");
   public get schedule() {
     return this._schedule;
   }
-  public putSchedule(value: AutomationSoftwareUpdateConfigurationSchedule[] | cdktf.IResolvable) {
+  public putSchedule(value: AutomationSoftwareUpdateConfigurationSchedule) {
     this._schedule.internalValue = value;
-  }
-  public resetSchedule() {
-    this._schedule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get scheduleInput() {
@@ -2238,10 +2097,10 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
       non_azure_computer_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._nonAzureComputerNames),
       operating_system: cdktf.stringToTerraform(this._operatingSystem),
       virtual_machine_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._virtualMachineIds),
-      linux: cdktf.listMapper(automationSoftwareUpdateConfigurationLinuxToTerraform, true)(this._linux.internalValue),
-      post_task: cdktf.listMapper(automationSoftwareUpdateConfigurationPostTaskToTerraform, true)(this._postTask.internalValue),
-      pre_task: cdktf.listMapper(automationSoftwareUpdateConfigurationPreTaskToTerraform, true)(this._preTask.internalValue),
-      schedule: cdktf.listMapper(automationSoftwareUpdateConfigurationScheduleToTerraform, true)(this._schedule.internalValue),
+      linux: automationSoftwareUpdateConfigurationLinuxToTerraform(this._linux.internalValue),
+      post_task: automationSoftwareUpdateConfigurationPostTaskToTerraform(this._postTask.internalValue),
+      pre_task: automationSoftwareUpdateConfigurationPreTaskToTerraform(this._preTask.internalValue),
+      schedule: automationSoftwareUpdateConfigurationScheduleToTerraform(this._schedule.internalValue),
       target: automationSoftwareUpdateConfigurationTargetToTerraform(this._target.internalValue),
       timeouts: automationSoftwareUpdateConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
       windows: automationSoftwareUpdateConfigurationWindowsToTerraform(this._windows.internalValue),
