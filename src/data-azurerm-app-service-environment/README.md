@@ -1,3 +1,3 @@
 # `data_azurerm_app_service_environment`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_app_service_environment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/app_service_environment).
+Refer to the Terraform Registory for docs: [`data_azurerm_app_service_environment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/app_service_environment).

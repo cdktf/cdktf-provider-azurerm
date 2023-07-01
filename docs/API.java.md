@@ -417,6 +417,7 @@ The following submodules are available:
 - [dataAzurermNetappVolumeGroupSapHana](./dataAzurermNetappVolumeGroupSapHana.java.md)
 - [dataAzurermNetworkDdosProtectionPlan](./dataAzurermNetworkDdosProtectionPlan.java.md)
 - [dataAzurermNetworkInterface](./dataAzurermNetworkInterface.java.md)
+- [dataAzurermNetworkManagerNetworkGroup](./dataAzurermNetworkManagerNetworkGroup.java.md)
 - [dataAzurermNetworkSecurityGroup](./dataAzurermNetworkSecurityGroup.java.md)
 - [dataAzurermNetworkServiceTags](./dataAzurermNetworkServiceTags.java.md)
 - [dataAzurermNetworkWatcher](./dataAzurermNetworkWatcher.java.md)

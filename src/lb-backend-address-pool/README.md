@@ -1,3 +1,3 @@
 # `azurerm_lb_backend_address_pool`
 
-Refer to the Terraform Registory for docs: [`azurerm_lb_backend_address_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/lb_backend_address_pool).
+Refer to the Terraform Registory for docs: [`azurerm_lb_backend_address_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/lb_backend_address_pool).

@@ -417,6 +417,7 @@ The following submodules are available:
 - [dataAzurermNetappVolumeGroupSapHana](./dataAzurermNetappVolumeGroupSapHana.typescript.md)
 - [dataAzurermNetworkDdosProtectionPlan](./dataAzurermNetworkDdosProtectionPlan.typescript.md)
 - [dataAzurermNetworkInterface](./dataAzurermNetworkInterface.typescript.md)
+- [dataAzurermNetworkManagerNetworkGroup](./dataAzurermNetworkManagerNetworkGroup.typescript.md)
 - [dataAzurermNetworkSecurityGroup](./dataAzurermNetworkSecurityGroup.typescript.md)
 - [dataAzurermNetworkServiceTags](./dataAzurermNetworkServiceTags.typescript.md)
 - [dataAzurermNetworkWatcher](./dataAzurermNetworkWatcher.typescript.md)

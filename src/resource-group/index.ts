@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/resource_group
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface ResourceGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/resource_group#id ResourceGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_group#id ResourceGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/resource_group#location ResourceGroup#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_group#location ResourceGroup#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/resource_group#name ResourceGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_group#managed_by ResourceGroup#managed_by}
+  */
+  readonly managedBy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_group#name ResourceGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/resource_group#tags ResourceGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_group#tags ResourceGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/resource_group#timeouts ResourceGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_group#timeouts ResourceGroup#timeouts}
   */
   readonly timeouts?: ResourceGroupTimeouts;
 }
 export interface ResourceGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/resource_group#create ResourceGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_group#create ResourceGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/resource_group#delete ResourceGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_group#delete ResourceGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/resource_group#read ResourceGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_group#read ResourceGroup#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/resource_group#update ResourceGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_group#update ResourceGroup#update}
   */
   readonly update?: string;
 }
@@ -196,7 +200,7 @@ export class ResourceGroupTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/resource_group azurerm_resource_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_group azurerm_resource_group}
 */
 export class ResourceGroup extends cdktf.TerraformResource {
 
@@ -210,7 +214,7 @@ export class ResourceGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/resource_group azurerm_resource_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_group azurerm_resource_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -221,7 +225,7 @@ export class ResourceGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_resource_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.62.1',
+        providerVersion: '3.63.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -234,6 +238,7 @@ export class ResourceGroup extends cdktf.TerraformResource {
     });
     this._id = config.id;
     this._location = config.location;
+    this._managedBy = config.managedBy;
     this._name = config.name;
     this._tags = config.tags;
     this._timeouts.internalValue = config.timeouts;
@@ -270,6 +275,22 @@ export class ResourceGroup extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location;
+  }
+
+  // managed_by - computed: false, optional: true, required: false
+  private _managedBy?: string; 
+  public get managedBy() {
+    return this.getStringAttribute('managed_by');
+  }
+  public set managedBy(value: string) {
+    this._managedBy = value;
+  }
+  public resetManagedBy() {
+    this._managedBy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedByInput() {
+    return this._managedBy;
   }
 
   // name - computed: false, optional: false, required: true
@@ -325,6 +346,7 @@ export class ResourceGroup extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
+      managed_by: cdktf.stringToTerraform(this._managedBy),
       name: cdktf.stringToTerraform(this._name),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: resourceGroupTimeoutsToTerraform(this._timeouts.internalValue),

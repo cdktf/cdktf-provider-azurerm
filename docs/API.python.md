@@ -417,6 +417,7 @@ The following submodules are available:
 - [dataAzurermNetappVolumeGroupSapHana](./dataAzurermNetappVolumeGroupSapHana.python.md)
 - [dataAzurermNetworkDdosProtectionPlan](./dataAzurermNetworkDdosProtectionPlan.python.md)
 - [dataAzurermNetworkInterface](./dataAzurermNetworkInterface.python.md)
+- [dataAzurermNetworkManagerNetworkGroup](./dataAzurermNetworkManagerNetworkGroup.python.md)
 - [dataAzurermNetworkSecurityGroup](./dataAzurermNetworkSecurityGroup.python.md)
 - [dataAzurermNetworkServiceTags](./dataAzurermNetworkServiceTags.python.md)
 - [dataAzurermNetworkWatcher](./dataAzurermNetworkWatcher.python.md)

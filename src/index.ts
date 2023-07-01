@@ -1193,6 +1193,7 @@ export * as dataAzurermNetappVolume from './data-azurerm-netapp-volume';
 export * as dataAzurermNetappVolumeGroupSapHana from './data-azurerm-netapp-volume-group-sap-hana';
 export * as dataAzurermNetworkDdosProtectionPlan from './data-azurerm-network-ddos-protection-plan';
 export * as dataAzurermNetworkInterface from './data-azurerm-network-interface';
+export * as dataAzurermNetworkManagerNetworkGroup from './data-azurerm-network-manager-network-group';
 export * as dataAzurermNetworkSecurityGroup from './data-azurerm-network-security-group';
 export * as dataAzurermNetworkServiceTags from './data-azurerm-network-service-tags';
 export * as dataAzurermNetworkWatcher from './data-azurerm-network-watcher';

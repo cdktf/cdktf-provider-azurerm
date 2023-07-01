@@ -1,3 +1,3 @@
 # `azurerm_cost_management_scheduled_action`
 
-Refer to the Terraform Registory for docs: [`azurerm_cost_management_scheduled_action`](https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/cost_management_scheduled_action).
+Refer to the Terraform Registory for docs: [`azurerm_cost_management_scheduled_action`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/cost_management_scheduled_action).

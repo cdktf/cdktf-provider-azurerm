@@ -417,6 +417,7 @@ The following submodules are available:
 - [dataAzurermNetappVolumeGroupSapHana](./dataAzurermNetappVolumeGroupSapHana.csharp.md)
 - [dataAzurermNetworkDdosProtectionPlan](./dataAzurermNetworkDdosProtectionPlan.csharp.md)
 - [dataAzurermNetworkInterface](./dataAzurermNetworkInterface.csharp.md)
+- [dataAzurermNetworkManagerNetworkGroup](./dataAzurermNetworkManagerNetworkGroup.csharp.md)
 - [dataAzurermNetworkSecurityGroup](./dataAzurermNetworkSecurityGroup.csharp.md)
 - [dataAzurermNetworkServiceTags](./dataAzurermNetworkServiceTags.csharp.md)
 - [dataAzurermNetworkWatcher](./dataAzurermNetworkWatcher.csharp.md)

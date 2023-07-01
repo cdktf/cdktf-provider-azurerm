@@ -1,3 +1,3 @@
 # `azurerm_machine_learning_datastore_datalake_gen2`
 
-Refer to the Terraform Registory for docs: [`azurerm_machine_learning_datastore_datalake_gen2`](https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/machine_learning_datastore_datalake_gen2).
+Refer to the Terraform Registory for docs: [`azurerm_machine_learning_datastore_datalake_gen2`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/machine_learning_datastore_datalake_gen2).

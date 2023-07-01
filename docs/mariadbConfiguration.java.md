@@ -1,6 +1,6 @@
 # `azurerm_mariadb_configuration`
 
-Refer to the Terraform Registory for docs: [`azurerm_mariadb_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration).
+Refer to the Terraform Registory for docs: [`azurerm_mariadb_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration).
 
 # `mariadbConfiguration` Submodule <a name="`mariadbConfiguration` Submodule" id="@cdktf/provider-azurerm.mariadbConfiguration"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_mariadb_configuration`](htt
 
 ### MariadbConfiguration <a name="MariadbConfiguration" id="@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration azurerm_mariadb_configuration}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration azurerm_mariadb_configuration}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.Initializer"></a>
 
@@ -47,11 +47,11 @@ MariadbConfiguration.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#name MariadbConfiguration#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#resource_group_name MariadbConfiguration#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.Initializer.parameter.serverName">serverName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#server_name MariadbConfiguration#server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.Initializer.parameter.value">value</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#value MariadbConfiguration#value}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#id MariadbConfiguration#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#name MariadbConfiguration#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#resource_group_name MariadbConfiguration#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.Initializer.parameter.serverName">serverName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#server_name MariadbConfiguration#server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.Initializer.parameter.value">value</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#value MariadbConfiguration#value}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#id MariadbConfiguration#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfiguration.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts">MariadbConfigurationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#name MariadbConfiguration#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#name MariadbConfiguration#name}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#resource_group_name MariadbConfiguration#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#resource_group_name MariadbConfiguration#resource_group_name}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#server_name MariadbConfiguration#server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#server_name MariadbConfiguration#server_name}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#value MariadbConfiguration#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#value MariadbConfiguration#value}.
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#id MariadbConfiguration#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#id MariadbConfiguration#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -165,7 +165,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#timeouts MariadbConfiguration#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#timeouts MariadbConfiguration#timeouts}
 
 ---
 
@@ -827,11 +827,11 @@ MariadbConfigurationConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#name MariadbConfiguration#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#resource_group_name MariadbConfiguration#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationConfig.property.serverName">serverName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#server_name MariadbConfiguration#server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationConfig.property.value">value</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#value MariadbConfiguration#value}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#id MariadbConfiguration#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#name MariadbConfiguration#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#resource_group_name MariadbConfiguration#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationConfig.property.serverName">serverName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#server_name MariadbConfiguration#server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationConfig.property.value">value</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#value MariadbConfiguration#value}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#id MariadbConfiguration#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts">MariadbConfigurationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -914,7 +914,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#name MariadbConfiguration#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#name MariadbConfiguration#name}.
 
 ---
 
@@ -926,7 +926,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#resource_group_name MariadbConfiguration#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#resource_group_name MariadbConfiguration#resource_group_name}.
 
 ---
 
@@ -938,7 +938,7 @@ public java.lang.String getServerName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#server_name MariadbConfiguration#server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#server_name MariadbConfiguration#server_name}.
 
 ---
 
@@ -950,7 +950,7 @@ public java.lang.String getValue();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#value MariadbConfiguration#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#value MariadbConfiguration#value}.
 
 ---
 
@@ -962,7 +962,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#id MariadbConfiguration#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#id MariadbConfiguration#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -979,7 +979,7 @@ public MariadbConfigurationTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#timeouts MariadbConfiguration#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#timeouts MariadbConfiguration#timeouts}
 
 ---
 
@@ -1002,10 +1002,10 @@ MariadbConfigurationTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#create MariadbConfiguration#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#delete MariadbConfiguration#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#read MariadbConfiguration#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#update MariadbConfiguration#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#create MariadbConfiguration#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#delete MariadbConfiguration#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#read MariadbConfiguration#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbConfiguration.MariadbConfigurationTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#update MariadbConfiguration#update}. |
 
 ---
 
@@ -1017,7 +1017,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#create MariadbConfiguration#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#create MariadbConfiguration#create}.
 
 ---
 
@@ -1029,7 +1029,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#delete MariadbConfiguration#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#delete MariadbConfiguration#delete}.
 
 ---
 
@@ -1041,7 +1041,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#read MariadbConfiguration#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#read MariadbConfiguration#read}.
 
 ---
 
@@ -1053,7 +1053,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/resources/mariadb_configuration#update MariadbConfiguration#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mariadb_configuration#update MariadbConfiguration#update}.
 
 ---
 

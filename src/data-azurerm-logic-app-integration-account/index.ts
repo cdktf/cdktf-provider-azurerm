@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/logic_app_integration_account
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/logic_app_integration_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,30 +13,30 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermLogicAppIntegrationAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/logic_app_integration_account#id DataAzurermLogicAppIntegrationAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/logic_app_integration_account#id DataAzurermLogicAppIntegrationAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/logic_app_integration_account#name DataAzurermLogicAppIntegrationAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/logic_app_integration_account#name DataAzurermLogicAppIntegrationAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/logic_app_integration_account#resource_group_name DataAzurermLogicAppIntegrationAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/logic_app_integration_account#resource_group_name DataAzurermLogicAppIntegrationAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/logic_app_integration_account#timeouts DataAzurermLogicAppIntegrationAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/logic_app_integration_account#timeouts DataAzurermLogicAppIntegrationAccount#timeouts}
   */
   readonly timeouts?: DataAzurermLogicAppIntegrationAccountTimeouts;
 }
 export interface DataAzurermLogicAppIntegrationAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/logic_app_integration_account#read DataAzurermLogicAppIntegrationAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/logic_app_integration_account#read DataAzurermLogicAppIntegrationAccount#read}
   */
   readonly read?: string;
 }
@@ -111,7 +111,7 @@ export class DataAzurermLogicAppIntegrationAccountTimeoutsOutputReference extend
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/logic_app_integration_account azurerm_logic_app_integration_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/logic_app_integration_account azurerm_logic_app_integration_account}
 */
 export class DataAzurermLogicAppIntegrationAccount extends cdktf.TerraformDataSource {
 
@@ -125,7 +125,7 @@ export class DataAzurermLogicAppIntegrationAccount extends cdktf.TerraformDataSo
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.62.1/docs/data-sources/logic_app_integration_account azurerm_logic_app_integration_account} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/logic_app_integration_account azurerm_logic_app_integration_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -136,7 +136,7 @@ export class DataAzurermLogicAppIntegrationAccount extends cdktf.TerraformDataSo
       terraformResourceType: 'azurerm_logic_app_integration_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.62.1',
+        providerVersion: '3.63.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
