@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageMover.StorageMover.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storagemover"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemover"
 
 storagemover.NewStorageMover(scope Construct, id *string, config StorageMoverConfig) StorageMover
 ```
@@ -311,7 +311,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageMover.StorageMover.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storagemover"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemover"
 
 storagemover.StorageMover_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageMover.StorageMover.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storagemover"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemover"
 
 storagemover.StorageMover_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ storagemover.StorageMover_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageMover.StorageMover.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storagemover"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemover"
 
 storagemover.StorageMover_IsTerraformResource(x interface{}) *bool
 ```
@@ -710,7 +710,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageMover.StorageMoverConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storagemover"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemover"
 
 &storagemover.StorageMoverConfig {
 	Connection: interface{},
@@ -726,7 +726,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storagemover"
 	Description: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.storageMover.StorageMoverTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageMover.StorageMoverTimeouts,
 }
 ```
 
@@ -915,7 +915,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageMover.StorageMoverTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storagemover"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemover"
 
 &storagemover.StorageMoverTimeouts {
 	Create: *string,
@@ -991,7 +991,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageMover.StorageMoverTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/storagemover"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemover"
 
 storagemover.NewStorageMoverTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageMoverTimeoutsOutputReference
 ```
