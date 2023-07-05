@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceSnowflake.DataFactoryLinkedServiceSnowflake.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedservicesnowflake"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/datafactorylinkedservicesnowflake"
 
 datafactorylinkedservicesnowflake.NewDataFactoryLinkedServiceSnowflake(scope Construct, id *string, config DataFactoryLinkedServiceSnowflakeConfig) DataFactoryLinkedServiceSnowflake
 ```
@@ -352,7 +352,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceSnowflake.DataFactoryLinkedServiceSnowflake.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedservicesnowflake"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/datafactorylinkedservicesnowflake"
 
 datafactorylinkedservicesnowflake.DataFactoryLinkedServiceSnowflake_IsConstruct(x interface{}) *bool
 ```
@@ -384,7 +384,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceSnowflake.DataFactoryLinkedServiceSnowflake.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedservicesnowflake"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/datafactorylinkedservicesnowflake"
 
 datafactorylinkedservicesnowflake.DataFactoryLinkedServiceSnowflake_IsTerraformElement(x interface{}) *bool
 ```
@@ -398,7 +398,7 @@ datafactorylinkedservicesnowflake.DataFactoryLinkedServiceSnowflake_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceSnowflake.DataFactoryLinkedServiceSnowflake.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedservicesnowflake"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/datafactorylinkedservicesnowflake"
 
 datafactorylinkedservicesnowflake.DataFactoryLinkedServiceSnowflake_IsTerraformResource(x interface{}) *bool
 ```
@@ -839,7 +839,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceSnowflake.DataFactoryLinkedServiceSnowflakeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedservicesnowflake"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/datafactorylinkedservicesnowflake"
 
 &datafactorylinkedservicesnowflake.DataFactoryLinkedServiceSnowflakeConfig {
 	Connection: interface{},
@@ -857,9 +857,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserv
 	Description: *string,
 	Id: *string,
 	IntegrationRuntimeName: *string,
-	KeyVaultPassword: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryLinkedServiceSnowflake.DataFactoryLinkedServiceSnowflakeKeyVaultPassword,
+	KeyVaultPassword: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.dataFactoryLinkedServiceSnowflake.DataFactoryLinkedServiceSnowflakeKeyVaultPassword,
 	Parameters: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryLinkedServiceSnowflake.DataFactoryLinkedServiceSnowflakeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.dataFactoryLinkedServiceSnowflake.DataFactoryLinkedServiceSnowflakeTimeouts,
 }
 ```
 
@@ -1102,7 +1102,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceSnowflake.DataFactoryLinkedServiceSnowflakeKeyVaultPassword.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedservicesnowflake"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/datafactorylinkedservicesnowflake"
 
 &datafactorylinkedservicesnowflake.DataFactoryLinkedServiceSnowflakeKeyVaultPassword {
 	LinkedServiceName: *string,
@@ -1148,7 +1148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceSnowflake.DataFactoryLinkedServiceSnowflakeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedservicesnowflake"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/datafactorylinkedservicesnowflake"
 
 &datafactorylinkedservicesnowflake.DataFactoryLinkedServiceSnowflakeTimeouts {
 	Create: *string,
@@ -1224,7 +1224,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceSnowflake.DataFactoryLinkedServiceSnowflakeKeyVaultPasswordOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedservicesnowflake"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/datafactorylinkedservicesnowflake"
 
 datafactorylinkedservicesnowflake.NewDataFactoryLinkedServiceSnowflakeKeyVaultPasswordOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceSnowflakeKeyVaultPasswordOutputReference
 ```
@@ -1517,7 +1517,7 @@ func InternalValue() DataFactoryLinkedServiceSnowflakeKeyVaultPassword
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceSnowflake.DataFactoryLinkedServiceSnowflakeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedservicesnowflake"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/datafactorylinkedservicesnowflake"
 
 datafactorylinkedservicesnowflake.NewDataFactoryLinkedServiceSnowflakeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceSnowflakeTimeoutsOutputReference
 ```
