@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppression.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppression(scope Construct, id *string, config MonitorActionRuleSuppressionConfig) MonitorActionRuleSuppression
 ```
@@ -371,7 +371,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppression.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.MonitorActionRuleSuppression_IsConstruct(x interface{}) *bool
 ```
@@ -403,7 +403,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppression.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.MonitorActionRuleSuppression_IsTerraformElement(x interface{}) *bool
 ```
@@ -417,7 +417,7 @@ monitoractionrulesuppression.MonitorActionRuleSuppression_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppression.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.MonitorActionRuleSuppression_IsTerraformResource(x interface{}) *bool
 ```
@@ -836,16 +836,16 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionCondition {
-	AlertContext: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertContext,
-	AlertRuleId: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertRuleId,
-	Description: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionDescription,
-	Monitor: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitor,
-	MonitorService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitorService,
-	Severity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionSeverity,
-	TargetResourceType: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionTargetResourceType,
+	AlertContext: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertContext,
+	AlertRuleId: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertRuleId,
+	Description: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionDescription,
+	Monitor: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitor,
+	MonitorService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitorService,
+	Severity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionSeverity,
+	TargetResourceType: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionTargetResourceType,
 }
 ```
 
@@ -966,7 +966,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertContext.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConditionAlertContext {
 	Operator: *string,
@@ -1012,7 +1012,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertRuleId.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConditionAlertRuleId {
 	Operator: *string,
@@ -1058,7 +1058,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionDescription.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConditionDescription {
 	Operator: *string,
@@ -1104,7 +1104,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConditionMonitor {
 	Operator: *string,
@@ -1150,7 +1150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitorService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConditionMonitorService {
 	Operator: *string,
@@ -1196,7 +1196,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionSeverity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConditionSeverity {
 	Operator: *string,
@@ -1242,7 +1242,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionTargetResourceType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConditionTargetResourceType {
 	Operator: *string,
@@ -1288,7 +1288,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConfig {
 	Connection: interface{},
@@ -1300,14 +1300,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrules
 	Provisioners: *[]interface{},
 	Name: *string,
 	ResourceGroupName: *string,
-	Suppression: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppression,
-	Condition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.monitorActionRuleSuppression.MonitorActionRuleSuppressionCondition,
+	Suppression: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppression,
+	Condition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionCondition,
 	Description: *string,
 	Enabled: interface{},
 	Id: *string,
-	Scope: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.monitorActionRuleSuppression.MonitorActionRuleSuppressionScope,
+	Scope: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionScope,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeouts,
 }
 ```
 
@@ -1541,7 +1541,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionScope.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionScope {
 	ResourceIds: *[]*string,
@@ -1587,11 +1587,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppression.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionSuppression {
 	RecurrenceType: *string,
-	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionSchedule,
+	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionSchedule,
 }
 ```
 
@@ -1635,7 +1635,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionSuppressionSchedule {
 	EndDateUtc: *string,
@@ -1709,7 +1709,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionTimeouts {
 	Create: *string,
@@ -1785,7 +1785,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertContextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionAlertContextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionAlertContextOutputReference
 ```
@@ -2078,7 +2078,7 @@ func InternalValue() MonitorActionRuleSuppressionConditionAlertContext
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionAlertRuleIdOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference
 ```
@@ -2371,7 +2371,7 @@ func InternalValue() MonitorActionRuleSuppressionConditionAlertRuleId
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionDescriptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionDescriptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionDescriptionOutputReference
 ```
@@ -2664,7 +2664,7 @@ func InternalValue() MonitorActionRuleSuppressionConditionDescription
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionMonitorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionMonitorOutputReference
 ```
@@ -2957,7 +2957,7 @@ func InternalValue() MonitorActionRuleSuppressionConditionMonitor
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitorServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionMonitorServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionMonitorServiceOutputReference
 ```
@@ -3250,7 +3250,7 @@ func InternalValue() MonitorActionRuleSuppressionConditionMonitorService
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionOutputReference
 ```
@@ -3793,7 +3793,7 @@ func InternalValue() MonitorActionRuleSuppressionCondition
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionSeverityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionSeverityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionSeverityOutputReference
 ```
@@ -4086,7 +4086,7 @@ func InternalValue() MonitorActionRuleSuppressionConditionSeverity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionTargetResourceTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionTargetResourceTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionTargetResourceTypeOutputReference
 ```
@@ -4379,7 +4379,7 @@ func InternalValue() MonitorActionRuleSuppressionConditionTargetResourceType
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionScopeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionScopeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionScopeOutputReference
 ```
@@ -4672,7 +4672,7 @@ func InternalValue() MonitorActionRuleSuppressionScope
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionSuppressionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionSuppressionOutputReference
 ```
@@ -4985,7 +4985,7 @@ func InternalValue() MonitorActionRuleSuppressionSuppression
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionSuppressionScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionSuppressionScheduleOutputReference
 ```
@@ -5336,7 +5336,7 @@ func InternalValue() MonitorActionRuleSuppressionSuppressionSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionTimeoutsOutputReference
 ```

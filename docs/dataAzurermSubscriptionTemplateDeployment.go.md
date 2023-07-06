@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSubscriptionTemplateDeployment.DataAzurermSubscriptionTemplateDeployment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermsubscriptiontemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsubscriptiontemplatedeployment"
 
 dataazurermsubscriptiontemplatedeployment.NewDataAzurermSubscriptionTemplateDeployment(scope Construct, id *string, config DataAzurermSubscriptionTemplateDeploymentConfig) DataAzurermSubscriptionTemplateDeployment
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermSubscriptionTemplateDeployment.DataAzurermSubscriptionTemplateDeployment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermsubscriptiontemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsubscriptiontemplatedeployment"
 
 dataazurermsubscriptiontemplatedeployment.DataAzurermSubscriptionTemplateDeployment_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermSubscriptionTemplateDeployment.DataAzurermSubscriptionTemplateDeployment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermsubscriptiontemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsubscriptiontemplatedeployment"
 
 dataazurermsubscriptiontemplatedeployment.DataAzurermSubscriptionTemplateDeployment_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermsubscriptiontemplatedeployment.DataAzurermSubscriptionTemplateDeploym
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermSubscriptionTemplateDeployment.DataAzurermSubscriptionTemplateDeployment.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermsubscriptiontemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsubscriptiontemplatedeployment"
 
 dataazurermsubscriptiontemplatedeployment.DataAzurermSubscriptionTemplateDeployment_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -597,7 +597,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSubscriptionTemplateDeployment.DataAzurermSubscriptionTemplateDeploymentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermsubscriptiontemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsubscriptiontemplatedeployment"
 
 &dataazurermsubscriptiontemplatedeployment.DataAzurermSubscriptionTemplateDeploymentConfig {
 	Connection: interface{},
@@ -609,7 +609,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermsubscri
 	Provisioners: *[]interface{},
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.dataAzurermSubscriptionTemplateDeployment.DataAzurermSubscriptionTemplateDeploymentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermSubscriptionTemplateDeployment.DataAzurermSubscriptionTemplateDeploymentTimeouts,
 }
 ```
 
@@ -746,7 +746,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSubscriptionTemplateDeployment.DataAzurermSubscriptionTemplateDeploymentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermsubscriptiontemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsubscriptiontemplatedeployment"
 
 &dataazurermsubscriptiontemplatedeployment.DataAzurermSubscriptionTemplateDeploymentTimeouts {
 	Read: *string,
@@ -780,7 +780,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSubscriptionTemplateDeployment.DataAzurermSubscriptionTemplateDeploymentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermsubscriptiontemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsubscriptiontemplatedeployment"
 
 dataazurermsubscriptiontemplatedeployment.NewDataAzurermSubscriptionTemplateDeploymentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermSubscriptionTemplateDeploymentTimeoutsOutputReference
 ```
