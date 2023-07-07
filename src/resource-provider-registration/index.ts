@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_provider_registration
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/resource_provider_registration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,36 +8,36 @@ import * as cdktf from 'cdktf';
 
 export interface ResourceProviderRegistrationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_provider_registration#id ResourceProviderRegistration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/resource_provider_registration#id ResourceProviderRegistration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_provider_registration#name ResourceProviderRegistration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/resource_provider_registration#name ResourceProviderRegistration#name}
   */
   readonly name: string;
   /**
   * feature block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_provider_registration#feature ResourceProviderRegistration#feature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/resource_provider_registration#feature ResourceProviderRegistration#feature}
   */
   readonly feature?: ResourceProviderRegistrationFeature[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_provider_registration#timeouts ResourceProviderRegistration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/resource_provider_registration#timeouts ResourceProviderRegistration#timeouts}
   */
   readonly timeouts?: ResourceProviderRegistrationTimeouts;
 }
 export interface ResourceProviderRegistrationFeature {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_provider_registration#name ResourceProviderRegistration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/resource_provider_registration#name ResourceProviderRegistration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_provider_registration#registered ResourceProviderRegistration#registered}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/resource_provider_registration#registered ResourceProviderRegistration#registered}
   */
   readonly registered: boolean | cdktf.IResolvable;
 }
@@ -156,19 +151,19 @@ export class ResourceProviderRegistrationFeatureList extends cdktf.ComplexList {
 }
 export interface ResourceProviderRegistrationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_provider_registration#create ResourceProviderRegistration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/resource_provider_registration#create ResourceProviderRegistration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_provider_registration#delete ResourceProviderRegistration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/resource_provider_registration#delete ResourceProviderRegistration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_provider_registration#read ResourceProviderRegistration#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/resource_provider_registration#read ResourceProviderRegistration#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_provider_registration#update ResourceProviderRegistration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/resource_provider_registration#update ResourceProviderRegistration#update}
   */
   readonly update?: string;
 }
@@ -312,7 +307,7 @@ export class ResourceProviderRegistrationTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_provider_registration azurerm_resource_provider_registration}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/resource_provider_registration azurerm_resource_provider_registration}
 */
 export class ResourceProviderRegistration extends cdktf.TerraformResource {
 
@@ -326,7 +321,7 @@ export class ResourceProviderRegistration extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_provider_registration azurerm_resource_provider_registration} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/resource_provider_registration azurerm_resource_provider_registration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -337,7 +332,7 @@ export class ResourceProviderRegistration extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_resource_provider_registration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.63.0',
+        providerVersion: '3.64.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

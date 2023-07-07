@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,48 +8,48 @@ import * as cdktf from 'cdktf';
 
 export interface DatabricksAccessConnectorConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector#id DatabricksAccessConnector#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector#id DatabricksAccessConnector#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector#location DatabricksAccessConnector#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector#location DatabricksAccessConnector#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector#name DatabricksAccessConnector#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector#name DatabricksAccessConnector#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector#resource_group_name DatabricksAccessConnector#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector#resource_group_name DatabricksAccessConnector#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector#tags DatabricksAccessConnector#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector#tags DatabricksAccessConnector#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector#identity DatabricksAccessConnector#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector#identity DatabricksAccessConnector#identity}
   */
   readonly identity?: DatabricksAccessConnectorIdentity;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector#timeouts DatabricksAccessConnector#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector#timeouts DatabricksAccessConnector#timeouts}
   */
   readonly timeouts?: DatabricksAccessConnectorTimeouts;
 }
 export interface DatabricksAccessConnectorIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector#identity_ids DatabricksAccessConnector#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector#identity_ids DatabricksAccessConnector#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector#type DatabricksAccessConnector#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector#type DatabricksAccessConnector#type}
   */
   readonly type: string;
 }
@@ -149,19 +144,19 @@ export class DatabricksAccessConnectorIdentityOutputReference extends cdktf.Comp
 }
 export interface DatabricksAccessConnectorTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector#create DatabricksAccessConnector#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector#create DatabricksAccessConnector#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector#delete DatabricksAccessConnector#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector#delete DatabricksAccessConnector#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector#read DatabricksAccessConnector#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector#read DatabricksAccessConnector#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector#update DatabricksAccessConnector#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector#update DatabricksAccessConnector#update}
   */
   readonly update?: string;
 }
@@ -305,7 +300,7 @@ export class DatabricksAccessConnectorTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector azurerm_databricks_access_connector}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector azurerm_databricks_access_connector}
 */
 export class DatabricksAccessConnector extends cdktf.TerraformResource {
 
@@ -319,7 +314,7 @@ export class DatabricksAccessConnector extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/databricks_access_connector azurerm_databricks_access_connector} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/databricks_access_connector azurerm_databricks_access_connector} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -330,7 +325,7 @@ export class DatabricksAccessConnector extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_databricks_access_connector',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.63.0',
+        providerVersion: '3.64.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
