@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqldatabase"
 
 mysqldatabase.NewMysqlDatabase(scope Construct, id *string, config MysqlDatabaseConfig) MysqlDatabase
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqldatabase"
 
 mysqldatabase.MysqlDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqldatabase"
 
 mysqldatabase.MysqlDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ mysqldatabase.MysqlDatabase_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqldatabase"
 
 mysqldatabase.MysqlDatabase_IsTerraformResource(x interface{}) *bool
 ```
@@ -696,7 +696,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqldatabase"
 
 &mysqldatabase.MysqlDatabaseConfig {
 	Connection: interface{},
@@ -712,7 +712,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
 	ResourceGroupName: *string,
 	ServerName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mysqlDatabase.MysqlDatabaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.mysqlDatabase.MysqlDatabaseTimeouts,
 }
 ```
 
@@ -901,7 +901,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqldatabase"
 
 &mysqldatabase.MysqlDatabaseTimeouts {
 	Create: *string,
@@ -977,7 +977,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqldatabase"
 
 mysqldatabase.NewMysqlDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MysqlDatabaseTimeoutsOutputReference
 ```
