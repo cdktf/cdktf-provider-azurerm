@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,120 +8,120 @@ import * as cdktf from 'cdktf';
 
 export interface MonitorActionGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#enabled MonitorActionGroup#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#enabled MonitorActionGroup#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#id MonitorActionGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#id MonitorActionGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#location MonitorActionGroup#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#location MonitorActionGroup#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#resource_group_name MonitorActionGroup#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#resource_group_name MonitorActionGroup#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#short_name MonitorActionGroup#short_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#short_name MonitorActionGroup#short_name}
   */
   readonly shortName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#tags MonitorActionGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#tags MonitorActionGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * arm_role_receiver block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#arm_role_receiver MonitorActionGroup#arm_role_receiver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#arm_role_receiver MonitorActionGroup#arm_role_receiver}
   */
   readonly armRoleReceiver?: MonitorActionGroupArmRoleReceiver[] | cdktf.IResolvable;
   /**
   * automation_runbook_receiver block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#automation_runbook_receiver MonitorActionGroup#automation_runbook_receiver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#automation_runbook_receiver MonitorActionGroup#automation_runbook_receiver}
   */
   readonly automationRunbookReceiver?: MonitorActionGroupAutomationRunbookReceiver[] | cdktf.IResolvable;
   /**
   * azure_app_push_receiver block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#azure_app_push_receiver MonitorActionGroup#azure_app_push_receiver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#azure_app_push_receiver MonitorActionGroup#azure_app_push_receiver}
   */
   readonly azureAppPushReceiver?: MonitorActionGroupAzureAppPushReceiver[] | cdktf.IResolvable;
   /**
   * azure_function_receiver block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#azure_function_receiver MonitorActionGroup#azure_function_receiver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#azure_function_receiver MonitorActionGroup#azure_function_receiver}
   */
   readonly azureFunctionReceiver?: MonitorActionGroupAzureFunctionReceiver[] | cdktf.IResolvable;
   /**
   * email_receiver block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#email_receiver MonitorActionGroup#email_receiver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#email_receiver MonitorActionGroup#email_receiver}
   */
   readonly emailReceiver?: MonitorActionGroupEmailReceiver[] | cdktf.IResolvable;
   /**
   * event_hub_receiver block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#event_hub_receiver MonitorActionGroup#event_hub_receiver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#event_hub_receiver MonitorActionGroup#event_hub_receiver}
   */
   readonly eventHubReceiver?: MonitorActionGroupEventHubReceiver[] | cdktf.IResolvable;
   /**
   * itsm_receiver block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#itsm_receiver MonitorActionGroup#itsm_receiver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#itsm_receiver MonitorActionGroup#itsm_receiver}
   */
   readonly itsmReceiver?: MonitorActionGroupItsmReceiver[] | cdktf.IResolvable;
   /**
   * logic_app_receiver block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#logic_app_receiver MonitorActionGroup#logic_app_receiver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#logic_app_receiver MonitorActionGroup#logic_app_receiver}
   */
   readonly logicAppReceiver?: MonitorActionGroupLogicAppReceiver[] | cdktf.IResolvable;
   /**
   * sms_receiver block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#sms_receiver MonitorActionGroup#sms_receiver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#sms_receiver MonitorActionGroup#sms_receiver}
   */
   readonly smsReceiver?: MonitorActionGroupSmsReceiver[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#timeouts MonitorActionGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#timeouts MonitorActionGroup#timeouts}
   */
   readonly timeouts?: MonitorActionGroupTimeouts;
   /**
   * voice_receiver block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#voice_receiver MonitorActionGroup#voice_receiver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#voice_receiver MonitorActionGroup#voice_receiver}
   */
   readonly voiceReceiver?: MonitorActionGroupVoiceReceiver[] | cdktf.IResolvable;
   /**
   * webhook_receiver block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#webhook_receiver MonitorActionGroup#webhook_receiver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#webhook_receiver MonitorActionGroup#webhook_receiver}
   */
   readonly webhookReceiver?: MonitorActionGroupWebhookReceiver[] | cdktf.IResolvable;
 }
 export interface MonitorActionGroupArmRoleReceiver {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#role_id MonitorActionGroup#role_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#role_id MonitorActionGroup#role_id}
   */
   readonly roleId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
   */
   readonly useCommonAlertSchema?: boolean | cdktf.IResolvable;
 }
@@ -263,31 +258,31 @@ export class MonitorActionGroupArmRoleReceiverList extends cdktf.ComplexList {
 }
 export interface MonitorActionGroupAutomationRunbookReceiver {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#automation_account_id MonitorActionGroup#automation_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#automation_account_id MonitorActionGroup#automation_account_id}
   */
   readonly automationAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#is_global_runbook MonitorActionGroup#is_global_runbook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#is_global_runbook MonitorActionGroup#is_global_runbook}
   */
   readonly isGlobalRunbook: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#runbook_name MonitorActionGroup#runbook_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#runbook_name MonitorActionGroup#runbook_name}
   */
   readonly runbookName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#service_uri MonitorActionGroup#service_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#service_uri MonitorActionGroup#service_uri}
   */
   readonly serviceUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
   */
   readonly useCommonAlertSchema?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#webhook_resource_id MonitorActionGroup#webhook_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#webhook_resource_id MonitorActionGroup#webhook_resource_id}
   */
   readonly webhookResourceId: string;
 }
@@ -504,11 +499,11 @@ export class MonitorActionGroupAutomationRunbookReceiverList extends cdktf.Compl
 }
 export interface MonitorActionGroupAzureAppPushReceiver {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#email_address MonitorActionGroup#email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#email_address MonitorActionGroup#email_address}
   */
   readonly emailAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
   */
   readonly name: string;
 }
@@ -622,23 +617,23 @@ export class MonitorActionGroupAzureAppPushReceiverList extends cdktf.ComplexLis
 }
 export interface MonitorActionGroupAzureFunctionReceiver {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#function_app_resource_id MonitorActionGroup#function_app_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#function_app_resource_id MonitorActionGroup#function_app_resource_id}
   */
   readonly functionAppResourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#function_name MonitorActionGroup#function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#function_name MonitorActionGroup#function_name}
   */
   readonly functionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#http_trigger_url MonitorActionGroup#http_trigger_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#http_trigger_url MonitorActionGroup#http_trigger_url}
   */
   readonly httpTriggerUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
   */
   readonly useCommonAlertSchema?: boolean | cdktf.IResolvable;
 }
@@ -815,15 +810,15 @@ export class MonitorActionGroupAzureFunctionReceiverList extends cdktf.ComplexLi
 }
 export interface MonitorActionGroupEmailReceiver {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#email_address MonitorActionGroup#email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#email_address MonitorActionGroup#email_address}
   */
   readonly emailAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
   */
   readonly useCommonAlertSchema?: boolean | cdktf.IResolvable;
 }
@@ -960,31 +955,31 @@ export class MonitorActionGroupEmailReceiverList extends cdktf.ComplexList {
 }
 export interface MonitorActionGroupEventHubReceiver {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#event_hub_id MonitorActionGroup#event_hub_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#event_hub_id MonitorActionGroup#event_hub_id}
   */
   readonly eventHubId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#event_hub_name MonitorActionGroup#event_hub_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#event_hub_name MonitorActionGroup#event_hub_name}
   */
   readonly eventHubName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#event_hub_namespace MonitorActionGroup#event_hub_namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#event_hub_namespace MonitorActionGroup#event_hub_namespace}
   */
   readonly eventHubNamespace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#subscription_id MonitorActionGroup#subscription_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#subscription_id MonitorActionGroup#subscription_id}
   */
   readonly subscriptionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#tenant_id MonitorActionGroup#tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#tenant_id MonitorActionGroup#tenant_id}
   */
   readonly tenantId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
   */
   readonly useCommonAlertSchema?: boolean | cdktf.IResolvable;
 }
@@ -1216,23 +1211,23 @@ export class MonitorActionGroupEventHubReceiverList extends cdktf.ComplexList {
 }
 export interface MonitorActionGroupItsmReceiver {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#connection_id MonitorActionGroup#connection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#connection_id MonitorActionGroup#connection_id}
   */
   readonly connectionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#region MonitorActionGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#region MonitorActionGroup#region}
   */
   readonly region: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#ticket_configuration MonitorActionGroup#ticket_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#ticket_configuration MonitorActionGroup#ticket_configuration}
   */
   readonly ticketConfiguration: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#workspace_id MonitorActionGroup#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#workspace_id MonitorActionGroup#workspace_id}
   */
   readonly workspaceId: string;
 }
@@ -1406,19 +1401,19 @@ export class MonitorActionGroupItsmReceiverList extends cdktf.ComplexList {
 }
 export interface MonitorActionGroupLogicAppReceiver {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#callback_url MonitorActionGroup#callback_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#callback_url MonitorActionGroup#callback_url}
   */
   readonly callbackUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#resource_id MonitorActionGroup#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#resource_id MonitorActionGroup#resource_id}
   */
   readonly resourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
   */
   readonly useCommonAlertSchema?: boolean | cdktf.IResolvable;
 }
@@ -1575,15 +1570,15 @@ export class MonitorActionGroupLogicAppReceiverList extends cdktf.ComplexList {
 }
 export interface MonitorActionGroupSmsReceiver {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#country_code MonitorActionGroup#country_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#country_code MonitorActionGroup#country_code}
   */
   readonly countryCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#phone_number MonitorActionGroup#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#phone_number MonitorActionGroup#phone_number}
   */
   readonly phoneNumber: string;
 }
@@ -1717,19 +1712,19 @@ export class MonitorActionGroupSmsReceiverList extends cdktf.ComplexList {
 }
 export interface MonitorActionGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#create MonitorActionGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#create MonitorActionGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#delete MonitorActionGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#delete MonitorActionGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#read MonitorActionGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#read MonitorActionGroup#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#update MonitorActionGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#update MonitorActionGroup#update}
   */
   readonly update?: string;
 }
@@ -1873,15 +1868,15 @@ export class MonitorActionGroupTimeoutsOutputReference extends cdktf.ComplexObje
 }
 export interface MonitorActionGroupVoiceReceiver {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#country_code MonitorActionGroup#country_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#country_code MonitorActionGroup#country_code}
   */
   readonly countryCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#phone_number MonitorActionGroup#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#phone_number MonitorActionGroup#phone_number}
   */
   readonly phoneNumber: string;
 }
@@ -2015,15 +2010,15 @@ export class MonitorActionGroupVoiceReceiverList extends cdktf.ComplexList {
 }
 export interface MonitorActionGroupWebhookReceiverAadAuth {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#identifier_uri MonitorActionGroup#identifier_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#identifier_uri MonitorActionGroup#identifier_uri}
   */
   readonly identifierUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#object_id MonitorActionGroup#object_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#object_id MonitorActionGroup#object_id}
   */
   readonly objectId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#tenant_id MonitorActionGroup#tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#tenant_id MonitorActionGroup#tenant_id}
   */
   readonly tenantId?: string;
 }
@@ -2131,21 +2126,21 @@ export class MonitorActionGroupWebhookReceiverAadAuthOutputReference extends cdk
 }
 export interface MonitorActionGroupWebhookReceiver {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#name MonitorActionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#service_uri MonitorActionGroup#service_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#service_uri MonitorActionGroup#service_uri}
   */
   readonly serviceUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
   */
   readonly useCommonAlertSchema?: boolean | cdktf.IResolvable;
   /**
   * aad_auth block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group#aad_auth MonitorActionGroup#aad_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group#aad_auth MonitorActionGroup#aad_auth}
   */
   readonly aadAuth?: MonitorActionGroupWebhookReceiverAadAuth;
 }
@@ -2305,7 +2300,7 @@ export class MonitorActionGroupWebhookReceiverList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group azurerm_monitor_action_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group azurerm_monitor_action_group}
 */
 export class MonitorActionGroup extends cdktf.TerraformResource {
 
@@ -2319,7 +2314,7 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/monitor_action_group azurerm_monitor_action_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/monitor_action_group azurerm_monitor_action_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2330,7 +2325,7 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_action_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.63.0',
+        providerVersion: '3.64.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
