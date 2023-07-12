@@ -1,6 +1,6 @@
 # `data_azurerm_management_group_template_deployment`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_management_group_template_deployment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/management_group_template_deployment).
+Refer to the Terraform Registory for docs: [`data_azurerm_management_group_template_deployment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/data-sources/management_group_template_deployment).
 
 # `dataAzurermManagementGroupTemplateDeployment` Submodule <a name="`dataAzurermManagementGroupTemplateDeployment` Submodule" id="@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_management_group_templ
 
 ### DataAzurermManagementGroupTemplateDeployment <a name="DataAzurermManagementGroupTemplateDeployment" id="@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment.DataAzurermManagementGroupTemplateDeployment"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/management_group_template_deployment azurerm_management_group_template_deployment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/data-sources/management_group_template_deployment azurerm_management_group_template_deployment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment.DataAzurermManagementGroupTemplateDeployment.Initializer"></a>
 
@@ -635,9 +635,9 @@ const dataAzurermManagementGroupTemplateDeploymentConfig: dataAzurermManagementG
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment.DataAzurermManagementGroupTemplateDeploymentConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment.DataAzurermManagementGroupTemplateDeploymentConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment.DataAzurermManagementGroupTemplateDeploymentConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment.DataAzurermManagementGroupTemplateDeploymentConfig.property.managementGroupId">managementGroupId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/management_group_template_deployment#management_group_id DataAzurermManagementGroupTemplateDeployment#management_group_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment.DataAzurermManagementGroupTemplateDeploymentConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/management_group_template_deployment#name DataAzurermManagementGroupTemplateDeployment#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment.DataAzurermManagementGroupTemplateDeploymentConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/management_group_template_deployment#id DataAzurermManagementGroupTemplateDeployment#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment.DataAzurermManagementGroupTemplateDeploymentConfig.property.managementGroupId">managementGroupId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/data-sources/management_group_template_deployment#management_group_id DataAzurermManagementGroupTemplateDeployment#management_group_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment.DataAzurermManagementGroupTemplateDeploymentConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/data-sources/management_group_template_deployment#name DataAzurermManagementGroupTemplateDeployment#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment.DataAzurermManagementGroupTemplateDeploymentConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/data-sources/management_group_template_deployment#id DataAzurermManagementGroupTemplateDeployment#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment.DataAzurermManagementGroupTemplateDeploymentConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment.DataAzurermManagementGroupTemplateDeploymentTimeouts">DataAzurermManagementGroupTemplateDeploymentTimeouts</a></code> | timeouts block. |
 
 ---
@@ -720,7 +720,7 @@ public readonly managementGroupId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/management_group_template_deployment#management_group_id DataAzurermManagementGroupTemplateDeployment#management_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/data-sources/management_group_template_deployment#management_group_id DataAzurermManagementGroupTemplateDeployment#management_group_id}.
 
 ---
 
@@ -732,7 +732,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/management_group_template_deployment#name DataAzurermManagementGroupTemplateDeployment#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/data-sources/management_group_template_deployment#name DataAzurermManagementGroupTemplateDeployment#name}.
 
 ---
 
@@ -744,7 +744,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/management_group_template_deployment#id DataAzurermManagementGroupTemplateDeployment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/data-sources/management_group_template_deployment#id DataAzurermManagementGroupTemplateDeployment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -761,7 +761,7 @@ public readonly timeouts: DataAzurermManagementGroupTemplateDeploymentTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/management_group_template_deployment#timeouts DataAzurermManagementGroupTemplateDeployment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/data-sources/management_group_template_deployment#timeouts DataAzurermManagementGroupTemplateDeployment#timeouts}
 
 ---
 
@@ -779,7 +779,7 @@ const dataAzurermManagementGroupTemplateDeploymentTimeouts: dataAzurermManagemen
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment.DataAzurermManagementGroupTemplateDeploymentTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/management_group_template_deployment#read DataAzurermManagementGroupTemplateDeployment#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagementGroupTemplateDeployment.DataAzurermManagementGroupTemplateDeploymentTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/data-sources/management_group_template_deployment#read DataAzurermManagementGroupTemplateDeployment#read}. |
 
 ---
 
@@ -791,7 +791,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/management_group_template_deployment#read DataAzurermManagementGroupTemplateDeployment#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/data-sources/management_group_template_deployment#read DataAzurermManagementGroupTemplateDeployment#read}.
 
 ---
 
