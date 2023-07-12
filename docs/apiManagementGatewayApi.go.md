@@ -1,6 +1,6 @@
 # `azurerm_api_management_gateway_api`
 
-Refer to the Terraform Registory for docs: [`azurerm_api_management_gateway_api`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api).
+Refer to the Terraform Registory for docs: [`azurerm_api_management_gateway_api`](https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api).
 
 # `apiManagementGatewayApi` Submodule <a name="`apiManagementGatewayApi` Submodule" id="@cdktf/provider-azurerm.apiManagementGatewayApi"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_api_management_gateway_api`
 
 ### ApiManagementGatewayApi <a name="ApiManagementGatewayApi" id="@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApi"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api azurerm_api_management_gateway_api}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api azurerm_api_management_gateway_api}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApi.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementgatewayapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgatewayapi"
 
 apimanagementgatewayapi.NewApiManagementGatewayApi(scope Construct, id *string, config ApiManagementGatewayApiConfig) ApiManagementGatewayApi
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApi.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementgatewayapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgatewayapi"
 
 apimanagementgatewayapi.ApiManagementGatewayApi_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApi.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementgatewayapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgatewayapi"
 
 apimanagementgatewayapi.ApiManagementGatewayApi_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ apimanagementgatewayapi.ApiManagementGatewayApi_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApi.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementgatewayapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgatewayapi"
 
 apimanagementgatewayapi.ApiManagementGatewayApi_IsTerraformResource(x interface{}) *bool
 ```
@@ -630,7 +630,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementgatewayapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgatewayapi"
 
 &apimanagementgatewayapi.ApiManagementGatewayApiConfig {
 	Connection: interface{},
@@ -643,7 +643,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementgatew
 	ApiId: *string,
 	GatewayId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.apiManagementGatewayApi.ApiManagementGatewayApiTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementGatewayApi.ApiManagementGatewayApiTimeouts,
 }
 ```
 
@@ -658,9 +658,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementgatew
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiConfig.property.apiId">ApiId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api#api_id ApiManagementGatewayApi#api_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiConfig.property.gatewayId">GatewayId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api#gateway_id ApiManagementGatewayApi#gateway_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api#id ApiManagementGatewayApi#id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiConfig.property.apiId">ApiId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api#api_id ApiManagementGatewayApi#api_id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiConfig.property.gatewayId">GatewayId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api#gateway_id ApiManagementGatewayApi#gateway_id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api#id ApiManagementGatewayApi#id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiTimeouts">ApiManagementGatewayApiTimeouts</a></code> | timeouts block. |
 
 ---
@@ -743,7 +743,7 @@ ApiId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api#api_id ApiManagementGatewayApi#api_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api#api_id ApiManagementGatewayApi#api_id}.
 
 ---
 
@@ -755,7 +755,7 @@ GatewayId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api#gateway_id ApiManagementGatewayApi#gateway_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api#gateway_id ApiManagementGatewayApi#gateway_id}.
 
 ---
 
@@ -767,7 +767,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api#id ApiManagementGatewayApi#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api#id ApiManagementGatewayApi#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -784,7 +784,7 @@ Timeouts ApiManagementGatewayApiTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api#timeouts ApiManagementGatewayApi#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api#timeouts ApiManagementGatewayApi#timeouts}
 
 ---
 
@@ -793,7 +793,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementgatewayapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgatewayapi"
 
 &apimanagementgatewayapi.ApiManagementGatewayApiTimeouts {
 	Create: *string,
@@ -807,10 +807,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementgatew
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api#create ApiManagementGatewayApi#create}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api#delete ApiManagementGatewayApi#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api#read ApiManagementGatewayApi#read}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api#update ApiManagementGatewayApi#update}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api#create ApiManagementGatewayApi#create}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api#delete ApiManagementGatewayApi#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api#read ApiManagementGatewayApi#read}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api#update ApiManagementGatewayApi#update}. |
 
 ---
 
@@ -822,7 +822,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api#create ApiManagementGatewayApi#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api#create ApiManagementGatewayApi#create}.
 
 ---
 
@@ -834,7 +834,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api#delete ApiManagementGatewayApi#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api#delete ApiManagementGatewayApi#delete}.
 
 ---
 
@@ -846,7 +846,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api#read ApiManagementGatewayApi#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api#read ApiManagementGatewayApi#read}.
 
 ---
 
@@ -858,7 +858,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/api_management_gateway_api#update ApiManagementGatewayApi#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/api_management_gateway_api#update ApiManagementGatewayApi#update}.
 
 ---
 
@@ -869,7 +869,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementGatewayApi.ApiManagementGatewayApiTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementgatewayapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgatewayapi"
 
 apimanagementgatewayapi.NewApiManagementGatewayApiTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementGatewayApiTimeoutsOutputReference
 ```
