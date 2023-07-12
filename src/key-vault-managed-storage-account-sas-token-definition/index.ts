@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.64.0/docs/resources/key_vault_managed_storage_account_sas_token_definition
 // generated from terraform resource schema
 
