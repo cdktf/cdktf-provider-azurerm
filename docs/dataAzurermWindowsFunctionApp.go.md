@@ -1,6 +1,6 @@
 # `data_azurerm_windows_function_app`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_windows_function_app`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/windows_function_app).
+Refer to the Terraform Registory for docs: [`data_azurerm_windows_function_app`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/windows_function_app).
 
 # `dataAzurermWindowsFunctionApp` Submodule <a name="`dataAzurermWindowsFunctionApp` Submodule" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_windows_function_app`]
 
 ### DataAzurermWindowsFunctionApp <a name="DataAzurermWindowsFunctionApp" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionApp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/windows_function_app azurerm_windows_function_app}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/windows_function_app azurerm_windows_function_app}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionApp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionApp(scope Construct, id *string, config DataAzurermWindowsFunctionAppConfig) DataAzurermWindowsFunctionApp
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionApp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionApp_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionApp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionApp_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionApp_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionApp.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionApp_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -394,6 +394,7 @@ dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionApp_IsTerraformDataSourc
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionApp.property.outboundIpAddressList">OutboundIpAddressList</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionApp.property.possibleOutboundIpAddresses">PossibleOutboundIpAddresses</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionApp.property.possibleOutboundIpAddressList">PossibleOutboundIpAddressList</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionApp.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionApp.property.servicePlanId">ServicePlanId</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionApp.property.siteConfig">SiteConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigList">DataAzurermWindowsFunctionAppSiteConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionApp.property.siteCredential">SiteCredential</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteCredentialList">DataAzurermWindowsFunctionAppSiteCredentialList</a></code> | *No description.* |
@@ -777,6 +778,16 @@ func PossibleOutboundIpAddressList() *[]*string
 
 ---
 
+##### `PublicNetworkAccessEnabled`<sup>Required</sup> <a name="PublicNetworkAccessEnabled" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionApp.property.publicNetworkAccessEnabled"></a>
+
+```go
+func PublicNetworkAccessEnabled() IResolvable
+```
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolvable
+
+---
+
 ##### `ServicePlanId`<sup>Required</sup> <a name="ServicePlanId" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionApp.property.servicePlanId"></a>
 
 ```go
@@ -982,7 +993,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettings {
 
@@ -995,7 +1006,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsActiveDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsActiveDirectory {
 
@@ -1008,7 +1019,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsFacebook.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsFacebook {
 
@@ -1021,7 +1032,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsGithub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsGithub {
 
@@ -1034,7 +1045,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsGoogle.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsGoogle {
 
@@ -1047,7 +1058,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsMicrosoft.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsMicrosoft {
 
@@ -1060,7 +1071,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsTwitter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsTwitter {
 
@@ -1073,7 +1084,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsV2 {
 
@@ -1086,7 +1097,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2 {
 
@@ -1099,7 +1110,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2 {
 
@@ -1112,7 +1123,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2 {
 
@@ -1125,7 +1136,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2 {
 
@@ -1138,7 +1149,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2 {
 
@@ -1151,7 +1162,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2 {
 
@@ -1164,7 +1175,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2 {
 
@@ -1177,7 +1188,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2Login.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsV2Login {
 
@@ -1190,7 +1201,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2 {
 
@@ -1203,7 +1214,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2 {
 
@@ -1216,7 +1227,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppBackup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppBackup {
 
@@ -1229,7 +1240,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppBackupSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppBackupSchedule {
 
@@ -1242,7 +1253,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppConfig {
 	Connection: interface{},
@@ -1255,7 +1266,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppTimeouts,
 }
 ```
 
@@ -1270,9 +1281,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/windows_function_app#name DataAzurermWindowsFunctionApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/windows_function_app#resource_group_name DataAzurermWindowsFunctionApp#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/windows_function_app#id DataAzurermWindowsFunctionApp#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/windows_function_app#name DataAzurermWindowsFunctionApp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/windows_function_app#resource_group_name DataAzurermWindowsFunctionApp#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/windows_function_app#id DataAzurermWindowsFunctionApp#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppTimeouts">DataAzurermWindowsFunctionAppTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1355,7 +1366,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/windows_function_app#name DataAzurermWindowsFunctionApp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/windows_function_app#name DataAzurermWindowsFunctionApp#name}.
 
 ---
 
@@ -1367,7 +1378,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/windows_function_app#resource_group_name DataAzurermWindowsFunctionApp#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/windows_function_app#resource_group_name DataAzurermWindowsFunctionApp#resource_group_name}.
 
 ---
 
@@ -1379,7 +1390,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/windows_function_app#id DataAzurermWindowsFunctionApp#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/windows_function_app#id DataAzurermWindowsFunctionApp#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1396,7 +1407,7 @@ Timeouts DataAzurermWindowsFunctionAppTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/windows_function_app#timeouts DataAzurermWindowsFunctionApp#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/windows_function_app#timeouts DataAzurermWindowsFunctionApp#timeouts}
 
 ---
 
@@ -1405,7 +1416,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppConnectionString.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppConnectionString {
 
@@ -1418,7 +1429,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppIdentity {
 
@@ -1431,7 +1442,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppSiteConfig {
 
@@ -1444,7 +1455,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigApplicationStack.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppSiteConfigApplicationStack {
 
@@ -1457,7 +1468,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigAppServiceLogs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppSiteConfigAppServiceLogs {
 
@@ -1470,7 +1481,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigCors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppSiteConfigCors {
 
@@ -1483,7 +1494,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppSiteConfigIpRestriction {
 
@@ -1496,7 +1507,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppSiteConfigIpRestrictionHeaders {
 
@@ -1509,7 +1520,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigScmIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppSiteConfigScmIpRestriction {
 
@@ -1522,7 +1533,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigScmIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppSiteConfigScmIpRestrictionHeaders {
 
@@ -1535,7 +1546,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppSiteCredential {
 
@@ -1548,7 +1559,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppStickySettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppStickySettings {
 
@@ -1561,7 +1572,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 &dataazurermwindowsfunctionapp.DataAzurermWindowsFunctionAppTimeouts {
 	Read: *string,
@@ -1572,7 +1583,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindows
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/windows_function_app#read DataAzurermWindowsFunctionApp#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/windows_function_app#read DataAzurermWindowsFunctionApp#read}. |
 
 ---
 
@@ -1584,7 +1595,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/windows_function_app#read DataAzurermWindowsFunctionApp#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/windows_function_app#read DataAzurermWindowsFunctionApp#read}.
 
 ---
 
@@ -1595,7 +1606,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsActiveDirectoryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsActiveDirectoryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsActiveDirectoryList
 ```
@@ -1727,7 +1738,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsActiveDirectoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsActiveDirectoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsActiveDirectoryOutputReference
 ```
@@ -2038,7 +2049,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsActiveDirectory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsFacebookList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsFacebookList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsFacebookList
 ```
@@ -2170,7 +2181,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsFacebookOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsFacebookOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsFacebookOutputReference
 ```
@@ -2481,7 +2492,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsFacebook
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsGithubList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsGithubList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsGithubList
 ```
@@ -2613,7 +2624,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsGithubOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsGithubOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsGithubOutputReference
 ```
@@ -2924,7 +2935,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsGithub
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsGoogleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsGoogleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsGoogleList
 ```
@@ -3056,7 +3067,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsGoogleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsGoogleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsGoogleOutputReference
 ```
@@ -3367,7 +3378,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsGoogle
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsList
 ```
@@ -3499,7 +3510,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsMicrosoftList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsMicrosoftList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsMicrosoftList
 ```
@@ -3631,7 +3642,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsMicrosoftOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsMicrosoftOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsMicrosoftOutputReference
 ```
@@ -3942,7 +3953,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsMicrosoft
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsOutputReference
 ```
@@ -4374,7 +4385,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsTwitterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsTwitterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsTwitterList
 ```
@@ -4506,7 +4517,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsTwitterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsTwitterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsTwitterOutputReference
 ```
@@ -4806,7 +4817,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsTwitter
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2List
 ```
@@ -4938,7 +4949,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference
 ```
@@ -5337,7 +5348,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsV2ActiveDirectoryV
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2AppleV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2List
 ```
@@ -5469,7 +5480,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2AppleV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2OutputReference
 ```
@@ -5769,7 +5780,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsV2AppleV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2List
 ```
@@ -5901,7 +5912,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAppV2OutputReference
 ```
@@ -6179,7 +6190,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsV2AzureStaticWebAp
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2List
 ```
@@ -6311,7 +6322,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2OutputReference
 ```
@@ -6699,7 +6710,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsV2CustomOidcV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2List
 ```
@@ -6831,7 +6842,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2OutputReference
 ```
@@ -7142,7 +7153,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsV2FacebookV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2GithubV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2List
 ```
@@ -7274,7 +7285,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2GithubV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2OutputReference
 ```
@@ -7574,7 +7585,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsV2GithubV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2List
 ```
@@ -7706,7 +7717,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2OutputReference
 ```
@@ -8017,7 +8028,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsV2GoogleV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2List
 ```
@@ -8149,7 +8160,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2LoginList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2LoginList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2LoginList
 ```
@@ -8281,7 +8292,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2LoginOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2LoginOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2LoginOutputReference
 ```
@@ -8669,7 +8680,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsV2Login
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2List
 ```
@@ -8801,7 +8812,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2OutputReference
 ```
@@ -9112,7 +9123,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsV2MicrosoftV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2OutputReference
 ```
@@ -9621,7 +9632,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2List
 ```
@@ -9753,7 +9764,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2OutputReference
 ```
@@ -10042,7 +10053,7 @@ func InternalValue() DataAzurermWindowsFunctionAppAuthSettingsV2TwitterV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppBackupList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppBackupList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppBackupList
 ```
@@ -10174,7 +10185,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppBackupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppBackupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppBackupOutputReference
 ```
@@ -10485,7 +10496,7 @@ func InternalValue() DataAzurermWindowsFunctionAppBackup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppBackupScheduleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppBackupScheduleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppBackupScheduleList
 ```
@@ -10617,7 +10628,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppBackupScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppBackupScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppBackupScheduleOutputReference
 ```
@@ -10950,7 +10961,7 @@ func InternalValue() DataAzurermWindowsFunctionAppBackupSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppConnectionStringList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppConnectionStringList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppConnectionStringList
 ```
@@ -11082,7 +11093,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppConnectionStringOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppConnectionStringOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppConnectionStringOutputReference
 ```
@@ -11382,7 +11393,7 @@ func InternalValue() DataAzurermWindowsFunctionAppConnectionString
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppIdentityList
 ```
@@ -11514,7 +11525,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppIdentityOutputReference
 ```
@@ -11825,7 +11836,7 @@ func InternalValue() DataAzurermWindowsFunctionAppIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigApplicationStackList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigApplicationStackList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppSiteConfigApplicationStackList
 ```
@@ -11957,7 +11968,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigApplicationStackOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigApplicationStackOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppSiteConfigApplicationStackOutputReference
 ```
@@ -12290,7 +12301,7 @@ func InternalValue() DataAzurermWindowsFunctionAppSiteConfigApplicationStack
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigAppServiceLogsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigAppServiceLogsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppSiteConfigAppServiceLogsList
 ```
@@ -12422,7 +12433,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigAppServiceLogsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigAppServiceLogsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppSiteConfigAppServiceLogsOutputReference
 ```
@@ -12711,7 +12722,7 @@ func InternalValue() DataAzurermWindowsFunctionAppSiteConfigAppServiceLogs
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigCorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigCorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppSiteConfigCorsList
 ```
@@ -12843,7 +12854,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigCorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigCorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppSiteConfigCorsOutputReference
 ```
@@ -13132,7 +13143,7 @@ func InternalValue() DataAzurermWindowsFunctionAppSiteConfigCors
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppSiteConfigIpRestrictionHeadersList
 ```
@@ -13264,7 +13275,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppSiteConfigIpRestrictionHeadersOutputReference
 ```
@@ -13575,7 +13586,7 @@ func InternalValue() DataAzurermWindowsFunctionAppSiteConfigIpRestrictionHeaders
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppSiteConfigIpRestrictionList
 ```
@@ -13707,7 +13718,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppSiteConfigIpRestrictionOutputReference
 ```
@@ -14051,7 +14062,7 @@ func InternalValue() DataAzurermWindowsFunctionAppSiteConfigIpRestriction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppSiteConfigList
 ```
@@ -14183,7 +14194,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppSiteConfigOutputReference
 ```
@@ -14824,7 +14835,7 @@ func InternalValue() DataAzurermWindowsFunctionAppSiteConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigScmIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigScmIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppSiteConfigScmIpRestrictionHeadersList
 ```
@@ -14956,7 +14967,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigScmIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigScmIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppSiteConfigScmIpRestrictionHeadersOutputReference
 ```
@@ -15267,7 +15278,7 @@ func InternalValue() DataAzurermWindowsFunctionAppSiteConfigScmIpRestrictionHead
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigScmIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigScmIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppSiteConfigScmIpRestrictionList
 ```
@@ -15399,7 +15410,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteConfigScmIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteConfigScmIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppSiteConfigScmIpRestrictionOutputReference
 ```
@@ -15743,7 +15754,7 @@ func InternalValue() DataAzurermWindowsFunctionAppSiteConfigScmIpRestriction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteCredentialList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteCredentialList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppSiteCredentialList
 ```
@@ -15875,7 +15886,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppSiteCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppSiteCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppSiteCredentialOutputReference
 ```
@@ -16164,7 +16175,7 @@ func InternalValue() DataAzurermWindowsFunctionAppSiteCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppStickySettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppStickySettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWindowsFunctionAppStickySettingsList
 ```
@@ -16296,7 +16307,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppStickySettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppStickySettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWindowsFunctionAppStickySettingsOutputReference
 ```
@@ -16585,7 +16596,7 @@ func InternalValue() DataAzurermWindowsFunctionAppStickySettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsFunctionApp.DataAzurermWindowsFunctionAppTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermwindowsfunctionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermwindowsfunctionapp"
 
 dataazurermwindowsfunctionapp.NewDataAzurermWindowsFunctionAppTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermWindowsFunctionAppTimeoutsOutputReference
 ```

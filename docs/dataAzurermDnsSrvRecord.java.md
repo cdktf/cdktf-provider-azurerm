@@ -1,6 +1,6 @@
 # `data_azurerm_dns_srv_record`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_dns_srv_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record).
+Refer to the Terraform Registory for docs: [`data_azurerm_dns_srv_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record).
 
 # `dataAzurermDnsSrvRecord` Submodule <a name="`dataAzurermDnsSrvRecord` Submodule" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_dns_srv_record`](https
 
 ### DataAzurermDnsSrvRecord <a name="DataAzurermDnsSrvRecord" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record azurerm_dns_srv_record}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record azurerm_dns_srv_record}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.Initializer"></a>
 
@@ -46,10 +46,10 @@ DataAzurermDnsSrvRecord.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#name DataAzurermDnsSrvRecord#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#resource_group_name DataAzurermDnsSrvRecord#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.Initializer.parameter.zoneName">zoneName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#zone_name DataAzurermDnsSrvRecord#zone_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#id DataAzurermDnsSrvRecord#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#name DataAzurermDnsSrvRecord#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#resource_group_name DataAzurermDnsSrvRecord#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.Initializer.parameter.zoneName">zoneName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#zone_name DataAzurermDnsSrvRecord#zone_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#id DataAzurermDnsSrvRecord#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts">DataAzurermDnsSrvRecordTimeouts</a></code> | timeouts block. |
 
 ---
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#name DataAzurermDnsSrvRecord#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#name DataAzurermDnsSrvRecord#name}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#resource_group_name DataAzurermDnsSrvRecord#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#resource_group_name DataAzurermDnsSrvRecord#resource_group_name}.
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#zone_name DataAzurermDnsSrvRecord#zone_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#zone_name DataAzurermDnsSrvRecord#zone_name}.
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#id DataAzurermDnsSrvRecord#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#id DataAzurermDnsSrvRecord#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -155,7 +155,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#timeouts DataAzurermDnsSrvRecord#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#timeouts DataAzurermDnsSrvRecord#timeouts}
 
 ---
 
@@ -816,10 +816,10 @@ DataAzurermDnsSrvRecordConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#name DataAzurermDnsSrvRecord#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#resource_group_name DataAzurermDnsSrvRecord#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.zoneName">zoneName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#zone_name DataAzurermDnsSrvRecord#zone_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#id DataAzurermDnsSrvRecord#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#name DataAzurermDnsSrvRecord#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#resource_group_name DataAzurermDnsSrvRecord#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.zoneName">zoneName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#zone_name DataAzurermDnsSrvRecord#zone_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#id DataAzurermDnsSrvRecord#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts">DataAzurermDnsSrvRecordTimeouts</a></code> | timeouts block. |
 
 ---
@@ -902,7 +902,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#name DataAzurermDnsSrvRecord#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#name DataAzurermDnsSrvRecord#name}.
 
 ---
 
@@ -914,7 +914,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#resource_group_name DataAzurermDnsSrvRecord#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#resource_group_name DataAzurermDnsSrvRecord#resource_group_name}.
 
 ---
 
@@ -926,7 +926,7 @@ public java.lang.String getZoneName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#zone_name DataAzurermDnsSrvRecord#zone_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#zone_name DataAzurermDnsSrvRecord#zone_name}.
 
 ---
 
@@ -938,7 +938,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#id DataAzurermDnsSrvRecord#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#id DataAzurermDnsSrvRecord#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -955,7 +955,7 @@ public DataAzurermDnsSrvRecordTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#timeouts DataAzurermDnsSrvRecord#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#timeouts DataAzurermDnsSrvRecord#timeouts}
 
 ---
 
@@ -987,7 +987,7 @@ DataAzurermDnsSrvRecordTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#read DataAzurermDnsSrvRecord#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#read DataAzurermDnsSrvRecord#read}. |
 
 ---
 
@@ -999,7 +999,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/dns_srv_record#read DataAzurermDnsSrvRecord#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/dns_srv_record#read DataAzurermDnsSrvRecord#read}.
 
 ---
 

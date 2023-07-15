@@ -1,6 +1,6 @@
 # `azurerm_sentinel_data_connector_microsoft_threat_protection`
 
-Refer to the Terraform Registory for docs: [`azurerm_sentinel_data_connector_microsoft_threat_protection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection).
+Refer to the Terraform Registory for docs: [`azurerm_sentinel_data_connector_microsoft_threat_protection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection).
 
 # `sentinelDataConnectorMicrosoftThreatProtection` Submodule <a name="`sentinelDataConnectorMicrosoftThreatProtection` Submodule" id="@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_sentinel_data_connector_mic
 
 ### SentinelDataConnectorMicrosoftThreatProtection <a name="SentinelDataConnectorMicrosoftThreatProtection" id="@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtection"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection azurerm_sentinel_data_connector_microsoft_threat_protection}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection azurerm_sentinel_data_connector_microsoft_threat_protection}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtection.Initializer"></a>
 
@@ -46,10 +46,10 @@ SentinelDataConnectorMicrosoftThreatProtection.Builder.create(Construct scope, j
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtection.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtection.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtection.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtection.Initializer.parameter.logAnalyticsWorkspaceId">logAnalyticsWorkspaceId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#log_analytics_workspace_id SentinelDataConnectorMicrosoftThreatProtection#log_analytics_workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtection.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#name SentinelDataConnectorMicrosoftThreatProtection#name}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtection.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#id SentinelDataConnectorMicrosoftThreatProtection#id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtection.Initializer.parameter.tenantId">tenantId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#tenant_id SentinelDataConnectorMicrosoftThreatProtection#tenant_id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtection.Initializer.parameter.logAnalyticsWorkspaceId">logAnalyticsWorkspaceId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#log_analytics_workspace_id SentinelDataConnectorMicrosoftThreatProtection#log_analytics_workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtection.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#name SentinelDataConnectorMicrosoftThreatProtection#name}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtection.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#id SentinelDataConnectorMicrosoftThreatProtection#id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtection.Initializer.parameter.tenantId">tenantId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#tenant_id SentinelDataConnectorMicrosoftThreatProtection#tenant_id}. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtection.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionTimeouts">SentinelDataConnectorMicrosoftThreatProtectionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#log_analytics_workspace_id SentinelDataConnectorMicrosoftThreatProtection#log_analytics_workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#log_analytics_workspace_id SentinelDataConnectorMicrosoftThreatProtection#log_analytics_workspace_id}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#name SentinelDataConnectorMicrosoftThreatProtection#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#name SentinelDataConnectorMicrosoftThreatProtection#name}.
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#id SentinelDataConnectorMicrosoftThreatProtection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#id SentinelDataConnectorMicrosoftThreatProtection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -145,7 +145,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#tenant_id SentinelDataConnectorMicrosoftThreatProtection#tenant_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#tenant_id SentinelDataConnectorMicrosoftThreatProtection#tenant_id}.
 
 ---
 
@@ -155,7 +155,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#timeouts SentinelDataConnectorMicrosoftThreatProtection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#timeouts SentinelDataConnectorMicrosoftThreatProtection#timeouts}
 
 ---
 
@@ -801,10 +801,10 @@ SentinelDataConnectorMicrosoftThreatProtectionConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionConfig.property.logAnalyticsWorkspaceId">logAnalyticsWorkspaceId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#log_analytics_workspace_id SentinelDataConnectorMicrosoftThreatProtection#log_analytics_workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#name SentinelDataConnectorMicrosoftThreatProtection#name}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#id SentinelDataConnectorMicrosoftThreatProtection#id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionConfig.property.tenantId">tenantId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#tenant_id SentinelDataConnectorMicrosoftThreatProtection#tenant_id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionConfig.property.logAnalyticsWorkspaceId">logAnalyticsWorkspaceId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#log_analytics_workspace_id SentinelDataConnectorMicrosoftThreatProtection#log_analytics_workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#name SentinelDataConnectorMicrosoftThreatProtection#name}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#id SentinelDataConnectorMicrosoftThreatProtection#id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionConfig.property.tenantId">tenantId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#tenant_id SentinelDataConnectorMicrosoftThreatProtection#tenant_id}. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionTimeouts">SentinelDataConnectorMicrosoftThreatProtectionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -887,7 +887,7 @@ public java.lang.String getLogAnalyticsWorkspaceId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#log_analytics_workspace_id SentinelDataConnectorMicrosoftThreatProtection#log_analytics_workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#log_analytics_workspace_id SentinelDataConnectorMicrosoftThreatProtection#log_analytics_workspace_id}.
 
 ---
 
@@ -899,7 +899,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#name SentinelDataConnectorMicrosoftThreatProtection#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#name SentinelDataConnectorMicrosoftThreatProtection#name}.
 
 ---
 
@@ -911,7 +911,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#id SentinelDataConnectorMicrosoftThreatProtection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#id SentinelDataConnectorMicrosoftThreatProtection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -926,7 +926,7 @@ public java.lang.String getTenantId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#tenant_id SentinelDataConnectorMicrosoftThreatProtection#tenant_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#tenant_id SentinelDataConnectorMicrosoftThreatProtection#tenant_id}.
 
 ---
 
@@ -940,7 +940,7 @@ public SentinelDataConnectorMicrosoftThreatProtectionTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#timeouts SentinelDataConnectorMicrosoftThreatProtection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#timeouts SentinelDataConnectorMicrosoftThreatProtection#timeouts}
 
 ---
 
@@ -962,9 +962,9 @@ SentinelDataConnectorMicrosoftThreatProtectionTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#create SentinelDataConnectorMicrosoftThreatProtection#create}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#delete SentinelDataConnectorMicrosoftThreatProtection#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#read SentinelDataConnectorMicrosoftThreatProtection#read}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#create SentinelDataConnectorMicrosoftThreatProtection#create}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#delete SentinelDataConnectorMicrosoftThreatProtection#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftThreatProtection.SentinelDataConnectorMicrosoftThreatProtectionTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#read SentinelDataConnectorMicrosoftThreatProtection#read}. |
 
 ---
 
@@ -976,7 +976,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#create SentinelDataConnectorMicrosoftThreatProtection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#create SentinelDataConnectorMicrosoftThreatProtection#create}.
 
 ---
 
@@ -988,7 +988,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#delete SentinelDataConnectorMicrosoftThreatProtection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#delete SentinelDataConnectorMicrosoftThreatProtection#delete}.
 
 ---
 
@@ -1000,7 +1000,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#read SentinelDataConnectorMicrosoftThreatProtection#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_data_connector_microsoft_threat_protection#read SentinelDataConnectorMicrosoftThreatProtection#read}.
 
 ---
 
