@@ -1,6 +1,6 @@
 # `azurerm_healthbot`
 
-Refer to the Terraform Registory for docs: [`azurerm_healthbot`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot).
+Refer to the Terraform Registory for docs: [`azurerm_healthbot`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot).
 
 # `healthbot` Submodule <a name="`healthbot` Submodule" id="@cdktf/provider-azurerm.healthbot"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_healthbot`](https://registr
 
 ### Healthbot <a name="Healthbot" id="@cdktf/provider-azurerm.healthbot.Healthbot"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot azurerm_healthbot}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot azurerm_healthbot}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.healthbot.Healthbot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/healthbot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthbot"
 
 healthbot.NewHealthbot(scope Construct, id *string, config HealthbotConfig) Healthbot
 ```
@@ -304,7 +304,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.healthbot.Healthbot.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/healthbot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthbot"
 
 healthbot.Healthbot_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.healthbot.Healthbot.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/healthbot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthbot"
 
 healthbot.Healthbot_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ healthbot.Healthbot_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.healthbot.Healthbot.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/healthbot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthbot"
 
 healthbot.Healthbot_IsTerraformResource(x interface{}) *bool
 ```
@@ -714,7 +714,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.healthbot.HealthbotConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/healthbot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthbot"
 
 &healthbot.HealthbotConfig {
 	Connection: interface{},
@@ -730,7 +730,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/healthbot"
 	SkuName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.healthbot.HealthbotTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.healthbot.HealthbotTimeouts,
 }
 ```
 
@@ -745,12 +745,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/healthbot"
 | <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#location Healthbot#location}. |
-| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#name Healthbot#name}. |
-| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#resource_group_name Healthbot#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.skuName">SkuName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#sku_name Healthbot#sku_name}. |
-| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#id Healthbot#id}. |
-| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#tags Healthbot#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#location Healthbot#location}. |
+| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#name Healthbot#name}. |
+| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#resource_group_name Healthbot#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.skuName">SkuName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#sku_name Healthbot#sku_name}. |
+| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#id Healthbot#id}. |
+| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#tags Healthbot#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotTimeouts">HealthbotTimeouts</a></code> | timeouts block. |
 
 ---
@@ -833,7 +833,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#location Healthbot#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#location Healthbot#location}.
 
 ---
 
@@ -845,7 +845,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#name Healthbot#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#name Healthbot#name}.
 
 ---
 
@@ -857,7 +857,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#resource_group_name Healthbot#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#resource_group_name Healthbot#resource_group_name}.
 
 ---
 
@@ -869,7 +869,7 @@ SkuName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#sku_name Healthbot#sku_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#sku_name Healthbot#sku_name}.
 
 ---
 
@@ -881,7 +881,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#id Healthbot#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#id Healthbot#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -896,7 +896,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#tags Healthbot#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#tags Healthbot#tags}.
 
 ---
 
@@ -910,7 +910,7 @@ Timeouts HealthbotTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#timeouts Healthbot#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#timeouts Healthbot#timeouts}
 
 ---
 
@@ -919,7 +919,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.healthbot.HealthbotTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/healthbot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthbot"
 
 &healthbot.HealthbotTimeouts {
 	Create: *string,
@@ -933,10 +933,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/healthbot"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#create Healthbot#create}. |
-| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#delete Healthbot#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#read Healthbot#read}. |
-| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#update Healthbot#update}. |
+| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#create Healthbot#create}. |
+| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#delete Healthbot#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#read Healthbot#read}. |
+| <code><a href="#@cdktf/provider-azurerm.healthbot.HealthbotTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#update Healthbot#update}. |
 
 ---
 
@@ -948,7 +948,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#create Healthbot#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#create Healthbot#create}.
 
 ---
 
@@ -960,7 +960,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#delete Healthbot#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#delete Healthbot#delete}.
 
 ---
 
@@ -972,7 +972,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#read Healthbot#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#read Healthbot#read}.
 
 ---
 
@@ -984,7 +984,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/healthbot#update Healthbot#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/healthbot#update Healthbot#update}.
 
 ---
 
@@ -995,7 +995,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.healthbot.HealthbotTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/healthbot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthbot"
 
 healthbot.NewHealthbotTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthbotTimeoutsOutputReference
 ```
