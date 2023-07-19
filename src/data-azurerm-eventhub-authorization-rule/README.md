@@ -1,3 +1,3 @@
 # `data_azurerm_eventhub_authorization_rule`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_eventhub_authorization_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/eventhub_authorization_rule).
+Refer to the Terraform Registory for docs: [`data_azurerm_eventhub_authorization_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventhub_authorization_rule).

@@ -1,6 +1,6 @@
 # `data_azurerm_service_plan`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_service_plan`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan).
+Refer to the Terraform Registory for docs: [`data_azurerm_service_plan`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan).
 
 # `dataAzurermServicePlan` Submodule <a name="`dataAzurermServicePlan` Submodule" id="@cdktf/provider-azurerm.dataAzurermServicePlan"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_service_plan`](https:/
 
 ### DataAzurermServicePlan <a name="DataAzurermServicePlan" id="@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlan"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan azurerm_service_plan}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan azurerm_service_plan}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlan.Initializer"></a>
 
@@ -43,9 +43,9 @@ dataAzurermServicePlan.DataAzurermServicePlan(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlan.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlan.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlan.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlan.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#name DataAzurermServicePlan#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlan.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#resource_group_name DataAzurermServicePlan#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlan.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#id DataAzurermServicePlan#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlan.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#name DataAzurermServicePlan#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlan.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#resource_group_name DataAzurermServicePlan#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlan.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#id DataAzurermServicePlan#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlan.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlanTimeouts">DataAzurermServicePlanTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#name DataAzurermServicePlan#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#name DataAzurermServicePlan#name}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#resource_group_name DataAzurermServicePlan#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#resource_group_name DataAzurermServicePlan#resource_group_name}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#id DataAzurermServicePlan#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#id DataAzurermServicePlan#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -143,7 +143,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#timeouts DataAzurermServicePlan#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#timeouts DataAzurermServicePlan#timeouts}
 
 ---
 
@@ -394,7 +394,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#read DataAzurermServicePlan#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#read DataAzurermServicePlan#read}.
 
 ---
 
@@ -889,9 +889,9 @@ dataAzurermServicePlan.DataAzurermServicePlanConfig(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlanConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlanConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlanConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlanConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#name DataAzurermServicePlan#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlanConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#resource_group_name DataAzurermServicePlan#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlanConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#id DataAzurermServicePlan#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlanConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#name DataAzurermServicePlan#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlanConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#resource_group_name DataAzurermServicePlan#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlanConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#id DataAzurermServicePlan#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlanConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlanTimeouts">DataAzurermServicePlanTimeouts</a></code> | timeouts block. |
 
 ---
@@ -974,7 +974,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#name DataAzurermServicePlan#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#name DataAzurermServicePlan#name}.
 
 ---
 
@@ -986,7 +986,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#resource_group_name DataAzurermServicePlan#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#resource_group_name DataAzurermServicePlan#resource_group_name}.
 
 ---
 
@@ -998,7 +998,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#id DataAzurermServicePlan#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#id DataAzurermServicePlan#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1015,7 +1015,7 @@ timeouts: DataAzurermServicePlanTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#timeouts DataAzurermServicePlan#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#timeouts DataAzurermServicePlan#timeouts}
 
 ---
 
@@ -1035,7 +1035,7 @@ dataAzurermServicePlan.DataAzurermServicePlanTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlanTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#read DataAzurermServicePlan#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicePlan.DataAzurermServicePlanTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#read DataAzurermServicePlan#read}. |
 
 ---
 
@@ -1047,7 +1047,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/service_plan#read DataAzurermServicePlan#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/service_plan#read DataAzurermServicePlan#read}.
 
 ---
 

@@ -1,6 +1,6 @@
 # `azurerm_resource_policy_assignment`
 
-Refer to the Terraform Registory for docs: [`azurerm_resource_policy_assignment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment).
+Refer to the Terraform Registory for docs: [`azurerm_resource_policy_assignment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment).
 
 # `resourcePolicyAssignment` Submodule <a name="`resourcePolicyAssignment` Submodule" id="@cdktf/provider-azurerm.resourcePolicyAssignment"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_resource_policy_assignment`
 
 ### ResourcePolicyAssignment <a name="ResourcePolicyAssignment" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignment"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment azurerm_resource_policy_assignment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment azurerm_resource_policy_assignment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.NewResourcePolicyAssignment(scope Construct, id *string, config ResourcePolicyAssignmentConfig) ResourcePolicyAssignment
 ```
@@ -426,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.ResourcePolicyAssignment_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.ResourcePolicyAssignment_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ resourcepolicyassignment.ResourcePolicyAssignment_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.ResourcePolicyAssignment_IsTerraformResource(x interface{}) *bool
 ```
@@ -1023,7 +1023,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 &resourcepolicyassignment.ResourcePolicyAssignmentConfig {
 	Connection: interface{},
@@ -1040,7 +1040,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassi
 	DisplayName: *string,
 	Enforce: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.resourcePolicyAssignment.ResourcePolicyAssignmentIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentIdentity,
 	Location: *string,
 	Metadata: *string,
 	NonComplianceMessage: interface{},
@@ -1048,7 +1048,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassi
 	Overrides: interface{},
 	Parameters: *string,
 	ResourceSelectors: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.resourcePolicyAssignment.ResourcePolicyAssignmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentTimeouts,
 }
 ```
 
@@ -1063,20 +1063,20 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassi
 | <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#name ResourcePolicyAssignment#name}. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.policyDefinitionId">PolicyDefinitionId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#policy_definition_id ResourcePolicyAssignment#policy_definition_id}. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.resourceId">ResourceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#resource_id ResourcePolicyAssignment#resource_id}. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#description ResourcePolicyAssignment#description}. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#display_name ResourcePolicyAssignment#display_name}. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.enforce">Enforce</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#enforce ResourcePolicyAssignment#enforce}. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#id ResourcePolicyAssignment#id}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#name ResourcePolicyAssignment#name}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.policyDefinitionId">PolicyDefinitionId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#policy_definition_id ResourcePolicyAssignment#policy_definition_id}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.resourceId">ResourceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#resource_id ResourcePolicyAssignment#resource_id}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#description ResourcePolicyAssignment#description}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#display_name ResourcePolicyAssignment#display_name}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.enforce">Enforce</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#enforce ResourcePolicyAssignment#enforce}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#id ResourcePolicyAssignment#id}. |
 | <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentIdentity">ResourcePolicyAssignmentIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#location ResourcePolicyAssignment#location}. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.metadata">Metadata</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#metadata ResourcePolicyAssignment#metadata}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#location ResourcePolicyAssignment#location}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.metadata">Metadata</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#metadata ResourcePolicyAssignment#metadata}. |
 | <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.nonComplianceMessage">NonComplianceMessage</a></code> | <code>interface{}</code> | non_compliance_message block. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.notScopes">NotScopes</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#not_scopes ResourcePolicyAssignment#not_scopes}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.notScopes">NotScopes</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#not_scopes ResourcePolicyAssignment#not_scopes}. |
 | <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.overrides">Overrides</a></code> | <code>interface{}</code> | overrides block. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.parameters">Parameters</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#parameters ResourcePolicyAssignment#parameters}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.parameters">Parameters</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#parameters ResourcePolicyAssignment#parameters}. |
 | <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.resourceSelectors">ResourceSelectors</a></code> | <code>interface{}</code> | resource_selectors block. |
 | <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentTimeouts">ResourcePolicyAssignmentTimeouts</a></code> | timeouts block. |
 
@@ -1160,7 +1160,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#name ResourcePolicyAssignment#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#name ResourcePolicyAssignment#name}.
 
 ---
 
@@ -1172,7 +1172,7 @@ PolicyDefinitionId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#policy_definition_id ResourcePolicyAssignment#policy_definition_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#policy_definition_id ResourcePolicyAssignment#policy_definition_id}.
 
 ---
 
@@ -1184,7 +1184,7 @@ ResourceId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#resource_id ResourcePolicyAssignment#resource_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#resource_id ResourcePolicyAssignment#resource_id}.
 
 ---
 
@@ -1196,7 +1196,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#description ResourcePolicyAssignment#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#description ResourcePolicyAssignment#description}.
 
 ---
 
@@ -1208,7 +1208,7 @@ DisplayName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#display_name ResourcePolicyAssignment#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#display_name ResourcePolicyAssignment#display_name}.
 
 ---
 
@@ -1220,7 +1220,7 @@ Enforce interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#enforce ResourcePolicyAssignment#enforce}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#enforce ResourcePolicyAssignment#enforce}.
 
 ---
 
@@ -1232,7 +1232,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#id ResourcePolicyAssignment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#id ResourcePolicyAssignment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1249,7 +1249,7 @@ Identity ResourcePolicyAssignmentIdentity
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#identity ResourcePolicyAssignment#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#identity ResourcePolicyAssignment#identity}
 
 ---
 
@@ -1261,7 +1261,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#location ResourcePolicyAssignment#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#location ResourcePolicyAssignment#location}.
 
 ---
 
@@ -1273,7 +1273,7 @@ Metadata *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#metadata ResourcePolicyAssignment#metadata}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#metadata ResourcePolicyAssignment#metadata}.
 
 ---
 
@@ -1287,7 +1287,7 @@ NonComplianceMessage interface{}
 
 non_compliance_message block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#non_compliance_message ResourcePolicyAssignment#non_compliance_message}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#non_compliance_message ResourcePolicyAssignment#non_compliance_message}
 
 ---
 
@@ -1299,7 +1299,7 @@ NotScopes *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#not_scopes ResourcePolicyAssignment#not_scopes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#not_scopes ResourcePolicyAssignment#not_scopes}.
 
 ---
 
@@ -1313,7 +1313,7 @@ Overrides interface{}
 
 overrides block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#overrides ResourcePolicyAssignment#overrides}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#overrides ResourcePolicyAssignment#overrides}
 
 ---
 
@@ -1325,7 +1325,7 @@ Parameters *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#parameters ResourcePolicyAssignment#parameters}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#parameters ResourcePolicyAssignment#parameters}.
 
 ---
 
@@ -1339,7 +1339,7 @@ ResourceSelectors interface{}
 
 resource_selectors block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#resource_selectors ResourcePolicyAssignment#resource_selectors}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#resource_selectors ResourcePolicyAssignment#resource_selectors}
 
 ---
 
@@ -1353,7 +1353,7 @@ Timeouts ResourcePolicyAssignmentTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#timeouts ResourcePolicyAssignment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#timeouts ResourcePolicyAssignment#timeouts}
 
 ---
 
@@ -1362,7 +1362,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 &resourcepolicyassignment.ResourcePolicyAssignmentIdentity {
 	Type: *string,
@@ -1374,8 +1374,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#type ResourcePolicyAssignment#type}. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#identity_ids ResourcePolicyAssignment#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#type ResourcePolicyAssignment#type}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#identity_ids ResourcePolicyAssignment#identity_ids}. |
 
 ---
 
@@ -1387,7 +1387,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#type ResourcePolicyAssignment#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#type ResourcePolicyAssignment#type}.
 
 ---
 
@@ -1399,7 +1399,7 @@ IdentityIds *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#identity_ids ResourcePolicyAssignment#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#identity_ids ResourcePolicyAssignment#identity_ids}.
 
 ---
 
@@ -1408,7 +1408,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentNonComplianceMessage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 &resourcepolicyassignment.ResourcePolicyAssignmentNonComplianceMessage {
 	Content: *string,
@@ -1420,8 +1420,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentNonComplianceMessage.property.content">Content</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#content ResourcePolicyAssignment#content}. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentNonComplianceMessage.property.policyDefinitionReferenceId">PolicyDefinitionReferenceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#policy_definition_reference_id ResourcePolicyAssignment#policy_definition_reference_id}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentNonComplianceMessage.property.content">Content</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#content ResourcePolicyAssignment#content}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentNonComplianceMessage.property.policyDefinitionReferenceId">PolicyDefinitionReferenceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#policy_definition_reference_id ResourcePolicyAssignment#policy_definition_reference_id}. |
 
 ---
 
@@ -1433,7 +1433,7 @@ Content *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#content ResourcePolicyAssignment#content}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#content ResourcePolicyAssignment#content}.
 
 ---
 
@@ -1445,7 +1445,7 @@ PolicyDefinitionReferenceId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#policy_definition_reference_id ResourcePolicyAssignment#policy_definition_reference_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#policy_definition_reference_id ResourcePolicyAssignment#policy_definition_reference_id}.
 
 ---
 
@@ -1454,7 +1454,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentOverrides.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 &resourcepolicyassignment.ResourcePolicyAssignmentOverrides {
 	Value: *string,
@@ -1466,7 +1466,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentOverrides.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#value ResourcePolicyAssignment#value}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentOverrides.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#value ResourcePolicyAssignment#value}. |
 | <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentOverrides.property.selectors">Selectors</a></code> | <code>interface{}</code> | selectors block. |
 
 ---
@@ -1479,7 +1479,7 @@ Value *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#value ResourcePolicyAssignment#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#value ResourcePolicyAssignment#value}.
 
 ---
 
@@ -1493,7 +1493,7 @@ Selectors interface{}
 
 selectors block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#selectors ResourcePolicyAssignment#selectors}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#selectors ResourcePolicyAssignment#selectors}
 
 ---
 
@@ -1502,7 +1502,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentOverridesSelectors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 &resourcepolicyassignment.ResourcePolicyAssignmentOverridesSelectors {
 	In: *[]*string,
@@ -1514,8 +1514,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentOverridesSelectors.property.in">In</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#in ResourcePolicyAssignment#in}. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentOverridesSelectors.property.notIn">NotIn</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#not_in ResourcePolicyAssignment#not_in}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentOverridesSelectors.property.in">In</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#in ResourcePolicyAssignment#in}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentOverridesSelectors.property.notIn">NotIn</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#not_in ResourcePolicyAssignment#not_in}. |
 
 ---
 
@@ -1527,7 +1527,7 @@ In *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#in ResourcePolicyAssignment#in}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#in ResourcePolicyAssignment#in}.
 
 ---
 
@@ -1539,7 +1539,7 @@ NotIn *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#not_in ResourcePolicyAssignment#not_in}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#not_in ResourcePolicyAssignment#not_in}.
 
 ---
 
@@ -1548,7 +1548,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentResourceSelectors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 &resourcepolicyassignment.ResourcePolicyAssignmentResourceSelectors {
 	Selectors: interface{},
@@ -1561,7 +1561,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassi
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentResourceSelectors.property.selectors">Selectors</a></code> | <code>interface{}</code> | selectors block. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentResourceSelectors.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#name ResourcePolicyAssignment#name}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentResourceSelectors.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#name ResourcePolicyAssignment#name}. |
 
 ---
 
@@ -1575,7 +1575,7 @@ Selectors interface{}
 
 selectors block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#selectors ResourcePolicyAssignment#selectors}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#selectors ResourcePolicyAssignment#selectors}
 
 ---
 
@@ -1587,7 +1587,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#name ResourcePolicyAssignment#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#name ResourcePolicyAssignment#name}.
 
 ---
 
@@ -1596,7 +1596,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentResourceSelectorsSelectors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 &resourcepolicyassignment.ResourcePolicyAssignmentResourceSelectorsSelectors {
 	Kind: *string,
@@ -1609,9 +1609,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentResourceSelectorsSelectors.property.kind">Kind</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#kind ResourcePolicyAssignment#kind}. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentResourceSelectorsSelectors.property.in">In</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#in ResourcePolicyAssignment#in}. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentResourceSelectorsSelectors.property.notIn">NotIn</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#not_in ResourcePolicyAssignment#not_in}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentResourceSelectorsSelectors.property.kind">Kind</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#kind ResourcePolicyAssignment#kind}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentResourceSelectorsSelectors.property.in">In</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#in ResourcePolicyAssignment#in}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentResourceSelectorsSelectors.property.notIn">NotIn</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#not_in ResourcePolicyAssignment#not_in}. |
 
 ---
 
@@ -1623,7 +1623,7 @@ Kind *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#kind ResourcePolicyAssignment#kind}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#kind ResourcePolicyAssignment#kind}.
 
 ---
 
@@ -1635,7 +1635,7 @@ In *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#in ResourcePolicyAssignment#in}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#in ResourcePolicyAssignment#in}.
 
 ---
 
@@ -1647,7 +1647,7 @@ NotIn *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#not_in ResourcePolicyAssignment#not_in}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#not_in ResourcePolicyAssignment#not_in}.
 
 ---
 
@@ -1656,7 +1656,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 &resourcepolicyassignment.ResourcePolicyAssignmentTimeouts {
 	Create: *string,
@@ -1670,10 +1670,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#create ResourcePolicyAssignment#create}. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#delete ResourcePolicyAssignment#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#read ResourcePolicyAssignment#read}. |
-| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#update ResourcePolicyAssignment#update}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#create ResourcePolicyAssignment#create}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#delete ResourcePolicyAssignment#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#read ResourcePolicyAssignment#read}. |
+| <code><a href="#@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#update ResourcePolicyAssignment#update}. |
 
 ---
 
@@ -1685,7 +1685,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#create ResourcePolicyAssignment#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#create ResourcePolicyAssignment#create}.
 
 ---
 
@@ -1697,7 +1697,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#delete ResourcePolicyAssignment#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#delete ResourcePolicyAssignment#delete}.
 
 ---
 
@@ -1709,7 +1709,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#read ResourcePolicyAssignment#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#read ResourcePolicyAssignment#read}.
 
 ---
 
@@ -1721,7 +1721,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/resource_policy_assignment#update ResourcePolicyAssignment#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/resource_policy_assignment#update ResourcePolicyAssignment#update}.
 
 ---
 
@@ -1732,7 +1732,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.NewResourcePolicyAssignmentIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ResourcePolicyAssignmentIdentityOutputReference
 ```
@@ -2054,7 +2054,7 @@ func InternalValue() ResourcePolicyAssignmentIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentNonComplianceMessageList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.NewResourcePolicyAssignmentNonComplianceMessageList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ResourcePolicyAssignmentNonComplianceMessageList
 ```
@@ -2197,7 +2197,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentNonComplianceMessageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.NewResourcePolicyAssignmentNonComplianceMessageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ResourcePolicyAssignmentNonComplianceMessageOutputReference
 ```
@@ -2515,7 +2515,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentOverridesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.NewResourcePolicyAssignmentOverridesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ResourcePolicyAssignmentOverridesList
 ```
@@ -2658,7 +2658,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentOverridesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.NewResourcePolicyAssignmentOverridesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ResourcePolicyAssignmentOverridesOutputReference
 ```
@@ -2989,7 +2989,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentOverridesSelectorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.NewResourcePolicyAssignmentOverridesSelectorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ResourcePolicyAssignmentOverridesSelectorsList
 ```
@@ -3132,7 +3132,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentOverridesSelectorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.NewResourcePolicyAssignmentOverridesSelectorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ResourcePolicyAssignmentOverridesSelectorsOutputReference
 ```
@@ -3468,7 +3468,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentResourceSelectorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.NewResourcePolicyAssignmentResourceSelectorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ResourcePolicyAssignmentResourceSelectorsList
 ```
@@ -3611,7 +3611,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentResourceSelectorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.NewResourcePolicyAssignmentResourceSelectorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ResourcePolicyAssignmentResourceSelectorsOutputReference
 ```
@@ -3942,7 +3942,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentResourceSelectorsSelectorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.NewResourcePolicyAssignmentResourceSelectorsSelectorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ResourcePolicyAssignmentResourceSelectorsSelectorsList
 ```
@@ -4085,7 +4085,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentResourceSelectorsSelectorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.NewResourcePolicyAssignmentResourceSelectorsSelectorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ResourcePolicyAssignmentResourceSelectorsSelectorsOutputReference
 ```
@@ -4432,7 +4432,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourcePolicyAssignment.ResourcePolicyAssignmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/resourcepolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcepolicyassignment"
 
 resourcepolicyassignment.NewResourcePolicyAssignmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ResourcePolicyAssignmentTimeoutsOutputReference
 ```

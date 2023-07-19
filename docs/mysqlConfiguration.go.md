@@ -1,6 +1,6 @@
 # `azurerm_mysql_configuration`
 
-Refer to the Terraform Registory for docs: [`azurerm_mysql_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration).
+Refer to the Terraform Registory for docs: [`azurerm_mysql_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration).
 
 # `mysqlConfiguration` Submodule <a name="`mysqlConfiguration` Submodule" id="@cdktf/provider-azurerm.mysqlConfiguration"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_mysql_configuration`](https
 
 ### MysqlConfiguration <a name="MysqlConfiguration" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfiguration"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration azurerm_mysql_configuration}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration azurerm_mysql_configuration}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqlconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
 
 mysqlconfiguration.NewMysqlConfiguration(scope Construct, id *string, config MysqlConfigurationConfig) MysqlConfiguration
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqlconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
 
 mysqlconfiguration.MysqlConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqlconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
 
 mysqlconfiguration.MysqlConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ mysqlconfiguration.MysqlConfiguration_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqlconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
 
 mysqlconfiguration.MysqlConfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -674,7 +674,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqlconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
 
 &mysqlconfiguration.MysqlConfigurationConfig {
 	Connection: interface{},
@@ -689,7 +689,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqlconfiguration
 	ServerName: *string,
 	Value: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.mysqlConfiguration.MysqlConfigurationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mysqlConfiguration.MysqlConfigurationTimeouts,
 }
 ```
 
@@ -704,11 +704,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqlconfiguration
 | <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#name MysqlConfiguration#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#resource_group_name MysqlConfiguration#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.property.serverName">ServerName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#server_name MysqlConfiguration#server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#value MysqlConfiguration#value}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#id MysqlConfiguration#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#name MysqlConfiguration#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#resource_group_name MysqlConfiguration#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.property.serverName">ServerName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#server_name MysqlConfiguration#server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#value MysqlConfiguration#value}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#id MysqlConfiguration#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationTimeouts">MysqlConfigurationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -791,7 +791,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#name MysqlConfiguration#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#name MysqlConfiguration#name}.
 
 ---
 
@@ -803,7 +803,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#resource_group_name MysqlConfiguration#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#resource_group_name MysqlConfiguration#resource_group_name}.
 
 ---
 
@@ -815,7 +815,7 @@ ServerName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#server_name MysqlConfiguration#server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#server_name MysqlConfiguration#server_name}.
 
 ---
 
@@ -827,7 +827,7 @@ Value *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#value MysqlConfiguration#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#value MysqlConfiguration#value}.
 
 ---
 
@@ -839,7 +839,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#id MysqlConfiguration#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#id MysqlConfiguration#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -856,7 +856,7 @@ Timeouts MysqlConfigurationTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#timeouts MysqlConfiguration#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#timeouts MysqlConfiguration#timeouts}
 
 ---
 
@@ -865,7 +865,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqlconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
 
 &mysqlconfiguration.MysqlConfigurationTimeouts {
 	Create: *string,
@@ -879,10 +879,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqlconfiguration
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#create MysqlConfiguration#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#delete MysqlConfiguration#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#read MysqlConfiguration#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#update MysqlConfiguration#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#create MysqlConfiguration#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#delete MysqlConfiguration#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#read MysqlConfiguration#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#update MysqlConfiguration#update}. |
 
 ---
 
@@ -894,7 +894,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#create MysqlConfiguration#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#create MysqlConfiguration#create}.
 
 ---
 
@@ -906,7 +906,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#delete MysqlConfiguration#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#delete MysqlConfiguration#delete}.
 
 ---
 
@@ -918,7 +918,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#read MysqlConfiguration#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#read MysqlConfiguration#read}.
 
 ---
 
@@ -930,7 +930,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/mysql_configuration#update MysqlConfiguration#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/mysql_configuration#update MysqlConfiguration#update}.
 
 ---
 
@@ -941,7 +941,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/mysqlconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
 
 mysqlconfiguration.NewMysqlConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MysqlConfigurationTimeoutsOutputReference
 ```
