@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlServer.SqlServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/sqlserver"
 
 sqlserver.NewSqlServer(scope Construct, id *string, config SqlServerConfig) SqlServer
 ```
@@ -351,7 +351,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sqlServer.SqlServer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/sqlserver"
 
 sqlserver.SqlServer_IsConstruct(x interface{}) *bool
 ```
@@ -383,7 +383,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sqlServer.SqlServer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/sqlserver"
 
 sqlserver.SqlServer_IsTerraformElement(x interface{}) *bool
 ```
@@ -397,7 +397,7 @@ sqlserver.SqlServer_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sqlServer.SqlServer.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/sqlserver"
 
 sqlserver.SqlServer_IsTerraformResource(x interface{}) *bool
 ```
@@ -871,7 +871,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlServer.SqlServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/sqlserver"
 
 &sqlserver.SqlServerConfig {
 	Connection: interface{},
@@ -889,10 +889,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlserver"
 	Version: *string,
 	ConnectionPolicy: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlServer.SqlServerIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.sqlServer.SqlServerIdentity,
 	Tags: *map[string]*string,
-	ThreatDetectionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlServer.SqlServerThreatDetectionPolicy,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlServer.SqlServerTimeouts,
+	ThreatDetectionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.sqlServer.SqlServerThreatDetectionPolicy,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.sqlServer.SqlServerTimeouts,
 }
 ```
 
@@ -1150,7 +1150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlServer.SqlServerIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/sqlserver"
 
 &sqlserver.SqlServerIdentity {
 	Type: *string,
@@ -1182,7 +1182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlServer.SqlServerThreatDetectionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/sqlserver"
 
 &sqlserver.SqlServerThreatDetectionPolicy {
 	DisabledAlerts: *[]*string,
@@ -1298,7 +1298,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlServer.SqlServerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/sqlserver"
 
 &sqlserver.SqlServerTimeouts {
 	Create: *string,
@@ -1374,7 +1374,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlServer.SqlServerIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/sqlserver"
 
 sqlserver.NewSqlServerIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlServerIdentityOutputReference
 ```
@@ -1667,7 +1667,7 @@ func InternalValue() SqlServerIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlServer.SqlServerThreatDetectionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/sqlserver"
 
 sqlserver.NewSqlServerThreatDetectionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlServerThreatDetectionPolicyOutputReference
 ```
@@ -2119,7 +2119,7 @@ func InternalValue() SqlServerThreatDetectionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlServer.SqlServerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/sqlserver"
 
 sqlserver.NewSqlServerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlServerTimeoutsOutputReference
 ```
