@@ -1,6 +1,6 @@
 # `azurerm_virtual_hub_ip`
 
-Refer to the Terraform Registory for docs: [`azurerm_virtual_hub_ip`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip).
+Refer to the Terraform Registory for docs: [`azurerm_virtual_hub_ip`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip).
 
 # `virtualHubIp` Submodule <a name="`virtualHubIp` Submodule" id="@cdktf/provider-azurerm.virtualHubIp"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_virtual_hub_ip`](https://re
 
 ### VirtualHubIp <a name="VirtualHubIp" id="@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip azurerm_virtual_hub_ip}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip azurerm_virtual_hub_ip}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp.Initializer"></a>
 
@@ -764,13 +764,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/virtualhubip"
 | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#name VirtualHubIp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.publicIpAddressId">PublicIpAddressId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#public_ip_address_id VirtualHubIp#public_ip_address_id}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.subnetId">SubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#subnet_id VirtualHubIp#subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.virtualHubId">VirtualHubId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#virtual_hub_id VirtualHubIp#virtual_hub_id}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#id VirtualHubIp#id}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.privateIpAddress">PrivateIpAddress</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#private_ip_address VirtualHubIp#private_ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.privateIpAllocationMethod">PrivateIpAllocationMethod</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#private_ip_allocation_method VirtualHubIp#private_ip_allocation_method}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#name VirtualHubIp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.publicIpAddressId">PublicIpAddressId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#public_ip_address_id VirtualHubIp#public_ip_address_id}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.subnetId">SubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#subnet_id VirtualHubIp#subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.virtualHubId">VirtualHubId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#virtual_hub_id VirtualHubIp#virtual_hub_id}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#id VirtualHubIp#id}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.privateIpAddress">PrivateIpAddress</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#private_ip_address VirtualHubIp#private_ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.privateIpAllocationMethod">PrivateIpAllocationMethod</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#private_ip_allocation_method VirtualHubIp#private_ip_allocation_method}. |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts">VirtualHubIpTimeouts</a></code> | timeouts block. |
 
 ---
@@ -853,7 +853,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#name VirtualHubIp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#name VirtualHubIp#name}.
 
 ---
 
@@ -865,7 +865,7 @@ PublicIpAddressId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#public_ip_address_id VirtualHubIp#public_ip_address_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#public_ip_address_id VirtualHubIp#public_ip_address_id}.
 
 ---
 
@@ -877,7 +877,7 @@ SubnetId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#subnet_id VirtualHubIp#subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#subnet_id VirtualHubIp#subnet_id}.
 
 ---
 
@@ -889,7 +889,7 @@ VirtualHubId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#virtual_hub_id VirtualHubIp#virtual_hub_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#virtual_hub_id VirtualHubIp#virtual_hub_id}.
 
 ---
 
@@ -901,7 +901,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#id VirtualHubIp#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#id VirtualHubIp#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -916,7 +916,7 @@ PrivateIpAddress *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#private_ip_address VirtualHubIp#private_ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#private_ip_address VirtualHubIp#private_ip_address}.
 
 ---
 
@@ -928,7 +928,7 @@ PrivateIpAllocationMethod *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#private_ip_allocation_method VirtualHubIp#private_ip_allocation_method}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#private_ip_allocation_method VirtualHubIp#private_ip_allocation_method}.
 
 ---
 
@@ -942,7 +942,7 @@ Timeouts VirtualHubIpTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#timeouts VirtualHubIp#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#timeouts VirtualHubIp#timeouts}
 
 ---
 
@@ -965,10 +965,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/virtualhubip"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#create VirtualHubIp#create}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#delete VirtualHubIp#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#read VirtualHubIp#read}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#update VirtualHubIp#update}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#create VirtualHubIp#create}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#delete VirtualHubIp#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#read VirtualHubIp#read}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#update VirtualHubIp#update}. |
 
 ---
 
@@ -980,7 +980,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#create VirtualHubIp#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#create VirtualHubIp#create}.
 
 ---
 
@@ -992,7 +992,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#delete VirtualHubIp#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#delete VirtualHubIp#delete}.
 
 ---
 
@@ -1004,7 +1004,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#read VirtualHubIp#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#read VirtualHubIp#read}.
 
 ---
 
@@ -1016,7 +1016,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/virtual_hub_ip#update VirtualHubIp#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/virtual_hub_ip#update VirtualHubIp#update}.
 
 ---
 

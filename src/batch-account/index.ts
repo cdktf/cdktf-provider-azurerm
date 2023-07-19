@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,78 +13,84 @@ import * as cdktf from 'cdktf';
 
 export interface BatchAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#allowed_authentication_modes BatchAccount#allowed_authentication_modes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#allowed_authentication_modes BatchAccount#allowed_authentication_modes}
   */
   readonly allowedAuthenticationModes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#encryption BatchAccount#encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#encryption BatchAccount#encryption}
   */
   readonly encryption?: BatchAccountEncryption[] | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#id BatchAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#id BatchAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#location BatchAccount#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#location BatchAccount#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#name BatchAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#name BatchAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#pool_allocation_mode BatchAccount#pool_allocation_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#pool_allocation_mode BatchAccount#pool_allocation_mode}
   */
   readonly poolAllocationMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#public_network_access_enabled BatchAccount#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#public_network_access_enabled BatchAccount#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#resource_group_name BatchAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#resource_group_name BatchAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#storage_account_authentication_mode BatchAccount#storage_account_authentication_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#storage_account_authentication_mode BatchAccount#storage_account_authentication_mode}
   */
   readonly storageAccountAuthenticationMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#storage_account_id BatchAccount#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#storage_account_id BatchAccount#storage_account_id}
   */
   readonly storageAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#storage_account_node_identity BatchAccount#storage_account_node_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#storage_account_node_identity BatchAccount#storage_account_node_identity}
   */
   readonly storageAccountNodeIdentity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#tags BatchAccount#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#tags BatchAccount#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#identity BatchAccount#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#identity BatchAccount#identity}
   */
   readonly identity?: BatchAccountIdentity;
   /**
   * key_vault_reference block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#key_vault_reference BatchAccount#key_vault_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#key_vault_reference BatchAccount#key_vault_reference}
   */
   readonly keyVaultReference?: BatchAccountKeyVaultReference;
   /**
+  * network_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#network_profile BatchAccount#network_profile}
+  */
+  readonly networkProfile?: BatchAccountNetworkProfile;
+  /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#timeouts BatchAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#timeouts BatchAccount#timeouts}
   */
   readonly timeouts?: BatchAccountTimeouts;
 }
 export interface BatchAccountEncryption {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#key_vault_key_id BatchAccount#key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#key_vault_key_id BatchAccount#key_vault_key_id}
   */
   readonly keyVaultKeyId?: string;
 }
@@ -181,11 +187,11 @@ export class BatchAccountEncryptionList extends cdktf.ComplexList {
 }
 export interface BatchAccountIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#identity_ids BatchAccount#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#identity_ids BatchAccount#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#type BatchAccount#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#type BatchAccount#type}
   */
   readonly type: string;
 }
@@ -280,14 +286,14 @@ export class BatchAccountIdentityOutputReference extends cdktf.ComplexObject {
 }
 export interface BatchAccountKeyVaultReference {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#id BatchAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#id BatchAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#url BatchAccount#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#url BatchAccount#url}
   */
   readonly url: string;
 }
@@ -367,21 +373,547 @@ export class BatchAccountKeyVaultReferenceOutputReference extends cdktf.ComplexO
     return this._url;
   }
 }
+export interface BatchAccountNetworkProfileAccountAccessIpRule {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#action BatchAccount#action}
+  */
+  readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#ip_range BatchAccount#ip_range}
+  */
+  readonly ipRange: string;
+}
+
+export function batchAccountNetworkProfileAccountAccessIpRuleToTerraform(struct?: BatchAccountNetworkProfileAccountAccessIpRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    ip_range: cdktf.stringToTerraform(struct!.ipRange),
+  }
+}
+
+export class BatchAccountNetworkProfileAccountAccessIpRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BatchAccountNetworkProfileAccountAccessIpRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._ipRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipRange = this._ipRange;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchAccountNetworkProfileAccountAccessIpRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._ipRange = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._ipRange = value.ipRange;
+    }
+  }
+
+  // action - computed: false, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // ip_range - computed: false, optional: false, required: true
+  private _ipRange?: string; 
+  public get ipRange() {
+    return this.getStringAttribute('ip_range');
+  }
+  public set ipRange(value: string) {
+    this._ipRange = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRangeInput() {
+    return this._ipRange;
+  }
+}
+
+export class BatchAccountNetworkProfileAccountAccessIpRuleList extends cdktf.ComplexList {
+  public internalValue? : BatchAccountNetworkProfileAccountAccessIpRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BatchAccountNetworkProfileAccountAccessIpRuleOutputReference {
+    return new BatchAccountNetworkProfileAccountAccessIpRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface BatchAccountNetworkProfileAccountAccess {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#default_action BatchAccount#default_action}
+  */
+  readonly defaultAction?: string;
+  /**
+  * ip_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#ip_rule BatchAccount#ip_rule}
+  */
+  readonly ipRule?: BatchAccountNetworkProfileAccountAccessIpRule[] | cdktf.IResolvable;
+}
+
+export function batchAccountNetworkProfileAccountAccessToTerraform(struct?: BatchAccountNetworkProfileAccountAccessOutputReference | BatchAccountNetworkProfileAccountAccess): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    default_action: cdktf.stringToTerraform(struct!.defaultAction),
+    ip_rule: cdktf.listMapper(batchAccountNetworkProfileAccountAccessIpRuleToTerraform, true)(struct!.ipRule),
+  }
+}
+
+export class BatchAccountNetworkProfileAccountAccessOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BatchAccountNetworkProfileAccountAccess | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._defaultAction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultAction = this._defaultAction;
+    }
+    if (this._ipRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipRule = this._ipRule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchAccountNetworkProfileAccountAccess | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._defaultAction = undefined;
+      this._ipRule.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._defaultAction = value.defaultAction;
+      this._ipRule.internalValue = value.ipRule;
+    }
+  }
+
+  // default_action - computed: false, optional: true, required: false
+  private _defaultAction?: string; 
+  public get defaultAction() {
+    return this.getStringAttribute('default_action');
+  }
+  public set defaultAction(value: string) {
+    this._defaultAction = value;
+  }
+  public resetDefaultAction() {
+    this._defaultAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultActionInput() {
+    return this._defaultAction;
+  }
+
+  // ip_rule - computed: false, optional: true, required: false
+  private _ipRule = new BatchAccountNetworkProfileAccountAccessIpRuleList(this, "ip_rule", false);
+  public get ipRule() {
+    return this._ipRule;
+  }
+  public putIpRule(value: BatchAccountNetworkProfileAccountAccessIpRule[] | cdktf.IResolvable) {
+    this._ipRule.internalValue = value;
+  }
+  public resetIpRule() {
+    this._ipRule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRuleInput() {
+    return this._ipRule.internalValue;
+  }
+}
+export interface BatchAccountNetworkProfileNodeManagementAccessIpRule {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#action BatchAccount#action}
+  */
+  readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#ip_range BatchAccount#ip_range}
+  */
+  readonly ipRange: string;
+}
+
+export function batchAccountNetworkProfileNodeManagementAccessIpRuleToTerraform(struct?: BatchAccountNetworkProfileNodeManagementAccessIpRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    ip_range: cdktf.stringToTerraform(struct!.ipRange),
+  }
+}
+
+export class BatchAccountNetworkProfileNodeManagementAccessIpRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BatchAccountNetworkProfileNodeManagementAccessIpRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._ipRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipRange = this._ipRange;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchAccountNetworkProfileNodeManagementAccessIpRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._ipRange = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._ipRange = value.ipRange;
+    }
+  }
+
+  // action - computed: false, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // ip_range - computed: false, optional: false, required: true
+  private _ipRange?: string; 
+  public get ipRange() {
+    return this.getStringAttribute('ip_range');
+  }
+  public set ipRange(value: string) {
+    this._ipRange = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRangeInput() {
+    return this._ipRange;
+  }
+}
+
+export class BatchAccountNetworkProfileNodeManagementAccessIpRuleList extends cdktf.ComplexList {
+  public internalValue? : BatchAccountNetworkProfileNodeManagementAccessIpRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BatchAccountNetworkProfileNodeManagementAccessIpRuleOutputReference {
+    return new BatchAccountNetworkProfileNodeManagementAccessIpRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface BatchAccountNetworkProfileNodeManagementAccess {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#default_action BatchAccount#default_action}
+  */
+  readonly defaultAction?: string;
+  /**
+  * ip_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#ip_rule BatchAccount#ip_rule}
+  */
+  readonly ipRule?: BatchAccountNetworkProfileNodeManagementAccessIpRule[] | cdktf.IResolvable;
+}
+
+export function batchAccountNetworkProfileNodeManagementAccessToTerraform(struct?: BatchAccountNetworkProfileNodeManagementAccessOutputReference | BatchAccountNetworkProfileNodeManagementAccess): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    default_action: cdktf.stringToTerraform(struct!.defaultAction),
+    ip_rule: cdktf.listMapper(batchAccountNetworkProfileNodeManagementAccessIpRuleToTerraform, true)(struct!.ipRule),
+  }
+}
+
+export class BatchAccountNetworkProfileNodeManagementAccessOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BatchAccountNetworkProfileNodeManagementAccess | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._defaultAction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultAction = this._defaultAction;
+    }
+    if (this._ipRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipRule = this._ipRule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchAccountNetworkProfileNodeManagementAccess | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._defaultAction = undefined;
+      this._ipRule.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._defaultAction = value.defaultAction;
+      this._ipRule.internalValue = value.ipRule;
+    }
+  }
+
+  // default_action - computed: false, optional: true, required: false
+  private _defaultAction?: string; 
+  public get defaultAction() {
+    return this.getStringAttribute('default_action');
+  }
+  public set defaultAction(value: string) {
+    this._defaultAction = value;
+  }
+  public resetDefaultAction() {
+    this._defaultAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultActionInput() {
+    return this._defaultAction;
+  }
+
+  // ip_rule - computed: false, optional: true, required: false
+  private _ipRule = new BatchAccountNetworkProfileNodeManagementAccessIpRuleList(this, "ip_rule", false);
+  public get ipRule() {
+    return this._ipRule;
+  }
+  public putIpRule(value: BatchAccountNetworkProfileNodeManagementAccessIpRule[] | cdktf.IResolvable) {
+    this._ipRule.internalValue = value;
+  }
+  public resetIpRule() {
+    this._ipRule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRuleInput() {
+    return this._ipRule.internalValue;
+  }
+}
+export interface BatchAccountNetworkProfile {
+  /**
+  * account_access block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#account_access BatchAccount#account_access}
+  */
+  readonly accountAccess?: BatchAccountNetworkProfileAccountAccess;
+  /**
+  * node_management_access block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#node_management_access BatchAccount#node_management_access}
+  */
+  readonly nodeManagementAccess?: BatchAccountNetworkProfileNodeManagementAccess;
+}
+
+export function batchAccountNetworkProfileToTerraform(struct?: BatchAccountNetworkProfileOutputReference | BatchAccountNetworkProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    account_access: batchAccountNetworkProfileAccountAccessToTerraform(struct!.accountAccess),
+    node_management_access: batchAccountNetworkProfileNodeManagementAccessToTerraform(struct!.nodeManagementAccess),
+  }
+}
+
+export class BatchAccountNetworkProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BatchAccountNetworkProfile | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accountAccess?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accountAccess = this._accountAccess?.internalValue;
+    }
+    if (this._nodeManagementAccess?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodeManagementAccess = this._nodeManagementAccess?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchAccountNetworkProfile | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._accountAccess.internalValue = undefined;
+      this._nodeManagementAccess.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._accountAccess.internalValue = value.accountAccess;
+      this._nodeManagementAccess.internalValue = value.nodeManagementAccess;
+    }
+  }
+
+  // account_access - computed: false, optional: true, required: false
+  private _accountAccess = new BatchAccountNetworkProfileAccountAccessOutputReference(this, "account_access");
+  public get accountAccess() {
+    return this._accountAccess;
+  }
+  public putAccountAccess(value: BatchAccountNetworkProfileAccountAccess) {
+    this._accountAccess.internalValue = value;
+  }
+  public resetAccountAccess() {
+    this._accountAccess.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountAccessInput() {
+    return this._accountAccess.internalValue;
+  }
+
+  // node_management_access - computed: false, optional: true, required: false
+  private _nodeManagementAccess = new BatchAccountNetworkProfileNodeManagementAccessOutputReference(this, "node_management_access");
+  public get nodeManagementAccess() {
+    return this._nodeManagementAccess;
+  }
+  public putNodeManagementAccess(value: BatchAccountNetworkProfileNodeManagementAccess) {
+    this._nodeManagementAccess.internalValue = value;
+  }
+  public resetNodeManagementAccess() {
+    this._nodeManagementAccess.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeManagementAccessInput() {
+    return this._nodeManagementAccess.internalValue;
+  }
+}
 export interface BatchAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#create BatchAccount#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#create BatchAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#delete BatchAccount#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#delete BatchAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#read BatchAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#read BatchAccount#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account#update BatchAccount#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account#update BatchAccount#update}
   */
   readonly update?: string;
 }
@@ -525,7 +1057,7 @@ export class BatchAccountTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account azurerm_batch_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account azurerm_batch_account}
 */
 export class BatchAccount extends cdktf.TerraformResource {
 
@@ -539,7 +1071,7 @@ export class BatchAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/batch_account azurerm_batch_account} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/batch_account azurerm_batch_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -550,7 +1082,7 @@ export class BatchAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_batch_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.63.0',
+        providerVersion: '3.65.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -575,6 +1107,7 @@ export class BatchAccount extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._identity.internalValue = config.identity;
     this._keyVaultReference.internalValue = config.keyVaultReference;
+    this._networkProfile.internalValue = config.networkProfile;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -812,6 +1345,22 @@ export class BatchAccount extends cdktf.TerraformResource {
     return this._keyVaultReference.internalValue;
   }
 
+  // network_profile - computed: false, optional: true, required: false
+  private _networkProfile = new BatchAccountNetworkProfileOutputReference(this, "network_profile");
+  public get networkProfile() {
+    return this._networkProfile;
+  }
+  public putNetworkProfile(value: BatchAccountNetworkProfile) {
+    this._networkProfile.internalValue = value;
+  }
+  public resetNetworkProfile() {
+    this._networkProfile.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkProfileInput() {
+    return this._networkProfile.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new BatchAccountTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -848,6 +1397,7 @@ export class BatchAccount extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: batchAccountIdentityToTerraform(this._identity.internalValue),
       key_vault_reference: batchAccountKeyVaultReferenceToTerraform(this._keyVaultReference.internalValue),
+      network_profile: batchAccountNetworkProfileToTerraform(this._networkProfile.internalValue),
       timeouts: batchAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

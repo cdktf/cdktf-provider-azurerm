@@ -1,6 +1,6 @@
 # `azurerm_sentinel_watchlist`
 
-Refer to the Terraform Registory for docs: [`azurerm_sentinel_watchlist`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist).
+Refer to the Terraform Registory for docs: [`azurerm_sentinel_watchlist`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist).
 
 # `sentinelWatchlist` Submodule <a name="`sentinelWatchlist` Submodule" id="@cdktf/provider-azurerm.sentinelWatchlist"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_sentinel_watchlist`](https:
 
 ### SentinelWatchlist <a name="SentinelWatchlist" id="@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlist"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist azurerm_sentinel_watchlist}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist azurerm_sentinel_watchlist}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlist.Initializer"></a>
 
@@ -794,14 +794,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/sentinelwatchlist"
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#display_name SentinelWatchlist#display_name}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.itemSearchKey">ItemSearchKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#item_search_key SentinelWatchlist#item_search_key}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.logAnalyticsWorkspaceId">LogAnalyticsWorkspaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#log_analytics_workspace_id SentinelWatchlist#log_analytics_workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#name SentinelWatchlist#name}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.defaultDuration">DefaultDuration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#default_duration SentinelWatchlist#default_duration}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#description SentinelWatchlist#description}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#id SentinelWatchlist#id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.labels">Labels</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#labels SentinelWatchlist#labels}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#display_name SentinelWatchlist#display_name}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.itemSearchKey">ItemSearchKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#item_search_key SentinelWatchlist#item_search_key}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.logAnalyticsWorkspaceId">LogAnalyticsWorkspaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#log_analytics_workspace_id SentinelWatchlist#log_analytics_workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#name SentinelWatchlist#name}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.defaultDuration">DefaultDuration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#default_duration SentinelWatchlist#default_duration}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#description SentinelWatchlist#description}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#id SentinelWatchlist#id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.labels">Labels</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#labels SentinelWatchlist#labels}. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistTimeouts">SentinelWatchlistTimeouts</a></code> | timeouts block. |
 
 ---
@@ -884,7 +884,7 @@ DisplayName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#display_name SentinelWatchlist#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#display_name SentinelWatchlist#display_name}.
 
 ---
 
@@ -896,7 +896,7 @@ ItemSearchKey *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#item_search_key SentinelWatchlist#item_search_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#item_search_key SentinelWatchlist#item_search_key}.
 
 ---
 
@@ -908,7 +908,7 @@ LogAnalyticsWorkspaceId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#log_analytics_workspace_id SentinelWatchlist#log_analytics_workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#log_analytics_workspace_id SentinelWatchlist#log_analytics_workspace_id}.
 
 ---
 
@@ -920,7 +920,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#name SentinelWatchlist#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#name SentinelWatchlist#name}.
 
 ---
 
@@ -932,7 +932,7 @@ DefaultDuration *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#default_duration SentinelWatchlist#default_duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#default_duration SentinelWatchlist#default_duration}.
 
 ---
 
@@ -944,7 +944,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#description SentinelWatchlist#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#description SentinelWatchlist#description}.
 
 ---
 
@@ -956,7 +956,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#id SentinelWatchlist#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#id SentinelWatchlist#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -971,7 +971,7 @@ Labels *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#labels SentinelWatchlist#labels}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#labels SentinelWatchlist#labels}.
 
 ---
 
@@ -985,7 +985,7 @@ Timeouts SentinelWatchlistTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#timeouts SentinelWatchlist#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#timeouts SentinelWatchlist#timeouts}
 
 ---
 
@@ -1007,9 +1007,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/sentinelwatchlist"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#create SentinelWatchlist#create}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#delete SentinelWatchlist#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#read SentinelWatchlist#read}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#create SentinelWatchlist#create}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#delete SentinelWatchlist#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelWatchlist.SentinelWatchlistTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#read SentinelWatchlist#read}. |
 
 ---
 
@@ -1021,7 +1021,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#create SentinelWatchlist#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#create SentinelWatchlist#create}.
 
 ---
 
@@ -1033,7 +1033,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#delete SentinelWatchlist#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#delete SentinelWatchlist#delete}.
 
 ---
 
@@ -1045,7 +1045,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/resources/sentinel_watchlist#read SentinelWatchlist#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/sentinel_watchlist#read SentinelWatchlist#read}.
 
 ---
 

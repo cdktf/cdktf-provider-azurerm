@@ -1,6 +1,6 @@
 # `data_azurerm_availability_set`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_availability_set`](https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/availability_set).
+Refer to the Terraform Registory for docs: [`data_azurerm_availability_set`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/availability_set).
 
 # `dataAzurermAvailabilitySet` Submodule <a name="`dataAzurermAvailabilitySet` Submodule" id="@cdktf/provider-azurerm.dataAzurermAvailabilitySet"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_availability_set`](htt
 
 ### DataAzurermAvailabilitySet <a name="DataAzurermAvailabilitySet" id="@cdktf/provider-azurerm.dataAzurermAvailabilitySet.DataAzurermAvailabilitySet"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/availability_set azurerm_availability_set}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/availability_set azurerm_availability_set}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAvailabilitySet.DataAzurermAvailabilitySet.Initializer"></a>
 
@@ -691,9 +691,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermavailab
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAvailabilitySet.DataAzurermAvailabilitySetConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAvailabilitySet.DataAzurermAvailabilitySetConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAvailabilitySet.DataAzurermAvailabilitySetConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAvailabilitySet.DataAzurermAvailabilitySetConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/availability_set#name DataAzurermAvailabilitySet#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAvailabilitySet.DataAzurermAvailabilitySetConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/availability_set#resource_group_name DataAzurermAvailabilitySet#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAvailabilitySet.DataAzurermAvailabilitySetConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/availability_set#id DataAzurermAvailabilitySet#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAvailabilitySet.DataAzurermAvailabilitySetConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/availability_set#name DataAzurermAvailabilitySet#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAvailabilitySet.DataAzurermAvailabilitySetConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/availability_set#resource_group_name DataAzurermAvailabilitySet#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAvailabilitySet.DataAzurermAvailabilitySetConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/availability_set#id DataAzurermAvailabilitySet#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAvailabilitySet.DataAzurermAvailabilitySetConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermAvailabilitySet.DataAzurermAvailabilitySetTimeouts">DataAzurermAvailabilitySetTimeouts</a></code> | timeouts block. |
 
 ---
@@ -776,7 +776,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/availability_set#name DataAzurermAvailabilitySet#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/availability_set#name DataAzurermAvailabilitySet#name}.
 
 ---
 
@@ -788,7 +788,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/availability_set#resource_group_name DataAzurermAvailabilitySet#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/availability_set#resource_group_name DataAzurermAvailabilitySet#resource_group_name}.
 
 ---
 
@@ -800,7 +800,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/availability_set#id DataAzurermAvailabilitySet#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/availability_set#id DataAzurermAvailabilitySet#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -817,7 +817,7 @@ Timeouts DataAzurermAvailabilitySetTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/availability_set#timeouts DataAzurermAvailabilitySet#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/availability_set#timeouts DataAzurermAvailabilitySet#timeouts}
 
 ---
 
@@ -837,7 +837,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermavailab
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAvailabilitySet.DataAzurermAvailabilitySetTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/availability_set#read DataAzurermAvailabilitySet#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAvailabilitySet.DataAzurermAvailabilitySetTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/availability_set#read DataAzurermAvailabilitySet#read}. |
 
 ---
 
@@ -849,7 +849,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/availability_set#read DataAzurermAvailabilitySet#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/availability_set#read DataAzurermAvailabilitySet#read}.
 
 ---
 

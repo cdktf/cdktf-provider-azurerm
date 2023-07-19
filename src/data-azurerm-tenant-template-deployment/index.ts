@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/tenant_template_deployment
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/tenant_template_deployment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,26 +13,26 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermTenantTemplateDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/tenant_template_deployment#id DataAzurermTenantTemplateDeployment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/tenant_template_deployment#id DataAzurermTenantTemplateDeployment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/tenant_template_deployment#name DataAzurermTenantTemplateDeployment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/tenant_template_deployment#name DataAzurermTenantTemplateDeployment#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/tenant_template_deployment#timeouts DataAzurermTenantTemplateDeployment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/tenant_template_deployment#timeouts DataAzurermTenantTemplateDeployment#timeouts}
   */
   readonly timeouts?: DataAzurermTenantTemplateDeploymentTimeouts;
 }
 export interface DataAzurermTenantTemplateDeploymentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/tenant_template_deployment#read DataAzurermTenantTemplateDeployment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/tenant_template_deployment#read DataAzurermTenantTemplateDeployment#read}
   */
   readonly read?: string;
 }
@@ -107,7 +107,7 @@ export class DataAzurermTenantTemplateDeploymentTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/tenant_template_deployment azurerm_tenant_template_deployment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/tenant_template_deployment azurerm_tenant_template_deployment}
 */
 export class DataAzurermTenantTemplateDeployment extends cdktf.TerraformDataSource {
 
@@ -121,7 +121,7 @@ export class DataAzurermTenantTemplateDeployment extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/tenant_template_deployment azurerm_tenant_template_deployment} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/tenant_template_deployment azurerm_tenant_template_deployment} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -132,7 +132,7 @@ export class DataAzurermTenantTemplateDeployment extends cdktf.TerraformDataSour
       terraformResourceType: 'azurerm_tenant_template_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.63.0',
+        providerVersion: '3.65.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

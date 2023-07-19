@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/batch_pool
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/batch_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,28 +13,28 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermBatchPoolConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/batch_pool#account_name DataAzurermBatchPool#account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/batch_pool#account_name DataAzurermBatchPool#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/batch_pool#id DataAzurermBatchPool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/batch_pool#id DataAzurermBatchPool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/batch_pool#name DataAzurermBatchPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/batch_pool#name DataAzurermBatchPool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/batch_pool#resource_group_name DataAzurermBatchPool#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/batch_pool#resource_group_name DataAzurermBatchPool#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/batch_pool#timeouts DataAzurermBatchPool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/batch_pool#timeouts DataAzurermBatchPool#timeouts}
   */
   readonly timeouts?: DataAzurermBatchPoolTimeouts;
 }
@@ -2316,7 +2316,7 @@ export class DataAzurermBatchPoolWindowsList extends cdktf.ComplexList {
 }
 export interface DataAzurermBatchPoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/batch_pool#read DataAzurermBatchPool#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/batch_pool#read DataAzurermBatchPool#read}
   */
   readonly read?: string;
 }
@@ -2391,7 +2391,7 @@ export class DataAzurermBatchPoolTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/batch_pool azurerm_batch_pool}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/batch_pool azurerm_batch_pool}
 */
 export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
 
@@ -2405,7 +2405,7 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.63.0/docs/data-sources/batch_pool azurerm_batch_pool} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/batch_pool azurerm_batch_pool} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2416,7 +2416,7 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_batch_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.63.0',
+        providerVersion: '3.65.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
