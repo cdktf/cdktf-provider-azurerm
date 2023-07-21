@@ -1,6 +1,6 @@
 # `data_azurerm_eventgrid_domain`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_eventgrid_domain`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain).
+Refer to the Terraform Registory for docs: [`data_azurerm_eventgrid_domain`](https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain).
 
 # `dataAzurermEventgridDomain` Submodule <a name="`dataAzurermEventgridDomain` Submodule" id="@cdktf/provider-azurerm.dataAzurermEventgridDomain"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_eventgrid_domain`](htt
 
 ### DataAzurermEventgridDomain <a name="DataAzurermEventgridDomain" id="@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomain"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain azurerm_eventgrid_domain}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain azurerm_eventgrid_domain}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomain.Initializer"></a>
 
@@ -816,12 +816,12 @@ new DataAzurermEventgridDomainConfig {
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#name DataAzurermEventgridDomain#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#resource_group_name DataAzurermEventgridDomain#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#id DataAzurermEventgridDomain#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.inboundIpRule">InboundIpRule</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#inbound_ip_rule DataAzurermEventgridDomain#inbound_ip_rule}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#public_network_access_enabled DataAzurermEventgridDomain#public_network_access_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#tags DataAzurermEventgridDomain#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#name DataAzurermEventgridDomain#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#resource_group_name DataAzurermEventgridDomain#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#id DataAzurermEventgridDomain#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.inboundIpRule">InboundIpRule</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#inbound_ip_rule DataAzurermEventgridDomain#inbound_ip_rule}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#public_network_access_enabled DataAzurermEventgridDomain#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#tags DataAzurermEventgridDomain#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainTimeouts">DataAzurermEventgridDomainTimeouts</a></code> | timeouts block. |
 
 ---
@@ -904,7 +904,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#name DataAzurermEventgridDomain#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#name DataAzurermEventgridDomain#name}.
 
 ---
 
@@ -916,7 +916,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#resource_group_name DataAzurermEventgridDomain#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#resource_group_name DataAzurermEventgridDomain#resource_group_name}.
 
 ---
 
@@ -928,7 +928,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#id DataAzurermEventgridDomain#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#id DataAzurermEventgridDomain#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -943,7 +943,7 @@ public object InboundIpRule { get; set; }
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#inbound_ip_rule DataAzurermEventgridDomain#inbound_ip_rule}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#inbound_ip_rule DataAzurermEventgridDomain#inbound_ip_rule}.
 
 ---
 
@@ -955,7 +955,7 @@ public object PublicNetworkAccessEnabled { get; set; }
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#public_network_access_enabled DataAzurermEventgridDomain#public_network_access_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#public_network_access_enabled DataAzurermEventgridDomain#public_network_access_enabled}.
 
 ---
 
@@ -967,7 +967,7 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#tags DataAzurermEventgridDomain#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#tags DataAzurermEventgridDomain#tags}.
 
 ---
 
@@ -981,7 +981,7 @@ public DataAzurermEventgridDomainTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#timeouts DataAzurermEventgridDomain#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#timeouts DataAzurermEventgridDomain#timeouts}
 
 ---
 
@@ -1002,8 +1002,8 @@ new DataAzurermEventgridDomainInboundIpRule {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainInboundIpRule.property.action">Action</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#action DataAzurermEventgridDomain#action}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainInboundIpRule.property.ipMask">IpMask</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#ip_mask DataAzurermEventgridDomain#ip_mask}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainInboundIpRule.property.action">Action</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#action DataAzurermEventgridDomain#action}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainInboundIpRule.property.ipMask">IpMask</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#ip_mask DataAzurermEventgridDomain#ip_mask}. |
 
 ---
 
@@ -1015,7 +1015,7 @@ public string Action { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#action DataAzurermEventgridDomain#action}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#action DataAzurermEventgridDomain#action}.
 
 ---
 
@@ -1027,7 +1027,7 @@ public string IpMask { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#ip_mask DataAzurermEventgridDomain#ip_mask}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#ip_mask DataAzurermEventgridDomain#ip_mask}.
 
 ---
 
@@ -1073,7 +1073,7 @@ new DataAzurermEventgridDomainTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#read DataAzurermEventgridDomain#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridDomain.DataAzurermEventgridDomainTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#read DataAzurermEventgridDomain#read}. |
 
 ---
 
@@ -1085,7 +1085,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/eventgrid_domain#read DataAzurermEventgridDomain#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#read DataAzurermEventgridDomain#read}.
 
 ---
 

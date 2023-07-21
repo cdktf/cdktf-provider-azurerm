@@ -1,6 +1,6 @@
 # `azurerm_network_manager_subscription_connection`
 
-Refer to the Terraform Registory for docs: [`azurerm_network_manager_subscription_connection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection).
+Refer to the Terraform Registory for docs: [`azurerm_network_manager_subscription_connection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection).
 
 # `networkManagerSubscriptionConnection` Submodule <a name="`networkManagerSubscriptionConnection` Submodule" id="@cdktf/provider-azurerm.networkManagerSubscriptionConnection"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_network_manager_subscriptio
 
 ### NetworkManagerSubscriptionConnection <a name="NetworkManagerSubscriptionConnection" id="@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnection"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection azurerm_network_manager_subscription_connection}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection azurerm_network_manager_subscription_connection}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnection.Initializer"></a>
 
@@ -708,11 +708,11 @@ const networkManagerSubscriptionConnectionConfig: networkManagerSubscriptionConn
 | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#name NetworkManagerSubscriptionConnection#name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionConfig.property.networkManagerId">networkManagerId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#network_manager_id NetworkManagerSubscriptionConnection#network_manager_id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionConfig.property.subscriptionId">subscriptionId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#subscription_id NetworkManagerSubscriptionConnection#subscription_id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#description NetworkManagerSubscriptionConnection#description}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#id NetworkManagerSubscriptionConnection#id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#name NetworkManagerSubscriptionConnection#name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionConfig.property.networkManagerId">networkManagerId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#network_manager_id NetworkManagerSubscriptionConnection#network_manager_id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionConfig.property.subscriptionId">subscriptionId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#subscription_id NetworkManagerSubscriptionConnection#subscription_id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#description NetworkManagerSubscriptionConnection#description}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#id NetworkManagerSubscriptionConnection#id}. |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts">NetworkManagerSubscriptionConnectionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -795,7 +795,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#name NetworkManagerSubscriptionConnection#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#name NetworkManagerSubscriptionConnection#name}.
 
 ---
 
@@ -807,7 +807,7 @@ public readonly networkManagerId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#network_manager_id NetworkManagerSubscriptionConnection#network_manager_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#network_manager_id NetworkManagerSubscriptionConnection#network_manager_id}.
 
 ---
 
@@ -819,7 +819,7 @@ public readonly subscriptionId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#subscription_id NetworkManagerSubscriptionConnection#subscription_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#subscription_id NetworkManagerSubscriptionConnection#subscription_id}.
 
 ---
 
@@ -831,7 +831,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#description NetworkManagerSubscriptionConnection#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#description NetworkManagerSubscriptionConnection#description}.
 
 ---
 
@@ -843,7 +843,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#id NetworkManagerSubscriptionConnection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#id NetworkManagerSubscriptionConnection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -860,7 +860,7 @@ public readonly timeouts: NetworkManagerSubscriptionConnectionTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#timeouts NetworkManagerSubscriptionConnection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#timeouts NetworkManagerSubscriptionConnection#timeouts}
 
 ---
 
@@ -878,10 +878,10 @@ const networkManagerSubscriptionConnectionTimeouts: networkManagerSubscriptionCo
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#create NetworkManagerSubscriptionConnection#create}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#delete NetworkManagerSubscriptionConnection#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#read NetworkManagerSubscriptionConnection#read}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#update NetworkManagerSubscriptionConnection#update}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#create NetworkManagerSubscriptionConnection#create}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#delete NetworkManagerSubscriptionConnection#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#read NetworkManagerSubscriptionConnection#read}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerSubscriptionConnection.NetworkManagerSubscriptionConnectionTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#update NetworkManagerSubscriptionConnection#update}. |
 
 ---
 
@@ -893,7 +893,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#create NetworkManagerSubscriptionConnection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#create NetworkManagerSubscriptionConnection#create}.
 
 ---
 
@@ -905,7 +905,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#delete NetworkManagerSubscriptionConnection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#delete NetworkManagerSubscriptionConnection#delete}.
 
 ---
 
@@ -917,7 +917,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#read NetworkManagerSubscriptionConnection#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#read NetworkManagerSubscriptionConnection#read}.
 
 ---
 
@@ -929,7 +929,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/network_manager_subscription_connection#update NetworkManagerSubscriptionConnection#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_subscription_connection#update NetworkManagerSubscriptionConnection#update}.
 
 ---
 

@@ -1,6 +1,6 @@
 # `azurerm_iothub_dps_certificate`
 
-Refer to the Terraform Registory for docs: [`azurerm_iothub_dps_certificate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate).
+Refer to the Terraform Registory for docs: [`azurerm_iothub_dps_certificate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate).
 
 # `iothubDpsCertificate` Submodule <a name="`iothubDpsCertificate` Submodule" id="@cdktf/provider-azurerm.iothubDpsCertificate"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_iothub_dps_certificate`](ht
 
 ### IothubDpsCertificate <a name="IothubDpsCertificate" id="@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate azurerm_iothub_dps_certificate}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate azurerm_iothub_dps_certificate}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer"></a>
 
@@ -49,12 +49,12 @@ IothubDpsCertificate.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.certificateContent">certificateContent</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#certificate_content IothubDpsCertificate#certificate_content}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.iotDpsName">iotDpsName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#iot_dps_name IothubDpsCertificate#iot_dps_name}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#name IothubDpsCertificate#name}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#resource_group_name IothubDpsCertificate#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#id IothubDpsCertificate#id}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.isVerified">isVerified</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#is_verified IothubDpsCertificate#is_verified}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.certificateContent">certificateContent</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#certificate_content IothubDpsCertificate#certificate_content}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.iotDpsName">iotDpsName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#iot_dps_name IothubDpsCertificate#iot_dps_name}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#name IothubDpsCertificate#name}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#resource_group_name IothubDpsCertificate#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#id IothubDpsCertificate#id}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.isVerified">isVerified</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#is_verified IothubDpsCertificate#is_verified}. |
 | <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificate.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateTimeouts">IothubDpsCertificateTimeouts</a></code> | timeouts block. |
 
 ---
@@ -123,7 +123,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#certificate_content IothubDpsCertificate#certificate_content}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#certificate_content IothubDpsCertificate#certificate_content}.
 
 ---
 
@@ -131,7 +131,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#iot_dps_name IothubDpsCertificate#iot_dps_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#iot_dps_name IothubDpsCertificate#iot_dps_name}.
 
 ---
 
@@ -139,7 +139,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#name IothubDpsCertificate#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#name IothubDpsCertificate#name}.
 
 ---
 
@@ -147,7 +147,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#resource_group_name IothubDpsCertificate#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#resource_group_name IothubDpsCertificate#resource_group_name}.
 
 ---
 
@@ -155,7 +155,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#id IothubDpsCertificate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#id IothubDpsCertificate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -166,7 +166,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#is_verified IothubDpsCertificate#is_verified}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#is_verified IothubDpsCertificate#is_verified}.
 
 ---
 
@@ -176,7 +176,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#timeouts IothubDpsCertificate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#timeouts IothubDpsCertificate#timeouts}
 
 ---
 
@@ -869,12 +869,12 @@ IothubDpsCertificateConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.certificateContent">certificateContent</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#certificate_content IothubDpsCertificate#certificate_content}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.iotDpsName">iotDpsName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#iot_dps_name IothubDpsCertificate#iot_dps_name}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#name IothubDpsCertificate#name}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#resource_group_name IothubDpsCertificate#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#id IothubDpsCertificate#id}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.isVerified">isVerified</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#is_verified IothubDpsCertificate#is_verified}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.certificateContent">certificateContent</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#certificate_content IothubDpsCertificate#certificate_content}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.iotDpsName">iotDpsName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#iot_dps_name IothubDpsCertificate#iot_dps_name}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#name IothubDpsCertificate#name}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#resource_group_name IothubDpsCertificate#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#id IothubDpsCertificate#id}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.isVerified">isVerified</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#is_verified IothubDpsCertificate#is_verified}. |
 | <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateTimeouts">IothubDpsCertificateTimeouts</a></code> | timeouts block. |
 
 ---
@@ -957,7 +957,7 @@ public java.lang.String getCertificateContent();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#certificate_content IothubDpsCertificate#certificate_content}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#certificate_content IothubDpsCertificate#certificate_content}.
 
 ---
 
@@ -969,7 +969,7 @@ public java.lang.String getIotDpsName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#iot_dps_name IothubDpsCertificate#iot_dps_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#iot_dps_name IothubDpsCertificate#iot_dps_name}.
 
 ---
 
@@ -981,7 +981,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#name IothubDpsCertificate#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#name IothubDpsCertificate#name}.
 
 ---
 
@@ -993,7 +993,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#resource_group_name IothubDpsCertificate#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#resource_group_name IothubDpsCertificate#resource_group_name}.
 
 ---
 
@@ -1005,7 +1005,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#id IothubDpsCertificate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#id IothubDpsCertificate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1020,7 +1020,7 @@ public java.lang.Object getIsVerified();
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#is_verified IothubDpsCertificate#is_verified}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#is_verified IothubDpsCertificate#is_verified}.
 
 ---
 
@@ -1034,7 +1034,7 @@ public IothubDpsCertificateTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#timeouts IothubDpsCertificate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#timeouts IothubDpsCertificate#timeouts}
 
 ---
 
@@ -1057,10 +1057,10 @@ IothubDpsCertificateTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#create IothubDpsCertificate#create}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#delete IothubDpsCertificate#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#read IothubDpsCertificate#read}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#update IothubDpsCertificate#update}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#create IothubDpsCertificate#create}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#delete IothubDpsCertificate#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#read IothubDpsCertificate#read}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsCertificate.IothubDpsCertificateTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#update IothubDpsCertificate#update}. |
 
 ---
 
@@ -1072,7 +1072,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#create IothubDpsCertificate#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#create IothubDpsCertificate#create}.
 
 ---
 
@@ -1084,7 +1084,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#delete IothubDpsCertificate#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#delete IothubDpsCertificate#delete}.
 
 ---
 
@@ -1096,7 +1096,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#read IothubDpsCertificate#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#read IothubDpsCertificate#read}.
 
 ---
 
@@ -1108,7 +1108,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/iothub_dps_certificate#update IothubDpsCertificate#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_certificate#update IothubDpsCertificate#update}.
 
 ---
 
