@@ -1,6 +1,6 @@
 # `data_azurerm_sql_server`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_sql_server`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server).
+Refer to the Terraform Registory for docs: [`data_azurerm_sql_server`](https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server).
 
 # `dataAzurermSqlServer` Submodule <a name="`dataAzurermSqlServer` Submodule" id="@cdktf/provider-azurerm.dataAzurermSqlServer"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_sql_server`](https://r
 
 ### DataAzurermSqlServer <a name="DataAzurermSqlServer" id="@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server azurerm_sql_server}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server azurerm_sql_server}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.Initializer"></a>
 
@@ -45,9 +45,9 @@ DataAzurermSqlServer.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#name DataAzurermSqlServer#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#resource_group_name DataAzurermSqlServer#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#id DataAzurermSqlServer#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#name DataAzurermSqlServer#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#resource_group_name DataAzurermSqlServer#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#id DataAzurermSqlServer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerTimeouts">DataAzurermSqlServerTimeouts</a></code> | timeouts block. |
 
 ---
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#name DataAzurermSqlServer#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#name DataAzurermSqlServer#name}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#resource_group_name DataAzurermSqlServer#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#resource_group_name DataAzurermSqlServer#resource_group_name}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#id DataAzurermSqlServer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#id DataAzurermSqlServer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -145,7 +145,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#timeouts DataAzurermSqlServer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#timeouts DataAzurermSqlServer#timeouts}
 
 ---
 
@@ -805,9 +805,9 @@ DataAzurermSqlServerConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#name DataAzurermSqlServer#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#resource_group_name DataAzurermSqlServer#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#id DataAzurermSqlServer#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#name DataAzurermSqlServer#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#resource_group_name DataAzurermSqlServer#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#id DataAzurermSqlServer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerTimeouts">DataAzurermSqlServerTimeouts</a></code> | timeouts block. |
 
 ---
@@ -890,7 +890,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#name DataAzurermSqlServer#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#name DataAzurermSqlServer#name}.
 
 ---
 
@@ -902,7 +902,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#resource_group_name DataAzurermSqlServer#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#resource_group_name DataAzurermSqlServer#resource_group_name}.
 
 ---
 
@@ -914,7 +914,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#id DataAzurermSqlServer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#id DataAzurermSqlServer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -931,7 +931,7 @@ public DataAzurermSqlServerTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#timeouts DataAzurermSqlServer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#timeouts DataAzurermSqlServer#timeouts}
 
 ---
 
@@ -963,7 +963,7 @@ DataAzurermSqlServerTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#read DataAzurermSqlServer#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#read DataAzurermSqlServer#read}. |
 
 ---
 
@@ -975,7 +975,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/data-sources/sql_server#read DataAzurermSqlServer#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#read DataAzurermSqlServer#read}.
 
 ---
 

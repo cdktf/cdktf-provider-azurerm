@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,62 +13,80 @@ import * as cdktf from 'cdktf';
 
 export interface SiteRecoveryReplicationRecoveryPlanConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#id SiteRecoveryReplicationRecoveryPlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#id SiteRecoveryReplicationRecoveryPlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#recovery_vault_id SiteRecoveryReplicationRecoveryPlan#recovery_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#recovery_vault_id SiteRecoveryReplicationRecoveryPlan#recovery_vault_id}
   */
   readonly recoveryVaultId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#source_recovery_fabric_id SiteRecoveryReplicationRecoveryPlan#source_recovery_fabric_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#source_recovery_fabric_id SiteRecoveryReplicationRecoveryPlan#source_recovery_fabric_id}
   */
   readonly sourceRecoveryFabricId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#target_recovery_fabric_id SiteRecoveryReplicationRecoveryPlan#target_recovery_fabric_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#target_recovery_fabric_id SiteRecoveryReplicationRecoveryPlan#target_recovery_fabric_id}
   */
   readonly targetRecoveryFabricId: string;
   /**
   * azure_to_azure_settings block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#azure_to_azure_settings SiteRecoveryReplicationRecoveryPlan#azure_to_azure_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#azure_to_azure_settings SiteRecoveryReplicationRecoveryPlan#azure_to_azure_settings}
   */
   readonly azureToAzureSettings?: SiteRecoveryReplicationRecoveryPlanAzureToAzureSettings;
   /**
+  * boot_recovery_group block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#boot_recovery_group SiteRecoveryReplicationRecoveryPlan#boot_recovery_group}
+  */
+  readonly bootRecoveryGroup?: SiteRecoveryReplicationRecoveryPlanBootRecoveryGroup[] | cdktf.IResolvable;
+  /**
+  * failover_recovery_group block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#failover_recovery_group SiteRecoveryReplicationRecoveryPlan#failover_recovery_group}
+  */
+  readonly failoverRecoveryGroup?: SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroup;
+  /**
   * recovery_group block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#recovery_group SiteRecoveryReplicationRecoveryPlan#recovery_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#recovery_group SiteRecoveryReplicationRecoveryPlan#recovery_group}
   */
   readonly recoveryGroup?: SiteRecoveryReplicationRecoveryPlanRecoveryGroup[] | cdktf.IResolvable;
   /**
+  * shutdown_recovery_group block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#shutdown_recovery_group SiteRecoveryReplicationRecoveryPlan#shutdown_recovery_group}
+  */
+  readonly shutdownRecoveryGroup?: SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroup;
+  /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#timeouts SiteRecoveryReplicationRecoveryPlan#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#timeouts SiteRecoveryReplicationRecoveryPlan#timeouts}
   */
   readonly timeouts?: SiteRecoveryReplicationRecoveryPlanTimeouts;
 }
 export interface SiteRecoveryReplicationRecoveryPlanAzureToAzureSettings {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#primary_edge_zone SiteRecoveryReplicationRecoveryPlan#primary_edge_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#primary_edge_zone SiteRecoveryReplicationRecoveryPlan#primary_edge_zone}
   */
   readonly primaryEdgeZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#primary_zone SiteRecoveryReplicationRecoveryPlan#primary_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#primary_zone SiteRecoveryReplicationRecoveryPlan#primary_zone}
   */
   readonly primaryZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#recovery_edge_zone SiteRecoveryReplicationRecoveryPlan#recovery_edge_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#recovery_edge_zone SiteRecoveryReplicationRecoveryPlan#recovery_edge_zone}
   */
   readonly recoveryEdgeZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#recovery_zone SiteRecoveryReplicationRecoveryPlan#recovery_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#recovery_zone SiteRecoveryReplicationRecoveryPlan#recovery_zone}
   */
   readonly recoveryZone?: string;
 }
@@ -200,37 +218,1384 @@ export class SiteRecoveryReplicationRecoveryPlanAzureToAzureSettingsOutputRefere
     return this._recoveryZone;
   }
 }
-export interface SiteRecoveryReplicationRecoveryPlanRecoveryGroupPostAction {
+export interface SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPostAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#fabric_location SiteRecoveryReplicationRecoveryPlan#fabric_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fabric_location SiteRecoveryReplicationRecoveryPlan#fabric_location}
   */
   readonly fabricLocation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_directions SiteRecoveryReplicationRecoveryPlan#fail_over_directions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_directions SiteRecoveryReplicationRecoveryPlan#fail_over_directions}
   */
   readonly failOverDirections: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_types SiteRecoveryReplicationRecoveryPlan#fail_over_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_types SiteRecoveryReplicationRecoveryPlan#fail_over_types}
   */
   readonly failOverTypes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#manual_action_instruction SiteRecoveryReplicationRecoveryPlan#manual_action_instruction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#manual_action_instruction SiteRecoveryReplicationRecoveryPlan#manual_action_instruction}
   */
   readonly manualActionInstruction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#runbook_id SiteRecoveryReplicationRecoveryPlan#runbook_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#runbook_id SiteRecoveryReplicationRecoveryPlan#runbook_id}
   */
   readonly runbookId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#script_path SiteRecoveryReplicationRecoveryPlan#script_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#script_path SiteRecoveryReplicationRecoveryPlan#script_path}
   */
   readonly scriptPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
+  */
+  readonly type: string;
+}
+
+export function siteRecoveryReplicationRecoveryPlanBootRecoveryGroupPostActionToTerraform(struct?: SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPostAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    fabric_location: cdktf.stringToTerraform(struct!.fabricLocation),
+    fail_over_directions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.failOverDirections),
+    fail_over_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.failOverTypes),
+    manual_action_instruction: cdktf.stringToTerraform(struct!.manualActionInstruction),
+    name: cdktf.stringToTerraform(struct!.name),
+    runbook_id: cdktf.stringToTerraform(struct!.runbookId),
+    script_path: cdktf.stringToTerraform(struct!.scriptPath),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPostActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPostAction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._fabricLocation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fabricLocation = this._fabricLocation;
+    }
+    if (this._failOverDirections !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failOverDirections = this._failOverDirections;
+    }
+    if (this._failOverTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failOverTypes = this._failOverTypes;
+    }
+    if (this._manualActionInstruction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.manualActionInstruction = this._manualActionInstruction;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._runbookId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.runbookId = this._runbookId;
+    }
+    if (this._scriptPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scriptPath = this._scriptPath;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPostAction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._fabricLocation = undefined;
+      this._failOverDirections = undefined;
+      this._failOverTypes = undefined;
+      this._manualActionInstruction = undefined;
+      this._name = undefined;
+      this._runbookId = undefined;
+      this._scriptPath = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._fabricLocation = value.fabricLocation;
+      this._failOverDirections = value.failOverDirections;
+      this._failOverTypes = value.failOverTypes;
+      this._manualActionInstruction = value.manualActionInstruction;
+      this._name = value.name;
+      this._runbookId = value.runbookId;
+      this._scriptPath = value.scriptPath;
+      this._type = value.type;
+    }
+  }
+
+  // fabric_location - computed: false, optional: true, required: false
+  private _fabricLocation?: string; 
+  public get fabricLocation() {
+    return this.getStringAttribute('fabric_location');
+  }
+  public set fabricLocation(value: string) {
+    this._fabricLocation = value;
+  }
+  public resetFabricLocation() {
+    this._fabricLocation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fabricLocationInput() {
+    return this._fabricLocation;
+  }
+
+  // fail_over_directions - computed: false, optional: false, required: true
+  private _failOverDirections?: string[]; 
+  public get failOverDirections() {
+    return cdktf.Fn.tolist(this.getListAttribute('fail_over_directions'));
+  }
+  public set failOverDirections(value: string[]) {
+    this._failOverDirections = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failOverDirectionsInput() {
+    return this._failOverDirections;
+  }
+
+  // fail_over_types - computed: false, optional: false, required: true
+  private _failOverTypes?: string[]; 
+  public get failOverTypes() {
+    return cdktf.Fn.tolist(this.getListAttribute('fail_over_types'));
+  }
+  public set failOverTypes(value: string[]) {
+    this._failOverTypes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failOverTypesInput() {
+    return this._failOverTypes;
+  }
+
+  // manual_action_instruction - computed: false, optional: true, required: false
+  private _manualActionInstruction?: string; 
+  public get manualActionInstruction() {
+    return this.getStringAttribute('manual_action_instruction');
+  }
+  public set manualActionInstruction(value: string) {
+    this._manualActionInstruction = value;
+  }
+  public resetManualActionInstruction() {
+    this._manualActionInstruction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get manualActionInstructionInput() {
+    return this._manualActionInstruction;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // runbook_id - computed: false, optional: true, required: false
+  private _runbookId?: string; 
+  public get runbookId() {
+    return this.getStringAttribute('runbook_id');
+  }
+  public set runbookId(value: string) {
+    this._runbookId = value;
+  }
+  public resetRunbookId() {
+    this._runbookId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runbookIdInput() {
+    return this._runbookId;
+  }
+
+  // script_path - computed: false, optional: true, required: false
+  private _scriptPath?: string; 
+  public get scriptPath() {
+    return this.getStringAttribute('script_path');
+  }
+  public set scriptPath(value: string) {
+    this._scriptPath = value;
+  }
+  public resetScriptPath() {
+    this._scriptPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptPathInput() {
+    return this._scriptPath;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPostActionList extends cdktf.ComplexList {
+  public internalValue? : SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPostAction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPostActionOutputReference {
+    return new SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPostActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPreAction {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fabric_location SiteRecoveryReplicationRecoveryPlan#fabric_location}
+  */
+  readonly fabricLocation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_directions SiteRecoveryReplicationRecoveryPlan#fail_over_directions}
+  */
+  readonly failOverDirections: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_types SiteRecoveryReplicationRecoveryPlan#fail_over_types}
+  */
+  readonly failOverTypes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#manual_action_instruction SiteRecoveryReplicationRecoveryPlan#manual_action_instruction}
+  */
+  readonly manualActionInstruction?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#runbook_id SiteRecoveryReplicationRecoveryPlan#runbook_id}
+  */
+  readonly runbookId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#script_path SiteRecoveryReplicationRecoveryPlan#script_path}
+  */
+  readonly scriptPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
+  */
+  readonly type: string;
+}
+
+export function siteRecoveryReplicationRecoveryPlanBootRecoveryGroupPreActionToTerraform(struct?: SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPreAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    fabric_location: cdktf.stringToTerraform(struct!.fabricLocation),
+    fail_over_directions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.failOverDirections),
+    fail_over_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.failOverTypes),
+    manual_action_instruction: cdktf.stringToTerraform(struct!.manualActionInstruction),
+    name: cdktf.stringToTerraform(struct!.name),
+    runbook_id: cdktf.stringToTerraform(struct!.runbookId),
+    script_path: cdktf.stringToTerraform(struct!.scriptPath),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPreActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPreAction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._fabricLocation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fabricLocation = this._fabricLocation;
+    }
+    if (this._failOverDirections !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failOverDirections = this._failOverDirections;
+    }
+    if (this._failOverTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failOverTypes = this._failOverTypes;
+    }
+    if (this._manualActionInstruction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.manualActionInstruction = this._manualActionInstruction;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._runbookId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.runbookId = this._runbookId;
+    }
+    if (this._scriptPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scriptPath = this._scriptPath;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPreAction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._fabricLocation = undefined;
+      this._failOverDirections = undefined;
+      this._failOverTypes = undefined;
+      this._manualActionInstruction = undefined;
+      this._name = undefined;
+      this._runbookId = undefined;
+      this._scriptPath = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._fabricLocation = value.fabricLocation;
+      this._failOverDirections = value.failOverDirections;
+      this._failOverTypes = value.failOverTypes;
+      this._manualActionInstruction = value.manualActionInstruction;
+      this._name = value.name;
+      this._runbookId = value.runbookId;
+      this._scriptPath = value.scriptPath;
+      this._type = value.type;
+    }
+  }
+
+  // fabric_location - computed: false, optional: true, required: false
+  private _fabricLocation?: string; 
+  public get fabricLocation() {
+    return this.getStringAttribute('fabric_location');
+  }
+  public set fabricLocation(value: string) {
+    this._fabricLocation = value;
+  }
+  public resetFabricLocation() {
+    this._fabricLocation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fabricLocationInput() {
+    return this._fabricLocation;
+  }
+
+  // fail_over_directions - computed: false, optional: false, required: true
+  private _failOverDirections?: string[]; 
+  public get failOverDirections() {
+    return cdktf.Fn.tolist(this.getListAttribute('fail_over_directions'));
+  }
+  public set failOverDirections(value: string[]) {
+    this._failOverDirections = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failOverDirectionsInput() {
+    return this._failOverDirections;
+  }
+
+  // fail_over_types - computed: false, optional: false, required: true
+  private _failOverTypes?: string[]; 
+  public get failOverTypes() {
+    return cdktf.Fn.tolist(this.getListAttribute('fail_over_types'));
+  }
+  public set failOverTypes(value: string[]) {
+    this._failOverTypes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failOverTypesInput() {
+    return this._failOverTypes;
+  }
+
+  // manual_action_instruction - computed: false, optional: true, required: false
+  private _manualActionInstruction?: string; 
+  public get manualActionInstruction() {
+    return this.getStringAttribute('manual_action_instruction');
+  }
+  public set manualActionInstruction(value: string) {
+    this._manualActionInstruction = value;
+  }
+  public resetManualActionInstruction() {
+    this._manualActionInstruction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get manualActionInstructionInput() {
+    return this._manualActionInstruction;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // runbook_id - computed: false, optional: true, required: false
+  private _runbookId?: string; 
+  public get runbookId() {
+    return this.getStringAttribute('runbook_id');
+  }
+  public set runbookId(value: string) {
+    this._runbookId = value;
+  }
+  public resetRunbookId() {
+    this._runbookId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runbookIdInput() {
+    return this._runbookId;
+  }
+
+  // script_path - computed: false, optional: true, required: false
+  private _scriptPath?: string; 
+  public get scriptPath() {
+    return this.getStringAttribute('script_path');
+  }
+  public set scriptPath(value: string) {
+    this._scriptPath = value;
+  }
+  public resetScriptPath() {
+    this._scriptPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptPathInput() {
+    return this._scriptPath;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPreActionList extends cdktf.ComplexList {
+  public internalValue? : SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPreAction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPreActionOutputReference {
+    return new SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPreActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SiteRecoveryReplicationRecoveryPlanBootRecoveryGroup {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#replicated_protected_items SiteRecoveryReplicationRecoveryPlan#replicated_protected_items}
+  */
+  readonly replicatedProtectedItems?: string[];
+  /**
+  * post_action block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#post_action SiteRecoveryReplicationRecoveryPlan#post_action}
+  */
+  readonly postAction?: SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPostAction[] | cdktf.IResolvable;
+  /**
+  * pre_action block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#pre_action SiteRecoveryReplicationRecoveryPlan#pre_action}
+  */
+  readonly preAction?: SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPreAction[] | cdktf.IResolvable;
+}
+
+export function siteRecoveryReplicationRecoveryPlanBootRecoveryGroupToTerraform(struct?: SiteRecoveryReplicationRecoveryPlanBootRecoveryGroup | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    replicated_protected_items: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.replicatedProtectedItems),
+    post_action: cdktf.listMapper(siteRecoveryReplicationRecoveryPlanBootRecoveryGroupPostActionToTerraform, true)(struct!.postAction),
+    pre_action: cdktf.listMapper(siteRecoveryReplicationRecoveryPlanBootRecoveryGroupPreActionToTerraform, true)(struct!.preAction),
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SiteRecoveryReplicationRecoveryPlanBootRecoveryGroup | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._replicatedProtectedItems !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replicatedProtectedItems = this._replicatedProtectedItems;
+    }
+    if (this._postAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postAction = this._postAction?.internalValue;
+    }
+    if (this._preAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.preAction = this._preAction?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SiteRecoveryReplicationRecoveryPlanBootRecoveryGroup | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._replicatedProtectedItems = undefined;
+      this._postAction.internalValue = undefined;
+      this._preAction.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._replicatedProtectedItems = value.replicatedProtectedItems;
+      this._postAction.internalValue = value.postAction;
+      this._preAction.internalValue = value.preAction;
+    }
+  }
+
+  // replicated_protected_items - computed: false, optional: true, required: false
+  private _replicatedProtectedItems?: string[]; 
+  public get replicatedProtectedItems() {
+    return this.getListAttribute('replicated_protected_items');
+  }
+  public set replicatedProtectedItems(value: string[]) {
+    this._replicatedProtectedItems = value;
+  }
+  public resetReplicatedProtectedItems() {
+    this._replicatedProtectedItems = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicatedProtectedItemsInput() {
+    return this._replicatedProtectedItems;
+  }
+
+  // post_action - computed: false, optional: true, required: false
+  private _postAction = new SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPostActionList(this, "post_action", false);
+  public get postAction() {
+    return this._postAction;
+  }
+  public putPostAction(value: SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPostAction[] | cdktf.IResolvable) {
+    this._postAction.internalValue = value;
+  }
+  public resetPostAction() {
+    this._postAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postActionInput() {
+    return this._postAction.internalValue;
+  }
+
+  // pre_action - computed: false, optional: true, required: false
+  private _preAction = new SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPreActionList(this, "pre_action", false);
+  public get preAction() {
+    return this._preAction;
+  }
+  public putPreAction(value: SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPreAction[] | cdktf.IResolvable) {
+    this._preAction.internalValue = value;
+  }
+  public resetPreAction() {
+    this._preAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preActionInput() {
+    return this._preAction.internalValue;
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupList extends cdktf.ComplexList {
+  public internalValue? : SiteRecoveryReplicationRecoveryPlanBootRecoveryGroup[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupOutputReference {
+    return new SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPostAction {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fabric_location SiteRecoveryReplicationRecoveryPlan#fabric_location}
+  */
+  readonly fabricLocation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_directions SiteRecoveryReplicationRecoveryPlan#fail_over_directions}
+  */
+  readonly failOverDirections: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_types SiteRecoveryReplicationRecoveryPlan#fail_over_types}
+  */
+  readonly failOverTypes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#manual_action_instruction SiteRecoveryReplicationRecoveryPlan#manual_action_instruction}
+  */
+  readonly manualActionInstruction?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#runbook_id SiteRecoveryReplicationRecoveryPlan#runbook_id}
+  */
+  readonly runbookId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#script_path SiteRecoveryReplicationRecoveryPlan#script_path}
+  */
+  readonly scriptPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
+  */
+  readonly type: string;
+}
+
+export function siteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPostActionToTerraform(struct?: SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPostAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    fabric_location: cdktf.stringToTerraform(struct!.fabricLocation),
+    fail_over_directions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.failOverDirections),
+    fail_over_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.failOverTypes),
+    manual_action_instruction: cdktf.stringToTerraform(struct!.manualActionInstruction),
+    name: cdktf.stringToTerraform(struct!.name),
+    runbook_id: cdktf.stringToTerraform(struct!.runbookId),
+    script_path: cdktf.stringToTerraform(struct!.scriptPath),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPostActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPostAction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._fabricLocation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fabricLocation = this._fabricLocation;
+    }
+    if (this._failOverDirections !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failOverDirections = this._failOverDirections;
+    }
+    if (this._failOverTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failOverTypes = this._failOverTypes;
+    }
+    if (this._manualActionInstruction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.manualActionInstruction = this._manualActionInstruction;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._runbookId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.runbookId = this._runbookId;
+    }
+    if (this._scriptPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scriptPath = this._scriptPath;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPostAction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._fabricLocation = undefined;
+      this._failOverDirections = undefined;
+      this._failOverTypes = undefined;
+      this._manualActionInstruction = undefined;
+      this._name = undefined;
+      this._runbookId = undefined;
+      this._scriptPath = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._fabricLocation = value.fabricLocation;
+      this._failOverDirections = value.failOverDirections;
+      this._failOverTypes = value.failOverTypes;
+      this._manualActionInstruction = value.manualActionInstruction;
+      this._name = value.name;
+      this._runbookId = value.runbookId;
+      this._scriptPath = value.scriptPath;
+      this._type = value.type;
+    }
+  }
+
+  // fabric_location - computed: false, optional: true, required: false
+  private _fabricLocation?: string; 
+  public get fabricLocation() {
+    return this.getStringAttribute('fabric_location');
+  }
+  public set fabricLocation(value: string) {
+    this._fabricLocation = value;
+  }
+  public resetFabricLocation() {
+    this._fabricLocation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fabricLocationInput() {
+    return this._fabricLocation;
+  }
+
+  // fail_over_directions - computed: false, optional: false, required: true
+  private _failOverDirections?: string[]; 
+  public get failOverDirections() {
+    return cdktf.Fn.tolist(this.getListAttribute('fail_over_directions'));
+  }
+  public set failOverDirections(value: string[]) {
+    this._failOverDirections = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failOverDirectionsInput() {
+    return this._failOverDirections;
+  }
+
+  // fail_over_types - computed: false, optional: false, required: true
+  private _failOverTypes?: string[]; 
+  public get failOverTypes() {
+    return cdktf.Fn.tolist(this.getListAttribute('fail_over_types'));
+  }
+  public set failOverTypes(value: string[]) {
+    this._failOverTypes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failOverTypesInput() {
+    return this._failOverTypes;
+  }
+
+  // manual_action_instruction - computed: false, optional: true, required: false
+  private _manualActionInstruction?: string; 
+  public get manualActionInstruction() {
+    return this.getStringAttribute('manual_action_instruction');
+  }
+  public set manualActionInstruction(value: string) {
+    this._manualActionInstruction = value;
+  }
+  public resetManualActionInstruction() {
+    this._manualActionInstruction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get manualActionInstructionInput() {
+    return this._manualActionInstruction;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // runbook_id - computed: false, optional: true, required: false
+  private _runbookId?: string; 
+  public get runbookId() {
+    return this.getStringAttribute('runbook_id');
+  }
+  public set runbookId(value: string) {
+    this._runbookId = value;
+  }
+  public resetRunbookId() {
+    this._runbookId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runbookIdInput() {
+    return this._runbookId;
+  }
+
+  // script_path - computed: false, optional: true, required: false
+  private _scriptPath?: string; 
+  public get scriptPath() {
+    return this.getStringAttribute('script_path');
+  }
+  public set scriptPath(value: string) {
+    this._scriptPath = value;
+  }
+  public resetScriptPath() {
+    this._scriptPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptPathInput() {
+    return this._scriptPath;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPostActionList extends cdktf.ComplexList {
+  public internalValue? : SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPostAction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPostActionOutputReference {
+    return new SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPostActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreAction {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fabric_location SiteRecoveryReplicationRecoveryPlan#fabric_location}
+  */
+  readonly fabricLocation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_directions SiteRecoveryReplicationRecoveryPlan#fail_over_directions}
+  */
+  readonly failOverDirections: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_types SiteRecoveryReplicationRecoveryPlan#fail_over_types}
+  */
+  readonly failOverTypes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#manual_action_instruction SiteRecoveryReplicationRecoveryPlan#manual_action_instruction}
+  */
+  readonly manualActionInstruction?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#runbook_id SiteRecoveryReplicationRecoveryPlan#runbook_id}
+  */
+  readonly runbookId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#script_path SiteRecoveryReplicationRecoveryPlan#script_path}
+  */
+  readonly scriptPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
+  */
+  readonly type: string;
+}
+
+export function siteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreActionToTerraform(struct?: SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    fabric_location: cdktf.stringToTerraform(struct!.fabricLocation),
+    fail_over_directions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.failOverDirections),
+    fail_over_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.failOverTypes),
+    manual_action_instruction: cdktf.stringToTerraform(struct!.manualActionInstruction),
+    name: cdktf.stringToTerraform(struct!.name),
+    runbook_id: cdktf.stringToTerraform(struct!.runbookId),
+    script_path: cdktf.stringToTerraform(struct!.scriptPath),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreAction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._fabricLocation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fabricLocation = this._fabricLocation;
+    }
+    if (this._failOverDirections !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failOverDirections = this._failOverDirections;
+    }
+    if (this._failOverTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failOverTypes = this._failOverTypes;
+    }
+    if (this._manualActionInstruction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.manualActionInstruction = this._manualActionInstruction;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._runbookId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.runbookId = this._runbookId;
+    }
+    if (this._scriptPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scriptPath = this._scriptPath;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreAction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._fabricLocation = undefined;
+      this._failOverDirections = undefined;
+      this._failOverTypes = undefined;
+      this._manualActionInstruction = undefined;
+      this._name = undefined;
+      this._runbookId = undefined;
+      this._scriptPath = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._fabricLocation = value.fabricLocation;
+      this._failOverDirections = value.failOverDirections;
+      this._failOverTypes = value.failOverTypes;
+      this._manualActionInstruction = value.manualActionInstruction;
+      this._name = value.name;
+      this._runbookId = value.runbookId;
+      this._scriptPath = value.scriptPath;
+      this._type = value.type;
+    }
+  }
+
+  // fabric_location - computed: false, optional: true, required: false
+  private _fabricLocation?: string; 
+  public get fabricLocation() {
+    return this.getStringAttribute('fabric_location');
+  }
+  public set fabricLocation(value: string) {
+    this._fabricLocation = value;
+  }
+  public resetFabricLocation() {
+    this._fabricLocation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fabricLocationInput() {
+    return this._fabricLocation;
+  }
+
+  // fail_over_directions - computed: false, optional: false, required: true
+  private _failOverDirections?: string[]; 
+  public get failOverDirections() {
+    return cdktf.Fn.tolist(this.getListAttribute('fail_over_directions'));
+  }
+  public set failOverDirections(value: string[]) {
+    this._failOverDirections = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failOverDirectionsInput() {
+    return this._failOverDirections;
+  }
+
+  // fail_over_types - computed: false, optional: false, required: true
+  private _failOverTypes?: string[]; 
+  public get failOverTypes() {
+    return cdktf.Fn.tolist(this.getListAttribute('fail_over_types'));
+  }
+  public set failOverTypes(value: string[]) {
+    this._failOverTypes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failOverTypesInput() {
+    return this._failOverTypes;
+  }
+
+  // manual_action_instruction - computed: false, optional: true, required: false
+  private _manualActionInstruction?: string; 
+  public get manualActionInstruction() {
+    return this.getStringAttribute('manual_action_instruction');
+  }
+  public set manualActionInstruction(value: string) {
+    this._manualActionInstruction = value;
+  }
+  public resetManualActionInstruction() {
+    this._manualActionInstruction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get manualActionInstructionInput() {
+    return this._manualActionInstruction;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // runbook_id - computed: false, optional: true, required: false
+  private _runbookId?: string; 
+  public get runbookId() {
+    return this.getStringAttribute('runbook_id');
+  }
+  public set runbookId(value: string) {
+    this._runbookId = value;
+  }
+  public resetRunbookId() {
+    this._runbookId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runbookIdInput() {
+    return this._runbookId;
+  }
+
+  // script_path - computed: false, optional: true, required: false
+  private _scriptPath?: string; 
+  public get scriptPath() {
+    return this.getStringAttribute('script_path');
+  }
+  public set scriptPath(value: string) {
+    this._scriptPath = value;
+  }
+  public resetScriptPath() {
+    this._scriptPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptPathInput() {
+    return this._scriptPath;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreActionList extends cdktf.ComplexList {
+  public internalValue? : SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreAction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreActionOutputReference {
+    return new SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroup {
+  /**
+  * post_action block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#post_action SiteRecoveryReplicationRecoveryPlan#post_action}
+  */
+  readonly postAction?: SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPostAction[] | cdktf.IResolvable;
+  /**
+  * pre_action block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#pre_action SiteRecoveryReplicationRecoveryPlan#pre_action}
+  */
+  readonly preAction?: SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreAction[] | cdktf.IResolvable;
+}
+
+export function siteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupToTerraform(struct?: SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupOutputReference | SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroup): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    post_action: cdktf.listMapper(siteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPostActionToTerraform, true)(struct!.postAction),
+    pre_action: cdktf.listMapper(siteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreActionToTerraform, true)(struct!.preAction),
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroup | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._postAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postAction = this._postAction?.internalValue;
+    }
+    if (this._preAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.preAction = this._preAction?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroup | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._postAction.internalValue = undefined;
+      this._preAction.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._postAction.internalValue = value.postAction;
+      this._preAction.internalValue = value.preAction;
+    }
+  }
+
+  // post_action - computed: false, optional: true, required: false
+  private _postAction = new SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPostActionList(this, "post_action", false);
+  public get postAction() {
+    return this._postAction;
+  }
+  public putPostAction(value: SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPostAction[] | cdktf.IResolvable) {
+    this._postAction.internalValue = value;
+  }
+  public resetPostAction() {
+    this._postAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postActionInput() {
+    return this._postAction.internalValue;
+  }
+
+  // pre_action - computed: false, optional: true, required: false
+  private _preAction = new SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreActionList(this, "pre_action", false);
+  public get preAction() {
+    return this._preAction;
+  }
+  public putPreAction(value: SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreAction[] | cdktf.IResolvable) {
+    this._preAction.internalValue = value;
+  }
+  public resetPreAction() {
+    this._preAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preActionInput() {
+    return this._preAction.internalValue;
+  }
+}
+export interface SiteRecoveryReplicationRecoveryPlanRecoveryGroupPostAction {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fabric_location SiteRecoveryReplicationRecoveryPlan#fabric_location}
+  */
+  readonly fabricLocation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_directions SiteRecoveryReplicationRecoveryPlan#fail_over_directions}
+  */
+  readonly failOverDirections: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_types SiteRecoveryReplicationRecoveryPlan#fail_over_types}
+  */
+  readonly failOverTypes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#manual_action_instruction SiteRecoveryReplicationRecoveryPlan#manual_action_instruction}
+  */
+  readonly manualActionInstruction?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#runbook_id SiteRecoveryReplicationRecoveryPlan#runbook_id}
+  */
+  readonly runbookId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#script_path SiteRecoveryReplicationRecoveryPlan#script_path}
+  */
+  readonly scriptPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
   */
   readonly type: string;
 }
@@ -476,35 +1841,35 @@ export class SiteRecoveryReplicationRecoveryPlanRecoveryGroupPostActionList exte
 }
 export interface SiteRecoveryReplicationRecoveryPlanRecoveryGroupPreAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#fabric_location SiteRecoveryReplicationRecoveryPlan#fabric_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fabric_location SiteRecoveryReplicationRecoveryPlan#fabric_location}
   */
   readonly fabricLocation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_directions SiteRecoveryReplicationRecoveryPlan#fail_over_directions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_directions SiteRecoveryReplicationRecoveryPlan#fail_over_directions}
   */
   readonly failOverDirections: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_types SiteRecoveryReplicationRecoveryPlan#fail_over_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_types SiteRecoveryReplicationRecoveryPlan#fail_over_types}
   */
   readonly failOverTypes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#manual_action_instruction SiteRecoveryReplicationRecoveryPlan#manual_action_instruction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#manual_action_instruction SiteRecoveryReplicationRecoveryPlan#manual_action_instruction}
   */
   readonly manualActionInstruction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#runbook_id SiteRecoveryReplicationRecoveryPlan#runbook_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#runbook_id SiteRecoveryReplicationRecoveryPlan#runbook_id}
   */
   readonly runbookId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#script_path SiteRecoveryReplicationRecoveryPlan#script_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#script_path SiteRecoveryReplicationRecoveryPlan#script_path}
   */
   readonly scriptPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
   */
   readonly type: string;
 }
@@ -750,23 +2115,23 @@ export class SiteRecoveryReplicationRecoveryPlanRecoveryGroupPreActionList exten
 }
 export interface SiteRecoveryReplicationRecoveryPlanRecoveryGroup {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#replicated_protected_items SiteRecoveryReplicationRecoveryPlan#replicated_protected_items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#replicated_protected_items SiteRecoveryReplicationRecoveryPlan#replicated_protected_items}
   */
   readonly replicatedProtectedItems?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
   */
   readonly type: string;
   /**
   * post_action block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#post_action SiteRecoveryReplicationRecoveryPlan#post_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#post_action SiteRecoveryReplicationRecoveryPlan#post_action}
   */
   readonly postAction?: SiteRecoveryReplicationRecoveryPlanRecoveryGroupPostAction[] | cdktf.IResolvable;
   /**
   * pre_action block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#pre_action SiteRecoveryReplicationRecoveryPlan#pre_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#pre_action SiteRecoveryReplicationRecoveryPlan#pre_action}
   */
   readonly preAction?: SiteRecoveryReplicationRecoveryPlanRecoveryGroupPreAction[] | cdktf.IResolvable;
 }
@@ -927,21 +2292,665 @@ export class SiteRecoveryReplicationRecoveryPlanRecoveryGroupList extends cdktf.
     return new SiteRecoveryReplicationRecoveryPlanRecoveryGroupOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPostAction {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fabric_location SiteRecoveryReplicationRecoveryPlan#fabric_location}
+  */
+  readonly fabricLocation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_directions SiteRecoveryReplicationRecoveryPlan#fail_over_directions}
+  */
+  readonly failOverDirections: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_types SiteRecoveryReplicationRecoveryPlan#fail_over_types}
+  */
+  readonly failOverTypes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#manual_action_instruction SiteRecoveryReplicationRecoveryPlan#manual_action_instruction}
+  */
+  readonly manualActionInstruction?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#runbook_id SiteRecoveryReplicationRecoveryPlan#runbook_id}
+  */
+  readonly runbookId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#script_path SiteRecoveryReplicationRecoveryPlan#script_path}
+  */
+  readonly scriptPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
+  */
+  readonly type: string;
+}
+
+export function siteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPostActionToTerraform(struct?: SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPostAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    fabric_location: cdktf.stringToTerraform(struct!.fabricLocation),
+    fail_over_directions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.failOverDirections),
+    fail_over_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.failOverTypes),
+    manual_action_instruction: cdktf.stringToTerraform(struct!.manualActionInstruction),
+    name: cdktf.stringToTerraform(struct!.name),
+    runbook_id: cdktf.stringToTerraform(struct!.runbookId),
+    script_path: cdktf.stringToTerraform(struct!.scriptPath),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPostActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPostAction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._fabricLocation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fabricLocation = this._fabricLocation;
+    }
+    if (this._failOverDirections !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failOverDirections = this._failOverDirections;
+    }
+    if (this._failOverTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failOverTypes = this._failOverTypes;
+    }
+    if (this._manualActionInstruction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.manualActionInstruction = this._manualActionInstruction;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._runbookId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.runbookId = this._runbookId;
+    }
+    if (this._scriptPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scriptPath = this._scriptPath;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPostAction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._fabricLocation = undefined;
+      this._failOverDirections = undefined;
+      this._failOverTypes = undefined;
+      this._manualActionInstruction = undefined;
+      this._name = undefined;
+      this._runbookId = undefined;
+      this._scriptPath = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._fabricLocation = value.fabricLocation;
+      this._failOverDirections = value.failOverDirections;
+      this._failOverTypes = value.failOverTypes;
+      this._manualActionInstruction = value.manualActionInstruction;
+      this._name = value.name;
+      this._runbookId = value.runbookId;
+      this._scriptPath = value.scriptPath;
+      this._type = value.type;
+    }
+  }
+
+  // fabric_location - computed: false, optional: true, required: false
+  private _fabricLocation?: string; 
+  public get fabricLocation() {
+    return this.getStringAttribute('fabric_location');
+  }
+  public set fabricLocation(value: string) {
+    this._fabricLocation = value;
+  }
+  public resetFabricLocation() {
+    this._fabricLocation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fabricLocationInput() {
+    return this._fabricLocation;
+  }
+
+  // fail_over_directions - computed: false, optional: false, required: true
+  private _failOverDirections?: string[]; 
+  public get failOverDirections() {
+    return cdktf.Fn.tolist(this.getListAttribute('fail_over_directions'));
+  }
+  public set failOverDirections(value: string[]) {
+    this._failOverDirections = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failOverDirectionsInput() {
+    return this._failOverDirections;
+  }
+
+  // fail_over_types - computed: false, optional: false, required: true
+  private _failOverTypes?: string[]; 
+  public get failOverTypes() {
+    return cdktf.Fn.tolist(this.getListAttribute('fail_over_types'));
+  }
+  public set failOverTypes(value: string[]) {
+    this._failOverTypes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failOverTypesInput() {
+    return this._failOverTypes;
+  }
+
+  // manual_action_instruction - computed: false, optional: true, required: false
+  private _manualActionInstruction?: string; 
+  public get manualActionInstruction() {
+    return this.getStringAttribute('manual_action_instruction');
+  }
+  public set manualActionInstruction(value: string) {
+    this._manualActionInstruction = value;
+  }
+  public resetManualActionInstruction() {
+    this._manualActionInstruction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get manualActionInstructionInput() {
+    return this._manualActionInstruction;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // runbook_id - computed: false, optional: true, required: false
+  private _runbookId?: string; 
+  public get runbookId() {
+    return this.getStringAttribute('runbook_id');
+  }
+  public set runbookId(value: string) {
+    this._runbookId = value;
+  }
+  public resetRunbookId() {
+    this._runbookId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runbookIdInput() {
+    return this._runbookId;
+  }
+
+  // script_path - computed: false, optional: true, required: false
+  private _scriptPath?: string; 
+  public get scriptPath() {
+    return this.getStringAttribute('script_path');
+  }
+  public set scriptPath(value: string) {
+    this._scriptPath = value;
+  }
+  public resetScriptPath() {
+    this._scriptPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptPathInput() {
+    return this._scriptPath;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPostActionList extends cdktf.ComplexList {
+  public internalValue? : SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPostAction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPostActionOutputReference {
+    return new SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPostActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreAction {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fabric_location SiteRecoveryReplicationRecoveryPlan#fabric_location}
+  */
+  readonly fabricLocation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_directions SiteRecoveryReplicationRecoveryPlan#fail_over_directions}
+  */
+  readonly failOverDirections: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#fail_over_types SiteRecoveryReplicationRecoveryPlan#fail_over_types}
+  */
+  readonly failOverTypes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#manual_action_instruction SiteRecoveryReplicationRecoveryPlan#manual_action_instruction}
+  */
+  readonly manualActionInstruction?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#name SiteRecoveryReplicationRecoveryPlan#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#runbook_id SiteRecoveryReplicationRecoveryPlan#runbook_id}
+  */
+  readonly runbookId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#script_path SiteRecoveryReplicationRecoveryPlan#script_path}
+  */
+  readonly scriptPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#type SiteRecoveryReplicationRecoveryPlan#type}
+  */
+  readonly type: string;
+}
+
+export function siteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreActionToTerraform(struct?: SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    fabric_location: cdktf.stringToTerraform(struct!.fabricLocation),
+    fail_over_directions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.failOverDirections),
+    fail_over_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.failOverTypes),
+    manual_action_instruction: cdktf.stringToTerraform(struct!.manualActionInstruction),
+    name: cdktf.stringToTerraform(struct!.name),
+    runbook_id: cdktf.stringToTerraform(struct!.runbookId),
+    script_path: cdktf.stringToTerraform(struct!.scriptPath),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreAction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._fabricLocation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fabricLocation = this._fabricLocation;
+    }
+    if (this._failOverDirections !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failOverDirections = this._failOverDirections;
+    }
+    if (this._failOverTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failOverTypes = this._failOverTypes;
+    }
+    if (this._manualActionInstruction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.manualActionInstruction = this._manualActionInstruction;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._runbookId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.runbookId = this._runbookId;
+    }
+    if (this._scriptPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scriptPath = this._scriptPath;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreAction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._fabricLocation = undefined;
+      this._failOverDirections = undefined;
+      this._failOverTypes = undefined;
+      this._manualActionInstruction = undefined;
+      this._name = undefined;
+      this._runbookId = undefined;
+      this._scriptPath = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._fabricLocation = value.fabricLocation;
+      this._failOverDirections = value.failOverDirections;
+      this._failOverTypes = value.failOverTypes;
+      this._manualActionInstruction = value.manualActionInstruction;
+      this._name = value.name;
+      this._runbookId = value.runbookId;
+      this._scriptPath = value.scriptPath;
+      this._type = value.type;
+    }
+  }
+
+  // fabric_location - computed: false, optional: true, required: false
+  private _fabricLocation?: string; 
+  public get fabricLocation() {
+    return this.getStringAttribute('fabric_location');
+  }
+  public set fabricLocation(value: string) {
+    this._fabricLocation = value;
+  }
+  public resetFabricLocation() {
+    this._fabricLocation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fabricLocationInput() {
+    return this._fabricLocation;
+  }
+
+  // fail_over_directions - computed: false, optional: false, required: true
+  private _failOverDirections?: string[]; 
+  public get failOverDirections() {
+    return cdktf.Fn.tolist(this.getListAttribute('fail_over_directions'));
+  }
+  public set failOverDirections(value: string[]) {
+    this._failOverDirections = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failOverDirectionsInput() {
+    return this._failOverDirections;
+  }
+
+  // fail_over_types - computed: false, optional: false, required: true
+  private _failOverTypes?: string[]; 
+  public get failOverTypes() {
+    return cdktf.Fn.tolist(this.getListAttribute('fail_over_types'));
+  }
+  public set failOverTypes(value: string[]) {
+    this._failOverTypes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failOverTypesInput() {
+    return this._failOverTypes;
+  }
+
+  // manual_action_instruction - computed: false, optional: true, required: false
+  private _manualActionInstruction?: string; 
+  public get manualActionInstruction() {
+    return this.getStringAttribute('manual_action_instruction');
+  }
+  public set manualActionInstruction(value: string) {
+    this._manualActionInstruction = value;
+  }
+  public resetManualActionInstruction() {
+    this._manualActionInstruction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get manualActionInstructionInput() {
+    return this._manualActionInstruction;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // runbook_id - computed: false, optional: true, required: false
+  private _runbookId?: string; 
+  public get runbookId() {
+    return this.getStringAttribute('runbook_id');
+  }
+  public set runbookId(value: string) {
+    this._runbookId = value;
+  }
+  public resetRunbookId() {
+    this._runbookId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runbookIdInput() {
+    return this._runbookId;
+  }
+
+  // script_path - computed: false, optional: true, required: false
+  private _scriptPath?: string; 
+  public get scriptPath() {
+    return this.getStringAttribute('script_path');
+  }
+  public set scriptPath(value: string) {
+    this._scriptPath = value;
+  }
+  public resetScriptPath() {
+    this._scriptPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptPathInput() {
+    return this._scriptPath;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreActionList extends cdktf.ComplexList {
+  public internalValue? : SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreAction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreActionOutputReference {
+    return new SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroup {
+  /**
+  * post_action block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#post_action SiteRecoveryReplicationRecoveryPlan#post_action}
+  */
+  readonly postAction?: SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPostAction[] | cdktf.IResolvable;
+  /**
+  * pre_action block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#pre_action SiteRecoveryReplicationRecoveryPlan#pre_action}
+  */
+  readonly preAction?: SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreAction[] | cdktf.IResolvable;
+}
+
+export function siteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupToTerraform(struct?: SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupOutputReference | SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroup): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    post_action: cdktf.listMapper(siteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPostActionToTerraform, true)(struct!.postAction),
+    pre_action: cdktf.listMapper(siteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreActionToTerraform, true)(struct!.preAction),
+  }
+}
+
+export class SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroup | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._postAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postAction = this._postAction?.internalValue;
+    }
+    if (this._preAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.preAction = this._preAction?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroup | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._postAction.internalValue = undefined;
+      this._preAction.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._postAction.internalValue = value.postAction;
+      this._preAction.internalValue = value.preAction;
+    }
+  }
+
+  // post_action - computed: false, optional: true, required: false
+  private _postAction = new SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPostActionList(this, "post_action", false);
+  public get postAction() {
+    return this._postAction;
+  }
+  public putPostAction(value: SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPostAction[] | cdktf.IResolvable) {
+    this._postAction.internalValue = value;
+  }
+  public resetPostAction() {
+    this._postAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postActionInput() {
+    return this._postAction.internalValue;
+  }
+
+  // pre_action - computed: false, optional: true, required: false
+  private _preAction = new SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreActionList(this, "pre_action", false);
+  public get preAction() {
+    return this._preAction;
+  }
+  public putPreAction(value: SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreAction[] | cdktf.IResolvable) {
+    this._preAction.internalValue = value;
+  }
+  public resetPreAction() {
+    this._preAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preActionInput() {
+    return this._preAction.internalValue;
+  }
+}
 export interface SiteRecoveryReplicationRecoveryPlanTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#create SiteRecoveryReplicationRecoveryPlan#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#create SiteRecoveryReplicationRecoveryPlan#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#delete SiteRecoveryReplicationRecoveryPlan#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#delete SiteRecoveryReplicationRecoveryPlan#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#read SiteRecoveryReplicationRecoveryPlan#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#read SiteRecoveryReplicationRecoveryPlan#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan#update SiteRecoveryReplicationRecoveryPlan#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#update SiteRecoveryReplicationRecoveryPlan#update}
   */
   readonly update?: string;
 }
@@ -1085,7 +3094,7 @@ export class SiteRecoveryReplicationRecoveryPlanTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan azurerm_site_recovery_replication_recovery_plan}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan azurerm_site_recovery_replication_recovery_plan}
 */
 export class SiteRecoveryReplicationRecoveryPlan extends cdktf.TerraformResource {
 
@@ -1099,7 +3108,7 @@ export class SiteRecoveryReplicationRecoveryPlan extends cdktf.TerraformResource
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/site_recovery_replication_recovery_plan azurerm_site_recovery_replication_recovery_plan} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan azurerm_site_recovery_replication_recovery_plan} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1110,7 +3119,7 @@ export class SiteRecoveryReplicationRecoveryPlan extends cdktf.TerraformResource
       terraformResourceType: 'azurerm_site_recovery_replication_recovery_plan',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.65.0',
+        providerVersion: '3.66.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1127,7 +3136,10 @@ export class SiteRecoveryReplicationRecoveryPlan extends cdktf.TerraformResource
     this._sourceRecoveryFabricId = config.sourceRecoveryFabricId;
     this._targetRecoveryFabricId = config.targetRecoveryFabricId;
     this._azureToAzureSettings.internalValue = config.azureToAzureSettings;
+    this._bootRecoveryGroup.internalValue = config.bootRecoveryGroup;
+    this._failoverRecoveryGroup.internalValue = config.failoverRecoveryGroup;
     this._recoveryGroup.internalValue = config.recoveryGroup;
+    this._shutdownRecoveryGroup.internalValue = config.shutdownRecoveryGroup;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1219,6 +3231,38 @@ export class SiteRecoveryReplicationRecoveryPlan extends cdktf.TerraformResource
     return this._azureToAzureSettings.internalValue;
   }
 
+  // boot_recovery_group - computed: false, optional: true, required: false
+  private _bootRecoveryGroup = new SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupList(this, "boot_recovery_group", false);
+  public get bootRecoveryGroup() {
+    return this._bootRecoveryGroup;
+  }
+  public putBootRecoveryGroup(value: SiteRecoveryReplicationRecoveryPlanBootRecoveryGroup[] | cdktf.IResolvable) {
+    this._bootRecoveryGroup.internalValue = value;
+  }
+  public resetBootRecoveryGroup() {
+    this._bootRecoveryGroup.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bootRecoveryGroupInput() {
+    return this._bootRecoveryGroup.internalValue;
+  }
+
+  // failover_recovery_group - computed: false, optional: true, required: false
+  private _failoverRecoveryGroup = new SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupOutputReference(this, "failover_recovery_group");
+  public get failoverRecoveryGroup() {
+    return this._failoverRecoveryGroup;
+  }
+  public putFailoverRecoveryGroup(value: SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroup) {
+    this._failoverRecoveryGroup.internalValue = value;
+  }
+  public resetFailoverRecoveryGroup() {
+    this._failoverRecoveryGroup.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failoverRecoveryGroupInput() {
+    return this._failoverRecoveryGroup.internalValue;
+  }
+
   // recovery_group - computed: false, optional: true, required: false
   private _recoveryGroup = new SiteRecoveryReplicationRecoveryPlanRecoveryGroupList(this, "recovery_group", true);
   public get recoveryGroup() {
@@ -1233,6 +3277,22 @@ export class SiteRecoveryReplicationRecoveryPlan extends cdktf.TerraformResource
   // Temporarily expose input value. Use with caution.
   public get recoveryGroupInput() {
     return this._recoveryGroup.internalValue;
+  }
+
+  // shutdown_recovery_group - computed: false, optional: true, required: false
+  private _shutdownRecoveryGroup = new SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupOutputReference(this, "shutdown_recovery_group");
+  public get shutdownRecoveryGroup() {
+    return this._shutdownRecoveryGroup;
+  }
+  public putShutdownRecoveryGroup(value: SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroup) {
+    this._shutdownRecoveryGroup.internalValue = value;
+  }
+  public resetShutdownRecoveryGroup() {
+    this._shutdownRecoveryGroup.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shutdownRecoveryGroupInput() {
+    return this._shutdownRecoveryGroup.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -1263,7 +3323,10 @@ export class SiteRecoveryReplicationRecoveryPlan extends cdktf.TerraformResource
       source_recovery_fabric_id: cdktf.stringToTerraform(this._sourceRecoveryFabricId),
       target_recovery_fabric_id: cdktf.stringToTerraform(this._targetRecoveryFabricId),
       azure_to_azure_settings: siteRecoveryReplicationRecoveryPlanAzureToAzureSettingsToTerraform(this._azureToAzureSettings.internalValue),
+      boot_recovery_group: cdktf.listMapper(siteRecoveryReplicationRecoveryPlanBootRecoveryGroupToTerraform, true)(this._bootRecoveryGroup.internalValue),
+      failover_recovery_group: siteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupToTerraform(this._failoverRecoveryGroup.internalValue),
       recovery_group: cdktf.listMapper(siteRecoveryReplicationRecoveryPlanRecoveryGroupToTerraform, true)(this._recoveryGroup.internalValue),
+      shutdown_recovery_group: siteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupToTerraform(this._shutdownRecoveryGroup.internalValue),
       timeouts: siteRecoveryReplicationRecoveryPlanTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -1,3 +1,3 @@
 # `azurerm_spring_cloud_builder`
 
-Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_builder`](https://registry.terraform.io/providers/hashicorp/azurerm/3.65.0/docs/resources/spring_cloud_builder).
+Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_builder`](https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_builder).
