@@ -29,13 +29,13 @@ export interface DataAzurermElasticCloudElasticsearchConfig extends cdktf.Terraf
   readonly resourceGroupName: string;
   /**
   * logs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/elastic_cloud_elasticsearch#logs DataAzurermElasticCloudElasticsearch#logs}
   */
   readonly logs?: DataAzurermElasticCloudElasticsearchLogs[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/elastic_cloud_elasticsearch#timeouts DataAzurermElasticCloudElasticsearch#timeouts}
   */
   readonly timeouts?: DataAzurermElasticCloudElasticsearchTimeouts;

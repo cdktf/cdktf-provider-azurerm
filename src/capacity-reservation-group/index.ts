@@ -41,7 +41,7 @@ export interface CapacityReservationGroupConfig extends cdktf.TerraformMetaArgum
   readonly zones?: string[];
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/capacity_reservation_group#timeouts CapacityReservationGroup#timeouts}
   */
   readonly timeouts?: CapacityReservationGroupTimeouts;

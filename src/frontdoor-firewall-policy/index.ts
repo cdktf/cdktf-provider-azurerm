@@ -53,19 +53,19 @@ export interface FrontdoorFirewallPolicyConfig extends cdktf.TerraformMetaArgume
   readonly tags?: { [key: string]: string };
   /**
   * custom_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor_firewall_policy#custom_rule FrontdoorFirewallPolicy#custom_rule}
   */
   readonly customRule?: FrontdoorFirewallPolicyCustomRule[] | cdktf.IResolvable;
   /**
   * managed_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor_firewall_policy#managed_rule FrontdoorFirewallPolicy#managed_rule}
   */
   readonly managedRule?: FrontdoorFirewallPolicyManagedRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor_firewall_policy#timeouts FrontdoorFirewallPolicy#timeouts}
   */
   readonly timeouts?: FrontdoorFirewallPolicyTimeouts;
@@ -324,7 +324,7 @@ export interface FrontdoorFirewallPolicyCustomRule {
   readonly type: string;
   /**
   * match_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor_firewall_policy#match_condition FrontdoorFirewallPolicy#match_condition}
   */
   readonly matchCondition?: FrontdoorFirewallPolicyCustomRuleMatchCondition[] | cdktf.IResolvable;
@@ -1013,7 +1013,7 @@ export interface FrontdoorFirewallPolicyManagedRuleOverrideRule {
   readonly ruleId: string;
   /**
   * exclusion block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor_firewall_policy#exclusion FrontdoorFirewallPolicy#exclusion}
   */
   readonly exclusion?: FrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion[] | cdktf.IResolvable;
@@ -1179,13 +1179,13 @@ export interface FrontdoorFirewallPolicyManagedRuleOverride {
   readonly ruleGroupName: string;
   /**
   * exclusion block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor_firewall_policy#exclusion FrontdoorFirewallPolicy#exclusion}
   */
   readonly exclusion?: FrontdoorFirewallPolicyManagedRuleOverrideExclusion[] | cdktf.IResolvable;
   /**
   * rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor_firewall_policy#rule FrontdoorFirewallPolicy#rule}
   */
   readonly rule?: FrontdoorFirewallPolicyManagedRuleOverrideRule[] | cdktf.IResolvable;
@@ -1335,13 +1335,13 @@ export interface FrontdoorFirewallPolicyManagedRule {
   readonly version: string;
   /**
   * exclusion block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor_firewall_policy#exclusion FrontdoorFirewallPolicy#exclusion}
   */
   readonly exclusion?: FrontdoorFirewallPolicyManagedRuleExclusion[] | cdktf.IResolvable;
   /**
   * override block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor_firewall_policy#override FrontdoorFirewallPolicy#override}
   */
   readonly override?: FrontdoorFirewallPolicyManagedRuleOverride[] | cdktf.IResolvable;

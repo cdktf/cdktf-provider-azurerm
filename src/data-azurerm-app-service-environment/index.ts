@@ -29,7 +29,7 @@ export interface DataAzurermAppServiceEnvironmentConfig extends cdktf.TerraformM
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/app_service_environment#timeouts DataAzurermAppServiceEnvironment#timeouts}
   */
   readonly timeouts?: DataAzurermAppServiceEnvironmentTimeouts;

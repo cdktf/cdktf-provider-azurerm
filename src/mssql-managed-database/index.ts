@@ -33,13 +33,13 @@ export interface MssqlManagedDatabaseConfig extends cdktf.TerraformMetaArguments
   readonly shortTermRetentionDays?: number;
   /**
   * long_term_retention_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_managed_database#long_term_retention_policy MssqlManagedDatabase#long_term_retention_policy}
   */
   readonly longTermRetentionPolicy?: MssqlManagedDatabaseLongTermRetentionPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_managed_database#timeouts MssqlManagedDatabase#timeouts}
   */
   readonly timeouts?: MssqlManagedDatabaseTimeouts;

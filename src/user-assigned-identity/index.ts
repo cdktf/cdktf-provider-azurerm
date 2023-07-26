@@ -37,7 +37,7 @@ export interface UserAssignedIdentityConfig extends cdktf.TerraformMetaArguments
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/user_assigned_identity#timeouts UserAssignedIdentity#timeouts}
   */
   readonly timeouts?: UserAssignedIdentityTimeouts;

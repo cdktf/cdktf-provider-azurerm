@@ -29,13 +29,13 @@ export interface CdnFrontdoorSecurityPolicyConfig extends cdktf.TerraformMetaArg
   readonly name: string;
   /**
   * security_policies block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_security_policy#security_policies CdnFrontdoorSecurityPolicy#security_policies}
   */
   readonly securityPolicies: CdnFrontdoorSecurityPolicySecurityPolicies;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_security_policy#timeouts CdnFrontdoorSecurityPolicy#timeouts}
   */
   readonly timeouts?: CdnFrontdoorSecurityPolicyTimeouts;
@@ -146,7 +146,7 @@ export interface CdnFrontdoorSecurityPolicySecurityPoliciesFirewallAssociation {
   readonly patternsToMatch: string[];
   /**
   * domain block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_security_policy#domain CdnFrontdoorSecurityPolicy#domain}
   */
   readonly domain: CdnFrontdoorSecurityPolicySecurityPoliciesFirewallAssociationDomain[] | cdktf.IResolvable;
@@ -234,7 +234,7 @@ export interface CdnFrontdoorSecurityPolicySecurityPoliciesFirewall {
   readonly cdnFrontdoorFirewallPolicyId: string;
   /**
   * association block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_security_policy#association CdnFrontdoorSecurityPolicy#association}
   */
   readonly association: CdnFrontdoorSecurityPolicySecurityPoliciesFirewallAssociation;
@@ -318,7 +318,7 @@ export class CdnFrontdoorSecurityPolicySecurityPoliciesFirewallOutputReference e
 export interface CdnFrontdoorSecurityPolicySecurityPolicies {
   /**
   * firewall block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_security_policy#firewall CdnFrontdoorSecurityPolicy#firewall}
   */
   readonly firewall: CdnFrontdoorSecurityPolicySecurityPoliciesFirewall;

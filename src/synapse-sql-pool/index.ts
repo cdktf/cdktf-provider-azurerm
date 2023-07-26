@@ -57,13 +57,13 @@ export interface SynapseSqlPoolConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * restore block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_sql_pool#restore SynapseSqlPool#restore}
   */
   readonly restore?: SynapseSqlPoolRestore;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_sql_pool#timeouts SynapseSqlPool#timeouts}
   */
   readonly timeouts?: SynapseSqlPoolTimeouts;

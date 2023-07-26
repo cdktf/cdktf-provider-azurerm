@@ -33,7 +33,7 @@ export interface DataAzurermRedisEnterpriseDatabaseConfig extends cdktf.Terrafor
   readonly resourceGroupName?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/redis_enterprise_database#timeouts DataAzurermRedisEnterpriseDatabase#timeouts}
   */
   readonly timeouts?: DataAzurermRedisEnterpriseDatabaseTimeouts;

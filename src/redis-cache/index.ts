@@ -93,25 +93,25 @@ export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   readonly zones?: string[];
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/redis_cache#identity RedisCache#identity}
   */
   readonly identity?: RedisCacheIdentity;
   /**
   * patch_schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/redis_cache#patch_schedule RedisCache#patch_schedule}
   */
   readonly patchSchedule?: RedisCachePatchSchedule[] | cdktf.IResolvable;
   /**
   * redis_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/redis_cache#redis_configuration RedisCache#redis_configuration}
   */
   readonly redisConfiguration?: RedisCacheRedisConfiguration;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/redis_cache#timeouts RedisCache#timeouts}
   */
   readonly timeouts?: RedisCacheTimeouts;

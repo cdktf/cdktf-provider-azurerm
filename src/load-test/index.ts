@@ -41,13 +41,13 @@ export interface LoadTestConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/load_test#identity LoadTest#identity}
   */
   readonly identity?: LoadTestIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/load_test#timeouts LoadTest#timeouts}
   */
   readonly timeouts?: LoadTestTimeouts;

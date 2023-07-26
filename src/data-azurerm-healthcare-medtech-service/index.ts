@@ -29,7 +29,7 @@ export interface DataAzurermHealthcareMedtechServiceConfig extends cdktf.Terrafo
   readonly workspaceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/healthcare_medtech_service#timeouts DataAzurermHealthcareMedtechService#timeouts}
   */
   readonly timeouts?: DataAzurermHealthcareMedtechServiceTimeouts;

@@ -33,13 +33,13 @@ export interface ApiManagementGatewayConfig extends cdktf.TerraformMetaArguments
   readonly name: string;
   /**
   * location_data block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_gateway#location_data ApiManagementGateway#location_data}
   */
   readonly locationData: ApiManagementGatewayLocationData;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_gateway#timeouts ApiManagementGateway#timeouts}
   */
   readonly timeouts?: ApiManagementGatewayTimeouts;

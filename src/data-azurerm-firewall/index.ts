@@ -29,7 +29,7 @@ export interface DataAzurermFirewallConfig extends cdktf.TerraformMetaArguments 
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/firewall#timeouts DataAzurermFirewall#timeouts}
   */
   readonly timeouts?: DataAzurermFirewallTimeouts;

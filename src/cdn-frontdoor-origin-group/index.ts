@@ -37,19 +37,19 @@ export interface CdnFrontdoorOriginGroupConfig extends cdktf.TerraformMetaArgume
   readonly sessionAffinityEnabled?: boolean | cdktf.IResolvable;
   /**
   * health_probe block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_origin_group#health_probe CdnFrontdoorOriginGroup#health_probe}
   */
   readonly healthProbe?: CdnFrontdoorOriginGroupHealthProbe;
   /**
   * load_balancing block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_origin_group#load_balancing CdnFrontdoorOriginGroup#load_balancing}
   */
   readonly loadBalancing: CdnFrontdoorOriginGroupLoadBalancing;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_origin_group#timeouts CdnFrontdoorOriginGroup#timeouts}
   */
   readonly timeouts?: CdnFrontdoorOriginGroupTimeouts;

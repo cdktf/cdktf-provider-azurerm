@@ -53,7 +53,7 @@ export interface LbProbeConfig extends cdktf.TerraformMetaArguments {
   readonly requestPath?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lb_probe#timeouts LbProbe#timeouts}
   */
   readonly timeouts?: LbProbeTimeouts;

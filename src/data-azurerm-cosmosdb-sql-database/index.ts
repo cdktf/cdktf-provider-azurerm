@@ -33,7 +33,7 @@ export interface DataAzurermCosmosdbSqlDatabaseConfig extends cdktf.TerraformMet
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/cosmosdb_sql_database#timeouts DataAzurermCosmosdbSqlDatabase#timeouts}
   */
   readonly timeouts?: DataAzurermCosmosdbSqlDatabaseTimeouts;

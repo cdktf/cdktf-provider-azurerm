@@ -53,13 +53,13 @@ export interface SynapseLinkedServiceConfig extends cdktf.TerraformMetaArguments
   readonly typePropertiesJson: string;
   /**
   * integration_runtime block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_linked_service#integration_runtime SynapseLinkedService#integration_runtime}
   */
   readonly integrationRuntime?: SynapseLinkedServiceIntegrationRuntime;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_linked_service#timeouts SynapseLinkedService#timeouts}
   */
   readonly timeouts?: SynapseLinkedServiceTimeouts;

@@ -25,13 +25,13 @@ export interface KeyVaultCertificateContactsConfig extends cdktf.TerraformMetaAr
   readonly keyVaultId: string;
   /**
   * contact block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate_contacts#contact KeyVaultCertificateContacts#contact}
   */
   readonly contact: KeyVaultCertificateContactsContact[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate_contacts#timeouts KeyVaultCertificateContacts#timeouts}
   */
   readonly timeouts?: KeyVaultCertificateContactsTimeouts;

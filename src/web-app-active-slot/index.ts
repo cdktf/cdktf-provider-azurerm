@@ -21,19 +21,19 @@ export interface WebAppActiveSlotConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The swap action should overwrite the Production slot's network configuration with the configuration from this slot. Defaults to `true`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_app_active_slot#overwrite_network_config WebAppActiveSlot#overwrite_network_config}
   */
   readonly overwriteNetworkConfig?: boolean | cdktf.IResolvable;
   /**
   * The ID of the Slot to swap with `Production`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_app_active_slot#slot_id WebAppActiveSlot#slot_id}
   */
   readonly slotId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_app_active_slot#timeouts WebAppActiveSlot#timeouts}
   */
   readonly timeouts?: WebAppActiveSlotTimeouts;

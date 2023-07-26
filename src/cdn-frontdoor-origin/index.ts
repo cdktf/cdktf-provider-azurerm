@@ -65,13 +65,13 @@ export interface CdnFrontdoorOriginConfig extends cdktf.TerraformMetaArguments {
   readonly weight?: number;
   /**
   * private_link block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_origin#private_link CdnFrontdoorOrigin#private_link}
   */
   readonly privateLink?: CdnFrontdoorOriginPrivateLink;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_origin#timeouts CdnFrontdoorOrigin#timeouts}
   */
   readonly timeouts?: CdnFrontdoorOriginTimeouts;

@@ -53,13 +53,13 @@ export interface StreamAnalyticsStreamInputIothubConfig extends cdktf.TerraformM
   readonly streamAnalyticsJobName: string;
   /**
   * serialization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_stream_input_iothub#serialization StreamAnalyticsStreamInputIothub#serialization}
   */
   readonly serialization: StreamAnalyticsStreamInputIothubSerialization;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_stream_input_iothub#timeouts StreamAnalyticsStreamInputIothub#timeouts}
   */
   readonly timeouts?: StreamAnalyticsStreamInputIothubTimeouts;

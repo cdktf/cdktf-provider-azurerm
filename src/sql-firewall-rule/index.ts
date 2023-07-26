@@ -41,7 +41,7 @@ export interface SqlFirewallRuleConfig extends cdktf.TerraformMetaArguments {
   readonly startIpAddress: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sql_firewall_rule#timeouts SqlFirewallRule#timeouts}
   */
   readonly timeouts?: SqlFirewallRuleTimeouts;

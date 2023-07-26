@@ -41,7 +41,7 @@ export interface SearchSharedPrivateLinkServiceConfig extends cdktf.TerraformMet
   readonly targetResourceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/search_shared_private_link_service#timeouts SearchSharedPrivateLinkService#timeouts}
   */
   readonly timeouts?: SearchSharedPrivateLinkServiceTimeouts;

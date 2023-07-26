@@ -33,7 +33,7 @@ export interface ApiManagementNotificationRecipientUserConfig extends cdktf.Terr
   readonly userId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_notification_recipient_user#timeouts ApiManagementNotificationRecipientUser#timeouts}
   */
   readonly timeouts?: ApiManagementNotificationRecipientUserTimeouts;

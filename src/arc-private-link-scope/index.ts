@@ -41,7 +41,7 @@ export interface ArcPrivateLinkScopeConfig extends cdktf.TerraformMetaArguments 
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/arc_private_link_scope#timeouts ArcPrivateLinkScope#timeouts}
   */
   readonly timeouts?: ArcPrivateLinkScopeTimeouts;

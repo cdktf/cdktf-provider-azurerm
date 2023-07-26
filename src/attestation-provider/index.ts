@@ -57,13 +57,13 @@ export interface AttestationProviderConfig extends cdktf.TerraformMetaArguments 
   readonly tpmPolicyBase64?: string;
   /**
   * policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/attestation_provider#policy AttestationProvider#policy}
   */
   readonly policy?: AttestationProviderPolicy[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/attestation_provider#timeouts AttestationProvider#timeouts}
   */
   readonly timeouts?: AttestationProviderTimeouts;

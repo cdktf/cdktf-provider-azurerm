@@ -29,7 +29,7 @@ export interface DataAzurermAttestationProviderConfig extends cdktf.TerraformMet
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/attestation_provider#timeouts DataAzurermAttestationProvider#timeouts}
   */
   readonly timeouts?: DataAzurermAttestationProviderTimeouts;

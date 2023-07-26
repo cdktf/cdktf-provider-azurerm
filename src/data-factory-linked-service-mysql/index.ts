@@ -53,7 +53,7 @@ export interface DataFactoryLinkedServiceMysqlConfig extends cdktf.TerraformMeta
   readonly parameters?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_mysql#timeouts DataFactoryLinkedServiceMysql#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceMysqlTimeouts;

@@ -65,7 +65,7 @@ export interface ServicePlanConfig extends cdktf.TerraformMetaArguments {
   readonly zoneBalancingEnabled?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_plan#timeouts ServicePlan#timeouts}
   */
   readonly timeouts?: ServicePlanTimeouts;

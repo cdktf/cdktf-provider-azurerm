@@ -45,7 +45,7 @@ export interface EventhubNamespaceAuthorizationRuleConfig extends cdktf.Terrafor
   readonly send?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventhub_namespace_authorization_rule#timeouts EventhubNamespaceAuthorizationRule#timeouts}
   */
   readonly timeouts?: EventhubNamespaceAuthorizationRuleTimeouts;

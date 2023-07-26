@@ -29,7 +29,7 @@ export interface VirtualNetworkDnsServersConfig extends cdktf.TerraformMetaArgum
   readonly virtualNetworkId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_network_dns_servers#timeouts VirtualNetworkDnsServers#timeouts}
   */
   readonly timeouts?: VirtualNetworkDnsServersTimeouts;

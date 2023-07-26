@@ -41,13 +41,13 @@ export interface ServicebusSubscriptionRuleConfig extends cdktf.TerraformMetaArg
   readonly subscriptionId: string;
   /**
   * correlation_filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/servicebus_subscription_rule#correlation_filter ServicebusSubscriptionRule#correlation_filter}
   */
   readonly correlationFilter?: ServicebusSubscriptionRuleCorrelationFilter;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/servicebus_subscription_rule#timeouts ServicebusSubscriptionRule#timeouts}
   */
   readonly timeouts?: ServicebusSubscriptionRuleTimeouts;

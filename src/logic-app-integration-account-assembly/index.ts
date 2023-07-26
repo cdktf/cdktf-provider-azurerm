@@ -53,7 +53,7 @@ export interface LogicAppIntegrationAccountAssemblyConfig extends cdktf.Terrafor
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_integration_account_assembly#timeouts LogicAppIntegrationAccountAssembly#timeouts}
   */
   readonly timeouts?: LogicAppIntegrationAccountAssemblyTimeouts;

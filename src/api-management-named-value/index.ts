@@ -49,13 +49,13 @@ export interface ApiManagementNamedValueConfig extends cdktf.TerraformMetaArgume
   readonly value?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_named_value#timeouts ApiManagementNamedValue#timeouts}
   */
   readonly timeouts?: ApiManagementNamedValueTimeouts;
   /**
   * value_from_key_vault block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_named_value#value_from_key_vault ApiManagementNamedValue#value_from_key_vault}
   */
   readonly valueFromKeyVault?: ApiManagementNamedValueValueFromKeyVault;

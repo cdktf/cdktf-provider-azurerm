@@ -45,7 +45,7 @@ export interface HpcCacheBlobTargetConfig extends cdktf.TerraformMetaArguments {
   readonly storageContainerId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache_blob_target#timeouts HpcCacheBlobTarget#timeouts}
   */
   readonly timeouts?: HpcCacheBlobTargetTimeouts;

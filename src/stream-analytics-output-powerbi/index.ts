@@ -53,7 +53,7 @@ export interface StreamAnalyticsOutputPowerbiConfig extends cdktf.TerraformMetaA
   readonly tokenUserPrincipalName?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_output_powerbi#timeouts StreamAnalyticsOutputPowerbi#timeouts}
   */
   readonly timeouts?: StreamAnalyticsOutputPowerbiTimeouts;

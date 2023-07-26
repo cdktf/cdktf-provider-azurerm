@@ -33,7 +33,7 @@ export interface MssqlServerTransparentDataEncryptionConfig extends cdktf.Terraf
   readonly serverId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_server_transparent_data_encryption#timeouts MssqlServerTransparentDataEncryption#timeouts}
   */
   readonly timeouts?: MssqlServerTransparentDataEncryptionTimeouts;

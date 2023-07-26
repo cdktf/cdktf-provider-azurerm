@@ -45,19 +45,19 @@ export interface VirtualMachinePacketCaptureConfig extends cdktf.TerraformMetaAr
   readonly virtualMachineId: string;
   /**
   * filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_packet_capture#filter VirtualMachinePacketCapture#filter}
   */
   readonly filter?: VirtualMachinePacketCaptureFilter[] | cdktf.IResolvable;
   /**
   * storage_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_packet_capture#storage_location VirtualMachinePacketCapture#storage_location}
   */
   readonly storageLocation: VirtualMachinePacketCaptureStorageLocation;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_packet_capture#timeouts VirtualMachinePacketCapture#timeouts}
   */
   readonly timeouts?: VirtualMachinePacketCaptureTimeouts;

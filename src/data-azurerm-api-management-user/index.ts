@@ -33,7 +33,7 @@ export interface DataAzurermApiManagementUserConfig extends cdktf.TerraformMetaA
   readonly userId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/api_management_user#timeouts DataAzurermApiManagementUser#timeouts}
   */
   readonly timeouts?: DataAzurermApiManagementUserTimeouts;

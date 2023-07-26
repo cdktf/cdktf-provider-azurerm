@@ -61,13 +61,13 @@ export interface StreamAnalyticsOutputServicebusQueueConfig extends cdktf.Terraf
   readonly systemPropertyColumns?: { [key: string]: string };
   /**
   * serialization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_output_servicebus_queue#serialization StreamAnalyticsOutputServicebusQueue#serialization}
   */
   readonly serialization: StreamAnalyticsOutputServicebusQueueSerialization;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_output_servicebus_queue#timeouts StreamAnalyticsOutputServicebusQueue#timeouts}
   */
   readonly timeouts?: StreamAnalyticsOutputServicebusQueueTimeouts;

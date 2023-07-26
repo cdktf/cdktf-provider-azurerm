@@ -37,7 +37,7 @@ export interface RouteServerBgpConnectionConfig extends cdktf.TerraformMetaArgum
   readonly routeServerId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/route_server_bgp_connection#timeouts RouteServerBgpConnection#timeouts}
   */
   readonly timeouts?: RouteServerBgpConnectionTimeouts;

@@ -33,7 +33,7 @@ export interface DataShareDatasetKustoDatabaseConfig extends cdktf.TerraformMeta
   readonly shareId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_share_dataset_kusto_database#timeouts DataShareDatasetKustoDatabase#timeouts}
   */
   readonly timeouts?: DataShareDatasetKustoDatabaseTimeouts;

@@ -45,7 +45,7 @@ export interface KeyVaultManagedStorageAccountSasTokenDefinitionConfig extends c
   readonly validityPeriod: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_managed_storage_account_sas_token_definition#timeouts KeyVaultManagedStorageAccountSasTokenDefinition#timeouts}
   */
   readonly timeouts?: KeyVaultManagedStorageAccountSasTokenDefinitionTimeouts;

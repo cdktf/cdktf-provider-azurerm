@@ -41,7 +41,7 @@ export interface StreamAnalyticsClusterConfig extends cdktf.TerraformMetaArgumen
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_cluster#timeouts StreamAnalyticsCluster#timeouts}
   */
   readonly timeouts?: StreamAnalyticsClusterTimeouts;

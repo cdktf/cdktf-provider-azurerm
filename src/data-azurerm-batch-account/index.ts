@@ -33,7 +33,7 @@ export interface DataAzurermBatchAccountConfig extends cdktf.TerraformMetaArgume
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/batch_account#timeouts DataAzurermBatchAccount#timeouts}
   */
   readonly timeouts?: DataAzurermBatchAccountTimeouts;

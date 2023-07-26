@@ -37,13 +37,13 @@ export interface DatabricksAccessConnectorConfig extends cdktf.TerraformMetaArgu
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/databricks_access_connector#identity DatabricksAccessConnector#identity}
   */
   readonly identity?: DatabricksAccessConnectorIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/databricks_access_connector#timeouts DatabricksAccessConnector#timeouts}
   */
   readonly timeouts?: DatabricksAccessConnectorTimeouts;

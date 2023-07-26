@@ -33,7 +33,7 @@ export interface ApiManagementApiReleaseConfig extends cdktf.TerraformMetaArgume
   readonly notes?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_release#timeouts ApiManagementApiRelease#timeouts}
   */
   readonly timeouts?: ApiManagementApiReleaseTimeouts;

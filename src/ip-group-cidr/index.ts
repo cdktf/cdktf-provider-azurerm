@@ -29,7 +29,7 @@ export interface IpGroupCidrConfig extends cdktf.TerraformMetaArguments {
   readonly ipGroupId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/ip_group_cidr#timeouts IpGroupCidr#timeouts}
   */
   readonly timeouts?: IpGroupCidrTimeouts;

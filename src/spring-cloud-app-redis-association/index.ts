@@ -41,7 +41,7 @@ export interface SpringCloudAppRedisAssociationConfig extends cdktf.TerraformMet
   readonly sslEnabled?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_app_redis_association#timeouts SpringCloudAppRedisAssociation#timeouts}
   */
   readonly timeouts?: SpringCloudAppRedisAssociationTimeouts;

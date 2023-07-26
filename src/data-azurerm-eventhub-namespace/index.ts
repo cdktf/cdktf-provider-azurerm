@@ -29,7 +29,7 @@ export interface DataAzurermEventhubNamespaceConfig extends cdktf.TerraformMetaA
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventhub_namespace#timeouts DataAzurermEventhubNamespace#timeouts}
   */
   readonly timeouts?: DataAzurermEventhubNamespaceTimeouts;

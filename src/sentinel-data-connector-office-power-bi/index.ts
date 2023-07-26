@@ -33,7 +33,7 @@ export interface SentinelDataConnectorOfficePowerBiConfig extends cdktf.Terrafor
   readonly tenantId?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_data_connector_office_power_bi#timeouts SentinelDataConnectorOfficePowerBi#timeouts}
   */
   readonly timeouts?: SentinelDataConnectorOfficePowerBiTimeouts;

@@ -33,7 +33,7 @@ export interface CosmosdbPostgresqlRoleConfig extends cdktf.TerraformMetaArgumen
   readonly password: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_postgresql_role#timeouts CosmosdbPostgresqlRole#timeouts}
   */
   readonly timeouts?: CosmosdbPostgresqlRoleTimeouts;

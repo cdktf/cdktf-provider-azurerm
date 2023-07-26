@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface DataAzurermContainerAppEnvironmentCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
   * The Container App Managed Environment ID to configure this Certificate on.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/container_app_environment_certificate#container_app_environment_id DataAzurermContainerAppEnvironmentCertificate#container_app_environment_id}
   */
   readonly containerAppEnvironmentId: string;
@@ -27,13 +27,13 @@ export interface DataAzurermContainerAppEnvironmentCertificateConfig extends cdk
   readonly id?: string;
   /**
   * The name of the Container Apps Certificate.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/container_app_environment_certificate#name DataAzurermContainerAppEnvironmentCertificate#name}
   */
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/container_app_environment_certificate#timeouts DataAzurermContainerAppEnvironmentCertificate#timeouts}
   */
   readonly timeouts?: DataAzurermContainerAppEnvironmentCertificateTimeouts;

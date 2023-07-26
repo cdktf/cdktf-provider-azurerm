@@ -65,19 +65,19 @@ export interface LogicAppWorkflowConfig extends cdktf.TerraformMetaArguments {
   readonly workflowVersion?: string;
   /**
   * access_control block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_workflow#access_control LogicAppWorkflow#access_control}
   */
   readonly accessControl?: LogicAppWorkflowAccessControl;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_workflow#identity LogicAppWorkflow#identity}
   */
   readonly identity?: LogicAppWorkflowIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_workflow#timeouts LogicAppWorkflow#timeouts}
   */
   readonly timeouts?: LogicAppWorkflowTimeouts;
@@ -331,7 +331,7 @@ export interface LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy {
   readonly name: string;
   /**
   * claim block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_workflow#claim LogicAppWorkflow#claim}
   */
   readonly claim: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaim[] | cdktf.IResolvable;
@@ -451,7 +451,7 @@ export interface LogicAppWorkflowAccessControlTrigger {
   readonly allowedCallerIpAddressRange: string[];
   /**
   * open_authentication_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_workflow#open_authentication_policy LogicAppWorkflow#open_authentication_policy}
   */
   readonly openAuthenticationPolicy?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy[] | cdktf.IResolvable;
@@ -600,25 +600,25 @@ export class LogicAppWorkflowAccessControlWorkflowManagementOutputReference exte
 export interface LogicAppWorkflowAccessControl {
   /**
   * action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_workflow#action LogicAppWorkflow#action}
   */
   readonly action?: LogicAppWorkflowAccessControlAction;
   /**
   * content block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_workflow#content LogicAppWorkflow#content}
   */
   readonly content?: LogicAppWorkflowAccessControlContent;
   /**
   * trigger block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_workflow#trigger LogicAppWorkflow#trigger}
   */
   readonly trigger?: LogicAppWorkflowAccessControlTrigger;
   /**
   * workflow_management block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_workflow#workflow_management LogicAppWorkflow#workflow_management}
   */
   readonly workflowManagement?: LogicAppWorkflowAccessControlWorkflowManagement;

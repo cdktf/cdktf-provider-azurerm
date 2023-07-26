@@ -41,7 +41,7 @@ export interface DataFactoryManagedPrivateEndpointConfig extends cdktf.Terraform
   readonly targetResourceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_managed_private_endpoint#timeouts DataFactoryManagedPrivateEndpoint#timeouts}
   */
   readonly timeouts?: DataFactoryManagedPrivateEndpointTimeouts;

@@ -29,7 +29,7 @@ export interface DataAzurermNetappAccountConfig extends cdktf.TerraformMetaArgum
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/netapp_account#timeouts DataAzurermNetappAccount#timeouts}
   */
   readonly timeouts?: DataAzurermNetappAccountTimeouts;

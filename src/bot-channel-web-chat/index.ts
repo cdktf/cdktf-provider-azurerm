@@ -37,7 +37,7 @@ export interface BotChannelWebChatConfig extends cdktf.TerraformMetaArguments {
   readonly siteNames: string[];
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_web_chat#timeouts BotChannelWebChat#timeouts}
   */
   readonly timeouts?: BotChannelWebChatTimeouts;

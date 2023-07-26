@@ -73,13 +73,13 @@ export interface VoiceServicesCommunicationsGatewayConfig extends cdktf.Terrafor
   readonly tags?: { [key: string]: string };
   /**
   * service_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/voice_services_communications_gateway#service_location VoiceServicesCommunicationsGateway#service_location}
   */
   readonly serviceLocation: VoiceServicesCommunicationsGatewayServiceLocation[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/voice_services_communications_gateway#timeouts VoiceServicesCommunicationsGateway#timeouts}
   */
   readonly timeouts?: VoiceServicesCommunicationsGatewayTimeouts;

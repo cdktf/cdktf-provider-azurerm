@@ -53,79 +53,79 @@ export interface HdinsightInteractiveQueryClusterConfig extends cdktf.TerraformM
   readonly tlsMinVersion?: string;
   /**
   * component_version block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#component_version HdinsightInteractiveQueryCluster#component_version}
   */
   readonly componentVersion: HdinsightInteractiveQueryClusterComponentVersion;
   /**
   * compute_isolation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#compute_isolation HdinsightInteractiveQueryCluster#compute_isolation}
   */
   readonly computeIsolation?: HdinsightInteractiveQueryClusterComputeIsolation;
   /**
   * disk_encryption block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#disk_encryption HdinsightInteractiveQueryCluster#disk_encryption}
   */
   readonly diskEncryption?: HdinsightInteractiveQueryClusterDiskEncryption[] | cdktf.IResolvable;
   /**
   * extension block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#extension HdinsightInteractiveQueryCluster#extension}
   */
   readonly extension?: HdinsightInteractiveQueryClusterExtension;
   /**
   * gateway block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#gateway HdinsightInteractiveQueryCluster#gateway}
   */
   readonly gateway: HdinsightInteractiveQueryClusterGateway;
   /**
   * metastores block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#metastores HdinsightInteractiveQueryCluster#metastores}
   */
   readonly metastores?: HdinsightInteractiveQueryClusterMetastores;
   /**
   * monitor block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#monitor HdinsightInteractiveQueryCluster#monitor}
   */
   readonly monitor?: HdinsightInteractiveQueryClusterMonitor;
   /**
   * network block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#network HdinsightInteractiveQueryCluster#network}
   */
   readonly network?: HdinsightInteractiveQueryClusterNetwork;
   /**
   * roles block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#roles HdinsightInteractiveQueryCluster#roles}
   */
   readonly roles: HdinsightInteractiveQueryClusterRoles;
   /**
   * security_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#security_profile HdinsightInteractiveQueryCluster#security_profile}
   */
   readonly securityProfile?: HdinsightInteractiveQueryClusterSecurityProfile;
   /**
   * storage_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#storage_account HdinsightInteractiveQueryCluster#storage_account}
   */
   readonly storageAccount?: HdinsightInteractiveQueryClusterStorageAccount[] | cdktf.IResolvable;
   /**
   * storage_account_gen2 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#storage_account_gen2 HdinsightInteractiveQueryCluster#storage_account_gen2}
   */
   readonly storageAccountGen2?: HdinsightInteractiveQueryClusterStorageAccountGen2;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#timeouts HdinsightInteractiveQueryCluster#timeouts}
   */
   readonly timeouts?: HdinsightInteractiveQueryClusterTimeouts;
@@ -1039,19 +1039,19 @@ export class HdinsightInteractiveQueryClusterMetastoresOozieOutputReference exte
 export interface HdinsightInteractiveQueryClusterMetastores {
   /**
   * ambari block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#ambari HdinsightInteractiveQueryCluster#ambari}
   */
   readonly ambari?: HdinsightInteractiveQueryClusterMetastoresAmbari;
   /**
   * hive block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#hive HdinsightInteractiveQueryCluster#hive}
   */
   readonly hive?: HdinsightInteractiveQueryClusterMetastoresHive;
   /**
   * oozie block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#oozie HdinsightInteractiveQueryCluster#oozie}
   */
   readonly oozie?: HdinsightInteractiveQueryClusterMetastoresOozie;
@@ -1511,7 +1511,7 @@ export interface HdinsightInteractiveQueryClusterRolesHeadNode {
   readonly vmSize: string;
   /**
   * script_actions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#script_actions HdinsightInteractiveQueryCluster#script_actions}
   */
   readonly scriptActions?: HdinsightInteractiveQueryClusterRolesHeadNodeScriptActions[] | cdktf.IResolvable;
@@ -1942,7 +1942,7 @@ export interface HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurre
   readonly timezone: string;
   /**
   * schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#schedule HdinsightInteractiveQueryCluster#schedule}
   */
   readonly schedule: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[] | cdktf.IResolvable;
@@ -2026,13 +2026,13 @@ export class HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceO
 export interface HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscale {
   /**
   * capacity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#capacity HdinsightInteractiveQueryCluster#capacity}
   */
   readonly capacity?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacity;
   /**
   * recurrence block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#recurrence HdinsightInteractiveQueryCluster#recurrence}
   */
   readonly recurrence?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrence;
@@ -2295,13 +2295,13 @@ export interface HdinsightInteractiveQueryClusterRolesWorkerNode {
   readonly vmSize: string;
   /**
   * autoscale block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#autoscale HdinsightInteractiveQueryCluster#autoscale}
   */
   readonly autoscale?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscale;
   /**
   * script_actions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#script_actions HdinsightInteractiveQueryCluster#script_actions}
   */
   readonly scriptActions?: HdinsightInteractiveQueryClusterRolesWorkerNodeScriptActions[] | cdktf.IResolvable;
@@ -2712,7 +2712,7 @@ export interface HdinsightInteractiveQueryClusterRolesZookeeperNode {
   readonly vmSize: string;
   /**
   * script_actions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#script_actions HdinsightInteractiveQueryCluster#script_actions}
   */
   readonly scriptActions?: HdinsightInteractiveQueryClusterRolesZookeeperNodeScriptActions[] | cdktf.IResolvable;
@@ -2911,19 +2911,19 @@ export class HdinsightInteractiveQueryClusterRolesZookeeperNodeOutputReference e
 export interface HdinsightInteractiveQueryClusterRoles {
   /**
   * head_node block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#head_node HdinsightInteractiveQueryCluster#head_node}
   */
   readonly headNode: HdinsightInteractiveQueryClusterRolesHeadNode;
   /**
   * worker_node block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#worker_node HdinsightInteractiveQueryCluster#worker_node}
   */
   readonly workerNode: HdinsightInteractiveQueryClusterRolesWorkerNode;
   /**
   * zookeeper_node block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_interactive_query_cluster#zookeeper_node HdinsightInteractiveQueryCluster#zookeeper_node}
   */
   readonly zookeeperNode: HdinsightInteractiveQueryClusterRolesZookeeperNode;

@@ -45,7 +45,7 @@ export interface BatchApplicationConfig extends cdktf.TerraformMetaArguments {
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_application#timeouts BatchApplication#timeouts}
   */
   readonly timeouts?: BatchApplicationTimeouts;

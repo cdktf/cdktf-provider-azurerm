@@ -33,7 +33,7 @@ export interface CosmosdbSqlDedicatedGatewayConfig extends cdktf.TerraformMetaAr
   readonly instanceSize: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_sql_dedicated_gateway#timeouts CosmosdbSqlDedicatedGateway#timeouts}
   */
   readonly timeouts?: CosmosdbSqlDedicatedGatewayTimeouts;

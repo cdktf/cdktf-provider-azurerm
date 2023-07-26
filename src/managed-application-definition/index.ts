@@ -65,13 +65,13 @@ export interface ManagedApplicationDefinitionConfig extends cdktf.TerraformMetaA
   readonly tags?: { [key: string]: string };
   /**
   * authorization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/managed_application_definition#authorization ManagedApplicationDefinition#authorization}
   */
   readonly authorization?: ManagedApplicationDefinitionAuthorization[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/managed_application_definition#timeouts ManagedApplicationDefinition#timeouts}
   */
   readonly timeouts?: ManagedApplicationDefinitionTimeouts;

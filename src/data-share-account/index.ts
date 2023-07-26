@@ -37,13 +37,13 @@ export interface DataShareAccountConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_share_account#identity DataShareAccount#identity}
   */
   readonly identity: DataShareAccountIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_share_account#timeouts DataShareAccount#timeouts}
   */
   readonly timeouts?: DataShareAccountTimeouts;

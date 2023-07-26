@@ -61,7 +61,7 @@ export interface GalleryApplicationConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/gallery_application#timeouts GalleryApplication#timeouts}
   */
   readonly timeouts?: GalleryApplicationTimeouts;

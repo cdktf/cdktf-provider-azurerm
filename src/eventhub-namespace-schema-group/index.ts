@@ -37,7 +37,7 @@ export interface EventhubNamespaceSchemaGroupConfig extends cdktf.TerraformMetaA
   readonly schemaType: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventhub_namespace_schema_group#timeouts EventhubNamespaceSchemaGroup#timeouts}
   */
   readonly timeouts?: EventhubNamespaceSchemaGroupTimeouts;

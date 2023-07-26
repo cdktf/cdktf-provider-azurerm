@@ -37,7 +37,7 @@ export interface SynapseWorkspaceSqlAadAdminAConfig extends cdktf.TerraformMetaA
   readonly tenantId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_workspace_sql_aad_admin#timeouts SynapseWorkspaceSqlAadAdminA#timeouts}
   */
   readonly timeouts?: SynapseWorkspaceSqlAadAdminTimeouts;

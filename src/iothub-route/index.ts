@@ -49,7 +49,7 @@ export interface IothubRouteAConfig extends cdktf.TerraformMetaArguments {
   readonly source: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_route#timeouts IothubRouteA#timeouts}
   */
   readonly timeouts?: IothubRouteTimeouts;

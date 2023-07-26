@@ -41,7 +41,7 @@ export interface ApplicationInsightsSmartDetectionRuleConfig extends cdktf.Terra
   readonly sendEmailsToSubscriptionOwners?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_smart_detection_rule#timeouts ApplicationInsightsSmartDetectionRule#timeouts}
   */
   readonly timeouts?: ApplicationInsightsSmartDetectionRuleTimeouts;

@@ -73,13 +73,13 @@ export interface SearchServiceConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/search_service#identity SearchService#identity}
   */
   readonly identity?: SearchServiceIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/search_service#timeouts SearchService#timeouts}
   */
   readonly timeouts?: SearchServiceTimeouts;

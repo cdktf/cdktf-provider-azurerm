@@ -53,19 +53,19 @@ export interface CosmosdbMongoCollectionConfig extends cdktf.TerraformMetaArgume
   readonly throughput?: number;
   /**
   * autoscale_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_mongo_collection#autoscale_settings CosmosdbMongoCollection#autoscale_settings}
   */
   readonly autoscaleSettings?: CosmosdbMongoCollectionAutoscaleSettings;
   /**
   * index block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_mongo_collection#index CosmosdbMongoCollection#index}
   */
   readonly index?: CosmosdbMongoCollectionIndex[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_mongo_collection#timeouts CosmosdbMongoCollection#timeouts}
   */
   readonly timeouts?: CosmosdbMongoCollectionTimeouts;

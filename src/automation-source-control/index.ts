@@ -57,13 +57,13 @@ export interface AutomationSourceControlConfig extends cdktf.TerraformMetaArgume
   readonly sourceControlType: string;
   /**
   * security block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_source_control#security AutomationSourceControl#security}
   */
   readonly security: AutomationSourceControlSecurity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_source_control#timeouts AutomationSourceControl#timeouts}
   */
   readonly timeouts?: AutomationSourceControlTimeouts;

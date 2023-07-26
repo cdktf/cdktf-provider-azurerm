@@ -61,13 +61,13 @@ export interface VirtualNetworkConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * ddos_protection_plan block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_network#ddos_protection_plan VirtualNetwork#ddos_protection_plan}
   */
   readonly ddosProtectionPlan?: VirtualNetworkDdosProtectionPlan;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_network#timeouts VirtualNetwork#timeouts}
   */
   readonly timeouts?: VirtualNetworkTimeouts;

@@ -41,13 +41,13 @@ export interface LogicAppIntegrationAccountCertificateConfig extends cdktf.Terra
   readonly resourceGroupName: string;
   /**
   * key_vault_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_integration_account_certificate#key_vault_key LogicAppIntegrationAccountCertificate#key_vault_key}
   */
   readonly keyVaultKey?: LogicAppIntegrationAccountCertificateKeyVaultKey;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_integration_account_certificate#timeouts LogicAppIntegrationAccountCertificate#timeouts}
   */
   readonly timeouts?: LogicAppIntegrationAccountCertificateTimeouts;

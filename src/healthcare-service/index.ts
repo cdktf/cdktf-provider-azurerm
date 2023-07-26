@@ -57,19 +57,19 @@ export interface HealthcareServiceConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * authentication_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_service#authentication_configuration HealthcareService#authentication_configuration}
   */
   readonly authenticationConfiguration?: HealthcareServiceAuthenticationConfiguration;
   /**
   * cors_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_service#cors_configuration HealthcareService#cors_configuration}
   */
   readonly corsConfiguration?: HealthcareServiceCorsConfiguration;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_service#timeouts HealthcareService#timeouts}
   */
   readonly timeouts?: HealthcareServiceTimeouts;

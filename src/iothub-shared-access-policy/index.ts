@@ -49,7 +49,7 @@ export interface IothubSharedAccessPolicyAConfig extends cdktf.TerraformMetaArgu
   readonly serviceConnect?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_shared_access_policy#timeouts IothubSharedAccessPolicyA#timeouts}
   */
   readonly timeouts?: IothubSharedAccessPolicyTimeouts;

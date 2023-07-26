@@ -29,19 +29,19 @@ export interface SignalrServiceNetworkAclConfig extends cdktf.TerraformMetaArgum
   readonly signalrServiceId: string;
   /**
   * private_endpoint block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/signalr_service_network_acl#private_endpoint SignalrServiceNetworkAcl#private_endpoint}
   */
   readonly privateEndpoint?: SignalrServiceNetworkAclPrivateEndpoint[] | cdktf.IResolvable;
   /**
   * public_network block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/signalr_service_network_acl#public_network SignalrServiceNetworkAcl#public_network}
   */
   readonly publicNetwork: SignalrServiceNetworkAclPublicNetwork;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/signalr_service_network_acl#timeouts SignalrServiceNetworkAcl#timeouts}
   */
   readonly timeouts?: SignalrServiceNetworkAclTimeouts;

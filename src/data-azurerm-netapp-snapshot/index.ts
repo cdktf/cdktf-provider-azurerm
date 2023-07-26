@@ -41,7 +41,7 @@ export interface DataAzurermNetappSnapshotConfig extends cdktf.TerraformMetaArgu
   readonly volumeName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/netapp_snapshot#timeouts DataAzurermNetappSnapshot#timeouts}
   */
   readonly timeouts?: DataAzurermNetappSnapshotTimeouts;

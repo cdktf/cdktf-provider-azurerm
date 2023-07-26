@@ -53,13 +53,13 @@ export interface AppServiceEnvironmentConfig extends cdktf.TerraformMetaArgument
   readonly tags?: { [key: string]: string };
   /**
   * cluster_setting block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_environment#cluster_setting AppServiceEnvironment#cluster_setting}
   */
   readonly clusterSetting?: AppServiceEnvironmentClusterSetting[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_environment#timeouts AppServiceEnvironment#timeouts}
   */
   readonly timeouts?: AppServiceEnvironmentTimeouts;

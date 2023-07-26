@@ -53,31 +53,31 @@ export interface ActiveDirectoryDomainServiceConfig extends cdktf.TerraformMetaA
   readonly tags?: { [key: string]: string };
   /**
   * initial_replica_set block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/active_directory_domain_service#initial_replica_set ActiveDirectoryDomainService#initial_replica_set}
   */
   readonly initialReplicaSet: ActiveDirectoryDomainServiceInitialReplicaSet;
   /**
   * notifications block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/active_directory_domain_service#notifications ActiveDirectoryDomainService#notifications}
   */
   readonly notifications?: ActiveDirectoryDomainServiceNotifications;
   /**
   * secure_ldap block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/active_directory_domain_service#secure_ldap ActiveDirectoryDomainService#secure_ldap}
   */
   readonly secureLdap?: ActiveDirectoryDomainServiceSecureLdap;
   /**
   * security block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/active_directory_domain_service#security ActiveDirectoryDomainService#security}
   */
   readonly security?: ActiveDirectoryDomainServiceSecurity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/active_directory_domain_service#timeouts ActiveDirectoryDomainService#timeouts}
   */
   readonly timeouts?: ActiveDirectoryDomainServiceTimeouts;

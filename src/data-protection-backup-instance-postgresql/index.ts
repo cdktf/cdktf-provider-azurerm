@@ -45,7 +45,7 @@ export interface DataProtectionBackupInstancePostgresqlConfig extends cdktf.Terr
   readonly vaultId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_protection_backup_instance_postgresql#timeouts DataProtectionBackupInstancePostgresql#timeouts}
   */
   readonly timeouts?: DataProtectionBackupInstancePostgresqlTimeouts;

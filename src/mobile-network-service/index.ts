@@ -41,19 +41,19 @@ export interface MobileNetworkServiceConfig extends cdktf.TerraformMetaArguments
   readonly tags?: { [key: string]: string };
   /**
   * pcc_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_service#pcc_rule MobileNetworkService#pcc_rule}
   */
   readonly pccRule: MobileNetworkServicePccRule[] | cdktf.IResolvable;
   /**
   * service_qos_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_service#service_qos_policy MobileNetworkService#service_qos_policy}
   */
   readonly serviceQosPolicy?: MobileNetworkServiceServiceQosPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_service#timeouts MobileNetworkService#timeouts}
   */
   readonly timeouts?: MobileNetworkServiceTimeouts;
@@ -249,13 +249,13 @@ export interface MobileNetworkServicePccRuleQosPolicy {
   readonly qosIndicator: number;
   /**
   * guaranteed_bit_rate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_service#guaranteed_bit_rate MobileNetworkService#guaranteed_bit_rate}
   */
   readonly guaranteedBitRate?: MobileNetworkServicePccRuleQosPolicyGuaranteedBitRate;
   /**
   * maximum_bit_rate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_service#maximum_bit_rate MobileNetworkService#maximum_bit_rate}
   */
   readonly maximumBitRate: MobileNetworkServicePccRuleQosPolicyMaximumBitRate;
@@ -636,13 +636,13 @@ export interface MobileNetworkServicePccRule {
   readonly trafficControlEnabled?: boolean | cdktf.IResolvable;
   /**
   * qos_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_service#qos_policy MobileNetworkService#qos_policy}
   */
   readonly qosPolicy?: MobileNetworkServicePccRuleQosPolicy;
   /**
   * service_data_flow_template block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_service#service_data_flow_template MobileNetworkService#service_data_flow_template}
   */
   readonly serviceDataFlowTemplate: MobileNetworkServicePccRuleServiceDataFlowTemplate[] | cdktf.IResolvable;
@@ -926,7 +926,7 @@ export interface MobileNetworkServiceServiceQosPolicy {
   readonly qosIndicator?: number;
   /**
   * maximum_bit_rate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_service#maximum_bit_rate MobileNetworkService#maximum_bit_rate}
   */
   readonly maximumBitRate: MobileNetworkServiceServiceQosPolicyMaximumBitRate;

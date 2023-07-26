@@ -33,19 +33,19 @@ export interface StreamAnalyticsFunctionJavascriptUdaConfig extends cdktf.Terraf
   readonly streamAnalyticsJobId: string;
   /**
   * input block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_function_javascript_uda#input StreamAnalyticsFunctionJavascriptUda#input}
   */
   readonly input: StreamAnalyticsFunctionJavascriptUdaInput[] | cdktf.IResolvable;
   /**
   * output block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_function_javascript_uda#output StreamAnalyticsFunctionJavascriptUda#output}
   */
   readonly output: StreamAnalyticsFunctionJavascriptUdaOutput;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_function_javascript_uda#timeouts StreamAnalyticsFunctionJavascriptUda#timeouts}
   */
   readonly timeouts?: StreamAnalyticsFunctionJavascriptUdaTimeouts;

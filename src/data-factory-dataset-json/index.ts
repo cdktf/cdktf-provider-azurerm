@@ -57,25 +57,25 @@ export interface DataFactoryDatasetJsonConfig extends cdktf.TerraformMetaArgumen
   readonly parameters?: { [key: string]: string };
   /**
   * azure_blob_storage_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_json#azure_blob_storage_location DataFactoryDatasetJson#azure_blob_storage_location}
   */
   readonly azureBlobStorageLocation?: DataFactoryDatasetJsonAzureBlobStorageLocation;
   /**
   * http_server_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_json#http_server_location DataFactoryDatasetJson#http_server_location}
   */
   readonly httpServerLocation?: DataFactoryDatasetJsonHttpServerLocation;
   /**
   * schema_column block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_json#schema_column DataFactoryDatasetJson#schema_column}
   */
   readonly schemaColumn?: DataFactoryDatasetJsonSchemaColumn[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_json#timeouts DataFactoryDatasetJson#timeouts}
   */
   readonly timeouts?: DataFactoryDatasetJsonTimeouts;

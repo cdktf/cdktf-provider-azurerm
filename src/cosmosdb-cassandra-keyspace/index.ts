@@ -37,13 +37,13 @@ export interface CosmosdbCassandraKeyspaceConfig extends cdktf.TerraformMetaArgu
   readonly throughput?: number;
   /**
   * autoscale_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_cassandra_keyspace#autoscale_settings CosmosdbCassandraKeyspace#autoscale_settings}
   */
   readonly autoscaleSettings?: CosmosdbCassandraKeyspaceAutoscaleSettings;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_cassandra_keyspace#timeouts CosmosdbCassandraKeyspace#timeouts}
   */
   readonly timeouts?: CosmosdbCassandraKeyspaceTimeouts;

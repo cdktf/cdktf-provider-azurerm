@@ -45,7 +45,7 @@ export interface SentinelDataConnectorOffice365Config extends cdktf.TerraformMet
   readonly tenantId?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_data_connector_office_365#timeouts SentinelDataConnectorOffice365#timeouts}
   */
   readonly timeouts?: SentinelDataConnectorOffice365Timeouts;

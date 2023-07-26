@@ -29,7 +29,7 @@ export interface SubnetNetworkSecurityGroupAssociationConfig extends cdktf.Terra
   readonly subnetId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subnet_network_security_group_association#timeouts SubnetNetworkSecurityGroupAssociation#timeouts}
   */
   readonly timeouts?: SubnetNetworkSecurityGroupAssociationTimeouts;

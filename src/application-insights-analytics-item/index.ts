@@ -45,7 +45,7 @@ export interface ApplicationInsightsAnalyticsItemConfig extends cdktf.TerraformM
   readonly type: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_analytics_item#timeouts ApplicationInsightsAnalyticsItem#timeouts}
   */
   readonly timeouts?: ApplicationInsightsAnalyticsItemTimeouts;

@@ -57,7 +57,7 @@ export interface VirtualNetworkPeeringConfig extends cdktf.TerraformMetaArgument
   readonly virtualNetworkName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_network_peering#timeouts VirtualNetworkPeering#timeouts}
   */
   readonly timeouts?: VirtualNetworkPeeringTimeouts;

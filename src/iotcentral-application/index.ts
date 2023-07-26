@@ -57,13 +57,13 @@ export interface IotcentralApplicationConfig extends cdktf.TerraformMetaArgument
   readonly template?: string;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iotcentral_application#identity IotcentralApplication#identity}
   */
   readonly identity?: IotcentralApplicationIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iotcentral_application#timeouts IotcentralApplication#timeouts}
   */
   readonly timeouts?: IotcentralApplicationTimeouts;

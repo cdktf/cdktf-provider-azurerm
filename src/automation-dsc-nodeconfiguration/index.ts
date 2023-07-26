@@ -37,7 +37,7 @@ export interface AutomationDscNodeconfigurationConfig extends cdktf.TerraformMet
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_dsc_nodeconfiguration#timeouts AutomationDscNodeconfiguration#timeouts}
   */
   readonly timeouts?: AutomationDscNodeconfigurationTimeouts;

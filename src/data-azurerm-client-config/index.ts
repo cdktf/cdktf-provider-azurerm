@@ -21,7 +21,7 @@ export interface DataAzurermClientConfigConfig extends cdktf.TerraformMetaArgume
   readonly id?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/client_config#timeouts DataAzurermClientConfig#timeouts}
   */
   readonly timeouts?: DataAzurermClientConfigTimeouts;

@@ -29,7 +29,7 @@ export interface VmwareExpressRouteAuthorizationConfig extends cdktf.TerraformMe
   readonly privateCloudId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vmware_express_route_authorization#timeouts VmwareExpressRouteAuthorization#timeouts}
   */
   readonly timeouts?: VmwareExpressRouteAuthorizationTimeouts;

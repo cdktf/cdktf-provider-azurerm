@@ -57,19 +57,19 @@ export interface NewRelicMonitorConfig extends cdktf.TerraformMetaArguments {
   readonly userId?: string;
   /**
   * plan block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/new_relic_monitor#plan NewRelicMonitor#plan}
   */
   readonly plan: NewRelicMonitorPlan;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/new_relic_monitor#timeouts NewRelicMonitor#timeouts}
   */
   readonly timeouts?: NewRelicMonitorTimeouts;
   /**
   * user block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/new_relic_monitor#user NewRelicMonitor#user}
   */
   readonly user: NewRelicMonitorUser;

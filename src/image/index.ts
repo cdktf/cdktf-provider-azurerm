@@ -49,19 +49,19 @@ export interface ImageConfig extends cdktf.TerraformMetaArguments {
   readonly zoneResilient?: boolean | cdktf.IResolvable;
   /**
   * data_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/image#data_disk Image#data_disk}
   */
   readonly dataDisk?: ImageDataDisk[] | cdktf.IResolvable;
   /**
   * os_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/image#os_disk Image#os_disk}
   */
   readonly osDisk?: ImageOsDisk;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/image#timeouts Image#timeouts}
   */
   readonly timeouts?: ImageTimeouts;

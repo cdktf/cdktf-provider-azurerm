@@ -33,7 +33,7 @@ export interface AppServiceActiveSlotConfig extends cdktf.TerraformMetaArguments
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_active_slot#timeouts AppServiceActiveSlot#timeouts}
   */
   readonly timeouts?: AppServiceActiveSlotTimeouts;

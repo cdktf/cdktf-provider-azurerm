@@ -93,43 +93,43 @@ export interface ApiManagementApiConfig extends cdktf.TerraformMetaArguments {
   readonly versionSetId?: string;
   /**
   * contact block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api#contact ApiManagementApi#contact}
   */
   readonly contact?: ApiManagementApiContact;
   /**
   * import block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api#import ApiManagementApi#import}
   */
   readonly import?: ApiManagementApiImport;
   /**
   * license block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api#license ApiManagementApi#license}
   */
   readonly license?: ApiManagementApiLicense;
   /**
   * oauth2_authorization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api#oauth2_authorization ApiManagementApi#oauth2_authorization}
   */
   readonly oauth2Authorization?: ApiManagementApiOauth2Authorization;
   /**
   * openid_authentication block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api#openid_authentication ApiManagementApi#openid_authentication}
   */
   readonly openidAuthentication?: ApiManagementApiOpenidAuthentication;
   /**
   * subscription_key_parameter_names block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api#subscription_key_parameter_names ApiManagementApi#subscription_key_parameter_names}
   */
   readonly subscriptionKeyParameterNames?: ApiManagementApiSubscriptionKeyParameterNames;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api#timeouts ApiManagementApi#timeouts}
   */
   readonly timeouts?: ApiManagementApiTimeouts;
@@ -350,7 +350,7 @@ export interface ApiManagementApiImport {
   readonly contentValue: string;
   /**
   * wsdl_selector block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api#wsdl_selector ApiManagementApi#wsdl_selector}
   */
   readonly wsdlSelector?: ApiManagementApiImportWsdlSelector;

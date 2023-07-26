@@ -97,19 +97,19 @@ export interface MysqlServerConfig extends cdktf.TerraformMetaArguments {
   readonly version: string;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mysql_server#identity MysqlServer#identity}
   */
   readonly identity?: MysqlServerIdentity;
   /**
   * threat_detection_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mysql_server#threat_detection_policy MysqlServer#threat_detection_policy}
   */
   readonly threatDetectionPolicy?: MysqlServerThreatDetectionPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mysql_server#timeouts MysqlServer#timeouts}
   */
   readonly timeouts?: MysqlServerTimeouts;

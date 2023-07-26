@@ -29,7 +29,7 @@ export interface MssqlOutboundFirewallRuleConfig extends cdktf.TerraformMetaArgu
   readonly serverId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_outbound_firewall_rule#timeouts MssqlOutboundFirewallRule#timeouts}
   */
   readonly timeouts?: MssqlOutboundFirewallRuleTimeouts;

@@ -29,7 +29,7 @@ export interface DataAzurermBillingEnrollmentAccountScopeConfig extends cdktf.Te
   readonly id?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/billing_enrollment_account_scope#timeouts DataAzurermBillingEnrollmentAccountScope#timeouts}
   */
   readonly timeouts?: DataAzurermBillingEnrollmentAccountScopeTimeouts;

@@ -41,13 +41,13 @@ export interface IotTimeSeriesInsightsReferenceDataSetConfig extends cdktf.Terra
   readonly timeSeriesInsightsEnvironmentId: string;
   /**
   * key_property block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iot_time_series_insights_reference_data_set#key_property IotTimeSeriesInsightsReferenceDataSet#key_property}
   */
   readonly keyProperty: IotTimeSeriesInsightsReferenceDataSetKeyProperty[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iot_time_series_insights_reference_data_set#timeouts IotTimeSeriesInsightsReferenceDataSet#timeouts}
   */
   readonly timeouts?: IotTimeSeriesInsightsReferenceDataSetTimeouts;

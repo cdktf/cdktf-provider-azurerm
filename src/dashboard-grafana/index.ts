@@ -61,19 +61,19 @@ export interface DashboardGrafanaConfig extends cdktf.TerraformMetaArguments {
   readonly zoneRedundancyEnabled?: boolean | cdktf.IResolvable;
   /**
   * azure_monitor_workspace_integrations block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dashboard_grafana#azure_monitor_workspace_integrations DashboardGrafana#azure_monitor_workspace_integrations}
   */
   readonly azureMonitorWorkspaceIntegrations?: DashboardGrafanaAzureMonitorWorkspaceIntegrations[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dashboard_grafana#identity DashboardGrafana#identity}
   */
   readonly identity?: DashboardGrafanaIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dashboard_grafana#timeouts DashboardGrafana#timeouts}
   */
   readonly timeouts?: DashboardGrafanaTimeouts;

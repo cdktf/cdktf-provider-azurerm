@@ -37,7 +37,7 @@ export interface DataAzurermSiteRecoveryProtectionContainerConfig extends cdktf.
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/site_recovery_protection_container#timeouts DataAzurermSiteRecoveryProtectionContainer#timeouts}
   */
   readonly timeouts?: DataAzurermSiteRecoveryProtectionContainerTimeouts;

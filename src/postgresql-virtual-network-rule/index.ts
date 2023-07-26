@@ -41,7 +41,7 @@ export interface PostgresqlVirtualNetworkRuleConfig extends cdktf.TerraformMetaA
   readonly subnetId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_virtual_network_rule#timeouts PostgresqlVirtualNetworkRule#timeouts}
   */
   readonly timeouts?: PostgresqlVirtualNetworkRuleTimeouts;

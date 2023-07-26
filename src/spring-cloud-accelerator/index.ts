@@ -29,7 +29,7 @@ export interface SpringCloudAcceleratorConfig extends cdktf.TerraformMetaArgumen
   readonly springCloudServiceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_accelerator#timeouts SpringCloudAccelerator#timeouts}
   */
   readonly timeouts?: SpringCloudAcceleratorTimeouts;

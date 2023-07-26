@@ -25,7 +25,7 @@ export interface DataAzurermStorageManagementPolicyConfig extends cdktf.Terrafor
   readonly storageAccountId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/storage_management_policy#timeouts DataAzurermStorageManagementPolicy#timeouts}
   */
   readonly timeouts?: DataAzurermStorageManagementPolicyTimeouts;

@@ -61,13 +61,13 @@ export interface StreamAnalyticsOutputServicebusTopicConfig extends cdktf.Terraf
   readonly topicName: string;
   /**
   * serialization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_output_servicebus_topic#serialization StreamAnalyticsOutputServicebusTopic#serialization}
   */
   readonly serialization: StreamAnalyticsOutputServicebusTopicSerialization;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_output_servicebus_topic#timeouts StreamAnalyticsOutputServicebusTopic#timeouts}
   */
   readonly timeouts?: StreamAnalyticsOutputServicebusTopicTimeouts;

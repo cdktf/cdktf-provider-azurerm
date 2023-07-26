@@ -37,19 +37,19 @@ export interface MediaServicesAccountFilterConfig extends cdktf.TerraformMetaArg
   readonly resourceGroupName: string;
   /**
   * presentation_time_range block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_services_account_filter#presentation_time_range MediaServicesAccountFilter#presentation_time_range}
   */
   readonly presentationTimeRange?: MediaServicesAccountFilterPresentationTimeRange;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_services_account_filter#timeouts MediaServicesAccountFilter#timeouts}
   */
   readonly timeouts?: MediaServicesAccountFilterTimeouts;
   /**
   * track_selection block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_services_account_filter#track_selection MediaServicesAccountFilter#track_selection}
   */
   readonly trackSelection?: MediaServicesAccountFilterTrackSelection[] | cdktf.IResolvable;
@@ -552,7 +552,7 @@ export class MediaServicesAccountFilterTrackSelectionConditionList extends cdktf
 export interface MediaServicesAccountFilterTrackSelection {
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_services_account_filter#condition MediaServicesAccountFilter#condition}
   */
   readonly condition: MediaServicesAccountFilterTrackSelectionCondition[] | cdktf.IResolvable;

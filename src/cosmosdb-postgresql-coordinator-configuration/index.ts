@@ -33,7 +33,7 @@ export interface CosmosdbPostgresqlCoordinatorConfigurationConfig extends cdktf.
   readonly value: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_postgresql_coordinator_configuration#timeouts CosmosdbPostgresqlCoordinatorConfiguration#timeouts}
   */
   readonly timeouts?: CosmosdbPostgresqlCoordinatorConfigurationTimeouts;

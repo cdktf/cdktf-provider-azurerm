@@ -29,7 +29,7 @@ export interface DataAzurermMonitorActionGroupConfig extends cdktf.TerraformMeta
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/monitor_action_group#timeouts DataAzurermMonitorActionGroup#timeouts}
   */
   readonly timeouts?: DataAzurermMonitorActionGroupTimeouts;

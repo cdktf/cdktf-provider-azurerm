@@ -33,7 +33,7 @@ export interface LogicAppTriggerCustomConfig extends cdktf.TerraformMetaArgument
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_trigger_custom#timeouts LogicAppTriggerCustom#timeouts}
   */
   readonly timeouts?: LogicAppTriggerCustomTimeouts;

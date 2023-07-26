@@ -29,7 +29,7 @@ export interface ApiManagementApiTagConfig extends cdktf.TerraformMetaArguments 
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_tag#timeouts ApiManagementApiTag#timeouts}
   */
   readonly timeouts?: ApiManagementApiTagTimeouts;

@@ -57,7 +57,7 @@ export interface MediaLiveEventOutputConfig extends cdktf.TerraformMetaArguments
   readonly rewindWindowDuration?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_live_event_output#timeouts MediaLiveEventOutput#timeouts}
   */
   readonly timeouts?: MediaLiveEventOutputTimeouts;

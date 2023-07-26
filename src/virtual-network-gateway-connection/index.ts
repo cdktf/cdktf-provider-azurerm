@@ -105,25 +105,25 @@ export interface VirtualNetworkGatewayConnectionConfig extends cdktf.TerraformMe
   readonly virtualNetworkGatewayId: string;
   /**
   * custom_bgp_addresses block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_network_gateway_connection#custom_bgp_addresses VirtualNetworkGatewayConnection#custom_bgp_addresses}
   */
   readonly customBgpAddresses?: VirtualNetworkGatewayConnectionCustomBgpAddresses;
   /**
   * ipsec_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_network_gateway_connection#ipsec_policy VirtualNetworkGatewayConnection#ipsec_policy}
   */
   readonly ipsecPolicy?: VirtualNetworkGatewayConnectionIpsecPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_network_gateway_connection#timeouts VirtualNetworkGatewayConnection#timeouts}
   */
   readonly timeouts?: VirtualNetworkGatewayConnectionTimeouts;
   /**
   * traffic_selector_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_network_gateway_connection#traffic_selector_policy VirtualNetworkGatewayConnection#traffic_selector_policy}
   */
   readonly trafficSelectorPolicy?: VirtualNetworkGatewayConnectionTrafficSelectorPolicy[] | cdktf.IResolvable;

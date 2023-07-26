@@ -45,7 +45,7 @@ export interface PrivateDnsCnameRecordConfig extends cdktf.TerraformMetaArgument
   readonly zoneName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_dns_cname_record#timeouts PrivateDnsCnameRecord#timeouts}
   */
   readonly timeouts?: PrivateDnsCnameRecordTimeouts;

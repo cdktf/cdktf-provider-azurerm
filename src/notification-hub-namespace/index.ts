@@ -49,7 +49,7 @@ export interface NotificationHubNamespaceConfig extends cdktf.TerraformMetaArgum
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/notification_hub_namespace#timeouts NotificationHubNamespace#timeouts}
   */
   readonly timeouts?: NotificationHubNamespaceTimeouts;

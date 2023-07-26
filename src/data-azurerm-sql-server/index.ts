@@ -29,7 +29,7 @@ export interface DataAzurermSqlServerConfig extends cdktf.TerraformMetaArguments
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_server#timeouts DataAzurermSqlServer#timeouts}
   */
   readonly timeouts?: DataAzurermSqlServerTimeouts;

@@ -29,7 +29,7 @@ export interface DataAzurermKubernetesNodePoolSnapshotConfig extends cdktf.Terra
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/kubernetes_node_pool_snapshot#timeouts DataAzurermKubernetesNodePoolSnapshot#timeouts}
   */
   readonly timeouts?: DataAzurermKubernetesNodePoolSnapshotTimeouts;

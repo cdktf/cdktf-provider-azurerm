@@ -45,7 +45,7 @@ export interface AutomationVariableStringConfig extends cdktf.TerraformMetaArgum
   readonly value?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_variable_string#timeouts AutomationVariableString#timeouts}
   */
   readonly timeouts?: AutomationVariableStringTimeouts;

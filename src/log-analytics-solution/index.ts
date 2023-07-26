@@ -45,13 +45,13 @@ export interface LogAnalyticsSolutionConfig extends cdktf.TerraformMetaArguments
   readonly workspaceResourceId: string;
   /**
   * plan block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/log_analytics_solution#plan LogAnalyticsSolution#plan}
   */
   readonly plan: LogAnalyticsSolutionPlan;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/log_analytics_solution#timeouts LogAnalyticsSolution#timeouts}
   */
   readonly timeouts?: LogAnalyticsSolutionTimeouts;

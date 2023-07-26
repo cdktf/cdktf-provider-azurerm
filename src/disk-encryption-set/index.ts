@@ -53,13 +53,13 @@ export interface DiskEncryptionSetConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/disk_encryption_set#identity DiskEncryptionSet#identity}
   */
   readonly identity: DiskEncryptionSetIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/disk_encryption_set#timeouts DiskEncryptionSet#timeouts}
   */
   readonly timeouts?: DiskEncryptionSetTimeouts;

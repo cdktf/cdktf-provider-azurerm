@@ -93,37 +93,37 @@ export interface SentinelAlertRuleScheduledConfig extends cdktf.TerraformMetaArg
   readonly triggerThreshold?: number;
   /**
   * alert_details_override block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_scheduled#alert_details_override SentinelAlertRuleScheduled#alert_details_override}
   */
   readonly alertDetailsOverride?: SentinelAlertRuleScheduledAlertDetailsOverride[] | cdktf.IResolvable;
   /**
   * entity_mapping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_scheduled#entity_mapping SentinelAlertRuleScheduled#entity_mapping}
   */
   readonly entityMapping?: SentinelAlertRuleScheduledEntityMapping[] | cdktf.IResolvable;
   /**
   * event_grouping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_scheduled#event_grouping SentinelAlertRuleScheduled#event_grouping}
   */
   readonly eventGrouping?: SentinelAlertRuleScheduledEventGrouping;
   /**
   * incident_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_scheduled#incident_configuration SentinelAlertRuleScheduled#incident_configuration}
   */
   readonly incidentConfiguration?: SentinelAlertRuleScheduledIncidentConfiguration;
   /**
   * sentinel_entity_mapping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_scheduled#sentinel_entity_mapping SentinelAlertRuleScheduled#sentinel_entity_mapping}
   */
   readonly sentinelEntityMapping?: SentinelAlertRuleScheduledSentinelEntityMapping[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_scheduled#timeouts SentinelAlertRuleScheduled#timeouts}
   */
   readonly timeouts?: SentinelAlertRuleScheduledTimeouts;
@@ -265,7 +265,7 @@ export interface SentinelAlertRuleScheduledAlertDetailsOverride {
   readonly tacticsColumnName?: string;
   /**
   * dynamic_property block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_scheduled#dynamic_property SentinelAlertRuleScheduled#dynamic_property}
   */
   readonly dynamicProperty?: SentinelAlertRuleScheduledAlertDetailsOverrideDynamicProperty[] | cdktf.IResolvable;
@@ -578,7 +578,7 @@ export interface SentinelAlertRuleScheduledEntityMapping {
   readonly entityType: string;
   /**
   * field_mapping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_scheduled#field_mapping SentinelAlertRuleScheduled#field_mapping}
   */
   readonly fieldMapping: SentinelAlertRuleScheduledEntityMappingFieldMapping[] | cdktf.IResolvable;
@@ -987,7 +987,7 @@ export interface SentinelAlertRuleScheduledIncidentConfiguration {
   readonly createIncident: boolean | cdktf.IResolvable;
   /**
   * grouping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_scheduled#grouping SentinelAlertRuleScheduled#grouping}
   */
   readonly grouping: SentinelAlertRuleScheduledIncidentConfigurationGrouping;

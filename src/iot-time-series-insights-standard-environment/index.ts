@@ -53,7 +53,7 @@ export interface IotTimeSeriesInsightsStandardEnvironmentConfig extends cdktf.Te
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iot_time_series_insights_standard_environment#timeouts IotTimeSeriesInsightsStandardEnvironment#timeouts}
   */
   readonly timeouts?: IotTimeSeriesInsightsStandardEnvironmentTimeouts;

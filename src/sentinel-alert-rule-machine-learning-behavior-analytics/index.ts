@@ -37,7 +37,7 @@ export interface SentinelAlertRuleMachineLearningBehaviorAnalyticsConfig extends
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_machine_learning_behavior_analytics#timeouts SentinelAlertRuleMachineLearningBehaviorAnalytics#timeouts}
   */
   readonly timeouts?: SentinelAlertRuleMachineLearningBehaviorAnalyticsTimeouts;

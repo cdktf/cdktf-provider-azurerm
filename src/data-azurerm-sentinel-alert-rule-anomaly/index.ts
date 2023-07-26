@@ -33,7 +33,7 @@ export interface DataAzurermSentinelAlertRuleAnomalyConfig extends cdktf.Terrafo
   readonly name?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sentinel_alert_rule_anomaly#timeouts DataAzurermSentinelAlertRuleAnomaly#timeouts}
   */
   readonly timeouts?: DataAzurermSentinelAlertRuleAnomalyTimeouts;

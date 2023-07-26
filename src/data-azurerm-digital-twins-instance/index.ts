@@ -29,7 +29,7 @@ export interface DataAzurermDigitalTwinsInstanceConfig extends cdktf.TerraformMe
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/digital_twins_instance#timeouts DataAzurermDigitalTwinsInstance#timeouts}
   */
   readonly timeouts?: DataAzurermDigitalTwinsInstanceTimeouts;

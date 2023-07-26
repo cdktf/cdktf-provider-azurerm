@@ -41,13 +41,13 @@ export interface IothubDeviceUpdateInstanceConfig extends cdktf.TerraformMetaArg
   readonly tags?: { [key: string]: string };
   /**
   * diagnostic_storage_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_device_update_instance#diagnostic_storage_account IothubDeviceUpdateInstance#diagnostic_storage_account}
   */
   readonly diagnosticStorageAccount?: IothubDeviceUpdateInstanceDiagnosticStorageAccount;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_device_update_instance#timeouts IothubDeviceUpdateInstance#timeouts}
   */
   readonly timeouts?: IothubDeviceUpdateInstanceTimeouts;

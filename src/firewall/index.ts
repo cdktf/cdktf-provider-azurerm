@@ -65,25 +65,25 @@ export interface FirewallConfig extends cdktf.TerraformMetaArguments {
   readonly zones?: string[];
   /**
   * ip_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall#ip_configuration Firewall#ip_configuration}
   */
   readonly ipConfiguration?: FirewallIpConfiguration[] | cdktf.IResolvable;
   /**
   * management_ip_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall#management_ip_configuration Firewall#management_ip_configuration}
   */
   readonly managementIpConfiguration?: FirewallManagementIpConfiguration;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall#timeouts Firewall#timeouts}
   */
   readonly timeouts?: FirewallTimeouts;
   /**
   * virtual_hub block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall#virtual_hub Firewall#virtual_hub}
   */
   readonly virtualHub?: FirewallVirtualHub;

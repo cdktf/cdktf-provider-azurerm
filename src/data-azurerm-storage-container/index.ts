@@ -33,7 +33,7 @@ export interface DataAzurermStorageContainerConfig extends cdktf.TerraformMetaAr
   readonly storageAccountName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/storage_container#timeouts DataAzurermStorageContainer#timeouts}
   */
   readonly timeouts?: DataAzurermStorageContainerTimeouts;

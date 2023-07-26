@@ -65,7 +65,7 @@ export interface StreamAnalyticsOutputMssqlConfig extends cdktf.TerraformMetaArg
   readonly user?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_output_mssql#timeouts StreamAnalyticsOutputMssql#timeouts}
   */
   readonly timeouts?: StreamAnalyticsOutputMssqlTimeouts;

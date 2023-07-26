@@ -45,25 +45,25 @@ export interface NetworkConnectionMonitorConfig extends cdktf.TerraformMetaArgum
   readonly tags?: { [key: string]: string };
   /**
   * endpoint block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_connection_monitor#endpoint NetworkConnectionMonitor#endpoint}
   */
   readonly endpoint: NetworkConnectionMonitorEndpoint[] | cdktf.IResolvable;
   /**
   * test_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_connection_monitor#test_configuration NetworkConnectionMonitor#test_configuration}
   */
   readonly testConfiguration: NetworkConnectionMonitorTestConfiguration[] | cdktf.IResolvable;
   /**
   * test_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_connection_monitor#test_group NetworkConnectionMonitor#test_group}
   */
   readonly testGroup: NetworkConnectionMonitorTestGroup[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_connection_monitor#timeouts NetworkConnectionMonitor#timeouts}
   */
   readonly timeouts?: NetworkConnectionMonitorTimeouts;
@@ -199,7 +199,7 @@ export interface NetworkConnectionMonitorEndpointFilter {
   readonly type?: string;
   /**
   * item block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_connection_monitor#item NetworkConnectionMonitor#item}
   */
   readonly item?: NetworkConnectionMonitorEndpointFilterItem[] | cdktf.IResolvable;
@@ -317,7 +317,7 @@ export interface NetworkConnectionMonitorEndpoint {
   readonly targetResourceType?: string;
   /**
   * filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_connection_monitor#filter NetworkConnectionMonitor#filter}
   */
   readonly filter?: NetworkConnectionMonitorEndpointFilter;
@@ -712,7 +712,7 @@ export interface NetworkConnectionMonitorTestConfigurationHttpConfiguration {
   readonly validStatusCodeRanges?: string[];
   /**
   * request_header block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_connection_monitor#request_header NetworkConnectionMonitor#request_header}
   */
   readonly requestHeader?: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader[] | cdktf.IResolvable;
@@ -1183,25 +1183,25 @@ export interface NetworkConnectionMonitorTestConfiguration {
   readonly testFrequencyInSeconds?: number;
   /**
   * http_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_connection_monitor#http_configuration NetworkConnectionMonitor#http_configuration}
   */
   readonly httpConfiguration?: NetworkConnectionMonitorTestConfigurationHttpConfiguration;
   /**
   * icmp_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_connection_monitor#icmp_configuration NetworkConnectionMonitor#icmp_configuration}
   */
   readonly icmpConfiguration?: NetworkConnectionMonitorTestConfigurationIcmpConfiguration;
   /**
   * success_threshold block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_connection_monitor#success_threshold NetworkConnectionMonitor#success_threshold}
   */
   readonly successThreshold?: NetworkConnectionMonitorTestConfigurationSuccessThreshold;
   /**
   * tcp_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_connection_monitor#tcp_configuration NetworkConnectionMonitor#tcp_configuration}
   */
   readonly tcpConfiguration?: NetworkConnectionMonitorTestConfigurationTcpConfiguration;

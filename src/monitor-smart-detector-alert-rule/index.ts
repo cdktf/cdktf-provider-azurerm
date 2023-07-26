@@ -61,13 +61,13 @@ export interface MonitorSmartDetectorAlertRuleConfig extends cdktf.TerraformMeta
   readonly throttlingDuration?: string;
   /**
   * action_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_smart_detector_alert_rule#action_group MonitorSmartDetectorAlertRule#action_group}
   */
   readonly actionGroup: MonitorSmartDetectorAlertRuleActionGroup;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_smart_detector_alert_rule#timeouts MonitorSmartDetectorAlertRule#timeouts}
   */
   readonly timeouts?: MonitorSmartDetectorAlertRuleTimeouts;

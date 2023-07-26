@@ -53,7 +53,7 @@ export interface NetappPoolConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_pool#timeouts NetappPool#timeouts}
   */
   readonly timeouts?: NetappPoolTimeouts;

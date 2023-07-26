@@ -57,19 +57,19 @@ export interface DataFactoryLinkedServiceSqlServerConfig extends cdktf.Terraform
   readonly userName?: string;
   /**
   * key_vault_connection_string block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_sql_server#key_vault_connection_string DataFactoryLinkedServiceSqlServer#key_vault_connection_string}
   */
   readonly keyVaultConnectionString?: DataFactoryLinkedServiceSqlServerKeyVaultConnectionString;
   /**
   * key_vault_password block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_sql_server#key_vault_password DataFactoryLinkedServiceSqlServer#key_vault_password}
   */
   readonly keyVaultPassword?: DataFactoryLinkedServiceSqlServerKeyVaultPassword;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_sql_server#timeouts DataFactoryLinkedServiceSqlServer#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceSqlServerTimeouts;

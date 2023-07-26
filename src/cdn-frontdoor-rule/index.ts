@@ -37,19 +37,19 @@ export interface CdnFrontdoorRuleConfig extends cdktf.TerraformMetaArguments {
   readonly order: number;
   /**
   * actions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#actions CdnFrontdoorRule#actions}
   */
   readonly actions: CdnFrontdoorRuleActions;
   /**
   * conditions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#conditions CdnFrontdoorRule#conditions}
   */
   readonly conditions?: CdnFrontdoorRuleConditions;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#timeouts CdnFrontdoorRule#timeouts}
   */
   readonly timeouts?: CdnFrontdoorRuleTimeouts;
@@ -881,31 +881,31 @@ export class CdnFrontdoorRuleActionsUrlRewriteActionOutputReference extends cdkt
 export interface CdnFrontdoorRuleActions {
   /**
   * request_header_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#request_header_action CdnFrontdoorRule#request_header_action}
   */
   readonly requestHeaderAction?: CdnFrontdoorRuleActionsRequestHeaderAction[] | cdktf.IResolvable;
   /**
   * response_header_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#response_header_action CdnFrontdoorRule#response_header_action}
   */
   readonly responseHeaderAction?: CdnFrontdoorRuleActionsResponseHeaderAction[] | cdktf.IResolvable;
   /**
   * route_configuration_override_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#route_configuration_override_action CdnFrontdoorRule#route_configuration_override_action}
   */
   readonly routeConfigurationOverrideAction?: CdnFrontdoorRuleActionsRouteConfigurationOverrideAction;
   /**
   * url_redirect_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#url_redirect_action CdnFrontdoorRule#url_redirect_action}
   */
   readonly urlRedirectAction?: CdnFrontdoorRuleActionsUrlRedirectAction;
   /**
   * url_rewrite_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#url_rewrite_action CdnFrontdoorRule#url_rewrite_action}
   */
   readonly urlRewriteAction?: CdnFrontdoorRuleActionsUrlRewriteAction;
@@ -4218,115 +4218,115 @@ export class CdnFrontdoorRuleConditionsUrlPathConditionList extends cdktf.Comple
 export interface CdnFrontdoorRuleConditions {
   /**
   * client_port_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#client_port_condition CdnFrontdoorRule#client_port_condition}
   */
   readonly clientPortCondition?: CdnFrontdoorRuleConditionsClientPortCondition[] | cdktf.IResolvable;
   /**
   * cookies_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#cookies_condition CdnFrontdoorRule#cookies_condition}
   */
   readonly cookiesCondition?: CdnFrontdoorRuleConditionsCookiesCondition[] | cdktf.IResolvable;
   /**
   * host_name_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#host_name_condition CdnFrontdoorRule#host_name_condition}
   */
   readonly hostNameCondition?: CdnFrontdoorRuleConditionsHostNameCondition[] | cdktf.IResolvable;
   /**
   * http_version_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#http_version_condition CdnFrontdoorRule#http_version_condition}
   */
   readonly httpVersionCondition?: CdnFrontdoorRuleConditionsHttpVersionCondition[] | cdktf.IResolvable;
   /**
   * is_device_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#is_device_condition CdnFrontdoorRule#is_device_condition}
   */
   readonly isDeviceCondition?: CdnFrontdoorRuleConditionsIsDeviceCondition[] | cdktf.IResolvable;
   /**
   * post_args_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#post_args_condition CdnFrontdoorRule#post_args_condition}
   */
   readonly postArgsCondition?: CdnFrontdoorRuleConditionsPostArgsCondition[] | cdktf.IResolvable;
   /**
   * query_string_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#query_string_condition CdnFrontdoorRule#query_string_condition}
   */
   readonly queryStringCondition?: CdnFrontdoorRuleConditionsQueryStringCondition[] | cdktf.IResolvable;
   /**
   * remote_address_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#remote_address_condition CdnFrontdoorRule#remote_address_condition}
   */
   readonly remoteAddressCondition?: CdnFrontdoorRuleConditionsRemoteAddressCondition[] | cdktf.IResolvable;
   /**
   * request_body_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#request_body_condition CdnFrontdoorRule#request_body_condition}
   */
   readonly requestBodyCondition?: CdnFrontdoorRuleConditionsRequestBodyCondition[] | cdktf.IResolvable;
   /**
   * request_header_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#request_header_condition CdnFrontdoorRule#request_header_condition}
   */
   readonly requestHeaderCondition?: CdnFrontdoorRuleConditionsRequestHeaderCondition[] | cdktf.IResolvable;
   /**
   * request_method_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#request_method_condition CdnFrontdoorRule#request_method_condition}
   */
   readonly requestMethodCondition?: CdnFrontdoorRuleConditionsRequestMethodCondition[] | cdktf.IResolvable;
   /**
   * request_scheme_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#request_scheme_condition CdnFrontdoorRule#request_scheme_condition}
   */
   readonly requestSchemeCondition?: CdnFrontdoorRuleConditionsRequestSchemeCondition[] | cdktf.IResolvable;
   /**
   * request_uri_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#request_uri_condition CdnFrontdoorRule#request_uri_condition}
   */
   readonly requestUriCondition?: CdnFrontdoorRuleConditionsRequestUriCondition[] | cdktf.IResolvable;
   /**
   * server_port_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#server_port_condition CdnFrontdoorRule#server_port_condition}
   */
   readonly serverPortCondition?: CdnFrontdoorRuleConditionsServerPortCondition[] | cdktf.IResolvable;
   /**
   * socket_address_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#socket_address_condition CdnFrontdoorRule#socket_address_condition}
   */
   readonly socketAddressCondition?: CdnFrontdoorRuleConditionsSocketAddressCondition[] | cdktf.IResolvable;
   /**
   * ssl_protocol_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#ssl_protocol_condition CdnFrontdoorRule#ssl_protocol_condition}
   */
   readonly sslProtocolCondition?: CdnFrontdoorRuleConditionsSslProtocolCondition[] | cdktf.IResolvable;
   /**
   * url_file_extension_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#url_file_extension_condition CdnFrontdoorRule#url_file_extension_condition}
   */
   readonly urlFileExtensionCondition?: CdnFrontdoorRuleConditionsUrlFileExtensionCondition[] | cdktf.IResolvable;
   /**
   * url_filename_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#url_filename_condition CdnFrontdoorRule#url_filename_condition}
   */
   readonly urlFilenameCondition?: CdnFrontdoorRuleConditionsUrlFilenameCondition[] | cdktf.IResolvable;
   /**
   * url_path_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule#url_path_condition CdnFrontdoorRule#url_path_condition}
   */
   readonly urlPathCondition?: CdnFrontdoorRuleConditionsUrlPathCondition[] | cdktf.IResolvable;

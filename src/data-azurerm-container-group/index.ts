@@ -33,7 +33,7 @@ export interface DataAzurermContainerGroupConfig extends cdktf.TerraformMetaArgu
   readonly zones?: string[];
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/container_group#timeouts DataAzurermContainerGroup#timeouts}
   */
   readonly timeouts?: DataAzurermContainerGroupTimeouts;

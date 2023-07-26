@@ -61,7 +61,7 @@ export interface AppConfigurationKeyConfig extends cdktf.TerraformMetaArguments 
   readonly vaultKeyReference?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_configuration_key#timeouts AppConfigurationKey#timeouts}
   */
   readonly timeouts?: AppConfigurationKeyTimeouts;

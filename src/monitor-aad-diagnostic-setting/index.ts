@@ -41,19 +41,19 @@ export interface MonitorAadDiagnosticSettingConfig extends cdktf.TerraformMetaAr
   readonly storageAccountId?: string;
   /**
   * enabled_log block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_aad_diagnostic_setting#enabled_log MonitorAadDiagnosticSetting#enabled_log}
   */
   readonly enabledLog?: MonitorAadDiagnosticSettingEnabledLog[] | cdktf.IResolvable;
   /**
   * log block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_aad_diagnostic_setting#log MonitorAadDiagnosticSetting#log}
   */
   readonly log?: MonitorAadDiagnosticSettingLog[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_aad_diagnostic_setting#timeouts MonitorAadDiagnosticSetting#timeouts}
   */
   readonly timeouts?: MonitorAadDiagnosticSettingTimeouts;
@@ -157,7 +157,7 @@ export interface MonitorAadDiagnosticSettingEnabledLog {
   readonly category: string;
   /**
   * retention_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_aad_diagnostic_setting#retention_policy MonitorAadDiagnosticSetting#retention_policy}
   */
   readonly retentionPolicy: MonitorAadDiagnosticSettingEnabledLogRetentionPolicy;
@@ -373,7 +373,7 @@ export interface MonitorAadDiagnosticSettingLog {
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * retention_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_aad_diagnostic_setting#retention_policy MonitorAadDiagnosticSetting#retention_policy}
   */
   readonly retentionPolicy: MonitorAadDiagnosticSettingLogRetentionPolicy;

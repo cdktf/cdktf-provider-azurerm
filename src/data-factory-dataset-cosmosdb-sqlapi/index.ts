@@ -57,13 +57,13 @@ export interface DataFactoryDatasetCosmosdbSqlapiConfig extends cdktf.TerraformM
   readonly parameters?: { [key: string]: string };
   /**
   * schema_column block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_cosmosdb_sqlapi#schema_column DataFactoryDatasetCosmosdbSqlapi#schema_column}
   */
   readonly schemaColumn?: DataFactoryDatasetCosmosdbSqlapiSchemaColumn[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_cosmosdb_sqlapi#timeouts DataFactoryDatasetCosmosdbSqlapi#timeouts}
   */
   readonly timeouts?: DataFactoryDatasetCosmosdbSqlapiTimeouts;

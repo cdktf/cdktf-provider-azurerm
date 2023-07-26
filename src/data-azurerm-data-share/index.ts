@@ -29,7 +29,7 @@ export interface DataAzurermDataShareConfig extends cdktf.TerraformMetaArguments
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/data_share#timeouts DataAzurermDataShare#timeouts}
   */
   readonly timeouts?: DataAzurermDataShareTimeouts;

@@ -45,19 +45,19 @@ export interface VirtualNetworkGatewayNatRuleConfig extends cdktf.TerraformMetaA
   readonly virtualNetworkGatewayId: string;
   /**
   * external_mapping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_network_gateway_nat_rule#external_mapping VirtualNetworkGatewayNatRule#external_mapping}
   */
   readonly externalMapping: VirtualNetworkGatewayNatRuleExternalMapping[] | cdktf.IResolvable;
   /**
   * internal_mapping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_network_gateway_nat_rule#internal_mapping VirtualNetworkGatewayNatRule#internal_mapping}
   */
   readonly internalMapping: VirtualNetworkGatewayNatRuleInternalMapping[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_network_gateway_nat_rule#timeouts VirtualNetworkGatewayNatRule#timeouts}
   */
   readonly timeouts?: VirtualNetworkGatewayNatRuleTimeouts;

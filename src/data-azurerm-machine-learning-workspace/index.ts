@@ -29,7 +29,7 @@ export interface DataAzurermMachineLearningWorkspaceConfig extends cdktf.Terrafo
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/machine_learning_workspace#timeouts DataAzurermMachineLearningWorkspace#timeouts}
   */
   readonly timeouts?: DataAzurermMachineLearningWorkspaceTimeouts;

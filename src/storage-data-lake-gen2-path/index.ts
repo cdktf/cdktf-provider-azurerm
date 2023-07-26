@@ -45,13 +45,13 @@ export interface StorageDataLakeGen2PathConfig extends cdktf.TerraformMetaArgume
   readonly storageAccountId: string;
   /**
   * ace block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_data_lake_gen2_path#ace StorageDataLakeGen2Path#ace}
   */
   readonly ace?: StorageDataLakeGen2PathAce[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_data_lake_gen2_path#timeouts StorageDataLakeGen2Path#timeouts}
   */
   readonly timeouts?: StorageDataLakeGen2PathTimeouts;

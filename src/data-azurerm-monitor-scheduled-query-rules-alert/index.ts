@@ -29,7 +29,7 @@ export interface DataAzurermMonitorScheduledQueryRulesAlertConfig extends cdktf.
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/monitor_scheduled_query_rules_alert#timeouts DataAzurermMonitorScheduledQueryRulesAlert#timeouts}
   */
   readonly timeouts?: DataAzurermMonitorScheduledQueryRulesAlertTimeouts;

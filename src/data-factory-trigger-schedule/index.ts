@@ -69,19 +69,19 @@ export interface DataFactoryTriggerScheduleConfig extends cdktf.TerraformMetaArg
   readonly timeZone?: string;
   /**
   * pipeline block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_trigger_schedule#pipeline DataFactoryTriggerSchedule#pipeline}
   */
   readonly pipeline?: DataFactoryTriggerSchedulePipeline[] | cdktf.IResolvable;
   /**
   * schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_trigger_schedule#schedule DataFactoryTriggerSchedule#schedule}
   */
   readonly schedule?: DataFactoryTriggerScheduleSchedule;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_trigger_schedule#timeouts DataFactoryTriggerSchedule#timeouts}
   */
   readonly timeouts?: DataFactoryTriggerScheduleTimeouts;
@@ -347,7 +347,7 @@ export interface DataFactoryTriggerScheduleSchedule {
   readonly minutes?: number[];
   /**
   * monthly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_trigger_schedule#monthly DataFactoryTriggerSchedule#monthly}
   */
   readonly monthly?: DataFactoryTriggerScheduleScheduleMonthly[] | cdktf.IResolvable;

@@ -45,7 +45,7 @@ export interface PostgresqlFlexibleServerActiveDirectoryAdministratorConfig exte
   readonly tenantId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_flexible_server_active_directory_administrator#timeouts PostgresqlFlexibleServerActiveDirectoryAdministrator#timeouts}
   */
   readonly timeouts?: PostgresqlFlexibleServerActiveDirectoryAdministratorTimeouts;

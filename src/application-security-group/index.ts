@@ -37,7 +37,7 @@ export interface ApplicationSecurityGroupConfig extends cdktf.TerraformMetaArgum
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_security_group#timeouts ApplicationSecurityGroup#timeouts}
   */
   readonly timeouts?: ApplicationSecurityGroupTimeouts;

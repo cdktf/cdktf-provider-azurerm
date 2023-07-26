@@ -73,31 +73,31 @@ export interface ServiceFabricManagedClusterConfig extends cdktf.TerraformMetaAr
   readonly username?: string;
   /**
   * authentication block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_managed_cluster#authentication ServiceFabricManagedCluster#authentication}
   */
   readonly authentication?: ServiceFabricManagedClusterAuthentication;
   /**
   * custom_fabric_setting block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_managed_cluster#custom_fabric_setting ServiceFabricManagedCluster#custom_fabric_setting}
   */
   readonly customFabricSetting?: ServiceFabricManagedClusterCustomFabricSetting[] | cdktf.IResolvable;
   /**
   * lb_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_managed_cluster#lb_rule ServiceFabricManagedCluster#lb_rule}
   */
   readonly lbRule: ServiceFabricManagedClusterLbRule[] | cdktf.IResolvable;
   /**
   * node_type block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_managed_cluster#node_type ServiceFabricManagedCluster#node_type}
   */
   readonly nodeType?: ServiceFabricManagedClusterNodeType[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_managed_cluster#timeouts ServiceFabricManagedCluster#timeouts}
   */
   readonly timeouts?: ServiceFabricManagedClusterTimeouts;
@@ -360,13 +360,13 @@ export class ServiceFabricManagedClusterAuthenticationCertificateList extends cd
 export interface ServiceFabricManagedClusterAuthentication {
   /**
   * active_directory block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_managed_cluster#active_directory ServiceFabricManagedCluster#active_directory}
   */
   readonly activeDirectory?: ServiceFabricManagedClusterAuthenticationActiveDirectory;
   /**
   * certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_managed_cluster#certificate ServiceFabricManagedCluster#certificate}
   */
   readonly certificate?: ServiceFabricManagedClusterAuthenticationCertificate[] | cdktf.IResolvable;
@@ -913,7 +913,7 @@ export interface ServiceFabricManagedClusterNodeTypeVmSecrets {
   readonly vaultId: string;
   /**
   * certificates block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_managed_cluster#certificates ServiceFabricManagedCluster#certificates}
   */
   readonly certificates: ServiceFabricManagedClusterNodeTypeVmSecretsCertificates[] | cdktf.IResolvable;
@@ -1093,7 +1093,7 @@ export interface ServiceFabricManagedClusterNodeType {
   readonly vmSize: string;
   /**
   * vm_secrets block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_managed_cluster#vm_secrets ServiceFabricManagedCluster#vm_secrets}
   */
   readonly vmSecrets?: ServiceFabricManagedClusterNodeTypeVmSecrets[] | cdktf.IResolvable;

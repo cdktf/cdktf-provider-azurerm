@@ -37,7 +37,7 @@ export interface LogAnalyticsLinkedStorageAccountConfig extends cdktf.TerraformM
   readonly workspaceResourceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/log_analytics_linked_storage_account#timeouts LogAnalyticsLinkedStorageAccount#timeouts}
   */
   readonly timeouts?: LogAnalyticsLinkedStorageAccountTimeouts;

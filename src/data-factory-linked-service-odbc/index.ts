@@ -53,13 +53,13 @@ export interface DataFactoryLinkedServiceOdbcConfig extends cdktf.TerraformMetaA
   readonly parameters?: { [key: string]: string };
   /**
   * basic_authentication block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_odbc#basic_authentication DataFactoryLinkedServiceOdbc#basic_authentication}
   */
   readonly basicAuthentication?: DataFactoryLinkedServiceOdbcBasicAuthentication;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_odbc#timeouts DataFactoryLinkedServiceOdbc#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceOdbcTimeouts;

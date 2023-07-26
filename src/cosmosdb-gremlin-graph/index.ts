@@ -57,31 +57,31 @@ export interface CosmosdbGremlinGraphConfig extends cdktf.TerraformMetaArguments
   readonly throughput?: number;
   /**
   * autoscale_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_gremlin_graph#autoscale_settings CosmosdbGremlinGraph#autoscale_settings}
   */
   readonly autoscaleSettings?: CosmosdbGremlinGraphAutoscaleSettings;
   /**
   * conflict_resolution_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_gremlin_graph#conflict_resolution_policy CosmosdbGremlinGraph#conflict_resolution_policy}
   */
   readonly conflictResolutionPolicy?: CosmosdbGremlinGraphConflictResolutionPolicy;
   /**
   * index_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_gremlin_graph#index_policy CosmosdbGremlinGraph#index_policy}
   */
   readonly indexPolicy?: CosmosdbGremlinGraphIndexPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_gremlin_graph#timeouts CosmosdbGremlinGraph#timeouts}
   */
   readonly timeouts?: CosmosdbGremlinGraphTimeouts;
   /**
   * unique_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_gremlin_graph#unique_key CosmosdbGremlinGraph#unique_key}
   */
   readonly uniqueKey?: CosmosdbGremlinGraphUniqueKey[] | cdktf.IResolvable;
@@ -388,7 +388,7 @@ export class CosmosdbGremlinGraphIndexPolicyCompositeIndexIndexList extends cdkt
 export interface CosmosdbGremlinGraphIndexPolicyCompositeIndex {
   /**
   * index block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_gremlin_graph#index CosmosdbGremlinGraph#index}
   */
   readonly index: CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex[] | cdktf.IResolvable;
@@ -599,13 +599,13 @@ export interface CosmosdbGremlinGraphIndexPolicy {
   readonly indexingMode: string;
   /**
   * composite_index block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_gremlin_graph#composite_index CosmosdbGremlinGraph#composite_index}
   */
   readonly compositeIndex?: CosmosdbGremlinGraphIndexPolicyCompositeIndex[] | cdktf.IResolvable;
   /**
   * spatial_index block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_gremlin_graph#spatial_index CosmosdbGremlinGraph#spatial_index}
   */
   readonly spatialIndex?: CosmosdbGremlinGraphIndexPolicySpatialIndex[] | cdktf.IResolvable;

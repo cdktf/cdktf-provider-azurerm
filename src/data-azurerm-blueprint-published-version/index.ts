@@ -33,7 +33,7 @@ export interface DataAzurermBlueprintPublishedVersionConfig extends cdktf.Terraf
   readonly version: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/blueprint_published_version#timeouts DataAzurermBlueprintPublishedVersion#timeouts}
   */
   readonly timeouts?: DataAzurermBlueprintPublishedVersionTimeouts;

@@ -37,37 +37,37 @@ export interface BackupPolicyFileShareConfig extends cdktf.TerraformMetaArgument
   readonly timezone?: string;
   /**
   * backup block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_file_share#backup BackupPolicyFileShare#backup}
   */
   readonly backup: BackupPolicyFileShareBackup;
   /**
   * retention_daily block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_file_share#retention_daily BackupPolicyFileShare#retention_daily}
   */
   readonly retentionDaily: BackupPolicyFileShareRetentionDaily;
   /**
   * retention_monthly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_file_share#retention_monthly BackupPolicyFileShare#retention_monthly}
   */
   readonly retentionMonthly?: BackupPolicyFileShareRetentionMonthly;
   /**
   * retention_weekly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_file_share#retention_weekly BackupPolicyFileShare#retention_weekly}
   */
   readonly retentionWeekly?: BackupPolicyFileShareRetentionWeekly;
   /**
   * retention_yearly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_file_share#retention_yearly BackupPolicyFileShare#retention_yearly}
   */
   readonly retentionYearly?: BackupPolicyFileShareRetentionYearly;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_file_share#timeouts BackupPolicyFileShare#timeouts}
   */
   readonly timeouts?: BackupPolicyFileShareTimeouts;
@@ -193,7 +193,7 @@ export interface BackupPolicyFileShareBackup {
   readonly time?: string;
   /**
   * hourly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_file_share#hourly BackupPolicyFileShare#hourly}
   */
   readonly hourly?: BackupPolicyFileShareBackupHourly;

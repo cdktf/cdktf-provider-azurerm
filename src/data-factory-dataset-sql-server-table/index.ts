@@ -57,13 +57,13 @@ export interface DataFactoryDatasetSqlServerTableConfig extends cdktf.TerraformM
   readonly tableName?: string;
   /**
   * schema_column block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_sql_server_table#schema_column DataFactoryDatasetSqlServerTable#schema_column}
   */
   readonly schemaColumn?: DataFactoryDatasetSqlServerTableSchemaColumn[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_sql_server_table#timeouts DataFactoryDatasetSqlServerTable#timeouts}
   */
   readonly timeouts?: DataFactoryDatasetSqlServerTableTimeouts;

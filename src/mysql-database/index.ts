@@ -41,7 +41,7 @@ export interface MysqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   readonly serverName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mysql_database#timeouts MysqlDatabase#timeouts}
   */
   readonly timeouts?: MysqlDatabaseTimeouts;

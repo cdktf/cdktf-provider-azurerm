@@ -93,25 +93,25 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   readonly zone?: string;
   /**
   * data_protection_replication block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_volume#data_protection_replication NetappVolume#data_protection_replication}
   */
   readonly dataProtectionReplication?: NetappVolumeDataProtectionReplication;
   /**
   * data_protection_snapshot_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_volume#data_protection_snapshot_policy NetappVolume#data_protection_snapshot_policy}
   */
   readonly dataProtectionSnapshotPolicy?: NetappVolumeDataProtectionSnapshotPolicy;
   /**
   * export_policy_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_volume#export_policy_rule NetappVolume#export_policy_rule}
   */
   readonly exportPolicyRule?: NetappVolumeExportPolicyRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_volume#timeouts NetappVolume#timeouts}
   */
   readonly timeouts?: NetappVolumeTimeouts;

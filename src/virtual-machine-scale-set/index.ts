@@ -77,91 +77,91 @@ export interface VirtualMachineScaleSetConfig extends cdktf.TerraformMetaArgumen
   readonly zones?: string[];
   /**
   * boot_diagnostics block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#boot_diagnostics VirtualMachineScaleSet#boot_diagnostics}
   */
   readonly bootDiagnostics?: VirtualMachineScaleSetBootDiagnostics;
   /**
   * extension block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#extension VirtualMachineScaleSet#extension}
   */
   readonly extension?: VirtualMachineScaleSetExtension[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#identity VirtualMachineScaleSet#identity}
   */
   readonly identity?: VirtualMachineScaleSetIdentity;
   /**
   * network_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#network_profile VirtualMachineScaleSet#network_profile}
   */
   readonly networkProfile: VirtualMachineScaleSetNetworkProfile[] | cdktf.IResolvable;
   /**
   * os_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#os_profile VirtualMachineScaleSet#os_profile}
   */
   readonly osProfile: VirtualMachineScaleSetOsProfile;
   /**
   * os_profile_linux_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#os_profile_linux_config VirtualMachineScaleSet#os_profile_linux_config}
   */
   readonly osProfileLinuxConfig?: VirtualMachineScaleSetOsProfileLinuxConfig;
   /**
   * os_profile_secrets block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#os_profile_secrets VirtualMachineScaleSet#os_profile_secrets}
   */
   readonly osProfileSecrets?: VirtualMachineScaleSetOsProfileSecrets[] | cdktf.IResolvable;
   /**
   * os_profile_windows_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#os_profile_windows_config VirtualMachineScaleSet#os_profile_windows_config}
   */
   readonly osProfileWindowsConfig?: VirtualMachineScaleSetOsProfileWindowsConfig;
   /**
   * plan block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#plan VirtualMachineScaleSet#plan}
   */
   readonly plan?: VirtualMachineScaleSetPlan;
   /**
   * rolling_upgrade_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#rolling_upgrade_policy VirtualMachineScaleSet#rolling_upgrade_policy}
   */
   readonly rollingUpgradePolicy?: VirtualMachineScaleSetRollingUpgradePolicy;
   /**
   * sku block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#sku VirtualMachineScaleSet#sku}
   */
   readonly sku: VirtualMachineScaleSetSku;
   /**
   * storage_profile_data_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#storage_profile_data_disk VirtualMachineScaleSet#storage_profile_data_disk}
   */
   readonly storageProfileDataDisk?: VirtualMachineScaleSetStorageProfileDataDisk[] | cdktf.IResolvable;
   /**
   * storage_profile_image_reference block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#storage_profile_image_reference VirtualMachineScaleSet#storage_profile_image_reference}
   */
   readonly storageProfileImageReference?: VirtualMachineScaleSetStorageProfileImageReference;
   /**
   * storage_profile_os_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#storage_profile_os_disk VirtualMachineScaleSet#storage_profile_os_disk}
   */
   readonly storageProfileOsDisk: VirtualMachineScaleSetStorageProfileOsDisk;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#timeouts VirtualMachineScaleSet#timeouts}
   */
   readonly timeouts?: VirtualMachineScaleSetTimeouts;
@@ -826,7 +826,7 @@ export interface VirtualMachineScaleSetNetworkProfileIpConfiguration {
   readonly subnetId: string;
   /**
   * public_ip_address_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#public_ip_address_configuration VirtualMachineScaleSet#public_ip_address_configuration}
   */
   readonly publicIpAddressConfiguration?: VirtualMachineScaleSetNetworkProfileIpConfigurationPublicIpAddressConfiguration;
@@ -1097,13 +1097,13 @@ export interface VirtualMachineScaleSetNetworkProfile {
   readonly primary: boolean | cdktf.IResolvable;
   /**
   * dns_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#dns_settings VirtualMachineScaleSet#dns_settings}
   */
   readonly dnsSettings?: VirtualMachineScaleSetNetworkProfileDnsSettings;
   /**
   * ip_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#ip_configuration VirtualMachineScaleSet#ip_configuration}
   */
   readonly ipConfiguration: VirtualMachineScaleSetNetworkProfileIpConfiguration[] | cdktf.IResolvable;
@@ -1596,7 +1596,7 @@ export interface VirtualMachineScaleSetOsProfileLinuxConfig {
   readonly disablePasswordAuthentication?: boolean | cdktf.IResolvable;
   /**
   * ssh_keys block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#ssh_keys VirtualMachineScaleSet#ssh_keys}
   */
   readonly sshKeys?: VirtualMachineScaleSetOsProfileLinuxConfigSshKeys[] | cdktf.IResolvable;
@@ -1811,7 +1811,7 @@ export interface VirtualMachineScaleSetOsProfileSecrets {
   readonly sourceVaultId: string;
   /**
   * vault_certificates block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#vault_certificates VirtualMachineScaleSet#vault_certificates}
   */
   readonly vaultCertificates?: VirtualMachineScaleSetOsProfileSecretsVaultCertificates[] | cdktf.IResolvable;
@@ -2225,13 +2225,13 @@ export interface VirtualMachineScaleSetOsProfileWindowsConfig {
   readonly provisionVmAgent?: boolean | cdktf.IResolvable;
   /**
   * additional_unattend_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#additional_unattend_config VirtualMachineScaleSet#additional_unattend_config}
   */
   readonly additionalUnattendConfig?: VirtualMachineScaleSetOsProfileWindowsConfigAdditionalUnattendConfig[] | cdktf.IResolvable;
   /**
   * winrm block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set#winrm VirtualMachineScaleSet#winrm}
   */
   readonly winrm?: VirtualMachineScaleSetOsProfileWindowsConfigWinrm[] | cdktf.IResolvable;

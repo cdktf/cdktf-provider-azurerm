@@ -37,7 +37,7 @@ export interface SentinelLogAnalyticsWorkspaceOnboardingConfig extends cdktf.Ter
   readonly workspaceName?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_log_analytics_workspace_onboarding#timeouts SentinelLogAnalyticsWorkspaceOnboarding#timeouts}
   */
   readonly timeouts?: SentinelLogAnalyticsWorkspaceOnboardingTimeouts;

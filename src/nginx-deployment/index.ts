@@ -49,37 +49,37 @@ export interface NginxDeploymentConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * frontend_private block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/nginx_deployment#frontend_private NginxDeployment#frontend_private}
   */
   readonly frontendPrivate?: NginxDeploymentFrontendPrivate[] | cdktf.IResolvable;
   /**
   * frontend_public block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/nginx_deployment#frontend_public NginxDeployment#frontend_public}
   */
   readonly frontendPublic?: NginxDeploymentFrontendPublic;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/nginx_deployment#identity NginxDeployment#identity}
   */
   readonly identity?: NginxDeploymentIdentity;
   /**
   * logging_storage_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/nginx_deployment#logging_storage_account NginxDeployment#logging_storage_account}
   */
   readonly loggingStorageAccount?: NginxDeploymentLoggingStorageAccount[] | cdktf.IResolvable;
   /**
   * network_interface block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/nginx_deployment#network_interface NginxDeployment#network_interface}
   */
   readonly networkInterface?: NginxDeploymentNetworkInterface[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/nginx_deployment#timeouts NginxDeployment#timeouts}
   */
   readonly timeouts?: NginxDeploymentTimeouts;

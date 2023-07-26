@@ -41,13 +41,13 @@ export interface LogAnalyticsClusterConfig extends cdktf.TerraformMetaArguments 
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/log_analytics_cluster#identity LogAnalyticsCluster#identity}
   */
   readonly identity: LogAnalyticsClusterIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/log_analytics_cluster#timeouts LogAnalyticsCluster#timeouts}
   */
   readonly timeouts?: LogAnalyticsClusterTimeouts;

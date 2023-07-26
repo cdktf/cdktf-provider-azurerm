@@ -33,7 +33,7 @@ export interface CognitiveAccountCustomerManagedKeyAConfig extends cdktf.Terrafo
   readonly keyVaultKeyId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cognitive_account_customer_managed_key#timeouts CognitiveAccountCustomerManagedKeyA#timeouts}
   */
   readonly timeouts?: CognitiveAccountCustomerManagedKeyTimeouts;

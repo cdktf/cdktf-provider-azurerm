@@ -33,7 +33,7 @@ export interface SentinelDataConnectorAzureAdvancedThreatProtectionConfig extend
   readonly tenantId?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_data_connector_azure_advanced_threat_protection#timeouts SentinelDataConnectorAzureAdvancedThreatProtection#timeouts}
   */
   readonly timeouts?: SentinelDataConnectorAzureAdvancedThreatProtectionTimeouts;

@@ -41,13 +41,13 @@ export interface StorageAccountNetworkRulesAConfig extends cdktf.TerraformMetaAr
   readonly virtualNetworkSubnetIds?: string[];
   /**
   * private_link_access block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_account_network_rules#private_link_access StorageAccountNetworkRulesA#private_link_access}
   */
   readonly privateLinkAccess?: StorageAccountNetworkRulesPrivateLinkAccessA[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_account_network_rules#timeouts StorageAccountNetworkRulesA#timeouts}
   */
   readonly timeouts?: StorageAccountNetworkRulesTimeouts;

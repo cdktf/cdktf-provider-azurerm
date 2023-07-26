@@ -25,13 +25,13 @@ export interface StorageManagementPolicyConfig extends cdktf.TerraformMetaArgume
   readonly storageAccountId: string;
   /**
   * rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_management_policy#rule StorageManagementPolicy#rule}
   */
   readonly rule?: StorageManagementPolicyRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_management_policy#timeouts StorageManagementPolicy#timeouts}
   */
   readonly timeouts?: StorageManagementPolicyTimeouts;
@@ -666,19 +666,19 @@ export class StorageManagementPolicyRuleActionsVersionOutputReference extends cd
 export interface StorageManagementPolicyRuleActions {
   /**
   * base_blob block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_management_policy#base_blob StorageManagementPolicy#base_blob}
   */
   readonly baseBlob?: StorageManagementPolicyRuleActionsBaseBlob;
   /**
   * snapshot block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_management_policy#snapshot StorageManagementPolicy#snapshot}
   */
   readonly snapshot?: StorageManagementPolicyRuleActionsSnapshot;
   /**
   * version block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_management_policy#version StorageManagementPolicy#version}
   */
   readonly version?: StorageManagementPolicyRuleActionsVersion;
@@ -944,7 +944,7 @@ export interface StorageManagementPolicyRuleFilters {
   readonly prefixMatch?: string[];
   /**
   * match_blob_index_tag block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_management_policy#match_blob_index_tag StorageManagementPolicy#match_blob_index_tag}
   */
   readonly matchBlobIndexTag?: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[] | cdktf.IResolvable;
@@ -1062,13 +1062,13 @@ export interface StorageManagementPolicyRule {
   readonly name: string;
   /**
   * actions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_management_policy#actions StorageManagementPolicy#actions}
   */
   readonly actions: StorageManagementPolicyRuleActions;
   /**
   * filters block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_management_policy#filters StorageManagementPolicy#filters}
   */
   readonly filters: StorageManagementPolicyRuleFilters;

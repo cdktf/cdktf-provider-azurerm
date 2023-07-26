@@ -41,7 +41,7 @@ export interface LogAnalyticsDatasourceWindowsEventConfig extends cdktf.Terrafor
   readonly workspaceName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/log_analytics_datasource_windows_event#timeouts LogAnalyticsDatasourceWindowsEvent#timeouts}
   */
   readonly timeouts?: LogAnalyticsDatasourceWindowsEventTimeouts;

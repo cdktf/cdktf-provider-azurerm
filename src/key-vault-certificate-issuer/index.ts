@@ -45,13 +45,13 @@ export interface KeyVaultCertificateIssuerConfig extends cdktf.TerraformMetaArgu
   readonly providerName: string;
   /**
   * admin block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate_issuer#admin KeyVaultCertificateIssuer#admin}
   */
   readonly admin?: KeyVaultCertificateIssuerAdmin[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate_issuer#timeouts KeyVaultCertificateIssuer#timeouts}
   */
   readonly timeouts?: KeyVaultCertificateIssuerTimeouts;

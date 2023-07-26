@@ -37,13 +37,13 @@ export interface SentinelAlertRuleFusionConfig extends cdktf.TerraformMetaArgume
   readonly name: string;
   /**
   * source block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_fusion#source SentinelAlertRuleFusion#source}
   */
   readonly source?: SentinelAlertRuleFusionSource[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_fusion#timeouts SentinelAlertRuleFusion#timeouts}
   */
   readonly timeouts?: SentinelAlertRuleFusionTimeouts;
@@ -204,7 +204,7 @@ export interface SentinelAlertRuleFusionSource {
   readonly name: string;
   /**
   * sub_type block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_fusion#sub_type SentinelAlertRuleFusion#sub_type}
   */
   readonly subType?: SentinelAlertRuleFusionSourceSubType[] | cdktf.IResolvable;

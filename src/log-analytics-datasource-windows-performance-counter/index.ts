@@ -49,7 +49,7 @@ export interface LogAnalyticsDatasourceWindowsPerformanceCounterConfig extends c
   readonly workspaceName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/log_analytics_datasource_windows_performance_counter#timeouts LogAnalyticsDatasourceWindowsPerformanceCounter#timeouts}
   */
   readonly timeouts?: LogAnalyticsDatasourceWindowsPerformanceCounterTimeouts;

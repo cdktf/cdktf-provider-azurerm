@@ -53,25 +53,25 @@ export interface EventgridTopicConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventgrid_topic#identity EventgridTopic#identity}
   */
   readonly identity?: EventgridTopicIdentity;
   /**
   * input_mapping_default_values block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventgrid_topic#input_mapping_default_values EventgridTopic#input_mapping_default_values}
   */
   readonly inputMappingDefaultValues?: EventgridTopicInputMappingDefaultValues;
   /**
   * input_mapping_fields block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventgrid_topic#input_mapping_fields EventgridTopic#input_mapping_fields}
   */
   readonly inputMappingFields?: EventgridTopicInputMappingFields;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventgrid_topic#timeouts EventgridTopic#timeouts}
   */
   readonly timeouts?: EventgridTopicTimeouts;

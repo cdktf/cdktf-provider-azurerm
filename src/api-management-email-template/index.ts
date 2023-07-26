@@ -41,7 +41,7 @@ export interface ApiManagementEmailTemplateConfig extends cdktf.TerraformMetaArg
   readonly templateName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_email_template#timeouts ApiManagementEmailTemplate#timeouts}
   */
   readonly timeouts?: ApiManagementEmailTemplateTimeouts;

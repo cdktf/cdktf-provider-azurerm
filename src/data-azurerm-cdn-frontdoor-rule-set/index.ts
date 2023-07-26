@@ -33,7 +33,7 @@ export interface DataAzurermCdnFrontdoorRuleSetConfig extends cdktf.TerraformMet
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/cdn_frontdoor_rule_set#timeouts DataAzurermCdnFrontdoorRuleSet#timeouts}
   */
   readonly timeouts?: DataAzurermCdnFrontdoorRuleSetTimeouts;

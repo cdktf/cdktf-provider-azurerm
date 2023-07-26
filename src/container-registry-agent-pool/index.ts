@@ -53,7 +53,7 @@ export interface ContainerRegistryAgentPoolConfig extends cdktf.TerraformMetaArg
   readonly virtualNetworkSubnetId?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_agent_pool#timeouts ContainerRegistryAgentPool#timeouts}
   */
   readonly timeouts?: ContainerRegistryAgentPoolTimeouts;

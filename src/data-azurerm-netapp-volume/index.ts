@@ -41,7 +41,7 @@ export interface DataAzurermNetappVolumeConfig extends cdktf.TerraformMetaArgume
   readonly securityStyle?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/netapp_volume#timeouts DataAzurermNetappVolume#timeouts}
   */
   readonly timeouts?: DataAzurermNetappVolumeTimeouts;

@@ -14,25 +14,25 @@ import * as cdktf from 'cdktf';
 export interface Aadb2CDirectoryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Country code of the B2C tenant. See https://aka.ms/B2CDataResidency for valid country codes.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/aadb2c_directory#country_code Aadb2CDirectory#country_code}
   */
   readonly countryCode?: string;
   /**
   * Location in which the B2C tenant is hosted and data resides. See https://aka.ms/B2CDataResidency for more information.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/aadb2c_directory#data_residency_location Aadb2CDirectory#data_residency_location}
   */
   readonly dataResidencyLocation: string;
   /**
   * The initial display name of the B2C tenant.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/aadb2c_directory#display_name Aadb2CDirectory#display_name}
   */
   readonly displayName?: string;
   /**
   * Domain name of the B2C tenant, including onmicrosoft.com suffix.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/aadb2c_directory#domain_name Aadb2CDirectory#domain_name}
   */
   readonly domainName: string;
@@ -49,7 +49,7 @@ export interface Aadb2CDirectoryConfig extends cdktf.TerraformMetaArguments {
   readonly resourceGroupName: string;
   /**
   * Billing SKU for the B2C tenant. See https://aka.ms/b2cBilling for more information.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/aadb2c_directory#sku_name Aadb2CDirectory#sku_name}
   */
   readonly skuName: string;
@@ -59,7 +59,7 @@ export interface Aadb2CDirectoryConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/aadb2c_directory#timeouts Aadb2CDirectory#timeouts}
   */
   readonly timeouts?: Aadb2CDirectoryTimeouts;

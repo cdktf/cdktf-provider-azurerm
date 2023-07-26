@@ -45,7 +45,7 @@ export interface PrivateDnsZoneVirtualNetworkLinkConfig extends cdktf.TerraformM
   readonly virtualNetworkId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_dns_zone_virtual_network_link#timeouts PrivateDnsZoneVirtualNetworkLink#timeouts}
   */
   readonly timeouts?: PrivateDnsZoneVirtualNetworkLinkTimeouts;

@@ -45,7 +45,7 @@ export interface ProximityPlacementGroupConfig extends cdktf.TerraformMetaArgume
   readonly zone?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/proximity_placement_group#timeouts ProximityPlacementGroup#timeouts}
   */
   readonly timeouts?: ProximityPlacementGroupTimeouts;

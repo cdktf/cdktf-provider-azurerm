@@ -41,7 +41,7 @@ export interface SiteRecoveryHypervReplicationPolicyConfig extends cdktf.Terrafo
   readonly replicationIntervalInSeconds: number;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_hyperv_replication_policy#timeouts SiteRecoveryHypervReplicationPolicy#timeouts}
   */
   readonly timeouts?: SiteRecoveryHypervReplicationPolicyTimeouts;

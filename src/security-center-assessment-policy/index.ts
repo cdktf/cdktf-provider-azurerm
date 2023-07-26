@@ -53,7 +53,7 @@ export interface SecurityCenterAssessmentPolicyConfig extends cdktf.TerraformMet
   readonly userImpact?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/security_center_assessment_policy#timeouts SecurityCenterAssessmentPolicy#timeouts}
   */
   readonly timeouts?: SecurityCenterAssessmentPolicyTimeouts;

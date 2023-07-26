@@ -73,19 +73,19 @@ export interface MediaStreamingEndpointConfig extends cdktf.TerraformMetaArgumen
   readonly tags?: { [key: string]: string };
   /**
   * access_control block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_endpoint#access_control MediaStreamingEndpoint#access_control}
   */
   readonly accessControl?: MediaStreamingEndpointAccessControl;
   /**
   * cross_site_access_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_endpoint#cross_site_access_policy MediaStreamingEndpoint#cross_site_access_policy}
   */
   readonly crossSiteAccessPolicy?: MediaStreamingEndpointCrossSiteAccessPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_endpoint#timeouts MediaStreamingEndpoint#timeouts}
   */
   readonly timeouts?: MediaStreamingEndpointTimeouts;
@@ -464,13 +464,13 @@ export class MediaStreamingEndpointAccessControlIpAllowList extends cdktf.Comple
 export interface MediaStreamingEndpointAccessControl {
   /**
   * akamai_signature_header_authentication_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_endpoint#akamai_signature_header_authentication_key MediaStreamingEndpoint#akamai_signature_header_authentication_key}
   */
   readonly akamaiSignatureHeaderAuthenticationKey?: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[] | cdktf.IResolvable;
   /**
   * ip_allow block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_endpoint#ip_allow MediaStreamingEndpoint#ip_allow}
   */
   readonly ipAllow?: MediaStreamingEndpointAccessControlIpAllow[] | cdktf.IResolvable;

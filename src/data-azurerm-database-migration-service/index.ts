@@ -29,7 +29,7 @@ export interface DataAzurermDatabaseMigrationServiceConfig extends cdktf.Terrafo
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/database_migration_service#timeouts DataAzurermDatabaseMigrationService#timeouts}
   */
   readonly timeouts?: DataAzurermDatabaseMigrationServiceTimeouts;

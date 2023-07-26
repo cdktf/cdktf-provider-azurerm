@@ -41,7 +41,7 @@ export interface SentinelDataConnectorMicrosoftCloudAppSecurityConfig extends cd
   readonly tenantId?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_data_connector_microsoft_cloud_app_security#timeouts SentinelDataConnectorMicrosoftCloudAppSecurity#timeouts}
   */
   readonly timeouts?: SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts;

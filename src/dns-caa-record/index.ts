@@ -41,13 +41,13 @@ export interface DnsCaaRecordConfig extends cdktf.TerraformMetaArguments {
   readonly zoneName: string;
   /**
   * record block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dns_caa_record#record DnsCaaRecord#record}
   */
   readonly record: DnsCaaRecordRecord[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dns_caa_record#timeouts DnsCaaRecord#timeouts}
   */
   readonly timeouts?: DnsCaaRecordTimeouts;

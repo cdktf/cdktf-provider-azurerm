@@ -33,7 +33,7 @@ export interface DataAzurermPublicMaintenanceConfigurationsConfig extends cdktf.
   readonly scope?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/public_maintenance_configurations#timeouts DataAzurermPublicMaintenanceConfigurations#timeouts}
   */
   readonly timeouts?: DataAzurermPublicMaintenanceConfigurationsTimeouts;

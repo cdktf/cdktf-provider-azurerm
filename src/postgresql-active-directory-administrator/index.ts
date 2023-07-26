@@ -41,7 +41,7 @@ export interface PostgresqlActiveDirectoryAdministratorConfig extends cdktf.Terr
   readonly tenantId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_active_directory_administrator#timeouts PostgresqlActiveDirectoryAdministrator#timeouts}
   */
   readonly timeouts?: PostgresqlActiveDirectoryAdministratorTimeouts;

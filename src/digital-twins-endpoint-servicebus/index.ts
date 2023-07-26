@@ -41,7 +41,7 @@ export interface DigitalTwinsEndpointServicebusConfig extends cdktf.TerraformMet
   readonly servicebusSecondaryConnectionString: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_endpoint_servicebus#timeouts DigitalTwinsEndpointServicebus#timeouts}
   */
   readonly timeouts?: DigitalTwinsEndpointServicebusTimeouts;

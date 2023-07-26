@@ -45,7 +45,7 @@ export interface SynapseSqlPoolExtendedAuditingPolicyConfig extends cdktf.Terraf
   readonly storageEndpoint?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_sql_pool_extended_auditing_policy#timeouts SynapseSqlPoolExtendedAuditingPolicy#timeouts}
   */
   readonly timeouts?: SynapseSqlPoolExtendedAuditingPolicyTimeouts;

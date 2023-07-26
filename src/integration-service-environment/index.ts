@@ -49,7 +49,7 @@ export interface IntegrationServiceEnvironmentConfig extends cdktf.TerraformMeta
   readonly virtualNetworkSubnetIds: string[];
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/integration_service_environment#timeouts IntegrationServiceEnvironment#timeouts}
   */
   readonly timeouts?: IntegrationServiceEnvironmentTimeouts;

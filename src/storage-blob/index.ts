@@ -77,7 +77,7 @@ export interface StorageBlobConfig extends cdktf.TerraformMetaArguments {
   readonly type: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_blob#timeouts StorageBlob#timeouts}
   */
   readonly timeouts?: StorageBlobTimeouts;

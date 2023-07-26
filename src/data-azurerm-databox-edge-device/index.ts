@@ -29,7 +29,7 @@ export interface DataAzurermDataboxEdgeDeviceConfig extends cdktf.TerraformMetaA
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/databox_edge_device#timeouts DataAzurermDataboxEdgeDevice#timeouts}
   */
   readonly timeouts?: DataAzurermDataboxEdgeDeviceTimeouts;

@@ -41,7 +41,7 @@ export interface LogicAppTriggerHttpRequestConfig extends cdktf.TerraformMetaArg
   readonly schema: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_trigger_http_request#timeouts LogicAppTriggerHttpRequest#timeouts}
   */
   readonly timeouts?: LogicAppTriggerHttpRequestTimeouts;

@@ -41,7 +41,7 @@ export interface ServicebusNamespaceAuthorizationRuleConfig extends cdktf.Terraf
   readonly send?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/servicebus_namespace_authorization_rule#timeouts ServicebusNamespaceAuthorizationRule#timeouts}
   */
   readonly timeouts?: ServicebusNamespaceAuthorizationRuleTimeouts;

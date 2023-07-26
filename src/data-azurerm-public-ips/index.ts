@@ -37,7 +37,7 @@ export interface DataAzurermPublicIpsConfig extends cdktf.TerraformMetaArguments
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/public_ips#timeouts DataAzurermPublicIps#timeouts}
   */
   readonly timeouts?: DataAzurermPublicIpsTimeouts;

@@ -89,7 +89,7 @@ export interface PublicIpConfig extends cdktf.TerraformMetaArguments {
   readonly zones?: string[];
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/public_ip#timeouts PublicIp#timeouts}
   */
   readonly timeouts?: PublicIpTimeouts;

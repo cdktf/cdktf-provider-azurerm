@@ -57,7 +57,7 @@ export interface DataFactoryLinkedServiceAzureSearchConfig extends cdktf.Terrafo
   readonly url: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_search#timeouts DataFactoryLinkedServiceAzureSearch#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceAzureSearchTimeouts;

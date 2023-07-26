@@ -45,13 +45,13 @@ export interface SpringCloudCustomizedAcceleratorConfig extends cdktf.TerraformM
   readonly springCloudAcceleratorId: string;
   /**
   * git_repository block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_customized_accelerator#git_repository SpringCloudCustomizedAccelerator#git_repository}
   */
   readonly gitRepository: SpringCloudCustomizedAcceleratorGitRepository;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_customized_accelerator#timeouts SpringCloudCustomizedAccelerator#timeouts}
   */
   readonly timeouts?: SpringCloudCustomizedAcceleratorTimeouts;
@@ -285,13 +285,13 @@ export interface SpringCloudCustomizedAcceleratorGitRepository {
   readonly url: string;
   /**
   * basic_auth block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_customized_accelerator#basic_auth SpringCloudCustomizedAccelerator#basic_auth}
   */
   readonly basicAuth?: SpringCloudCustomizedAcceleratorGitRepositoryBasicAuth;
   /**
   * ssh_auth block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_customized_accelerator#ssh_auth SpringCloudCustomizedAccelerator#ssh_auth}
   */
   readonly sshAuth?: SpringCloudCustomizedAcceleratorGitRepositorySshAuth;

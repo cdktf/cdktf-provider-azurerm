@@ -37,7 +37,7 @@ export interface ServicebusNamespaceDisasterRecoveryConfigConfig extends cdktf.T
   readonly primaryNamespaceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/servicebus_namespace_disaster_recovery_config#timeouts ServicebusNamespaceDisasterRecoveryConfig#timeouts}
   */
   readonly timeouts?: ServicebusNamespaceDisasterRecoveryConfigTimeouts;

@@ -49,7 +49,7 @@ export interface RedisEnterpriseClusterConfig extends cdktf.TerraformMetaArgumen
   readonly zones?: string[];
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/redis_enterprise_cluster#timeouts RedisEnterpriseCluster#timeouts}
   */
   readonly timeouts?: RedisEnterpriseClusterTimeouts;

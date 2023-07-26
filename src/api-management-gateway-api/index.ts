@@ -29,7 +29,7 @@ export interface ApiManagementGatewayApiConfig extends cdktf.TerraformMetaArgume
   readonly id?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_gateway_api#timeouts ApiManagementGatewayApi#timeouts}
   */
   readonly timeouts?: ApiManagementGatewayApiTimeouts;

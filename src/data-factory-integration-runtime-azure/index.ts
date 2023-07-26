@@ -57,7 +57,7 @@ export interface DataFactoryIntegrationRuntimeAzureConfig extends cdktf.Terrafor
   readonly virtualNetworkEnabled?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_azure#timeouts DataFactoryIntegrationRuntimeAzure#timeouts}
   */
   readonly timeouts?: DataFactoryIntegrationRuntimeAzureTimeouts;

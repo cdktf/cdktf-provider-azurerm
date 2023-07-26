@@ -37,25 +37,25 @@ export interface VpnGatewayConnectionConfig extends cdktf.TerraformMetaArguments
   readonly vpnGatewayId: string;
   /**
   * routing block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_gateway_connection#routing VpnGatewayConnection#routing}
   */
   readonly routing?: VpnGatewayConnectionRouting;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_gateway_connection#timeouts VpnGatewayConnection#timeouts}
   */
   readonly timeouts?: VpnGatewayConnectionTimeouts;
   /**
   * traffic_selector_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_gateway_connection#traffic_selector_policy VpnGatewayConnection#traffic_selector_policy}
   */
   readonly trafficSelectorPolicy?: VpnGatewayConnectionTrafficSelectorPolicy[] | cdktf.IResolvable;
   /**
   * vpn_link block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_gateway_connection#vpn_link VpnGatewayConnection#vpn_link}
   */
   readonly vpnLink: VpnGatewayConnectionVpnLink[] | cdktf.IResolvable;
@@ -164,7 +164,7 @@ export interface VpnGatewayConnectionRouting {
   readonly outboundRouteMapId?: string;
   /**
   * propagated_route_table block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_gateway_connection#propagated_route_table VpnGatewayConnection#propagated_route_table}
   */
   readonly propagatedRouteTable?: VpnGatewayConnectionRoutingPropagatedRouteTable;
@@ -1003,13 +1003,13 @@ export interface VpnGatewayConnectionVpnLink {
   readonly vpnSiteLinkId: string;
   /**
   * custom_bgp_address block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_gateway_connection#custom_bgp_address VpnGatewayConnection#custom_bgp_address}
   */
   readonly customBgpAddress?: VpnGatewayConnectionVpnLinkCustomBgpAddress[] | cdktf.IResolvable;
   /**
   * ipsec_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_gateway_connection#ipsec_policy VpnGatewayConnection#ipsec_policy}
   */
   readonly ipsecPolicy?: VpnGatewayConnectionVpnLinkIpsecPolicy[] | cdktf.IResolvable;

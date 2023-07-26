@@ -33,13 +33,13 @@ export interface BotChannelLineConfig extends cdktf.TerraformMetaArguments {
   readonly resourceGroupName: string;
   /**
   * line_channel block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_line#line_channel BotChannelLine#line_channel}
   */
   readonly lineChannel: BotChannelLineLineChannel[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_line#timeouts BotChannelLine#timeouts}
   */
   readonly timeouts?: BotChannelLineTimeouts;

@@ -41,13 +41,13 @@ export interface DataShareConfig extends cdktf.TerraformMetaArguments {
   readonly terms?: string;
   /**
   * snapshot_schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_share#snapshot_schedule DataShare#snapshot_schedule}
   */
   readonly snapshotSchedule?: DataShareSnapshotSchedule;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_share#timeouts DataShare#timeouts}
   */
   readonly timeouts?: DataShareTimeouts;

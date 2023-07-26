@@ -33,7 +33,7 @@ export interface MarketplaceAgreementConfig extends cdktf.TerraformMetaArguments
   readonly publisher: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/marketplace_agreement#timeouts MarketplaceAgreement#timeouts}
   */
   readonly timeouts?: MarketplaceAgreementTimeouts;

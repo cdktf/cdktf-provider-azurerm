@@ -93,7 +93,7 @@ export interface MariadbServerConfig extends cdktf.TerraformMetaArguments {
   readonly version: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mariadb_server#timeouts MariadbServer#timeouts}
   */
   readonly timeouts?: MariadbServerTimeouts;

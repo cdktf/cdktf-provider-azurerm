@@ -89,25 +89,25 @@ export interface LogicAppStandardConfig extends cdktf.TerraformMetaArguments {
   readonly virtualNetworkSubnetId?: string;
   /**
   * connection_string block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_standard#connection_string LogicAppStandard#connection_string}
   */
   readonly connectionString?: LogicAppStandardConnectionString[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_standard#identity LogicAppStandard#identity}
   */
   readonly identity?: LogicAppStandardIdentity;
   /**
   * site_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_standard#site_config LogicAppStandard#site_config}
   */
   readonly siteConfig?: LogicAppStandardSiteConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_standard#timeouts LogicAppStandard#timeouts}
   */
   readonly timeouts?: LogicAppStandardTimeouts;
@@ -1464,7 +1464,7 @@ export interface LogicAppStandardSiteConfig {
   readonly websocketsEnabled?: boolean | cdktf.IResolvable;
   /**
   * cors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_standard#cors LogicAppStandard#cors}
   */
   readonly cors?: LogicAppStandardSiteConfigCors;

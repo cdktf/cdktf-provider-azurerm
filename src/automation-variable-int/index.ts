@@ -45,7 +45,7 @@ export interface AutomationVariableIntConfig extends cdktf.TerraformMetaArgument
   readonly value?: number;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_variable_int#timeouts AutomationVariableInt#timeouts}
   */
   readonly timeouts?: AutomationVariableIntTimeouts;

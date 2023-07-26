@@ -57,7 +57,7 @@ export interface ApiManagementGatewayHostNameConfigurationConfig extends cdktf.T
   readonly tls11Enabled?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_gateway_host_name_configuration#timeouts ApiManagementGatewayHostNameConfiguration#timeouts}
   */
   readonly timeouts?: ApiManagementGatewayHostNameConfigurationTimeouts;

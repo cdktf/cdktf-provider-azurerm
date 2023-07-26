@@ -65,43 +65,43 @@ export interface IothubConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * cloud_to_device block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub#cloud_to_device Iothub#cloud_to_device}
   */
   readonly cloudToDevice?: IothubCloudToDevice;
   /**
   * fallback_route block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub#fallback_route Iothub#fallback_route}
   */
   readonly fallbackRoute?: IothubFallbackRoute;
   /**
   * file_upload block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub#file_upload Iothub#file_upload}
   */
   readonly fileUpload?: IothubFileUpload;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub#identity Iothub#identity}
   */
   readonly identity?: IothubIdentity;
   /**
   * network_rule_set block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub#network_rule_set Iothub#network_rule_set}
   */
   readonly networkRuleSet?: IothubNetworkRuleSet[] | cdktf.IResolvable;
   /**
   * sku block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub#sku Iothub#sku}
   */
   readonly sku: IothubSku;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub#timeouts Iothub#timeouts}
   */
   readonly timeouts?: IothubTimeouts;
@@ -1124,7 +1124,7 @@ export interface IothubCloudToDevice {
   readonly maxDeliveryCount?: number;
   /**
   * feedback block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub#feedback Iothub#feedback}
   */
   readonly feedback?: IothubCloudToDeviceFeedback[] | cdktf.IResolvable;
@@ -1910,7 +1910,7 @@ export interface IothubNetworkRuleSet {
   readonly defaultAction?: string;
   /**
   * ip_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub#ip_rule Iothub#ip_rule}
   */
   readonly ipRule?: IothubNetworkRuleSetIpRule[] | cdktf.IResolvable;

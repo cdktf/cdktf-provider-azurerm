@@ -41,7 +41,7 @@ export interface MssqlManagedInstanceActiveDirectoryAdministratorConfig extends 
   readonly tenantId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_managed_instance_active_directory_administrator#timeouts MssqlManagedInstanceActiveDirectoryAdministrator#timeouts}
   */
   readonly timeouts?: MssqlManagedInstanceActiveDirectoryAdministratorTimeouts;

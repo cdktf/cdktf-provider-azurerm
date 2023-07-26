@@ -37,7 +37,7 @@ export interface SynapseWorkspaceKeyConfig extends cdktf.TerraformMetaArguments 
   readonly synapseWorkspaceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_workspace_key#timeouts SynapseWorkspaceKey#timeouts}
   */
   readonly timeouts?: SynapseWorkspaceKeyTimeouts;

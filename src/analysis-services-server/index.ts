@@ -57,13 +57,13 @@ export interface AnalysisServicesServerConfig extends cdktf.TerraformMetaArgumen
   readonly tags?: { [key: string]: string };
   /**
   * ipv4_firewall_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/analysis_services_server#ipv4_firewall_rule AnalysisServicesServer#ipv4_firewall_rule}
   */
   readonly ipv4FirewallRule?: AnalysisServicesServerIpv4FirewallRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/analysis_services_server#timeouts AnalysisServicesServer#timeouts}
   */
   readonly timeouts?: AnalysisServicesServerTimeouts;

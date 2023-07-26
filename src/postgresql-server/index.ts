@@ -97,19 +97,19 @@ export interface PostgresqlServerConfig extends cdktf.TerraformMetaArguments {
   readonly version: string;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_server#identity PostgresqlServer#identity}
   */
   readonly identity?: PostgresqlServerIdentity;
   /**
   * threat_detection_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_server#threat_detection_policy PostgresqlServer#threat_detection_policy}
   */
   readonly threatDetectionPolicy?: PostgresqlServerThreatDetectionPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_server#timeouts PostgresqlServer#timeouts}
   */
   readonly timeouts?: PostgresqlServerTimeouts;

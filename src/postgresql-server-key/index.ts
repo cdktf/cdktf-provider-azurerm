@@ -29,7 +29,7 @@ export interface PostgresqlServerKeyConfig extends cdktf.TerraformMetaArguments 
   readonly serverId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_server_key#timeouts PostgresqlServerKey#timeouts}
   */
   readonly timeouts?: PostgresqlServerKeyTimeouts;

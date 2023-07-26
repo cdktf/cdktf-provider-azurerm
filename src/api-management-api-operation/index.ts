@@ -53,25 +53,25 @@ export interface ApiManagementApiOperationConfig extends cdktf.TerraformMetaArgu
   readonly urlTemplate: string;
   /**
   * request block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#request ApiManagementApiOperation#request}
   */
   readonly request?: ApiManagementApiOperationRequest;
   /**
   * response block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#response ApiManagementApiOperation#response}
   */
   readonly response?: ApiManagementApiOperationResponse[] | cdktf.IResolvable;
   /**
   * template_parameter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#template_parameter ApiManagementApiOperation#template_parameter}
   */
   readonly templateParameter?: ApiManagementApiOperationTemplateParameter[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#timeouts ApiManagementApiOperation#timeouts}
   */
   readonly timeouts?: ApiManagementApiOperationTimeouts;
@@ -313,7 +313,7 @@ export interface ApiManagementApiOperationRequestHeader {
   readonly values?: string[];
   /**
   * example block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationRequestHeaderExample[] | cdktf.IResolvable;
@@ -821,7 +821,7 @@ export interface ApiManagementApiOperationRequestQueryParameter {
   readonly values?: string[];
   /**
   * example block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationRequestQueryParameterExample[] | cdktf.IResolvable;
@@ -1531,7 +1531,7 @@ export interface ApiManagementApiOperationRequestRepresentationFormParameter {
   readonly values?: string[];
   /**
   * example block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationRequestRepresentationFormParameterExample[] | cdktf.IResolvable;
@@ -1817,13 +1817,13 @@ export interface ApiManagementApiOperationRequestRepresentation {
   readonly typeName?: string;
   /**
   * example block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationRequestRepresentationExample[] | cdktf.IResolvable;
   /**
   * form_parameter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#form_parameter ApiManagementApiOperation#form_parameter}
   */
   readonly formParameter?: ApiManagementApiOperationRequestRepresentationFormParameter[] | cdktf.IResolvable;
@@ -2015,19 +2015,19 @@ export interface ApiManagementApiOperationRequest {
   readonly description?: string;
   /**
   * header block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#header ApiManagementApiOperation#header}
   */
   readonly header?: ApiManagementApiOperationRequestHeader[] | cdktf.IResolvable;
   /**
   * query_parameter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#query_parameter ApiManagementApiOperation#query_parameter}
   */
   readonly queryParameter?: ApiManagementApiOperationRequestQueryParameter[] | cdktf.IResolvable;
   /**
   * representation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#representation ApiManagementApiOperation#representation}
   */
   readonly representation?: ApiManagementApiOperationRequestRepresentation[] | cdktf.IResolvable;
@@ -2397,7 +2397,7 @@ export interface ApiManagementApiOperationResponseHeader {
   readonly values?: string[];
   /**
   * example block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationResponseHeaderExample[] | cdktf.IResolvable;
@@ -3107,7 +3107,7 @@ export interface ApiManagementApiOperationResponseRepresentationFormParameter {
   readonly values?: string[];
   /**
   * example block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationResponseRepresentationFormParameterExample[] | cdktf.IResolvable;
@@ -3393,13 +3393,13 @@ export interface ApiManagementApiOperationResponseRepresentation {
   readonly typeName?: string;
   /**
   * example block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationResponseRepresentationExample[] | cdktf.IResolvable;
   /**
   * form_parameter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#form_parameter ApiManagementApiOperation#form_parameter}
   */
   readonly formParameter?: ApiManagementApiOperationResponseRepresentationFormParameter[] | cdktf.IResolvable;
@@ -3595,13 +3595,13 @@ export interface ApiManagementApiOperationResponse {
   readonly statusCode: number;
   /**
   * header block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#header ApiManagementApiOperation#header}
   */
   readonly header?: ApiManagementApiOperationResponseHeader[] | cdktf.IResolvable;
   /**
   * representation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#representation ApiManagementApiOperation#representation}
   */
   readonly representation?: ApiManagementApiOperationResponseRepresentation[] | cdktf.IResolvable;
@@ -4000,7 +4000,7 @@ export interface ApiManagementApiOperationTemplateParameter {
   readonly values?: string[];
   /**
   * example block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationTemplateParameterExample[] | cdktf.IResolvable;

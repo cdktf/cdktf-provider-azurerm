@@ -33,7 +33,7 @@ export interface RecoveryServicesVaultResourceGuardAssociationConfig extends cdk
   readonly vaultId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/recovery_services_vault_resource_guard_association#timeouts RecoveryServicesVaultResourceGuardAssociation#timeouts}
   */
   readonly timeouts?: RecoveryServicesVaultResourceGuardAssociationTimeouts;

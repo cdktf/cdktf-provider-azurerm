@@ -69,55 +69,55 @@ export interface AppServiceConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * auth_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#auth_settings AppService#auth_settings}
   */
   readonly authSettings?: AppServiceAuthSettings;
   /**
   * backup block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#backup AppService#backup}
   */
   readonly backup?: AppServiceBackup;
   /**
   * connection_string block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#connection_string AppService#connection_string}
   */
   readonly connectionString?: AppServiceConnectionString[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#identity AppService#identity}
   */
   readonly identity?: AppServiceIdentity;
   /**
   * logs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#logs AppService#logs}
   */
   readonly logs?: AppServiceLogs;
   /**
   * site_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#site_config AppService#site_config}
   */
   readonly siteConfig?: AppServiceSiteConfig;
   /**
   * source_control block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#source_control AppService#source_control}
   */
   readonly sourceControl?: AppServiceSourceControl;
   /**
   * storage_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#storage_account AppService#storage_account}
   */
   readonly storageAccount?: AppServiceStorageAccount[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#timeouts AppService#timeouts}
   */
   readonly timeouts?: AppServiceTimeouts;
@@ -771,31 +771,31 @@ export interface AppServiceAuthSettings {
   readonly unauthenticatedClientAction?: string;
   /**
   * active_directory block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#active_directory AppService#active_directory}
   */
   readonly activeDirectory?: AppServiceAuthSettingsActiveDirectory;
   /**
   * facebook block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#facebook AppService#facebook}
   */
   readonly facebook?: AppServiceAuthSettingsFacebook;
   /**
   * google block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#google AppService#google}
   */
   readonly google?: AppServiceAuthSettingsGoogle;
   /**
   * microsoft block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#microsoft AppService#microsoft}
   */
   readonly microsoft?: AppServiceAuthSettingsMicrosoft;
   /**
   * twitter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#twitter AppService#twitter}
   */
   readonly twitter?: AppServiceAuthSettingsTwitter;
@@ -1337,7 +1337,7 @@ export interface AppServiceBackup {
   readonly storageAccountUrl: string;
   /**
   * schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#schedule AppService#schedule}
   */
   readonly schedule: AppServiceBackupSchedule;
@@ -1819,7 +1819,7 @@ export interface AppServiceLogsApplicationLogs {
   readonly fileSystemLevel?: string;
   /**
   * azure_blob_storage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#azure_blob_storage AppService#azure_blob_storage}
   */
   readonly azureBlobStorage?: AppServiceLogsApplicationLogsAzureBlobStorage;
@@ -2081,13 +2081,13 @@ export class AppServiceLogsHttpLogsFileSystemOutputReference extends cdktf.Compl
 export interface AppServiceLogsHttpLogs {
   /**
   * azure_blob_storage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#azure_blob_storage AppService#azure_blob_storage}
   */
   readonly azureBlobStorage?: AppServiceLogsHttpLogsAzureBlobStorage;
   /**
   * file_system block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#file_system AppService#file_system}
   */
   readonly fileSystem?: AppServiceLogsHttpLogsFileSystem;
@@ -2185,13 +2185,13 @@ export interface AppServiceLogs {
   readonly failedRequestTracingEnabled?: boolean | cdktf.IResolvable;
   /**
   * application_logs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#application_logs AppService#application_logs}
   */
   readonly applicationLogs?: AppServiceLogsApplicationLogs;
   /**
   * http_logs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#http_logs AppService#http_logs}
   */
   readonly httpLogs?: AppServiceLogsHttpLogs;
@@ -3410,7 +3410,7 @@ export interface AppServiceSiteConfig {
   readonly windowsFxVersion?: string;
   /**
   * cors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service#cors AppService#cors}
   */
   readonly cors?: AppServiceSiteConfigCors;

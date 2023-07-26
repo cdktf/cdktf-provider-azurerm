@@ -61,19 +61,19 @@ export interface ServicebusNamespaceConfig extends cdktf.TerraformMetaArguments 
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * customer_managed_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/servicebus_namespace#customer_managed_key ServicebusNamespace#customer_managed_key}
   */
   readonly customerManagedKey?: ServicebusNamespaceCustomerManagedKey;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/servicebus_namespace#identity ServicebusNamespace#identity}
   */
   readonly identity?: ServicebusNamespaceIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/servicebus_namespace#timeouts ServicebusNamespace#timeouts}
   */
   readonly timeouts?: ServicebusNamespaceTimeouts;

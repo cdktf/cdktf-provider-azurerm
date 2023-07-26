@@ -57,13 +57,13 @@ export interface PointToSiteVpnGatewayConfig extends cdktf.TerraformMetaArgument
   readonly vpnServerConfigurationId: string;
   /**
   * connection_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/point_to_site_vpn_gateway#connection_configuration PointToSiteVpnGateway#connection_configuration}
   */
   readonly connectionConfiguration: PointToSiteVpnGatewayConnectionConfiguration;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/point_to_site_vpn_gateway#timeouts PointToSiteVpnGateway#timeouts}
   */
   readonly timeouts?: PointToSiteVpnGatewayTimeouts;
@@ -172,7 +172,7 @@ export interface PointToSiteVpnGatewayConnectionConfigurationRoute {
   readonly outboundRouteMapId?: string;
   /**
   * propagated_route_table block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/point_to_site_vpn_gateway#propagated_route_table PointToSiteVpnGateway#propagated_route_table}
   */
   readonly propagatedRouteTable?: PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable;
@@ -375,13 +375,13 @@ export interface PointToSiteVpnGatewayConnectionConfiguration {
   readonly name: string;
   /**
   * route block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/point_to_site_vpn_gateway#route PointToSiteVpnGateway#route}
   */
   readonly route?: PointToSiteVpnGatewayConnectionConfigurationRoute;
   /**
   * vpn_client_address_pool block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/point_to_site_vpn_gateway#vpn_client_address_pool PointToSiteVpnGateway#vpn_client_address_pool}
   */
   readonly vpnClientAddressPool: PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool;

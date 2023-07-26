@@ -29,7 +29,7 @@ export interface DataAzurermKeyVaultKeyConfig extends cdktf.TerraformMetaArgumen
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/key_vault_key#timeouts DataAzurermKeyVaultKey#timeouts}
   */
   readonly timeouts?: DataAzurermKeyVaultKeyTimeouts;

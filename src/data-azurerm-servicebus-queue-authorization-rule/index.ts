@@ -41,7 +41,7 @@ export interface DataAzurermServicebusQueueAuthorizationRuleConfig extends cdktf
   readonly resourceGroupName?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/servicebus_queue_authorization_rule#timeouts DataAzurermServicebusQueueAuthorizationRule#timeouts}
   */
   readonly timeouts?: DataAzurermServicebusQueueAuthorizationRuleTimeouts;

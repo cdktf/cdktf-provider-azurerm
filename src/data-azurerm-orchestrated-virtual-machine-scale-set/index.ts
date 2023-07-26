@@ -29,7 +29,7 @@ export interface DataAzurermOrchestratedVirtualMachineScaleSetConfig extends cdk
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/orchestrated_virtual_machine_scale_set#timeouts DataAzurermOrchestratedVirtualMachineScaleSet#timeouts}
   */
   readonly timeouts?: DataAzurermOrchestratedVirtualMachineScaleSetTimeouts;

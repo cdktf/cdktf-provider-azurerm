@@ -45,25 +45,25 @@ export interface VirtualMachineScaleSetPacketCaptureConfig extends cdktf.Terrafo
   readonly virtualMachineScaleSetId: string;
   /**
   * filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set_packet_capture#filter VirtualMachineScaleSetPacketCapture#filter}
   */
   readonly filter?: VirtualMachineScaleSetPacketCaptureFilter[] | cdktf.IResolvable;
   /**
   * machine_scope block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set_packet_capture#machine_scope VirtualMachineScaleSetPacketCapture#machine_scope}
   */
   readonly machineScope?: VirtualMachineScaleSetPacketCaptureMachineScope;
   /**
   * storage_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set_packet_capture#storage_location VirtualMachineScaleSetPacketCapture#storage_location}
   */
   readonly storageLocation: VirtualMachineScaleSetPacketCaptureStorageLocation;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set_packet_capture#timeouts VirtualMachineScaleSetPacketCapture#timeouts}
   */
   readonly timeouts?: VirtualMachineScaleSetPacketCaptureTimeouts;

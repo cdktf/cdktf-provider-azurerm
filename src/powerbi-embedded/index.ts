@@ -49,7 +49,7 @@ export interface PowerbiEmbeddedConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/powerbi_embedded#timeouts PowerbiEmbedded#timeouts}
   */
   readonly timeouts?: PowerbiEmbeddedTimeouts;

@@ -33,7 +33,7 @@ export interface SiteRecoveryHypervReplicationPolicyAssociationConfig extends cd
   readonly policyId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_hyperv_replication_policy_association#timeouts SiteRecoveryHypervReplicationPolicyAssociation#timeouts}
   */
   readonly timeouts?: SiteRecoveryHypervReplicationPolicyAssociationTimeouts;

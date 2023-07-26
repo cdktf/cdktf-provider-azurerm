@@ -41,13 +41,13 @@ export interface FirewallNatRuleCollectionConfig extends cdktf.TerraformMetaArgu
   readonly resourceGroupName: string;
   /**
   * rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_nat_rule_collection#rule FirewallNatRuleCollection#rule}
   */
   readonly rule: FirewallNatRuleCollectionRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_nat_rule_collection#timeouts FirewallNatRuleCollection#timeouts}
   */
   readonly timeouts?: FirewallNatRuleCollectionTimeouts;

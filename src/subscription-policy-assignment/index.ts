@@ -61,31 +61,31 @@ export interface SubscriptionPolicyAssignmentConfig extends cdktf.TerraformMetaA
   readonly subscriptionId: string;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_policy_assignment#identity SubscriptionPolicyAssignment#identity}
   */
   readonly identity?: SubscriptionPolicyAssignmentIdentity;
   /**
   * non_compliance_message block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_policy_assignment#non_compliance_message SubscriptionPolicyAssignment#non_compliance_message}
   */
   readonly nonComplianceMessage?: SubscriptionPolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable;
   /**
   * overrides block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_policy_assignment#overrides SubscriptionPolicyAssignment#overrides}
   */
   readonly overrides?: SubscriptionPolicyAssignmentOverrides[] | cdktf.IResolvable;
   /**
   * resource_selectors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_policy_assignment#resource_selectors SubscriptionPolicyAssignment#resource_selectors}
   */
   readonly resourceSelectors?: SubscriptionPolicyAssignmentResourceSelectors[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_policy_assignment#timeouts SubscriptionPolicyAssignment#timeouts}
   */
   readonly timeouts?: SubscriptionPolicyAssignmentTimeouts;
@@ -446,7 +446,7 @@ export interface SubscriptionPolicyAssignmentOverrides {
   readonly value: string;
   /**
   * selectors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_policy_assignment#selectors SubscriptionPolicyAssignment#selectors}
   */
   readonly selectors?: SubscriptionPolicyAssignmentOverridesSelectors[] | cdktf.IResolvable;
@@ -717,7 +717,7 @@ export interface SubscriptionPolicyAssignmentResourceSelectors {
   readonly name?: string;
   /**
   * selectors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_policy_assignment#selectors SubscriptionPolicyAssignment#selectors}
   */
   readonly selectors: SubscriptionPolicyAssignmentResourceSelectorsSelectors[] | cdktf.IResolvable;

@@ -93,13 +93,13 @@ export interface ApiManagementAuthorizationServerConfig extends cdktf.TerraformM
   readonly tokenEndpoint?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_authorization_server#timeouts ApiManagementAuthorizationServer#timeouts}
   */
   readonly timeouts?: ApiManagementAuthorizationServerTimeouts;
   /**
   * token_body_parameter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_authorization_server#token_body_parameter ApiManagementAuthorizationServer#token_body_parameter}
   */
   readonly tokenBodyParameter?: ApiManagementAuthorizationServerTokenBodyParameter[] | cdktf.IResolvable;

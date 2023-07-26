@@ -45,7 +45,7 @@ export interface SpringCloudAppMysqlAssociationConfig extends cdktf.TerraformMet
   readonly username: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_app_mysql_association#timeouts SpringCloudAppMysqlAssociation#timeouts}
   */
   readonly timeouts?: SpringCloudAppMysqlAssociationTimeouts;

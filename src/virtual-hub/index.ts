@@ -57,13 +57,13 @@ export interface VirtualHubConfig extends cdktf.TerraformMetaArguments {
   readonly virtualWanId?: string;
   /**
   * route block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_hub#route VirtualHub#route}
   */
   readonly route?: VirtualHubRoute[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_hub#timeouts VirtualHub#timeouts}
   */
   readonly timeouts?: VirtualHubTimeouts;

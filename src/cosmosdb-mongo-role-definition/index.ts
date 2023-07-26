@@ -33,13 +33,13 @@ export interface CosmosdbMongoRoleDefinitionConfig extends cdktf.TerraformMetaAr
   readonly roleName: string;
   /**
   * privilege block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_mongo_role_definition#privilege CosmosdbMongoRoleDefinition#privilege}
   */
   readonly privilege?: CosmosdbMongoRoleDefinitionPrivilege[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_mongo_role_definition#timeouts CosmosdbMongoRoleDefinition#timeouts}
   */
   readonly timeouts?: CosmosdbMongoRoleDefinitionTimeouts;
@@ -143,7 +143,7 @@ export interface CosmosdbMongoRoleDefinitionPrivilege {
   readonly actions: string[];
   /**
   * resource block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_mongo_role_definition#resource CosmosdbMongoRoleDefinition#resource}
   */
   readonly resource: CosmosdbMongoRoleDefinitionPrivilegeResource;

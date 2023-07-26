@@ -29,7 +29,7 @@ export interface DataAzurermPrivateDnsResolverVirtualNetworkLinkConfig extends c
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/private_dns_resolver_virtual_network_link#timeouts DataAzurermPrivateDnsResolverVirtualNetworkLink#timeouts}
   */
   readonly timeouts?: DataAzurermPrivateDnsResolverVirtualNetworkLinkTimeouts;

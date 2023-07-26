@@ -41,31 +41,31 @@ export interface ArcKubernetesFluxConfigurationConfig extends cdktf.TerraformMet
   readonly scope?: string;
   /**
   * blob_storage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/arc_kubernetes_flux_configuration#blob_storage ArcKubernetesFluxConfiguration#blob_storage}
   */
   readonly blobStorage?: ArcKubernetesFluxConfigurationBlobStorage;
   /**
   * bucket block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/arc_kubernetes_flux_configuration#bucket ArcKubernetesFluxConfiguration#bucket}
   */
   readonly bucket?: ArcKubernetesFluxConfigurationBucket;
   /**
   * git_repository block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/arc_kubernetes_flux_configuration#git_repository ArcKubernetesFluxConfiguration#git_repository}
   */
   readonly gitRepository?: ArcKubernetesFluxConfigurationGitRepository;
   /**
   * kustomizations block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/arc_kubernetes_flux_configuration#kustomizations ArcKubernetesFluxConfiguration#kustomizations}
   */
   readonly kustomizations: ArcKubernetesFluxConfigurationKustomizations[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/arc_kubernetes_flux_configuration#timeouts ArcKubernetesFluxConfiguration#timeouts}
   */
   readonly timeouts?: ArcKubernetesFluxConfigurationTimeouts;
@@ -291,7 +291,7 @@ export interface ArcKubernetesFluxConfigurationBlobStorage {
   readonly timeoutInSeconds?: number;
   /**
   * service_principal block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/arc_kubernetes_flux_configuration#service_principal ArcKubernetesFluxConfiguration#service_principal}
   */
   readonly servicePrincipal?: ArcKubernetesFluxConfigurationBlobStorageServicePrincipal;

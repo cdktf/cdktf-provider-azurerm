@@ -37,7 +37,7 @@ export interface NetworkWatcherConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_watcher#timeouts NetworkWatcher#timeouts}
   */
   readonly timeouts?: NetworkWatcherTimeouts;

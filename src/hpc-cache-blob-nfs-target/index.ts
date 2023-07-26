@@ -49,7 +49,7 @@ export interface HpcCacheBlobNfsTargetConfig extends cdktf.TerraformMetaArgument
   readonly usageModel: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache_blob_nfs_target#timeouts HpcCacheBlobNfsTarget#timeouts}
   */
   readonly timeouts?: HpcCacheBlobNfsTargetTimeouts;

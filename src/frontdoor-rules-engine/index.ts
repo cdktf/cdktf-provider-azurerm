@@ -37,13 +37,13 @@ export interface FrontdoorRulesEngineConfig extends cdktf.TerraformMetaArguments
   readonly resourceGroupName: string;
   /**
   * rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor_rules_engine#rule FrontdoorRulesEngine#rule}
   */
   readonly rule?: FrontdoorRulesEngineRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor_rules_engine#timeouts FrontdoorRulesEngine#timeouts}
   */
   readonly timeouts?: FrontdoorRulesEngineTimeouts;
@@ -353,13 +353,13 @@ export class FrontdoorRulesEngineRuleActionResponseHeaderList extends cdktf.Comp
 export interface FrontdoorRulesEngineRuleAction {
   /**
   * request_header block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor_rules_engine#request_header FrontdoorRulesEngine#request_header}
   */
   readonly requestHeader?: FrontdoorRulesEngineRuleActionRequestHeader[] | cdktf.IResolvable;
   /**
   * response_header block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor_rules_engine#response_header FrontdoorRulesEngine#response_header}
   */
   readonly responseHeader?: FrontdoorRulesEngineRuleActionResponseHeader[] | cdktf.IResolvable;
@@ -686,13 +686,13 @@ export interface FrontdoorRulesEngineRule {
   readonly priority: number;
   /**
   * action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor_rules_engine#action FrontdoorRulesEngine#action}
   */
   readonly action?: FrontdoorRulesEngineRuleAction;
   /**
   * match_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor_rules_engine#match_condition FrontdoorRulesEngine#match_condition}
   */
   readonly matchCondition?: FrontdoorRulesEngineRuleMatchCondition[] | cdktf.IResolvable;

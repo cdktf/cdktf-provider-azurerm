@@ -41,7 +41,7 @@ export interface AppServicePublicCertificateConfig extends cdktf.TerraformMetaAr
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_public_certificate#timeouts AppServicePublicCertificate#timeouts}
   */
   readonly timeouts?: AppServicePublicCertificateTimeouts;

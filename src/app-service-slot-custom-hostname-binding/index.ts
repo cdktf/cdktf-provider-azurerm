@@ -37,7 +37,7 @@ export interface AppServiceSlotCustomHostnameBindingConfig extends cdktf.Terrafo
   readonly thumbprint?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot_custom_hostname_binding#timeouts AppServiceSlotCustomHostnameBinding#timeouts}
   */
   readonly timeouts?: AppServiceSlotCustomHostnameBindingTimeouts;

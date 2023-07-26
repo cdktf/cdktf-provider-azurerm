@@ -49,79 +49,79 @@ export interface HdinsightHbaseClusterConfig extends cdktf.TerraformMetaArgument
   readonly tlsMinVersion?: string;
   /**
   * component_version block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#component_version HdinsightHbaseCluster#component_version}
   */
   readonly componentVersion: HdinsightHbaseClusterComponentVersion;
   /**
   * compute_isolation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#compute_isolation HdinsightHbaseCluster#compute_isolation}
   */
   readonly computeIsolation?: HdinsightHbaseClusterComputeIsolation;
   /**
   * disk_encryption block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#disk_encryption HdinsightHbaseCluster#disk_encryption}
   */
   readonly diskEncryption?: HdinsightHbaseClusterDiskEncryption[] | cdktf.IResolvable;
   /**
   * extension block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#extension HdinsightHbaseCluster#extension}
   */
   readonly extension?: HdinsightHbaseClusterExtension;
   /**
   * gateway block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#gateway HdinsightHbaseCluster#gateway}
   */
   readonly gateway: HdinsightHbaseClusterGateway;
   /**
   * metastores block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#metastores HdinsightHbaseCluster#metastores}
   */
   readonly metastores?: HdinsightHbaseClusterMetastores;
   /**
   * monitor block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#monitor HdinsightHbaseCluster#monitor}
   */
   readonly monitor?: HdinsightHbaseClusterMonitor;
   /**
   * network block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#network HdinsightHbaseCluster#network}
   */
   readonly network?: HdinsightHbaseClusterNetwork;
   /**
   * roles block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#roles HdinsightHbaseCluster#roles}
   */
   readonly roles: HdinsightHbaseClusterRoles;
   /**
   * security_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#security_profile HdinsightHbaseCluster#security_profile}
   */
   readonly securityProfile?: HdinsightHbaseClusterSecurityProfile;
   /**
   * storage_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#storage_account HdinsightHbaseCluster#storage_account}
   */
   readonly storageAccount?: HdinsightHbaseClusterStorageAccount[] | cdktf.IResolvable;
   /**
   * storage_account_gen2 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#storage_account_gen2 HdinsightHbaseCluster#storage_account_gen2}
   */
   readonly storageAccountGen2?: HdinsightHbaseClusterStorageAccountGen2;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#timeouts HdinsightHbaseCluster#timeouts}
   */
   readonly timeouts?: HdinsightHbaseClusterTimeouts;
@@ -1035,19 +1035,19 @@ export class HdinsightHbaseClusterMetastoresOozieOutputReference extends cdktf.C
 export interface HdinsightHbaseClusterMetastores {
   /**
   * ambari block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#ambari HdinsightHbaseCluster#ambari}
   */
   readonly ambari?: HdinsightHbaseClusterMetastoresAmbari;
   /**
   * hive block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#hive HdinsightHbaseCluster#hive}
   */
   readonly hive?: HdinsightHbaseClusterMetastoresHive;
   /**
   * oozie block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#oozie HdinsightHbaseCluster#oozie}
   */
   readonly oozie?: HdinsightHbaseClusterMetastoresOozie;
@@ -1507,7 +1507,7 @@ export interface HdinsightHbaseClusterRolesHeadNode {
   readonly vmSize: string;
   /**
   * script_actions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#script_actions HdinsightHbaseCluster#script_actions}
   */
   readonly scriptActions?: HdinsightHbaseClusterRolesHeadNodeScriptActions[] | cdktf.IResolvable;
@@ -1852,7 +1852,7 @@ export interface HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrence {
   readonly timezone: string;
   /**
   * schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#schedule HdinsightHbaseCluster#schedule}
   */
   readonly schedule: HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[] | cdktf.IResolvable;
@@ -1936,7 +1936,7 @@ export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceOutputRefere
 export interface HdinsightHbaseClusterRolesWorkerNodeAutoscale {
   /**
   * recurrence block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#recurrence HdinsightHbaseCluster#recurrence}
   */
   readonly recurrence?: HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrence;
@@ -2176,13 +2176,13 @@ export interface HdinsightHbaseClusterRolesWorkerNode {
   readonly vmSize: string;
   /**
   * autoscale block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#autoscale HdinsightHbaseCluster#autoscale}
   */
   readonly autoscale?: HdinsightHbaseClusterRolesWorkerNodeAutoscale;
   /**
   * script_actions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#script_actions HdinsightHbaseCluster#script_actions}
   */
   readonly scriptActions?: HdinsightHbaseClusterRolesWorkerNodeScriptActions[] | cdktf.IResolvable;
@@ -2593,7 +2593,7 @@ export interface HdinsightHbaseClusterRolesZookeeperNode {
   readonly vmSize: string;
   /**
   * script_actions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#script_actions HdinsightHbaseCluster#script_actions}
   */
   readonly scriptActions?: HdinsightHbaseClusterRolesZookeeperNodeScriptActions[] | cdktf.IResolvable;
@@ -2792,19 +2792,19 @@ export class HdinsightHbaseClusterRolesZookeeperNodeOutputReference extends cdkt
 export interface HdinsightHbaseClusterRoles {
   /**
   * head_node block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#head_node HdinsightHbaseCluster#head_node}
   */
   readonly headNode: HdinsightHbaseClusterRolesHeadNode;
   /**
   * worker_node block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#worker_node HdinsightHbaseCluster#worker_node}
   */
   readonly workerNode: HdinsightHbaseClusterRolesWorkerNode;
   /**
   * zookeeper_node block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_hbase_cluster#zookeeper_node HdinsightHbaseCluster#zookeeper_node}
   */
   readonly zookeeperNode: HdinsightHbaseClusterRolesZookeeperNode;

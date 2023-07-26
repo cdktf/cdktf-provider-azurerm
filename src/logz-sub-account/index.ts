@@ -37,13 +37,13 @@ export interface LogzSubAccountConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logz_sub_account#timeouts LogzSubAccount#timeouts}
   */
   readonly timeouts?: LogzSubAccountTimeouts;
   /**
   * user block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logz_sub_account#user LogzSubAccount#user}
   */
   readonly user: LogzSubAccountUser;

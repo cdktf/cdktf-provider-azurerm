@@ -29,7 +29,7 @@ export interface DataAzurermHybridComputeMachineConfig extends cdktf.TerraformMe
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/hybrid_compute_machine#timeouts DataAzurermHybridComputeMachine#timeouts}
   */
   readonly timeouts?: DataAzurermHybridComputeMachineTimeouts;

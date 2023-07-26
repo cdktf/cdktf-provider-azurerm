@@ -33,19 +33,19 @@ export interface NginxConfigurationConfig extends cdktf.TerraformMetaArguments {
   readonly rootFile: string;
   /**
   * config_file block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/nginx_configuration#config_file NginxConfiguration#config_file}
   */
   readonly configFile?: NginxConfigurationConfigFile[] | cdktf.IResolvable;
   /**
   * protected_file block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/nginx_configuration#protected_file NginxConfiguration#protected_file}
   */
   readonly protectedFile?: NginxConfigurationProtectedFile[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/nginx_configuration#timeouts NginxConfiguration#timeouts}
   */
   readonly timeouts?: NginxConfigurationTimeouts;

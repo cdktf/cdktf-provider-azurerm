@@ -41,7 +41,7 @@ export interface MobileNetworkDataNetworkConfig extends cdktf.TerraformMetaArgum
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_data_network#timeouts MobileNetworkDataNetwork#timeouts}
   */
   readonly timeouts?: MobileNetworkDataNetworkTimeouts;

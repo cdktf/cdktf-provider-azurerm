@@ -49,13 +49,13 @@ export interface LogicAppActionHttpConfig extends cdktf.TerraformMetaArguments {
   readonly uri: string;
   /**
   * run_after block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_action_http#run_after LogicAppActionHttp#run_after}
   */
   readonly runAfter?: LogicAppActionHttpRunAfter[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_action_http#timeouts LogicAppActionHttp#timeouts}
   */
   readonly timeouts?: LogicAppActionHttpTimeouts;

@@ -29,13 +29,13 @@ export interface HpcCacheAccessPolicyConfig extends cdktf.TerraformMetaArguments
   readonly name: string;
   /**
   * access_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache_access_policy#access_rule HpcCacheAccessPolicy#access_rule}
   */
   readonly accessRule: HpcCacheAccessPolicyAccessRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache_access_policy#timeouts HpcCacheAccessPolicy#timeouts}
   */
   readonly timeouts?: HpcCacheAccessPolicyTimeouts;

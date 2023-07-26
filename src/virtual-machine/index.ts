@@ -73,73 +73,73 @@ export interface VirtualMachineConfig extends cdktf.TerraformMetaArguments {
   readonly zones?: string[];
   /**
   * additional_capabilities block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#additional_capabilities VirtualMachine#additional_capabilities}
   */
   readonly additionalCapabilities?: VirtualMachineAdditionalCapabilities;
   /**
   * boot_diagnostics block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#boot_diagnostics VirtualMachine#boot_diagnostics}
   */
   readonly bootDiagnostics?: VirtualMachineBootDiagnostics;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#identity VirtualMachine#identity}
   */
   readonly identity?: VirtualMachineIdentity;
   /**
   * os_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#os_profile VirtualMachine#os_profile}
   */
   readonly osProfile?: VirtualMachineOsProfile;
   /**
   * os_profile_linux_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#os_profile_linux_config VirtualMachine#os_profile_linux_config}
   */
   readonly osProfileLinuxConfig?: VirtualMachineOsProfileLinuxConfig;
   /**
   * os_profile_secrets block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#os_profile_secrets VirtualMachine#os_profile_secrets}
   */
   readonly osProfileSecrets?: VirtualMachineOsProfileSecrets[] | cdktf.IResolvable;
   /**
   * os_profile_windows_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#os_profile_windows_config VirtualMachine#os_profile_windows_config}
   */
   readonly osProfileWindowsConfig?: VirtualMachineOsProfileWindowsConfig;
   /**
   * plan block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#plan VirtualMachine#plan}
   */
   readonly plan?: VirtualMachinePlan;
   /**
   * storage_data_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#storage_data_disk VirtualMachine#storage_data_disk}
   */
   readonly storageDataDisk?: VirtualMachineStorageDataDisk[] | cdktf.IResolvable;
   /**
   * storage_image_reference block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#storage_image_reference VirtualMachine#storage_image_reference}
   */
   readonly storageImageReference?: VirtualMachineStorageImageReference;
   /**
   * storage_os_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#storage_os_disk VirtualMachine#storage_os_disk}
   */
   readonly storageOsDisk: VirtualMachineStorageOsDisk;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#timeouts VirtualMachine#timeouts}
   */
   readonly timeouts?: VirtualMachineTimeouts;
@@ -651,7 +651,7 @@ export interface VirtualMachineOsProfileLinuxConfig {
   readonly disablePasswordAuthentication: boolean | cdktf.IResolvable;
   /**
   * ssh_keys block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#ssh_keys VirtualMachine#ssh_keys}
   */
   readonly sshKeys?: VirtualMachineOsProfileLinuxConfigSshKeys[] | cdktf.IResolvable;
@@ -863,7 +863,7 @@ export interface VirtualMachineOsProfileSecrets {
   readonly sourceVaultId: string;
   /**
   * vault_certificates block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#vault_certificates VirtualMachine#vault_certificates}
   */
   readonly vaultCertificates?: VirtualMachineOsProfileSecretsVaultCertificates[] | cdktf.IResolvable;
@@ -1281,13 +1281,13 @@ export interface VirtualMachineOsProfileWindowsConfig {
   readonly timezone?: string;
   /**
   * additional_unattend_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#additional_unattend_config VirtualMachine#additional_unattend_config}
   */
   readonly additionalUnattendConfig?: VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig[] | cdktf.IResolvable;
   /**
   * winrm block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine#winrm VirtualMachine#winrm}
   */
   readonly winrm?: VirtualMachineOsProfileWindowsConfigWinrm[] | cdktf.IResolvable;

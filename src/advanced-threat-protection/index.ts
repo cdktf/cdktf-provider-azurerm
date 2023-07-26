@@ -29,7 +29,7 @@ export interface AdvancedThreatProtectionConfig extends cdktf.TerraformMetaArgum
   readonly targetResourceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/advanced_threat_protection#timeouts AdvancedThreatProtection#timeouts}
   */
   readonly timeouts?: AdvancedThreatProtectionTimeouts;

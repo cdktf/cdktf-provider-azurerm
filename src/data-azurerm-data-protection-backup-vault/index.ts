@@ -29,7 +29,7 @@ export interface DataAzurermDataProtectionBackupVaultConfig extends cdktf.Terraf
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/data_protection_backup_vault#timeouts DataAzurermDataProtectionBackupVault#timeouts}
   */
   readonly timeouts?: DataAzurermDataProtectionBackupVaultTimeouts;

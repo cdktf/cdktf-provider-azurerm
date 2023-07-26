@@ -49,13 +49,13 @@ export interface OrbitalSpacecraftConfig extends cdktf.TerraformMetaArguments {
   readonly twoLineElements: string[];
   /**
   * links block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orbital_spacecraft#links OrbitalSpacecraft#links}
   */
   readonly links: OrbitalSpacecraftLinks[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orbital_spacecraft#timeouts OrbitalSpacecraft#timeouts}
   */
   readonly timeouts?: OrbitalSpacecraftTimeouts;

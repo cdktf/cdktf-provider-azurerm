@@ -37,7 +37,7 @@ export interface MssqlJobCredentialConfig extends cdktf.TerraformMetaArguments {
   readonly username: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_job_credential#timeouts MssqlJobCredential#timeouts}
   */
   readonly timeouts?: MssqlJobCredentialTimeouts;

@@ -77,13 +77,13 @@ export interface ServicebusSubscriptionConfig extends cdktf.TerraformMetaArgumen
   readonly topicId: string;
   /**
   * client_scoped_subscription block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/servicebus_subscription#client_scoped_subscription ServicebusSubscription#client_scoped_subscription}
   */
   readonly clientScopedSubscription?: ServicebusSubscriptionClientScopedSubscription;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/servicebus_subscription#timeouts ServicebusSubscription#timeouts}
   */
   readonly timeouts?: ServicebusSubscriptionTimeouts;

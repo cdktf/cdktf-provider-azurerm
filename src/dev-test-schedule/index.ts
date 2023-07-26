@@ -53,31 +53,31 @@ export interface DevTestScheduleConfig extends cdktf.TerraformMetaArguments {
   readonly timeZoneId: string;
   /**
   * daily_recurrence block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dev_test_schedule#daily_recurrence DevTestSchedule#daily_recurrence}
   */
   readonly dailyRecurrence?: DevTestScheduleDailyRecurrence;
   /**
   * hourly_recurrence block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dev_test_schedule#hourly_recurrence DevTestSchedule#hourly_recurrence}
   */
   readonly hourlyRecurrence?: DevTestScheduleHourlyRecurrence;
   /**
   * notification_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dev_test_schedule#notification_settings DevTestSchedule#notification_settings}
   */
   readonly notificationSettings: DevTestScheduleNotificationSettings;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dev_test_schedule#timeouts DevTestSchedule#timeouts}
   */
   readonly timeouts?: DevTestScheduleTimeouts;
   /**
   * weekly_recurrence block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dev_test_schedule#weekly_recurrence DevTestSchedule#weekly_recurrence}
   */
   readonly weeklyRecurrence?: DevTestScheduleWeeklyRecurrence;

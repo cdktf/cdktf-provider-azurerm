@@ -29,13 +29,13 @@ export interface CdnFrontdoorSecretConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   /**
   * secret block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_secret#secret CdnFrontdoorSecret#secret}
   */
   readonly secret: CdnFrontdoorSecretSecret;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_secret#timeouts CdnFrontdoorSecret#timeouts}
   */
   readonly timeouts?: CdnFrontdoorSecretTimeouts;
@@ -142,7 +142,7 @@ export class CdnFrontdoorSecretSecretCustomerCertificateList extends cdktf.Compl
 export interface CdnFrontdoorSecretSecret {
   /**
   * customer_certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_secret#customer_certificate CdnFrontdoorSecret#customer_certificate}
   */
   readonly customerCertificate: CdnFrontdoorSecretSecretCustomerCertificate[] | cdktf.IResolvable;

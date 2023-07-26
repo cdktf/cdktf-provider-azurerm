@@ -49,19 +49,19 @@ export interface SpringCloudGatewayRouteConfigConfig extends cdktf.TerraformMeta
   readonly ssoValidationEnabled?: boolean | cdktf.IResolvable;
   /**
   * open_api block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_gateway_route_config#open_api SpringCloudGatewayRouteConfig#open_api}
   */
   readonly openApi?: SpringCloudGatewayRouteConfigOpenApi;
   /**
   * route block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_gateway_route_config#route SpringCloudGatewayRouteConfig#route}
   */
   readonly route?: SpringCloudGatewayRouteConfigRoute[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_gateway_route_config#timeouts SpringCloudGatewayRouteConfig#timeouts}
   */
   readonly timeouts?: SpringCloudGatewayRouteConfigTimeouts;

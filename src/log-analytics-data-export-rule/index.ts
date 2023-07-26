@@ -45,7 +45,7 @@ export interface LogAnalyticsDataExportRuleConfig extends cdktf.TerraformMetaArg
   readonly workspaceResourceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/log_analytics_data_export_rule#timeouts LogAnalyticsDataExportRule#timeouts}
   */
   readonly timeouts?: LogAnalyticsDataExportRuleTimeouts;

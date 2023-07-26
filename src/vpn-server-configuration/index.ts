@@ -45,37 +45,37 @@ export interface VpnServerConfigurationConfig extends cdktf.TerraformMetaArgumen
   readonly vpnProtocols?: string[];
   /**
   * azure_active_directory_authentication block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_server_configuration#azure_active_directory_authentication VpnServerConfiguration#azure_active_directory_authentication}
   */
   readonly azureActiveDirectoryAuthentication?: VpnServerConfigurationAzureActiveDirectoryAuthentication[] | cdktf.IResolvable;
   /**
   * client_revoked_certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_server_configuration#client_revoked_certificate VpnServerConfiguration#client_revoked_certificate}
   */
   readonly clientRevokedCertificate?: VpnServerConfigurationClientRevokedCertificate[] | cdktf.IResolvable;
   /**
   * client_root_certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_server_configuration#client_root_certificate VpnServerConfiguration#client_root_certificate}
   */
   readonly clientRootCertificate?: VpnServerConfigurationClientRootCertificate[] | cdktf.IResolvable;
   /**
   * ipsec_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_server_configuration#ipsec_policy VpnServerConfiguration#ipsec_policy}
   */
   readonly ipsecPolicy?: VpnServerConfigurationIpsecPolicy;
   /**
   * radius block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_server_configuration#radius VpnServerConfiguration#radius}
   */
   readonly radius?: VpnServerConfigurationRadius;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_server_configuration#timeouts VpnServerConfiguration#timeouts}
   */
   readonly timeouts?: VpnServerConfigurationTimeouts;
@@ -1069,19 +1069,19 @@ export class VpnServerConfigurationRadiusServerRootCertificateList extends cdktf
 export interface VpnServerConfigurationRadius {
   /**
   * client_root_certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_server_configuration#client_root_certificate VpnServerConfiguration#client_root_certificate}
   */
   readonly clientRootCertificate?: VpnServerConfigurationRadiusClientRootCertificate[] | cdktf.IResolvable;
   /**
   * server block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_server_configuration#server VpnServerConfiguration#server}
   */
   readonly server?: VpnServerConfigurationRadiusServer[] | cdktf.IResolvable;
   /**
   * server_root_certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_server_configuration#server_root_certificate VpnServerConfiguration#server_root_certificate}
   */
   readonly serverRootCertificate?: VpnServerConfigurationRadiusServerRootCertificate[] | cdktf.IResolvable;

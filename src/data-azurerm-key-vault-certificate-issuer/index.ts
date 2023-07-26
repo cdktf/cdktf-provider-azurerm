@@ -29,7 +29,7 @@ export interface DataAzurermKeyVaultCertificateIssuerConfig extends cdktf.Terraf
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/key_vault_certificate_issuer#timeouts DataAzurermKeyVaultCertificateIssuer#timeouts}
   */
   readonly timeouts?: DataAzurermKeyVaultCertificateIssuerTimeouts;

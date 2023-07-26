@@ -85,73 +85,73 @@ export interface ApiManagementConfig extends cdktf.TerraformMetaArguments {
   readonly zones?: string[];
   /**
   * additional_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#additional_location ApiManagement#additional_location}
   */
   readonly additionalLocation?: ApiManagementAdditionalLocation[] | cdktf.IResolvable;
   /**
   * certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#certificate ApiManagement#certificate}
   */
   readonly certificate?: ApiManagementCertificate[] | cdktf.IResolvable;
   /**
   * delegation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#delegation ApiManagement#delegation}
   */
   readonly delegation?: ApiManagementDelegation;
   /**
   * hostname_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#hostname_configuration ApiManagement#hostname_configuration}
   */
   readonly hostnameConfiguration?: ApiManagementHostnameConfiguration;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#identity ApiManagement#identity}
   */
   readonly identity?: ApiManagementIdentity;
   /**
   * protocols block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#protocols ApiManagement#protocols}
   */
   readonly protocols?: ApiManagementProtocols;
   /**
   * security block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#security ApiManagement#security}
   */
   readonly security?: ApiManagementSecurity;
   /**
   * sign_in block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#sign_in ApiManagement#sign_in}
   */
   readonly signIn?: ApiManagementSignIn;
   /**
   * sign_up block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#sign_up ApiManagement#sign_up}
   */
   readonly signUp?: ApiManagementSignUp;
   /**
   * tenant_access block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#tenant_access ApiManagement#tenant_access}
   */
   readonly tenantAccess?: ApiManagementTenantAccess;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#timeouts ApiManagement#timeouts}
   */
   readonly timeouts?: ApiManagementTimeouts;
   /**
   * virtual_network_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#virtual_network_configuration ApiManagement#virtual_network_configuration}
   */
   readonly virtualNetworkConfiguration?: ApiManagementVirtualNetworkConfiguration;
@@ -365,7 +365,7 @@ export interface ApiManagementAdditionalLocation {
   readonly zones?: string[];
   /**
   * virtual_network_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#virtual_network_configuration ApiManagement#virtual_network_configuration}
   */
   readonly virtualNetworkConfiguration?: ApiManagementAdditionalLocationVirtualNetworkConfiguration;
@@ -2194,31 +2194,31 @@ export class ApiManagementHostnameConfigurationScmList extends cdktf.ComplexList
 export interface ApiManagementHostnameConfiguration {
   /**
   * developer_portal block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#developer_portal ApiManagement#developer_portal}
   */
   readonly developerPortal?: ApiManagementHostnameConfigurationDeveloperPortal[] | cdktf.IResolvable;
   /**
   * management block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#management ApiManagement#management}
   */
   readonly management?: ApiManagementHostnameConfigurationManagement[] | cdktf.IResolvable;
   /**
   * portal block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#portal ApiManagement#portal}
   */
   readonly portal?: ApiManagementHostnameConfigurationPortal[] | cdktf.IResolvable;
   /**
   * proxy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#proxy ApiManagement#proxy}
   */
   readonly proxy?: ApiManagementHostnameConfigurationProxy[] | cdktf.IResolvable;
   /**
   * scm block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#scm ApiManagement#scm}
   */
   readonly scm?: ApiManagementHostnameConfigurationScm[] | cdktf.IResolvable;
@@ -3217,7 +3217,7 @@ export interface ApiManagementSignUp {
   readonly enabled: boolean | cdktf.IResolvable;
   /**
   * terms_of_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management#terms_of_service ApiManagement#terms_of_service}
   */
   readonly termsOfService: ApiManagementSignUpTermsOfService;

@@ -45,7 +45,7 @@ export interface IothubFallbackRouteAConfig extends cdktf.TerraformMetaArguments
   readonly source?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_fallback_route#timeouts IothubFallbackRouteA#timeouts}
   */
   readonly timeouts?: IothubFallbackRouteTimeouts;

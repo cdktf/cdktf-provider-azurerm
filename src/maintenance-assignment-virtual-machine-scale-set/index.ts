@@ -33,7 +33,7 @@ export interface MaintenanceAssignmentVirtualMachineScaleSetConfig extends cdktf
   readonly virtualMachineScaleSetId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/maintenance_assignment_virtual_machine_scale_set#timeouts MaintenanceAssignmentVirtualMachineScaleSet#timeouts}
   */
   readonly timeouts?: MaintenanceAssignmentVirtualMachineScaleSetTimeouts;

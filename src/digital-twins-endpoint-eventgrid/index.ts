@@ -45,7 +45,7 @@ export interface DigitalTwinsEndpointEventgridConfig extends cdktf.TerraformMeta
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_endpoint_eventgrid#timeouts DigitalTwinsEndpointEventgrid#timeouts}
   */
   readonly timeouts?: DigitalTwinsEndpointEventgridTimeouts;

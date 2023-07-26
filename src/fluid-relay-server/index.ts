@@ -41,13 +41,13 @@ export interface FluidRelayServerConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/fluid_relay_server#identity FluidRelayServer#identity}
   */
   readonly identity?: FluidRelayServerIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/fluid_relay_server#timeouts FluidRelayServer#timeouts}
   */
   readonly timeouts?: FluidRelayServerTimeouts;

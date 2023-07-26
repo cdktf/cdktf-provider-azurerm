@@ -89,31 +89,31 @@ export interface DataFactoryDatasetDelimitedTextConfig extends cdktf.TerraformMe
   readonly rowDelimiter?: string;
   /**
   * azure_blob_fs_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_delimited_text#azure_blob_fs_location DataFactoryDatasetDelimitedText#azure_blob_fs_location}
   */
   readonly azureBlobFsLocation?: DataFactoryDatasetDelimitedTextAzureBlobFsLocation;
   /**
   * azure_blob_storage_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_delimited_text#azure_blob_storage_location DataFactoryDatasetDelimitedText#azure_blob_storage_location}
   */
   readonly azureBlobStorageLocation?: DataFactoryDatasetDelimitedTextAzureBlobStorageLocation;
   /**
   * http_server_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_delimited_text#http_server_location DataFactoryDatasetDelimitedText#http_server_location}
   */
   readonly httpServerLocation?: DataFactoryDatasetDelimitedTextHttpServerLocation;
   /**
   * schema_column block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_delimited_text#schema_column DataFactoryDatasetDelimitedText#schema_column}
   */
   readonly schemaColumn?: DataFactoryDatasetDelimitedTextSchemaColumn[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_delimited_text#timeouts DataFactoryDatasetDelimitedText#timeouts}
   */
   readonly timeouts?: DataFactoryDatasetDelimitedTextTimeouts;

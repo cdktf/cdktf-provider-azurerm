@@ -33,7 +33,7 @@ export interface NetworkInterfaceBackendAddressPoolAssociationConfig extends cdk
   readonly networkInterfaceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_interface_backend_address_pool_association#timeouts NetworkInterfaceBackendAddressPoolAssociation#timeouts}
   */
   readonly timeouts?: NetworkInterfaceBackendAddressPoolAssociationTimeouts;

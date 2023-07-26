@@ -37,7 +37,7 @@ export interface ApiManagementGatewayCertificateAuthorityConfig extends cdktf.Te
   readonly isTrusted?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_gateway_certificate_authority#timeouts ApiManagementGatewayCertificateAuthority#timeouts}
   */
   readonly timeouts?: ApiManagementGatewayCertificateAuthorityTimeouts;

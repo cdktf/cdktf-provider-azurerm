@@ -37,7 +37,7 @@ export interface SynapseFirewallRuleConfig extends cdktf.TerraformMetaArguments 
   readonly synapseWorkspaceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_firewall_rule#timeouts SynapseFirewallRule#timeouts}
   */
   readonly timeouts?: SynapseFirewallRuleTimeouts;

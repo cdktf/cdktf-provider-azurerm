@@ -49,7 +49,7 @@ export interface BotChannelDirectLineSpeechConfig extends cdktf.TerraformMetaArg
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_direct_line_speech#timeouts BotChannelDirectLineSpeech#timeouts}
   */
   readonly timeouts?: BotChannelDirectLineSpeechTimeouts;

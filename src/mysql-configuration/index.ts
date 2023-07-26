@@ -37,7 +37,7 @@ export interface MysqlConfigurationConfig extends cdktf.TerraformMetaArguments {
   readonly value: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mysql_configuration#timeouts MysqlConfiguration#timeouts}
   */
   readonly timeouts?: MysqlConfigurationTimeouts;

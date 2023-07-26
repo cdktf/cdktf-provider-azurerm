@@ -45,7 +45,7 @@ export interface AutomationConnectionConfig extends cdktf.TerraformMetaArguments
   readonly values: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_connection#timeouts AutomationConnection#timeouts}
   */
   readonly timeouts?: AutomationConnectionTimeouts;

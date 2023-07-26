@@ -33,13 +33,13 @@ export interface DataFactoryIntegrationRuntimeSelfHostedConfig extends cdktf.Ter
   readonly name: string;
   /**
   * rbac_authorization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_self_hosted#rbac_authorization DataFactoryIntegrationRuntimeSelfHosted#rbac_authorization}
   */
   readonly rbacAuthorization?: DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_self_hosted#timeouts DataFactoryIntegrationRuntimeSelfHosted#timeouts}
   */
   readonly timeouts?: DataFactoryIntegrationRuntimeSelfHostedTimeouts;

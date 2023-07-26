@@ -61,13 +61,13 @@ export interface StreamAnalyticsStreamInputEventhubConfig extends cdktf.Terrafor
   readonly streamAnalyticsJobName: string;
   /**
   * serialization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_stream_input_eventhub#serialization StreamAnalyticsStreamInputEventhub#serialization}
   */
   readonly serialization: StreamAnalyticsStreamInputEventhubSerialization;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_stream_input_eventhub#timeouts StreamAnalyticsStreamInputEventhub#timeouts}
   */
   readonly timeouts?: StreamAnalyticsStreamInputEventhubTimeouts;

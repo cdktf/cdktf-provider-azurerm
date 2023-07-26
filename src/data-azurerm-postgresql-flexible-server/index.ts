@@ -29,7 +29,7 @@ export interface DataAzurermPostgresqlFlexibleServerConfig extends cdktf.Terrafo
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/postgresql_flexible_server#timeouts DataAzurermPostgresqlFlexibleServer#timeouts}
   */
   readonly timeouts?: DataAzurermPostgresqlFlexibleServerTimeouts;

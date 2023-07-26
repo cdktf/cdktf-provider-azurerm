@@ -33,7 +33,7 @@ export interface DataAzurermKustoDatabaseConfig extends cdktf.TerraformMetaArgum
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/kusto_database#timeouts DataAzurermKustoDatabase#timeouts}
   */
   readonly timeouts?: DataAzurermKustoDatabaseTimeouts;

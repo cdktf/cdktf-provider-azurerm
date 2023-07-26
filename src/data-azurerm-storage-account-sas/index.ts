@@ -45,25 +45,25 @@ export interface DataAzurermStorageAccountSasConfig extends cdktf.TerraformMetaA
   readonly start: string;
   /**
   * permissions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/storage_account_sas#permissions DataAzurermStorageAccountSas#permissions}
   */
   readonly permissions: DataAzurermStorageAccountSasPermissions;
   /**
   * resource_types block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/storage_account_sas#resource_types DataAzurermStorageAccountSas#resource_types}
   */
   readonly resourceTypes: DataAzurermStorageAccountSasResourceTypes;
   /**
   * services block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/storage_account_sas#services DataAzurermStorageAccountSas#services}
   */
   readonly services: DataAzurermStorageAccountSasServices;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/storage_account_sas#timeouts DataAzurermStorageAccountSas#timeouts}
   */
   readonly timeouts?: DataAzurermStorageAccountSasTimeouts;

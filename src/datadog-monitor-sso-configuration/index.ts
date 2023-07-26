@@ -37,7 +37,7 @@ export interface DatadogMonitorSsoConfigurationConfig extends cdktf.TerraformMet
   readonly singleSignOnEnabled: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/datadog_monitor_sso_configuration#timeouts DatadogMonitorSsoConfiguration#timeouts}
   */
   readonly timeouts?: DatadogMonitorSsoConfigurationTimeouts;

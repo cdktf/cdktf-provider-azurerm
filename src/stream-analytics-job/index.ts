@@ -81,19 +81,19 @@ export interface StreamAnalyticsJobConfig extends cdktf.TerraformMetaArguments {
   readonly type?: string;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_job#identity StreamAnalyticsJob#identity}
   */
   readonly identity?: StreamAnalyticsJobIdentity;
   /**
   * job_storage_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_job#job_storage_account StreamAnalyticsJob#job_storage_account}
   */
   readonly jobStorageAccount?: StreamAnalyticsJobJobStorageAccount[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_job#timeouts StreamAnalyticsJob#timeouts}
   */
   readonly timeouts?: StreamAnalyticsJobTimeouts;

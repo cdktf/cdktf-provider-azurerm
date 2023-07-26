@@ -57,13 +57,13 @@ export interface DataFactoryLinkedServiceAzureFunctionConfig extends cdktf.Terra
   readonly url: string;
   /**
   * key_vault_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_function#key_vault_key DataFactoryLinkedServiceAzureFunction#key_vault_key}
   */
   readonly keyVaultKey?: DataFactoryLinkedServiceAzureFunctionKeyVaultKey;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_function#timeouts DataFactoryLinkedServiceAzureFunction#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceAzureFunctionTimeouts;

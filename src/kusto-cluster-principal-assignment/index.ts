@@ -49,7 +49,7 @@ export interface KustoClusterPrincipalAssignmentConfig extends cdktf.TerraformMe
   readonly tenantId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kusto_cluster_principal_assignment#timeouts KustoClusterPrincipalAssignment#timeouts}
   */
   readonly timeouts?: KustoClusterPrincipalAssignmentTimeouts;

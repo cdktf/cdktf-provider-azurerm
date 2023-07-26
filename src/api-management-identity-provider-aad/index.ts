@@ -45,7 +45,7 @@ export interface ApiManagementIdentityProviderAadConfig extends cdktf.TerraformM
   readonly signinTenant?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_identity_provider_aad#timeouts ApiManagementIdentityProviderAad#timeouts}
   */
   readonly timeouts?: ApiManagementIdentityProviderAadTimeouts;

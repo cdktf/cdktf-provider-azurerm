@@ -33,7 +33,7 @@ export interface DataAzurermIothubConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/iothub#timeouts DataAzurermIothub#timeouts}
   */
   readonly timeouts?: DataAzurermIothubTimeouts;

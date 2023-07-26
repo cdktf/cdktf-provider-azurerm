@@ -33,7 +33,7 @@ export interface LogicAppActionCustomConfig extends cdktf.TerraformMetaArguments
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_action_custom#timeouts LogicAppActionCustom#timeouts}
   */
   readonly timeouts?: LogicAppActionCustomTimeouts;

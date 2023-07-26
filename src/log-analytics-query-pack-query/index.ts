@@ -61,7 +61,7 @@ export interface LogAnalyticsQueryPackQueryConfig extends cdktf.TerraformMetaArg
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/log_analytics_query_pack_query#timeouts LogAnalyticsQueryPackQuery#timeouts}
   */
   readonly timeouts?: LogAnalyticsQueryPackQueryTimeouts;

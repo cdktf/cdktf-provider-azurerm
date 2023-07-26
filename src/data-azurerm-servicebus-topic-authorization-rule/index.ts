@@ -45,7 +45,7 @@ export interface DataAzurermServicebusTopicAuthorizationRuleConfig extends cdktf
   readonly topicName?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/servicebus_topic_authorization_rule#timeouts DataAzurermServicebusTopicAuthorizationRule#timeouts}
   */
   readonly timeouts?: DataAzurermServicebusTopicAuthorizationRuleTimeouts;

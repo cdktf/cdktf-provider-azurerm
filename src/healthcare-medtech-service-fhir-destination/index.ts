@@ -45,7 +45,7 @@ export interface HealthcareMedtechServiceFhirDestinationConfig extends cdktf.Ter
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_medtech_service_fhir_destination#timeouts HealthcareMedtechServiceFhirDestination#timeouts}
   */
   readonly timeouts?: HealthcareMedtechServiceFhirDestinationTimeouts;

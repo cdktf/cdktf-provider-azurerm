@@ -33,7 +33,7 @@ export interface DataAzurermWebApplicationFirewallPolicyConfig extends cdktf.Ter
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/web_application_firewall_policy#timeouts DataAzurermWebApplicationFirewallPolicy#timeouts}
   */
   readonly timeouts?: DataAzurermWebApplicationFirewallPolicyTimeouts;

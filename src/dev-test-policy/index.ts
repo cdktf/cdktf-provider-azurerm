@@ -57,7 +57,7 @@ export interface DevTestPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly threshold: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dev_test_policy#timeouts DevTestPolicy#timeouts}
   */
   readonly timeouts?: DevTestPolicyTimeouts;

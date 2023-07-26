@@ -45,25 +45,25 @@ export interface DatadogMonitorConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * datadog_organization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/datadog_monitor#datadog_organization DatadogMonitor#datadog_organization}
   */
   readonly datadogOrganization: DatadogMonitorDatadogOrganization;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/datadog_monitor#identity DatadogMonitor#identity}
   */
   readonly identity?: DatadogMonitorIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/datadog_monitor#timeouts DatadogMonitor#timeouts}
   */
   readonly timeouts?: DatadogMonitorTimeouts;
   /**
   * user block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/datadog_monitor#user DatadogMonitor#user}
   */
   readonly user: DatadogMonitorUser;

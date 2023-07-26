@@ -41,7 +41,7 @@ export interface KustoClusterCustomerManagedKeyConfig extends cdktf.TerraformMet
   readonly userIdentity?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kusto_cluster_customer_managed_key#timeouts KustoClusterCustomerManagedKey#timeouts}
   */
   readonly timeouts?: KustoClusterCustomerManagedKeyTimeouts;

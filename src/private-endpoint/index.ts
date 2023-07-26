@@ -45,25 +45,25 @@ export interface PrivateEndpointConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * ip_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_endpoint#ip_configuration PrivateEndpoint#ip_configuration}
   */
   readonly ipConfiguration?: PrivateEndpointIpConfiguration[] | cdktf.IResolvable;
   /**
   * private_dns_zone_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_endpoint#private_dns_zone_group PrivateEndpoint#private_dns_zone_group}
   */
   readonly privateDnsZoneGroup?: PrivateEndpointPrivateDnsZoneGroup;
   /**
   * private_service_connection block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_endpoint#private_service_connection PrivateEndpoint#private_service_connection}
   */
   readonly privateServiceConnection: PrivateEndpointPrivateServiceConnection;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_endpoint#timeouts PrivateEndpoint#timeouts}
   */
   readonly timeouts?: PrivateEndpointTimeouts;

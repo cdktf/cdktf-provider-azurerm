@@ -45,7 +45,7 @@ export interface BatchJobConfig extends cdktf.TerraformMetaArguments {
   readonly taskRetryMaximum?: number;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_job#timeouts BatchJob#timeouts}
   */
   readonly timeouts?: BatchJobTimeouts;

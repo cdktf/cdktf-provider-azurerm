@@ -41,7 +41,7 @@ export interface MysqlFlexibleServerActiveDirectoryAdministratorConfig extends c
   readonly tenantId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mysql_flexible_server_active_directory_administrator#timeouts MysqlFlexibleServerActiveDirectoryAdministrator#timeouts}
   */
   readonly timeouts?: MysqlFlexibleServerActiveDirectoryAdministratorTimeouts;

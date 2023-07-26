@@ -41,7 +41,7 @@ export interface ServicebusQueueAuthorizationRuleConfig extends cdktf.TerraformM
   readonly send?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/servicebus_queue_authorization_rule#timeouts ServicebusQueueAuthorizationRule#timeouts}
   */
   readonly timeouts?: ServicebusQueueAuthorizationRuleTimeouts;

@@ -57,13 +57,13 @@ export interface MonitorMetricAlertConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * The location of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_metric_alert#target_resource_location MonitorMetricAlert#target_resource_location}
   */
   readonly targetResourceLocation?: string;
   /**
   * The resource type (e.g. Microsoft.Compute/virtualMachines) of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_metric_alert#target_resource_type MonitorMetricAlert#target_resource_type}
   */
   readonly targetResourceType?: string;
@@ -73,31 +73,31 @@ export interface MonitorMetricAlertConfig extends cdktf.TerraformMetaArguments {
   readonly windowSize?: string;
   /**
   * action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_metric_alert#action MonitorMetricAlert#action}
   */
   readonly action?: MonitorMetricAlertAction[] | cdktf.IResolvable;
   /**
   * application_insights_web_test_location_availability_criteria block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_metric_alert#application_insights_web_test_location_availability_criteria MonitorMetricAlert#application_insights_web_test_location_availability_criteria}
   */
   readonly applicationInsightsWebTestLocationAvailabilityCriteria?: MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria;
   /**
   * criteria block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_metric_alert#criteria MonitorMetricAlert#criteria}
   */
   readonly criteria?: MonitorMetricAlertCriteria[] | cdktf.IResolvable;
   /**
   * dynamic_criteria block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_metric_alert#dynamic_criteria MonitorMetricAlert#dynamic_criteria}
   */
   readonly dynamicCriteria?: MonitorMetricAlertDynamicCriteria;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_metric_alert#timeouts MonitorMetricAlert#timeouts}
   */
   readonly timeouts?: MonitorMetricAlertTimeouts;
@@ -502,7 +502,7 @@ export interface MonitorMetricAlertCriteria {
   readonly threshold: number;
   /**
   * dimension block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_metric_alert#dimension MonitorMetricAlert#dimension}
   */
   readonly dimension?: MonitorMetricAlertCriteriaDimension[] | cdktf.IResolvable;
@@ -902,7 +902,7 @@ export interface MonitorMetricAlertDynamicCriteria {
   readonly skipMetricValidation?: boolean | cdktf.IResolvable;
   /**
   * dimension block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_metric_alert#dimension MonitorMetricAlert#dimension}
   */
   readonly dimension?: MonitorMetricAlertDynamicCriteriaDimension[] | cdktf.IResolvable;

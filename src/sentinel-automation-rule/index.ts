@@ -57,25 +57,25 @@ export interface SentinelAutomationRuleConfig extends cdktf.TerraformMetaArgumen
   readonly triggersWhen?: string;
   /**
   * action_incident block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_automation_rule#action_incident SentinelAutomationRule#action_incident}
   */
   readonly actionIncident?: SentinelAutomationRuleActionIncident[] | cdktf.IResolvable;
   /**
   * action_playbook block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_automation_rule#action_playbook SentinelAutomationRule#action_playbook}
   */
   readonly actionPlaybook?: SentinelAutomationRuleActionPlaybook[] | cdktf.IResolvable;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_automation_rule#condition SentinelAutomationRule#condition}
   */
   readonly condition?: SentinelAutomationRuleCondition[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_automation_rule#timeouts SentinelAutomationRule#timeouts}
   */
   readonly timeouts?: SentinelAutomationRuleTimeouts;

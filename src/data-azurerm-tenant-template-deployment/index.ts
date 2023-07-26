@@ -25,7 +25,7 @@ export interface DataAzurermTenantTemplateDeploymentConfig extends cdktf.Terrafo
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/tenant_template_deployment#timeouts DataAzurermTenantTemplateDeployment#timeouts}
   */
   readonly timeouts?: DataAzurermTenantTemplateDeploymentTimeouts;

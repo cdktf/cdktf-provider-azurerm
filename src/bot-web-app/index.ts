@@ -73,7 +73,7 @@ export interface BotWebAppConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_web_app#timeouts BotWebApp#timeouts}
   */
   readonly timeouts?: BotWebAppTimeouts;

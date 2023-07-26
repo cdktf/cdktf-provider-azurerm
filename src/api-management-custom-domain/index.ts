@@ -25,37 +25,37 @@ export interface ApiManagementCustomDomainConfig extends cdktf.TerraformMetaArgu
   readonly id?: string;
   /**
   * developer_portal block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_custom_domain#developer_portal ApiManagementCustomDomain#developer_portal}
   */
   readonly developerPortal?: ApiManagementCustomDomainDeveloperPortal[] | cdktf.IResolvable;
   /**
   * gateway block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_custom_domain#gateway ApiManagementCustomDomain#gateway}
   */
   readonly gateway?: ApiManagementCustomDomainGateway[] | cdktf.IResolvable;
   /**
   * management block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_custom_domain#management ApiManagementCustomDomain#management}
   */
   readonly management?: ApiManagementCustomDomainManagement[] | cdktf.IResolvable;
   /**
   * portal block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_custom_domain#portal ApiManagementCustomDomain#portal}
   */
   readonly portal?: ApiManagementCustomDomainPortal[] | cdktf.IResolvable;
   /**
   * scm block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_custom_domain#scm ApiManagementCustomDomain#scm}
   */
   readonly scm?: ApiManagementCustomDomainScm[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_custom_domain#timeouts ApiManagementCustomDomain#timeouts}
   */
   readonly timeouts?: ApiManagementCustomDomainTimeouts;

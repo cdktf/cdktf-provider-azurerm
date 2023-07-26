@@ -33,7 +33,7 @@ export interface SynapseIntegrationRuntimeSelfHostedConfig extends cdktf.Terrafo
   readonly synapseWorkspaceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_integration_runtime_self_hosted#timeouts SynapseIntegrationRuntimeSelfHosted#timeouts}
   */
   readonly timeouts?: SynapseIntegrationRuntimeSelfHostedTimeouts;

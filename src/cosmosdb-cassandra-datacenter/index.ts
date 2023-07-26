@@ -69,7 +69,7 @@ export interface CosmosdbCassandraDatacenterConfig extends cdktf.TerraformMetaAr
   readonly skuName?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_cassandra_datacenter#timeouts CosmosdbCassandraDatacenter#timeouts}
   */
   readonly timeouts?: CosmosdbCassandraDatacenterTimeouts;

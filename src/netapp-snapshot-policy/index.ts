@@ -45,31 +45,31 @@ export interface NetappSnapshotPolicyConfig extends cdktf.TerraformMetaArguments
   readonly tags?: { [key: string]: string };
   /**
   * daily_schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_snapshot_policy#daily_schedule NetappSnapshotPolicy#daily_schedule}
   */
   readonly dailySchedule?: NetappSnapshotPolicyDailySchedule;
   /**
   * hourly_schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_snapshot_policy#hourly_schedule NetappSnapshotPolicy#hourly_schedule}
   */
   readonly hourlySchedule?: NetappSnapshotPolicyHourlySchedule;
   /**
   * monthly_schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_snapshot_policy#monthly_schedule NetappSnapshotPolicy#monthly_schedule}
   */
   readonly monthlySchedule?: NetappSnapshotPolicyMonthlySchedule;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_snapshot_policy#timeouts NetappSnapshotPolicy#timeouts}
   */
   readonly timeouts?: NetappSnapshotPolicyTimeouts;
   /**
   * weekly_schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_snapshot_policy#weekly_schedule NetappSnapshotPolicy#weekly_schedule}
   */
   readonly weeklySchedule?: NetappSnapshotPolicyWeeklySchedule;

@@ -53,19 +53,19 @@ export interface MaintenanceConfigurationConfig extends cdktf.TerraformMetaArgum
   readonly visibility?: string;
   /**
   * install_patches block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/maintenance_configuration#install_patches MaintenanceConfiguration#install_patches}
   */
   readonly installPatches?: MaintenanceConfigurationInstallPatches;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/maintenance_configuration#timeouts MaintenanceConfiguration#timeouts}
   */
   readonly timeouts?: MaintenanceConfigurationTimeouts;
   /**
   * window block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/maintenance_configuration#window MaintenanceConfiguration#window}
   */
   readonly window?: MaintenanceConfigurationWindow;
@@ -379,13 +379,13 @@ export interface MaintenanceConfigurationInstallPatches {
   readonly reboot?: string;
   /**
   * linux block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/maintenance_configuration#linux MaintenanceConfiguration#linux}
   */
   readonly linux?: MaintenanceConfigurationInstallPatchesLinux[] | cdktf.IResolvable;
   /**
   * windows block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/maintenance_configuration#windows MaintenanceConfiguration#windows}
   */
   readonly windows?: MaintenanceConfigurationInstallPatchesWindows[] | cdktf.IResolvable;

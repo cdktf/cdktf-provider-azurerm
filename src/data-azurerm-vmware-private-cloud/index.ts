@@ -29,7 +29,7 @@ export interface DataAzurermVmwarePrivateCloudConfig extends cdktf.TerraformMeta
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/vmware_private_cloud#timeouts DataAzurermVmwarePrivateCloud#timeouts}
   */
   readonly timeouts?: DataAzurermVmwarePrivateCloudTimeouts;

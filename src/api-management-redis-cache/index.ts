@@ -45,7 +45,7 @@ export interface ApiManagementRedisCacheConfig extends cdktf.TerraformMetaArgume
   readonly redisCacheId?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_redis_cache#timeouts ApiManagementRedisCache#timeouts}
   */
   readonly timeouts?: ApiManagementRedisCacheTimeouts;

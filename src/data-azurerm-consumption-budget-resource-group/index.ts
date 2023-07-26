@@ -29,7 +29,7 @@ export interface DataAzurermConsumptionBudgetResourceGroupConfig extends cdktf.T
   readonly resourceGroupId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/consumption_budget_resource_group#timeouts DataAzurermConsumptionBudgetResourceGroup#timeouts}
   */
   readonly timeouts?: DataAzurermConsumptionBudgetResourceGroupTimeouts;

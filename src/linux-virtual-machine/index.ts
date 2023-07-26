@@ -157,67 +157,67 @@ export interface LinuxVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   readonly zone?: string;
   /**
   * additional_capabilities block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine#additional_capabilities LinuxVirtualMachine#additional_capabilities}
   */
   readonly additionalCapabilities?: LinuxVirtualMachineAdditionalCapabilities;
   /**
   * admin_ssh_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine#admin_ssh_key LinuxVirtualMachine#admin_ssh_key}
   */
   readonly adminSshKey?: LinuxVirtualMachineAdminSshKey[] | cdktf.IResolvable;
   /**
   * boot_diagnostics block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine#boot_diagnostics LinuxVirtualMachine#boot_diagnostics}
   */
   readonly bootDiagnostics?: LinuxVirtualMachineBootDiagnostics;
   /**
   * gallery_application block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine#gallery_application LinuxVirtualMachine#gallery_application}
   */
   readonly galleryApplication?: LinuxVirtualMachineGalleryApplication[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine#identity LinuxVirtualMachine#identity}
   */
   readonly identity?: LinuxVirtualMachineIdentity;
   /**
   * os_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine#os_disk LinuxVirtualMachine#os_disk}
   */
   readonly osDisk: LinuxVirtualMachineOsDisk;
   /**
   * plan block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine#plan LinuxVirtualMachine#plan}
   */
   readonly plan?: LinuxVirtualMachinePlan;
   /**
   * secret block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine#secret LinuxVirtualMachine#secret}
   */
   readonly secret?: LinuxVirtualMachineSecret[] | cdktf.IResolvable;
   /**
   * source_image_reference block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine#source_image_reference LinuxVirtualMachine#source_image_reference}
   */
   readonly sourceImageReference?: LinuxVirtualMachineSourceImageReference;
   /**
   * termination_notification block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine#termination_notification LinuxVirtualMachine#termination_notification}
   */
   readonly terminationNotification?: LinuxVirtualMachineTerminationNotification;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine#timeouts LinuxVirtualMachine#timeouts}
   */
   readonly timeouts?: LinuxVirtualMachineTimeouts;
@@ -868,7 +868,7 @@ export interface LinuxVirtualMachineOsDisk {
   readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
   /**
   * diff_disk_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine#diff_disk_settings LinuxVirtualMachine#diff_disk_settings}
   */
   readonly diffDiskSettings?: LinuxVirtualMachineOsDiskDiffDiskSettings;
@@ -1321,7 +1321,7 @@ export interface LinuxVirtualMachineSecret {
   readonly keyVaultId: string;
   /**
   * certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine#certificate LinuxVirtualMachine#certificate}
   */
   readonly certificate: LinuxVirtualMachineSecretCertificate[] | cdktf.IResolvable;

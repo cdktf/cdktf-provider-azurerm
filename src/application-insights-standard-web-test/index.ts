@@ -65,19 +65,19 @@ export interface ApplicationInsightsStandardWebTestConfig extends cdktf.Terrafor
   readonly timeout?: number;
   /**
   * request block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_standard_web_test#request ApplicationInsightsStandardWebTest#request}
   */
   readonly request: ApplicationInsightsStandardWebTestRequest;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_standard_web_test#timeouts ApplicationInsightsStandardWebTest#timeouts}
   */
   readonly timeouts?: ApplicationInsightsStandardWebTestTimeouts;
   /**
   * validation_rules block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_standard_web_test#validation_rules ApplicationInsightsStandardWebTest#validation_rules}
   */
   readonly validationRules?: ApplicationInsightsStandardWebTestValidationRules;
@@ -223,7 +223,7 @@ export interface ApplicationInsightsStandardWebTestRequest {
   readonly url: string;
   /**
   * header block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_standard_web_test#header ApplicationInsightsStandardWebTest#header}
   */
   readonly header?: ApplicationInsightsStandardWebTestRequestHeader[] | cdktf.IResolvable;
@@ -686,7 +686,7 @@ export interface ApplicationInsightsStandardWebTestValidationRules {
   readonly sslCheckEnabled?: boolean | cdktf.IResolvable;
   /**
   * content block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_standard_web_test#content ApplicationInsightsStandardWebTest#content}
   */
   readonly content?: ApplicationInsightsStandardWebTestValidationRulesContent;

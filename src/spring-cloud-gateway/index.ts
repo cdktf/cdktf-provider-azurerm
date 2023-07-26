@@ -53,37 +53,37 @@ export interface SpringCloudGatewayConfig extends cdktf.TerraformMetaArguments {
   readonly springCloudServiceId: string;
   /**
   * api_metadata block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_gateway#api_metadata SpringCloudGateway#api_metadata}
   */
   readonly apiMetadata?: SpringCloudGatewayApiMetadata;
   /**
   * client_authorization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_gateway#client_authorization SpringCloudGateway#client_authorization}
   */
   readonly clientAuthorization?: SpringCloudGatewayClientAuthorization;
   /**
   * cors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_gateway#cors SpringCloudGateway#cors}
   */
   readonly cors?: SpringCloudGatewayCors;
   /**
   * quota block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_gateway#quota SpringCloudGateway#quota}
   */
   readonly quota?: SpringCloudGatewayQuota;
   /**
   * sso block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_gateway#sso SpringCloudGateway#sso}
   */
   readonly sso?: SpringCloudGatewaySso;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_gateway#timeouts SpringCloudGateway#timeouts}
   */
   readonly timeouts?: SpringCloudGatewayTimeouts;

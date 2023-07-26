@@ -53,7 +53,7 @@ export interface SynapseSqlPoolSecurityAlertPolicyConfig extends cdktf.Terraform
   readonly storageEndpoint?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_sql_pool_security_alert_policy#timeouts SynapseSqlPoolSecurityAlertPolicy#timeouts}
   */
   readonly timeouts?: SynapseSqlPoolSecurityAlertPolicyTimeouts;

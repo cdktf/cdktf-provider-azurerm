@@ -37,7 +37,7 @@ export interface HealthcareWorkspaceConfig extends cdktf.TerraformMetaArguments 
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_workspace#timeouts HealthcareWorkspace#timeouts}
   */
   readonly timeouts?: HealthcareWorkspaceTimeouts;

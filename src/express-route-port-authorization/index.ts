@@ -33,7 +33,7 @@ export interface ExpressRoutePortAuthorizationConfig extends cdktf.TerraformMeta
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_port_authorization#timeouts ExpressRoutePortAuthorization#timeouts}
   */
   readonly timeouts?: ExpressRoutePortAuthorizationTimeouts;

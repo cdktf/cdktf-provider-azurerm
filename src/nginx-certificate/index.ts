@@ -41,7 +41,7 @@ export interface NginxCertificateConfig extends cdktf.TerraformMetaArguments {
   readonly nginxDeploymentId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/nginx_certificate#timeouts NginxCertificate#timeouts}
   */
   readonly timeouts?: NginxCertificateTimeouts;

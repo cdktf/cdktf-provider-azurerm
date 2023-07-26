@@ -33,13 +33,13 @@ export interface BotChannelDirectlineConfig extends cdktf.TerraformMetaArguments
   readonly resourceGroupName: string;
   /**
   * site block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_directline#site BotChannelDirectline#site}
   */
   readonly site: BotChannelDirectlineSite[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_directline#timeouts BotChannelDirectline#timeouts}
   */
   readonly timeouts?: BotChannelDirectlineTimeouts;

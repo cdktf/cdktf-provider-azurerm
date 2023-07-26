@@ -33,13 +33,13 @@ export interface DataAzurermStorageShareConfig extends cdktf.TerraformMetaArgume
   readonly storageAccountName: string;
   /**
   * acl block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/storage_share#acl DataAzurermStorageShare#acl}
   */
   readonly acl?: DataAzurermStorageShareAcl[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/storage_share#timeouts DataAzurermStorageShare#timeouts}
   */
   readonly timeouts?: DataAzurermStorageShareTimeouts;

@@ -29,7 +29,7 @@ export interface DataAzurermLbOutboundRuleConfig extends cdktf.TerraformMetaArgu
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/lb_outbound_rule#timeouts DataAzurermLbOutboundRule#timeouts}
   */
   readonly timeouts?: DataAzurermLbOutboundRuleTimeouts;

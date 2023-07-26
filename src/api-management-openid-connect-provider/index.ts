@@ -53,7 +53,7 @@ export interface ApiManagementOpenidConnectProviderConfig extends cdktf.Terrafor
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_openid_connect_provider#timeouts ApiManagementOpenidConnectProvider#timeouts}
   */
   readonly timeouts?: ApiManagementOpenidConnectProviderTimeouts;

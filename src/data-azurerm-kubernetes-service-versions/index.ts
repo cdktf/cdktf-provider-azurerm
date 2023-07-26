@@ -33,7 +33,7 @@ export interface DataAzurermKubernetesServiceVersionsConfig extends cdktf.Terraf
   readonly versionPrefix?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/kubernetes_service_versions#timeouts DataAzurermKubernetesServiceVersions#timeouts}
   */
   readonly timeouts?: DataAzurermKubernetesServiceVersionsTimeouts;

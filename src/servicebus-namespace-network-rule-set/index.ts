@@ -41,13 +41,13 @@ export interface ServicebusNamespaceNetworkRuleSetConfig extends cdktf.Terraform
   readonly trustedServicesAllowed?: boolean | cdktf.IResolvable;
   /**
   * network_rules block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/servicebus_namespace_network_rule_set#network_rules ServicebusNamespaceNetworkRuleSet#network_rules}
   */
   readonly networkRules?: ServicebusNamespaceNetworkRuleSetNetworkRules[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/servicebus_namespace_network_rule_set#timeouts ServicebusNamespaceNetworkRuleSet#timeouts}
   */
   readonly timeouts?: ServicebusNamespaceNetworkRuleSetTimeouts;

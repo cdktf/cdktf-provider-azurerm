@@ -37,7 +37,7 @@ export interface WebPubsubCustomDomainConfig extends cdktf.TerraformMetaArgument
   readonly webPubsubId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_pubsub_custom_domain#timeouts WebPubsubCustomDomain#timeouts}
   */
   readonly timeouts?: WebPubsubCustomDomainTimeouts;

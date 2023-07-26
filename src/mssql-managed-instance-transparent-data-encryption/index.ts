@@ -33,7 +33,7 @@ export interface MssqlManagedInstanceTransparentDataEncryptionConfig extends cdk
   readonly managedInstanceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_managed_instance_transparent_data_encryption#timeouts MssqlManagedInstanceTransparentDataEncryption#timeouts}
   */
   readonly timeouts?: MssqlManagedInstanceTransparentDataEncryptionTimeouts;

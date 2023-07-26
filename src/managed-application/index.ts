@@ -57,13 +57,13 @@ export interface ManagedApplicationConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * plan block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/managed_application#plan ManagedApplication#plan}
   */
   readonly plan?: ManagedApplicationPlan;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/managed_application#timeouts ManagedApplication#timeouts}
   */
   readonly timeouts?: ManagedApplicationTimeouts;

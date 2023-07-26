@@ -89,25 +89,25 @@ export interface SentinelThreatIntelligenceIndicatorConfig extends cdktf.Terrafo
   readonly workspaceId: string;
   /**
   * external_reference block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_threat_intelligence_indicator#external_reference SentinelThreatIntelligenceIndicator#external_reference}
   */
   readonly externalReference?: SentinelThreatIntelligenceIndicatorExternalReference[] | cdktf.IResolvable;
   /**
   * granular_marking block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_threat_intelligence_indicator#granular_marking SentinelThreatIntelligenceIndicator#granular_marking}
   */
   readonly granularMarking?: SentinelThreatIntelligenceIndicatorGranularMarking[] | cdktf.IResolvable;
   /**
   * kill_chain_phase block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_threat_intelligence_indicator#kill_chain_phase SentinelThreatIntelligenceIndicator#kill_chain_phase}
   */
   readonly killChainPhase?: SentinelThreatIntelligenceIndicatorKillChainPhase[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_threat_intelligence_indicator#timeouts SentinelThreatIntelligenceIndicator#timeouts}
   */
   readonly timeouts?: SentinelThreatIntelligenceIndicatorTimeouts;

@@ -77,37 +77,37 @@ export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
   readonly tlsClientCertEnabled?: boolean | cdktf.IResolvable;
   /**
   * cors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/signalr_service#cors SignalrService#cors}
   */
   readonly cors?: SignalrServiceCors[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/signalr_service#identity SignalrService#identity}
   */
   readonly identity?: SignalrServiceIdentity;
   /**
   * live_trace block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/signalr_service#live_trace SignalrService#live_trace}
   */
   readonly liveTrace?: SignalrServiceLiveTrace;
   /**
   * sku block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/signalr_service#sku SignalrService#sku}
   */
   readonly sku: SignalrServiceSku;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/signalr_service#timeouts SignalrService#timeouts}
   */
   readonly timeouts?: SignalrServiceTimeouts;
   /**
   * upstream_endpoint block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/signalr_service#upstream_endpoint SignalrService#upstream_endpoint}
   */
   readonly upstreamEndpoint?: SignalrServiceUpstreamEndpoint[] | cdktf.IResolvable;

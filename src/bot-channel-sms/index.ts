@@ -45,7 +45,7 @@ export interface BotChannelSmsConfig extends cdktf.TerraformMetaArguments {
   readonly smsChannelAuthToken: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_sms#timeouts BotChannelSms#timeouts}
   */
   readonly timeouts?: BotChannelSmsTimeouts;

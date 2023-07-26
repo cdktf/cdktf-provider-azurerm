@@ -41,7 +41,7 @@ export interface SentinelAlertRuleAnomalyBuiltInConfig extends cdktf.TerraformMe
   readonly name?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_anomaly_built_in#timeouts SentinelAlertRuleAnomalyBuiltIn#timeouts}
   */
   readonly timeouts?: SentinelAlertRuleAnomalyBuiltInTimeouts;

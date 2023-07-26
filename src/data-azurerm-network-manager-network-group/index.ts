@@ -29,7 +29,7 @@ export interface DataAzurermNetworkManagerNetworkGroupConfig extends cdktf.Terra
   readonly networkManagerId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/network_manager_network_group#timeouts DataAzurermNetworkManagerNetworkGroup#timeouts}
   */
   readonly timeouts?: DataAzurermNetworkManagerNetworkGroupTimeouts;

@@ -33,7 +33,7 @@ export interface DataAzurermAutomationVariableIntConfig extends cdktf.TerraformM
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/automation_variable_int#timeouts DataAzurermAutomationVariableInt#timeouts}
   */
   readonly timeouts?: DataAzurermAutomationVariableIntTimeouts;

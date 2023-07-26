@@ -73,7 +73,7 @@ export interface DataFactoryLinkedServiceDataLakeStorageGen2Config extends cdktf
   readonly useManagedIdentity?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_data_lake_storage_gen2#timeouts DataFactoryLinkedServiceDataLakeStorageGen2#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceDataLakeStorageGen2Timeouts;

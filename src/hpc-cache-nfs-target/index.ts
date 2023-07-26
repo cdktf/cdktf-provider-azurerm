@@ -41,13 +41,13 @@ export interface HpcCacheNfsTargetConfig extends cdktf.TerraformMetaArguments {
   readonly usageModel: string;
   /**
   * namespace_junction block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache_nfs_target#namespace_junction HpcCacheNfsTarget#namespace_junction}
   */
   readonly namespaceJunction: HpcCacheNfsTargetNamespaceJunction[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache_nfs_target#timeouts HpcCacheNfsTarget#timeouts}
   */
   readonly timeouts?: HpcCacheNfsTargetTimeouts;

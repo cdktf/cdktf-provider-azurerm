@@ -33,7 +33,7 @@ export interface DataAzurermFunctionAppConfig extends cdktf.TerraformMetaArgumen
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/function_app#timeouts DataAzurermFunctionApp#timeouts}
   */
   readonly timeouts?: DataAzurermFunctionAppTimeouts;

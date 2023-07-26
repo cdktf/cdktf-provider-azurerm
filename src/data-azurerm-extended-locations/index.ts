@@ -25,7 +25,7 @@ export interface DataAzurermExtendedLocationsConfig extends cdktf.TerraformMetaA
   readonly location: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/extended_locations#timeouts DataAzurermExtendedLocations#timeouts}
   */
   readonly timeouts?: DataAzurermExtendedLocationsTimeouts;

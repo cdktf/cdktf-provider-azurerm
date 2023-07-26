@@ -65,13 +65,13 @@ export interface AppServicePlanConfig extends cdktf.TerraformMetaArguments {
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * sku block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_plan#sku AppServicePlan#sku}
   */
   readonly sku: AppServicePlanSku;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_plan#timeouts AppServicePlan#timeouts}
   */
   readonly timeouts?: AppServicePlanTimeouts;

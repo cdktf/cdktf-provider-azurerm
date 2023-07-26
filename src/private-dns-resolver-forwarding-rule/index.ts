@@ -41,13 +41,13 @@ export interface PrivateDnsResolverForwardingRuleConfig extends cdktf.TerraformM
   readonly name: string;
   /**
   * target_dns_servers block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_dns_resolver_forwarding_rule#target_dns_servers PrivateDnsResolverForwardingRule#target_dns_servers}
   */
   readonly targetDnsServers: PrivateDnsResolverForwardingRuleTargetDnsServers[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_dns_resolver_forwarding_rule#timeouts PrivateDnsResolverForwardingRule#timeouts}
   */
   readonly timeouts?: PrivateDnsResolverForwardingRuleTimeouts;

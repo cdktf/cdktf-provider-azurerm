@@ -57,7 +57,7 @@ export interface StorageShareFileConfig extends cdktf.TerraformMetaArguments {
   readonly storageShareId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_share_file#timeouts StorageShareFile#timeouts}
   */
   readonly timeouts?: StorageShareFileTimeouts;

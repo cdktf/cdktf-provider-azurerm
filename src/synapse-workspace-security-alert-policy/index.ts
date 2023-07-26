@@ -53,7 +53,7 @@ export interface SynapseWorkspaceSecurityAlertPolicyConfig extends cdktf.Terrafo
   readonly synapseWorkspaceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_workspace_security_alert_policy#timeouts SynapseWorkspaceSecurityAlertPolicy#timeouts}
   */
   readonly timeouts?: SynapseWorkspaceSecurityAlertPolicyTimeouts;

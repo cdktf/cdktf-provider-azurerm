@@ -37,7 +37,7 @@ export interface PostgresqlFlexibleServerFirewallRuleConfig extends cdktf.Terraf
   readonly startIpAddress: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_flexible_server_firewall_rule#timeouts PostgresqlFlexibleServerFirewallRule#timeouts}
   */
   readonly timeouts?: PostgresqlFlexibleServerFirewallRuleTimeouts;

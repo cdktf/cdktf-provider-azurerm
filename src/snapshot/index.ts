@@ -61,13 +61,13 @@ export interface SnapshotConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * encryption_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/snapshot#encryption_settings Snapshot#encryption_settings}
   */
   readonly encryptionSettings?: SnapshotEncryptionSettings;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/snapshot#timeouts Snapshot#timeouts}
   */
   readonly timeouts?: SnapshotTimeouts;
@@ -251,13 +251,13 @@ export interface SnapshotEncryptionSettings {
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * disk_encryption_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/snapshot#disk_encryption_key Snapshot#disk_encryption_key}
   */
   readonly diskEncryptionKey?: SnapshotEncryptionSettingsDiskEncryptionKey;
   /**
   * key_encryption_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/snapshot#key_encryption_key Snapshot#key_encryption_key}
   */
   readonly keyEncryptionKey?: SnapshotEncryptionSettingsKeyEncryptionKey;

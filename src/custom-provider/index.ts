@@ -37,25 +37,25 @@ export interface CustomProviderConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/custom_provider#action CustomProvider#action}
   */
   readonly action?: CustomProviderAction[] | cdktf.IResolvable;
   /**
   * resource_type block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/custom_provider#resource_type CustomProvider#resource_type}
   */
   readonly resourceType?: CustomProviderResourceType[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/custom_provider#timeouts CustomProvider#timeouts}
   */
   readonly timeouts?: CustomProviderTimeouts;
   /**
   * validation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/custom_provider#validation CustomProvider#validation}
   */
   readonly validation?: CustomProviderValidation[] | cdktf.IResolvable;

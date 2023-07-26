@@ -73,7 +73,7 @@ export interface KustoIothubDataConnectionConfig extends cdktf.TerraformMetaArgu
   readonly tableName?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kusto_iothub_data_connection#timeouts KustoIothubDataConnection#timeouts}
   */
   readonly timeouts?: KustoIothubDataConnectionTimeouts;

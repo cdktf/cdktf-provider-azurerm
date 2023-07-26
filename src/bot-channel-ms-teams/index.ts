@@ -41,7 +41,7 @@ export interface BotChannelMsTeamsConfig extends cdktf.TerraformMetaArguments {
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_ms_teams#timeouts BotChannelMsTeams#timeouts}
   */
   readonly timeouts?: BotChannelMsTeamsTimeouts;

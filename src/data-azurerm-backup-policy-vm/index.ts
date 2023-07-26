@@ -33,7 +33,7 @@ export interface DataAzurermBackupPolicyVmConfig extends cdktf.TerraformMetaArgu
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/backup_policy_vm#timeouts DataAzurermBackupPolicyVm#timeouts}
   */
   readonly timeouts?: DataAzurermBackupPolicyVmTimeouts;

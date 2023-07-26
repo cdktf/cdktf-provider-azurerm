@@ -65,31 +65,31 @@ export interface MediaLiveEventConfig extends cdktf.TerraformMetaArguments {
   readonly useStaticHostname?: boolean | cdktf.IResolvable;
   /**
   * cross_site_access_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_live_event#cross_site_access_policy MediaLiveEvent#cross_site_access_policy}
   */
   readonly crossSiteAccessPolicy?: MediaLiveEventCrossSiteAccessPolicy;
   /**
   * encoding block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_live_event#encoding MediaLiveEvent#encoding}
   */
   readonly encoding?: MediaLiveEventEncoding;
   /**
   * input block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_live_event#input MediaLiveEvent#input}
   */
   readonly input: MediaLiveEventInput;
   /**
   * preview block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_live_event#preview MediaLiveEvent#preview}
   */
   readonly preview?: MediaLiveEventPreview;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_live_event#timeouts MediaLiveEvent#timeouts}
   */
   readonly timeouts?: MediaLiveEventTimeouts;
@@ -567,7 +567,7 @@ export interface MediaLiveEventInput {
   readonly streamingProtocol?: string;
   /**
   * ip_access_control_allow block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_live_event#ip_access_control_allow MediaLiveEvent#ip_access_control_allow}
   */
   readonly ipAccessControlAllow?: MediaLiveEventInputIpAccessControlAllow[] | cdktf.IResolvable;
@@ -941,7 +941,7 @@ export interface MediaLiveEventPreview {
   readonly streamingPolicyName?: string;
   /**
   * ip_access_control_allow block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_live_event#ip_access_control_allow MediaLiveEvent#ip_access_control_allow}
   */
   readonly ipAccessControlAllow?: MediaLiveEventPreviewIpAccessControlAllow[] | cdktf.IResolvable;

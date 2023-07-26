@@ -41,25 +41,25 @@ export interface ConsumptionBudgetResourceGroupConfig extends cdktf.TerraformMet
   readonly timeGrain?: string;
   /**
   * filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_resource_group#filter ConsumptionBudgetResourceGroup#filter}
   */
   readonly filter?: ConsumptionBudgetResourceGroupFilter;
   /**
   * notification block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_resource_group#notification ConsumptionBudgetResourceGroup#notification}
   */
   readonly notification: ConsumptionBudgetResourceGroupNotification[] | cdktf.IResolvable;
   /**
   * time_period block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_resource_group#time_period ConsumptionBudgetResourceGroup#time_period}
   */
   readonly timePeriod: ConsumptionBudgetResourceGroupTimePeriod;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_resource_group#timeouts ConsumptionBudgetResourceGroup#timeouts}
   */
   readonly timeouts?: ConsumptionBudgetResourceGroupTimeouts;
@@ -438,13 +438,13 @@ export class ConsumptionBudgetResourceGroupFilterNotTagOutputReference extends c
 export interface ConsumptionBudgetResourceGroupFilterNot {
   /**
   * dimension block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_resource_group#dimension ConsumptionBudgetResourceGroup#dimension}
   */
   readonly dimension?: ConsumptionBudgetResourceGroupFilterNotDimension;
   /**
   * tag block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_resource_group#tag ConsumptionBudgetResourceGroup#tag}
   */
   readonly tag?: ConsumptionBudgetResourceGroupFilterNotTag;
@@ -679,19 +679,19 @@ export class ConsumptionBudgetResourceGroupFilterTagList extends cdktf.ComplexLi
 export interface ConsumptionBudgetResourceGroupFilter {
   /**
   * dimension block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_resource_group#dimension ConsumptionBudgetResourceGroup#dimension}
   */
   readonly dimension?: ConsumptionBudgetResourceGroupFilterDimension[] | cdktf.IResolvable;
   /**
   * not block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_resource_group#not ConsumptionBudgetResourceGroup#not}
   */
   readonly not?: ConsumptionBudgetResourceGroupFilterNot;
   /**
   * tag block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_resource_group#tag ConsumptionBudgetResourceGroup#tag}
   */
   readonly tag?: ConsumptionBudgetResourceGroupFilterTag[] | cdktf.IResolvable;

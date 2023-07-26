@@ -57,7 +57,7 @@ export interface ResourceGroupPolicyExemptionConfig extends cdktf.TerraformMetaA
   readonly resourceGroupId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_policy_exemption#timeouts ResourceGroupPolicyExemption#timeouts}
   */
   readonly timeouts?: ResourceGroupPolicyExemptionTimeouts;

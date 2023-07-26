@@ -33,7 +33,7 @@ export interface DataAzurermPrivateDnsZoneVirtualNetworkLinkConfig extends cdktf
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/private_dns_zone_virtual_network_link#timeouts DataAzurermPrivateDnsZoneVirtualNetworkLink#timeouts}
   */
   readonly timeouts?: DataAzurermPrivateDnsZoneVirtualNetworkLinkTimeouts;

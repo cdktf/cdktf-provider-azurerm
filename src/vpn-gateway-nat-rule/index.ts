@@ -53,19 +53,19 @@ export interface VpnGatewayNatRuleConfig extends cdktf.TerraformMetaArguments {
   readonly vpnGatewayId: string;
   /**
   * external_mapping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_gateway_nat_rule#external_mapping VpnGatewayNatRule#external_mapping}
   */
   readonly externalMapping?: VpnGatewayNatRuleExternalMapping[] | cdktf.IResolvable;
   /**
   * internal_mapping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_gateway_nat_rule#internal_mapping VpnGatewayNatRule#internal_mapping}
   */
   readonly internalMapping?: VpnGatewayNatRuleInternalMapping[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_gateway_nat_rule#timeouts VpnGatewayNatRule#timeouts}
   */
   readonly timeouts?: VpnGatewayNatRuleTimeouts;

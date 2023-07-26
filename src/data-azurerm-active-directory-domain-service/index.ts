@@ -33,7 +33,7 @@ export interface DataAzurermActiveDirectoryDomainServiceConfig extends cdktf.Ter
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/active_directory_domain_service#timeouts DataAzurermActiveDirectoryDomainService#timeouts}
   */
   readonly timeouts?: DataAzurermActiveDirectoryDomainServiceTimeouts;

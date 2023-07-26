@@ -33,7 +33,7 @@ export interface SecurityCenterSubscriptionPricingConfig extends cdktf.Terraform
   readonly tier: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/security_center_subscription_pricing#timeouts SecurityCenterSubscriptionPricing#timeouts}
   */
   readonly timeouts?: SecurityCenterSubscriptionPricingTimeouts;

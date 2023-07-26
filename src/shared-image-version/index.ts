@@ -73,13 +73,13 @@ export interface SharedImageVersionConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * target_region block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/shared_image_version#target_region SharedImageVersion#target_region}
   */
   readonly targetRegion: SharedImageVersionTargetRegion[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/shared_image_version#timeouts SharedImageVersion#timeouts}
   */
   readonly timeouts?: SharedImageVersionTimeouts;

@@ -77,19 +77,19 @@ export interface DevTestWindowsVirtualMachineConfig extends cdktf.TerraformMetaA
   readonly username: string;
   /**
   * gallery_image_reference block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dev_test_windows_virtual_machine#gallery_image_reference DevTestWindowsVirtualMachine#gallery_image_reference}
   */
   readonly galleryImageReference: DevTestWindowsVirtualMachineGalleryImageReference;
   /**
   * inbound_nat_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dev_test_windows_virtual_machine#inbound_nat_rule DevTestWindowsVirtualMachine#inbound_nat_rule}
   */
   readonly inboundNatRule?: DevTestWindowsVirtualMachineInboundNatRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dev_test_windows_virtual_machine#timeouts DevTestWindowsVirtualMachine#timeouts}
   */
   readonly timeouts?: DevTestWindowsVirtualMachineTimeouts;

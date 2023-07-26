@@ -41,19 +41,19 @@ export interface StorageAccountLocalUserConfig extends cdktf.TerraformMetaArgume
   readonly storageAccountId: string;
   /**
   * permission_scope block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_account_local_user#permission_scope StorageAccountLocalUser#permission_scope}
   */
   readonly permissionScope?: StorageAccountLocalUserPermissionScope[] | cdktf.IResolvable;
   /**
   * ssh_authorized_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_account_local_user#ssh_authorized_key StorageAccountLocalUser#ssh_authorized_key}
   */
   readonly sshAuthorizedKey?: StorageAccountLocalUserSshAuthorizedKey[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_account_local_user#timeouts StorageAccountLocalUser#timeouts}
   */
   readonly timeouts?: StorageAccountLocalUserTimeouts;
@@ -242,7 +242,7 @@ export interface StorageAccountLocalUserPermissionScope {
   readonly service: string;
   /**
   * permissions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_account_local_user#permissions StorageAccountLocalUser#permissions}
   */
   readonly permissions: StorageAccountLocalUserPermissionScopePermissions;

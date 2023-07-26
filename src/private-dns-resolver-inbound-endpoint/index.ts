@@ -37,13 +37,13 @@ export interface PrivateDnsResolverInboundEndpointConfig extends cdktf.Terraform
   readonly tags?: { [key: string]: string };
   /**
   * ip_configurations block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_dns_resolver_inbound_endpoint#ip_configurations PrivateDnsResolverInboundEndpoint#ip_configurations}
   */
   readonly ipConfigurations: PrivateDnsResolverInboundEndpointIpConfigurations[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_dns_resolver_inbound_endpoint#timeouts PrivateDnsResolverInboundEndpoint#timeouts}
   */
   readonly timeouts?: PrivateDnsResolverInboundEndpointTimeouts;

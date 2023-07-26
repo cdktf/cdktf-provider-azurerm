@@ -89,31 +89,31 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * azure_devops_repo block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_workspace#azure_devops_repo SynapseWorkspace#azure_devops_repo}
   */
   readonly azureDevopsRepo?: SynapseWorkspaceAzureDevopsRepo;
   /**
   * customer_managed_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_workspace#customer_managed_key SynapseWorkspace#customer_managed_key}
   */
   readonly customerManagedKey?: SynapseWorkspaceCustomerManagedKey;
   /**
   * github_repo block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_workspace#github_repo SynapseWorkspace#github_repo}
   */
   readonly githubRepo?: SynapseWorkspaceGithubRepo;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_workspace#identity SynapseWorkspace#identity}
   */
   readonly identity?: SynapseWorkspaceIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_workspace#timeouts SynapseWorkspace#timeouts}
   */
   readonly timeouts?: SynapseWorkspaceTimeouts;

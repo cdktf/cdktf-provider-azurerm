@@ -65,7 +65,7 @@ export interface DataFactoryLinkedServiceWebConfig extends cdktf.TerraformMetaAr
   readonly username?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_web#timeouts DataFactoryLinkedServiceWeb#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceWebTimeouts;

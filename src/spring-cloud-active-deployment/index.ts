@@ -29,7 +29,7 @@ export interface SpringCloudActiveDeploymentConfig extends cdktf.TerraformMetaAr
   readonly springCloudAppId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_active_deployment#timeouts SpringCloudActiveDeployment#timeouts}
   */
   readonly timeouts?: SpringCloudActiveDeploymentTimeouts;

@@ -49,7 +49,7 @@ export interface KustoClusterManagedPrivateEndpointConfig extends cdktf.Terrafor
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kusto_cluster_managed_private_endpoint#timeouts KustoClusterManagedPrivateEndpoint#timeouts}
   */
   readonly timeouts?: KustoClusterManagedPrivateEndpointTimeouts;

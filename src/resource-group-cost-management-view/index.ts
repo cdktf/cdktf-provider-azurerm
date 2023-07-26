@@ -49,25 +49,25 @@ export interface ResourceGroupCostManagementViewConfig extends cdktf.TerraformMe
   readonly timeframe: string;
   /**
   * dataset block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_cost_management_view#dataset ResourceGroupCostManagementView#dataset}
   */
   readonly dataset: ResourceGroupCostManagementViewDataset;
   /**
   * kpi block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_cost_management_view#kpi ResourceGroupCostManagementView#kpi}
   */
   readonly kpi?: ResourceGroupCostManagementViewKpi[] | cdktf.IResolvable;
   /**
   * pivot block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_cost_management_view#pivot ResourceGroupCostManagementView#pivot}
   */
   readonly pivot?: ResourceGroupCostManagementViewPivot[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_cost_management_view#timeouts ResourceGroupCostManagementView#timeouts}
   */
   readonly timeouts?: ResourceGroupCostManagementViewTimeouts;
@@ -433,19 +433,19 @@ export interface ResourceGroupCostManagementViewDataset {
   readonly granularity: string;
   /**
   * aggregation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_cost_management_view#aggregation ResourceGroupCostManagementView#aggregation}
   */
   readonly aggregation: ResourceGroupCostManagementViewDatasetAggregation[] | cdktf.IResolvable;
   /**
   * grouping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_cost_management_view#grouping ResourceGroupCostManagementView#grouping}
   */
   readonly grouping?: ResourceGroupCostManagementViewDatasetGrouping[] | cdktf.IResolvable;
   /**
   * sorting block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_cost_management_view#sorting ResourceGroupCostManagementView#sorting}
   */
   readonly sorting?: ResourceGroupCostManagementViewDatasetSorting[] | cdktf.IResolvable;

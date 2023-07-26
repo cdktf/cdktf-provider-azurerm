@@ -37,7 +37,7 @@ export interface DiskAccessConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/disk_access#timeouts DiskAccess#timeouts}
   */
   readonly timeouts?: DiskAccessTimeouts;

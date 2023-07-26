@@ -93,7 +93,7 @@ export interface NetworkSecurityRuleConfig extends cdktf.TerraformMetaArguments 
   readonly sourcePortRanges?: string[];
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_security_rule#timeouts NetworkSecurityRule#timeouts}
   */
   readonly timeouts?: NetworkSecurityRuleTimeouts;

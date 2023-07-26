@@ -33,19 +33,19 @@ export interface CognitiveDeploymentConfig extends cdktf.TerraformMetaArguments 
   readonly raiPolicyName?: string;
   /**
   * model block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cognitive_deployment#model CognitiveDeployment#model}
   */
   readonly model: CognitiveDeploymentModel;
   /**
   * scale block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cognitive_deployment#scale CognitiveDeployment#scale}
   */
   readonly scale: CognitiveDeploymentScale;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cognitive_deployment#timeouts CognitiveDeployment#timeouts}
   */
   readonly timeouts?: CognitiveDeploymentTimeouts;

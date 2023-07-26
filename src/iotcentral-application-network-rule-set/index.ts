@@ -33,13 +33,13 @@ export interface IotcentralApplicationNetworkRuleSetConfig extends cdktf.Terrafo
   readonly iotcentralApplicationId: string;
   /**
   * ip_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iotcentral_application_network_rule_set#ip_rule IotcentralApplicationNetworkRuleSet#ip_rule}
   */
   readonly ipRule?: IotcentralApplicationNetworkRuleSetIpRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iotcentral_application_network_rule_set#timeouts IotcentralApplicationNetworkRuleSet#timeouts}
   */
   readonly timeouts?: IotcentralApplicationNetworkRuleSetTimeouts;

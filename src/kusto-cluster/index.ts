@@ -93,31 +93,31 @@ export interface KustoClusterConfig extends cdktf.TerraformMetaArguments {
   readonly zones?: string[];
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kusto_cluster#identity KustoCluster#identity}
   */
   readonly identity?: KustoClusterIdentity;
   /**
   * optimized_auto_scale block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kusto_cluster#optimized_auto_scale KustoCluster#optimized_auto_scale}
   */
   readonly optimizedAutoScale?: KustoClusterOptimizedAutoScale;
   /**
   * sku block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kusto_cluster#sku KustoCluster#sku}
   */
   readonly sku: KustoClusterSku;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kusto_cluster#timeouts KustoCluster#timeouts}
   */
   readonly timeouts?: KustoClusterTimeouts;
   /**
   * virtual_network_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kusto_cluster#virtual_network_configuration KustoCluster#virtual_network_configuration}
   */
   readonly virtualNetworkConfiguration?: KustoClusterVirtualNetworkConfiguration;

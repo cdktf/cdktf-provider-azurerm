@@ -45,7 +45,7 @@ export interface AutomationConnectionCertificateConfig extends cdktf.TerraformMe
   readonly subscriptionId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_connection_certificate#timeouts AutomationConnectionCertificate#timeouts}
   */
   readonly timeouts?: AutomationConnectionCertificateTimeouts;

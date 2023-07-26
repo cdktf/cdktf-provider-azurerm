@@ -29,7 +29,7 @@ export interface DataAzurermNotificationHubNamespaceConfig extends cdktf.Terrafo
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/notification_hub_namespace#timeouts DataAzurermNotificationHubNamespace#timeouts}
   */
   readonly timeouts?: DataAzurermNotificationHubNamespaceTimeouts;

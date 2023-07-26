@@ -49,25 +49,25 @@ export interface GalleryApplicationVersionConfig extends cdktf.TerraformMetaArgu
   readonly tags?: { [key: string]: string };
   /**
   * manage_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/gallery_application_version#manage_action GalleryApplicationVersion#manage_action}
   */
   readonly manageAction: GalleryApplicationVersionManageAction;
   /**
   * source block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/gallery_application_version#source GalleryApplicationVersion#source}
   */
   readonly source: GalleryApplicationVersionSource;
   /**
   * target_region block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/gallery_application_version#target_region GalleryApplicationVersion#target_region}
   */
   readonly targetRegion: GalleryApplicationVersionTargetRegion[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/gallery_application_version#timeouts GalleryApplicationVersion#timeouts}
   */
   readonly timeouts?: GalleryApplicationVersionTimeouts;

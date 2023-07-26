@@ -41,7 +41,7 @@ export interface SqlVirtualNetworkRuleConfig extends cdktf.TerraformMetaArgument
   readonly subnetId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sql_virtual_network_rule#timeouts SqlVirtualNetworkRule#timeouts}
   */
   readonly timeouts?: SqlVirtualNetworkRuleTimeouts;

@@ -57,13 +57,13 @@ export interface DataFactoryDatasetMysqlConfig extends cdktf.TerraformMetaArgume
   readonly tableName?: string;
   /**
   * schema_column block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_mysql#schema_column DataFactoryDatasetMysql#schema_column}
   */
   readonly schemaColumn?: DataFactoryDatasetMysqlSchemaColumn[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_mysql#timeouts DataFactoryDatasetMysql#timeouts}
   */
   readonly timeouts?: DataFactoryDatasetMysqlTimeouts;

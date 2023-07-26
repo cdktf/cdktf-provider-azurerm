@@ -29,19 +29,19 @@ export interface DatadogMonitorTagRuleConfig extends cdktf.TerraformMetaArgument
   readonly name?: string;
   /**
   * log block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/datadog_monitor_tag_rule#log DatadogMonitorTagRule#log}
   */
   readonly log?: DatadogMonitorTagRuleLog[] | cdktf.IResolvable;
   /**
   * metric block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/datadog_monitor_tag_rule#metric DatadogMonitorTagRule#metric}
   */
   readonly metric?: DatadogMonitorTagRuleMetric[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/datadog_monitor_tag_rule#timeouts DatadogMonitorTagRule#timeouts}
   */
   readonly timeouts?: DatadogMonitorTagRuleTimeouts;
@@ -203,7 +203,7 @@ export interface DatadogMonitorTagRuleLog {
   readonly subscriptionLogEnabled?: boolean | cdktf.IResolvable;
   /**
   * filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/datadog_monitor_tag_rule#filter DatadogMonitorTagRule#filter}
   */
   readonly filter?: DatadogMonitorTagRuleLogFilter[] | cdktf.IResolvable;
@@ -513,7 +513,7 @@ export class DatadogMonitorTagRuleMetricFilterList extends cdktf.ComplexList {
 export interface DatadogMonitorTagRuleMetric {
   /**
   * filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/datadog_monitor_tag_rule#filter DatadogMonitorTagRule#filter}
   */
   readonly filter?: DatadogMonitorTagRuleMetricFilter[] | cdktf.IResolvable;

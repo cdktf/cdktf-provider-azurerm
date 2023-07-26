@@ -33,13 +33,13 @@ export interface PrivateDnsZoneConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * soa_record block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_dns_zone#soa_record PrivateDnsZone#soa_record}
   */
   readonly soaRecord?: PrivateDnsZoneSoaRecord;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_dns_zone#timeouts PrivateDnsZone#timeouts}
   */
   readonly timeouts?: PrivateDnsZoneTimeouts;

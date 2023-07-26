@@ -45,19 +45,19 @@ export interface BillingAccountCostManagementExportConfig extends cdktf.Terrafor
   readonly recurrenceType: string;
   /**
   * export_data_options block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/billing_account_cost_management_export#export_data_options BillingAccountCostManagementExport#export_data_options}
   */
   readonly exportDataOptions: BillingAccountCostManagementExportExportDataOptions;
   /**
   * export_data_storage_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/billing_account_cost_management_export#export_data_storage_location BillingAccountCostManagementExport#export_data_storage_location}
   */
   readonly exportDataStorageLocation: BillingAccountCostManagementExportExportDataStorageLocation;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/billing_account_cost_management_export#timeouts BillingAccountCostManagementExport#timeouts}
   */
   readonly timeouts?: BillingAccountCostManagementExportTimeouts;

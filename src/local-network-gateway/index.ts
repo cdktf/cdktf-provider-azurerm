@@ -49,13 +49,13 @@ export interface LocalNetworkGatewayConfig extends cdktf.TerraformMetaArguments 
   readonly tags?: { [key: string]: string };
   /**
   * bgp_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/local_network_gateway#bgp_settings LocalNetworkGateway#bgp_settings}
   */
   readonly bgpSettings?: LocalNetworkGatewayBgpSettings;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/local_network_gateway#timeouts LocalNetworkGateway#timeouts}
   */
   readonly timeouts?: LocalNetworkGatewayTimeouts;

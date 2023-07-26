@@ -29,7 +29,7 @@ export interface DataAzurermSubscriptionsConfig extends cdktf.TerraformMetaArgum
   readonly id?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/subscriptions#timeouts DataAzurermSubscriptions#timeouts}
   */
   readonly timeouts?: DataAzurermSubscriptionsTimeouts;

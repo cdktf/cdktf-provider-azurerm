@@ -73,7 +73,7 @@ export interface LbRuleConfig extends cdktf.TerraformMetaArguments {
   readonly protocol: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lb_rule#timeouts LbRule#timeouts}
   */
   readonly timeouts?: LbRuleTimeouts;

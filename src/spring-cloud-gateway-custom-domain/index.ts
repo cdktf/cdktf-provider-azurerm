@@ -33,7 +33,7 @@ export interface SpringCloudGatewayCustomDomainConfig extends cdktf.TerraformMet
   readonly thumbprint?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_gateway_custom_domain#timeouts SpringCloudGatewayCustomDomain#timeouts}
   */
   readonly timeouts?: SpringCloudGatewayCustomDomainTimeouts;

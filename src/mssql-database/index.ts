@@ -117,31 +117,31 @@ export interface MssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * import block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_database#import MssqlDatabase#import}
   */
   readonly import?: MssqlDatabaseImport;
   /**
   * long_term_retention_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_database#long_term_retention_policy MssqlDatabase#long_term_retention_policy}
   */
   readonly longTermRetentionPolicy?: MssqlDatabaseLongTermRetentionPolicy;
   /**
   * short_term_retention_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_database#short_term_retention_policy MssqlDatabase#short_term_retention_policy}
   */
   readonly shortTermRetentionPolicy?: MssqlDatabaseShortTermRetentionPolicy;
   /**
   * threat_detection_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_database#threat_detection_policy MssqlDatabase#threat_detection_policy}
   */
   readonly threatDetectionPolicy?: MssqlDatabaseThreatDetectionPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_database#timeouts MssqlDatabase#timeouts}
   */
   readonly timeouts?: MssqlDatabaseTimeouts;

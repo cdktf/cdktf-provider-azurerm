@@ -29,7 +29,7 @@ export interface DataAzurermSharedImageGalleryConfig extends cdktf.TerraformMeta
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/shared_image_gallery#timeouts DataAzurermSharedImageGallery#timeouts}
   */
   readonly timeouts?: DataAzurermSharedImageGalleryTimeouts;

@@ -29,7 +29,7 @@ export interface NetworkInterfaceApplicationSecurityGroupAssociationConfig exten
   readonly networkInterfaceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_interface_application_security_group_association#timeouts NetworkInterfaceApplicationSecurityGroupAssociation#timeouts}
   */
   readonly timeouts?: NetworkInterfaceApplicationSecurityGroupAssociationTimeouts;

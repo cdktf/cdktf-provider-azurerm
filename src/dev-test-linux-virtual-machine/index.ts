@@ -81,19 +81,19 @@ export interface DevTestLinuxVirtualMachineConfig extends cdktf.TerraformMetaArg
   readonly username: string;
   /**
   * gallery_image_reference block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dev_test_linux_virtual_machine#gallery_image_reference DevTestLinuxVirtualMachine#gallery_image_reference}
   */
   readonly galleryImageReference: DevTestLinuxVirtualMachineGalleryImageReference;
   /**
   * inbound_nat_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dev_test_linux_virtual_machine#inbound_nat_rule DevTestLinuxVirtualMachine#inbound_nat_rule}
   */
   readonly inboundNatRule?: DevTestLinuxVirtualMachineInboundNatRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dev_test_linux_virtual_machine#timeouts DevTestLinuxVirtualMachine#timeouts}
   */
   readonly timeouts?: DevTestLinuxVirtualMachineTimeouts;

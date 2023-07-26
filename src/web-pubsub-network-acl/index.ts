@@ -29,19 +29,19 @@ export interface WebPubsubNetworkAclConfig extends cdktf.TerraformMetaArguments 
   readonly webPubsubId: string;
   /**
   * private_endpoint block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_pubsub_network_acl#private_endpoint WebPubsubNetworkAcl#private_endpoint}
   */
   readonly privateEndpoint?: WebPubsubNetworkAclPrivateEndpoint[] | cdktf.IResolvable;
   /**
   * public_network block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_pubsub_network_acl#public_network WebPubsubNetworkAcl#public_network}
   */
   readonly publicNetwork: WebPubsubNetworkAclPublicNetwork;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_pubsub_network_acl#timeouts WebPubsubNetworkAcl#timeouts}
   */
   readonly timeouts?: WebPubsubNetworkAclTimeouts;

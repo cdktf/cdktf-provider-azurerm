@@ -41,19 +41,19 @@ export interface NotificationHubConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * apns_credential block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/notification_hub#apns_credential NotificationHub#apns_credential}
   */
   readonly apnsCredential?: NotificationHubApnsCredential;
   /**
   * gcm_credential block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/notification_hub#gcm_credential NotificationHub#gcm_credential}
   */
   readonly gcmCredential?: NotificationHubGcmCredential;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/notification_hub#timeouts NotificationHub#timeouts}
   */
   readonly timeouts?: NotificationHubTimeouts;

@@ -33,7 +33,7 @@ export interface NetworkManagerStaticMemberConfig extends cdktf.TerraformMetaArg
   readonly targetVirtualNetworkId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_static_member#timeouts NetworkManagerStaticMember#timeouts}
   */
   readonly timeouts?: NetworkManagerStaticMemberTimeouts;

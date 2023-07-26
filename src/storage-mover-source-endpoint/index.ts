@@ -45,7 +45,7 @@ export interface StorageMoverSourceEndpointConfig extends cdktf.TerraformMetaArg
   readonly storageMoverId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_mover_source_endpoint#timeouts StorageMoverSourceEndpoint#timeouts}
   */
   readonly timeouts?: StorageMoverSourceEndpointTimeouts;

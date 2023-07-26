@@ -37,7 +37,7 @@ export interface SpringCloudStorageConfig extends cdktf.TerraformMetaArguments {
   readonly storageAccountName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_storage#timeouts SpringCloudStorage#timeouts}
   */
   readonly timeouts?: SpringCloudStorageTimeouts;

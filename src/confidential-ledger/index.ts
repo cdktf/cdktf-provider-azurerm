@@ -41,19 +41,19 @@ export interface ConfidentialLedgerConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * azuread_based_service_principal block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/confidential_ledger#azuread_based_service_principal ConfidentialLedger#azuread_based_service_principal}
   */
   readonly azureadBasedServicePrincipal: ConfidentialLedgerAzureadBasedServicePrincipal[] | cdktf.IResolvable;
   /**
   * certificate_based_security_principal block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/confidential_ledger#certificate_based_security_principal ConfidentialLedger#certificate_based_security_principal}
   */
   readonly certificateBasedSecurityPrincipal?: ConfidentialLedgerCertificateBasedSecurityPrincipal[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/confidential_ledger#timeouts ConfidentialLedger#timeouts}
   */
   readonly timeouts?: ConfidentialLedgerTimeouts;

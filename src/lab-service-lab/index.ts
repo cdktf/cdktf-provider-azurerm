@@ -49,43 +49,43 @@ export interface LabServiceLabConfig extends cdktf.TerraformMetaArguments {
   readonly title: string;
   /**
   * auto_shutdown block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#auto_shutdown LabServiceLab#auto_shutdown}
   */
   readonly autoShutdown?: LabServiceLabAutoShutdown;
   /**
   * connection_setting block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#connection_setting LabServiceLab#connection_setting}
   */
   readonly connectionSetting?: LabServiceLabConnectionSetting;
   /**
   * network block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#network LabServiceLab#network}
   */
   readonly network?: LabServiceLabNetwork;
   /**
   * roster block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#roster LabServiceLab#roster}
   */
   readonly roster?: LabServiceLabRoster;
   /**
   * security block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#security LabServiceLab#security}
   */
   readonly security: LabServiceLabSecurity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#timeouts LabServiceLab#timeouts}
   */
   readonly timeouts?: LabServiceLabTimeouts;
   /**
   * virtual_machine block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#virtual_machine LabServiceLab#virtual_machine}
   */
   readonly virtualMachine: LabServiceLabVirtualMachine;
@@ -1252,25 +1252,25 @@ export interface LabServiceLabVirtualMachine {
   readonly usageQuota?: string;
   /**
   * admin_user block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#admin_user LabServiceLab#admin_user}
   */
   readonly adminUser: LabServiceLabVirtualMachineAdminUser;
   /**
   * image_reference block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#image_reference LabServiceLab#image_reference}
   */
   readonly imageReference: LabServiceLabVirtualMachineImageReference;
   /**
   * non_admin_user block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#non_admin_user LabServiceLab#non_admin_user}
   */
   readonly nonAdminUser?: LabServiceLabVirtualMachineNonAdminUser;
   /**
   * sku block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#sku LabServiceLab#sku}
   */
   readonly sku: LabServiceLabVirtualMachineSku;

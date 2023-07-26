@@ -49,13 +49,13 @@ export interface MachineLearningSynapseSparkConfig extends cdktf.TerraformMetaAr
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/machine_learning_synapse_spark#identity MachineLearningSynapseSpark#identity}
   */
   readonly identity?: MachineLearningSynapseSparkIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/machine_learning_synapse_spark#timeouts MachineLearningSynapseSpark#timeouts}
   */
   readonly timeouts?: MachineLearningSynapseSparkTimeouts;

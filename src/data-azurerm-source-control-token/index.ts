@@ -25,7 +25,7 @@ export interface DataAzurermSourceControlTokenConfig extends cdktf.TerraformMeta
   readonly type: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/source_control_token#timeouts DataAzurermSourceControlToken#timeouts}
   */
   readonly timeouts?: DataAzurermSourceControlTokenTimeouts;

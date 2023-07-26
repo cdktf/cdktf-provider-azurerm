@@ -29,7 +29,7 @@ export interface LogAnalyticsClusterCustomerManagedKeyConfig extends cdktf.Terra
   readonly logAnalyticsClusterId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/log_analytics_cluster_customer_managed_key#timeouts LogAnalyticsClusterCustomerManagedKey#timeouts}
   */
   readonly timeouts?: LogAnalyticsClusterCustomerManagedKeyTimeouts;

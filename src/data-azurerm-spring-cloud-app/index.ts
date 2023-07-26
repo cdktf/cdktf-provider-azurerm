@@ -33,7 +33,7 @@ export interface DataAzurermSpringCloudAppConfig extends cdktf.TerraformMetaArgu
   readonly serviceName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/spring_cloud_app#timeouts DataAzurermSpringCloudApp#timeouts}
   */
   readonly timeouts?: DataAzurermSpringCloudAppTimeouts;

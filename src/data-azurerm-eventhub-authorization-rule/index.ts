@@ -49,7 +49,7 @@ export interface DataAzurermEventhubAuthorizationRuleConfig extends cdktf.Terraf
   readonly send?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventhub_authorization_rule#timeouts DataAzurermEventhubAuthorizationRule#timeouts}
   */
   readonly timeouts?: DataAzurermEventhubAuthorizationRuleTimeouts;

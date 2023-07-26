@@ -41,13 +41,13 @@ export interface ArcKubernetesClusterConfig extends cdktf.TerraformMetaArguments
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/arc_kubernetes_cluster#identity ArcKubernetesCluster#identity}
   */
   readonly identity: ArcKubernetesClusterIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/arc_kubernetes_cluster#timeouts ArcKubernetesCluster#timeouts}
   */
   readonly timeouts?: ArcKubernetesClusterTimeouts;

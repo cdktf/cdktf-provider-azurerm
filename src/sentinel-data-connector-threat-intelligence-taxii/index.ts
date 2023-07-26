@@ -61,7 +61,7 @@ export interface SentinelDataConnectorThreatIntelligenceTaxiiConfig extends cdkt
   readonly userName?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_data_connector_threat_intelligence_taxii#timeouts SentinelDataConnectorThreatIntelligenceTaxii#timeouts}
   */
   readonly timeouts?: SentinelDataConnectorThreatIntelligenceTaxiiTimeouts;

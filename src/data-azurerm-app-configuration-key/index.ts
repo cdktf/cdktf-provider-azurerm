@@ -33,7 +33,7 @@ export interface DataAzurermAppConfigurationKeyConfig extends cdktf.TerraformMet
   readonly label?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/app_configuration_key#timeouts DataAzurermAppConfigurationKey#timeouts}
   */
   readonly timeouts?: DataAzurermAppConfigurationKeyTimeouts;

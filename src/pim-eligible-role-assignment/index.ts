@@ -21,43 +21,43 @@ export interface PimEligibleRoleAssignmentConfig extends cdktf.TerraformMetaArgu
   readonly id?: string;
   /**
   * The justification of the eligible role assignment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_eligible_role_assignment#justification PimEligibleRoleAssignment#justification}
   */
   readonly justification?: string;
   /**
   * The principal id.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_eligible_role_assignment#principal_id PimEligibleRoleAssignment#principal_id}
   */
   readonly principalId: string;
   /**
   * The role definition id.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_eligible_role_assignment#role_definition_id PimEligibleRoleAssignment#role_definition_id}
   */
   readonly roleDefinitionId: string;
   /**
   * The scope.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_eligible_role_assignment#scope PimEligibleRoleAssignment#scope}
   */
   readonly scope: string;
   /**
   * schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_eligible_role_assignment#schedule PimEligibleRoleAssignment#schedule}
   */
   readonly schedule?: PimEligibleRoleAssignmentSchedule;
   /**
   * ticket block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_eligible_role_assignment#ticket PimEligibleRoleAssignment#ticket}
   */
   readonly ticket?: PimEligibleRoleAssignmentTicket;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_eligible_role_assignment#timeouts PimEligibleRoleAssignment#timeouts}
   */
   readonly timeouts?: PimEligibleRoleAssignmentTimeouts;
@@ -65,19 +65,19 @@ export interface PimEligibleRoleAssignmentConfig extends cdktf.TerraformMetaArgu
 export interface PimEligibleRoleAssignmentScheduleExpiration {
   /**
   * The duration of the assignment in days.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_eligible_role_assignment#duration_days PimEligibleRoleAssignment#duration_days}
   */
   readonly durationDays?: number;
   /**
   * The duration of the assignment in hours.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_eligible_role_assignment#duration_hours PimEligibleRoleAssignment#duration_hours}
   */
   readonly durationHours?: number;
   /**
   * The end date time of the assignment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_eligible_role_assignment#end_date_time PimEligibleRoleAssignment#end_date_time}
   */
   readonly endDateTime?: string;
@@ -190,13 +190,13 @@ export class PimEligibleRoleAssignmentScheduleExpirationOutputReference extends 
 export interface PimEligibleRoleAssignmentSchedule {
   /**
   * The start date time.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_eligible_role_assignment#start_date_time PimEligibleRoleAssignment#start_date_time}
   */
   readonly startDateTime?: string;
   /**
   * expiration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_eligible_role_assignment#expiration PimEligibleRoleAssignment#expiration}
   */
   readonly expiration?: PimEligibleRoleAssignmentScheduleExpiration;
@@ -286,13 +286,13 @@ export class PimEligibleRoleAssignmentScheduleOutputReference extends cdktf.Comp
 export interface PimEligibleRoleAssignmentTicket {
   /**
   * The ticket number.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_eligible_role_assignment#number PimEligibleRoleAssignment#number}
   */
   readonly number?: string;
   /**
   * The ticket system.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_eligible_role_assignment#system PimEligibleRoleAssignment#system}
   */
   readonly systemAttribute?: string;

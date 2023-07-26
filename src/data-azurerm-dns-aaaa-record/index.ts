@@ -33,7 +33,7 @@ export interface DataAzurermDnsAaaaRecordConfig extends cdktf.TerraformMetaArgum
   readonly zoneName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/dns_aaaa_record#timeouts DataAzurermDnsAaaaRecord#timeouts}
   */
   readonly timeouts?: DataAzurermDnsAaaaRecordTimeouts;

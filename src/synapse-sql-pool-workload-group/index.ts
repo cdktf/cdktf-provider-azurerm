@@ -53,7 +53,7 @@ export interface SynapseSqlPoolWorkloadGroupConfig extends cdktf.TerraformMetaAr
   readonly sqlPoolId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_sql_pool_workload_group#timeouts SynapseSqlPoolWorkloadGroup#timeouts}
   */
   readonly timeouts?: SynapseSqlPoolWorkloadGroupTimeouts;

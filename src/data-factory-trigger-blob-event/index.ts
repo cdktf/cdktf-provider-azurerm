@@ -65,13 +65,13 @@ export interface DataFactoryTriggerBlobEventConfig extends cdktf.TerraformMetaAr
   readonly storageAccountId: string;
   /**
   * pipeline block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_trigger_blob_event#pipeline DataFactoryTriggerBlobEvent#pipeline}
   */
   readonly pipeline: DataFactoryTriggerBlobEventPipeline[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_trigger_blob_event#timeouts DataFactoryTriggerBlobEvent#timeouts}
   */
   readonly timeouts?: DataFactoryTriggerBlobEventTimeouts;

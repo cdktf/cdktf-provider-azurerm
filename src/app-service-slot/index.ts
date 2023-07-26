@@ -65,43 +65,43 @@ export interface AppServiceSlotConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * auth_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#auth_settings AppServiceSlot#auth_settings}
   */
   readonly authSettings?: AppServiceSlotAuthSettings;
   /**
   * connection_string block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#connection_string AppServiceSlot#connection_string}
   */
   readonly connectionString?: AppServiceSlotConnectionString[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#identity AppServiceSlot#identity}
   */
   readonly identity?: AppServiceSlotIdentity;
   /**
   * logs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#logs AppServiceSlot#logs}
   */
   readonly logs?: AppServiceSlotLogs;
   /**
   * site_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#site_config AppServiceSlot#site_config}
   */
   readonly siteConfig?: AppServiceSlotSiteConfig;
   /**
   * storage_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#storage_account AppServiceSlot#storage_account}
   */
   readonly storageAccount?: AppServiceSlotStorageAccount[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#timeouts AppServiceSlot#timeouts}
   */
   readonly timeouts?: AppServiceSlotTimeouts;
@@ -755,31 +755,31 @@ export interface AppServiceSlotAuthSettings {
   readonly unauthenticatedClientAction?: string;
   /**
   * active_directory block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#active_directory AppServiceSlot#active_directory}
   */
   readonly activeDirectory?: AppServiceSlotAuthSettingsActiveDirectory;
   /**
   * facebook block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#facebook AppServiceSlot#facebook}
   */
   readonly facebook?: AppServiceSlotAuthSettingsFacebook;
   /**
   * google block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#google AppServiceSlot#google}
   */
   readonly google?: AppServiceSlotAuthSettingsGoogle;
   /**
   * microsoft block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#microsoft AppServiceSlot#microsoft}
   */
   readonly microsoft?: AppServiceSlotAuthSettingsMicrosoft;
   /**
   * twitter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#twitter AppServiceSlot#twitter}
   */
   readonly twitter?: AppServiceSlotAuthSettingsTwitter;
@@ -1497,7 +1497,7 @@ export interface AppServiceSlotLogsApplicationLogs {
   readonly fileSystemLevel?: string;
   /**
   * azure_blob_storage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#azure_blob_storage AppServiceSlot#azure_blob_storage}
   */
   readonly azureBlobStorage?: AppServiceSlotLogsApplicationLogsAzureBlobStorage;
@@ -1759,13 +1759,13 @@ export class AppServiceSlotLogsHttpLogsFileSystemOutputReference extends cdktf.C
 export interface AppServiceSlotLogsHttpLogs {
   /**
   * azure_blob_storage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#azure_blob_storage AppServiceSlot#azure_blob_storage}
   */
   readonly azureBlobStorage?: AppServiceSlotLogsHttpLogsAzureBlobStorage;
   /**
   * file_system block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#file_system AppServiceSlot#file_system}
   */
   readonly fileSystem?: AppServiceSlotLogsHttpLogsFileSystem;
@@ -1863,13 +1863,13 @@ export interface AppServiceSlotLogs {
   readonly failedRequestTracingEnabled?: boolean | cdktf.IResolvable;
   /**
   * application_logs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#application_logs AppServiceSlot#application_logs}
   */
   readonly applicationLogs?: AppServiceSlotLogsApplicationLogs;
   /**
   * http_logs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#http_logs AppServiceSlot#http_logs}
   */
   readonly httpLogs?: AppServiceSlotLogsHttpLogs;
@@ -3088,7 +3088,7 @@ export interface AppServiceSlotSiteConfig {
   readonly windowsFxVersion?: string;
   /**
   * cors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_slot#cors AppServiceSlot#cors}
   */
   readonly cors?: AppServiceSlotSiteConfigCors;

@@ -29,7 +29,7 @@ export interface DataAzurermUserAssignedIdentityConfig extends cdktf.TerraformMe
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/user_assigned_identity#timeouts DataAzurermUserAssignedIdentity#timeouts}
   */
   readonly timeouts?: DataAzurermUserAssignedIdentityTimeouts;

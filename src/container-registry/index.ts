@@ -89,19 +89,19 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   readonly zoneRedundancyEnabled?: boolean | cdktf.IResolvable;
   /**
   * georeplications block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry#georeplications ContainerRegistry#georeplications}
   */
   readonly georeplications?: ContainerRegistryGeoreplications[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry#identity ContainerRegistry#identity}
   */
   readonly identity?: ContainerRegistryIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry#timeouts ContainerRegistry#timeouts}
   */
   readonly timeouts?: ContainerRegistryTimeouts;

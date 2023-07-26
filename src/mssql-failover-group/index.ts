@@ -41,19 +41,19 @@ export interface MssqlFailoverGroupConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * partner_server block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_failover_group#partner_server MssqlFailoverGroup#partner_server}
   */
   readonly partnerServer: MssqlFailoverGroupPartnerServer[] | cdktf.IResolvable;
   /**
   * read_write_endpoint_failover_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_failover_group#read_write_endpoint_failover_policy MssqlFailoverGroup#read_write_endpoint_failover_policy}
   */
   readonly readWriteEndpointFailoverPolicy: MssqlFailoverGroupReadWriteEndpointFailoverPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_failover_group#timeouts MssqlFailoverGroup#timeouts}
   */
   readonly timeouts?: MssqlFailoverGroupTimeouts;

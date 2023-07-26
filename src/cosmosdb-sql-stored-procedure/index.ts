@@ -45,7 +45,7 @@ export interface CosmosdbSqlStoredProcedureConfig extends cdktf.TerraformMetaArg
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_sql_stored_procedure#timeouts CosmosdbSqlStoredProcedure#timeouts}
   */
   readonly timeouts?: CosmosdbSqlStoredProcedureTimeouts;

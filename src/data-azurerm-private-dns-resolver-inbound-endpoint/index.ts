@@ -29,7 +29,7 @@ export interface DataAzurermPrivateDnsResolverInboundEndpointConfig extends cdkt
   readonly privateDnsResolverId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/private_dns_resolver_inbound_endpoint#timeouts DataAzurermPrivateDnsResolverInboundEndpoint#timeouts}
   */
   readonly timeouts?: DataAzurermPrivateDnsResolverInboundEndpointTimeouts;

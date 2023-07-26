@@ -45,19 +45,19 @@ export interface MonitorAlertProcessingRuleSuppressionConfig extends cdktf.Terra
   readonly tags?: { [key: string]: string };
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#condition MonitorAlertProcessingRuleSuppression#condition}
   */
   readonly condition?: MonitorAlertProcessingRuleSuppressionCondition;
   /**
   * schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#schedule MonitorAlertProcessingRuleSuppression#schedule}
   */
   readonly schedule?: MonitorAlertProcessingRuleSuppressionSchedule;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#timeouts MonitorAlertProcessingRuleSuppression#timeouts}
   */
   readonly timeouts?: MonitorAlertProcessingRuleSuppressionTimeouts;
@@ -1011,67 +1011,67 @@ export class MonitorAlertProcessingRuleSuppressionConditionTargetResourceTypeOut
 export interface MonitorAlertProcessingRuleSuppressionCondition {
   /**
   * alert_context block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#alert_context MonitorAlertProcessingRuleSuppression#alert_context}
   */
   readonly alertContext?: MonitorAlertProcessingRuleSuppressionConditionAlertContext;
   /**
   * alert_rule_id block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#alert_rule_id MonitorAlertProcessingRuleSuppression#alert_rule_id}
   */
   readonly alertRuleId?: MonitorAlertProcessingRuleSuppressionConditionAlertRuleId;
   /**
   * alert_rule_name block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#alert_rule_name MonitorAlertProcessingRuleSuppression#alert_rule_name}
   */
   readonly alertRuleName?: MonitorAlertProcessingRuleSuppressionConditionAlertRuleName;
   /**
   * description block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#description MonitorAlertProcessingRuleSuppression#description}
   */
   readonly description?: MonitorAlertProcessingRuleSuppressionConditionDescription;
   /**
   * monitor_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#monitor_condition MonitorAlertProcessingRuleSuppression#monitor_condition}
   */
   readonly monitorCondition?: MonitorAlertProcessingRuleSuppressionConditionMonitorCondition;
   /**
   * monitor_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#monitor_service MonitorAlertProcessingRuleSuppression#monitor_service}
   */
   readonly monitorService?: MonitorAlertProcessingRuleSuppressionConditionMonitorService;
   /**
   * severity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#severity MonitorAlertProcessingRuleSuppression#severity}
   */
   readonly severity?: MonitorAlertProcessingRuleSuppressionConditionSeverity;
   /**
   * signal_type block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#signal_type MonitorAlertProcessingRuleSuppression#signal_type}
   */
   readonly signalType?: MonitorAlertProcessingRuleSuppressionConditionSignalType;
   /**
   * target_resource block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#target_resource MonitorAlertProcessingRuleSuppression#target_resource}
   */
   readonly targetResource?: MonitorAlertProcessingRuleSuppressionConditionTargetResource;
   /**
   * target_resource_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#target_resource_group MonitorAlertProcessingRuleSuppression#target_resource_group}
   */
   readonly targetResourceGroup?: MonitorAlertProcessingRuleSuppressionConditionTargetResourceGroup;
   /**
   * target_resource_type block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#target_resource_type MonitorAlertProcessingRuleSuppression#target_resource_type}
   */
   readonly targetResourceType?: MonitorAlertProcessingRuleSuppressionConditionTargetResourceType;
@@ -1782,19 +1782,19 @@ export class MonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeeklyList e
 export interface MonitorAlertProcessingRuleSuppressionScheduleRecurrence {
   /**
   * daily block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#daily MonitorAlertProcessingRuleSuppression#daily}
   */
   readonly daily?: MonitorAlertProcessingRuleSuppressionScheduleRecurrenceDaily[] | cdktf.IResolvable;
   /**
   * monthly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#monthly MonitorAlertProcessingRuleSuppression#monthly}
   */
   readonly monthly?: MonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthly[] | cdktf.IResolvable;
   /**
   * weekly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#weekly MonitorAlertProcessingRuleSuppression#weekly}
   */
   readonly weekly?: MonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeekly[] | cdktf.IResolvable;
@@ -1919,7 +1919,7 @@ export interface MonitorAlertProcessingRuleSuppressionSchedule {
   readonly timeZone?: string;
   /**
   * recurrence block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_suppression#recurrence MonitorAlertProcessingRuleSuppression#recurrence}
   */
   readonly recurrence?: MonitorAlertProcessingRuleSuppressionScheduleRecurrence;

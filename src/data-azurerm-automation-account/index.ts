@@ -29,7 +29,7 @@ export interface DataAzurermAutomationAccountConfig extends cdktf.TerraformMetaA
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/automation_account#timeouts DataAzurermAutomationAccount#timeouts}
   */
   readonly timeouts?: DataAzurermAutomationAccountTimeouts;

@@ -65,13 +65,13 @@ export interface ExpressRouteCircuitConfig extends cdktf.TerraformMetaArguments 
   readonly tags?: { [key: string]: string };
   /**
   * sku block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_circuit#sku ExpressRouteCircuit#sku}
   */
   readonly sku: ExpressRouteCircuitSku;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_circuit#timeouts ExpressRouteCircuit#timeouts}
   */
   readonly timeouts?: ExpressRouteCircuitTimeouts;

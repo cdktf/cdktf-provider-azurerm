@@ -33,7 +33,7 @@ export interface DataAzurermDatabricksWorkspaceConfig extends cdktf.TerraformMet
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/databricks_workspace#timeouts DataAzurermDatabricksWorkspace#timeouts}
   */
   readonly timeouts?: DataAzurermDatabricksWorkspaceTimeouts;

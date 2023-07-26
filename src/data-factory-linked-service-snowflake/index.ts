@@ -53,13 +53,13 @@ export interface DataFactoryLinkedServiceSnowflakeConfig extends cdktf.Terraform
   readonly parameters?: { [key: string]: string };
   /**
   * key_vault_password block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_snowflake#key_vault_password DataFactoryLinkedServiceSnowflake#key_vault_password}
   */
   readonly keyVaultPassword?: DataFactoryLinkedServiceSnowflakeKeyVaultPassword;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_snowflake#timeouts DataFactoryLinkedServiceSnowflake#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceSnowflakeTimeouts;

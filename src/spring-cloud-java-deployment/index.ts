@@ -45,13 +45,13 @@ export interface SpringCloudJavaDeploymentConfig extends cdktf.TerraformMetaArgu
   readonly springCloudAppId: string;
   /**
   * quota block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_java_deployment#quota SpringCloudJavaDeployment#quota}
   */
   readonly quota?: SpringCloudJavaDeploymentQuota;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_java_deployment#timeouts SpringCloudJavaDeployment#timeouts}
   */
   readonly timeouts?: SpringCloudJavaDeploymentTimeouts;

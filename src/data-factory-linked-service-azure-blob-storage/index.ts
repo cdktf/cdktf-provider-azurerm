@@ -85,19 +85,19 @@ export interface DataFactoryLinkedServiceAzureBlobStorageConfig extends cdktf.Te
   readonly useManagedIdentity?: boolean | cdktf.IResolvable;
   /**
   * key_vault_sas_token block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_blob_storage#key_vault_sas_token DataFactoryLinkedServiceAzureBlobStorage#key_vault_sas_token}
   */
   readonly keyVaultSasToken?: DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasToken;
   /**
   * service_principal_linked_key_vault_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_blob_storage#service_principal_linked_key_vault_key DataFactoryLinkedServiceAzureBlobStorage#service_principal_linked_key_vault_key}
   */
   readonly servicePrincipalLinkedKeyVaultKey?: DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKey;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_blob_storage#timeouts DataFactoryLinkedServiceAzureBlobStorage#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceAzureBlobStorageTimeouts;

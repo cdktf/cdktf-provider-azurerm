@@ -37,13 +37,13 @@ export interface CosmosdbSqlDatabaseConfig extends cdktf.TerraformMetaArguments 
   readonly throughput?: number;
   /**
   * autoscale_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_sql_database#autoscale_settings CosmosdbSqlDatabase#autoscale_settings}
   */
   readonly autoscaleSettings?: CosmosdbSqlDatabaseAutoscaleSettings;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_sql_database#timeouts CosmosdbSqlDatabase#timeouts}
   */
   readonly timeouts?: CosmosdbSqlDatabaseTimeouts;

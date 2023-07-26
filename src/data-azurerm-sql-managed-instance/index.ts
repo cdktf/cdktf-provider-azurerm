@@ -33,7 +33,7 @@ export interface DataAzurermSqlManagedInstanceConfig extends cdktf.TerraformMeta
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sql_managed_instance#timeouts DataAzurermSqlManagedInstance#timeouts}
   */
   readonly timeouts?: DataAzurermSqlManagedInstanceTimeouts;

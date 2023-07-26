@@ -61,13 +61,13 @@ export interface DataFactoryTriggerCustomEventConfig extends cdktf.TerraformMeta
   readonly subjectEndsWith?: string;
   /**
   * pipeline block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_trigger_custom_event#pipeline DataFactoryTriggerCustomEvent#pipeline}
   */
   readonly pipeline: DataFactoryTriggerCustomEventPipeline[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_trigger_custom_event#timeouts DataFactoryTriggerCustomEvent#timeouts}
   */
   readonly timeouts?: DataFactoryTriggerCustomEventTimeouts;

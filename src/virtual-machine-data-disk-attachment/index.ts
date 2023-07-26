@@ -45,7 +45,7 @@ export interface VirtualMachineDataDiskAttachmentConfig extends cdktf.TerraformM
   readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_data_disk_attachment#timeouts VirtualMachineDataDiskAttachment#timeouts}
   */
   readonly timeouts?: VirtualMachineDataDiskAttachmentTimeouts;

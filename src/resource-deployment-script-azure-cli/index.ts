@@ -73,31 +73,31 @@ export interface ResourceDeploymentScriptAzureCliConfig extends cdktf.TerraformM
   readonly version: string;
   /**
   * container block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_deployment_script_azure_cli#container ResourceDeploymentScriptAzureCli#container}
   */
   readonly container?: ResourceDeploymentScriptAzureCliContainer;
   /**
   * environment_variable block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_deployment_script_azure_cli#environment_variable ResourceDeploymentScriptAzureCli#environment_variable}
   */
   readonly environmentVariable?: ResourceDeploymentScriptAzureCliEnvironmentVariable[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_deployment_script_azure_cli#identity ResourceDeploymentScriptAzureCli#identity}
   */
   readonly identity?: ResourceDeploymentScriptAzureCliIdentity;
   /**
   * storage_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_deployment_script_azure_cli#storage_account ResourceDeploymentScriptAzureCli#storage_account}
   */
   readonly storageAccount?: ResourceDeploymentScriptAzureCliStorageAccount;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_deployment_script_azure_cli#timeouts ResourceDeploymentScriptAzureCli#timeouts}
   */
   readonly timeouts?: ResourceDeploymentScriptAzureCliTimeouts;

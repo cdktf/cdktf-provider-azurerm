@@ -45,7 +45,7 @@ export interface AutomationVariableBoolConfig extends cdktf.TerraformMetaArgumen
   readonly value?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_variable_bool#timeouts AutomationVariableBool#timeouts}
   */
   readonly timeouts?: AutomationVariableBoolTimeouts;

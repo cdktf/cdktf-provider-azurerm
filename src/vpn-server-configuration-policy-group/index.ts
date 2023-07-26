@@ -37,13 +37,13 @@ export interface VpnServerConfigurationPolicyGroupConfig extends cdktf.Terraform
   readonly vpnServerConfigurationId: string;
   /**
   * policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_server_configuration_policy_group#policy VpnServerConfigurationPolicyGroup#policy}
   */
   readonly policy: VpnServerConfigurationPolicyGroupPolicy[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_server_configuration_policy_group#timeouts VpnServerConfigurationPolicyGroup#timeouts}
   */
   readonly timeouts?: VpnServerConfigurationPolicyGroupTimeouts;

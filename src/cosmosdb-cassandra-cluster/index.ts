@@ -73,13 +73,13 @@ export interface CosmosdbCassandraClusterConfig extends cdktf.TerraformMetaArgum
   readonly version?: string;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_cassandra_cluster#identity CosmosdbCassandraCluster#identity}
   */
   readonly identity?: CosmosdbCassandraClusterIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_cassandra_cluster#timeouts CosmosdbCassandraCluster#timeouts}
   */
   readonly timeouts?: CosmosdbCassandraClusterTimeouts;

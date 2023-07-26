@@ -29,7 +29,7 @@ export interface EventhubNamespaceCustomerManagedKeyConfig extends cdktf.Terrafo
   readonly keyVaultKeyIds: string[];
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventhub_namespace_customer_managed_key#timeouts EventhubNamespaceCustomerManagedKey#timeouts}
   */
   readonly timeouts?: EventhubNamespaceCustomerManagedKeyTimeouts;

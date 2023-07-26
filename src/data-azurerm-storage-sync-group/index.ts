@@ -29,7 +29,7 @@ export interface DataAzurermStorageSyncGroupConfig extends cdktf.TerraformMetaAr
   readonly storageSyncId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/storage_sync_group#timeouts DataAzurermStorageSyncGroup#timeouts}
   */
   readonly timeouts?: DataAzurermStorageSyncGroupTimeouts;

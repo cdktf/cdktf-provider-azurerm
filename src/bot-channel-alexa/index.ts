@@ -37,7 +37,7 @@ export interface BotChannelAlexaConfig extends cdktf.TerraformMetaArguments {
   readonly skillId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#timeouts BotChannelAlexa#timeouts}
   */
   readonly timeouts?: BotChannelAlexaTimeouts;

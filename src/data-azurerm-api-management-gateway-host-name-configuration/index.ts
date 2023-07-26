@@ -33,7 +33,7 @@ export interface DataAzurermApiManagementGatewayHostNameConfigurationConfig exte
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/api_management_gateway_host_name_configuration#timeouts DataAzurermApiManagementGatewayHostNameConfiguration#timeouts}
   */
   readonly timeouts?: DataAzurermApiManagementGatewayHostNameConfigurationTimeouts;

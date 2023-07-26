@@ -89,31 +89,31 @@ export interface SentinelMetadataConfig extends cdktf.TerraformMetaArguments {
   readonly workspaceId: string;
   /**
   * author block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_metadata#author SentinelMetadata#author}
   */
   readonly author?: SentinelMetadataAuthor;
   /**
   * category block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_metadata#category SentinelMetadata#category}
   */
   readonly category?: SentinelMetadataCategory;
   /**
   * source block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_metadata#source SentinelMetadata#source}
   */
   readonly source?: SentinelMetadataSource;
   /**
   * support block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_metadata#support SentinelMetadata#support}
   */
   readonly support?: SentinelMetadataSupport;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_metadata#timeouts SentinelMetadata#timeouts}
   */
   readonly timeouts?: SentinelMetadataTimeouts;

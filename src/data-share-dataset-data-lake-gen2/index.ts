@@ -45,7 +45,7 @@ export interface DataShareDatasetDataLakeGen2Config extends cdktf.TerraformMetaA
   readonly storageAccountId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_share_dataset_data_lake_gen2#timeouts DataShareDatasetDataLakeGen2#timeouts}
   */
   readonly timeouts?: DataShareDatasetDataLakeGen2Timeouts;

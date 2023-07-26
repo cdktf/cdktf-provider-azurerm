@@ -41,7 +41,7 @@ export interface SentinelDataConnectorAwsS3Config extends cdktf.TerraformMetaArg
   readonly sqsUrls: string[];
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_data_connector_aws_s3#timeouts SentinelDataConnectorAwsS3#timeouts}
   */
   readonly timeouts?: SentinelDataConnectorAwsS3Timeouts;

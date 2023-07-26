@@ -53,13 +53,13 @@ export interface HealthcareMedtechServiceConfig extends cdktf.TerraformMetaArgum
   readonly workspaceId: string;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_medtech_service#identity HealthcareMedtechService#identity}
   */
   readonly identity?: HealthcareMedtechServiceIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_medtech_service#timeouts HealthcareMedtechService#timeouts}
   */
   readonly timeouts?: HealthcareMedtechServiceTimeouts;

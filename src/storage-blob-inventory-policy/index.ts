@@ -25,13 +25,13 @@ export interface StorageBlobInventoryPolicyConfig extends cdktf.TerraformMetaArg
   readonly storageAccountId: string;
   /**
   * rules block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_blob_inventory_policy#rules StorageBlobInventoryPolicy#rules}
   */
   readonly rules: StorageBlobInventoryPolicyRules[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_blob_inventory_policy#timeouts StorageBlobInventoryPolicy#timeouts}
   */
   readonly timeouts?: StorageBlobInventoryPolicyTimeouts;
@@ -260,7 +260,7 @@ export interface StorageBlobInventoryPolicyRules {
   readonly storageContainerName: string;
   /**
   * filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_blob_inventory_policy#filter StorageBlobInventoryPolicy#filter}
   */
   readonly filter?: StorageBlobInventoryPolicyRulesFilter;

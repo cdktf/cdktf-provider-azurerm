@@ -14,25 +14,25 @@ import * as cdktf from 'cdktf';
 export interface ContainerAppEnvironmentStorageConfig extends cdktf.TerraformMetaArguments {
   /**
   * The Storage Account Access Key.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment_storage#access_key ContainerAppEnvironmentStorage#access_key}
   */
   readonly accessKey: string;
   /**
   * The access mode to connect this storage to the Container App. Possible values include `ReadOnly` and `ReadWrite`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment_storage#access_mode ContainerAppEnvironmentStorage#access_mode}
   */
   readonly accessMode: string;
   /**
   * The Azure Storage Account in which the Share to be used is located.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment_storage#account_name ContainerAppEnvironmentStorage#account_name}
   */
   readonly accountName: string;
   /**
   * The ID of the Container App Environment to which this storage belongs.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment_storage#container_app_environment_id ContainerAppEnvironmentStorage#container_app_environment_id}
   */
   readonly containerAppEnvironmentId: string;
@@ -45,19 +45,19 @@ export interface ContainerAppEnvironmentStorageConfig extends cdktf.TerraformMet
   readonly id?: string;
   /**
   * The name for this Storage.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment_storage#name ContainerAppEnvironmentStorage#name}
   */
   readonly name: string;
   /**
   * The name of the Azure Storage Share to use.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment_storage#share_name ContainerAppEnvironmentStorage#share_name}
   */
   readonly shareName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment_storage#timeouts ContainerAppEnvironmentStorage#timeouts}
   */
   readonly timeouts?: ContainerAppEnvironmentStorageTimeouts;

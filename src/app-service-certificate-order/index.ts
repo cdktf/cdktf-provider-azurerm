@@ -61,7 +61,7 @@ export interface AppServiceCertificateOrderConfig extends cdktf.TerraformMetaArg
   readonly validityInYears?: number;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_certificate_order#timeouts AppServiceCertificateOrder#timeouts}
   */
   readonly timeouts?: AppServiceCertificateOrderTimeouts;

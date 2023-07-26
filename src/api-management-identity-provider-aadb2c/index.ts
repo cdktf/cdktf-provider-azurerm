@@ -65,7 +65,7 @@ export interface ApiManagementIdentityProviderAadb2CConfig extends cdktf.Terrafo
   readonly signupPolicy: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_identity_provider_aadb2c#timeouts ApiManagementIdentityProviderAadb2C#timeouts}
   */
   readonly timeouts?: ApiManagementIdentityProviderAadb2CTimeouts;

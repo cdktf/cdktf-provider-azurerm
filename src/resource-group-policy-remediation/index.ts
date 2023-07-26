@@ -61,7 +61,7 @@ export interface ResourceGroupPolicyRemediationConfig extends cdktf.TerraformMet
   readonly resourceGroupId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_policy_remediation#timeouts ResourceGroupPolicyRemediation#timeouts}
   */
   readonly timeouts?: ResourceGroupPolicyRemediationTimeouts;

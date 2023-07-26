@@ -149,13 +149,13 @@ export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   readonly zone?: string;
   /**
   * encryption_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/managed_disk#encryption_settings ManagedDisk#encryption_settings}
   */
   readonly encryptionSettings?: ManagedDiskEncryptionSettings;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/managed_disk#timeouts ManagedDisk#timeouts}
   */
   readonly timeouts?: ManagedDiskTimeouts;
@@ -339,13 +339,13 @@ export interface ManagedDiskEncryptionSettings {
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * disk_encryption_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/managed_disk#disk_encryption_key ManagedDisk#disk_encryption_key}
   */
   readonly diskEncryptionKey?: ManagedDiskEncryptionSettingsDiskEncryptionKey;
   /**
   * key_encryption_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/managed_disk#key_encryption_key ManagedDisk#key_encryption_key}
   */
   readonly keyEncryptionKey?: ManagedDiskEncryptionSettingsKeyEncryptionKey;

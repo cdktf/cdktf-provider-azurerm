@@ -45,13 +45,13 @@ export interface SpringCloudApiPortalConfig extends cdktf.TerraformMetaArguments
   readonly springCloudServiceId: string;
   /**
   * sso block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_api_portal#sso SpringCloudApiPortal#sso}
   */
   readonly sso?: SpringCloudApiPortalSso;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_api_portal#timeouts SpringCloudApiPortal#timeouts}
   */
   readonly timeouts?: SpringCloudApiPortalTimeouts;

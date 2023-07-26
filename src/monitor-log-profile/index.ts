@@ -41,13 +41,13 @@ export interface MonitorLogProfileConfig extends cdktf.TerraformMetaArguments {
   readonly storageAccountId?: string;
   /**
   * retention_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_log_profile#retention_policy MonitorLogProfile#retention_policy}
   */
   readonly retentionPolicy: MonitorLogProfileRetentionPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_log_profile#timeouts MonitorLogProfile#timeouts}
   */
   readonly timeouts?: MonitorLogProfileTimeouts;

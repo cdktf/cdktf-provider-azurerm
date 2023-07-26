@@ -53,25 +53,25 @@ export interface MonitorDiagnosticSettingConfig extends cdktf.TerraformMetaArgum
   readonly targetResourceId: string;
   /**
   * enabled_log block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_diagnostic_setting#enabled_log MonitorDiagnosticSetting#enabled_log}
   */
   readonly enabledLog?: MonitorDiagnosticSettingEnabledLog[] | cdktf.IResolvable;
   /**
   * log block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_diagnostic_setting#log MonitorDiagnosticSetting#log}
   */
   readonly log?: MonitorDiagnosticSettingLog[] | cdktf.IResolvable;
   /**
   * metric block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_diagnostic_setting#metric MonitorDiagnosticSetting#metric}
   */
   readonly metric?: MonitorDiagnosticSettingMetric[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_diagnostic_setting#timeouts MonitorDiagnosticSetting#timeouts}
   */
   readonly timeouts?: MonitorDiagnosticSettingTimeouts;
@@ -176,7 +176,7 @@ export interface MonitorDiagnosticSettingEnabledLog {
   readonly categoryGroup?: string;
   /**
   * retention_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_diagnostic_setting#retention_policy MonitorDiagnosticSetting#retention_policy}
   */
   readonly retentionPolicy?: MonitorDiagnosticSettingEnabledLogRetentionPolicy;
@@ -422,7 +422,7 @@ export interface MonitorDiagnosticSettingLog {
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * retention_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_diagnostic_setting#retention_policy MonitorDiagnosticSetting#retention_policy}
   */
   readonly retentionPolicy?: MonitorDiagnosticSettingLogRetentionPolicy;
@@ -687,7 +687,7 @@ export interface MonitorDiagnosticSettingMetric {
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * retention_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_diagnostic_setting#retention_policy MonitorDiagnosticSetting#retention_policy}
   */
   readonly retentionPolicy?: MonitorDiagnosticSettingMetricRetentionPolicy;

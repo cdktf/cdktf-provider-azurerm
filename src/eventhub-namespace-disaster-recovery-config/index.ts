@@ -37,7 +37,7 @@ export interface EventhubNamespaceDisasterRecoveryConfigConfig extends cdktf.Ter
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventhub_namespace_disaster_recovery_config#timeouts EventhubNamespaceDisasterRecoveryConfig#timeouts}
   */
   readonly timeouts?: EventhubNamespaceDisasterRecoveryConfigTimeouts;

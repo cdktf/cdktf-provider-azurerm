@@ -37,7 +37,7 @@ export interface AutomationHybridRunbookWorkerGroupConfig extends cdktf.Terrafor
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_hybrid_runbook_worker_group#timeouts AutomationHybridRunbookWorkerGroup#timeouts}
   */
   readonly timeouts?: AutomationHybridRunbookWorkerGroupTimeouts;

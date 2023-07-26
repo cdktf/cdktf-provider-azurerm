@@ -33,19 +33,19 @@ export interface WebPubsubHubConfig extends cdktf.TerraformMetaArguments {
   readonly webPubsubId: string;
   /**
   * event_handler block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_pubsub_hub#event_handler WebPubsubHub#event_handler}
   */
   readonly eventHandler?: WebPubsubHubEventHandler[] | cdktf.IResolvable;
   /**
   * event_listener block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_pubsub_hub#event_listener WebPubsubHub#event_listener}
   */
   readonly eventListener?: WebPubsubHubEventListener[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_pubsub_hub#timeouts WebPubsubHub#timeouts}
   */
   readonly timeouts?: WebPubsubHubTimeouts;
@@ -127,7 +127,7 @@ export interface WebPubsubHubEventHandler {
   readonly userEventPattern?: string;
   /**
   * auth block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_pubsub_hub#auth WebPubsubHub#auth}
   */
   readonly auth?: WebPubsubHubEventHandlerAuth;

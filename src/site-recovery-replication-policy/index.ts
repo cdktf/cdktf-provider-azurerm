@@ -41,7 +41,7 @@ export interface SiteRecoveryReplicationPolicyConfig extends cdktf.TerraformMeta
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_policy#timeouts SiteRecoveryReplicationPolicy#timeouts}
   */
   readonly timeouts?: SiteRecoveryReplicationPolicyTimeouts;

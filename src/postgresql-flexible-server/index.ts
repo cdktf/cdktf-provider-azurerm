@@ -93,37 +93,37 @@ export interface PostgresqlFlexibleServerConfig extends cdktf.TerraformMetaArgum
   readonly zone?: string;
   /**
   * authentication block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_flexible_server#authentication PostgresqlFlexibleServer#authentication}
   */
   readonly authentication?: PostgresqlFlexibleServerAuthentication;
   /**
   * customer_managed_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_flexible_server#customer_managed_key PostgresqlFlexibleServer#customer_managed_key}
   */
   readonly customerManagedKey?: PostgresqlFlexibleServerCustomerManagedKey;
   /**
   * high_availability block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_flexible_server#high_availability PostgresqlFlexibleServer#high_availability}
   */
   readonly highAvailability?: PostgresqlFlexibleServerHighAvailability;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_flexible_server#identity PostgresqlFlexibleServer#identity}
   */
   readonly identity?: PostgresqlFlexibleServerIdentity;
   /**
   * maintenance_window block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_flexible_server#maintenance_window PostgresqlFlexibleServer#maintenance_window}
   */
   readonly maintenanceWindow?: PostgresqlFlexibleServerMaintenanceWindow;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_flexible_server#timeouts PostgresqlFlexibleServer#timeouts}
   */
   readonly timeouts?: PostgresqlFlexibleServerTimeouts;

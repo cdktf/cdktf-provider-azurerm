@@ -33,13 +33,13 @@ export interface PolicyVirtualMachineConfigurationAssignmentConfig extends cdktf
   readonly virtualMachineId: string;
   /**
   * configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/policy_virtual_machine_configuration_assignment#configuration PolicyVirtualMachineConfigurationAssignment#configuration}
   */
   readonly configuration: PolicyVirtualMachineConfigurationAssignmentConfiguration;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/policy_virtual_machine_configuration_assignment#timeouts PolicyVirtualMachineConfigurationAssignment#timeouts}
   */
   readonly timeouts?: PolicyVirtualMachineConfigurationAssignmentTimeouts;
@@ -181,7 +181,7 @@ export interface PolicyVirtualMachineConfigurationAssignmentConfiguration {
   readonly version?: string;
   /**
   * parameter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/policy_virtual_machine_configuration_assignment#parameter PolicyVirtualMachineConfigurationAssignment#parameter}
   */
   readonly parameter?: PolicyVirtualMachineConfigurationAssignmentConfigurationParameter[] | cdktf.IResolvable;

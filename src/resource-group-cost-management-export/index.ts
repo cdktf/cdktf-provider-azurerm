@@ -45,19 +45,19 @@ export interface ResourceGroupCostManagementExportConfig extends cdktf.Terraform
   readonly resourceGroupId: string;
   /**
   * export_data_options block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_cost_management_export#export_data_options ResourceGroupCostManagementExport#export_data_options}
   */
   readonly exportDataOptions: ResourceGroupCostManagementExportExportDataOptions;
   /**
   * export_data_storage_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_cost_management_export#export_data_storage_location ResourceGroupCostManagementExport#export_data_storage_location}
   */
   readonly exportDataStorageLocation: ResourceGroupCostManagementExportExportDataStorageLocation;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_cost_management_export#timeouts ResourceGroupCostManagementExport#timeouts}
   */
   readonly timeouts?: ResourceGroupCostManagementExportTimeouts;

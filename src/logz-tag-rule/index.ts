@@ -37,13 +37,13 @@ export interface LogzTagRuleConfig extends cdktf.TerraformMetaArguments {
   readonly sendSubscriptionLogs?: boolean | cdktf.IResolvable;
   /**
   * tag_filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logz_tag_rule#tag_filter LogzTagRule#tag_filter}
   */
   readonly tagFilter?: LogzTagRuleTagFilter[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logz_tag_rule#timeouts LogzTagRule#timeouts}
   */
   readonly timeouts?: LogzTagRuleTimeouts;

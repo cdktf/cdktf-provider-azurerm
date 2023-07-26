@@ -29,7 +29,7 @@ export interface DataAzurermMobileNetworkSimPolicyConfig extends cdktf.Terraform
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/mobile_network_sim_policy#timeouts DataAzurermMobileNetworkSimPolicy#timeouts}
   */
   readonly timeouts?: DataAzurermMobileNetworkSimPolicyTimeouts;

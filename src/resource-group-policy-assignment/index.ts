@@ -61,31 +61,31 @@ export interface ResourceGroupPolicyAssignmentConfig extends cdktf.TerraformMeta
   readonly resourceGroupId: string;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_policy_assignment#identity ResourceGroupPolicyAssignment#identity}
   */
   readonly identity?: ResourceGroupPolicyAssignmentIdentity;
   /**
   * non_compliance_message block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_policy_assignment#non_compliance_message ResourceGroupPolicyAssignment#non_compliance_message}
   */
   readonly nonComplianceMessage?: ResourceGroupPolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable;
   /**
   * overrides block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_policy_assignment#overrides ResourceGroupPolicyAssignment#overrides}
   */
   readonly overrides?: ResourceGroupPolicyAssignmentOverrides[] | cdktf.IResolvable;
   /**
   * resource_selectors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_policy_assignment#resource_selectors ResourceGroupPolicyAssignment#resource_selectors}
   */
   readonly resourceSelectors?: ResourceGroupPolicyAssignmentResourceSelectors[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_policy_assignment#timeouts ResourceGroupPolicyAssignment#timeouts}
   */
   readonly timeouts?: ResourceGroupPolicyAssignmentTimeouts;
@@ -446,7 +446,7 @@ export interface ResourceGroupPolicyAssignmentOverrides {
   readonly value: string;
   /**
   * selectors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_policy_assignment#selectors ResourceGroupPolicyAssignment#selectors}
   */
   readonly selectors?: ResourceGroupPolicyAssignmentOverridesSelectors[] | cdktf.IResolvable;
@@ -717,7 +717,7 @@ export interface ResourceGroupPolicyAssignmentResourceSelectors {
   readonly name?: string;
   /**
   * selectors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_group_policy_assignment#selectors ResourceGroupPolicyAssignment#selectors}
   */
   readonly selectors: ResourceGroupPolicyAssignmentResourceSelectorsSelectors[] | cdktf.IResolvable;

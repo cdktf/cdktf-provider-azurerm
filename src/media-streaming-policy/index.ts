@@ -37,31 +37,31 @@ export interface MediaStreamingPolicyConfig extends cdktf.TerraformMetaArguments
   readonly resourceGroupName: string;
   /**
   * common_encryption_cbcs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#common_encryption_cbcs MediaStreamingPolicy#common_encryption_cbcs}
   */
   readonly commonEncryptionCbcs?: MediaStreamingPolicyCommonEncryptionCbcs;
   /**
   * common_encryption_cenc block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#common_encryption_cenc MediaStreamingPolicy#common_encryption_cenc}
   */
   readonly commonEncryptionCenc?: MediaStreamingPolicyCommonEncryptionCenc;
   /**
   * envelope_encryption block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#envelope_encryption MediaStreamingPolicy#envelope_encryption}
   */
   readonly envelopeEncryption?: MediaStreamingPolicyEnvelopeEncryption;
   /**
   * no_encryption_enabled_protocols block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#no_encryption_enabled_protocols MediaStreamingPolicy#no_encryption_enabled_protocols}
   */
   readonly noEncryptionEnabledProtocols?: MediaStreamingPolicyNoEncryptionEnabledProtocols;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#timeouts MediaStreamingPolicy#timeouts}
   */
   readonly timeouts?: MediaStreamingPolicyTimeouts;
@@ -461,25 +461,25 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
 export interface MediaStreamingPolicyCommonEncryptionCbcs {
   /**
   * clear_key_encryption block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#clear_key_encryption MediaStreamingPolicy#clear_key_encryption}
   */
   readonly clearKeyEncryption?: MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryption;
   /**
   * default_content_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#default_content_key MediaStreamingPolicy#default_content_key}
   */
   readonly defaultContentKey?: MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey;
   /**
   * drm_fairplay block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#drm_fairplay MediaStreamingPolicy#drm_fairplay}
   */
   readonly drmFairplay?: MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay;
   /**
   * enabled_protocols block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#enabled_protocols MediaStreamingPolicy#enabled_protocols}
   */
   readonly enabledProtocols?: MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols;
@@ -819,7 +819,7 @@ export class MediaStreamingPolicyCommonEncryptionCencClearTrackConditionList ext
 export interface MediaStreamingPolicyCommonEncryptionCencClearTrack {
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#condition MediaStreamingPolicy#condition}
   */
   readonly condition: MediaStreamingPolicyCommonEncryptionCencClearTrackCondition[] | cdktf.IResolvable;
@@ -1057,7 +1057,7 @@ export class MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTra
 export interface MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrack {
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#condition MediaStreamingPolicy#condition}
   */
   readonly condition: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackCondition[] | cdktf.IResolvable;
@@ -1161,7 +1161,7 @@ export interface MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappin
   readonly policyName?: string;
   /**
   * track block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#track MediaStreamingPolicy#track}
   */
   readonly track: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrack[] | cdktf.IResolvable;
@@ -1637,37 +1637,37 @@ export interface MediaStreamingPolicyCommonEncryptionCenc {
   readonly drmWidevineCustomLicenseAcquisitionUrlTemplate?: string;
   /**
   * clear_key_encryption block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#clear_key_encryption MediaStreamingPolicy#clear_key_encryption}
   */
   readonly clearKeyEncryption?: MediaStreamingPolicyCommonEncryptionCencClearKeyEncryption;
   /**
   * clear_track block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#clear_track MediaStreamingPolicy#clear_track}
   */
   readonly clearTrack?: MediaStreamingPolicyCommonEncryptionCencClearTrack[] | cdktf.IResolvable;
   /**
   * content_key_to_track_mapping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#content_key_to_track_mapping MediaStreamingPolicy#content_key_to_track_mapping}
   */
   readonly contentKeyToTrackMapping?: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMapping[] | cdktf.IResolvable;
   /**
   * default_content_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#default_content_key MediaStreamingPolicy#default_content_key}
   */
   readonly defaultContentKey?: MediaStreamingPolicyCommonEncryptionCencDefaultContentKey;
   /**
   * drm_playready block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#drm_playready MediaStreamingPolicy#drm_playready}
   */
   readonly drmPlayready?: MediaStreamingPolicyCommonEncryptionCencDrmPlayready;
   /**
   * enabled_protocols block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#enabled_protocols MediaStreamingPolicy#enabled_protocols}
   */
   readonly enabledProtocols?: MediaStreamingPolicyCommonEncryptionCencEnabledProtocols;
@@ -2114,13 +2114,13 @@ export interface MediaStreamingPolicyEnvelopeEncryption {
   readonly customKeysAcquisitionUrlTemplate?: string;
   /**
   * default_content_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#default_content_key MediaStreamingPolicy#default_content_key}
   */
   readonly defaultContentKey?: MediaStreamingPolicyEnvelopeEncryptionDefaultContentKey;
   /**
   * enabled_protocols block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_policy#enabled_protocols MediaStreamingPolicy#enabled_protocols}
   */
   readonly enabledProtocols?: MediaStreamingPolicyEnvelopeEncryptionEnabledProtocols;

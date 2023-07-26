@@ -57,7 +57,7 @@ export interface MachineLearningDatastoreBlobstorageConfig extends cdktf.Terrafo
   readonly workspaceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/machine_learning_datastore_blobstorage#timeouts MachineLearningDatastoreBlobstorage#timeouts}
   */
   readonly timeouts?: MachineLearningDatastoreBlobstorageTimeouts;

@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface DataAzurermAadb2CDirectoryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Domain name of the B2C tenant, including onmicrosoft.com suffix.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/aadb2c_directory#domain_name DataAzurermAadb2CDirectory#domain_name}
   */
   readonly domainName: string;
@@ -31,7 +31,7 @@ export interface DataAzurermAadb2CDirectoryConfig extends cdktf.TerraformMetaArg
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/aadb2c_directory#timeouts DataAzurermAadb2CDirectory#timeouts}
   */
   readonly timeouts?: DataAzurermAadb2CDirectoryTimeouts;

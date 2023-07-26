@@ -37,13 +37,13 @@ export interface NetappAccountConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * active_directory block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_account#active_directory NetappAccount#active_directory}
   */
   readonly activeDirectory?: NetappAccountActiveDirectory;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_account#timeouts NetappAccount#timeouts}
   */
   readonly timeouts?: NetappAccountTimeouts;

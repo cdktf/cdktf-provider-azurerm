@@ -73,31 +73,31 @@ export interface ResourceDeploymentScriptAzurePowerShellConfig extends cdktf.Ter
   readonly version: string;
   /**
   * container block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_deployment_script_azure_power_shell#container ResourceDeploymentScriptAzurePowerShell#container}
   */
   readonly container?: ResourceDeploymentScriptAzurePowerShellContainer;
   /**
   * environment_variable block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_deployment_script_azure_power_shell#environment_variable ResourceDeploymentScriptAzurePowerShell#environment_variable}
   */
   readonly environmentVariable?: ResourceDeploymentScriptAzurePowerShellEnvironmentVariable[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_deployment_script_azure_power_shell#identity ResourceDeploymentScriptAzurePowerShell#identity}
   */
   readonly identity?: ResourceDeploymentScriptAzurePowerShellIdentity;
   /**
   * storage_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_deployment_script_azure_power_shell#storage_account ResourceDeploymentScriptAzurePowerShell#storage_account}
   */
   readonly storageAccount?: ResourceDeploymentScriptAzurePowerShellStorageAccount;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_deployment_script_azure_power_shell#timeouts ResourceDeploymentScriptAzurePowerShell#timeouts}
   */
   readonly timeouts?: ResourceDeploymentScriptAzurePowerShellTimeouts;

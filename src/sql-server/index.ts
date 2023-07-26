@@ -53,19 +53,19 @@ export interface SqlServerConfig extends cdktf.TerraformMetaArguments {
   readonly version: string;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sql_server#identity SqlServer#identity}
   */
   readonly identity?: SqlServerIdentity;
   /**
   * threat_detection_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sql_server#threat_detection_policy SqlServer#threat_detection_policy}
   */
   readonly threatDetectionPolicy?: SqlServerThreatDetectionPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sql_server#timeouts SqlServer#timeouts}
   */
   readonly timeouts?: SqlServerTimeouts;

@@ -53,7 +53,7 @@ export interface VirtualDesktopHostPoolConfig extends cdktf.TerraformMetaArgumen
   readonly personalDesktopAssignmentType?: string;
   /**
   * Preferred App Group type to display
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_desktop_host_pool#preferred_app_group_type VirtualDesktopHostPool#preferred_app_group_type}
   */
   readonly preferredAppGroupType?: string;
@@ -79,13 +79,13 @@ export interface VirtualDesktopHostPoolConfig extends cdktf.TerraformMetaArgumen
   readonly validateEnvironment?: boolean | cdktf.IResolvable;
   /**
   * scheduled_agent_updates block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_desktop_host_pool#scheduled_agent_updates VirtualDesktopHostPool#scheduled_agent_updates}
   */
   readonly scheduledAgentUpdates?: VirtualDesktopHostPoolScheduledAgentUpdates;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_desktop_host_pool#timeouts VirtualDesktopHostPool#timeouts}
   */
   readonly timeouts?: VirtualDesktopHostPoolTimeouts;
@@ -223,7 +223,7 @@ export interface VirtualDesktopHostPoolScheduledAgentUpdates {
   readonly useSessionHostTimezone?: boolean | cdktf.IResolvable;
   /**
   * schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_desktop_host_pool#schedule VirtualDesktopHostPool#schedule}
   */
   readonly schedule?: VirtualDesktopHostPoolScheduledAgentUpdatesSchedule[] | cdktf.IResolvable;

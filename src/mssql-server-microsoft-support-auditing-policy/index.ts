@@ -45,7 +45,7 @@ export interface MssqlServerMicrosoftSupportAuditingPolicyConfig extends cdktf.T
   readonly storageAccountSubscriptionId?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_server_microsoft_support_auditing_policy#timeouts MssqlServerMicrosoftSupportAuditingPolicy#timeouts}
   */
   readonly timeouts?: MssqlServerMicrosoftSupportAuditingPolicyTimeouts;

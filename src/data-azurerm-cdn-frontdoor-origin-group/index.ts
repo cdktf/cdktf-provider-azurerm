@@ -33,7 +33,7 @@ export interface DataAzurermCdnFrontdoorOriginGroupConfig extends cdktf.Terrafor
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/cdn_frontdoor_origin_group#timeouts DataAzurermCdnFrontdoorOriginGroup#timeouts}
   */
   readonly timeouts?: DataAzurermCdnFrontdoorOriginGroupTimeouts;

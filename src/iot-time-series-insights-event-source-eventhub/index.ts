@@ -65,7 +65,7 @@ export interface IotTimeSeriesInsightsEventSourceEventhubConfig extends cdktf.Te
   readonly timestampPropertyName?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iot_time_series_insights_event_source_eventhub#timeouts IotTimeSeriesInsightsEventSourceEventhub#timeouts}
   */
   readonly timeouts?: IotTimeSeriesInsightsEventSourceEventhubTimeouts;

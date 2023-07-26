@@ -45,7 +45,7 @@ export interface SynapseWorkspaceExtendedAuditingPolicyConfig extends cdktf.Terr
   readonly synapseWorkspaceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_workspace_extended_auditing_policy#timeouts SynapseWorkspaceExtendedAuditingPolicy#timeouts}
   */
   readonly timeouts?: SynapseWorkspaceExtendedAuditingPolicyTimeouts;

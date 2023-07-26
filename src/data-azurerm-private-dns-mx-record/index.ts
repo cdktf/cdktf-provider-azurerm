@@ -33,7 +33,7 @@ export interface DataAzurermPrivateDnsMxRecordConfig extends cdktf.TerraformMeta
   readonly zoneName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/private_dns_mx_record#timeouts DataAzurermPrivateDnsMxRecord#timeouts}
   */
   readonly timeouts?: DataAzurermPrivateDnsMxRecordTimeouts;

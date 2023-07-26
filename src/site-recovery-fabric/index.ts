@@ -37,7 +37,7 @@ export interface SiteRecoveryFabricConfig extends cdktf.TerraformMetaArguments {
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_fabric#timeouts SiteRecoveryFabric#timeouts}
   */
   readonly timeouts?: SiteRecoveryFabricTimeouts;

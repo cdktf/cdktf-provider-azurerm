@@ -49,7 +49,7 @@ export interface DatabaseMigrationProjectConfig extends cdktf.TerraformMetaArgum
   readonly targetPlatform: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/database_migration_project#timeouts DatabaseMigrationProject#timeouts}
   */
   readonly timeouts?: DatabaseMigrationProjectTimeouts;

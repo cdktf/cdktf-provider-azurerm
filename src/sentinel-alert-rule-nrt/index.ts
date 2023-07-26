@@ -77,37 +77,37 @@ export interface SentinelAlertRuleNrtConfig extends cdktf.TerraformMetaArguments
   readonly techniques?: string[];
   /**
   * alert_details_override block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_nrt#alert_details_override SentinelAlertRuleNrt#alert_details_override}
   */
   readonly alertDetailsOverride?: SentinelAlertRuleNrtAlertDetailsOverride[] | cdktf.IResolvable;
   /**
   * entity_mapping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_nrt#entity_mapping SentinelAlertRuleNrt#entity_mapping}
   */
   readonly entityMapping?: SentinelAlertRuleNrtEntityMapping[] | cdktf.IResolvable;
   /**
   * event_grouping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_nrt#event_grouping SentinelAlertRuleNrt#event_grouping}
   */
   readonly eventGrouping?: SentinelAlertRuleNrtEventGrouping;
   /**
   * incident block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_nrt#incident SentinelAlertRuleNrt#incident}
   */
   readonly incident?: SentinelAlertRuleNrtIncident;
   /**
   * sentinel_entity_mapping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_nrt#sentinel_entity_mapping SentinelAlertRuleNrt#sentinel_entity_mapping}
   */
   readonly sentinelEntityMapping?: SentinelAlertRuleNrtSentinelEntityMapping[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_nrt#timeouts SentinelAlertRuleNrt#timeouts}
   */
   readonly timeouts?: SentinelAlertRuleNrtTimeouts;
@@ -249,7 +249,7 @@ export interface SentinelAlertRuleNrtAlertDetailsOverride {
   readonly tacticsColumnName?: string;
   /**
   * dynamic_property block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_nrt#dynamic_property SentinelAlertRuleNrt#dynamic_property}
   */
   readonly dynamicProperty?: SentinelAlertRuleNrtAlertDetailsOverrideDynamicProperty[] | cdktf.IResolvable;
@@ -562,7 +562,7 @@ export interface SentinelAlertRuleNrtEntityMapping {
   readonly entityType: string;
   /**
   * field_mapping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_nrt#field_mapping SentinelAlertRuleNrt#field_mapping}
   */
   readonly fieldMapping: SentinelAlertRuleNrtEntityMappingFieldMapping[] | cdktf.IResolvable;
@@ -971,7 +971,7 @@ export interface SentinelAlertRuleNrtIncident {
   readonly createIncidentEnabled: boolean | cdktf.IResolvable;
   /**
   * grouping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_nrt#grouping SentinelAlertRuleNrt#grouping}
   */
   readonly grouping: SentinelAlertRuleNrtIncidentGrouping;

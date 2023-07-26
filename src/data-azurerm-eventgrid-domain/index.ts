@@ -41,7 +41,7 @@ export interface DataAzurermEventgridDomainConfig extends cdktf.TerraformMetaArg
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/eventgrid_domain#timeouts DataAzurermEventgridDomain#timeouts}
   */
   readonly timeouts?: DataAzurermEventgridDomainTimeouts;

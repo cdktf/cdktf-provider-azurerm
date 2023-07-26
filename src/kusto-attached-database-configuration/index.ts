@@ -49,13 +49,13 @@ export interface KustoAttachedDatabaseConfigurationConfig extends cdktf.Terrafor
   readonly resourceGroupName: string;
   /**
   * sharing block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kusto_attached_database_configuration#sharing KustoAttachedDatabaseConfiguration#sharing}
   */
   readonly sharing?: KustoAttachedDatabaseConfigurationSharing;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kusto_attached_database_configuration#timeouts KustoAttachedDatabaseConfiguration#timeouts}
   */
   readonly timeouts?: KustoAttachedDatabaseConfigurationTimeouts;

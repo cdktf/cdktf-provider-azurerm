@@ -65,13 +65,13 @@ export interface ContainerConnectedRegistryConfig extends cdktf.TerraformMetaArg
   readonly syncWindow?: string;
   /**
   * notification block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_connected_registry#notification ContainerConnectedRegistry#notification}
   */
   readonly notification?: ContainerConnectedRegistryNotification[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_connected_registry#timeouts ContainerConnectedRegistry#timeouts}
   */
   readonly timeouts?: ContainerConnectedRegistryTimeouts;

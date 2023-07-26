@@ -61,13 +61,13 @@ export interface StreamAnalyticsReferenceInputBlobConfig extends cdktf.Terraform
   readonly timeFormat: string;
   /**
   * serialization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_reference_input_blob#serialization StreamAnalyticsReferenceInputBlob#serialization}
   */
   readonly serialization: StreamAnalyticsReferenceInputBlobSerialization;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_reference_input_blob#timeouts StreamAnalyticsReferenceInputBlob#timeouts}
   */
   readonly timeouts?: StreamAnalyticsReferenceInputBlobTimeouts;

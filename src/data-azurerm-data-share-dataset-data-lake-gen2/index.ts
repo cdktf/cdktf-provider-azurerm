@@ -29,7 +29,7 @@ export interface DataAzurermDataShareDatasetDataLakeGen2Config extends cdktf.Ter
   readonly shareId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/data_share_dataset_data_lake_gen2#timeouts DataAzurermDataShareDatasetDataLakeGen2#timeouts}
   */
   readonly timeouts?: DataAzurermDataShareDatasetDataLakeGen2Timeouts;

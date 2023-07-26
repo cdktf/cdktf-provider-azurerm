@@ -57,7 +57,7 @@ export interface DatabricksVirtualNetworkPeeringConfig extends cdktf.TerraformMe
   readonly workspaceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/databricks_virtual_network_peering#timeouts DatabricksVirtualNetworkPeering#timeouts}
   */
   readonly timeouts?: DatabricksVirtualNetworkPeeringTimeouts;

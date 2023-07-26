@@ -65,7 +65,7 @@ export interface DataFactoryLinkedServiceCosmosdbConfig extends cdktf.TerraformM
   readonly parameters?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_cosmosdb#timeouts DataFactoryLinkedServiceCosmosdb#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceCosmosdbTimeouts;

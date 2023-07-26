@@ -73,103 +73,103 @@ export interface BatchPoolConfig extends cdktf.TerraformMetaArguments {
   readonly vmSize: string;
   /**
   * auto_scale block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#auto_scale BatchPool#auto_scale}
   */
   readonly autoScale?: BatchPoolAutoScale;
   /**
   * certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#certificate BatchPool#certificate}
   */
   readonly certificate?: BatchPoolCertificate[] | cdktf.IResolvable;
   /**
   * container_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#container_configuration BatchPool#container_configuration}
   */
   readonly containerConfiguration?: BatchPoolContainerConfiguration;
   /**
   * data_disks block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#data_disks BatchPool#data_disks}
   */
   readonly dataDisks?: BatchPoolDataDisks[] | cdktf.IResolvable;
   /**
   * disk_encryption block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#disk_encryption BatchPool#disk_encryption}
   */
   readonly diskEncryption?: BatchPoolDiskEncryption[] | cdktf.IResolvable;
   /**
   * extensions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#extensions BatchPool#extensions}
   */
   readonly extensions?: BatchPoolExtensions[] | cdktf.IResolvable;
   /**
   * fixed_scale block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#fixed_scale BatchPool#fixed_scale}
   */
   readonly fixedScale?: BatchPoolFixedScale;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#identity BatchPool#identity}
   */
   readonly identity?: BatchPoolIdentity;
   /**
   * mount block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#mount BatchPool#mount}
   */
   readonly mount?: BatchPoolMount[] | cdktf.IResolvable;
   /**
   * network_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#network_configuration BatchPool#network_configuration}
   */
   readonly networkConfiguration?: BatchPoolNetworkConfiguration;
   /**
   * node_placement block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#node_placement BatchPool#node_placement}
   */
   readonly nodePlacement?: BatchPoolNodePlacement[] | cdktf.IResolvable;
   /**
   * start_task block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#start_task BatchPool#start_task}
   */
   readonly startTask?: BatchPoolStartTask;
   /**
   * storage_image_reference block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#storage_image_reference BatchPool#storage_image_reference}
   */
   readonly storageImageReference: BatchPoolStorageImageReference;
   /**
   * task_scheduling_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#task_scheduling_policy BatchPool#task_scheduling_policy}
   */
   readonly taskSchedulingPolicy?: BatchPoolTaskSchedulingPolicy[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#timeouts BatchPool#timeouts}
   */
   readonly timeouts?: BatchPoolTimeouts;
   /**
   * user_accounts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#user_accounts BatchPool#user_accounts}
   */
   readonly userAccounts?: BatchPoolUserAccounts[] | cdktf.IResolvable;
   /**
   * windows block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#windows BatchPool#windows}
   */
   readonly windows?: BatchPoolWindows[] | cdktf.IResolvable;
@@ -2262,25 +2262,25 @@ export class BatchPoolMountNfsMountList extends cdktf.ComplexList {
 export interface BatchPoolMount {
   /**
   * azure_blob_file_system block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#azure_blob_file_system BatchPool#azure_blob_file_system}
   */
   readonly azureBlobFileSystem?: BatchPoolMountAzureBlobFileSystem;
   /**
   * azure_file_share block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#azure_file_share BatchPool#azure_file_share}
   */
   readonly azureFileShare?: BatchPoolMountAzureFileShare[] | cdktf.IResolvable;
   /**
   * cifs_mount block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#cifs_mount BatchPool#cifs_mount}
   */
   readonly cifsMount?: BatchPoolMountCifsMount[] | cdktf.IResolvable;
   /**
   * nfs_mount block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#nfs_mount BatchPool#nfs_mount}
   */
   readonly nfsMount?: BatchPoolMountNfsMount[] | cdktf.IResolvable;
@@ -2633,7 +2633,7 @@ export interface BatchPoolNetworkConfigurationEndpointConfiguration {
   readonly protocol: string;
   /**
   * network_security_group_rules block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#network_security_group_rules BatchPool#network_security_group_rules}
   */
   readonly networkSecurityGroupRules?: BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules[] | cdktf.IResolvable;
@@ -2828,7 +2828,7 @@ export interface BatchPoolNetworkConfiguration {
   readonly subnetId: string;
   /**
   * endpoint_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#endpoint_configuration BatchPool#endpoint_configuration}
   */
   readonly endpointConfiguration?: BatchPoolNetworkConfigurationEndpointConfiguration[] | cdktf.IResolvable;
@@ -3089,7 +3089,7 @@ export interface BatchPoolStartTaskContainerRegistry {
   readonly registryServer: string;
   /**
   * The User Assigned Identity to use for Container Registry access.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#user_assigned_identity_id BatchPool#user_assigned_identity_id}
   */
   readonly userAssignedIdentityId?: string;
@@ -3270,7 +3270,7 @@ export interface BatchPoolStartTaskContainer {
   readonly workingDirectory?: string;
   /**
   * registry block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#registry BatchPool#registry}
   */
   readonly registry?: BatchPoolStartTaskContainerRegistry[] | cdktf.IResolvable;
@@ -3790,7 +3790,7 @@ export interface BatchPoolStartTaskUserIdentity {
   readonly userName?: string;
   /**
   * auto_user block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#auto_user BatchPool#auto_user}
   */
   readonly autoUser?: BatchPoolStartTaskUserIdentityAutoUser;
@@ -3896,19 +3896,19 @@ export interface BatchPoolStartTask {
   readonly waitForSuccess?: boolean | cdktf.IResolvable;
   /**
   * container block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#container BatchPool#container}
   */
   readonly container?: BatchPoolStartTaskContainer[] | cdktf.IResolvable;
   /**
   * resource_file block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#resource_file BatchPool#resource_file}
   */
   readonly resourceFile?: BatchPoolStartTaskResourceFile[] | cdktf.IResolvable;
   /**
   * user_identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#user_identity BatchPool#user_identity}
   */
   readonly userIdentity: BatchPoolStartTaskUserIdentity;
@@ -4793,13 +4793,13 @@ export interface BatchPoolUserAccounts {
   readonly password: string;
   /**
   * linux_user_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#linux_user_configuration BatchPool#linux_user_configuration}
   */
   readonly linuxUserConfiguration?: BatchPoolUserAccountsLinuxUserConfiguration[] | cdktf.IResolvable;
   /**
   * windows_user_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_pool#windows_user_configuration BatchPool#windows_user_configuration}
   */
   readonly windowsUserConfiguration?: BatchPoolUserAccountsWindowsUserConfiguration[] | cdktf.IResolvable;

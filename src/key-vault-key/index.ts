@@ -57,13 +57,13 @@ export interface KeyVaultKeyConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * rotation_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_key#rotation_policy KeyVaultKey#rotation_policy}
   */
   readonly rotationPolicy?: KeyVaultKeyRotationPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_key#timeouts KeyVaultKey#timeouts}
   */
   readonly timeouts?: KeyVaultKeyTimeouts;
@@ -171,7 +171,7 @@ export interface KeyVaultKeyRotationPolicy {
   readonly notifyBeforeExpiry?: string;
   /**
   * automatic block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_key#automatic KeyVaultKey#automatic}
   */
   readonly automatic?: KeyVaultKeyRotationPolicyAutomatic;

@@ -29,7 +29,7 @@ export interface SubnetNatGatewayAssociationConfig extends cdktf.TerraformMetaAr
   readonly subnetId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subnet_nat_gateway_association#timeouts SubnetNatGatewayAssociation#timeouts}
   */
   readonly timeouts?: SubnetNatGatewayAssociationTimeouts;

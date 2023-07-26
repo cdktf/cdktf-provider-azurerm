@@ -37,25 +37,25 @@ export interface WebApplicationFirewallPolicyConfig extends cdktf.TerraformMetaA
   readonly tags?: { [key: string]: string };
   /**
   * custom_rules block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_application_firewall_policy#custom_rules WebApplicationFirewallPolicy#custom_rules}
   */
   readonly customRules?: WebApplicationFirewallPolicyCustomRules[] | cdktf.IResolvable;
   /**
   * managed_rules block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_application_firewall_policy#managed_rules WebApplicationFirewallPolicy#managed_rules}
   */
   readonly managedRules: WebApplicationFirewallPolicyManagedRules;
   /**
   * policy_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_application_firewall_policy#policy_settings WebApplicationFirewallPolicy#policy_settings}
   */
   readonly policySettings?: WebApplicationFirewallPolicyPolicySettings;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_application_firewall_policy#timeouts WebApplicationFirewallPolicy#timeouts}
   */
   readonly timeouts?: WebApplicationFirewallPolicyTimeouts;
@@ -200,7 +200,7 @@ export interface WebApplicationFirewallPolicyCustomRulesMatchConditions {
   readonly transforms?: string[];
   /**
   * match_variables block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_application_firewall_policy#match_variables WebApplicationFirewallPolicy#match_variables}
   */
   readonly matchVariables: WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariables[] | cdktf.IResolvable;
@@ -401,7 +401,7 @@ export interface WebApplicationFirewallPolicyCustomRules {
   readonly ruleType: string;
   /**
   * match_conditions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_application_firewall_policy#match_conditions WebApplicationFirewallPolicy#match_conditions}
   */
   readonly matchConditions: WebApplicationFirewallPolicyCustomRulesMatchConditions[] | cdktf.IResolvable;
@@ -709,7 +709,7 @@ export interface WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSe
   readonly version?: string;
   /**
   * rule_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_application_firewall_policy#rule_group WebApplicationFirewallPolicy#rule_group}
   */
   readonly ruleGroup?: WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroup[] | cdktf.IResolvable;
@@ -834,7 +834,7 @@ export interface WebApplicationFirewallPolicyManagedRulesExclusion {
   readonly selectorMatchOperator: string;
   /**
   * excluded_rule_set block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_application_firewall_policy#excluded_rule_set WebApplicationFirewallPolicy#excluded_rule_set}
   */
   readonly excludedRuleSet?: WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSet;
@@ -1152,7 +1152,7 @@ export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroup
   readonly ruleGroupName: string;
   /**
   * rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_application_firewall_policy#rule WebApplicationFirewallPolicy#rule}
   */
   readonly rule?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRule[] | cdktf.IResolvable;
@@ -1302,7 +1302,7 @@ export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSet {
   readonly version: string;
   /**
   * rule_group_override block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_application_firewall_policy#rule_group_override WebApplicationFirewallPolicy#rule_group_override}
   */
   readonly ruleGroupOverride?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride[] | cdktf.IResolvable;
@@ -1444,13 +1444,13 @@ export class WebApplicationFirewallPolicyManagedRulesManagedRuleSetList extends 
 export interface WebApplicationFirewallPolicyManagedRules {
   /**
   * exclusion block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_application_firewall_policy#exclusion WebApplicationFirewallPolicy#exclusion}
   */
   readonly exclusion?: WebApplicationFirewallPolicyManagedRulesExclusion[] | cdktf.IResolvable;
   /**
   * managed_rule_set block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_application_firewall_policy#managed_rule_set WebApplicationFirewallPolicy#managed_rule_set}
   */
   readonly managedRuleSet: WebApplicationFirewallPolicyManagedRulesManagedRuleSet[] | cdktf.IResolvable;

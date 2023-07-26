@@ -29,7 +29,7 @@ export interface SubnetRouteTableAssociationConfig extends cdktf.TerraformMetaAr
   readonly subnetId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subnet_route_table_association#timeouts SubnetRouteTableAssociation#timeouts}
   */
   readonly timeouts?: SubnetRouteTableAssociationTimeouts;

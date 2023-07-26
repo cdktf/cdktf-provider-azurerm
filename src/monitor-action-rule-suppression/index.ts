@@ -41,25 +41,25 @@ export interface MonitorActionRuleSuppressionConfig extends cdktf.TerraformMetaA
   readonly tags?: { [key: string]: string };
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_suppression#condition MonitorActionRuleSuppression#condition}
   */
   readonly condition?: MonitorActionRuleSuppressionCondition;
   /**
   * scope block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_suppression#scope MonitorActionRuleSuppression#scope}
   */
   readonly scope?: MonitorActionRuleSuppressionScope;
   /**
   * suppression block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_suppression#suppression MonitorActionRuleSuppression#suppression}
   */
   readonly suppression: MonitorActionRuleSuppressionSuppression;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_suppression#timeouts MonitorActionRuleSuppression#timeouts}
   */
   readonly timeouts?: MonitorActionRuleSuppressionTimeouts;
@@ -669,43 +669,43 @@ export class MonitorActionRuleSuppressionConditionTargetResourceTypeOutputRefere
 export interface MonitorActionRuleSuppressionCondition {
   /**
   * alert_context block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_suppression#alert_context MonitorActionRuleSuppression#alert_context}
   */
   readonly alertContext?: MonitorActionRuleSuppressionConditionAlertContext;
   /**
   * alert_rule_id block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_suppression#alert_rule_id MonitorActionRuleSuppression#alert_rule_id}
   */
   readonly alertRuleId?: MonitorActionRuleSuppressionConditionAlertRuleId;
   /**
   * description block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_suppression#description MonitorActionRuleSuppression#description}
   */
   readonly description?: MonitorActionRuleSuppressionConditionDescription;
   /**
   * monitor block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_suppression#monitor MonitorActionRuleSuppression#monitor}
   */
   readonly monitor?: MonitorActionRuleSuppressionConditionMonitor;
   /**
   * monitor_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_suppression#monitor_service MonitorActionRuleSuppression#monitor_service}
   */
   readonly monitorService?: MonitorActionRuleSuppressionConditionMonitorService;
   /**
   * severity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_suppression#severity MonitorActionRuleSuppression#severity}
   */
   readonly severity?: MonitorActionRuleSuppressionConditionSeverity;
   /**
   * target_resource_type block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_suppression#target_resource_type MonitorActionRuleSuppression#target_resource_type}
   */
   readonly targetResourceType?: MonitorActionRuleSuppressionConditionTargetResourceType;
@@ -1140,7 +1140,7 @@ export interface MonitorActionRuleSuppressionSuppression {
   readonly recurrenceType: string;
   /**
   * schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_suppression#schedule MonitorActionRuleSuppression#schedule}
   */
   readonly schedule?: MonitorActionRuleSuppressionSuppressionSchedule;

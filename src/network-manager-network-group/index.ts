@@ -33,7 +33,7 @@ export interface NetworkManagerNetworkGroupConfig extends cdktf.TerraformMetaArg
   readonly networkManagerId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_network_group#timeouts NetworkManagerNetworkGroup#timeouts}
   */
   readonly timeouts?: NetworkManagerNetworkGroupTimeouts;

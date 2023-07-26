@@ -97,13 +97,13 @@ export interface MssqlManagedInstanceConfig extends cdktf.TerraformMetaArguments
   readonly vcores: number;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_managed_instance#identity MssqlManagedInstance#identity}
   */
   readonly identity?: MssqlManagedInstanceIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_managed_instance#timeouts MssqlManagedInstance#timeouts}
   */
   readonly timeouts?: MssqlManagedInstanceTimeouts;

@@ -25,7 +25,7 @@ export interface DataAzurermMonitorDiagnosticCategoriesConfig extends cdktf.Terr
   readonly resourceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/monitor_diagnostic_categories#timeouts DataAzurermMonitorDiagnosticCategories#timeouts}
   */
   readonly timeouts?: DataAzurermMonitorDiagnosticCategoriesTimeouts;

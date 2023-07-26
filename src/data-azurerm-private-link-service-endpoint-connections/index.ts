@@ -29,7 +29,7 @@ export interface DataAzurermPrivateLinkServiceEndpointConnectionsConfig extends 
   readonly serviceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/private_link_service_endpoint_connections#timeouts DataAzurermPrivateLinkServiceEndpointConnections#timeouts}
   */
   readonly timeouts?: DataAzurermPrivateLinkServiceEndpointConnectionsTimeouts;

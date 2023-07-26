@@ -45,7 +45,7 @@ export interface VoiceServicesCommunicationsGatewayTestLineConfig extends cdktf.
   readonly voiceServicesCommunicationsGatewayId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/voice_services_communications_gateway_test_line#timeouts VoiceServicesCommunicationsGatewayTestLine#timeouts}
   */
   readonly timeouts?: VoiceServicesCommunicationsGatewayTestLineTimeouts;
